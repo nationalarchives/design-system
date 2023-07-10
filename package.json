@@ -1,0 +1,49 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon metalsmith.js",
+    "build": "node metalsmith.js",
+    "lint": "prettier --check '{src,lib,layouts}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
+    "lint:fix": "prettier --write '{src,lib,layouts}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
+    "serve": "browser-sync start --server 'build' --files 'build/**'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nationalarchives/design-system.git"
+  },
+  "author": {
+    "name": "Andrew Hosgood",
+    "email": "andrew.hosgood@nationalarchives.gov.uk",
+    "url": "https://andrewhosgood.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nationalarchives/design-system/issues"
+  },
+  "homepage": "https://github.com/nationalarchives/design-system#readme",
+  "nodemonConfig": {
+    "watch": [
+      "src",
+      "layouts"
+    ],
+    "ext": "js css scss njk json html md"
+  },
+  "dependencies": {
+    "@metalsmith/layouts": "^2.7.0",
+    "@metalsmith/markdown": "^1.10.0",
+    "@metalsmith/permalinks": "^2.5.1",
+    "@metalsmith/sass": "^1.6.0",
+    "@nationalarchives/frontend": "^0.1.8-prerelease",
+    "jstransformer-nunjucks": "^1.1.0",
+    "metalsmith": "^2.6.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "npm": "9.x",
+    "node": "18.x"
+  }
+}

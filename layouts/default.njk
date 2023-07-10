@@ -1,0 +1,39 @@
+{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/hero/macro.njk" import tnaHero -%}
+{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/footer/macro.njk" import tnaFooter -%}
+<html lang="en-GB" class="tna-template">
+  <head>
+    <title>{{ title }} | The National Archives Design System</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="canonical" href="{{ site.siteURL }}{{ path }}" />
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+
+  <body class="tna-template__body js-disabled">
+    {{ tnaHero({
+      heading: title,
+      text: description,
+      image: {
+        src: "https://picsum.photos/id/29/640/360",
+        alt: "A placeholder image"
+      }
+    }) }}
+
+    <main>
+      {% block body %} {# will be replaced by page content #} {% endblock %}
+    </main>
+
+
+    <footer class="tna-container">
+      <div class="tna-column">
+        <p>Metalsmith version: {{ msVersion }}</p>
+        <p>Node version: {{ nodeVersion }}</p>
+        <p>Last site build: {{ stats.atime }}</p>
+      </div>
+    </footer>
+
+    {{ tnaFooter({
+      text: "I am a button",
+      url: "#"
+    }) }}
+  </body>
+</html>
