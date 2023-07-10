@@ -1,0 +1,17 @@
+{% extends "./default.njk" %}
+
+{% block body %}
+<main>
+    <div class="tna-container">
+        <div class="tna-column tna-column--full">
+            <hgroup class="tna-hgroup tna-hgroup--l">
+                <h1 class="tna-hgroup__title">
+                    <span class="tna-hgroup__supertitle">Component</span>
+                    {{ title }}
+                </h1>
+            </hgroup>
+            {{ contents | safe }}
+        </div>
+    </div>
+</main>
+{% endblock %}

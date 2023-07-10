@@ -1,36 +1,32 @@
-{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/hero/macro.njk" import tnaHero -%}
 {%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/footer/macro.njk" import tnaFooter -%}
 <html lang="en-GB" class="tna-template">
   <head>
     <title>{{ title }} | The National Archives Design System</title>
     <meta name="description" content="{{ description }}" />
     <link rel="canonical" href="{{ site.siteURL }}{{ path }}" />
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
   </head>
 
   <body class="tna-template__body js-disabled">
-    {{ tnaHero({
-      heading: title,
-      text: description,
-      image: {
-        src: "https://picsum.photos/id/29/640/360",
-        alt: "A placeholder image"
-      }
-    }) }}
+    <header>
+      <p>National Archives Design System</p>
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/components">
+            Components
+          </a>
+        </li>
+      </ul>
+    </header>
 
-    <main>
-      {% block body %} {# will be replaced by page content #} {% endblock %}
-    </main>
+    {% block body %} {# will be replaced by page content #} {% endblock %}
 
-
-    <footer class="tna-container">
-      <div class="tna-column">
-        <p>Metalsmith version: {{ msVersion }}</p>
-        <p>Node version: {{ nodeVersion }}</p>
-        <p>Last site build: {{ stats.atime }}</p>
-      </div>
-    </footer>
-
+    {% set buildDate = stats.atime | prettyDate %}
     {{ tnaFooter({
       navigation: [
         {
@@ -60,6 +56,23 @@
             {
               text: "National Archives Frontend Django",
               href: "https://github.com/nationalarchives/tna-frontend-django"
+            }
+          ]
+        },
+        {
+          title: "Meta",
+          items: [
+            {
+              text: "Made with Metalsmith " + msVersion,
+              href: "https://metalsmith.io/"
+            },
+            {
+              text: "Node " + nodeVersion,
+              href: "https://github.com/nationalarchives/design-system/blob/main/.nvmrc"
+            },
+            {
+              text: "Site built on " + buildDate,
+              href: "https://github.com/nationalarchives/design-system/actions"
             }
           ]
         }

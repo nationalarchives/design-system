@@ -1,9 +1,22 @@
+{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/hero/macro.njk" import tnaHero -%}
+
 {% extends "./default.njk" %}
 
 {% block body %}
-  <div class="tna-container">
-    <div class="tna-column tna-column--full">
-      {{ contents | safe }}
+  {{ tnaHero({
+    heading: title,
+    text: description,
+    image: {
+      src: "https://picsum.photos/id/29/640/360",
+      alt: "A placeholder image"
+    }
+  }) }}
+
+  <main>
+    <div class="tna-container">
+      <div class="tna-column tna-column--full">
+        {{ contents | safe }}
+      </div>
     </div>
-  </div>
+  </main>
 {% endblock %}

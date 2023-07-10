@@ -52,6 +52,14 @@ markdownRenderer.paragraph = function (text) {
   </p>`;
 };
 
+const prettyDate = function (date) {
+  return new Date(date).toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+
 Metalsmith(__dirname)
   .source("./src")
   .destination("./build")
@@ -92,6 +100,9 @@ Metalsmith(__dirname)
       default: "layouts/default.njk",
       engineOptions: {
         root: __dirname,
+        filters: {
+          prettyDate,
+        },
       },
     }),
   )
