@@ -32,8 +32,38 @@
     </footer>
 
     {{ tnaFooter({
-      text: "I am a button",
-      url: "#"
+      navigation: [
+        {
+          title: "Resources",
+          items: [
+            {
+              text: "National Archives Frontend",
+              href: "https://nationalarchives.github.io/tna-frontend"
+            },
+            {
+              text: "The National Archives Beta",
+              href: "https://beta.nationalarchives.gov.uk/"
+            }
+          ]
+        },
+        {
+          title: "GitHub repositories",
+          items: [
+            {
+              text: "National Archives Design System",
+              href: "https://github.com/nationalarchives/design-system"
+            },
+            {
+              text: "National Archives Frontend",
+              href: "https://github.com/nationalarchives/tna-frontend"
+            },
+            {
+              text: "National Archives Frontend Django",
+              href: "https://github.com/nationalarchives/tna-frontend-django"
+            }
+          ]
+        }
+      ]
     }) }}
   </body>
 </html>
