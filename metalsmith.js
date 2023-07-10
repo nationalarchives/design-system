@@ -62,7 +62,7 @@ const prettyDate = function (date) {
 
 Metalsmith(__dirname)
   .source("./src")
-  .destination("./build")
+  .destination("./design-system")
   .clean(true)
   .env({
     DEBUG: process.env.DEBUG,

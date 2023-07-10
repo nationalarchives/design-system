@@ -5,7 +5,7 @@
     "build": "node metalsmith.js",
     "lint": "prettier --check '{src,lib,layouts}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
     "lint:fix": "prettier --write '{src,lib,layouts}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
-    "serve": "browser-sync start --server 'build' --files 'build/**'"
+    "serve": "browser-sync start --server --startPath 'design-system' --files 'build/**'"
   },
   "repository": {
     "type": "git",
