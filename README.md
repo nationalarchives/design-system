@@ -2,7 +2,6 @@
 
 # The National Archives Design System
 
-[![Node version](https://img.shields.io/node/v-lts/@nationalarchives/design-system?style=flat-square&logo=nodedotjs&logoColor=white)](https://github.com/nationalarchives/design-system/blob/main/.nvmrc)
 [![Licence](https://img.shields.io/github/license/nationalarchives/design-system?style=flat-square)](https://github.com/nationalarchives/design-system/blob/main/LICENCE)
 
 The National Archives Design System provides advice on how to design National Archives platforms and services.
