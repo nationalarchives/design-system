@@ -1,0 +1,18 @@
+{% extends "./_design-system-base.njk" %}
+
+{% block content %}
+  <div class="tna-container">
+    <div class="tna-column tna-column--full">
+      <h1 class="tna-heading tna-heading--xl">
+        Components
+      </h1>
+      <ul>
+      {% for component in collections.components %}
+        <li>
+          <a href="/design-system/{{ component.path }}">{{ component.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

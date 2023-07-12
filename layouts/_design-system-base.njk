@@ -17,18 +17,18 @@
 {% endblock %}
 
 {% block header %}
+  {% set topLevelNavigation = [] %}
+  {% for top in collections.top %}
+    {% set topLevelNavigation = topLevelNavigation.concat({
+      text: top.title,
+      href: "/design-system/" + top.path,
+      selected: top.path == path
+    }) %}
+  {% endfor %}
+
   {{ tnaHeader({
     strapline: "Design System",
-    navigation: [
-      {
-        text: "Home",
-        href: "/design-system"
-      },
-      {
-        text: "Components",
-        href: "/design-system/components"
-      }
-    ]
+    navigation: topLevelNavigation
   }) }}
 {% endblock %}
 
@@ -85,4 +85,8 @@
       }
     ]
   }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+<script src="/design-system/index.js"></script>
 {% endblock %}

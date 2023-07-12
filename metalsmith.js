@@ -4,10 +4,13 @@ import Metalsmith from "metalsmith";
 import layouts from "@metalsmith/layouts";
 import markdown from "@metalsmith/markdown";
 import permalinks from "@metalsmith/permalinks";
+import collections from "@metalsmith/collections";
+import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import packageInfo from "./package.json" assert { type: "json" };
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const t1 = performance.now();
 
 import { marked } from "marked";
@@ -60,13 +63,17 @@ const prettyDate = function (date) {
   });
 };
 
+const jsonDump = function (data) {
+  return JSON.stringify(data, null, 2);
+};
+
 Metalsmith(__dirname)
   .source("./src")
   .destination("./design-system")
   .clean(true)
   .env({
     DEBUG: process.env.DEBUG,
-    NODE_ENV: process.env.NODE_ENV,
+    // NODE_ENV: process.env.NODE_ENV,
   })
   .metadata({
     sitename: "The National Archives Design System",
@@ -91,10 +98,22 @@ Metalsmith(__dirname)
     }),
   )
   .use(
-    permalinks({
-      relative: false,
+    collections({
+      top: {
+        pattern: "**/index.html",
+        sortBy: "order",
+      },
+      components: {
+        pattern: "components/*.html",
+        filterBy: (file) => file.path !== "components/index.html",
+      },
     }),
   )
+  // .use(
+  //   permalinks({
+  //     relative: false,
+  //   }),
+  // )
   .use(
     layouts({
       default: "simple.njk",
@@ -102,6 +121,7 @@ Metalsmith(__dirname)
         root: __dirname,
         filters: {
           prettyDate,
+          jsonDump,
         },
       },
     }),
@@ -110,6 +130,17 @@ Metalsmith(__dirname)
     sass({
       entries: {
         "lib/index.scss": "css/index.css",
+      },
+    }),
+  )
+  .use(
+    jsBundle({
+      bundle: true,
+      minify: false,
+      sourcemap: true,
+      drop: [],
+      entries: {
+        index: "lib/index.js",
       },
     }),
   )
