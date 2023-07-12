@@ -1,16 +1,16 @@
 {%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/hero/macro.njk" import tnaHero -%}
 
-{% extends "./default.njk" %}
+{% extends "./_design-system-base.njk" %}
 
-{% block body %}
-  {{ tnaHero({
+{% block main %}
+  {# {{ tnaHero({
     heading: title,
     text: description,
     image: {
       src: "https://picsum.photos/id/29/640/360",
       alt: "A placeholder image"
     }
-  }) }}
+  }) }} #}
 
   <main>
     <div class="tna-container">

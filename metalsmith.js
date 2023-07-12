@@ -97,7 +97,7 @@ Metalsmith(__dirname)
   )
   .use(
     layouts({
-      default: "layouts/default.njk",
+      default: "simple.njk",
       engineOptions: {
         root: __dirname,
         filters: {

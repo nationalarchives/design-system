@@ -1,0 +1,88 @@
+{% extends "../node_modules/@nationalarchives/frontend/nationalarchives/templates/layouts/_generic.njk" %}
+
+{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/footer/macro.njk" import tnaFooter -%}
+{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/header/macro.njk" import tnaHeader -%}
+
+{% block pageTitle %}
+  {{ title }} | The National Archives Design System
+{% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ description }}" />
+  <link rel="canonical" href="{{ site.siteURL }}{{ path }}" />
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/design-system/css/index.css">
+{% endblock %}
+
+{% block header %}
+  {{ tnaHeader({
+    strapline: "Design System",
+    navigation: [
+      {
+        text: "Home",
+        href: "/design-system"
+      },
+      {
+        text: "Components",
+        href: "/design-system/components"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block footer %}
+  {% set buildDate = stats.atime | prettyDate %}
+  {{ tnaFooter({
+    navigation: [
+      {
+        title: "Resources",
+        items: [
+          {
+            text: "National Archives Frontend",
+            href: "https://nationalarchives.github.io/tna-frontend"
+          },
+          {
+            text: "The National Archives Beta",
+            href: "https://beta.nationalarchives.gov.uk/"
+          }
+        ]
+      },
+      {
+        title: "GitHub repositories",
+        items: [
+          {
+            text: "National Archives Design System",
+            href: "https://github.com/nationalarchives/design-system"
+          },
+          {
+            text: "National Archives Frontend",
+            href: "https://github.com/nationalarchives/tna-frontend"
+          },
+          {
+            text: "National Archives Frontend Django",
+            href: "https://github.com/nationalarchives/tna-frontend-django"
+          }
+        ]
+      },
+      {
+        title: "Meta",
+        items: [
+          {
+            text: "Published on " + buildDate,
+            href: "https://github.com/nationalarchives/design-system/actions"
+          },
+          {
+            text: "Made with Metalsmith " + msVersion,
+            href: "https://metalsmith.io/"
+          },
+          {
+            text: "Node " + nodeVersion,
+            href: "https://github.com/nationalarchives/design-system/blob/main/.nvmrc"
+          }
+        ]
+      }
+    ]
+  }) }}
+{% endblock %}
