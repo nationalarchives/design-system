@@ -1,7 +1,7 @@
 ---
 layout: pattern-index.njk
 title: Patterns
-order: 3
+order: 4
 ---
 
 Patterns
