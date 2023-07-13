@@ -15,9 +15,9 @@ nvm use
 # Install dependencies
 npm install
 
-# Build
-npm run build
+# Build and watch
+npm run dev
 
-# Serve
+# Serve (in a sepatare terminal)
 npm run serve
 ```

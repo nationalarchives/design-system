@@ -1,0 +1,13 @@
+{% extends "../node_modules/@nationalarchives/frontend/nationalarchives/templates/layouts/_generic.njk" %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/design-system/css/index.css">
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block main %}
+  {{ contents | safe }}
+{% endblock %}
+
+{% block footer %}{% endblock %}

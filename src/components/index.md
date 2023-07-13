@@ -4,4 +4,4 @@ title: Components
 order: 2
 ---
 
-- [card](./card)
+Test
