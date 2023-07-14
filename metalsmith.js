@@ -1,71 +1,18 @@
-import { fileURLToPath } from "node:url";
-import { dirname } from "path";
+import markdownRenderer from "./.metalsmith/markdownRenderer.js";
+import nunjucksOptions from "./.metalsmith/nunjucksOptions.js";
+import { __dirname } from "./.metalsmith/config.js";
 import Metalsmith from "metalsmith";
+import inplace from "@metalsmith/in-place";
 import layouts from "@metalsmith/layouts";
 import markdown from "@metalsmith/markdown";
 import permalinks from "@metalsmith/permalinks";
+import renamer from "metalsmith-renamer";
 import collections from "@metalsmith/collections";
 import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import packageInfo from "./package.json" assert { type: "json" };
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 const t1 = performance.now();
-
-import { marked } from "marked";
-const markdownRenderer = new marked.Renderer();
-
-markdownRenderer.heading = function (text, level) {
-  let headingSize = "";
-  switch (level) {
-    case 1:
-      headingSize = "tna-heading--xl";
-      break;
-    case 2:
-      headingSize = "tna-heading--l";
-      break;
-    case 3:
-      headingSize = "tna-heading--m";
-      break;
-    case 4:
-    case 5:
-    case 6:
-      headingSize = "tna-heading--s";
-      break;
-  }
-  return `
-  <h${level} class="tna-heading ${headingSize}">
-    ${text}
-  </h${level}>`;
-};
-
-markdownRenderer.list = function (body, ordered) {
-  const element = ordered ? "ol" : "ul";
-  return `
-  <${element} class="tna-ul">
-    ${body}
-  </${element}>`;
-};
-
-markdownRenderer.paragraph = function (text) {
-  return `
-  <p class="tna-p">
-    ${text}
-  </p>`;
-};
-
-const prettyDate = function (date) {
-  return new Date(date).toLocaleDateString("en-GB", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
-
-const jsonDump = function (data) {
-  return JSON.stringify(data, null, 2);
-};
 
 Metalsmith(__dirname)
   .source("./src")
@@ -78,12 +25,28 @@ Metalsmith(__dirname)
   .metadata({
     sitename: "The National Archives Design System",
     siteurl: "https://nationalarchives.github.io/design-system",
-    description: "",
+    // description: "",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
     msVersion: packageInfo.dependencies.metalsmith,
     nodeVersion: process.version,
   })
+  .use(
+    renamer({
+      markdown: {
+        pattern: "**/*.md",
+        rename: (name) => {
+          return `${name}.njk`;
+        },
+      },
+    }),
+  )
+  .use(
+    inplace({
+      pattern: "**/*.njk",
+      engineOptions: nunjucksOptions,
+    }),
+  )
   .use(
     markdown({
       renderer: markdownRenderer,
@@ -100,30 +63,28 @@ Metalsmith(__dirname)
   .use(
     collections({
       top: {
-        pattern: "**/index.html",
+        pattern: "(get-started|styles|components|patterns)/index.html",
         sortBy: "order",
       },
       components: {
-        pattern: "components/*.html",
+        pattern: "components/*/index.html",
         filterBy: (file) => file.path !== "components/index.html",
+      },
+      patterns: {
+        pattern: "patterns/*/index.html",
+        filterBy: (file) => file.path !== "patterns/index.html",
       },
     }),
   )
-  // .use(
-  //   permalinks({
-  //     relative: false,
-  //   }),
-  // )
+  .use(
+    permalinks({
+      relative: false,
+    }),
+  )
   .use(
     layouts({
       default: "simple.njk",
-      engineOptions: {
-        root: __dirname,
-        filters: {
-          prettyDate,
-          jsonDump,
-        },
-      },
+      engineOptions: nunjucksOptions,
     }),
   )
   .use(

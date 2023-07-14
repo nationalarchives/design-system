@@ -4,13 +4,13 @@
   <div class="tna-container">
     <div class="tna-column tna-column--full">
       <h1 class="tna-heading tna-heading--xl">
-        Components
+        Patterns
       </h1>
       {{ contents | safe }}
       <ul>
-      {% for component in collections.components %}
+      {% for pattern in collections.patterns %}
         <li>
-          <a href="/design-system/{{ component.path }}">{{ component.title }}</a>
+          <a href="/design-system/{{ pattern.path }}">{{ pattern.title }}</a>
         </li>
       {% endfor %}
       </ul>

@@ -1,1 +1,48 @@
+@use "@nationalarchives/frontend/nationalarchives/variables/_colour.scss";
+@use "@nationalarchives/frontend/nationalarchives/tools/_media.scss";
+@import "prismjs/themes/prism-okaidia.min";
 @import "@nationalarchives/frontend/nationalarchives/all.scss";
+
+iframe {
+  width: 100%;
+  min-height: 20rem;
+
+  display: block;
+
+  border: 1px colour.$keyline-colour solid;
+}
+
+.app-example-page {
+  min-height: auto;
+  padding: 2rem;
+}
+
+pre[class*="language-"] {
+  max-height: 20rem;
+}
+
+.tna-grid--demo {
+  padding-top: 2rem;
+
+  background-color: #eee;
+
+  @include media.on-mobile() {
+    padding-top: 1rem;
+  }
+
+  .tna-column {
+    margin-bottom: 2rem;
+
+    position: relative;
+
+    text-align: center;
+    line-height: 3rem;
+
+    background-color: #ccc;
+    background-clip: content-box;
+
+    @include media.on-mobile() {
+      margin-bottom: 1rem;
+    }
+  }
+}

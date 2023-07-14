@@ -1,0 +1,63 @@
+{% macro example(params) %}
+{% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
+{% set examplePath = exampleRoot + "index.njk" %}
+{% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
+
+<iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+
+<h3 class="tna-heading tna-heading--m">
+  HTML
+</h3>
+
+```html
+{{ getHTMLCode(examplePath) | safe }}
+```
+
+{# {%- if (params.group == 'components') %}
+  {% for table in getMacroOptions(params.item) %}
+    <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
+      <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+          <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+          <th class="govuk-table__header" scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        {% for option in table.options -%}
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">{{option.name}}</th>
+            <td class="govuk-table__cell ">{{option.type}}</td>
+            <td class="govuk-table__cell ">
+              {% if (option.required === true) %}
+                <strong>Required.</strong>
+              {% endif %}
+              {{ option.description | safe }}
+              {% if (option.isComponent) -%}
+                {% if (option.name === "hint" or option.name === "label") %}
+                  See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                {% else %}
+                  See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                {% endif %}
+              {% endif %}
+              {% if (option.params) %}
+                See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+              {% endif -%}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endfor %}
+{% endif -%} #}
+
+<h3 class="tna-heading tna-heading--m">
+  Nunjucks
+</h3>
+
+```javascript
+{{ getNunjucksCode(examplePath) | safe }}
+```
+
+{% endmacro %}

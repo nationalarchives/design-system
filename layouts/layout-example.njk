@@ -1,0 +1,15 @@
+{% extends "../node_modules/@nationalarchives/frontend/nationalarchives/templates/layouts/_generic.njk" %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/design-system/css/index.css">
+{% endblock %}
+
+{% set bodyClasses = "app-example-page" %}
+
+{% block header %}{% endblock %}
+
+{% block main %}
+  {{ contents | safe }}
+{% endblock %}
+
+{% block footer %}{% endblock %}
