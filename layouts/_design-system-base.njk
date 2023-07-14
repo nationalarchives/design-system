@@ -1,5 +1,6 @@
 {% extends "../node_modules/@nationalarchives/frontend/nationalarchives/templates/layouts/_generic.njk" %}
 
+{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner -%}
 {%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/footer/macro.njk" import tnaFooter -%}
 {%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/header/macro.njk" import tnaHeader -%}
 
@@ -17,6 +18,11 @@
 {% endblock %}
 
 {% block header %}
+  {{ tnaPhaseBanner({
+    phase: "Alpha",
+    message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it."
+  }) }}
+
   {% set topLevelNavigation = [] %}
   {% for top in collections.top %}
     {% set topLevelNavigation = topLevelNavigation.concat({
@@ -27,7 +33,10 @@
   {% endfor %}
 
   {{ tnaHeader({
-    strapline: "Design System",
+    logo: {
+      strapline: "Design System",
+      href: "/design-system"
+    },
     navigation: topLevelNavigation
   }) }}
 {% endblock %}

@@ -9,7 +9,8 @@ iframe {
 
   display: block;
 
-  border: 1px colour.$keyline-colour solid;
+  border: 1px solid;
+  @include colour.colour-border("keyline");
 }
 
 .app-example-page {
