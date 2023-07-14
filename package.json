@@ -3,8 +3,8 @@
   "scripts": {
     "dev": "nodemon metalsmith.js",
     "build": "node metalsmith.js",
-    "lint": "prettier --check '{src,lib,layouts}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
-    "lint:fix": "prettier --write '{src,lib,layouts}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
+    "lint": "prettier --check '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
+    "lint:fix": "prettier --write '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
     "serve": "browser-sync start --no-notify --server --startPath 'design-system' --files 'build/**'"
   },
   "repository": {
@@ -26,7 +26,8 @@
       "src",
       "layouts",
       "lib",
-      "metalsmith.js"
+      "metalsmith.js",
+      ".metalsmith"
     ],
     "ext": "js css scss njk json html md"
   },
