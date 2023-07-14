@@ -24,7 +24,9 @@
   "nodemonConfig": {
     "watch": [
       "src",
-      "layouts"
+      "layouts",
+      "lib",
+      "metalsmith.js"
     ],
     "ext": "js css scss njk json html md"
   },
@@ -41,7 +43,8 @@
     "js-beautify": "^1.14.8",
     "jstransformer-nunjucks": "^1.1.0",
     "metalsmith": "^2.6.0",
-    "metalsmith-renamer": "^0.5.217"
+    "metalsmith-renamer": "^0.5.217",
+    "prismjs": "^1.29.0"
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",

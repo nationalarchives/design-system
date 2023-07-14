@@ -5,6 +5,10 @@
 
 <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
 
+<h3 class="tna-heading tna-heading--m">
+  HTML
+</h3>
+
 ```html
 {{ getHTMLCode(examplePath) | safe }}
 ```
@@ -48,6 +52,9 @@
   {% endfor %}
 {% endif -%} #}
 
+<h3 class="tna-heading tna-heading--m">
+  Nunjucks
+</h3>
 
 ```javascript
 {{ getNunjucksCode(examplePath) | safe }}

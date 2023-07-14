@@ -196,7 +196,9 @@ const nunjucksOptions = {
       // Omit any `{% extends "foo.njk" %}` nunjucks code, because we extend
       // templates that only exist within the Design System – it's not useful to
       // include this in the code we expect others to copy.
-      return parsedFile.content.replace(/{%\s*extends\s*\S*\s*%}\s+/, "");
+      return parsedFile.content
+        .replace(/{%\s*extends\s*\S*\s*%}\s+/, "")
+        .trim();
     },
     getMacroOptions: (componentName) => {
       const options = getMacroOptionsJson(componentName)
@@ -301,7 +303,7 @@ Metalsmith(__dirname)
   .use(
     collections({
       top: {
-        pattern: "((components|patterns)/*)?index.html",
+        pattern: "(get-started|styles|components|patterns)/index.html",
         sortBy: "order",
       },
       components: {

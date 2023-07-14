@@ -1,7 +1,7 @@
 ---
 layout: component-index.njk
 title: Components
-order: 3
+order: 4
 ---
 
 Test

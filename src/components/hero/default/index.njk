@@ -6,4 +6,10 @@ layout: layout-example.njk
 {% from "nationalarchives/components/hero/macro.njk" import tnaHero %}
 
 {{ tnaHero({
+  heading: "This is a hero component",
+  body: "<p>You can use it to introduce a new idea.</p>",
+  image: {
+    src: "https://picsum.photos/id/29/640/360",
+    alt: "A mountain range"
+  }
 }) }}
