@@ -66,6 +66,14 @@ Metalsmith(__dirname)
         pattern: "(get-started|styles|components|patterns)/index.html",
         sortBy: "order",
       },
+      getStarted: {
+        pattern: "get-started/*/index.html",
+        filterBy: (file) => file.path !== "get-started/index.html",
+      },
+      styles: {
+        pattern: "styles/*/index.html",
+        filterBy: (file) => file.path !== "styles/index.html",
+      },
       components: {
         pattern: "components/*/index.html",
         filterBy: (file) => file.path !== "components/index.html",
