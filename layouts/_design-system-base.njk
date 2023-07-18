@@ -1,8 +1,9 @@
-{% extends "../node_modules/@nationalarchives/frontend/nationalarchives/templates/layouts/_generic.njk" %}
+{% extends "nationalarchives/templates/layouts/_generic.njk" %}
 
-{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner -%}
-{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/footer/macro.njk" import tnaFooter -%}
-{%- from "../node_modules/@nationalarchives/frontend/nationalarchives/components/header/macro.njk" import tnaHeader -%}
+{%- from "nationalarchives/components/breadcrumbs/macro.njk" import tnaBreadcrumbs -%}
+{%- from "nationalarchives/components/footer/macro.njk" import tnaFooter -%}
+{%- from "nationalarchives/components/header/macro.njk" import tnaHeader -%}
+{%- from "nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner -%}
 
 {% block pageTitle %}
   {{ title }} | The National Archives Design System
@@ -11,6 +12,7 @@
 {% block head %}
   <meta name="description" content="{{ description }}" />
   <link rel="canonical" href="{{ site.siteURL }}{{ path }}" />
+  <base href="/design-system/">
 {% endblock %}
 
 {% block stylesheets %}
@@ -27,8 +29,8 @@
   {% for top in collections.top %}
     {% set topLevelNavigation = topLevelNavigation.concat({
       text: top.title,
-      href: "/design-system/" + top.path,
-      selected: top.path == path
+      href: top.path,
+      selected: top.path in path
     }) %}
   {% endfor %}
 
@@ -39,6 +41,29 @@
     },
     navigation: topLevelNavigation
   }) }}
+
+  {% if path != "" %}
+  <div class="tna-container">
+    <div class="tna-column tna-column--full">
+      {% set pathParts = path.split('/') %}
+      {% set breadcrumbs = [{
+        text: "Design System",
+        href: ""
+      }] %}
+      {% for part in pathParts %}
+        {% set pathPart = pathParts.slice(0, loop.index) %}
+        {% set breadcrumbs = breadcrumbs.concat({
+          text: pathPart.slice(-1),
+          href: pathPart.join('/')
+        }) %}
+      {% endfor %}
+
+      {{ tnaBreadcrumbs({
+        items: breadcrumbs
+      }) }}
+    </div>
+  </div>
+  {% endif %}
 {% endblock %}
 
 {% block footer %}
@@ -80,7 +105,7 @@
         items: [
           {
             text: "Published on " + buildDate,
-            href: "https://github.com/nationalarchives/design-system/actions"
+            href: "https://github.com/nationalarchives/design-system/deployments/activity_log?environment=github-pages"
           },
           {
             text: "Made with Metalsmith " + msVersion,
