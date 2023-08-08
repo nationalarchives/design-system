@@ -39,30 +39,26 @@
       strapline: "Design System",
       href: "/design-system"
     },
-    navigation: topLevelNavigation
+    navigation: topLevelNavigation,
+    colour: "yellow"
   }) }}
 
   {% if path != "" %}
-  <div class="tna-container">
-    <div class="tna-column tna-column--full">
-      {% set pathParts = path.split('/') %}
-      {% set breadcrumbs = [{
-        text: "Design System",
-        href: ""
-      }] %}
-      {% for part in pathParts %}
-        {% set pathPart = pathParts.slice(0, loop.index) %}
-        {% set breadcrumbs = breadcrumbs.concat({
-          text: pathPart.slice(-1),
-          href: pathPart.join('/')
-        }) %}
-      {% endfor %}
-
-      {{ tnaBreadcrumbs({
-        items: breadcrumbs
-      }) }}
-    </div>
-  </div>
+    {% set pathParts = path.split('/') %}
+    {% set breadcrumbs = [{
+      text: "Design System",
+      href: ""
+    }] %}
+    {% for part in pathParts %}
+      {% set pathPart = pathParts.slice(0, loop.index) %}
+      {% set breadcrumbs = breadcrumbs.concat({
+        text: pathPart.slice(-1),
+        href: pathPart.join('/')
+      }) %}
+    {% endfor %}
+    {{ tnaBreadcrumbs({
+      items: breadcrumbs
+    }) }}
   {% endif %}
 {% endblock %}
 
