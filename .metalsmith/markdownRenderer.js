@@ -35,10 +35,53 @@ markdownRenderer.list = function (body, ordered) {
 };
 
 markdownRenderer.paragraph = function (text) {
-  return `
+  return /^\s*&lt;/.test(text) || /^\s*\{/.test(text)
+    ? text
+    : `
   <p class="tna-p">
     ${text}
   </p>`;
+};
+
+const escapeTest = /[&<>"']/;
+const escapeReplace = new RegExp(escapeTest.source, "g");
+const escapeTestNoEncode = /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/;
+const escapeReplaceNoEncode = new RegExp(escapeTestNoEncode.source, "g");
+const escapeReplacements = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;",
+};
+const getEscapeReplacement = (ch) => escapeReplacements[ch];
+
+function escape(html, encode) {
+  if (encode) {
+    if (escapeTest.test(html)) {
+      return html.replace(escapeReplace, getEscapeReplacement);
+    }
+  } else {
+    if (escapeTestNoEncode.test(html)) {
+      return html.replace(escapeReplaceNoEncode, getEscapeReplacement);
+    }
+  }
+
+  return html;
+}
+
+markdownRenderer.code = function (code, infostring, escaped) {
+  const lang = (infostring || "").match(/^\S*/)?.[0];
+
+  code = code.replace(/\n$/, "") + "\n";
+
+  if (!lang) {
+    return code;
+  }
+
+  return `<pre><code class="language-${escape(lang)}">${
+    escaped ? code : escape(code, true)
+  }</code></pre>\n`;
 };
 
 export default markdownRenderer;

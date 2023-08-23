@@ -6,4 +6,17 @@ layout: layout-example.njk
 {% from "nationalarchives/components/footer/macro.njk" import tnaFooter %}
 
 {{ tnaFooter({
+  title: "The National Archives",
+  address: "Kew, Richmond TW9 4DU",
+  navigation: [
+    {
+      title: "Find out more",
+      items: [
+        {
+          text: "Contact us",
+          href: "#"
+        }
+      ]
+    }
+  ]
 }) }}
