@@ -6,4 +6,19 @@ layout: layout-example.njk
 {% from "nationalarchives/components/header/macro.njk" import tnaHeader %}
 
 {{ tnaHeader({
+  navigation: [
+    {
+      text: "Alpha",
+      href: "#/alpha",
+      selected: true
+    },
+    {
+      text: "Beta",
+      href: "#/beta"
+    },
+    {
+      text: "Gamma",
+      href: "#/gamma"
+    }
+  ]
 }) }}

@@ -9,3 +9,6 @@ The header component is for...
 
 {{ example({group: "components", item: "header", example: "default", html: true, nunjucks: true, open: false}) | safe }}
 
+## Design history
+
+Read the [design history of the header component](./history)

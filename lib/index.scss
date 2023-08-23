@@ -3,6 +3,12 @@
 @import "prismjs/themes/prism-okaidia.min";
 @import "@nationalarchives/frontend/nationalarchives/all.scss";
 
+.tna-breadcrumbs {
+  &__link {
+    text-transform: capitalize;
+  }
+}
+
 iframe {
   width: 100%;
   min-height: 20rem;

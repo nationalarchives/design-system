@@ -5,6 +5,9 @@ import { __dirname } from "./config.js";
 import matter from "gray-matter";
 import beautify from "js-beautify";
 import nunjucks from "nunjucks";
+import { marked } from "marked";
+
+const renderer = new marked.Renderer();
 
 const getFileContents = (path) => {
   let fileContents;
@@ -21,13 +24,13 @@ const getFileContents = (path) => {
 };
 
 const getMacroOptionsJson = (componentName) => {
-  // const optionsFilePath = join(dirname(require.resolve('@nationalarchives/frontend')), `components/${componentName}/macro-options.json`)
-  // return JSON.parse(fs.readFileSync(optionsFilePath, 'utf8'))
-  return [];
+  const optionsFilePath = join(
+    dirname(require.resolve("@nationalarchives/frontend")),
+    `components/${componentName}/macro-options.json`,
+  );
+  return JSON.parse(fs.readFileSync(optionsFilePath, "utf8"));
 };
 
-// Some which are only used in other components are intentionally not displayed in the GOV.UK Design System guidance.
-// We want to add these as a separate group of options that can be linked to from the original options for the component.
 const getAdditionalComponentOptions = (options) => {
   const names = options
     .map((option) => {
@@ -42,7 +45,6 @@ const getAdditionalComponentOptions = (options) => {
       }
       return output;
     })
-    // Flatten array
     .reduce((a, b) => {
       return a.concat(b);
     }, []);
@@ -54,28 +56,23 @@ const getAdditionalComponentOptions = (options) => {
   return namesWithoutDuplicates;
 };
 
-// To display nested options that such as rows in a table, we need to make a separate group to be displayed.
 const getNestedOptions = (options) => {
-  return (
-    options
-      .filter((option) => option.params)
-      .map((option) => {
-        let output = [option];
-        if (option.params) {
-          output = output.concat(getNestedOptions(option.params));
-        }
-        return output;
-      })
-      // Flatten array
-      .reduce((a, b) => {
-        return a.concat(b);
-      }, [])
-  );
+  return options
+    .filter((option) => option.params)
+    .map((option) => {
+      let output = [option];
+      if (option.params) {
+        output = output.concat(getNestedOptions(option.params));
+      }
+      return output;
+    })
+    .reduce((a, b) => {
+      return a.concat(b);
+    }, []);
 };
 
 const renderDescriptionsAsMarkdown = (option) => {
   if (option.description) {
-    // Explicity set deprecated properties to false
     option.description = marked(option.description, {
       headerIds: false,
       mangle: false,
@@ -89,7 +86,6 @@ const renderDescriptionsAsMarkdown = (option) => {
 };
 
 const addSlugs = (option) => {
-  // camelCase into kebab-case
   option.slug = option.name.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
   if (option.params) {
     option.params = option.params.map(addSlugs);
@@ -99,7 +95,6 @@ const addSlugs = (option) => {
 
 const require = createRequire(import.meta.url);
 const nunjucksOptions = {
-  // root: __dirname,
   path: [
     join(__dirname, "layouts"),
     join(dirname(require.resolve("@nationalarchives/frontend")), "../"),
@@ -107,7 +102,6 @@ const nunjucksOptions = {
   globals: {
     getHTMLCode: (path) => {
       const fileContents = getFileContents(path);
-
       const parsedFile = matter(fileContents);
       const content = parsedFile.content;
 
@@ -124,22 +118,15 @@ const nunjucksOptions = {
 
       return beautify.html(html, {
         indent_size: 2,
-        // Ensure nested labels in headings are indented properly
         inline: options.inline.filter((tag) => !["label"].includes(tag)),
-        // Remove blank lines
         max_preserve_newlines: 0,
-        // Ensure attribute wrapping in header SVG is preserved
         wrap_attributes: "preserve",
       });
     },
     getNunjucksCode: (path) => {
       const fileContents = getFileContents(path);
-
       const parsedFile = matter(fileContents);
 
-      // Omit any `{% extends "foo.njk" %}` nunjucks code, because we extend
-      // templates that only exist within the Design System – it's not useful to
-      // include this in the code we expect others to copy.
       return parsedFile.content
         .replace(/{%\s*extends\s*\S*\s*%}\s+/, "")
         .trim();

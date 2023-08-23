@@ -9,48 +9,48 @@
 
   {% set html = getHTMLCode(examplePath) | forceescape %}
   {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
-  {% set properties = exampleProperties(params) %}
 
   {{ tnaTabs({
     title: exampleTitle + " example",
     items: [
       {
-        id: "a",
+        id: params.group + "-" + params.item + "-" + params.example + "-html",
         title: "HTML",
         body: '<pre class="language-html"><code class="language-html">' + html + '</code></pre>'
       },
       {
-        id: "b",
+        id: params.group + "-" + params.item + "-" + params.example + "-nunjucks",
         title: "Nunjucks",
         body: '<pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre>'
       },
       {
-        id: "c",
+        id: params.group + "-" + params.item + "-" + params.example + "-properties",
         title: "Properties",
-        body: properties
+        body: exampleProperties(params)
       }
-    ]
+    ],
+    classes: "tna-!--margin-top-m tna-!--margin-bottom-xl"
   }) }}
 {% endmacro %}
 
 {% macro exampleProperties(params) %}
   {%- if (params.group == 'components') %}
     {% for table in getMacroOptions(params.item) %}
-      <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-        <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
-            <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
-            <th class="govuk-table__header" scope="col">Description</th>
+      <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
+        <caption class="tna-table__caption tna-heading-m {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
+        <thead class="tna-table__head">
+          <tr class="tna-table__row">
+            <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
+            <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
+            <th class="tna-table__header" scope="col">Description</th>
           </tr>
         </thead>
-        <tbody class="govuk-table__body">
+        <tbody class="tna-table__body">
           {% for option in table.options -%}
-            <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="row">{{option.name}}</th>
-              <td class="govuk-table__cell ">{{option.type}}</td>
-              <td class="govuk-table__cell ">
+            <tr class="tna-table__row">
+              <th class="tna-table__header" scope="row">{{option.name}}</th>
+              <td class="tna-table__cell ">{{option.type}}</td>
+              <td class="tna-table__cell ">
                 {% if (option.required === true) %}
                   <strong>Required.</strong>
                 {% endif %}

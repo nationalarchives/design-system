@@ -14,7 +14,7 @@
 {% block head %}
   <meta name="description" content="{{ description }}" />
   <link rel="canonical" href="{{ site.siteURL }}{{ path }}" />
-  <base href="/design-system/">
+  {# <base href="/design-system/"> #}
 {% endblock %}
 
 {% block stylesheets %}
@@ -31,7 +31,7 @@
   {% for top in collections.top %}
     {% set topLevelNavigation = topLevelNavigation.concat({
       text: top.title,
-      href: top.path,
+      href: "/design-system/" + top.path,
       selected: top.path in path
     }) %}
   {% endfor %}
@@ -55,11 +55,12 @@
       {% set pathPart = pathParts.slice(0, loop.index) %}
       {% set breadcrumbs = breadcrumbs.concat({
         text: pathPart.slice(-1),
-        href: pathPart.join('/')
+        href: "/design-system/" + pathPart.join('/')
       }) %}
     {% endfor %}
     {{ tnaBreadcrumbs({
-      items: breadcrumbs
+      items: breadcrumbs,
+      classes: "tna-!--margin-bottom-m"
     }) }}
   {% endif %}
 {% endblock %}
@@ -115,7 +116,8 @@
           }
         ]
       }
-    ]
+    ],
+    classes: "tna-!--margin-top-xl"
   }) }}
 {% endblock %}
 
