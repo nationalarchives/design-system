@@ -5,7 +5,9 @@
 
 .tna-breadcrumbs {
   &__link {
-    text-transform: capitalize;
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -26,6 +28,17 @@ iframe {
 
 pre[class*="language-"] {
   max-height: 20rem;
+  padding-top: 2rem;
+
+  position: relative;
+}
+
+.html-copy {
+  height: 2rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .tna-grid--demo {

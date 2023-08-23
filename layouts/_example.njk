@@ -7,6 +7,10 @@
 
   <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
 
+  <p>
+    <a href="{{ exampleURL }}" target="_blank">Open this example in new tab</a>
+  </p>
+
   {% set html = getHTMLCode(examplePath) | forceescape %}
   {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
 
@@ -24,16 +28,16 @@
         body: '<pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre>'
       },
       {
-        id: params.group + "-" + params.item + "-" + params.example + "-properties",
-        title: "Properties",
-        body: exampleProperties(params)
+        id: params.group + "-" + params.item + "-" + params.example + "-options",
+        title: "Nunjucks options",
+        body: exampleOptions(params)
       }
     ],
     classes: "tna-!--margin-top-m tna-!--margin-bottom-xl"
   }) }}
 {% endmacro %}
 
-{% macro exampleProperties(params) %}
+{% macro exampleOptions(params) %}
   {%- if (params.group == 'components') %}
     {% for table in getMacroOptions(params.item) %}
       <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">

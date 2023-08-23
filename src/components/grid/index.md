@@ -82,7 +82,7 @@ If you don't know the width you need, or want a column to expand to fill a gap, 
 
 You can also mix them to create full-fluid layouts For example, you can 'pad' empty space around fixed-width columns with no common denominator like so:
 
-```
+```text
 |<--------------------------------------------- 100% --------------------------------------------->|
 |                                                                                                  |
  ________________________ ________________________________ ________________________________________
