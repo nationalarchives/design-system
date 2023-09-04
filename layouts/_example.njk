@@ -14,27 +14,33 @@
   {% set html = getHTMLCode(examplePath) | forceescape %}
   {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
 
-  {{ tnaTabs({
-    title: exampleTitle + " example",
-    items: [
-      {
-        id: params.group + "-" + params.item + "-" + params.example + "-html",
-        title: "HTML",
-        body: '<pre class="language-html"><code class="language-html">' + html + '</code></pre>'
-      },
-      {
-        id: params.group + "-" + params.item + "-" + params.example + "-nunjucks",
-        title: "Nunjucks",
-        body: '<pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre>'
-      },
-      {
-        id: params.group + "-" + params.item + "-" + params.example + "-options",
-        title: "Nunjucks options",
-        body: exampleOptions(params)
-      }
-    ],
-    classes: "tna-!--margin-top-m tna-!--margin-bottom-xl"
-  }) }}
+  {% set tabItems = [] %}
+  {% if params.html %}
+    {% set tabItems = tabItems.concat({
+      id: params.group + "-" + params.item + "-" + params.example + "-html",
+      title: "HTML",
+      body: '<pre class="language-html"><code class="language-html">' + html + '</code></pre>'
+    }) %}
+  {% endif %}
+  {% if params.nunjucks %}
+    {% set tabItems = tabItems.concat({
+      id: params.group + "-" + params.item + "-" + params.example + "-nunjucks",
+      title: "Nunjucks",
+      body: '<pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre>'
+    }) %}
+    {% set tabItems = tabItems.concat({
+      id: params.group + "-" + params.item + "-" + params.example + "-options",
+      title: "Nunjucks options",
+      body: exampleOptions(params)
+    }) %}
+  {% endif %}
+  {% if tabItems %}
+    {{ tnaTabs({
+      title: exampleTitle + " example",
+      items: tabItems,
+      classes: "tna-!--margin-top-m tna-!--margin-bottom-xl"
+    }) }}
+  {% endif %}
 {% endmacro %}
 
 {% macro exampleOptions(params) %}

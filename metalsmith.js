@@ -11,6 +11,9 @@ import collections from "@metalsmith/collections";
 import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import packageInfo from "./package.json" assert { type: "json" };
+import { readFileSync } from "fs";
+import { join, dirname } from "path";
+import { glob } from "glob";
 
 const t1 = performance.now();
 
@@ -31,6 +34,36 @@ Metalsmith(__dirname)
     msVersion: packageInfo.dependencies.metalsmith,
     nodeVersion: process.version,
   })
+  .use(async (files, metalsmith, done) => {
+    async function copyAssets(pattern, options) {
+      const assets = await glob(pattern, options);
+      for (const asset of assets) {
+        const input = join(options.cwd, asset);
+        console.log(`input: ${input}`);
+        const output = join(options.dest, asset);
+        files[output] = {
+          contents: readFileSync(input),
+        };
+      }
+    }
+
+    await Promise.all([
+      copyAssets("images/*.{svg,png,ico}", {
+        cwd: "../tna-frontend/src/nationalarchives/assets/",
+        dest: "static/assets",
+      }),
+    ]);
+
+    await Promise.all([
+      copyAssets("fonts/*", {
+        cwd: "../tna-frontend/src/nationalarchives/assets/",
+        dest: "static/assets",
+      }),
+    ]);
+
+    done();
+  })
+
   .use(
     renamer({
       markdown: {

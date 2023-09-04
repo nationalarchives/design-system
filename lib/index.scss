@@ -1,7 +1,10 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/_colour.scss";
 @use "@nationalarchives/frontend/nationalarchives/tools/_media.scss";
 @import "prismjs/themes/prism-okaidia.min";
+
+$tna-font-path: "/design-system/static/assets/fonts";
 @import "@nationalarchives/frontend/nationalarchives/all.scss";
+// @import "../../tna-frontend/src/nationalarchives/all.scss";
 
 .tna-breadcrumbs {
   &__link {

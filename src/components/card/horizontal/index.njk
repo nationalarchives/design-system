@@ -1,0 +1,21 @@
+---
+title: Card
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/card/macro.njk" import tnaCard %}
+
+{{ tnaCard({
+  heading: {
+    title: "Card title",
+    level: 3
+  },
+  image: {
+    src: "https://picsum.photos/id/175/640/480",
+    alt: "",
+    width: 640,
+    height: 480
+  },
+  body: "Lorem ipsum",
+  horizontal: true
+}) }}

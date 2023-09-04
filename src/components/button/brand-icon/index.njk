@@ -1,0 +1,12 @@
+---
+title: Button
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+{{ tnaButton({
+  text: "Tweet us",
+  href: "#",
+  brandIcon: "twitter"
+}) }}
