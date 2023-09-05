@@ -69,3 +69,54 @@ pre[class*="language-"] {
     }
   }
 }
+
+.tna-table {
+  width: 100%;
+  margin-top: 2rem;
+
+  border-collapse: collapse;
+
+  text-align: left;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__caption {
+    text-align: left;
+  }
+
+  &__head {
+  }
+
+  &__head &__header {
+    border-bottom: 4px #000 solid;
+  }
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header,
+  &__cell {
+    padding: 0.25rem 1rem;
+
+    border-bottom: 1px #000 solid;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__header {
+  }
+
+  &__cell {
+  }
+}
