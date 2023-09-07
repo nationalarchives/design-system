@@ -96,7 +96,7 @@ Metalsmith(__dirname)
   .use(
     collections({
       top: {
-        pattern: "(get-started|styles|components|patterns)/index.html",
+        pattern: "(get-started|styles|components|patterns|content)/index.html",
         sortBy: "order",
       },
       getStarted: {
@@ -114,6 +114,10 @@ Metalsmith(__dirname)
       patterns: {
         pattern: "patterns/*/index.html",
         filterBy: (file) => file.path !== "patterns/index.html",
+      },
+      content: {
+        pattern: "content/*/index.html",
+        filterBy: (file) => file.path !== "content/index.html",
       },
     }),
   )
