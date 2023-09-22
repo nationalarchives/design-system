@@ -1,0 +1,32 @@
+---
+title: Gallery
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/gallery/macro.njk" import tnaGallery %}
+
+{{ tnaGallery({
+  heading: {
+    title: "My gallery",
+    level: 3
+  },
+  items: [
+    {
+      src: "https://picsum.photos/id/1/800/600",
+      alt: "Photo 1",
+      description: "Photo 1",
+      tabs: [
+        {
+          id: "tab-1",
+          title: "Transcript",
+          body: "<p>TEST TRANSCRIPT</p>"
+        },
+        {
+          id: "tab-2",
+          title: "Translation",
+          body: "<p>TEST TRANSLATION</p>"
+        }
+      ]
+    }
+  ]
+}) }}

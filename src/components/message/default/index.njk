@@ -1,0 +1,10 @@
+---
+title: Message
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/message/macro.njk" import tnaMessage %}
+
+{{ tnaMessage({
+  message: "Please note this page references hunger strikes and force feeding, which some people may find upsetting."
+}) }}
