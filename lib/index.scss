@@ -1,10 +1,15 @@
+@use "@nationalarchives/frontend/nationalarchives/variables/assets" with (
+    $tna-font-path: "/design-system/static/assets/fonts",
+    // $fa-font-path: "/MY_CUSTOM_FONT_AWESOME_PATH"
+  );
+@use "@nationalarchives/frontend/nationalarchives/lib/font-awesome" with (
+  $fa-font-path: "/design-system/static/assets/fonts"
+);
+@use "@nationalarchives/frontend/nationalarchives/all.scss";
+
 @use "@nationalarchives/frontend/nationalarchives/tools/_colour.scss";
 @use "@nationalarchives/frontend/nationalarchives/tools/_media.scss";
 @import "prismjs/themes/prism-okaidia.min";
-
-$tna-font-path: "/design-system/static/assets/fonts";
-@import "@nationalarchives/frontend/nationalarchives/all.scss";
-// @import "../../tna-frontend/src/nationalarchives/all.scss";
 
 .tna-breadcrumbs {
   &__link {
