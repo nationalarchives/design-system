@@ -31,9 +31,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Build
         run: npm run build
+      - name: Debug static assets
+        run: |
+          ls -alh design-system
+          ls -alh design-system/static
+          ls -alh design-system/static/assets
       - name: Copy static assets
         run: cp node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
       - name: Setup Pages
