@@ -38,11 +38,6 @@ jobs:
         run: |
           mkdir -p design-system/static/assets
           cp -r node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
-      - name: Debug static assets
-        run: |
-          ls -alh design-system
-          ls -alh design-system/static
-          ls -alh design-system/static/assets
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
