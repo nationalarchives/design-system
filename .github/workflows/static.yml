@@ -37,7 +37,7 @@ jobs:
       - name: Copy static assets
         run: |
           mkdir -p design-system/static/assets
-          cp node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
+          cp -r node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
       - name: Debug static assets
         run: |
           ls -alh design-system
