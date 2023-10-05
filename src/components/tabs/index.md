@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Tabs
+group: components
 ---
 
 The tabs component is for...

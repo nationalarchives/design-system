@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Index grid
+group: components
 ---
 
 The index grid component is for...

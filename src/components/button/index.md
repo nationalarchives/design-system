@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Button
+group: components
 ---
 
 The button component is for...

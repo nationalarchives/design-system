@@ -147,6 +147,7 @@ Metalsmith(__dirname)
       drop: [],
       entries: {
         index: "lib/index.js",
+        TNAFrontend: "lib/TNAFrontend.js",
       },
     }),
   )

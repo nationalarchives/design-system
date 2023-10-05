@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Footer
+group: components
 ---
 
 The footer component is for...

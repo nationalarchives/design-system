@@ -1,8 +1,7 @@
 ---
 layout: collection-page.njk
-title: Styles
+title: Spacing
 group: styles
-order: 3
 ---
 
-Hello
+s, m, l, xl

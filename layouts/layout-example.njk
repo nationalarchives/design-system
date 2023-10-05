@@ -4,8 +4,6 @@
   <link rel="stylesheet" href="/design-system/css/index.css">
 {% endblock %}
 
-{# {% set bodyClasses = "app-example-page" %} #}
-
 {% block header %}{% endblock %}
 
 {% block main %}
@@ -13,3 +11,10 @@
 {% endblock %}
 
 {% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+<script src="/design-system/TNAFrontend.js"></script>
+<script>
+  window.TNAFrontend.initAll();
+</script>
+{% endblock %}

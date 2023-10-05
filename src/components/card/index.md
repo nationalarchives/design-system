@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Card
+group: components
 ---
 
 The card component is for...

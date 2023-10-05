@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Skip link
+group: components
 ---
 
 The skip link component is for...

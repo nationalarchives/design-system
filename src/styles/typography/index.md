@@ -1,8 +1,7 @@
 ---
 layout: collection-page.njk
-title: Styles
+title: Typography
 group: styles
-order: 3
 ---
 
-Hello
+h1, h2

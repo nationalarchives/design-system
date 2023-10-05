@@ -1,8 +1,7 @@
 ---
-layout: simple.njk
+layout: collection-page.njk
 title: Error pages
+group: patterns
 ---
-
-# Error pages
 
 This is how to error

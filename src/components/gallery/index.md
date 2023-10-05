@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Gallery
+group: components
 ---
 
 The gallery component is for...

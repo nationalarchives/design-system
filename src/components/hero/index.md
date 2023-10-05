@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Hero
+group: components
 ---
 
 The hero component is for...

@@ -1,6 +1,7 @@
 ---
-layout: pattern-index.njk
+layout: collection-page.njk
 title: Patterns
+group: patterns
 order: 5
 ---
 

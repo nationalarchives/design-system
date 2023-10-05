@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Message
+group: components
 ---
 
 The message component is for...

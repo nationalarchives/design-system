@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Grid
+group: components
 ---
 
 The grid component is for...

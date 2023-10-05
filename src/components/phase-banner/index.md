@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Phase banner
+group: components
 ---
 
 The phase banner component is for...

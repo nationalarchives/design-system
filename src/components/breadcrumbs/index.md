@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Breadcrumbs
+group: components
 ---
 
 The breadcrumbs component is for...

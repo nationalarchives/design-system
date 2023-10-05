@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Header
+group: components
 ---
 
 The header component is for...

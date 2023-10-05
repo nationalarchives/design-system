@@ -1,7 +1,6 @@
 ---
-layout: component-index.njk
+layout: collection-page.njk
 title: Components
+group: components
 order: 4
 ---
-
-Test

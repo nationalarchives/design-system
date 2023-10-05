@@ -43,6 +43,12 @@
       href: "/design-system"
     },
     navigation: topLevelNavigation,
+    topNavigation: [
+      {
+        text: "Design System GitHub repository",
+        href: "https://github.com/nationalarchives/design-system"
+      }
+    ],
     colour: "yellow"
   }) }}
 
@@ -59,9 +65,9 @@
         href: "/design-system/" + pathPart.join('/')
       }) %}
     {% endfor %}
-    {{ tnaBreadcrumbs({
+    {# {{ tnaBreadcrumbs({
       items: breadcrumbs
-    }) }}
+    }) }} #}
   {% endif %}
 {% endblock %}
 
@@ -69,36 +75,6 @@
   {% set buildDate = stats.atime | prettyDate %}
   {{ tnaFooter({
     navigation: [
-      {
-        title: "Resources",
-        items: [
-          {
-            text: "Frontend",
-            href: "https://nationalarchives.github.io/tna-frontend"
-          },
-          {
-            text: "The National Archives Beta",
-            href: "https://beta.nationalarchives.gov.uk/"
-          }
-        ]
-      },
-      {
-        title: "GitHub repositories",
-        items: [
-          {
-            text: "Design System",
-            href: "https://github.com/nationalarchives/design-system"
-          },
-          {
-            text: "Frontend",
-            href: "https://github.com/nationalarchives/tna-frontend"
-          },
-          {
-            text: "Frontend Django",
-            href: "https://github.com/nationalarchives/tna-frontend-django"
-          }
-        ]
-      },
       {
         title: "Meta",
         items: [
@@ -115,6 +91,41 @@
             href: "https://github.com/nationalarchives/design-system/blob/main/.nvmrc"
           }
         ]
+      },
+      {
+        title: "GitHub repositories",
+        items: [
+          {
+            text: "Design System",
+            href: "https://github.com/nationalarchives/design-system"
+          },
+          {
+            text: "TNA Frontend",
+            href: "https://github.com/nationalarchives/tna-frontend"
+          },
+          {
+            text: "TNA Frontend Django",
+            href: "https://github.com/nationalarchives/tna-frontend-django"
+          }
+        ]
+      }
+    ],
+    legal: [
+      {
+        text: "Accessibility statement",
+        href: "/design-system/accessibility"
+      },
+      {
+        text: "Cookies",
+        href: "/design-system/cookies"
+      },
+      {
+        text: "Site map",
+        href: "/design-system/site-map"
+      },
+      {
+        text: "Privacy policy",
+        href: "/design-system/privacy"
       }
     ],
     classes: "tna-!--margin-top-xl"

@@ -1,6 +1,7 @@
 ---
-layout: component.njk
+layout: collection-page.njk
 title: Picture
+group: components
 ---
 
 The picture component is for...

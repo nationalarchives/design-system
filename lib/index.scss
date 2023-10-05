@@ -5,6 +5,9 @@
 @use "@nationalarchives/frontend/nationalarchives/lib/font-awesome" with (
   $fa-font-path: "/design-system/static/assets/fonts"
 );
+@use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
+  $largest-container-width: 90rem
+);
 @use "@nationalarchives/frontend/nationalarchives/all.scss";
 
 @use "@nationalarchives/frontend/nationalarchives/tools/_colour.scss";
@@ -20,7 +23,7 @@
 }
 
 iframe {
-  width: 100%;
+  width: calc(100% - 2px);
   min-height: 20rem;
 
   display: block;
