@@ -7,16 +7,49 @@ layout: layout-example.njk
 
 {{ tnaIndexGrid({
   heading: {
-    title: "My dogs",
-    level: 2,
-    href: "#"
+    title: "My animals",
+    level: 2
   },
   items: [
     {
       href: "#/category-1",
-      label: "Time period",
-      title: "Category 1",
-      subtitle: "29 photos"
+      label: "Animal",
+      title: "Dogs",
+      subtitle: "29 photos",
+      src: "https://picsum.photos/id/237/800/600",
+      alt: "A small puppy looking upwards",
+      width: "800",
+      height: "600"
+    },
+    {
+      href: "#/category-2",
+      label: "Animal",
+      title: "Birds",
+      subtitle: "6 photos",
+      src: "https://picsum.photos/id/244/800/600",
+      alt: "Some sea birds on a wooden pier",
+      width: "800",
+      height: "600"
+    },
+    {
+      href: "#/category-3",
+      label: "Animal",
+      title: "Bears",
+      subtitle: "18 photos",
+      src: "https://picsum.photos/id/433/800/600",
+      alt: "A bear looking straight at the camera",
+      width: "800",
+      height: "600"
+    },
+    {
+      href: "#/category-4",
+      label: "Animal",
+      title: "Tigers",
+      subtitle: "7 photos",
+      src: "https://picsum.photos/id/593/800/600",
+      alt: "A tiger lying down in an enclosure",
+      width: "800",
+      height: "600"
     }
   ],
   columns: 4,

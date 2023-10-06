@@ -6,7 +6,7 @@
 {%- from "nationalarchives/components/header/macro.njk" import tnaHeader -%}
 {%- from "nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner -%}
 
-{%- set htmlClasses = "tna-template--light-theme" -%}
+{%- set htmlClasses = "tna-template--light-theme tna-template--yellow-accent" -%}
 
 {% block pageTitle %}
   {{ title }} | The National Archives Design System
@@ -36,7 +36,7 @@
 
 {% block header %}
   {{ tnaPhaseBanner({
-    phase: "Discovery",
+    phase: "Alpha",
     message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it."
   }) }}
 
@@ -61,7 +61,7 @@
         href: "https://github.com/nationalarchives/design-system"
       }
     ],
-    colour: "yellow"
+    colour: "black"
   }) }}
 
   {% if path != "" %}

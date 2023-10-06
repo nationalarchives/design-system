@@ -1,8 +1,8 @@
 {% extends "./_design-system-base.njk" %}
 
 {% block main %}
-  <div class="tna-container tna-!--margin-top-m">
-    <main class="tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }}" id="main-content" role="main">
+  <div class="tna-container">
+    <main class="tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content" role="main">
       {% if group|capitalize == title %}
         <h1 class="tna-heading tna-heading--xl">
           {{ title }}
@@ -15,11 +15,11 @@
       {% endif %}
       {{ contents | safe }}
     </main>
-    <nav class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny" role="navigation" aria-label="{{ title }} navigation">
-      <ul class="tna-ul tna-ul--plain">
+    <nav class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="{{ title }} navigation">
+      <ul class="tna-ds-sidebar">
       {% for component in collections[group] %}
-        <li>
-          <a href="/design-system/{{ component.path }}">{{ component.title }}</a>
+        <li class="tna-ds-sidebar__item{{ ' tna-ds-sidebar__item--current' if component.path == path }}">
+          <a href="/design-system/{{ component.path }}" class="tna-ds-sidebar__link">{{ component.title }}</a>
         </li>
       {% endfor %}
       </ul>

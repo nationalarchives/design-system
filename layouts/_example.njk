@@ -5,81 +5,86 @@
   {% set examplePath = exampleRoot + "index.njk" %}
   {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 
-  <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+  <section class="tna-ds-component-example">
+    <a href="{{ exampleURL }}" target="_blank" class="tna-ds-component-example__link">Open this example in new tab</a>
 
-  <p>
-    <a href="{{ exampleURL }}" target="_blank">Open this example in new tab</a>
-  </p>
+    <div class="tna-ds-component-example__frame-wrapper">
+      <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-component-example__frame tna-ds-component-example__frame--resizable{% if params.size %} tna-ds-component-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+    </div>
 
-  {% set html = getHTMLCode(examplePath) | forceescape %}
-  {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
+    {% set html = getHTMLCode(examplePath) | forceescape %}
+    {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
 
-  {% set tabItems = [] %}
-  {% if params.html %}
-    {% set tabItems = tabItems.concat({
-      id: params.group + "-" + params.item + "-" + params.example + "-html",
-      title: "HTML",
-      body: '<pre class="language-html"><code class="language-html">' + html + '</code></pre>'
-    }) %}
-  {% endif %}
-  {% if params.nunjucks %}
-    {% set tabItems = tabItems.concat({
-      id: params.group + "-" + params.item + "-" + params.example + "-nunjucks",
-      title: "Nunjucks",
-      body: '<pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre>'
-    }) %}
-    {% set tabItems = tabItems.concat({
-      id: params.group + "-" + params.item + "-" + params.example + "-options",
-      title: "Nunjucks options",
-      body: exampleOptions(params)
-    }) %}
-  {% endif %}
-  {% if tabItems %}
-    {{ tnaTabs({
-      title: exampleTitle + " example",
-      items: tabItems,
-      classes: "tna-!--margin-top-m tna-!--margin-bottom-xl"
-    }) }}
-  {% endif %}
+    {% set tabItems = [] %}
+    {% if params.html %}
+      {% set tabItems = tabItems.concat({
+        id: params.group + "-" + params.item + "-" + params.example + "-html",
+        title: "HTML",
+        body: '<div class="tna-ds-component-example__code"><pre class="language-html"><code class="language-html">' + html + '</code></pre><div>'
+      }) %}
+    {% endif %}
+    {% if params.nunjucks %}
+      {% set tabItems = tabItems.concat({
+        id: params.group + "-" + params.item + "-" + params.example + "-nunjucks",
+        title: "Nunjucks",
+        body: '<div class="tna-ds-component-example__code"><pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre><div>'
+      }) %}
+      {% set tabItems = tabItems.concat({
+        id: params.group + "-" + params.item + "-" + params.example + "-options",
+        title: "Nunjucks options",
+        body: exampleOptions(params)
+      }) %}
+    {% endif %}
+    {% if tabItems|length > 0 %}
+      <div class="tna-ds-component-example__data">
+        {{ tnaTabs({
+          title: exampleTitle + " example",
+          items: tabItems
+        }) }}
+      </div>
+    {% endif %}
+  </section>
 {% endmacro %}
 
 {% macro exampleOptions(params) %}
   {%- if (params.group == 'components') %}
     {% for table in getMacroOptions(params.item) %}
-      <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-        <caption class="tna-table__caption tna-heading-m {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
-        <thead class="tna-table__head">
-          <tr class="tna-table__row">
-            <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
-            <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
-            <th class="tna-table__header" scope="col">Description</th>
-          </tr>
-        </thead>
-        <tbody class="tna-table__body">
-          {% for option in table.options -%}
+      <div class="tna-ds-component-example__data-table-wrapper">
+        <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
+          <caption class="tna-table__caption tna-heading-m {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
+          <thead class="tna-table__head">
             <tr class="tna-table__row">
-              <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
-              <td class="tna-table__cell" width="25%">{{option.type}}</td>
-              <td class="tna-table__cell" width="50%">
-                {% if (option.required === true) %}
-                  <strong>Required.</strong>
-                {% endif %}
-                {{ option.description | safe }}
-                {% if (option.isComponent) -%}
-                  {% if (option.name === "hint" or option.name === "label") %}
-                    See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
-                  {% else %}
-                    See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
-                  {% endif %}
-                {% endif %}
-                {% if (option.params) %}
-                  See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
-                {% endif -%}
-              </td>
+              <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
+              <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
+              <th class="tna-table__header" scope="col">Description</th>
             </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+          </thead>
+          <tbody class="tna-table__body">
+            {% for option in table.options -%}
+              <tr class="tna-table__row">
+                <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
+                <td class="tna-table__cell" width="25%">{{option.type}}</td>
+                <td class="tna-table__cell" width="50%">
+                  {% if (option.required === true) %}
+                    <strong>Required.</strong>
+                  {% endif %}
+                  {{ option.description | safe }}
+                  {% if (option.isComponent) -%}
+                    {% if (option.name === "hint" or option.name === "label") %}
+                      See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                    {% else %}
+                      See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                    {% endif %}
+                  {% endif %}
+                  {% if (option.params) %}
+                    See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                  {% endif -%}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     {% endfor %}
   {% endif -%}
 {% endmacro %}

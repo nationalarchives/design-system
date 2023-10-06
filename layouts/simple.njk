@@ -1,9 +1,11 @@
 {% extends "./_design-system-base.njk" %}
 
 {% block content %}
-  <div class="tna-container tna-!--margin-top-m">
-    <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
-      {{ contents | safe }}
+  <div class="tna-section">
+    <div class="tna-container">
+      <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
+        {{ contents | safe }}
+      </div>
     </div>
   </div>
 {% endblock %}
