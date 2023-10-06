@@ -14,7 +14,7 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
-@import "prismjs/themes/prism-okaidia.min";
+@import "prismjs/themes/prism.min";
 
 .tna-breadcrumbs {
   &__link {
@@ -141,6 +141,11 @@
         padding-top: 3rem;
 
         border-radius: 0;
+      }
+
+      :not(pre) > code[class*="language-"],
+      pre[class*="language-"] {
+        background-color: #f1ece9;
       }
 
       &-copy {
