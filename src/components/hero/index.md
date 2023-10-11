@@ -10,5 +10,5 @@ The hero component is for...
 
 ## Example
 
-{{ example({group: "components", item: "hero", example: "default", html: true, nunjucks: true, open: false}) | safe }}
+{{ example({ group: "components", item: "hero", example: "default", html: true, nunjucks: true, open: false}) | safe }}
 

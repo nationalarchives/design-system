@@ -8,7 +8,7 @@ The grid component is for...
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "grid", example: "default", html: true, nunjucks: true, open: false}) | safe }}
+{{ example({ group: "components", item: "grid", example: "default", html: true, nunjucks: true, open: false}) | safe }}
 
 ## Column widths
 
@@ -73,7 +73,7 @@ On a 2 column grid (tiny devices), the widths available are:
 
 ## Responsive example
 
-{{ example({group: "components", item: "grid", example: "responsive", html: true, nunjucks: true, open: false}) | safe }}
+{{ example({ group: "components", item: "grid", example: "responsive", html: true, nunjucks: true, open: false}) | safe }}
 
 ## Flexible columns
 

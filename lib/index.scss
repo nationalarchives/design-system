@@ -16,6 +16,8 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 @import "prismjs/themes/prism.min";
 
+$code-background: #f1ece9;
+
 .tna-breadcrumbs {
   &__link {
     &::first-letter {
@@ -150,7 +152,7 @@
 
       :not(pre) > code[class*="language-"],
       pre[class*="language-"] {
-        background-color: #f1ece9;
+        background-color: $code-background;
 
         .language-css .token.string,
         .style .token.string,
@@ -168,6 +170,12 @@
         z-index: 1;
       }
     }
+  }
+}
+
+p {
+  code {
+    background-color: $code-background;
   }
 }
 
@@ -198,6 +206,29 @@
 
     @include media.on-mobile() {
       margin-bottom: 1rem;
+    }
+  }
+}
+
+.tna-heading {
+  a[href^="#"] {
+    width: 1.5rem;
+
+    display: none;
+
+    @include typography.relative-font-size(16);
+    vertical-align: middle;
+    line-height: 1.5rem;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:hover {
+    a[href^="#"] {
+      display: inline-block;
     }
   }
 }

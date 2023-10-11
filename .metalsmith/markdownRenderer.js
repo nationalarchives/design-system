@@ -2,6 +2,9 @@ import { marked } from "marked";
 
 const markdownRenderer = new marked.Renderer();
 
+const slugify = (text) =>
+  encodeURIComponent(text.toLowerCase().trim().replace(/[\s]/g, "-"));
+
 markdownRenderer.heading = function (text, level) {
   let headingSize = "";
   switch (level) {
@@ -20,9 +23,10 @@ markdownRenderer.heading = function (text, level) {
       headingSize = "tna-heading--s";
       break;
   }
+  const slug = slugify(text);
   return `
-  <h${level} class="tna-heading ${headingSize}">
-    ${text}
+  <h${level} id="${slug}" class="tna-heading ${headingSize} tna-heading--no-link-arrow">
+    ${text} <a href="#${slug}" aria-hidden="true"><i class="fa-solid fa-link"></i></a>
   </h${level}>`;
 };
 
