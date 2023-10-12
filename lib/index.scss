@@ -32,6 +32,9 @@ $code-background: #f1ece9;
     margin: 0;
     padding: 0;
 
+    position: sticky;
+    top: 0;
+
     list-style: none;
 
     &__item {
@@ -64,6 +67,19 @@ $code-background: #f1ece9;
     }
 
     &__link {
+    }
+
+    &__sections {
+      padding-left: 1.5rem;
+
+      @include typography.relative-font-size(16);
+      @include typography.main-font-weight;
+      list-style: disc;
+    }
+
+    &__section {
+      &__link {
+      }
     }
   }
 

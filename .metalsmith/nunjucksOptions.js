@@ -182,6 +182,15 @@ const nunjucksOptions = {
     jsonDump: function (data) {
       return JSON.stringify(data, null, 2);
     },
+    headingsList: function (content) {
+      const regex = /<h[1-6] id="([\w\-]+)"[^>]+>[\s\n]*([\w\s]+)[\s\n]*</gm;
+      let headings = [];
+      let tmp;
+      while ((tmp = regex.exec(content)) !== null) {
+        headings.push({ title: tmp[2], href: tmp[1] });
+      }
+      return headings;
+    },
   },
 };
 

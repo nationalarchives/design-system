@@ -18,7 +18,7 @@ Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a pag
 
 Sometimes you may need to make it clear that a page is part of a larger section or group. To do this, you can use a heading group with a supertitle above the main heading.
 
-The supertitle should be short, at most two words.
+The supertitle should be short, at most about 2–3 words or 12–15 characters.
 
 By default, the supertitle is a contrasting colour to the text, usually inverted. It is controlled by the accent colour of the page.
 
