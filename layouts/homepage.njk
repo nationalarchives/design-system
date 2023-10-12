@@ -1,0 +1,111 @@
+{% extends "./_design-system-base.njk" %}
+
+{%- from "nationalarchives/components/button/macro.njk" import tnaButton -%}
+{%- from "nationalarchives/components/card/macro.njk" import tnaCard -%}
+{%- from "nationalarchives/components/hero/macro.njk" import tnaHero -%}
+
+{% block main %}
+  {{ tnaHero({
+    heading: "Design your service using National Archives styles, components and patterns",
+    body: "<p>Use this design system to make government services consistent with The National Archives. Learn from the research and experience of other service teams and avoid repeating work that has already been done.</p>" + tnaButton({ text: "Get started", href: "/design-system/get-started/", classes: "tna-button--large" }),
+    image: {
+      src: "https://www.nationalarchives.gov.uk/wp-content/uploads/sites/24/2023/07/tna-building-compress.jpg",
+      alt: "The front of The National Archives office in Kew",
+      width: 640,
+      height: 360
+    }
+  }) }}
+  <main class="tna-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+    <div class="tna-section">
+      <div class="tna-container">
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+          {{ tnaCard({
+            title: "Styles",
+            headingLevel: 2,
+            headingSize: "l",
+            body: "<p>Make your service look part of The National Archives with guides for applying layout, typography, colour and images.</p>",
+            imageSrc: "https://fakeimg.pl/600x400/9c193a/fff?text=Styles&font=bebas",
+            imageAlt: "",
+            imageWidth: 600,
+            imageHeight: 400,
+            htmlElement: "article",
+            actions: [
+              {
+                text: "Browse styles",
+                href: "/design-system/styles/"
+              }
+            ]
+          }) }}
+        </div>
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+          {{ tnaCard({
+            title: "Components",
+            headingLevel: 2,
+            headingSize: "l",
+            body: "<p>Save time with reusable, accessible components for forms, navigation, panels, tables and more.</p>",
+            imageSrc: "https://fakeimg.pl/600x400/00623b/fff?text=Components&font=bebas",
+            imageAlt: "",
+            imageWidth: 600,
+            imageHeight: 400,
+            htmlElement: "article",
+            actions: [
+              {
+                text: "Browse components",
+                href: "/design-system/components/"
+              }
+            ]
+          }) }}
+        </div>
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+          {{ tnaCard({
+            title: "Patterns",
+            headingLevel: 2,
+            headingSize: "l",
+            body: "<p>Help users complete common tasks like entering names and addresses, filling in forms and creating accounts.</p>",
+            imageSrc: "https://fakeimg.pl/600x400/004c7e/fff?text=Patterns&font=bebas",
+            imageAlt: "",
+            imageWidth: 600,
+            imageHeight: 400,
+            htmlElement: "article",
+            actions: [
+              {
+                text: "Browse patterns",
+                href: "/design-system/patterns/"
+              }
+            ]
+          }) }}
+        </div>
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+          {{ tnaCard({
+            title: "Content",
+            headingLevel: 2,
+            headingSize: "l",
+            body: "<p>Write content in a consistent and understandable way that makes it easier for users to use your service.</p>",
+            imageSrc: "https://fakeimg.pl/600x400/8f3415/fff?text=Content&font=bebas",
+            imageAlt: "",
+            imageWidth: 600,
+            imageHeight: 400,
+            htmlElement: "article",
+            actions: [
+              {
+                text: "Browse content",
+                href: "/design-system/content/"
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="tna-section">
+      <div class="tna-container">
+        <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
+          {{ contents | safe }}
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  {% block afterContent %}{% endblock %}
+{% endblock %}

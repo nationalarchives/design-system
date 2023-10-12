@@ -17,7 +17,18 @@
   <link rel="apple-touch-icon" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon.png">
 {% endblock %}
 
-{%- set htmlClasses = "tna-template--light-theme tna-template--yellow-accent" -%}
+{%- set htmlClasses = "tna-template--light-theme" -%}
+{% if group === "styles" %}
+  {%- set htmlClasses = htmlClasses + " tna-template--pink-accent" -%}
+{% elseif group === "components" %}
+  {%- set htmlClasses = htmlClasses + " tna-template--green-accent" -%}
+{% elseif group === "patterns" %}
+  {%- set htmlClasses = htmlClasses + " tna-template--blue-accent" -%}
+{% elseif group === "content" %}
+  {%- set htmlClasses = htmlClasses + " tna-template--orange-accent" -%}
+{% else %}
+  {%- set htmlClasses = htmlClasses + " tna-template--yellow-accent" -%}
+{% endif %}
 
 {% block pageTitle %}
   {{ title }} | The National Archives Design System

@@ -176,7 +176,55 @@ $code-background: #f1ece9;
 
 p {
   code {
+    color: colour.brand-colour("maroon");
+
     background-color: $code-background;
+  }
+}
+
+.tna-template__body {
+  > .tna-header + .tna-container {
+    flex: 1;
+  }
+}
+
+.tna-button {
+  &--large {
+    @include typography.relative-font-size(22);
+  }
+}
+
+.tna-hero {
+  &__image {
+    filter: grayscale(1) contrast(1.5) brightness(1.2);
+  }
+
+  &__inner {
+    z-index: 4;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset: 0;
+
+    content: "";
+  }
+
+  &::before {
+    z-index: 2;
+
+    background-color: #004c7e;
+
+    mix-blend-mode: screen;
+  }
+
+  &::after {
+    z-index: 3;
+
+    background-color: #fc0;
+
+    mix-blend-mode: multiply;
   }
 }
 

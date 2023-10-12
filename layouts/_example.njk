@@ -6,7 +6,7 @@
   {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 
   <section class="tna-ds-component-example">
-    <a href="{{ exampleURL }}" target="_blank" class="tna-ds-component-example__link">Open this example in new tab</a>
+    <small><a href="{{ exampleURL }}" target="_blank" class="tna-ds-component-example__link">Open this example in new tab</a></small>
 
     <div class="tna-ds-component-example__frame-wrapper">
       <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-component-example__frame tna-ds-component-example__frame--resizable{% if params.size %} tna-ds-component-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
@@ -18,19 +18,19 @@
     {% set tabItems = [] %}
     {% if params.html %}
       {% set tabItems = tabItems.concat({
-        id: params.group + "-" + params.item + "-" + params.example + "-html",
+        id: "example-" + params.example + "-html",
         title: "HTML",
         body: '<div class="tna-ds-component-example__code"><pre class="language-html"><code class="language-html">' + html + '</code></pre><div>'
       }) %}
     {% endif %}
     {% if params.nunjucks %}
       {% set tabItems = tabItems.concat({
-        id: params.group + "-" + params.item + "-" + params.example + "-nunjucks",
+        id: "example-" + params.example + "-nunjucks",
         title: "Nunjucks",
         body: '<div class="tna-ds-component-example__code"><pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre><div>'
       }) %}
       {% set tabItems = tabItems.concat({
-        id: params.group + "-" + params.item + "-" + params.example + "-options",
+        id: "example-" + params.example + "-options",
         title: "Nunjucks options",
         body: exampleOptions(params)
       }) %}
