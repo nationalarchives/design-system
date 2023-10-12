@@ -82,6 +82,8 @@ $code-background: #f1ece9;
       padding: 1.5rem;
 
       @include colour.colour-border("keyline", 1px, solid, top);
+
+      background-color: #f4f4f4;
     }
 
     &__frame {
