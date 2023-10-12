@@ -6,8 +6,7 @@
   $fa-font-path: "/design-system/static/assets/fonts"
 );
 @use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
-  $largest-container-width: 90rem,
-  $gutter-width-mobile: 1rem
+  $largest-container-width: 90rem
 );
 @use "@nationalarchives/frontend/nationalarchives/all";
 
@@ -212,40 +211,6 @@ p {
   }
 }
 
-.tna-hero {
-  &__image {
-    filter: grayscale(1) contrast(1.5) brightness(1.2);
-  }
-
-  &__inner {
-    z-index: 4;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    inset: 0;
-
-    content: "";
-  }
-
-  &::before {
-    z-index: 2;
-
-    background-color: #004c7e;
-
-    mix-blend-mode: screen;
-  }
-
-  &::after {
-    z-index: 3;
-
-    background-color: #fc0;
-
-    mix-blend-mode: multiply;
-  }
-}
-
 .app-example-page {
   min-height: auto;
   padding: 2rem;
@@ -274,6 +239,12 @@ p {
     @include media.on-mobile() {
       margin-bottom: 1rem;
     }
+  }
+}
+
+.tna-hero {
+  &--tint {
+    @include colour.colour-border("keyline", 1px, solid, bottom);
   }
 }
 

@@ -17,17 +17,17 @@
   <link rel="apple-touch-icon" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon.png">
 {% endblock %}
 
-{%- set htmlClasses = "tna-template--light-theme" -%}
+{%- set theme = "light" -%}
 {% if group === "styles" %}
-  {%- set htmlClasses = htmlClasses + " tna-template--pink-accent" -%}
+  {%- set themeAccent = "pink" -%}
 {% elseif group === "components" %}
-  {%- set htmlClasses = htmlClasses + " tna-template--green-accent" -%}
+  {%- set themeAccent = "green" -%}
 {% elseif group === "patterns" %}
-  {%- set htmlClasses = htmlClasses + " tna-template--blue-accent" -%}
+  {%- set themeAccent = "blue" -%}
 {% elseif group === "content" %}
-  {%- set htmlClasses = htmlClasses + " tna-template--orange-accent" -%}
+  {%- set themeAccent = "orange" -%}
 {% else %}
-  {%- set htmlClasses = htmlClasses + " tna-template--yellow-accent" -%}
+  {%- set themeAccent = "yellow" -%}
 {% endif %}
 
 {% block pageTitle %}

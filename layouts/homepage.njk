@@ -8,17 +8,16 @@
   {{ tnaHero({
     heading: "Design your service using National Archives styles, components and patterns",
     body: "<p>Use this design system to make government services consistent with The National Archives. Learn from the research and experience of other service teams and avoid repeating work that has already been done.</p>" + tnaButton({ text: "Get started", href: "/design-system/get-started/", classes: "tna-button--large" }),
-    image: {
-      src: "https://www.nationalarchives.gov.uk/wp-content/uploads/sites/24/2023/07/tna-building-compress.jpg",
-      alt: "The front of The National Archives office in Kew",
-      width: 640,
-      height: 360
-    }
+    imageSrc: "https://www.nationalarchives.gov.uk/wp-content/uploads/sites/24/2023/07/tna-building-compress.jpg",
+    imageAlt: "The front of The National Archives office in Kew",
+    imageWidth: 640,
+    imageHeight: 360,
+    classes: "tna-hero--tint"
   }) }}
   <main class="tna-main-wrapper {{ mainClasses }}" id="main-content" role="main">
     <div class="tna-section">
       <div class="tna-container">
-        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-top-m tna-!--margin-bottom-s">
           {{ tnaCard({
             title: "Styles",
             headingLevel: 2,
@@ -37,7 +36,7 @@
             ]
           }) }}
         </div>
-        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-top-m tna-!--margin-bottom-s">
           {{ tnaCard({
             title: "Components",
             headingLevel: 2,
@@ -56,7 +55,7 @@
             ]
           }) }}
         </div>
-        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-top-m tna-!--margin-bottom-s">
           {{ tnaCard({
             title: "Patterns",
             headingLevel: 2,
@@ -75,7 +74,7 @@
             ]
           }) }}
         </div>
-        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+        <div class="tna-column tna-column--width-1-4 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-top-m tna-!--margin-bottom-s">
           {{ tnaCard({
             title: "Content",
             headingLevel: 2,

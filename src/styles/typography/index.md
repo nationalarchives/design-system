@@ -32,7 +32,7 @@ If the caption should be considered part of the page heading, you can also nest 
 
 ### Body
 
-The default paragraph font size is 18px.
+The default paragraph font size is 18px on large and medium devices and 17px on small and tiny devices.
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs", html: true, nunjucks: false, open: false, size: "xxs" }) }}
 
