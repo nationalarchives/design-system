@@ -24,7 +24,11 @@ markdownRenderer.heading = function (text, level) {
       break;
   }
   const slug = slugify(text);
-  return `
+  return level === 1
+    ? `<h${level} class="tna-heading ${headingSize}">
+  ${text}
+</h${level}>`
+    : `
   <h${level} id="${slug}" class="tna-heading ${headingSize} tna-heading--no-link-arrow">
     ${text} <a href="#${slug}" aria-hidden="true"><i class="fa-solid fa-link"></i></a>
   </h${level}>`;

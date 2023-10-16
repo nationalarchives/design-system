@@ -1,8 +1,7 @@
 ---
 layout: collection-page.njk
-title: Get started
+title: Prototyping
 group: getStarted
-order: 2
 ---
 
-## Welcome
+## Start

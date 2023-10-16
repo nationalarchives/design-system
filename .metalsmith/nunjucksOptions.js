@@ -182,14 +182,47 @@ const nunjucksOptions = {
     jsonDump: function (data) {
       return JSON.stringify(data, null, 2);
     },
+    camelToSpace: function (data) {
+      return data.replace(/([a-z]+)([A-Z])/, "$1 $2").toLowerCase();
+    },
     headingsList: function (content) {
-      const regex = /<h[1-6] id="([\w\-]+)"[^>]+>[\s\n]*([\w\s]+)[\s\n]*</gm;
+      const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>[\s\n]*([\w\s]+)[\s\n]*</gm;
       let headings = [];
       let tmp;
       while ((tmp = regex.exec(content)) !== null) {
-        headings.push({ title: tmp[2], href: tmp[1] });
+        headings.push({ title: tmp[3], href: tmp[2], level: tmp[1] });
       }
-      return headings;
+      const groupHeadings = (index, grouping) => {
+        if (index < headings.length) {
+          const nextHeading = headings[index];
+          if (grouping.length) {
+            const prevHeading = grouping.slice().pop();
+            try {
+              if (nextHeading.level > prevHeading.level) {
+                prevHeading.children = prevHeading.children || [];
+                return groupHeadings(index, prevHeading.children);
+              } else if (nextHeading.level == prevHeading.level) {
+                grouping.push({ ...nextHeading });
+                return groupHeadings(++index, grouping);
+              } else {
+                throw { index, heading: nextHeading };
+              }
+            } catch (higherHeading) {
+              if (higherHeading.heading.level == prevHeading.level) {
+                grouping.push({ ...higherHeading.heading });
+                return groupHeadings(++higherHeading.index, grouping);
+              } else {
+                throw higherHeading;
+              }
+            }
+          } else {
+            grouping.push({ ...nextHeading });
+            groupHeadings(++index, grouping);
+          }
+        }
+        return grouping;
+      };
+      return groupHeadings(0, []);
     },
   },
 };

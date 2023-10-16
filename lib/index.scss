@@ -28,11 +28,13 @@ $code-background: #f1ece9;
 
 .tna-ds {
   &-sidebar {
+    // max-height: 100vh;
     margin: 0;
     padding: 0;
 
     position: sticky;
-    top: 0;
+    top: 1rem;
+    // overflow: auto;
 
     list-style: none;
 
@@ -69,7 +71,7 @@ $code-background: #f1ece9;
     }
 
     &__sections {
-      padding-left: 1.5rem;
+      padding-left: 1.25rem;
 
       @include typography.relative-font-size(16);
       @include typography.main-font-weight;
@@ -191,7 +193,8 @@ $code-background: #f1ece9;
   }
 }
 
-p {
+p,
+li {
   code {
     color: colour.brand-colour("maroon");
 
