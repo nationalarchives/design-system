@@ -51,6 +51,23 @@ markdownRenderer.paragraph = function (text) {
   </p>`;
 };
 
+markdownRenderer.table = function (head, body) {
+  const formatRows = (row) =>
+    row
+    .replace(/<tr>\s*<td>(.*)<\/td>/g, '<th class="tna-table__header">$1</th>')
+      .replace(/<tr>/g, '<tr class="tna-table__row">')
+      .replace(/<th>/g, '<th class="tna-table__header">')
+      .replace(/<td>/g, '<td class="tna-table__cell">');
+  return `<table class="tna-table">
+    <thead class="tna-table__head">
+      ${formatRows(head)}
+    </thead>
+    <tbody class="tna-table__body">
+      ${formatRows(body)}
+    </tbody>
+  </table>`;
+};
+
 const escapeTest = /[&<>"']/;
 const escapeReplace = new RegExp(escapeTest.source, "g");
 const escapeTestNoEncode = /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/;
