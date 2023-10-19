@@ -1,0 +1,36 @@
+{% extends "./_design-system-base.njk" %}
+
+{% block content %}
+  <div class="tna-section">
+    <div class="tna-container">
+      <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
+        <h1 class="tna-heading tna-heading--xl">
+          {{ title }}
+        </h1>
+        {{ contents | safe }}
+        <h2 class="tna-heading tna-heading--l">
+          <a href="/design-system">{{ collections.home[0].title }}</a>
+        </h2>
+        {%- for section in collections.top %}
+        <h2 class="tna-heading tna-heading--l">
+          <a href="/design-system/{{ section.path }}">{{ section.title }}</a>
+        </h2>
+        <ul class="tna-ul tna-ul--plain">
+          {%- for page in collections[section.group] %}
+          <li>
+            <a href="/design-system/{{ page.path }}">{{ page.title }}</a>{% if page.description %} &mdash; {{ page.description }}{% endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- endfor %}
+        <!--
+        {%- for page in collections.legal %}
+        <h2 class="tna-heading tna-heading--l">
+          <a href="/design-system/{{ page.path }}">{{ page.title }}</a>
+        </h2>
+        {%- endfor %}
+        -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

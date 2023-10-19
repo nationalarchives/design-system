@@ -95,29 +95,44 @@ Metalsmith(__dirname)
   )
   .use(
     collections({
+      home: {
+        pattern: "index.html",
+        refer: false,
+      },
       top: {
         pattern: "(get-started|styles|components|patterns|content)/index.html",
         sortBy: "order",
+        refer: false,
       },
-      getStarted: {
+      "get-started": {
         pattern: "get-started/*/index.html",
         filterBy: (file) => file.path !== "get-started/index.html",
+        refer: false,
       },
       styles: {
         pattern: "styles/*/index.html",
         filterBy: (file) => file.path !== "styles/index.html",
+        refer: false,
       },
       components: {
         pattern: "components/*/index.html",
         filterBy: (file) => file.path !== "components/index.html",
+        refer: false,
       },
       patterns: {
         pattern: "patterns/*/index.html",
         filterBy: (file) => file.path !== "patterns/index.html",
+        refer: false,
       },
       content: {
         pattern: "content/*/index.html",
         filterBy: (file) => file.path !== "content/index.html",
+        refer: false,
+      },
+      legal: {
+        pattern: "*.html",
+        filterBy: (file) => file.path !== "index.html",
+        refer: false,
       },
     }),
   )

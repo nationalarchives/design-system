@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Get started
-group: getStarted
+group: get-started
 order: 2
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Breadcrumbs
+description: Also known as navigation path or cookie crumb
 group: components
 ---
 

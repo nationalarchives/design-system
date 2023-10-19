@@ -130,3 +130,4 @@ dist
 .pnp.*
 
 design-system
+.DS_Store

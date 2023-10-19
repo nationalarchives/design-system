@@ -44,5 +44,6 @@ The majority of your body copy should use the standard 18px paragraph size.
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs-small", html: true, nunjucks: false, open: false, size: "xxs" }) }}
 
+## Blockquotes
 
-
+{{ example({ group: "styles", item: "typography", example: "blockquote", html: true, nunjucks: false, open: false, size: "s" }) }}

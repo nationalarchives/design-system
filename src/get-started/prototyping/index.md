@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Prototyping
-group: getStarted
+group: get-started
 ---
 
 ## Start

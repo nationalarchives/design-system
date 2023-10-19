@@ -16,13 +16,13 @@
 
   <div class="tna-container">
     <main class="tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content" role="main">
-      {% if group|camelToSpace|capitalize == title|capitalize %}
+      {% if group|kebabToSpace|capitalize == title|capitalize %}
       <h1 class="tna-heading tna-heading--xl">
         {{ title }}
       </h1>
       {% else %}
       <hgroup class="tna-hgroup tna-hgroup--xl">
-        <p class="tna-hgroup__supertitle">{{ group|camelToSpace|capitalize }}</p>
+        <p class="tna-hgroup__supertitle">{{ group|kebabToSpace|capitalize }}</p>
         <h1 class="tna-hgroup__title">{{ title }}</h1>
       </hgroup>
       {% endif %}

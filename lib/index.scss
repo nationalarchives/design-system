@@ -121,19 +121,19 @@ $code-background: #f1ece9;
       }
 
       &--xxs {
-        height: 5rem;
+        height: 4rem;
       }
 
       &--xs {
-        height: 10rem;
+        height: 6rem;
       }
 
       &--s {
-        height: 15rem;
+        height: 10rem;
       }
 
       &--m {
-        height: 20rem;
+        height: 18rem;
       }
 
       &--l {
@@ -142,6 +142,10 @@ $code-background: #f1ece9;
 
       &--xl {
         height: 30rem;
+      }
+
+      &--xxl {
+        height: 35rem;
       }
     }
 

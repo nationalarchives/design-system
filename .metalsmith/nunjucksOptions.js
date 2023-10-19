@@ -185,6 +185,9 @@ const nunjucksOptions = {
     camelToSpace: function (data) {
       return data.replace(/([a-z]+)([A-Z])/, "$1 $2").toLowerCase();
     },
+    kebabToSpace: function (data) {
+      return data.replace(/([a-z]+)-([a-z])/, "$1 $2").toLowerCase();
+    },
     headingsList: function (content) {
       const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>[\s\n]*([\w\s]+)[\s\n]*</gm;
       let headings = [];
