@@ -54,7 +54,10 @@ markdownRenderer.paragraph = function (text) {
 markdownRenderer.table = function (head, body) {
   const formatRows = (row) =>
     row
-    .replace(/<tr>\s*<td>(.*)<\/td>/g, '<th class="tna-table__header">$1</th>')
+      .replace(
+        /<tr>\s*<td>(.*)<\/td>/g,
+        '<th class="tna-table__header">$1</th>',
+      )
       .replace(/<tr>/g, '<tr class="tna-table__row">')
       .replace(/<th>/g, '<th class="tna-table__header">')
       .replace(/<td>/g, '<td class="tna-table__cell">');
