@@ -18,7 +18,9 @@
 {% endblock %}
 
 {%- set theme = "light" -%}
-{% if group === "styles" %}
+{% if group === "get-started" %}
+  {%- set themeAccent = "yellow" -%}
+{% elseif group === "styles" %}
   {%- set themeAccent = "pink" -%}
 {% elseif group === "components" %}
   {%- set themeAccent = "green" -%}

@@ -189,15 +189,15 @@ const nunjucksOptions = {
       return data.replace(/([a-z]+)-([a-z])/, "$1 $2").toLowerCase();
     },
     headingsList: function (content) {
-      const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>[\s\n]*([\w\s]+)[\s\n]*</gm;
-      let headings = [];
+      const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>\s*([\w\s\.]+)\s*</gm;
+      let headingsRaw = [];
       let tmp;
       while ((tmp = regex.exec(content)) !== null) {
-        headings.push({ title: tmp[3], href: tmp[2], level: tmp[1] });
+        headingsRaw.push({ title: tmp[3], href: tmp[2], level: tmp[1] });
       }
       const groupHeadings = (index, grouping) => {
-        if (index < headings.length) {
-          const nextHeading = headings[index];
+        if (index < headingsRaw.length) {
+          const nextHeading = headingsRaw[index];
           if (grouping.length) {
             const prevHeading = grouping.slice().pop();
             try {
@@ -225,7 +225,8 @@ const nunjucksOptions = {
         }
         return grouping;
       };
-      return groupHeadings(0, []);
+      const headings = groupHeadings(0, []);
+      return headings;
     },
   },
 };

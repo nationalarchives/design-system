@@ -6,7 +6,11 @@
   {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 
   <section class="tna-ds-component-example">
-    <small><a href="{{ exampleURL }}" target="_blank" class="tna-ds-component-example__link">Open this example in new tab</a></small>
+    {% if not params.noOpenInNewTab %}
+    <small class="tna-ds-component-example__open-new-tab">
+      <a href="{{ exampleURL }}" target="_blank" class="tna-ds-component-example__link">Open this example in new tab</a>
+    </small>
+    {% endif %}
 
     <div class="tna-ds-component-example__frame-wrapper">
       <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-component-example__frame tna-ds-component-example__frame--resizable{% if params.size %} tna-ds-component-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>

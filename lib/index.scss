@@ -89,6 +89,12 @@ $code-background: #f1ece9;
 
     @include colour.colour-border("keyline", 1px);
 
+    &__open-new-tab {
+      display: block;
+
+      @include colour.colour-border("keyline", 1px, solid, bottom);
+    }
+
     &__link {
       margin: 0.5rem 1rem;
 
@@ -97,8 +103,6 @@ $code-background: #f1ece9;
 
     &__frame-wrapper {
       padding: 1.5rem;
-
-      @include colour.colour-border("keyline", 1px, solid, top);
 
       background-color: #f4f4f4;
     }

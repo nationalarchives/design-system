@@ -3,7 +3,12 @@ import { marked } from "marked";
 const markdownRenderer = new marked.Renderer();
 
 const slugify = (text) =>
-  encodeURIComponent(text.toLowerCase().trim().replace(/[\s]/g, "-"));
+  encodeURIComponent(
+    text
+      .toLowerCase()
+      .trim()
+      .replace(/[\s\.]/g, "-"),
+  );
 
 markdownRenderer.heading = function (text, level) {
   let headingSize = "";
