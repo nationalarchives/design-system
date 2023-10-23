@@ -19,6 +19,7 @@ You can use the supplied components and styles with the prototype kit to make ri
 ### Create a new National Archives prototype
 
 1. Create an empty directory `mkdir my-new-prototype`
+1. Enter the new directory `cd my-new-prototype`
 1. Use `npx govuk-prototype-kit create` to create a new prototype project
 1. Install the frontend styles with `npm install @nationalarchives/frontend`
 1. Run `npm run dev` to start up the prototype kit
