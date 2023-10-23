@@ -22,7 +22,7 @@ The supertitle should be short, at most about 2–3 words or 12–15 characters.
 
 By default, the supertitle is a contrasting colour to the text, usually inverted. It is controlled by the accent colour of the page.
 
-{{ example({ group: "styles", item: "typography", example: "headings-with-separate-supertitles", html: true, nunjucks: false, open: false, size: "s" }) }}
+{{ example({ group: "styles", item: "typography", example: "headings-with-separate-supertitles", html: true, nunjucks: false, open: false, size: "xs" }) }}
 
 If the caption should be considered part of the page heading, you can also nest the supertitle within the heading.
 

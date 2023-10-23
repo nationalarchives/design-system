@@ -25,10 +25,10 @@ You can use the supplied components and styles with the prototype kit to make ri
 1. Run `npm run dev` to start up the prototype kit
 1. Use the National Archives components
 
-### Using the components
+### Using the components in your prototype
 
 The National Archives components can be included in your prototype using the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 
-Examples are given in the [components section](/design-system/components/).
+Examples are given in the [components section](/design-system/components/). Each component example shows all the Nunjucks options available to that component.
 
 {{ example({ group: "components", item: "button", example: "default", html: false, nunjucks: true, open: false, size: "xxs", noOpenInNewTab: true }) }}
