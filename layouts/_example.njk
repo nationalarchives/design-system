@@ -70,7 +70,9 @@
                 <td class="tna-table__cell" width="25%">{{option.type}}</td>
                 <td class="tna-table__cell" width="50%">
                   {% if (option.required === true) %}
-                    <strong>Required.</strong>
+                    <p>
+                      <strong>Required.</strong>
+                    </p>
                   {% endif %}
                   {{ option.description | safe }}
                   {% if (option.isComponent) -%}

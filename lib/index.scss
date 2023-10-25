@@ -85,7 +85,7 @@ $code-background: #f1ece9;
   }
 
   &-component-example {
-    @include spacing.space-below;
+    @include spacing.space-above;
 
     @include colour.colour-border("keyline", 1px);
 
@@ -260,7 +260,10 @@ table {
   }
 }
 
-.tna-heading {
+.tna-heading-s,
+.tna-heading-m,
+.tna-heading-l,
+.tna-heading-xl {
   a[href^="#"] {
     width: 1.5rem;
 
@@ -333,6 +336,12 @@ table {
   }
 
   &__cell {
+  }
+
+  p {
+    + p {
+      margin-top: 0.5rem;
+    }
   }
 }
 

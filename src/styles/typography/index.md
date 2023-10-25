@@ -10,7 +10,7 @@ group: styles
 
 Write all headings in sentence case.
 
-Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a page. Apply a heading class, such as `tna-heading--l`, to style them visually. Style headings consistently to create a clear content structure throughout your service.
+Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a page. Apply a heading class, such as `tna-heading-l`, to style them visually. Style headings consistently to create a clear content structure throughout your service.
 
 {{ example({ group: "styles", item: "typography", example: "headings", html: true, nunjucks: false, open: false }) }}
 

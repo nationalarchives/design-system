@@ -14,27 +14,27 @@ markdownRenderer.heading = function (text, level) {
   let headingSize = "";
   switch (level) {
     case 1:
-      headingSize = "tna-heading--xl";
+      headingSize = "xl";
       break;
     case 2:
-      headingSize = "tna-heading--l";
+      headingSize = "l";
       break;
     case 3:
-      headingSize = "tna-heading--m";
+      headingSize = "m";
       break;
     case 4:
     case 5:
     case 6:
-      headingSize = "tna-heading--s";
+      headingSize = "s";
       break;
   }
   const slug = slugify(text);
   return level === 1
-    ? `<h${level} class="tna-heading ${headingSize}">
+    ? `<h${level} class="tna-heading-${headingSize}">
   ${text}
 </h${level}>`
     : `
-  <h${level} id="${slug}" class="tna-heading ${headingSize} tna-heading--no-link-arrow">
+  <h${level} id="${slug}" class="tna-heading-${headingSize} tna-heading--no-link-arrow">
     ${text} <a href="#${slug}" aria-hidden="true"><i class="fa-solid fa-link"></i></a>
   </h${level}>`;
 };
