@@ -2,7 +2,6 @@
 layout: homepage.njk
 title: Welcome
 description: Designing services for The National Archives
-order: 1
 ---
 
 ## Principles we follow
