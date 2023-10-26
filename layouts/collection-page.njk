@@ -1,6 +1,7 @@
 {% extends "./_design-system-base.njk" %}
 
 {% block skipLink %}
+<a id="top"></a>
 {{ tnaSkipLink({
   href: 'main-content',
   text: 'Skip to main content'
@@ -13,10 +14,11 @@
 
 {% block main %}
   {% set headings = contents | headingsList %}
+  {% set topLevel = group|kebabToSpace|capitalize == title|capitalize %}
 
   <div class="tna-container">
     <main class="tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content" role="main">
-      {% if group|kebabToSpace|capitalize == title|capitalize %}
+      {% if topLevel %}
       <h1 class="tna-heading-xl">
         {{ title }}
       </h1>
@@ -90,5 +92,13 @@
       {% endfor %}
       </ol>
     </nav>
+    {% if not topLevel %}
+    <div class="tna-column tna-column--full">
+      <hr>
+      <p>
+        <a href="#top" class="tna-button tna-button--small tna-button--plain"><i class="fa-solid fa-arrow-up"></i>Back to top</a>
+      </p>
+    </div>
+    {% endif %}
   </div>
 {% endblock %}
