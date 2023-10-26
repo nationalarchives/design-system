@@ -228,6 +228,18 @@ table {
   padding: 2rem;
 }
 
+.tna-header {
+  @include media.on-medium() {
+    position: relative;
+
+    &__top-navigation-items {
+      position: absolute;
+      top: 0;
+      right: grid.$gutter-width;
+    }
+  }
+}
+
 .tna-grid--demo {
   padding-top: 2rem;
 
@@ -359,4 +371,26 @@ table {
   @include colour.colour-border("keyline-dark", 1px, solid);
 
   // box-shadow: 0.0625rem 0.125rem 0.375rem rgb(0 0 0/0.25);
+}
+
+@mixin hide($suffix) {
+  .tna-\!--hide-on-#{$suffix} {
+    display: none;
+  }
+}
+
+@include media.on-large {
+  @include hide("large");
+}
+
+@include media.on-medium {
+  @include hide("medium");
+}
+
+@include media.on-small {
+  @include hide("small");
+}
+
+@include media.on-tiny {
+  @include hide("tiny");
 }

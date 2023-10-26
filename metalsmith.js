@@ -100,7 +100,8 @@ Metalsmith(__dirname)
         refer: false,
       },
       top: {
-        pattern: "(get-started|styles|components|patterns|content)/index.html",
+        pattern:
+          "(get-started|styles|components|patterns|content|analytics)/index.html",
         sortBy: "order",
         refer: false,
       },
@@ -127,6 +128,11 @@ Metalsmith(__dirname)
       content: {
         pattern: "content/*/index.html",
         filterBy: (file) => file.path !== "content/index.html",
+        refer: false,
+      },
+      analytics: {
+        pattern: "analytics/*/index.html",
+        filterBy: (file) => file.path !== "analytics/index.html",
         refer: false,
       },
       legal: {
