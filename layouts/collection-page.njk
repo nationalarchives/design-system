@@ -44,7 +44,7 @@
       {{ contents | safe }}
     </main>
     <nav id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="{{ title }} navigation">
-      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium">All {{ group|kebabToSpace }}</h2>
+      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium tna-!--margin-bottom-s">{{ group|kebabToSpace|capitalize }}</h2>
       <ol class="tna-ds-sidebar">
       {% for item in collections[group] %}
         {% if item.path == path %}
