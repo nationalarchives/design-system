@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Get started
+description: The examples in the National Archives Design System come with code to make it easy for you to use them in your project.
 group: get-started
 order: 2
 ---

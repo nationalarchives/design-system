@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Styles
+description: Make your service look part of The National Archives with guides for applying layout, typography, colour and images.
 group: styles
 order: 3
 ---
