@@ -30,7 +30,7 @@
       {% endif %}
       {% if headings %}
       <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium">Contents</h2>
-      <ul class="tna-ul tna-!--hide-on-large tna-!--hide-on-medium">
+      <ol class="tna-ol tna-ol--plain tna-!--hide-on-large tna-!--hide-on-medium">
         {%- for heading in headings %}
         <li>
           <a href="#{{ heading.href }}">
@@ -38,7 +38,7 @@
           </a>
         </li>
         {%- endfor %}
-      </ul>
+      </ol>
       {% endif %}
       {{ contents | safe }}
     </main>
