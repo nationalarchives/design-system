@@ -15,7 +15,8 @@
 
 {% block main %}
   {% set headings = contents | headingsList %}
-  {% set topLevel = group|kebabToSpace|capitalize == title|capitalize %}
+  {% set groupTitle = group|kebabToSpace|capitalize %}
+  {% set topLevel = groupTitle == title|capitalize %}
 
   <div class="tna-container">
     <main class="tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content" role="main">
@@ -25,13 +26,12 @@
       </h1>
       {% else %}
       <hgroup class="tna-hgroup-xl">
-        <p class="tna-hgroup__supertitle">{{ group|kebabToSpace|capitalize }}</p>
+        <p class="tna-hgroup__supertitle">{{ groupTitle }}</p>
         <h1 class="tna-hgroup__title">{{ title }}</h1>
       </hgroup>
       {% endif %}
       {% if not topLevel and headings %}
-      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium">Contents</h2>
-      <ol class="tna-ol tna-ol--plain tna-!--hide-on-large tna-!--hide-on-medium">
+      <ol class="tna-ol tna-ol--plain- tna-!--hide-on-large tna-!--hide-on-medium">
         {%- for heading in headings %}
         <li>
           <a href="#{{ heading.href }}">
@@ -43,9 +43,17 @@
       {% endif %}
       {{ contents | safe }}
     </main>
-    <nav id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="{{ title }} navigation">
-      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium tna-!--margin-bottom-s">{{ group|kebabToSpace|capitalize }}</h2>
+    <nav id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="{{ groupTitle }} navigation">
+      <!--<hr class="tna-!--hide-on-large tna-!--hide-on-medium">-->
+      {% if not topLevel %}
+      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium tna-!--margin-bottom-s">{{ groupTitle }}</h2>
+      {% endif %}
       <ol class="tna-ds-sidebar">
+      {% if not topLevel %}
+        <li class="tna-ds-sidebar__item">
+          <a href="/design-system/{{ group }}" class="tna-ds-sidebar__link">{{ groupTitle }} overview</a>
+        </li>
+      {% endif %}
       {% for item in collections[group] %}
         {% if item.path == path %}
         <li class="tna-ds-sidebar__item tna-ds-sidebar__item--current">
