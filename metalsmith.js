@@ -31,7 +31,10 @@ Metalsmith(__dirname)
     // description: "",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
-    msVersion: packageInfo.dependencies.metalsmith,
+    metalsmithVersion: packageInfo.dependencies.metalsmith.replace(/^[\^]/, ""),
+    tnaFrontendVersion: packageInfo.dependencies[
+      "@nationalarchives/frontend"
+    ].replace(/^[\^]/, ""),
     nodeVersion: process.version,
   })
   .use(async (files, metalsmith, done) => {
