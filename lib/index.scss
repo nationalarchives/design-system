@@ -26,6 +26,10 @@ $code-background: #f1ece9;
   }
 }
 
+.tna-template--yellow-accent .tna-hero--tint .tna-hero__figure::before {
+  background-color: rgb(0, 76, 126) !important;
+}
+
 .tna-ds {
   &-sidebar {
     // max-height: 100vh;
