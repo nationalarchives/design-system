@@ -42,7 +42,7 @@ markdownRenderer.heading = function (text, level) {
 markdownRenderer.list = function (body, ordered) {
   const element = ordered ? "ol" : "ul";
   return `
-  <${element} class="tna-ul">
+  <${element} class="tna-${element}">
     ${body}
   </${element}>`;
 };

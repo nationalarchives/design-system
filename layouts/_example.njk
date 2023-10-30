@@ -12,7 +12,7 @@
     </small>
     {% endif %}
 
-    <div class="tna-ds-component-example__frame-wrapper">
+    <div class="tna-ds-component-example__frame-wrapper{% if params.noPadding %}tna-ds-component-example__frame-wrapper--no-padding{% endif %}">
       <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-component-example__frame tna-ds-component-example__frame--resizable{% if params.size %} tna-ds-component-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
     </div>
 
@@ -39,13 +39,15 @@
         body: exampleOptions(params)
       }) %}
     {% endif %}
-    {% if tabItems|length > 0 %}
+    {% if tabItems|length > 1 %}
       <div class="tna-ds-component-example__data">
         {{ tnaTabs({
           title: exampleTitle + " example",
           items: tabItems
         }) }}
       </div>
+    {% elseif tabItems|length > 0 %}
+      {{ tabItems[0].body | safe  }}
     {% endif %}
   </section>
 {% endmacro %}

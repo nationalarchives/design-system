@@ -12,6 +12,8 @@ Write all headings in sentence case.
 
 Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a page. Apply a heading class, such as `tna-heading-l`, to style them visually. Style headings consistently to create a clear content structure throughout your service.
 
+Large and extra large headings are Supria Sans Cond Medium and smaller headings are Open Sans Bold.
+
 {{ example({ group: "styles", item: "typography", example: "headings", html: true, nunjucks: false, open: false }) }}
 
 ### Headings with supertitles
@@ -36,13 +38,25 @@ The default paragraph font size is 18px on large and medium devices and 17px on 
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs", html: true, nunjucks: false, open: false, size: "xxs" }) }}
 
+### Large
+
+You can use a larger paragraph as an introduction to the page or section. 
+
+{{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, open: false, size: "xs" }) }}
+
 ### Small
 
-You can use the `<small>` element sparingly to make your paragraph font size smaller: 15px.
-
-The majority of your body copy should use the standard 18px paragraph size.
+You can use the `<small>` element sparingly to make your paragraph font size smaller.
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs-small", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+
+### Bold
+
+You can use the `<strong>` element to increase the weight of your paragraph font.
+
+Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.
+
+{{ example({ group: "styles", item: "typography", example: "paragraphs-strong", html: true, nunjucks: false, open: false, size: "xxs" }) }}
 
 ## Blockquotes
 

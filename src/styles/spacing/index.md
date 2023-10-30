@@ -4,4 +4,6 @@ title: Spacing
 group: styles
 ---
 
-s, m, l, xl
+{% from "_example.njk" import example %}
+
+{{ example({ group: "styles", item: "spacing", example: "margin-top", html: true, nunjucks: false, open: false, size: "xxl" }) }}
