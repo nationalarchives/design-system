@@ -18,7 +18,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -40,6 +40,9 @@ jobs:
         run: |
           mkdir -p design-system/static/assets
           cp -r node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
+      - name: Configure 404
+        run: |
+          echo "---\npermalink: /404-page-not-found/\n---" > design-system/404.md
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
