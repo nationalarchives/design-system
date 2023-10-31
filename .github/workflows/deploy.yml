@@ -38,6 +38,9 @@ jobs:
         run: |
           mkdir -p design-system/static/assets
           cp -r node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
+      - name: Configure 404
+        run: |
+          echo "---\npermalink: /404/\n---" > design-system/404.md
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

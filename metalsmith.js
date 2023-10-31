@@ -12,7 +12,7 @@ import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import packageInfo from "./package.json" assert { type: "json" };
 import { readFileSync } from "fs";
-import { join, dirname } from "path";
+import { join } from "path";
 import { glob } from "glob";
 
 const t1 = performance.now();
@@ -28,7 +28,7 @@ Metalsmith(__dirname)
   .metadata({
     sitename: "The National Archives Design System",
     siteurl: "https://nationalarchives.github.io/design-system",
-    // description: "",
+    description: "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
     metalsmithVersion: packageInfo.dependencies.metalsmith.replace(/^[\^]/, ""),
@@ -49,24 +49,20 @@ Metalsmith(__dirname)
         };
       }
     }
-
     await Promise.all([
       copyAssets("images/*.{svg,png,ico}", {
         cwd: "../tna-frontend/src/nationalarchives/assets/",
         dest: "static/assets",
       }),
     ]);
-
     await Promise.all([
       copyAssets("fonts/*", {
         cwd: "../tna-frontend/src/nationalarchives/assets/",
         dest: "static/assets",
       }),
     ]);
-
     done();
   })
-
   .use(
     renamer({
       markdown: {
