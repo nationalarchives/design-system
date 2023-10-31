@@ -28,7 +28,8 @@ Metalsmith(__dirname)
   .metadata({
     sitename: "The National Archives Design System",
     siteurl: "https://nationalarchives.github.io/design-system",
-    description: "Design your service using National Archives styles, components and patterns",
+    description:
+      "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
     metalsmithVersion: packageInfo.dependencies.metalsmith.replace(/^[\^]/, ""),
