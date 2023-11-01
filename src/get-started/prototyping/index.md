@@ -23,7 +23,11 @@ You can use the supplied components and styles with the prototype kit to make ri
 1. Use `npx govuk-prototype-kit create` to create a new prototype project
 1. Install the frontend styles with `npm install @nationalarchives/frontend`
 1. Run `npm run dev` to start up the prototype kit
-1. Use the National Archives components
+1. Visit [localhost:3000](http://localhost:3000) in your browser to see the prototype
+1. Visit [localhost:3000/manage-prototype](http://localhost:3000/manage-prototype) in your browser to create pages including page templates from the National Archives Frontend
+1. Use the National Archives components in your pages
+
+[![asciicast](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
 
 ### Using the components in your prototype
 
