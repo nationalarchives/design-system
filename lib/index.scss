@@ -222,11 +222,21 @@ $code-background: #f1ece9;
   }
 }
 
+.tna-ds-pre {
+  margin-top: 2rem !important;
+  margin-bottom: 0;
+  padding: 1rem;
+
+  background-color: #f1ece9;
+
+  @include colour.colour-border("keyline", 1px);
+}
+
 p,
 li,
 table {
   code {
-    color: colour.brand-colour("maroon");
+    color: #905;
 
     background-color: $code-background;
   }

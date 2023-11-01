@@ -36,7 +36,9 @@ If the caption should be considered part of the page heading, you can also nest 
 
 The default paragraph font size is 18px on large and medium devices and 17px on small and tiny devices.
 
-{{ example({ group: "styles", item: "typography", example: "paragraphs", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+All paragraphs within `.tna-template` are styled with the correct font and colour.
+
+{{ example({ group: "styles", item: "typography", example: "paragraphs", html: true, nunjucks: false, open: false, size: "m" }) }}
 
 ### Large
 

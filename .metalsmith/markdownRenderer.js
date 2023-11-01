@@ -51,7 +51,7 @@ markdownRenderer.paragraph = function (text) {
   return /^\s*&lt;/.test(text) || /^\s*\{/.test(text)
     ? text
     : `
-  <p class="tna-p">
+  <p>
     ${text}
   </p>`;
 };
@@ -112,7 +112,11 @@ markdownRenderer.code = function (code, infostring, escaped) {
     return code;
   }
 
-  return `<pre><code class="language-${escape(lang)}">${
+  if (lang === "plain") {
+    return `<pre class="tna-ds-pre">${code}</pre>\n`;
+  }
+
+  return `<pre class="tna-ds-pre"><code class="language-${escape(lang)}">${
     escaped ? code : escape(code, true)
   }</code></pre>\n`;
 };
