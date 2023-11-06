@@ -129,10 +129,10 @@ Elements that can follow the accent colour such as `tna-phase-banner--accent`, `
 
 The colours of all elements in an element can be controlled with background classes:
 
-- `tna-background--tint` &mdash; a light, neutral background colour to highlight an area of the page
-- `tna-background--contrast` &mdash; a contrasting background and text colour
-- `tna-background--accent` &mdash; a background colour based on the current template accent colour
-- `tna-background--accent-light` &mdash; a lighter background colour based on the current template accent colour
+- `tna-background-tint` &mdash; a light, neutral background colour to highlight an area of the page
+- `tna-background-contrast` &mdash; a contrasting background and text colour
+- `tna-background-accent` &mdash; a background colour based on the current template accent colour
+- `tna-background-accent-light` &mdash; a lighter background colour based on the current template accent colour
 
 For component design, you can also use the SCSS mixins from the `tools/colour` module to acheve the same results:
 
