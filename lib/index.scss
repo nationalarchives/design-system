@@ -319,6 +319,13 @@ table {
     line-height: 1.5rem;
     text-align: center;
 
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      @include colour.colour-font("link");
+    }
+
     &::after {
       display: none;
     }

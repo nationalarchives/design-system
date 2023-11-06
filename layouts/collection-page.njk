@@ -34,7 +34,7 @@
       <ol class="tna-ol tna-ol--plain- tna-!--hide-on-large tna-!--hide-on-medium">
         {%- for heading in headings %}
         <li>
-          <a href="#{{ heading.href }}">
+          <a href="#{{ heading.href }}" class="tna-link--no-visited-state">
             {{ heading.title }}
           </a>
         </li>
@@ -51,33 +51,33 @@
       <ol class="tna-ds-sidebar">
       {% if not topLevel %}
         <li class="tna-ds-sidebar__item">
-          <a href="/design-system/{{ group }}" class="tna-ds-sidebar__link">{{ groupTitle }} overview</a>
+          <a href="/design-system/{{ group }}" class="tna-ds-sidebar__link tna-link--no-visited-state">{{ groupTitle }} overview</a>
         </li>
       {% endif %}
       {% for item in collections[group] %}
         {% if item.path == path %}
         <li class="tna-ds-sidebar__item tna-ds-sidebar__item--current">
-          <a href="/design-system/{{ item.path }}" class="tna-ds-sidebar__link">{{ item.title }}</a>
+          <a href="/design-system/{{ item.path }}" class="tna-ds-sidebar__link tna-link--no-visited-state">{{ item.title }}</a>
           {% if headings %}
           {# TODO: Make a marco for this recursion #}
           <ol class="tna-ds-sidebar__sections tna-!--hide-on-small tna-!--hide-on-tiny">
             {%- for heading in headings %}
             <li class="tna-ds-sidebar__section">
-              <a href="#{{ heading.href }}" class="tna-ds-sidebar__section-link">
+              <a href="#{{ heading.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">
                 {{ heading.title }}
               </a>
               {# {%- if heading.children %}
               <ol class="tna-ds-sidebar__sections">
                 {%- for child in heading.children %}
                 <li class="tna-ds-sidebar__section">
-                  <a href="#{{ child.href }}" class="tna-ds-sidebar__section-link">
+                  <a href="#{{ child.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">
                     {{ child.title }}
                   </a>
                   {%- if child.children %}
                   <ol class="tna-ds-sidebar__sections">
                     {%- for childChild in child.children %}
                     <li class="tna-ds-sidebar__section">
-                      <a href="#{{ childChild.href }}" class="tna-ds-sidebar__section-link">
+                      <a href="#{{ childChild.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">
                         {{ childChild.title }}
                       </a>
                     </li>
@@ -95,7 +95,7 @@
         </li>
         {% else %}
         <li class="tna-ds-sidebar__item">
-          <a href="/design-system/{{ item.path }}" class="tna-ds-sidebar__link">{{ item.title }}</a>
+          <a href="/design-system/{{ item.path }}" class="tna-ds-sidebar__link tna-link--no-visited-state">{{ item.title }}</a>
         </li>
         {% endif %}
       {% endfor %}

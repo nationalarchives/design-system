@@ -56,6 +56,12 @@ markdownRenderer.paragraph = function (text) {
   </p>`;
 };
 
+markdownRenderer.link = function (href, title, text) {
+  return `<a href="${href}" class="tna-link--no-visited-state"${
+    title ? ` title="${title}"` : ""
+  }>${text}</a>`;
+};
+
 markdownRenderer.table = function (head, body) {
   const formatRows = (row) =>
     row
