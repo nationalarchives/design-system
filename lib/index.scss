@@ -264,6 +264,15 @@ table {
 }
 
 .tna-header {
+  .tna-header__top-navigation-item-link {
+    .fa-solid,
+    .fa-brands {
+      width: 1.25em;
+
+      text-align: left;
+    }
+  }
+
   button.tna-header__top-navigation-item-link {
     padding: 0;
 
