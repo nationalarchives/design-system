@@ -79,13 +79,13 @@
                   {{ option.description | safe }}
                   {% if (option.isComponent) -%}
                     {% if (option.name === "hint" or option.name === "label") %}
-                      See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                      <p>See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.</p>
                     {% else %}
-                      See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                      <p>See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.</p>
                     {% endif %}
                   {% endif %}
                   {% if (option.params) %}
-                    See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                    <p>See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.</p>
                   {% endif -%}
                 </td>
               </tr>
