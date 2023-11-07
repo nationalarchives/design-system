@@ -6,12 +6,22 @@ group: content
 
 ## Formats in text
 
+Use a human-readable date format for dates within text:
+
 - Monday, 16th October 2023
 - 16th October 2023
 - October 2023
 - 2023
 
+Use the HTML `time` element where possible:
+
+```html
+<time datetime="2023-10-16">16th October 2023</time>
+```
+
 ## Formats in data
+
+Use the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format for dates intended to be consumed by a machine, for example in a CSV export:
 
 - `2023-10-16`
 - `2023-10`
