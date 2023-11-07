@@ -10,12 +10,12 @@
         {{ contents | safe }}
         <!--
         <h2 class="tna-heading-l">
-          <a href="/design-system">{{ collections.home[0].title }}</a>
+          <a href="/design-system" class="tna-link--no-visited-state">{{ collections.home[0].title }}</a>
         </h2>
         -->
         {%- for section in collections.top %}
         <h2 class="tna-heading-l">
-          <a href="/design-system/{{ section.path }}">{{ section.title }}</a>
+          <a href="/design-system/{{ section.path }}" class="tna-link--no-visited-state">{{ section.title }}</a>
         </h2>
         {% if section.description %}
           <p>{{ section.description }}</p>
@@ -23,7 +23,7 @@
         <ul class="tna-ul">
           {%- for page in collections[section.group] %}
           <li>
-            <a href="/design-system/{{ page.path }}">{{ page.title }}</a>
+            <a href="/design-system/{{ page.path }}" class="tna-link--no-visited-state">{{ page.title }}</a>
             <!--
             {% if page.description %} &mdash; {{ page.description }}{% endif %}
             -->
@@ -34,7 +34,7 @@
         <!--
         {%- for page in collections.legal %}
         <h2 class="tna-heading-l">
-          <a href="/design-system/{{ page.path }}">{{ page.title }}</a>
+          <a href="/design-system/{{ page.path }}" class="tna-link--no-visited-state">{{ page.title }}</a>
         </h2>
         {%- endfor %}
         -->
