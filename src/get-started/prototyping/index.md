@@ -25,9 +25,32 @@ You can use the supplied components and styles with the prototype kit to make ri
 1. Run `npm run dev` to start up the prototype kit
 1. Visit [localhost:3000](http://localhost:3000) in your browser to see the prototype
 1. Visit [localhost:3000/manage-prototype](http://localhost:3000/manage-prototype) in your browser to create pages including page templates from the National Archives Frontend
-1. Use the National Archives components in your pages
 
-[![asciicast](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
+[![Creating a new prototype](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
+
+### Adding custom styles
+
+1. Create a new SCSS file in `app/assets/sass` called `custom.scss` (or whatever you prefer)
+1. Create a new layout in `app/views/layout` called `base.html` (or whatever you prefer) which extends the National Archives prototype kit layout
+1. Set a default `theme` (see [theme colours](/design-system/styles/colours/#theme-colours)) and `themeAccent` (see [accent colours](/design-system/styles/colours/#accent-colours))
+1. Link in your custom CSS file
+1. Ensure new pages extend your new layout with `{% raw %}{% extends "layouts/base.html" %}{% endraw %}`
+
+#### Example layout
+
+```html
+{% raw %}{% extends "nationalarchives/templates/layouts/_prototype-kit.njk" %}
+
+{% set theme = "light" %}
+{% set themeAccent = "yellow" %}
+
+{% block pageTitle %}My Service - The National Archives{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/stylesheets/custom.css" rel="stylesheet" type="text/css" />
+{% endblock %}{% endraw %}
+```
 
 ### Using the components in your prototype
 
