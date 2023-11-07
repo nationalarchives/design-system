@@ -239,6 +239,12 @@ table {
     color: #905;
 
     background-color: $code-background;
+
+    .tna-template--dark-theme & {
+      color: #d69;
+
+      background-color: #000;
+    }
   }
 }
 
@@ -262,6 +268,32 @@ table {
 }
 
 .tna-header {
+  button.tna-header__top-navigation-item-link {
+    padding: 0;
+
+    display: block;
+
+    line-height: 1rem;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    &--dark {
+      .tna-template--dark-theme & {
+        display: none;
+      }
+    }
+
+    &--light {
+      .tna-template--light-theme & {
+        display: none;
+      }
+    }
+  }
+
   @include media.on-medium() {
     position: relative;
 
