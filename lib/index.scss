@@ -1,9 +1,5 @@
 @use "@nationalarchives/frontend/nationalarchives/variables/assets" with (
-    $tna-font-path: "/design-system/static/assets/fonts",
-    // $fa-font-path: "/MY_CUSTOM_FONT_AWESOME_PATH"
-  );
-@use "@nationalarchives/frontend/nationalarchives/lib/font-awesome" with (
-  $fa-font-path: "/design-system/static/assets/fonts"
+  $tna-font-path: "/design-system/static/assets/fonts"
 );
 @use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
   $largest-container-width: 90rem
@@ -14,9 +10,6 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
-@import "prismjs/themes/prism.min";
-
-$code-background: #f1ece9;
 
 .tna-breadcrumbs {
   &__link {
@@ -197,7 +190,10 @@ $code-background: #f1ece9;
 
       :not(pre) > code[class*="language-"],
       pre[class*="language-"] {
-        background-color: $code-background;
+        margin: 0;
+        padding-top: 3rem;
+
+        // background-color: $code-background;
 
         .language-css .token.string,
         .style .token.string,
@@ -227,7 +223,7 @@ $code-background: #f1ece9;
   margin-bottom: 0;
   padding: 1rem;
 
-  background-color: #f1ece9;
+  // background-color: #f1ece9;
 
   @include colour.colour-border("keyline", 1px);
 }
@@ -238,7 +234,7 @@ table {
   code {
     color: #905;
 
-    background-color: $code-background;
+    background-color: #f1ece9;
 
     .tna-template--dark-theme & {
       color: #d69;
