@@ -267,9 +267,11 @@ table {
   button.tna-header__top-navigation-item-link {
     padding: 0;
 
-    display: block;
+    display: flex;
 
+    font-size: 1rem;
     line-height: 1rem;
+    text-align: left;
 
     background: none;
 
@@ -297,6 +299,12 @@ table {
       position: absolute;
       top: 0;
       right: grid.$gutter-width;
+    }
+  }
+
+  @include media.on-mobile() {
+    &__top-navigation-items {
+      display: block;
     }
   }
 }
