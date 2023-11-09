@@ -106,8 +106,8 @@ Metalsmith(__dirname)
         refer: false,
       },
       top: {
-        pattern:
-          "(get-started|styles|components|patterns|content|analytics)/index.html",
+        // pattern: "(get-started|styles|components|patterns|content|analytics)/index.html",
+        pattern: "(get-started|styles|components|patterns|content)/index.html",
         sortBy: "order",
         refer: false,
       },
@@ -136,11 +136,11 @@ Metalsmith(__dirname)
         filterBy: (file) => file.path !== "content/index.html",
         refer: false,
       },
-      analytics: {
-        pattern: "analytics/*/index.html",
-        filterBy: (file) => file.path !== "analytics/index.html",
-        refer: false,
-      },
+      // analytics: {
+      //   pattern: "analytics/*/index.html",
+      //   filterBy: (file) => file.path !== "analytics/index.html",
+      //   refer: false,
+      // },
       legal: {
         pattern: "*.html",
         filterBy: (file) => file.path !== "index.html",
