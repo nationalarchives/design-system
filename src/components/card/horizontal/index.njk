@@ -6,16 +6,25 @@ layout: layout-example.njk
 {% from "nationalarchives/components/card/macro.njk" import tnaCard %}
 
 {{ tnaCard({
-  heading: {
-    title: "Card title",
-    level: 3
-  },
-  image: {
-    src: "https://picsum.photos/id/175/640/480",
-    alt: "",
-    width: 640,
-    height: 480
-  },
-  body: "Lorem ipsum",
-  horizontal: true
+  supertitle: "Card supertitle",
+  title: "Card title",
+  headingLevel: 3,
+  headingSize: "l",
+  imageSrc: "https://www.nationalarchives.gov.uk/wp-content/uploads/sites/24/2023/07/tna-building-compress.jpg",
+  imageAlt: "The National Archives office",
+  imageWidth: 499,
+  imageHeight: 333,
+  label: "New",
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit, a molestie turpis.</p>",
+  actions: [
+    {
+      text: "Card action",
+      href: "#",
+      title: "Go and do the action",
+      icon: "calendar"
+    }
+  ],
+  horizontal: true,
+  htmlElement: "article",
+  classes: "tna-card--demo-horizontal"
 }) }}

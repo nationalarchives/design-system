@@ -19,6 +19,14 @@
   }
 }
 
+.tna-card--demo {
+  max-width: 25rem;
+}
+
+.tna-card--demo-horizontal {
+  max-width: 50rem;
+}
+
 .tna-template--yellow-accent {
   .tna-hero--tint .tna-hero__figure::before {
     background-color: rgb(0, 76, 126) !important;

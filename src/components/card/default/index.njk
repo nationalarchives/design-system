@@ -6,15 +6,22 @@ layout: layout-example.njk
 {% from "nationalarchives/components/card/macro.njk" import tnaCard %}
 
 {{ tnaCard({
-  heading: {
-    title: "Card title",
-    level: 3
-  },
-  image: {
-    src: "https://picsum.photos/id/175/640/480",
-    alt: "",
-    width: 640,
-    height: 480
-  },
-  body: "Lorem ipsum"
+  supertitle: "Card supertitle",
+  title: "Card title",
+  headingLevel: 3,
+  headingSize: "m",
+  href: "#",
+  imageSrc: "https://www.nationalarchives.gov.uk/wp-content/uploads/sites/24/2023/07/tna-building-compress.jpg",
+  imageAlt: "The National Archives office",
+  imageWidth: 499,
+  imageHeight: 333,
+  label: "New",
+  meta: [
+    { text: "24th September 2023", icon: "calendar" },
+    { text: "From £16", icon: "ticket" },
+    { text: "Online", icon: "location-dot" }
+  ],
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit, a molestie turpis.</p>",
+  htmlElement: "article",
+  classes: "tna-card--demo"
 }) }}
