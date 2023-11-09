@@ -40,7 +40,7 @@ Settings cookies used on this site are:
 
 | Name                      | Purpose                                              | Expires |
 | ------------------------- | ---------------------------------------------------- | ------- |
-| `dark-theme`              | Saves your preference to a light or dark themed site | 1 year  |
+| `dark_theme`              | Saves your preference to a light or dark themed site | 1 year  |
 
 <p aria-live="assertive">Cookies that remember your settings have been <strong data-showcookiepreference="settings">not set</strong>.</p>
 
