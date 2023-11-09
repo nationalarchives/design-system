@@ -36,10 +36,6 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
-      - name: Copy static assets
-        run: |
-          mkdir -p design-system/static/assets
-          cp -r node_modules/@nationalarchives/frontend/nationalarchives/assets/* design-system/static/assets
       - name: Configure 404
         run: |
           echo "---\npermalink: /404-page-not-found/\n---" > design-system/404.md

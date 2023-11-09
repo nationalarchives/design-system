@@ -43,8 +43,8 @@ Metalsmith(__dirname)
       const assets = await glob(pattern, options);
       for (const asset of assets) {
         const input = join(options.cwd, asset);
-        console.log(`input: ${input}`);
         const output = join(options.dest, asset);
+        console.log(`${input} -> ${output}`);
         files[output] = {
           contents: readFileSync(input),
         };
@@ -52,14 +52,20 @@ Metalsmith(__dirname)
     }
     await Promise.all([
       copyAssets("images/*.{svg,png,ico}", {
-        cwd: "../tna-frontend/src/nationalarchives/assets/",
+        cwd: "node_modules/@nationalarchives/frontend/nationalarchives/assets/",
         dest: "static/assets",
       }),
-    ]);
-    await Promise.all([
       copyAssets("fonts/*", {
-        cwd: "../tna-frontend/src/nationalarchives/assets/",
+        cwd: "node_modules/@nationalarchives/frontend/nationalarchives/assets/",
         dest: "static/assets",
+      }),
+      copyAssets("*.js", {
+        cwd: "node_modules/@nationalarchives/frontend/nationalarchives/",
+        dest: "static/scripts",
+      }),
+      copyAssets("{prism,prism-tomorrow}.min.css", {
+        cwd: "node_modules/prismjs/themes/",
+        dest: "static/styles",
       }),
     ]);
     done();
@@ -149,7 +155,6 @@ Metalsmith(__dirname)
   )
   .use(
     layouts({
-      default: "simple.njk",
       engineOptions: nunjucksOptions,
     }),
   )
@@ -157,8 +162,6 @@ Metalsmith(__dirname)
     sass({
       entries: {
         "lib/index.scss": "css/index.css",
-        "lib/code-light.scss": "css/code-light.css",
-        "lib/code-dark.scss": "css/code-dark.css",
       },
     }),
   )
@@ -170,7 +173,6 @@ Metalsmith(__dirname)
       drop: [],
       entries: {
         index: "lib/index.js",
-        TNAFrontend: "lib/TNAFrontend.js",
       },
     }),
   )

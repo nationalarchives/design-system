@@ -43,12 +43,17 @@
   <meta name="description" content="{{ description }}">
   {% endif %}
   <link rel="canonical" href="https://nationalarchives.github.io/design-system/{{ path }}" />
+  <style>
+  .tna-ds--show-on-js {
+    display: none !important;
+  }
+  </style>
 {% endblock %}
 
 {% block stylesheets %}
   <link rel="stylesheet" href="/design-system/css/index.css">
   <link rel="stylesheet" href="https://use.typekit.net/hkj3kuz.css">
-  <link rel="stylesheet" href="/design-system/css/code-light.css" id="prism-css">
+  <link rel="stylesheet" href="/design-system/static/styles/prism.min.css" id="prism-css">
 {% endblock %}
 
 {% block cookies %}
@@ -160,5 +165,6 @@
 {% endblock %}
 
 {% block bodyEnd %}
+<script src="/design-system/static/scripts/all.js"></script>
 <script src="/design-system/index.js"></script>
 {% endblock %}

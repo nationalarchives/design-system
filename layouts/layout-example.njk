@@ -17,12 +17,15 @@
 {% block skipLink %}{% endblock %}
 
 {% block main %}
-<main>
-  {{ contents | safe }}
-</main>
+  <main>
+    {{ contents | safe }}
+  </main>
 {% endblock %}
 
 {% block footer %}{% endblock %}
 {% block bodyEnd %}
-<script src="/design-system/TNAFrontend.js"></script>
+  <script src="/design-system/static/scripts/all.js"></script>
+  <script>
+    window.TNAFrontend.initAll();
+  </script>
 {% endblock %}

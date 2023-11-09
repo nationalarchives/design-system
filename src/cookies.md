@@ -42,9 +42,9 @@ Settings cookies used on this site are:
 | ------------------------- | ---------------------------------------------------- | ------- |
 | `dark_theme`              | Saves your preference to a light or dark themed site | 1 year  |
 
-<p aria-live="assertive">Cookies that remember your settings have been <strong data-showcookiepreference="settings">not set</strong>.</p>
+<p aria-live="assertive" class="tna-ds--show-on-js">Cookies that remember your settings have been <strong data-showcookiepreference="settings">not set, as JavaScript is not available</strong>.</p>
 
-<div class="tna-button-group">
+<div class="tna-button-group tna-ds--show-on-js">
 {{ tnaButton({
   text: "Allow setting cookies",
   buttonElement: true,

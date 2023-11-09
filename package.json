@@ -1,12 +1,12 @@
 {
   "type": "module",
   "scripts": {
+    "start": "concurrently --names \"BUILD,SERVE\" \"npm run dev\" \"npm run serve\"",
+    "serve": "browser-sync start --no-notify --server --startPath 'design-system' --files 'build/**'",
     "dev": "nodemon metalsmith.js",
     "build": "node metalsmith.js",
     "lint": "prettier --check '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
-    "lint:fix": "prettier --write '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js'",
-    "serve": "browser-sync start --no-notify --server --startPath 'design-system' --files 'build/**'",
-    "start": "concurrently --names \"BUILD,SERVE\" \"npm run dev\" \"npm run serve\""
+    "lint:fix": "prettier --write '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js'"
   },
   "repository": {
     "type": "git",
