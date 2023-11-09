@@ -8,15 +8,11 @@ group: get-started
 
 ## GOV.UK Prototype kit
 
-Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to create interactive, responsive prototypes which can be commited and contributed to on GitHub.
+Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to create rich, interactive and responsive prototypes.
 
-## Prototyping with The National Archives styles
+[The National Archives frontend](https://github.com/nationalarchives/tna-frontend) includes support for the GOV.UK Prototype Kit. You can use the supplied components and styles with the prototype kit to make prototypes that look like National Archives services.
 
-[The National Archives frontend](https://github.com/nationalarchives/tna-frontend) includes support for the GOV.UK Prototype Kit.
-
-You can use the supplied components and styles with the prototype kit to make rich HTML prototypes that look like National Archives services.
-
-### Create a new National Archives prototype
+## Create a new National Archives prototype
 
 1. Create an empty directory `mkdir my-new-prototype`
 1. Enter the new directory `cd my-new-prototype`
@@ -28,7 +24,7 @@ You can use the supplied components and styles with the prototype kit to make ri
 
 [![Creating a new prototype](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
 
-### Adding custom styles
+## Adding custom styles
 
 1. Create a new SCSS file in `app/assets/sass` called `custom.scss` (or whatever you prefer)
 1. Create a new layout in `app/views/layout` called `base.html` (or whatever you prefer) which extends the National Archives prototype kit layout
@@ -36,7 +32,7 @@ You can use the supplied components and styles with the prototype kit to make ri
 1. Link in your custom CSS file
 1. Ensure new pages extend your new layout with `{% raw %}{% extends "layouts/base.html" %}{% endraw %}`
 
-#### Example layout
+### Example layout
 
 ```html
 {% raw %}{% extends "nationalarchives/templates/layouts/_prototype-kit.njk" %}
@@ -52,7 +48,7 @@ You can use the supplied components and styles with the prototype kit to make ri
 {% endblock %}{% endraw %}
 ```
 
-### Using the components in your prototype
+## Using the components in your prototype
 
 The National Archives components can be included in your prototype using the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 
