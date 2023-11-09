@@ -191,7 +191,6 @@
       :not(pre) > code[class*="language-"],
       pre[class*="language-"] {
         margin: 0;
-        padding-top: 3rem;
 
         // background-color: $code-background;
 
@@ -201,6 +200,10 @@
         .token.operator,
         .token.url {
           background-color: transparent;
+        }
+
+        &.padded {
+          padding-top: 3.5rem;
         }
       }
 
@@ -237,9 +240,9 @@ table {
     background-color: #f1ece9;
 
     .tna-template--dark-theme & {
-      color: #d69;
+      color: #d49;
 
-      background-color: #000;
+      background-color: #111;
     }
   }
 }
