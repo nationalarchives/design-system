@@ -38,7 +38,7 @@ markdownRenderer.heading = function (text, level) {
     ${text} <a href="#${slug}" aria-hidden="true" title="Jump to ${text.replace(
       '"',
       "'",
-    )}"><i class="fa-solid fa-link"></i></a>
+    )}" tabindex="-1"><i class="fa-solid fa-link"></i></a>
   </h${level}>`;
 };
 
