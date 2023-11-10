@@ -11,6 +11,7 @@ The examples in the National Archives Design System come with code to make it ea
 There are guides to getting started:
 
 - [prototyping](/design-system/get-started/prototyping/)
+- [production](/design-system/get-started/production/)
 
 ## Using styles, components and patterns
 

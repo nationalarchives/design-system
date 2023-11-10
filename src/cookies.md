@@ -1,12 +1,10 @@
 ---
-layout: simple.njk
+layout: simple-with-nav.njk
 title: Cookies
 ---
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 {% from "nationalarchives/components/message/macro.njk" import tnaMessage %}
-
-# Cookies
 
 Cookies are files saved on your phone, tablet or computer when you visit a website.
 
@@ -17,7 +15,7 @@ This site has three categories of cookies:
 - [usage](#cookies-that-measure-website-use)
 
 {{ tnaMessage({
-  message: "JavaScript is not available on your browser. This could be a network issue. Without JavaScript available your cookie preferences cannot be saved.",
+  message: "JavaScript is not available on your browser. This could be a network issue. Without JavaScript available your cookie preferences cannot be changed.",
   classes: "tna-ds--hide-on-js"
 }) }}
 
@@ -42,24 +40,24 @@ Settings cookies used on this site are:
 | ------------------------- | ---------------------------------------------------- | ------- |
 | `dark_theme`              | Saves your preference to a light or dark themed site | 1 year  |
 
-<p aria-live="assertive" class="tna-ds--show-on-js">Cookies that remember your settings have been <strong data-showcookiepreference="settings">not set, as JavaScript is not available</strong>.</p>
+<p aria-live="assertive" class="tna-ds--show-on-js" data-showcookiepreference="settings" data-showcookiepreferenceonaccepted="Cookies that remember your settings have been accepted." data-showcookiepreferenceonrejected="Cookies that remember your settings have been rejected."></p>
 
 <div class="tna-button-group tna-ds--show-on-js">
-{{ tnaButton({
-  text: "Allow setting cookies",
-  buttonElement: true,
-  attributes: {
-    "data-setcookiepreference": "settings",
-    "data-setcookiepreferencevalue": "true"
-  }
-}) }} {{ tnaButton({
-  text: "Decline setting cookies",
-  buttonElement: true,
-  attributes: {
-    "data-setcookiepreference": "settings",
-    "data-setcookiepreferencevalue": "false"
-  }
-}) }}
+  {{ tnaButton({
+    text: "Allow settings cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "settings",
+      "data-setcookiepreferencevalue": "true"
+    }
+  }) }} {{ tnaButton({
+    text: "Decline settings cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "settings",
+      "data-setcookiepreferencevalue": "false"
+    }
+  }) }}
 </div>
 
 ## Cookies that measure website use
@@ -67,3 +65,23 @@ Settings cookies used on this site are:
 These cookies may be set by third party websites and do things like measure how you view YouTube videos that are on the National Archives Design System.
 
 This site currently collects no usage data.
+
+<p aria-live="assertive" class="tna-ds--show-on-js" data-showcookiepreference="usage" data-showcookiepreferenceonaccepted="Cookies that measure website use have been accepted." data-showcookiepreferenceonrejected="Cookies that measure website use have been rejected."></p>
+
+<div class="tna-button-group tna-ds--show-on-js">
+  {{ tnaButton({
+    text: "Allow usage cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "usage",
+      "data-setcookiepreferencevalue": "true"
+    }
+  }) }} {{ tnaButton({
+    text: "Decline usage cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "usage",
+      "data-setcookiepreferencevalue": "false"
+    }
+  }) }}
+</div>

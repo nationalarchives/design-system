@@ -114,6 +114,7 @@ Metalsmith(__dirname)
       "get-started": {
         pattern: "get-started/*/index.html",
         filterBy: (file) => file.path !== "get-started/index.html",
+        sortBy: "order",
         refer: false,
       },
       styles: {
@@ -141,11 +142,6 @@ Metalsmith(__dirname)
       //   filterBy: (file) => file.path !== "analytics/index.html",
       //   refer: false,
       // },
-      legal: {
-        pattern: "*.html",
-        filterBy: (file) => file.path !== "index.html",
-        refer: false,
-      },
     }),
   )
   .use(
@@ -173,6 +169,8 @@ Metalsmith(__dirname)
       drop: [],
       entries: {
         index: "lib/index.js",
+        collection: "lib/collection.js",
+        sidebar: "lib/sidebar.js",
       },
     }),
   )

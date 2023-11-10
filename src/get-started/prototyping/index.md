@@ -2,6 +2,7 @@
 layout: collection-page.njk
 title: Prototyping
 group: get-started
+order: 1
 ---
 
 {% from "_example.njk" import example %}

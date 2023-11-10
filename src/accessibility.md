@@ -1,9 +1,7 @@
 ---
-layout: simple.njk
-title: Accessibility statement
+layout: simple-with-nav.njk
+title: Accessibility
 ---
-
-# Accessibility
 
 The Digital Services team at The National Archives (TNA) maintains the following products:
 

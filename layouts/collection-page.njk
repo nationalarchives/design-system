@@ -44,15 +44,14 @@
       {{ contents | safe }}
     </main>
     <nav id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="{{ groupTitle }} navigation">
-      <!--<hr class="tna-!--hide-on-large tna-!--hide-on-medium">-->
       {% if not topLevel %}
       <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium tna-!--margin-bottom-s">{{ groupTitle }}</h2>
       {% endif %}
       <ol class="tna-ds-sidebar">
       {% if not topLevel %}
-        <li class="tna-ds-sidebar__item">
+        <!--<li class="tna-ds-sidebar__item">
           <a href="/design-system/{{ group }}" class="tna-ds-sidebar__link tna-link--no-visited-state">{{ groupTitle }} overview</a>
-        </li>
+        </li>-->
       {% endif %}
       {% for item in collections[group] %}
         {% if item.path == path %}
@@ -110,4 +109,10 @@
     </div>
     {% endif %}
   </div>
+{% endblock %}
+
+{% block bodyEnd %}
+  {{ super() }}
+  <script src="/design-system/collection.js"></script>
+  <script src="/design-system/sidebar.js"></script>
 {% endblock %}
