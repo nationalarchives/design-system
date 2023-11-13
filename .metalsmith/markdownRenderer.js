@@ -75,14 +75,16 @@ markdownRenderer.table = function (head, body) {
       .replace(/<tr>/g, '<tr class="tna-table__row">')
       .replace(/<th>/g, '<th class="tna-table__header">')
       .replace(/<td>/g, '<td class="tna-table__cell">');
-  return `<table class="tna-table">
-    <thead class="tna-table__head">
-      ${formatRows(head)}
-    </thead>
-    <tbody class="tna-table__body">
-      ${formatRows(body)}
-    </tbody>
-  </table>`;
+  return `<div class="tna-table-wrapper">
+    <table class="tna-table">
+      <thead class="tna-table__head">
+        ${formatRows(head)}
+      </thead>
+      <tbody class="tna-table__body">
+        ${formatRows(body)}
+      </tbody>
+    </table>
+  </div>`;
 };
 
 const escapeTest = /[&<>"']/;
