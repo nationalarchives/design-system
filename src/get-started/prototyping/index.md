@@ -21,7 +21,6 @@ Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to cr
 1. Install the frontend styles with `npm install @nationalarchives/frontend`
 1. Run `npm run dev` to start up the prototype kit
 1. Visit [localhost:3000](http://localhost:3000) in your browser to see the prototype
-1. Visit [localhost:3000/manage-prototype](http://localhost:3000/manage-prototype) in your browser to create pages including page templates from the National Archives Frontend
 
 [![Creating a new prototype](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
 
