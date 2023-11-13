@@ -82,7 +82,7 @@ The blocks are nested in the following way:
 - Small devices have a 4 column grid
 - Tiny devices have a 2 column grid
 
-Based on the number of columns set for each size, (i.e. `$column-count`), there are size classes for all column widths up to that number. These numbers will **only be available in their simplest form**. This means that there is no `.tna-column--width-8-12` class, and only a `.tna-column--width-2-3`.
+Based on the number of columns set for each size, (i.e. `$column-count`), there are size classes for all column widths up to that number. These numbers will **only be available in their simplest form**. This means that there is no `tna-column--width-8-12` class; only a `tna-column--width-2-3`.
 
 #### Large devices
 

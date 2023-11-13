@@ -1,0 +1,103 @@
+@use "@nationalarchives/frontend/nationalarchives/variables/grid";
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
+@use "@nationalarchives/frontend/nationalarchives/tools/typography";
+
+.tna-table-wrapper {
+  width: 100%;
+  @include spacing.space-above;
+
+  position: relative;
+}
+
+@mixin tna-table-wrapper {
+  padding-left: grid.$gutter-width;
+  padding-right: grid.$gutter-width;
+
+  left: -#{grid.$gutter-width};
+
+  overflow: auto;
+
+  @include media.on-tiny {
+    padding-left: grid.$gutter-width-tiny;
+    padding-right: grid.$gutter-width-tiny;
+
+    left: -#{grid.$gutter-width-tiny};
+  }
+}
+
+@include media.on-small {
+  .tna-column--full-small {
+    > .tna-table-wrapper {
+      @include tna-table-wrapper();
+    }
+  }
+}
+
+@include media.on-tiny {
+  .tna-column--full-tiny {
+    > .tna-table-wrapper {
+      @include tna-table-wrapper();
+    }
+  }
+}
+
+.tna-table {
+  width: 100%;
+  @include spacing.space-above;
+
+  border-collapse: collapse;
+
+  text-align: left;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__caption {
+    text-align: left;
+
+    @include typography.main-font-weight-bold;
+  }
+
+  &__head {
+  }
+
+  &__head &__header {
+    @include colour.colour-border("keyline-dark", 0.25rem, solid, bottom);
+  }
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header,
+  &__cell {
+    padding: 0.25rem 1rem;
+
+    @include colour.colour-border("keyline", 1px, solid, bottom);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__header {
+  }
+
+  &__cell {
+  }
+
+  p {
+    + p {
+      margin-top: 0.5rem;
+    }
+  }
+}

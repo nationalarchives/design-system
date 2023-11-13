@@ -1,0 +1,137 @@
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
+
+.tna-ds-component-example {
+  @include spacing.space-above;
+
+  @include colour.colour-border("keyline", 1px);
+
+  &__open-new-tab {
+    display: block;
+
+    @include colour.colour-border("keyline", 1px, solid, bottom);
+  }
+
+  &__link {
+    margin: 0.5rem 1rem;
+
+    display: inline-block;
+  }
+
+  &__frame-wrapper {
+    padding: 1.5rem;
+
+    background-color: #f4f4f4;
+
+    @include media.on-mobile() {
+      padding: 1rem;
+    }
+
+    &--no-padding {
+      padding: 0;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    height: 20rem;
+    margin: 0 auto;
+
+    display: block;
+
+    border: none;
+
+    &--resizeable {
+      overflow: auto;
+    }
+
+    &--mobile {
+      max-width: 768px;
+    }
+
+    &--xxs {
+      height: 4rem;
+    }
+
+    &--xs {
+      height: 6rem;
+    }
+
+    &--s {
+      height: 10rem;
+    }
+
+    &--m {
+      height: 18rem;
+    }
+
+    &--l {
+      height: 25rem;
+    }
+
+    &--xl {
+      height: 30rem;
+    }
+
+    &--xxl {
+      height: 36rem;
+    }
+  }
+
+  &__data {
+    padding: 1rem 0 0;
+
+    @include colour.colour-border("keyline", 1px, solid, top);
+
+    .tna-tabs__list {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    &-table-wrapper {
+      padding: 1rem;
+    }
+  }
+
+  &__code {
+    position: relative;
+
+    pre {
+      margin: 0;
+      padding-top: 3rem;
+
+      border-radius: 0;
+    }
+
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      margin: 0;
+
+      // background-color: $code-background;
+
+      .language-css .token.string,
+      .style .token.string,
+      .token.entity,
+      .token.operator,
+      .token.url {
+        background-color: transparent;
+      }
+
+      &.padded {
+        padding-top: 3.5rem;
+      }
+    }
+
+    &-copy {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      z-index: 1;
+    }
+  }
+
+  & > &__code {
+    @include colour.colour-border("keyline", 1px, solid, top);
+  }
+}

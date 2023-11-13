@@ -1,0 +1,93 @@
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/typography";
+
+.tna-ul,
+.tna-ol {
+  .tna-ul,
+  .tna-ol {
+    margin-top: 0;
+  }
+}
+
+.tna-ds-pre {
+  margin-top: 2rem !important;
+  margin-bottom: 0;
+  padding: 1rem;
+
+  // background-color: #f1ece9;
+
+  @include colour.colour-border("keyline", 1px);
+}
+
+code {
+  @include typography.detail-font;
+  @include typography.relative-font-size(16);
+}
+
+p:has(+ p.tna-\!--no-margin-top) {
+  &,
+  & ~ p {
+    @include colour.colour-background("background-tint");
+  }
+}
+
+p,
+li,
+table {
+  code {
+    color: #905;
+
+    background-color: #f1ece9;
+
+    .tna-template--dark-theme & {
+      color: #d49;
+
+      background-color: #111;
+    }
+  }
+
+  .fa-check {
+    color: colour.brand-colour("green");
+  }
+
+  .fa-xmark {
+    color: colour.brand-colour("pink");
+  }
+}
+
+.tna-heading-s,
+.tna-heading-m,
+.tna-heading-l,
+.tna-heading-xl {
+  a[href^="#"]:not([href="#"]) {
+    width: 1.5rem;
+
+    display: none;
+
+    @include typography.relative-font-size(16);
+    vertical-align: middle;
+    line-height: 1.5rem;
+    text-align: center;
+
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      @include colour.colour-font("link");
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:hover {
+    a[href^="#"]:not([href="#"]) {
+      display: inline-block;
+
+      .tna-template--touched & {
+        display: none;
+      }
+    }
+  }
+}
