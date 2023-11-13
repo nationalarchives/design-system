@@ -12,6 +12,8 @@ Write all headings in sentence case.
 
 Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a page. Apply a heading class, such as `tna-heading-l`, to style them visually. Style headings consistently to create a clear content structure throughout your service.
 
+Headings contain a single sentence and do not need a full stop.
+
 Large and extra large headings are Supria Sans Cond Medium and smaller headings are Open Sans Bold.
 
 {{ example({ group: "styles", item: "typography", example: "headings", html: true, nunjucks: false, open: false }) }}

@@ -13,6 +13,14 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
+.tna-ul,
+.tna-ol {
+  .tna-ul,
+  .tna-ol {
+    margin-top: 0;
+  }
+}
+
 .tna-breadcrumbs {
   &__link {
     &::first-letter {
@@ -378,9 +386,7 @@ table {
 .tna-grid--demo {
   padding-top: 2rem;
 
-  background-color: #eee;
-
-  @include media.on-mobile() {
+  @include media.on-tiny() {
     padding-top: 1rem;
   }
 
@@ -392,11 +398,16 @@ table {
     text-align: center;
     line-height: 3rem;
 
-    @include colour.accent;
+    @include colour.contrast;
     background-clip: content-box;
 
-    @include media.on-mobile() {
+    @include media.on-tiny() {
       margin-bottom: 1rem;
+    }
+
+    p {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
     }
   }
 }

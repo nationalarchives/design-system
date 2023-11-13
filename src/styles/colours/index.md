@@ -97,6 +97,7 @@ The high contrast themes are applied on top of the existing light and dark theme
 
 Accent colours can be added on a per-template basis. Add one of the following classes to the `.tna-template` element:
 
+- `tna-template--black-accent`
 - `tna-template--pink-accent`
 - `tna-template--orange-accent`
 - `tna-template--yellow-accent`
@@ -104,6 +105,10 @@ Accent colours can be added on a per-template basis. Add one of the following cl
 - `tna-template--blue-accent`
 
 Elements that can follow the accent colour such as `tna-phase-banner--accent`, `tna-button--accent` and `tna-card--accent` as well as generic classes such as `tna-background--accent` will inherit the accent theme colours.
+
+### Black
+
+{{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, open: false, size: "xl" }) }}
 
 ### Pink
 
