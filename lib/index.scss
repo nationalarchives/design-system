@@ -474,10 +474,6 @@ table {
 
   overflow: auto;
 
-  .tna-table {
-    width: auto;
-  }
-
   @include media.on-tiny {
     padding-left: grid.$gutter-width-tiny;
     padding-right: grid.$gutter-width-tiny;
