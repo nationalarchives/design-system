@@ -1,0 +1,21 @@
+---
+title: Pagination - previous and next
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/pagination/macro.njk" import tnaPagination %}
+
+{{ tnaPagination({
+  previous: {
+    href: "#",
+    text: "TS 11/45/166",
+    title: "From the catalogue: TS 11/45/166"
+  },
+  currentItemText: "From the catalogue: TS 11/45/167",
+  next: {
+    href: "#",
+    text: "TS 11/45/168",
+    title: "From the catalogue: TS 11/45/168"
+  },
+  spaced: true
+}) }}
