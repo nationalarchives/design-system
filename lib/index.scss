@@ -295,6 +295,14 @@ table {
       background-color: #111;
     }
   }
+
+  .fa-check {
+    color: colour.brand-colour("green");
+  }
+
+  .fa-xmark {
+    color: colour.brand-colour("pink");
+  }
 }
 
 .tna-template__body {

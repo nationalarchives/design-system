@@ -8,7 +8,7 @@ group: styles
 
 ## Global spacing
 
-A top margin has been applied to some elements within `tna-frontend` in order to space them evenly on a page.
+A top margin has been applied to some elements within [TNA Frontend](https://github.com/nationalarchives/tna-frontend) in order to space them evenly on a page.
 
 The common mixin `space-above` is used to apply a consistent `2rem` margin to the top of elements such as:
 

@@ -5,6 +5,7 @@ group: styles
 ---
 
 {% from "_example.njk" import example %}
+{% from "nationalarchives/components/message/macro.njk" import tnaMessage %}
 
 ## Brand colours
 
@@ -53,14 +54,7 @@ Always use the provided TNA colour palette.
 
 ### System theme
 
-The system theme follows the operating system preference for `prefers-color-scheme` which can either be `light` or `dark`.
-
-The system theme also follows the preference for `prefers-contrast` which can be `no-preference`, `more`, `less` or `custom`.
-
-At this time, only `prefers-contrast: no-preference` and `prefers-contrast: more` are supported.
-
-- [MDN Web Docs - prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
-- [MDN Web Docs - prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast)
+The system theme follows the operating system preference for `prefers-color-scheme` ([MDN Web Docs - prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)) which can either be `light` or `dark`.
 
 ```html
 <html class="tna-template tna-template--system-theme">
@@ -75,23 +69,55 @@ At this time, only `prefers-contrast: no-preference` and `prefers-contrast: more
 
 ### Light theme
 
+A light theme can be used with `tna-template--light-theme`.
+
 {{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, open: false, size: "xl", noPadding: true }) }}
 
 ### Dark theme
 
+A dark theme can be used with `tna-template--dark-theme`.
+
 {{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, open: false, size: "xl", noPadding: true }) }}
 
-### High contrast themes
+## High contrast themes
 
 The high contrast themes are applied on top of the existing light and dark themes with an extra `tna-template--high-contrast-theme` class on the `tna-template` element.
 
-#### Light high contrast theme
+The [system theme](#system-theme) follows the preference for `prefers-contrast` which can be `no-preference`, `more`, `less` or `custom`. See [MDN Web Docs - prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast).
+
+TNA Frontend currently only supports the `prefers-contrast` values of `no-preference` and `more`.
+
+The colour tools from TNA Frontend come with a mixin for high-contrast which enables you to add styles when high contrast mode is enabled:
+
+```scss
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+
+.my-component {
+  @include colour.on-high-contrast {
+    @include colour.colour-border("keyline-dark", 1px);
+  }
+}
+```
+
+### Light high contrast theme
 
 {{ example({ group: "styles", item: "colours", example: "theme-light-high-contrast", html: false, nunjucks: false, open: false, size: "xl", noPadding: true }) }}
 
-#### Dark high contrast theme
+### Dark high contrast theme
 
 {{ example({ group: "styles", item: "colours", example: "theme-dark-high-contrast", html: false, nunjucks: false, open: false, size: "xl", noPadding: true }) }}
+
+### Windows High Contrast Mode (Forced Colours Mode)
+
+Windows offers a "High Contrast Mode" which allows a user to choose their own colour palette. This can be queried using the `forced-colors` CSS media feature.
+
+Using `forced-colors` has some [accessibility concerns](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors#accessibility_concerns) because the browser has no visibility of the colour palette.
+
+{{ tnaMessage({
+  message: "National Archives services must not use the <code>forced-colors</code> CSS media query."
+}) }}
+
+Read the article [The difference between Increased Contrast Mode and Windows High Contrast Mode (Forced Colours Mode)](https://www.tempertemper.net/blog/the-difference-between-increased-contrast-mode-and-windows-high-contrast-mode) for more information.
 
 ## Accent colours
 

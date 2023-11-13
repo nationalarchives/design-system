@@ -14,7 +14,7 @@ If your link is at the end of a sentence or paragraph, make sure that the linked
 
 ## Colours
 
-Link colours on different background types and in different themes have been included in `tna-frontend`. Sometimes black or white links are used. See some examples of how [colours](/design-system/styles/colours/) should be used in National Archive services.
+Link colours on different background types and in different themes have been included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend). Sometimes black or white links are used. See some examples of how [colours](/design-system/styles/colours/) should be used in National Archive services.
 
 Visited links should be purple. This helps users understand what content they have already viewed.
 

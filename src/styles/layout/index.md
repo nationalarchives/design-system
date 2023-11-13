@@ -8,11 +8,11 @@ group: styles
 
 ## Base template
 
-A template is included in `tna-frontend` that has support for the blocks specified below.
+A template is included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend) that has support for the blocks specified below.
 
 You can use this template in your prototypes or copy the structure into your production application.
 
-See the [generic page template](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/templates/layouts/_generic.njk) in `tna-frontend`.
+See the [generic page template](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/templates/layouts/_generic.njk) in TNA Frontend.
 
 <!-- {{ example({ group: "styles", item: "layout", example: "template", html: false, nunjucks: false, open: false, size: "xxl", noPadding: true }) }} -->
 
@@ -65,9 +65,9 @@ The blocks are nested in the following way:
 | `theme`              | Sets the [theme colour](/design-system/styles/colours/#theme-colours) of the site                  | `system`               |
 | `themeAccent`        | Sets the [accent colour](/design-system/styles/colours/#accent-colours) of the site                | `black`                |
 | `themeColor`         | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#000000`              |
-| `assetPath`          | The path for the icons and images included from `tna-frontend`                                     | `/assets`              |
-| `tnaFrontendJsPath`  | The path to prefix the `all.js` from `tna-frontend` (if used within the `bodyEnd` block)           | `/static/tna-frontend` |
-| `tnaFrontendCssPath` | The path to prefix the `all.css` from `tna-frontend` (if used within the `stylesheets` block)      | `/static/tna-frontend` |
+| `assetPath`          | The path for the icons and images included from TNA Frontend                                       | `/assets`              |
+| `tnaFrontendJsPath`  | The path to prefix the `all.js` from TNA Frontend (if used within the `bodyEnd` block)             | `/static/tna-frontend` |
+| `tnaFrontendCssPath` | The path to prefix the `all.css` from TNA Frontend (if used within the `stylesheets` block)        | `/static/tna-frontend` |
 | `bodyClasses`        | Classes to add to the `<body>` element                                                             | [none]                 |
 | `mainClasses`        | Classes to add to the `<main>` element                                                             | [none]                 |
 
