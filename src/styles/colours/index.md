@@ -130,7 +130,7 @@ Accent colours can be added on a per-template basis. Add one of the following cl
 - `tna-template--green-accent`
 - `tna-template--blue-accent`
 
-Elements that can follow the accent colour such as `tna-phase-banner--accent`, `tna-button--accent` and `tna-card--accent` as well as generic classes such as `tna-background--accent` will inherit the accent theme colours.
+Elements that can follow the accent colour such as `tna-phase-banner--accent`, `tna-button--accent` and `tna-card--accent` as well as generic classes such as `tna-background-accent` will inherit the accent theme colours.
 
 ### Black
 

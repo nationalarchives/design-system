@@ -46,7 +46,7 @@ All paragraphs within `.tna-template` are styled with the correct font and colou
 
 You can use a larger paragraph as an introduction to the page or section. 
 
-{{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, open: false, size: "xs" }) }}
+{{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, open: false, size: "s" }) }}
 
 ### Small
 

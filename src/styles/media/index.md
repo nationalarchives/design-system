@@ -30,7 +30,7 @@ Use the provided media tools from TNA Frontend to help you with media queries.
 .my-div {
   display: flex;
 
-  @include media.on-mobile {
+  @include media.on-tiny {
     flex-direction: column;
   }
 }
@@ -41,13 +41,13 @@ The available mixins are:
 | Query                   | Tiny                                        | Small                                       | Medium                                      | Large                                       |
 | ----------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | `on-tiny`               | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  |
-| `on-mobile`             | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  |
 | `on-small`              | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  |
+| `on-medium`             | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No  |
+| `on-large`              | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes |
+| `on-mobile`             | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  |
 | `on-smaller-than-large` | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No |
 | `on-larger-than-tiny`   | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes |
-| `on-medium`             | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-xmark"></i> No  |
 | `on-larger-than-mobile` | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes | <i class="fa-solid fa-fw fa-check"></i> Yes |
-| `on-large`              | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-xmark"></i> No  | <i class="fa-solid fa-fw fa-check"></i> Yes |
 
 ## Print
 

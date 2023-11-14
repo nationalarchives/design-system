@@ -6,9 +6,11 @@ group: patterns
 
 {% from "_example.njk" import example %}
 
+## Page not found pages
+
 {{ example({ group: "patterns", item: "error-pages", example: "404", html: false, nunjucks: false, open: false, size: "xxl", noPadding: true }) }}
 
-## When to use this pattern
+### When to use this pattern
 
 Use a page not found if someone is trying to view a page that does not exist. This happens if someone:
 
