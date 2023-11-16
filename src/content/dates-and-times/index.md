@@ -29,6 +29,7 @@ Use the HTML `time` element where possible:
 
 ```html
 <time datetime="2023-10-16">16 October 2023</time>
+<time datetime="2023-10-16T19:00:00Z">16 October 2023, 19:00</time>
 ```
 
 ### Time
