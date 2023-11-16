@@ -6,20 +6,18 @@ group: content
 
 ## Formats
 
-Dates should be written in a human-readable format.
-
-Date numbers do not need "st", "th" or "rd" suffixes.
+Dates should be written in a human-readable format. Date numbers do not need "st", "th" or "rd" suffixes.
 
 Good examples of dates are:
 
 <dl class="tna-dl">
-  <dt>Time-specific</dt>
+  <dt>Time</dt>
   <dd>16 October 2023, 19:00</dd>
-  <dt>Day-specific</dt>
+  <dt>Day</dt>
   <dd>16 October 2023</dd>
-  <dt>Month-specific</dt>
+  <dt>Month</dt>
   <dd>October 2023</dd>
-  <dt>Year-specific</dt>
+  <dt>Year</dt>
   <dd>2023</dd>
 </dl>
 
