@@ -1,0 +1,60 @@
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/media";
+
+p:has(+ p.tna-\!--no-margin-top) {
+  &,
+  & ~ p {
+    @include colour.colour-background("background-tint");
+  }
+}
+
+.tna-ds-colour-swatch {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+
+  display: inline-block;
+
+  vertical-align: bottom;
+
+  // @include colour.colour-border("keyline-dark", 1px, solid);
+  border: 1px rgb(0 0 0/0.2) solid;
+  border-radius: 100%;
+}
+
+.tna-card--demo {
+  max-width: 25rem;
+}
+
+.tna-card--demo-horizontal {
+  max-width: 50rem;
+}
+
+.tna-grid--demo {
+  padding-top: 2rem;
+
+  @include media.on-tiny() {
+    padding-top: 1rem;
+  }
+
+  .tna-column {
+    margin-bottom: 2rem;
+
+    position: relative;
+
+    text-align: center;
+    line-height: 3rem;
+
+    @include colour.contrast;
+    background-clip: content-box;
+
+    @include media.on-tiny() {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+}

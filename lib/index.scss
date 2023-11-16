@@ -10,13 +10,12 @@
 
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
-@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
-@import "modules/component-example";
-@import "modules/sidebar";
-@import "modules/tables";
-@import "modules/typography";
+@use "modules/component-example";
+@use "modules/examples";
+@use "modules/sidebar";
+@use "modules/typography" as DSTypography;
 
 .tna-breadcrumbs {
   &__link {
@@ -26,26 +25,17 @@
   }
 }
 
-.tna-card--demo {
-  max-width: 25rem;
-}
-
-.tna-card--demo-horizontal {
-  max-width: 50rem;
-}
-
 .tna-template--yellow-accent {
   .tna-hero--tint .tna-hero__figure::before {
     background-color: rgb(0, 76, 126) !important;
   }
+
   .tna-ol li::marker {
     @include colour.colour-font("font-base");
   }
 }
 
 .tna-template__body {
-  // min-height: -webkit-fill-available !important;
-
   > .tna-header + .tna-container {
     flex: 1;
   }
@@ -56,17 +46,17 @@
     @include typography.relative-font-size(22);
   }
 
-  @at-root #{selector.unify("button", &)} {
-    &[disabled="true"] {
-      cursor: not-allowed;
+  // @at-root #{selector.unify("button", &)} {
+  //   &[disabled="true"] {
+  //     cursor: not-allowed;
 
-      &:hover {
-        @include colour.colour-font("button-text");
+  //     &:hover {
+  //       @include colour.colour-font("button-text");
 
-        @include colour.colour-background("button-background");
-      }
-    }
-  }
+  //       @include colour.colour-background("button-background");
+  //     }
+  //   }
+  // }
 }
 
 .app-example-page {
@@ -75,15 +65,6 @@
 }
 
 .tna-header {
-  .tna-header__top-navigation-item-link {
-    .fa-solid,
-    .fa-brands {
-      width: 1.25em;
-
-      text-align: left;
-    }
-  }
-
   button.tna-header__top-navigation-item-link {
     padding: 0;
 
@@ -129,73 +110,8 @@
   }
 }
 
-.tna-grid--demo {
-  padding-top: 2rem;
-
-  @include media.on-tiny() {
-    padding-top: 1rem;
-  }
-
-  .tna-column {
-    margin-bottom: 2rem;
-
-    position: relative;
-
-    text-align: center;
-    line-height: 3rem;
-
-    @include colour.contrast;
-    background-clip: content-box;
-
-    @include media.on-tiny() {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-    }
-  }
-}
-
 .tna-hero {
   &--tint {
     @include colour.colour-border("keyline", 1px, solid, bottom);
   }
-}
-
-.tna-ds-colour-swatch {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 0.75rem;
-
-  display: inline-block;
-
-  vertical-align: bottom;
-
-  // @include colour.colour-border("keyline-dark", 1px, solid);
-  border: 1px rgb(0 0 0/0.2) solid;
-  border-radius: 100%;
-}
-
-@mixin hide($suffix) {
-  .tna-\!--hide-on-#{$suffix} {
-    display: none;
-  }
-}
-
-@include media.on-large {
-  @include hide("large");
-}
-
-@include media.on-medium {
-  @include hide("medium");
-}
-
-@include media.on-small {
-  @include hide("small");
-}
-
-@include media.on-tiny {
-  @include hide("tiny");
 }
