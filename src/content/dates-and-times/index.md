@@ -1,0 +1,82 @@
+---
+layout: collection-page.njk
+title: Dates and times
+group: content
+---
+
+## Formats
+
+Dates should be written in a human-readable format.
+
+Date numbers do not need "st", "th" or "rd" suffixes.
+
+Good examples of dates are:
+
+<dl class="tna-dl">
+  <dt>Time-specific</dt>
+  <dd>16 October 2023, 19:00</dd>
+  <dt>Day-specific</dt>
+  <dd>16 October 2023</dd>
+  <dt>Month-specific</dt>
+  <dd>October 2023</dd>
+  <dt>Year-specific</dt>
+  <dd>2023</dd>
+</dl>
+
+You can include a day of the week if space allows:
+
+- Monday 16 October 2023
+
+Use the HTML `time` element where possible:
+
+```html
+<time datetime="2023-10-16">16 October 2023</time>
+```
+
+### Time
+
+Use the [24-hour notation](https://en.wikipedia.org/wiki/24-hour_clock) for writing times.
+
+Do not 0-prefix the hour:
+
+- 9:30
+
+## Ranges
+
+Always use the en dash (`–` or `&ndash;`) rather than a hyphen (`-`) for date ranges.
+
+Avoid unnecessary duplication of days, months or years to allow users to scan more easily.
+
+<dl class="tna-dl">
+  <dt>Same day</dt>
+  <dd>16 October 2023, 19:00–20:00</dd>
+  <dt>Same month</dt>
+  <dd>16–24 October 2023</dd>
+  <dt>Same year</dt>
+  <dd>October–November 2023</dd>
+  <dt>Range of years</dt>
+  <dd>2023–2024</dd>
+</dl>
+
+Use "to" when the range stretches over multiple date fields (dates/months/years):
+
+<dl class="tna-dl">
+  <dt>Range of months</dt>
+  <dd>16 October to 24 November 2023</dd>
+  <dt>Range of months over multiple years</dt>
+  <dd>October 2023 to November 2024</dd>
+</dl>
+
+Use "From &hellip;" for open-ended events and "Now to &hellip;" when describing events that are currently ongoing:
+
+- From 1 January 1970
+- Now to 19 January 2038
+
+## Formats in data
+
+Use the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format for dates intended to be consumed by a machine, for example in a CSV export:
+
+- `2023-10-16T19:00:00Z`
+- `2023-10-16`
+- `2023-10`
+- `2023`
