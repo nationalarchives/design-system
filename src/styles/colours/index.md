@@ -109,18 +109,6 @@ The colour tools from TNA Frontend come with a mixin for high-contrast which ena
 
 {{ example({ group: "styles", item: "colours", example: "theme-dark-high-contrast", html: false, nunjucks: false, open: false, size: "xl", noPadding: true }) }}
 
-### Windows High Contrast Mode (Forced Colours Mode)
-
-Windows offers a "High Contrast Mode" which allows a user to choose their own colour palette. This can be queried using the `forced-colors` CSS media feature.
-
-Using `forced-colors` has some [accessibility concerns](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors#accessibility_concerns) because the browser has no visibility of the colour palette.
-
-{{ tnaMessage({
-  message: "National Archives services must not use the <code>forced-colors</code> CSS media query."
-}) }}
-
-Read the article [The difference between Increased Contrast Mode and Windows High Contrast Mode (Forced Colours Mode)](https://www.tempertemper.net/blog/the-difference-between-increased-contrast-mode-and-windows-high-contrast-mode) for more information.
-
 ## Accent colours
 
 Accent colours can be added on a per-template basis. Add one of the following classes to the `.tna-template` element:
