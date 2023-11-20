@@ -30,7 +30,7 @@ For larger screens, show page numbers for:
 
 Use ellipses (&hellip;) to replace any skipped pages. For example:
 
-- **[1]** 2 &hellip; 42
+- **[1]** 2 3 &hellip; 42
 - 1 **[2]** 3 &hellip; 42
 - 1 2 **[3]** 4 &hellip; 42
 - 1 2 3 **[4]** 5 &hellip; 42
@@ -40,7 +40,7 @@ Use ellipses (&hellip;) to replace any skipped pages. For example:
 - 1 &hellip; 38 **[39]** 40 41 42
 - 1 &hellip; 39 **[40]** 41 42
 - 1 &hellip; 40 **[41]** 42
-- 1 &hellip; 41 **[42]**
+- 1 &hellip; 40 41 **[42]**
 
 ## First and last pages
 
