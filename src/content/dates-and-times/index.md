@@ -23,7 +23,12 @@ Good examples of dates are:
 
 You can include a day of the week if space allows:
 
-- Monday 16 October 2023
+<dl class="tna-dl">
+  <dt>Time</dt>
+  <dd>Monday 16 October 2023, 19:00</dd>
+  <dt>Day</dt>
+  <dd>Monday 16 October 2023</dd>
+</dl>
 
 Use the HTML `time` element where possible:
 

@@ -22,9 +22,7 @@ Large and extra large headings are Supria Sans Cond Medium and smaller headings 
 
 Sometimes you may need to make it clear that a page is part of a larger section or group. To do this, you can use a heading group with a supertitle above the main heading.
 
-The supertitle should be short, at most about 2–3 words or 12–15 characters.
-
-By default, the supertitle is a contrasting colour to the text, usually inverted. It is controlled by the accent colour of the page.
+The supertitle style uses [chips](#chips).
 
 {{ example({ group: "styles", item: "typography", example: "headings-with-separate-supertitles", html: true, nunjucks: false, open: false, size: "xs" }) }}
 
@@ -65,3 +63,19 @@ Use bold sparingly. Overuse will make it difficult for users to know which parts
 ## Blockquotes
 
 {{ example({ group: "styles", item: "typography", example: "blockquote", html: true, nunjucks: false, open: false, size: "s" }) }}
+
+## Chips
+
+Chips are small "tags" of information. They are used in the [supertitles of heading groups](#headings-with-supertitles) as well as in the top left of some [card components](/design-system/components/card/).
+
+The chip should be short, at most about 2–3 words or 12–15 characters.
+
+{{ example({ group: "styles", item: "typography", example: "chip", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+
+By default, the chip is a contrasting colour to the text, usually inverted. It is controlled by the accent colour of the page.
+
+You can use a plain style chip to avoid too much contrast in visually complex pages.
+
+{{ example({ group: "styles", item: "typography", example: "chip-plain", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+
+Chips can be presented in a list format with a [chip list](/design-system/styles/lists/#chip-lists).
