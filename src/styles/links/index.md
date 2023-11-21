@@ -31,3 +31,9 @@ White links can be used in dark areas where the default colour would not provide
 Links within [heading elements](/design-system/styles/typography/#headings) have an `&rsaquo;` pseudo element added after them. The exception for this is headings within cards.
 
 {{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+
+## Opening links in new tabs
+
+Follow the advice from GOV.UK on [opening links in a new tab](https://design-system.service.gov.uk/styles/links/#opening-links-in-a-new-tab).
+
+Avoid opening links in a new tab unless not doing so would detrement the user's experience.
