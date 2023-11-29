@@ -1,0 +1,17 @@
+---
+title: Date input with an error
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/date-input/macro.njk" import tnaDateInput %}
+
+{{ tnaDateInput({
+  label: "Enter a start date",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "date",
+  name: "date",
+  error: {
+    text: "Date is not valid"
+  }
+}) }}

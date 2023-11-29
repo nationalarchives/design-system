@@ -1,0 +1,31 @@
+---
+title: Radios with an error
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/radios/macro.njk" import tnaRadios %}
+
+{{ tnaRadios({
+  label: "Type",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "type",
+  name: "type",
+  error: {
+    text: "You must select a type"
+  },
+  items: [
+    {
+      text: "Audio",
+      value: "audio"
+    },
+    {
+      text: "Image",
+      value: "image"
+    },
+    {
+      text: "Video",
+      value: "video"
+    }
+  ]
+}) }}

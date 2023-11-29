@@ -1,0 +1,29 @@
+---
+title: Checkboxes with a preselected value
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
+
+{{ tnaCheckboxes({
+  label: "Categories",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "categories",
+  name: "categories",
+  items: [
+    {
+      text: "Alpha",
+      value: "alpha"
+    },
+    {
+      text: "Beta",
+      value: "beta",
+      checked: true
+    },
+    {
+      text: "Gamma",
+      value: "gamma"
+    }
+  ]
+}) }}

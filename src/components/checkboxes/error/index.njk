@@ -1,0 +1,31 @@
+---
+title: Checkboxes with an error
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
+
+{{ tnaCheckboxes({
+  label: "Categories",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "categories",
+  name: "categories",
+  error: {
+    text: "You must select a category"
+  },
+  items: [
+    {
+      text: "Alpha",
+      value: "alpha"
+    },
+    {
+      text: "Beta",
+      value: "beta"
+    },
+    {
+      text: "Gamma",
+      value: "gamma"
+    }
+  ]
+}) }}

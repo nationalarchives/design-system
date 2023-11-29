@@ -1,0 +1,19 @@
+---
+title: Date input with a preselected value
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/date-input/macro.njk" import tnaDateInput %}
+
+{{ tnaDateInput({
+  label: "Enter a start date",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "date",
+  name: "date",
+  value: {
+    day: "24",
+    month: "09",
+    year: "1986"
+  }
+}) }}

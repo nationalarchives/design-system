@@ -1,0 +1,11 @@
+---
+title: Cookie banner
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/cookie-banner/macro.njk" import tnaCookieBanner %}
+
+{{ tnaCookieBanner({
+  cookiesUrl: "#/cookies",
+  classes: "tna-cookie-banner--demo"
+}) }}

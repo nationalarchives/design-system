@@ -1,0 +1,29 @@
+---
+title: Radios with a preselected value
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/radios/macro.njk" import tnaRadios %}
+
+{{ tnaRadios({
+  label: "Type",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "type",
+  name: "type",
+  items: [
+    {
+      text: "Audio",
+      value: "audio"
+    },
+    {
+      text: "Image",
+      value: "image"
+    },
+    {
+      text: "Video",
+      value: "video"
+    }
+  ],
+  selected: "image"
+}) }}

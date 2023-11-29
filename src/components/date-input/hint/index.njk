@@ -1,0 +1,15 @@
+---
+title: Date input with a hint
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/date-input/macro.njk" import tnaDateInput %}
+
+{{ tnaDateInput({
+  label: "Enter a start date",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "date",
+  name: "date",
+  hint: "The earliest date of the record"
+}) }}

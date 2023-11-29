@@ -1,0 +1,15 @@
+---
+title: Date search with a hint
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/date-search/macro.njk" import tnaDateSearch %}
+
+{{ tnaDateSearch({
+  label: "Enter a start date",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "date",
+  name: "date",
+  hint: "The earliest date of the record"
+}) }}
