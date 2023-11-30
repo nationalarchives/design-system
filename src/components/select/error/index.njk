@@ -1,0 +1,31 @@
+---
+title: Select with an error
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/select/macro.njk" import tnaSelect %}
+
+{{ tnaSelect({
+  label: "Sort by",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "sort",
+  name: "sort",
+  error: {
+    text: "You must select something to sort by"
+  },
+  items: [
+    {
+      text: "Relevance",
+      value: "relevance"
+    },
+    {
+      text: "Date",
+      value: "date"
+    },
+    {
+      text: "Title",
+      value: "title"
+    }
+  ]
+}) }}

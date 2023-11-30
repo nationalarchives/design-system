@@ -1,0 +1,29 @@
+---
+title: Select - inline
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/select/macro.njk" import tnaSelect %}
+
+{{ tnaSelect({
+  label: "Sort by",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "sort",
+  name: "sort",
+  items: [
+    {
+      text: "Relevance",
+      value: "relevance"
+    },
+    {
+      text: "Date",
+      value: "date"
+    },
+    {
+      text: "Title",
+      value: "title"
+    }
+  ],
+  inline: true
+}) }}

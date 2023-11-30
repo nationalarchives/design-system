@@ -12,20 +12,20 @@ The checkboxes component is for...
 
 ## Small
 
-{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: false, open: false, size: "l" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, open: false, size: "l" }) }}
 
 ## Preselected
 
-{{ example({ group: "components", item: "checkboxes", example: "preselected", html: true, nunjucks: false, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "preselected", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: false, open: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, open: false }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: false, open: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, open: false }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: true, open: false, size: "xxs" }) }}

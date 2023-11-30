@@ -1,0 +1,14 @@
+---
+title: Search field
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/search-field/macro.njk" import tnaSearchField %}
+
+{{ tnaSearchField({
+  label: "Catalogue search results",
+  headingLevel: 1,
+  headingSize: "l",
+  id: "search",
+  name: "q"
+}) }}

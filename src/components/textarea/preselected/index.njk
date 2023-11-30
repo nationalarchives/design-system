@@ -1,0 +1,15 @@
+---
+title: Textarea with a preselected value
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
+
+{{ tnaTextarea({
+  label: "Enter your feedback",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "feedback",
+  name: "feedback",
+  value: "I like this 👍🏼"
+}) }}

@@ -1,0 +1,17 @@
+---
+title: Text input with an error
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
+
+{{ tnaTextInput({
+  label: "Enter your first name",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "firstname",
+  name: "firstname",
+  error: {
+    text: "Enter a name"
+  }
+}) }}

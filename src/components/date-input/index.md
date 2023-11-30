@@ -14,16 +14,16 @@ For searching by date, use the [date search](/design-system/components/date-sear
 
 ## Preselected
 
-{{ example({ group: "components", item: "date-input", example: "preselected", html: true, nunjucks: false, open: false, size: "xs" }) }}
+{{ example({ group: "components", item: "date-input", example: "preselected", html: true, nunjucks: true, open: false, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "date-input", example: "hint", html: true, nunjucks: false, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "date-input", example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: false, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "date-input", example: "inline", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "components", item: "date-input", example: "inline", html: true, nunjucks: true, open: false, size: "xxs" }) }}

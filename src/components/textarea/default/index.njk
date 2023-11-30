@@ -1,0 +1,14 @@
+---
+title: Textarea
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
+
+{{ tnaTextarea({
+  label: "Enter your feedback",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "feedback",
+  name: "feedback"
+}) }}

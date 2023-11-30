@@ -1,0 +1,17 @@
+---
+title: Textarea with an error
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
+
+{{ tnaTextarea({
+  label: "Enter your feedback",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "feedback",
+  name: "feedback",
+  error: {
+    text: "Enter some feedback"
+  }
+}) }}

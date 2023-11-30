@@ -14,16 +14,16 @@ When you need the user to enter a date for data purposes, use the [date input](/
 
 ## Preselected
 
-{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: false, open: false, size: "xs" }) }}
+{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: true, open: false, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "date-search", example: "hint", html: true, nunjucks: false, open: false, size: "xs" }) }}
+{{ example({ group: "components", item: "date-search", example: "hint", html: true, nunjucks: true, open: false, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "date-search", example: "error", html: true, nunjucks: false, open: false, size: "xs" }) }}
+{{ example({ group: "components", item: "date-search", example: "error", html: true, nunjucks: true, open: false, size: "xs" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, open: false, size: "xxs" }) }}
