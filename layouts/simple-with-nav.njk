@@ -12,7 +12,7 @@
       <!--<h2 class="tna-heading-m">Table of contents</h2>-->
       {% if headings %}
       {# TODO: Make a marco for this recursion #}
-      <ol class="tna-ds-sidebar">
+      <ol class="tna-ds-sidebar tna-ds-sidebar--sticky">
         {%- for heading in headings %}
         <li class="tna-ds-sidebar__section">
           <a href="#{{ heading.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">

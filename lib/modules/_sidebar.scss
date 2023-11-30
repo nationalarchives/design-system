@@ -2,16 +2,19 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
 .tna-ds-sidebar {
-  max-height: calc(100vh - 2rem);
   margin: 0;
   padding: 0;
 
-  position: sticky;
-  top: 1rem;
-  overflow: auto;
-
   @include typography.relative-font-size(16);
   list-style: none;
+
+  &--sticky {
+    max-height: calc(100vh - 2rem);
+
+    position: sticky;
+    top: 1rem;
+    overflow: auto;
+  }
 
   &__item {
     position: relative;
@@ -58,7 +61,7 @@
 
     .tna-ds-sidebar__section {
       display: flex;
-      align-items: flex-start;
+      align-items: baseline;
 
       &::before {
         margin-right: 0.25rem;
