@@ -93,16 +93,6 @@
     }
   }
 
-  @include media.on-medium() {
-    position: relative;
-
-    &__top-navigation-items {
-      position: absolute;
-      top: 0;
-      right: grid.$gutter-width;
-    }
-  }
-
   @include media.on-mobile() {
     &__top-navigation-items {
       display: block;
