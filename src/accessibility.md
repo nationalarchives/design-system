@@ -6,8 +6,8 @@ title: Accessibility
 The Digital Services team at The National Archives (TNA) maintains the following products:
 
 - [National Archives Design System website](https://nationalarchives.github.io/design-system)
-- [National Archives Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
-- [National Archives Frontend codebase](https://github.com/nationalarchives/tna-frontend)
+- [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
+- [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
 
 This page explains how the team works to ensure these products are accessible.
 
@@ -57,8 +57,8 @@ The TNA Frontend codebase at [github.com/nationalarchives/tna-frontend](https://
 In this section, we only list non-accessible content that has been reported, verified and tracked in the following repositories:
 
 - [National Archives Design System website](https://nationalarchives.github.io/design-system)
-- [National Archives Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
-- [National Archives Frontend codebase](https://github.com/nationalarchives/tna-frontend)
+- [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
+- [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
 
 #### Non-compliance with the accessibility regulations
 
@@ -66,7 +66,7 @@ These accessibility concerns have been classified as being non-compliant, due to
 
 From the National Archives Design System website:
 
-1. Some of the code in the HTML and Nunjucks examples doesn't meet the minimum contrast ratio of 4.5:1 for small text. This is a failure of [WCAG success criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum). We plan to fix this within 2023. Track our progress on the [GitHub issue: ‘Colour contrast issue with code examples’](https://github.com/nationalarchives/design-system/issues/2).
+There is currently no known non-compliant content in the National Archives Design System website.
 
 From the TNA Frontend Storybook website:
 
@@ -111,9 +111,9 @@ From the TNA Frontend codebase:
 
 The [National Archives Design System website](https://nationalarchives.github.io/design-system/) was last tested internally for accessibility issues on 9th November 2023.
 
-The [National Archives Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
+The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
 
-The [National Archives Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
+The [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
 
 ### How the GOV.UK Design System team makes their websites accessible
 
