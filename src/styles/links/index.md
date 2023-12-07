@@ -26,9 +26,9 @@ Visited links should be purple. This helps users understand what content they ha
 
 Having styles for visited links can be useful in exploratory services if the user wants to avoid landing on the same page twice.
 
-For links within services such as documentation sites, you may not wish to have the purple visited state. The user may now care if they have already visited a page before and might want to keep visiting the same page multiple times.
+For links within services such as documentation sites, you may not wish to have the purple visited state. The user may not care if they have already visited a page before and might want to keep visiting the same page multiple times.
 
-Disable the visited style be adding a class to your links:
+Disable the visited style be adding a `tna-link--no-visited-state` class to your links:
 
 {{ example({ group: "styles", item: "links", example: "link-no-visited", html: true, nunjucks: false, open: false, size: "xxs" }) }}
 
