@@ -154,8 +154,6 @@ Metalsmith(__dirname)
     sass({
       entries: {
         "lib/index.scss": "css/index.css",
-        "lib/code-dark.scss": "css/code-dark.css",
-        "lib/code-light.scss": "css/code-light.css",
       },
     }),
   )
