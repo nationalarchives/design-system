@@ -3,7 +3,15 @@ title: Button with icon
 layout: layout-example.njk
 ---
 
-<a href="#" class="tna-button" role="button">
-    <i class="fa-solid fa-fw fa-globe"></i>
-    Explore the collection
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+{# tnaButton({
+  text: "Explore the collection",
+  href: "#/explore-the-collection",
+  icon: "globe"
+}) #}
+
+<a href="#/explore-the-collection" class="tna-button">
+  <i class="fa-solid fa-globe" aria-hidden="true"></i>
+  Explore the collection
 </a>

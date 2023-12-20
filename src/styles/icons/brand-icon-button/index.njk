@@ -3,7 +3,15 @@ title: Button with brand icon
 layout: layout-example.njk
 ---
 
-<a href="#" class="tna-button" role="button">
-    <i class="fa-brands fa-fw fa-youtube"></i>
-    Watch on YouTube
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+{# tnaButton({
+  text: "Watch on YouTube",
+  href: "#/youtube",
+  brandIcon: "youtube"
+}) #}
+
+<a href="#/youtube" class="tna-button">
+  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+  Watch on YouTube
 </a>
