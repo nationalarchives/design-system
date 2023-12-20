@@ -42,22 +42,17 @@ All paragraphs within `.tna-template` are styled with the correct font and colou
 
 #### Width
 
-Line lengths should not exceed about 110&ndash;120 characters. Keeping line lengths below this increases the readability of the text.
+Line lengths should not exceed about 110&ndash;120 characters. This increases the readability of the text.
 
 Use the [TNA Frontend grid system](/design-system/styles/layout/#grid) to help limit line lengths. Body copy should be contained in:
 
 - two-thirds width on large devices (`tna-column--width-2-3`)
 - five-sixths width on medium devices (`tna-column--width-5-6-medium`)
-- full width on small and tiny devices (`tna-column--width-5-6-small`, `tna-column--width-5-6-tiny`)
+- full width on small and tiny devices (`tna-column--full-small`, `tna-column--full-tiny`)
 
-Using the standard with that the grid system provides, these classes produce line lengths of no more than about 100&ndash;120 characters across all devices.
+Using the standard widths that the grid system provides, these classes produce line lengths of no more than about 100&ndash;120 characters across all devices.
 
 {{ example({ group: "styles", item: "typography", example: "paragraph-line-lengths", html: true, nunjucks: false, open: false, size: "m" }) }}
-
-
-
-
-
 
 ### Large
 
