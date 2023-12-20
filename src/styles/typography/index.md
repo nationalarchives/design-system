@@ -36,9 +36,28 @@ If the caption should be considered part of the page heading, you can also nest 
 
 The default paragraph font size is 18px on large and medium devices and 17px on small and tiny devices.
 
-All paragraphs within `.tna-template` are styled with the correct font and colour.
+All paragraphs within `.tna-template` are styled with the correct font and colour without the need for additional classes.
 
-{{ example({ group: "styles", item: "typography", example: "paragraphs", html: true, nunjucks: false, open: false, size: "m" }) }}
+<!-- {{ example({ group: "styles", item: "typography", example: "paragraphs", html: true, nunjucks: false, open: false, size: "m" }) }} -->
+
+#### Width
+
+Line lengths should not exceed about 110&ndash;120 characters. Keeping line lengths below this increases the readability of the text.
+
+Use the [TNA Frontend grid system](/design-system/styles/layout/#grid) to help limit line lengths. Body copy should be contained in:
+
+- two-thirds width on large devices (`tna-column--width-2-3`)
+- five-sixths width on medium devices (`tna-column--width-5-6-medium`)
+- full width on small and tiny devices (`tna-column--width-5-6-small`, `tna-column--width-5-6-tiny`)
+
+Using the standard with that the grid system provides, these classes produce line lengths of no more than about 100&ndash;120 characters across all devices.
+
+{{ example({ group: "styles", item: "typography", example: "paragraph-line-lengths", html: true, nunjucks: false, open: false, size: "m" }) }}
+
+
+
+
+
 
 ### Large
 
