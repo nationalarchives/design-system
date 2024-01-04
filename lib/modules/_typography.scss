@@ -6,6 +6,8 @@
   margin-bottom: 0;
   padding: 1rem;
 
+  overflow: auto;
+
   // background-color: #f1ece9;
 
   @include colour.colour-border("keyline", 1px);
