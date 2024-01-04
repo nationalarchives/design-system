@@ -7,14 +7,16 @@ group: styles
 {% from "_example.njk" import example %}
 
 Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
- 
-Icons should appear alongside text at the same font size.
 
 Don't rely on icons alone to convey meaning.
+ 
+Icons should appear alongside text at the same font size. Icons on `tna-button` elements are itentionally slightly smaller.
 
 ## Call to action icons
 
-The main call to action button on a page can use an icon to add visual impact. Avoid using icons in all call to action buttons.
+The main call to action button on a page can use an icon to add visual impact. Place the icon on the left of the button.
+
+Avoid using icons in all call to action buttons.
 
 {{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: false, open: false, size: "xxs" }) }}
 
