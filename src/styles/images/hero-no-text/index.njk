@@ -1,0 +1,23 @@
+---
+title: Hero with no text
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/hero/macro.njk" import tnaHero %}
+
+{{ tnaHero({
+  imageSrc: "https://picsum.photos/id/29/1200/400",
+  imageAlt: "A mountain range",
+  imageWidth: 1200,
+  imageHeight: 400,
+  imageSources: [
+    {
+      src: "https://picsum.photos/id/29/600/400",
+      type: "image/jpeg",
+      imageWidth: 600,
+      imageHeight: 400,
+      media: "(max-width: 48em)"
+    }
+  ],
+  imageCaption: "Wish you were here&hellip;"
+}) }}

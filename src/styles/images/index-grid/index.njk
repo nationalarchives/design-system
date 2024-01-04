@@ -1,0 +1,67 @@
+---
+title: Index grid
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/index-grid/macro.njk" import tnaIndexGrid %}
+
+{{ tnaIndexGrid({
+  heading: {
+    title: "My animals",
+    level: 2
+  },
+  items: [
+    {
+      href: "#/category-1",
+      title: "Category",
+      src: "https://fakeimg.pl/600x400/000/fff?text=3:2&font=bebas",
+      alt: "An example image containing the text '3:2'",
+      width: "600",
+      height: "400"
+    },
+    {
+      href: "#/category-2",
+      title: "Category",
+      src: "https://fakeimg.pl/600x400/000/fff?text=3:2&font=bebas",
+      alt: "An example image containing the text '3:2'",
+      width: "600",
+      height: "400"
+    },
+    {
+      href: "#/category-3",
+      title: "Category",
+      src: "https://fakeimg.pl/600x400/000/fff?text=3:2&font=bebas",
+      alt: "An example image containing the text '3:2'",
+      width: "600",
+      height: "400"
+    },
+    {
+      href: "#/category-4",
+      title: "Category",
+      src: "https://fakeimg.pl/600x400/000/fff?text=3:2&font=bebas",
+      alt: "An example image containing the text '3:2'",
+      width: "600",
+      height: "400"
+    },
+    {
+      href: "#/category-5",
+      title: "Category",
+      src: "https://fakeimg.pl/600x400/000/fff?text=3:2&font=bebas",
+      alt: "An example image containing the text '3:2'",
+      width: "600",
+      height: "400"
+    },
+    {
+      href: "#/category-6",
+      title: "Category",
+      src: "https://fakeimg.pl/600x400/000/fff?text=3:2&font=bebas",
+      alt: "An example image containing the text '3:2'",
+      width: "600",
+      height: "400"
+    }
+  ],
+  columns: 4,
+  columnsMedium: 3,
+  columnsSmall: 2,
+  columnsTiny: 1
+}) }}
