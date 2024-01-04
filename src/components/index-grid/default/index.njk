@@ -6,10 +6,9 @@ layout: layout-example.njk
 {% from "nationalarchives/components/index-grid/macro.njk" import tnaIndexGrid %}
 
 {{ tnaIndexGrid({
-  heading: {
-    title: "My animals",
-    level: 2
-  },
+  title: "My animals",
+  headingLevel: 2,
+  body: "<p>Animals that I like.</p>",
   items: [
     {
       href: "#/category-1",
