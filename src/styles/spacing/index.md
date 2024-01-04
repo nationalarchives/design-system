@@ -56,7 +56,7 @@ The `.tna-aside` class can be used to pad out a block of content that acts as an
 
 It is designed to be used with a background colour.
 
-{{ example({ group: "styles", item: "spacing", example: "aside", html: true, nunjucks: false, open: false, size: "l" }) }}
+{{ example({ group: "styles", item: "spacing", example: "aside", html: true, nunjucks: false, open: false, size: "xl" }) }}
 
 ## Overriding spacing
 
