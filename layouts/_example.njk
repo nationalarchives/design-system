@@ -56,42 +56,44 @@
   {%- if (params.group == 'components') %}
     {% for table in getMacroOptions(params.item) %}
       <div class="tna-ds-component-example__data-table-wrapper">
-        <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-          <caption class="tna-table__caption tna-heading-m {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
-          <thead class="tna-table__head">
-            <tr class="tna-table__row">
-              <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
-              <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
-              <th class="tna-table__header" scope="col">Description</th>
-            </tr>
-          </thead>
-          <tbody class="tna-table__body">
-            {% for option in table.options -%}
+        <div class="tna-table-wrapper">
+          <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
+            <caption class="tna-table__caption tna-heading-m {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
+            <thead class="tna-table__head">
               <tr class="tna-table__row">
-                <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
-                <td class="tna-table__cell" width="25%">{{option.type}}</td>
-                <td class="tna-table__cell" width="50%">
-                  {% if (option.required === true) %}
-                    <p>
-                      <strong>Required.</strong>
-                    </p>
-                  {% endif %}
-                  {{ option.description | safe }}
-                  {% if (option.isComponent) -%}
-                    {% if (option.name === "hint" or option.name === "label") %}
-                      <p>See <a href="#options-{{ exampleId }}--{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
-                    {% else %}
-                      <p>See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
-                    {% endif %}
-                  {% endif %}
-                  {% if (option.params) %}
-                    <p>See <a href="#options-{{ exampleId }}--{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
-                  {% endif -%}
-                </td>
+                <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
+                <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
+                <th class="tna-table__header" scope="col">Description</th>
               </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </thead>
+            <tbody class="tna-table__body">
+              {% for option in table.options -%}
+                <tr class="tna-table__row">
+                  <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
+                  <td class="tna-table__cell" width="25%">{{option.type}}</td>
+                  <td class="tna-table__cell" width="50%">
+                    {% if (option.required === true) %}
+                      <p>
+                        <strong>Required.</strong>
+                      </p>
+                    {% endif %}
+                    {{ option.description | safe }}
+                    {% if (option.isComponent) -%}
+                      {% if (option.name === "hint" or option.name === "label") %}
+                        <p>See <a href="#options-{{ exampleId }}--{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
+                      {% else %}
+                        <p>See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
+                      {% endif %}
+                    {% endif %}
+                    {% if (option.params) %}
+                      <p>See <a href="#options-{{ exampleId }}--{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
+                    {% endif -%}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
     {% endfor %}
   {% endif -%}
