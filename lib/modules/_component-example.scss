@@ -77,6 +77,20 @@
     &--xxl {
       height: 36rem;
     }
+
+    // @for $height from 5 through 25 {
+    //   &--#{$height}rem {
+    //     height: #{$height}rem;
+    //   }
+    // }
+
+    &--18_75rem {
+      height: 18.75rem;
+    }
+
+    &--29_75rem {
+      height: 29.75rem;
+    }
   }
 
   &__data {
