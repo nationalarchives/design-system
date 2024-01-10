@@ -209,4 +209,4 @@ The appropriate colours for all child elements such as text and links will also 
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
-All [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colour-schemes--combinations&viewMode=story) been tested for contrast.
+All [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--combinations&viewMode=story) been tested for contrast.
