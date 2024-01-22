@@ -5,8 +5,10 @@ description: Also known as navigation path or cookie crumb
 group: components
 ---
 
-The breadcrumbs component is for...
-
 {% from "_example.njk" import example %}
 
-{{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false }) }}
+The breadcrumbs component can show the user where the current page sits within the service.
+
+Show all the pages that are ancestors to the current page but don't include the current page.
+
+{{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, size: "xxs" }) }}

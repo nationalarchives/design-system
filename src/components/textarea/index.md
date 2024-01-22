@@ -4,9 +4,9 @@ title: Textarea
 group: components
 ---
 
-Use the select component to...
-
 {% from "_example.njk" import example %}
+
+Use the textarea component to allow the users to enter a longer string of text information such as feedback.
 
 {{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m" }) }}
 

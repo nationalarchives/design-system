@@ -4,9 +4,9 @@ title: Search field
 group: components
 ---
 
-Use the search field component as an entry point into searches.
-
 {% from "_example.njk" import example %}
+
+Use the search field component as an entry point into searches.
 
 {{ example({ group: "components", item: "search-field", example: "default", html: true, nunjucks: true, open: false, size: "xs" }) }}
 

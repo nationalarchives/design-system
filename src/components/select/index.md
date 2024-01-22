@@ -4,9 +4,11 @@ title: Select
 group: components
 ---
 
-Use the select component to...
-
 {% from "_example.njk" import example %}
+
+The select component allows users to select a single value from a list of options.
+
+Where possible, avoid overusing the select component. Alice Bartlett gave a talk at EpicFEL called ["Burn your select tags"](https://www.youtube.com/watch?v=CUkMCQR4TpY) which explains when the `<select>` tag is not the most appropriate tag to use.
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, size: "xs" }) }}
 

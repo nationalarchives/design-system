@@ -1,0 +1,26 @@
+---
+title: Button group
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+<h1 class="tna-heading-xl">Item 42</h1>
+<div class="tna-button-group">
+  {{ tnaButton({
+    text: "Edit",
+    title: "Edit item 42",
+    href: "#/edit"
+  }) }}
+  {{ tnaButton({
+    text: "Share",
+    title: "Share a link to item 42",
+    href: "#/share"
+  }) }}
+  {{ tnaButton({
+    text: "Delete",
+    title: "Delete item 42",
+    accent: true,
+    href: "#/delete"
+  }) }}
+</div>

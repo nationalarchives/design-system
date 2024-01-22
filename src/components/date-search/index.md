@@ -4,11 +4,11 @@ title: Date search
 group: components
 ---
 
+{% from "_example.njk" import example %}
+
 Use the date search component to allow the user to enter a date to search with.
 
 When you need the user to enter a date for data purposes, use the [date input](/design-system/components/date-input/) component.
-
-{% from "_example.njk" import example %}
 
 {{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, open: false, size: "xs" }) }}
 

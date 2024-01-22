@@ -4,9 +4,9 @@ title: Radios
 group: components
 ---
 
-The radios component is for...
-
 {% from "_example.njk" import example %}
+
+Radios allow users to select a single options for a form field.
 
 {{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s" }) }}
 

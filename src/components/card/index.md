@@ -4,9 +4,9 @@ title: Card
 group: components
 ---
 
-The card component is for...
-
 {% from "_example.njk" import example %}
+
+Use the card component for providing previews to articles and pages.
 
 {{ example({ group: "components", item: "card", example: "default", html: true, nunjucks: true, open: false, size: "xl" }) }}
 

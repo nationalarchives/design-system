@@ -18,17 +18,17 @@ The main call to action button on a page can use an icon to add visual impact. P
 
 Avoid using icons in all call to action buttons.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, open: false, size: "xxs" }) }}
 
 With call to actions that benefit from an arrow or chevron icon that points to the right, align the icon to the right of the button text.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, open: false, size: "xxs" }) }}
 
 ## Brand icons
 
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 
-{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, open: false, size: "xxs" }) }}
 
 ## Displaying information with icons
 

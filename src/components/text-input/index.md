@@ -4,9 +4,9 @@ title: Text input
 group: components
 ---
 
-Use the text input component to...
-
 {% from "_example.njk" import example %}
+
+Use the text input component to allow the users to enter a short string text information such as their email address, a record title or a postcode.
 
 {{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "xs" }) }}
 
