@@ -39,7 +39,7 @@
 {% endblock %}
 
 {% block head %}
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net 'unsafe-hashes' 'sha256-kymksloj/dRR0UjdHrpctdt16JOI62lOd+wiBC7bFNU=' 'sha256-CftlnLPr3hWcN2RQGXASMz3zkOM1l+W/xWNFs3S7VcA='; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://asciinema.org data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://asciinema.org data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
   {% if description %}
   <meta name="description" content="{{ description }}">
   {% endif %}
