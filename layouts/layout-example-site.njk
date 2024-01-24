@@ -1,5 +1,9 @@
 {% extends "nationalarchives/templates/layouts/_generic.njk" %}
 
+{% block head %}
+  {# <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net; img-src 'self' https://www.nationalarchives.gov.uk https://picsum.photos; font-src 'self' https://use.typekit.net https://fonts.gstatic.com"> #}
+{% endblock %}
+
 {% block stylesheets %}
   <link rel="stylesheet" href="/design-system/css/index.css">
   <link rel="stylesheet" href="https://use.typekit.net/hkj3kuz.css">
