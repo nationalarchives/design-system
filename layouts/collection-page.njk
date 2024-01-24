@@ -17,7 +17,7 @@
   {% set headings = contents | headingsList %}
   {% set groupTitle = group|kebabToSpace|capitalize %}
   {% set topLevel = groupTitle == title|capitalize %}
-
+  {% include "partials/breadcrumbs.njk" %}
   <div class="tna-container">
     <main class="tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content" role="main">
       {% if topLevel %}
