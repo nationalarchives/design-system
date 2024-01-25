@@ -1,6 +1,6 @@
 ---
 layout: homepage.njk
-title: Welcome
+title: Home
 description: Designing services for The National Archives
 ---
 
