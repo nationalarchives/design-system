@@ -6,9 +6,19 @@ layout: layout-example.njk
 {% from "nationalarchives/components/hero/macro.njk" import tnaHero %}
 
 {{ tnaHero({
-  heading: "The mountains",
-  imageSrc: "https://picsum.photos/id/29/1200/800",
-  imageAlt: "A mountain range",
+  heading: "Welcome",
+  imageSrc: "https://fakeimg.pl/1200x400/9c193a/fff?text=3:1%20%281200x400%29&font=museo&font_size=64",
+  imageAlt: "An example image containing the text '3:1 (1200x400)'",
   imageWidth: 1200,
-  imageHeight: 800
+  imageHeight: 800,
+  imageSources: [
+    {
+      src: "https://fakeimg.pl/600x400/9c193a/fff?text=3:2%20%28600x400%29&font=museo&font_size=48",
+      type: "image/jpeg",
+      imageWidth: 600,
+      imageHeight: 400,
+      media: "(max-width: 48em)"
+    }
+  ],
+  imageCaption: "Resize the window to see the different image sizes for a hero component"
 }) }}
