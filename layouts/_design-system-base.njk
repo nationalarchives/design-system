@@ -29,15 +29,6 @@
   {{ title }} - Design System - The National Archives
 {% endblock %}
 
-{% block headIcons %}
-  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="{{ assetPath | default('/assets') }}/images/favicon.ico" type="image/x-icon">
-  <link rel="mask-icon" href="{{ assetPath | default('/assets') }}/images/mask-icon.svg" color="{{ themeColor | default('#000') }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon.png">
-{% endblock %}
-
 {% block head %}
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://asciinema.org data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
   {% if description %}
