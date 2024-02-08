@@ -8,7 +8,7 @@ group: styles
 {% from "nationalarchives/components/picture/macro.njk" import tnaPicture %}
 {% from "nationalarchives/components/card/macro.njk" import tnaCard %}
 
-Use images to provide useful visual context.
+Use images to provide additional visual context.
 
 ## Thumbnails
 
@@ -34,6 +34,20 @@ The hero element can also accept images for other screen sizes so use a 3:2 aspe
 
 [Picture elements](/design-system/components/picture/) need to show the entire image so they are free from aspect ratio restrictions.
 
-Ensure the longest side of the image is no more than 1200px.
+Ensure the longest side of the image is no more than 900px.
 
 {{ example({ group: "styles", item: "images", example: "picture", html: false, nunjucks: false, open: false, size: "xl" }) }}
+
+## Formats
+
+Use JPEG as the default format for images. All WebP images must have a JPEG fallback.
+
+For line art and vector images, use SVG.
+
+Use PNGs when transparency is required but avoid overusing due to the larger file size.
+
+### File sizes
+
+Try to keep every image on the page under 100kB. This will help the page to load quickly.
+
+The exception to this would be where you have to show an image in great detail, such as showing a large map or displaying an image in an image viewer with the ability to zoom.
