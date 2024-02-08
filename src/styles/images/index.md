@@ -24,7 +24,7 @@ Thumbnails should be around 600px wide and 400px tall to ensure they display wel
 
 As the height of [hero elements](/design-system/components/hero/) is defined by their content, the background image will sometimes be clipped.
 
-For hero elements, try to use an image with a 3:1 aspect ratio with a suggested resolution of 1200px wide and 400px tall.
+For hero elements, try to use an image with a 5:2 aspect ratio with a suggested resolution of 1200px wide and 480px tall.
 
 The hero element can also accept images for other screen sizes so use a 3:2 aspect ratio with a suggested resolution of 600px wide and 400px tall for smaller screens.
 
