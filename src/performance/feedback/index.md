@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Asking for feedback
-group: patterns
+group: performance
 ---
 
 [TODO]

@@ -1,14 +1,14 @@
 ---
 layout: collection-page.njk
 title: Error pages
-group: patterns
+group: content
 ---
 
 {% from "_example.njk" import example %}
 
 ## Page not found pages
 
-{{ example({ group: "patterns", item: "error-pages", example: "404", html: false, nunjucks: false, open: false, size: "xxl", noPadding: true }) }}
+{{ example({ group: "content", item: "error-pages", example: "404", html: false, nunjucks: false, open: false, size: "xxl", noPadding: true }) }}
 
 ### When to use this pattern
 
