@@ -1,0 +1,55 @@
+---
+title: Header
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/global-header/macro.njk" import tnaGlobalHeader %}
+
+{{ tnaGlobalHeader({
+  logo: {
+    href: "#/"
+  },
+  topNavigation: [
+    {
+      text: "Search",
+      href: "#/search",
+      icon: "search"
+    },
+    {
+      text: "Shop",
+      href: "https://shop.nationalarchives.gov.uk/",
+      icon: "bag-shopping"
+    },
+    {
+      text: "Sign in",
+      href: "#/sign-in",
+      icon: "user"
+    }
+  ],
+  navigation: [
+    {
+      text: "Visit",
+      href: "https://www.nationalarchives.gov.uk/about/visit-us/"
+    },
+    {
+      text: "What's on",
+      href: "https://www.nationalarchives.gov.uk/about/visit-us/whats-on/"
+    },
+    {
+      text: "Explore the collection",
+      href: "https://beta.nationalarchives.gov.uk/explore-the-collection/"
+    },
+    {
+      text: "Using the archives",
+      href: "#/using-the-archives"
+    },
+    {
+      text: "Learn",
+      href: "#/learn"
+    },
+    {
+      text: "Professional guidance & services",
+      href: "#/professional-guidance-and-services"
+    }
+  ]
+}) }}
