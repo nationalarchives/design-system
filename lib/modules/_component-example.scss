@@ -94,13 +94,21 @@
   }
 
   &__data {
-    padding: 1rem 0 0;
-
     @include colour.colour-border("keyline", 1px, solid, top);
 
-    .tna-tabs__list {
-      padding-right: 1rem;
-      padding-left: 1rem;
+    .tna-tabs {
+      &__list {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-bottom: 0;
+
+        gap: 1.5rem;
+      }
+
+      &__list-item-link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
     }
 
     &-table-wrapper {
