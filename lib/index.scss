@@ -19,6 +19,9 @@
 @use "modules/sidebar";
 @use "modules/typography" as DSTypography;
 
+$fa-font-path: assets.$fa-font-path;
+@import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";
+
 .tna-template--yellow-accent {
   .tna-hero--tint .tna-hero__figure::before {
     background-color: rgb(0, 76, 126) !important;
