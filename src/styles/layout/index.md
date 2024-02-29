@@ -27,12 +27,12 @@ See the [generic page template](https://github.com/nationalarchives/tna-frontend
 | `bodyStart`     | Contains the top-of-page elements `cookies` and `skipLink`                       |
 | `cookies`       | Contains the `tnaCookieBanner` component                                         |
 | `skipLink`      | Contains the `tnaSkipLink` element                                               |
-| `header`        | Block for the site's header component (e.g. `tnaHeader`)                         |
+| `header`        | Block for the site’s header component (e.g. `tnaHeader`)                         |
 | `main`          | Contains the main body of content along with the `<main>` element                |
 | `beforeContent` | Can be used for pre-main elements such as breadcrumbs                            |
 | `content`       | The main body of content                                                         |
 | `afterContent`  | Can be used for post-main elements such as page feedback                         |
-| `footer`        | Block for the site's footer component (e.g. `tnaFooter`)                         |
+| `footer`        | Block for the site’s footer component (e.g. `tnaFooter`)                         |
 | `bodyEnd`       | Contains code that needs to be included at the end of the page (e.g. JavaScript) |
 
 ### Block nesting

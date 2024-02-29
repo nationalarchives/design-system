@@ -81,7 +81,7 @@ Ou full list of web colours can be found in the [colour variables for TNA Fronte
 
 The system theme follows the operating system preference for `prefers-color-scheme` ([MDN Web Docs - prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)) which can either be `light` or `dark`.
 
-Using the system theme will either display the [light theme](#light-theme) or [dark theme](#dark-theme), depending on the preference set in the user's operating system.
+Using the system theme will either display the [light theme](#light-theme) or [dark theme](#dark-theme), depending on the preference set in the user’s operating system.
 
 ```html
 <html class="tna-template tna-template--system-theme">

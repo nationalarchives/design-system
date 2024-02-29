@@ -115,9 +115,9 @@ The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-fron
 
 The [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
 
-### How the GOV.UK Design System team makes their websites accessible
+### How the National Archives Design System team makes their websites accessible
 
-The GOV.UK Design System team works to make sure the Design System and Frontend websites, and the codebase they use, are accessible.
+The National Archives Design System team works to make sure the Design System and Frontend websites, and the codebase they use, are accessible.
 
 Where possible, the team aims to research components and patterns with a representative range of users, including those with disabilities.
 
