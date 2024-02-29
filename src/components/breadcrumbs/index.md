@@ -6,6 +6,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(true, 1, 1, 1, false) }}
 
 The breadcrumbs component can show the user where the current page sits within the service.
 

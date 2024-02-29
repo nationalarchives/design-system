@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 2, 2, false) }}
 
 Use the card component for providing previews to articles and pages.
 

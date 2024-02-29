@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 1, 2, false) }}
 
 Use the text input component to allow the users to enter a short string text information such as their email address, a record title or a postcode.
 

@@ -20,6 +20,7 @@ code {
 
 p,
 li,
+dd,
 table {
   code {
     color: #905;
@@ -33,12 +34,28 @@ table {
     }
   }
 
+  .fa-solid {
+    margin-right: 0.25rem;
+  }
+
   .fa-check {
     color: colour.brand-colour("green");
   }
 
+  .fa-triangle-exclamation {
+    color: colour.brand-colour("yellow");
+  }
+
+  .fa-screwdriver-wrench {
+    color: colour.brand-colour("blue");
+  }
+
   .fa-xmark {
     color: colour.brand-colour("pink");
+  }
+
+  .fa-question {
+    color: colour.brand-colour("orange");
   }
 }
 

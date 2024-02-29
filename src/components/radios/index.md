@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 1, 2, false) }}
 
 Radios allow users to select a single options for a form field.
 

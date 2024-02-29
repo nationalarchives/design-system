@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 2, 2, 3, false) }}
 
 The tabs component can contain multiple tabs of information.
 

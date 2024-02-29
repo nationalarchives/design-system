@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 1, 2, false) }}
 
 Checkboxes allow users to post multiple options for the same field.
 

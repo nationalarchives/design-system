@@ -1,0 +1,60 @@
+{% macro status(productionReady, progressiveEnhancementJS, progressiveEnhancementCSS, accessibile, documented) %}
+<div class="tna-border-keyline tna-!--margin-top-m">
+  <dl class="tna-dl">
+    <dt>Status</dt>
+    <dd>
+      <strong>
+        {%- if productionReady -%}
+        <i class="fa-solid fa-fw fa-check"></i> Ready for production
+        {%- else -%}
+        <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In development
+        {%- endif -%}
+      </strong>
+    </dd>
+    {%- if progressiveEnhancementJS !== 0 -%}
+    <dt>Tested without JavaScript</dt>
+    <dd>
+      {%- if progressiveEnhancementJS == 1 -%}
+      <i class="fa-solid fa-fw fa-check"></i> Yes
+      {%- elseif progressiveEnhancementJS == 2 -%}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      {%- elseif progressiveEnhancementJS == 3 -%}
+      <i class="fa-solid fa-fw fa-xmark"></i> No
+      {%- else -%}
+      <i class="fa-solid fa-fw fa-question"></i> Unknown
+      {%- endif -%}
+    </dd>
+    {%- endif -%}
+    <dt>Tested without CSS</dt>
+    <dd>
+      {%- if progressiveEnhancementCSS == 1 -%}
+      <i class="fa-solid fa-fw fa-check"></i> Yes
+      {%- elseif progressiveEnhancementCSS == 2 -%}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      {%- elseif progressiveEnhancementCSS == 3 -%}
+      <i class="fa-solid fa-fw fa-xmark"></i> No
+      {%- else -%}
+      <i class="fa-solid fa-fw fa-question"></i> Unknown
+      {%- endif -%}
+    </dd>
+    <dt>WCAG 2.2 AA compliant</dt>
+    <dd>
+      {%- if accessibile == 1 -%}
+      <i class="fa-solid fa-fw fa-check"></i> Yes
+      {%- elseif accessibile == 2 -%}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      {%- else -%}
+      <i class="fa-solid fa-fw fa-question"></i> Unknown
+      {%- endif -%}
+    </dd>
+    <dt>Documentataion complete</dt>
+    <dd>
+      {%- if documented -%}
+      <i class="fa-solid fa-fw fa-check"></i> Yes
+      {%- else -%}
+      <i class="fa-solid fa-fw fa-xmark"></i> No
+      {%- endif -%}
+    </dd>
+  </dl>
+</div>
+{% endmacro %}

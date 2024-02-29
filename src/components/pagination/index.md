@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 1, 2, false) }}
 
 Use a list-type layout if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.
 

@@ -6,6 +6,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 2, 2, 2, false) }}
 
 The cookie banner component allows a user to either accept or decline the use of cookies within a service.
 

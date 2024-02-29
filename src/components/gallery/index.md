@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 3, 3, 3, false) }}
 
 Use the gallery component to show a list of images.
 

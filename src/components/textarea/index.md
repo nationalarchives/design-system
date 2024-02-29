@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 1, 2, false) }}
 
 Use the textarea component to allow the users to enter a longer string of text information such as feedback.
 

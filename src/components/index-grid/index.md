@@ -5,6 +5,9 @@ group: components
 ---
 
 {% from "_example.njk" import example %}
+{% from "partials/component-status.njk" import status %}
+
+{{ status(false, 0, 2, 2, false) }}
 
 Use the index grid component to display a grid of links such as displaying a list of all child pages in a hierarchy.
 
