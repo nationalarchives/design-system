@@ -66,7 +66,8 @@ table {
   a[href^="#"]:not([href="#"]) {
     width: 1.5rem;
 
-    display: none;
+    display: inline-block;
+    visibility: hidden;
 
     @include typography.relative-font-size(16);
     vertical-align: middle;
@@ -79,18 +80,14 @@ table {
     &:active {
       @include colour.colour-font("link");
     }
-
-    &::after {
-      display: none;
-    }
   }
 
   &:hover {
     a[href^="#"]:not([href="#"]) {
-      display: inline-block;
+      visibility: visible;
 
       .tna-template--touched & {
-        display: none;
+        visibility: hidden;
       }
     }
   }
