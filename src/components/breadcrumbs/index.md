@@ -38,4 +38,4 @@ By default, the breadcrumbs will collapse on smaller devices to only show the fi
 
 You can configure the breadcrumbs to never collapse by setting the `noCollapse` option to `true` or by adding the class `tna-breadcrumbs--no-collapse` to the main breadcrumbs element.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "no-collapse", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "breadcrumbs", example: "no-collapse", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
