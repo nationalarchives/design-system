@@ -12,8 +12,6 @@ The breadcrumbs component helps users to understand where they are within a webs
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxs" }) }}
 
-## Status
-
 {{ status(true, 1, 1, 1, true) }}
 
 ## When to use this component

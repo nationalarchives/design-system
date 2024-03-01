@@ -7,11 +7,11 @@ group: components
 {% from "_example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-{{ status(true, 0, 1, 1, true) }}
-
 The button component can be used as a call to action link or as a `<button>` element for use within forms.
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, size: "xxs" }) }}
+
+{{ status(true, 0, 1, 1, true) }}
 
 ## Icons
 

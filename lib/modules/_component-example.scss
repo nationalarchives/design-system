@@ -81,6 +81,14 @@
       height: 36rem;
     }
 
+    &--xxxl {
+      height: 42rem;
+    }
+
+    &--xxxxl {
+      height: 48rem;
+    }
+
     // @for $height from 5 through 25 {
     //   &--#{$height}rem {
     //     height: #{$height}rem;
@@ -110,6 +118,10 @@
       list-style: none;
 
       cursor: pointer;
+
+      &:hover {
+        @include typography.interacted-text-decoration;
+      }
 
       &::before {
         width: 0;

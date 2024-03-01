@@ -36,7 +36,7 @@ The hero element can also accept images for other screen sizes so use a 3:2 aspe
 
 Ensure the longest side of the image is no more than 900px.
 
-{{ example({ group: "styles", item: "images", example: "picture", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "images", example: "picture", html: false, nunjucks: false, size: "xxxxl" }) }}
 
 ## Formats
 
