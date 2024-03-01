@@ -18,23 +18,25 @@ The main call to action button on a page can use an icon to add visual impact. P
 
 Avoid using icons in all call to action buttons.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, size: "xxs", openHTML: true, nunjucksOptions: false }) }}
 
 With call to actions that benefit from an arrow or chevron icon that points to the right, align the icon to the right of the button text.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, size: "xxs", openHTML: true, nunjucksOptions: false }) }}
 
 ## Brand icons
 
+TNA Frontend doesn't include [Font Awesome brand icons](https://fontawesome.com/search?o=r&m=free&f=brands) by default. If you include them in you application then you can use the `brandIcon` property of buttons to add a brand icon.
+
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 
-{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", openHTML: true, nunjucksOptions: false }) }}
 
 ## Displaying information with icons
 
 Use a [description list](/design-system/styles/lists/#description-lists) to show a list of fields and values. If space allows, the titles can be enhanced with icons.
 
-{{ example({ group: "styles", item: "lists", example: "description-list-icons-plain", html: true, nunjucks: false, open: false, size: "s" }) }}
+{{ example({ group: "styles", item: "lists", example: "description-list-icons-plain", html: true, nunjucks: false, size: "s", openHTML: true }) }}
 
 ### Chip lists with icons
 
@@ -42,4 +44,4 @@ For smaller lists of metadata, icons can be used inside a [chip list](/design-sy
 
 Ensure the text in the chips would still make sense even if the icons were removed.
 
-{{ example({ group: "styles", item: "icons", example: "chip-list-icons", html: true, nunjucks: false, open: false, size: "xs" }) }}
+{{ example({ group: "styles", item: "icons", example: "chip-list-icons", html: true, nunjucks: false, size: "xs", openHTML: true }) }}

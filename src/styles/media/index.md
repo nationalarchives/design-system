@@ -24,7 +24,7 @@ Device sizes can vary but the [default breakpoints](https://github.com/nationala
 
 Use the provided media tools from TNA Frontend to help you with media queries.
 
-```scss
+```css
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 
 .my-div {
@@ -55,7 +55,7 @@ The media tools from TNA Frontend also come with a print styles mixin.
 
 Use the mixin to change the layout of the page or remove unnecessary elements when printing.
 
-```scss
+```css
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 
 .my-breadcrumbs {

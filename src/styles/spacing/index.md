@@ -48,7 +48,7 @@ On top of the [global spacing](#global-spacing), headings have an additional top
 
 The `.tna-section` class applies padding to the top and bottom of an element to space it out enough from surrounding content.
 
-{{ example({ group: "styles", item: "spacing", example: "sections", html: true, nunjucks: false, open: false, size: "xxl" }) }}
+{{ example({ group: "styles", item: "spacing", example: "sections", html: true, nunjucks: false, size: "xxl", openHTML: true }) }}
 
 ## Asides
 
@@ -56,7 +56,7 @@ The `.tna-aside` class can be used to pad out a block of content that acts as an
 
 It is designed to be used with a background colour.
 
-{{ example({ group: "styles", item: "spacing", example: "aside", html: true, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "spacing", example: "aside", html: true, nunjucks: false, size: "xl", openHTML: true }) }}
 
 ## Overriding spacing
 
@@ -109,4 +109,4 @@ The format for the extra spacing override classes is:
 tna-!--[property]-[direction]-[size]
 ```
 
-{{ example({ group: "styles", item: "spacing", example: "margin-top", html: true, nunjucks: false, open: false, size: "xxl" }) }}
+{{ example({ group: "styles", item: "spacing", example: "margin-top", html: true, nunjucks: false, size: "xxl", openHTML: true }) }}

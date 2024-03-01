@@ -98,13 +98,13 @@ Using the system theme will either display the [light theme](#light-theme) or [d
 
 A light theme can be used with `tna-template--light-theme`.
 
-{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, open: false, size: "29_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ### Dark theme
 
 A dark theme can be used with `tna-template--dark-theme`.
 
-{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, open: false, size: "29_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ## High contrast themes
 
@@ -116,7 +116,7 @@ TNA Frontend currently only supports the `prefers-contrast` values of `no-prefer
 
 The colour tools from TNA Frontend come with a mixin for high-contrast which enables you to add styles when high contrast mode is enabled:
 
-```scss
+```css
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 
 .my-component {
@@ -128,11 +128,11 @@ The colour tools from TNA Frontend come with a mixin for high-contrast which ena
 
 ### Light high contrast theme
 
-{{ example({ group: "styles", item: "colours", example: "theme-light-high-contrast", html: false, nunjucks: false, open: false, size: "29_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "theme-light-high-contrast", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ### Dark high contrast theme
 
-{{ example({ group: "styles", item: "colours", example: "theme-dark-high-contrast", html: false, nunjucks: false, open: false, size: "29_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "theme-dark-high-contrast", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ## Accent colours
 
@@ -149,27 +149,27 @@ Elements that can follow the accent colour such as `tna-phase-banner--accent`, `
 
 ### Black
 
-{{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Pink
 
-{{ example({ group: "styles", item: "colours", example: "accent-pink", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-pink", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Orange
 
-{{ example({ group: "styles", item: "colours", example: "accent-orange", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-orange", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Yellow
 
-{{ example({ group: "styles", item: "colours", example: "accent-yellow", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-yellow", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Green
 
-{{ example({ group: "styles", item: "colours", example: "accent-green", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-green", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Blue
 
-{{ example({ group: "styles", item: "colours", example: "accent-blue", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-blue", html: false, nunjucks: false, size: "xl" }) }}
 
 ## Block colours
 
@@ -191,19 +191,19 @@ The appropriate colours for all child elements such as text and links will also 
 
 ### Tint
 
-{{ example({ group: "styles", item: "colours", example: "block-tint", html: false, nunjucks: false, open: false, size: "18_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "block-tint", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
 ### Contrast
 
-{{ example({ group: "styles", item: "colours", example: "block-contrast", html: false, nunjucks: false, open: false, size: "18_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "block-contrast", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
 ### Accent
 
-{{ example({ group: "styles", item: "colours", example: "block-accent", html: false, nunjucks: false, open: false, size: "18_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "block-accent", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
 ### Light accent
 
-{{ example({ group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, open: false, size: "18_75rem", noPadding: true }) }}
+{{ example({ group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
 ## Colour contrast
 

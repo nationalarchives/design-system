@@ -8,7 +8,7 @@ group: content
 
 ## Page not found pages
 
-{{ example({ group: "content", item: "error-pages", example: "404", html: false, nunjucks: false, open: false, size: "xxl", noPadding: true }) }}
+{{ example({ group: "content", item: "error-pages", example: "404", html: false, nunjucks: false, size: "xxl", noPadding: true }) }}
 
 ### When to use this pattern
 

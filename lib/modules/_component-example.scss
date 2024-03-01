@@ -1,6 +1,9 @@
+@use "sass:math";
+
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
+@use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
 .tna-ds-component-example {
   @include spacing.space-above;
@@ -91,6 +94,55 @@
     &--29_75rem {
       height: 29.75rem;
     }
+  }
+
+  &__details {
+    @include colour.colour-border("keyline", 1px, solid, top);
+
+    summary {
+      padding: 0.25rem 2.5rem 0.25rem 0.75rem;
+
+      position: relative;
+      z-index: 1;
+
+      @include typography.relative-font-size(16);
+      @include typography.main-font-weight-bold;
+      list-style: none;
+
+      cursor: pointer;
+
+      &::before {
+        width: 0;
+        height: 0;
+
+        position: absolute;
+        right: 0.5rem;
+        top: calc(50% - #{math.div(math.sqrt(3), 4)}rem);
+
+        @include colour.colour-border(
+          "font-base",
+          #{math.div(math.sqrt(3), 2)}rem
+        );
+        border-right: 0.5rem transparent solid;
+        border-bottom-width: 0;
+        border-left: 0.5rem transparent solid;
+
+        content: "";
+      }
+    }
+
+    &[open] {
+      summary {
+        &::before {
+          border-top-width: 0;
+          border-bottom-width: #{math.div(math.sqrt(3), 2)}rem;
+        }
+      }
+    }
+  }
+
+  &__details-content {
+    @include colour.colour-background("background-tint");
   }
 
   &__data {

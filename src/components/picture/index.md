@@ -11,4 +11,4 @@ group: components
 
 The picture component can display an image with additional information.
 
-{{ example({ group: "components", item: "picture", example: "default", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "picture", example: "default", html: true, nunjucks: true }) }}

@@ -11,4 +11,4 @@ group: components
 
 The global header component shows users they are on a main National Archives service and provides navigation links.
 
-{{ example({ group: "components", item: "global-header", example: "default", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: "global-header", example: "default", html: true, nunjucks: true, size: "m" }) }}

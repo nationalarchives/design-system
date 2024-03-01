@@ -11,19 +11,19 @@ group: components
 
 The tabs component can contain multiple tabs of information.
 
-{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}) }}
 
 ## Without JavaScript
 
-{{ example({ group: "components", item: "tabs", example: "default-no-js", html: false, nunjucks: false, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "tabs", example: "default-no-js", html: false, nunjucks: false, size: "s"}) }}
 
 ## Without CSS
 
-{{ example({ group: "components", item: "tabs", example: "default-no-css", html: false, nunjucks: false, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "tabs", example: "default-no-css", html: false, nunjucks: false, size: "s"}) }}
 
 ## Without CSS or JavaScript
 
-{{ example({ group: "components", item: "tabs", example: "default-no-css-no-js", html: false, nunjucks: false, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "tabs", example: "default-no-css-no-js", html: false, nunjucks: false, size: "s"}) }}
 
 ## Known issues and gaps
 

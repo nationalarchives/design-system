@@ -11,5 +11,5 @@ group: components
 
 The footer component provides an area to use for copyright information and additional links to things like social media.
 
-{{ example({ group: "components", item: "footer", example: "default", html: true, nunjucks: true, open: false, size: "xl" }) }}
+{{ example({ group: "components", item: "footer", example: "default", html: true, nunjucks: true, size: "xl" }) }}
 

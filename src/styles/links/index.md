@@ -10,7 +10,7 @@ Links are blue and underlined by default.
 
 If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.
 
-{{ example({ group: "styles", item: "links", example: "plain-link", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "links", example: "plain-link", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 
 ## Colours
 
@@ -30,13 +30,13 @@ For links within services such as documentation sites, you may not wish to have 
 
 Disable the visited style be adding a `tna-link--no-visited-state` class to your links:
 
-{{ example({ group: "styles", item: "links", example: "link-no-visited", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "links", example: "link-no-visited", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 
 ## Links in headings
 
 Links within [heading elements](/design-system/styles/typography/#headings) have an `&rsaquo;` pseudo element added after them. The exception for this is headings within cards.
 
-{{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, open: false, size: "xxs" }) }}
+{{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 
 ## Opening links in new tabs
 

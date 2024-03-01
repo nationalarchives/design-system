@@ -11,4 +11,4 @@ group: components
 
 Use the gallery component to show a list of images.
 
-{{ example({ group: "components", item: "gallery", example: "default", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "gallery", example: "default", html: true, nunjucks: true }) }}

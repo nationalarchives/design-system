@@ -19,7 +19,7 @@
     {% set html = getHTMLCode(examplePath) | forceescape %}
     {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
 
-    {% set tabItems = [] %}
+    {# {% set tabItems = [] %}
     {% if params.html %}
       {% set tabItems = tabItems.concat({
         id: "example-" + params.example + "-html",
@@ -48,6 +48,35 @@
       </div>
     {% elseif tabItems|length > 0 %}
       {{ tabItems[0].body | safe  }}
+    {% endif %} #}
+
+    {% if params.html %}
+    <details class="tna-ds-component-example__details" name="{{ exampleRoot }}"{% if params.openHTML %} open{% endif %}>
+      <summary>HTML</summary>
+      <div class="tna-ds-component-example__details-content">
+        <div class="tna-ds-component-example__code">
+          <pre class="language-html"><code class="language-html">{{ html }}</code></pre>
+        <div>
+      <div>
+    </details>
+    {% endif %}
+    {% if params.nunjucks %}
+    <details class="tna-ds-component-example__details" name="{{ exampleRoot }}">
+      <summary>Nunjucks</summary>
+      <div class="tna-ds-component-example__details-content">
+        <div class="tna-ds-component-example__code">
+          <pre class="language-javascript"><code class="language-javascript">{{ nunjucks }}</code></pre>
+        <div>
+      <div>
+    </details>
+    {% if params.nunjucksOptions !== false %}
+    <details class="tna-ds-component-example__details" name="{{ exampleRoot }}">
+      <summary>Nunjucks options</summary>
+      <div class="tna-ds-component-example__details-content">
+        {{ exampleOptions(params) }}
+      </div>
+    </details>
+    {% endif %}
     {% endif %}
   </section>
 {% endmacro %}

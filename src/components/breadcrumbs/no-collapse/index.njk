@@ -1,0 +1,32 @@
+---
+title: Non-collapsing breadcrumbs
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/breadcrumbs/macro.njk" import tnaBreadcrumbs %}
+
+{{ tnaBreadcrumbs({
+  items: [
+    {
+      text: "Alpha",
+      href: "#/alpha"
+    },
+    {
+      text: "Beta",
+      href: "#/beta"
+    },
+    {
+      text: "Gamma",
+      href: "#/gamma"
+    },
+    {
+      text: "Delta",
+      href: "#/delta"
+    },
+    {
+      text: "Epsilon",
+      href: "#/epsilon"
+    }
+  ],
+  noCollapse: true
+}) }}

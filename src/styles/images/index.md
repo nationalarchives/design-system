@@ -16,9 +16,9 @@ Use 3:2 aspect ratio images as the default for thumbnails on [card elements](/de
 
 Thumbnails should be around 600px wide and 400px tall to ensure they display well across all screen sizes.
 
-{{ example({ group: "styles", item: "images", example: "card", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "images", example: "card", html: false, nunjucks: false, size: "xl" }) }}
 
-{{ example({ group: "styles", item: "images", example: "index-grid", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "images", example: "index-grid", html: false, nunjucks: false, size: "xl" }) }}
 
 ## Hero elements
 
@@ -28,7 +28,7 @@ For hero elements, try to use an image with a 5:2 aspect ratio with a suggested 
 
 The hero element can also accept images for other screen sizes so use a 3:2 aspect ratio with a suggested resolution of 600px wide and 400px tall for smaller screens.
 
-{{ example({ group: "styles", item: "images", example: "hero", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "images", example: "hero", html: false, nunjucks: false, size: "xl" }) }}
 
 ## Picture elements
 
@@ -36,7 +36,7 @@ The hero element can also accept images for other screen sizes so use a 3:2 aspe
 
 Ensure the longest side of the image is no more than 900px.
 
-{{ example({ group: "styles", item: "images", example: "picture", html: false, nunjucks: false, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "images", example: "picture", html: false, nunjucks: false, size: "xl" }) }}
 
 ## Formats
 

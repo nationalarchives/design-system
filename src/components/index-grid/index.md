@@ -13,4 +13,4 @@ Use the index grid component to display a grid of links such as displaying a lis
 
 The index grid includes a `tna-container` element so doesn't need to be used within a column system.
 
-{{ example({ group: "components", item: "index-grid", example: "default", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "index-grid", example: "default", html: true, nunjucks: true }) }}

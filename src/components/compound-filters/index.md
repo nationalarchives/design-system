@@ -13,4 +13,4 @@ The compound filters can show which multiple filters have been selected. This is
 
 Each selected value requires a link to be able to remove the value.
 
-{{ example({ group: "components", item: "compound-filters", example: "default", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "compound-filters", example: "default", html: true, nunjucks: true, size: "s" }) }}
