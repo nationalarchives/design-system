@@ -5,13 +5,8 @@ layout: layout-example.njk
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 
-{# tnaButton({
+{{ tnaButton({
   text: "Explore the collection",
   href: "#/explore-the-collection",
   icon: "globe"
-}) #}
-
-<a href="#/explore-the-collection" class="tna-button">
-  <i class="fa-solid fa-globe" aria-hidden="true"></i>
-  Explore the collection
-</a>
+}) }}

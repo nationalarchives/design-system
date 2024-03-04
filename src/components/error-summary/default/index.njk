@@ -1,0 +1,22 @@
+---
+title: Error summary
+layout: layout-example.njk
+---
+
+{% from "nationalarchives/components/error-summary/macro.njk" import tnaErrorSummary %}
+
+{{ tnaErrorSummary({
+  title: "There is a problem",
+  headingLevel: 2,
+  items: [
+    {
+      text: "Enter your full name",
+      href: "#"
+    },
+    {
+      text: "The date of the record cannot be in the future",
+      href: "#"
+    }
+  ],
+  disableAutoFocus: true
+}) }}

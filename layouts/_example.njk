@@ -1,5 +1,3 @@
-{%- from "nationalarchives/components/tabs/macro.njk" import tnaTabs -%}
-
 {% macro example(params) %}
   {% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
   {% set examplePath = exampleRoot + "index.njk" %}
@@ -16,56 +14,26 @@
       <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-component-example__frame tna-ds-component-example__frame--resizable{% if params.size %} tna-ds-component-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
     </div>
 
-    {% set html = getHTMLCode(examplePath) | forceescape %}
-    {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
-
-    {# {% set tabItems = [] %}
-    {% if params.html %}
-      {% set tabItems = tabItems.concat({
-        id: "example-" + params.example + "-html",
-        title: "HTML",
-        body: '<div class="tna-ds-component-example__code"><pre class="language-html"><code class="language-html">' + html + '</code></pre><div>'
-      }) %}
-    {% endif %}
-    {% if params.nunjucks %}
-      {% set tabItems = tabItems.concat({
-        id: "example-" + params.example + "-nunjucks",
-        title: "Nunjucks",
-        body: '<div class="tna-ds-component-example__code"><pre class="language-javascript"><code class="language-javascript">' + nunjucks + '</code></pre><div>'
-      }) %}
-      {% set tabItems = tabItems.concat({
-        id: "example-" + params.example + "-options",
-        title: "Nunjucks options",
-        body: exampleOptions(params)
-      }) %}
-    {% endif %}
-    {% if tabItems|length > 1 %}
-      <div class="tna-ds-component-example__data">
-        {{ tnaTabs({
-          title: exampleTitle + " example",
-          items: tabItems
-        }) }}
-      </div>
-    {% elseif tabItems|length > 0 %}
-      {{ tabItems[0].body | safe  }}
-    {% endif %} #}
-
     {% if params.html %}
     <details class="tna-ds-component-example__details" name="{{ exampleRoot }}"{% if params.openHTML %} open{% endif %}>
       <summary>HTML</summary>
       <div class="tna-ds-component-example__details-content">
         <div class="tna-ds-component-example__code">
-          <pre class="language-html"><code class="language-html">{{ html }}</code></pre>
+{# This indentation is required so markdown does not interfere #}
+<pre class="language-html"><code class="language-html">{{ getHTMLCode(examplePath) | forceescape }}</code></pre>
         <div>
       <div>
     </details>
     {% endif %}
+
     {% if params.nunjucks %}
+    {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
     <details class="tna-ds-component-example__details" name="{{ exampleRoot }}">
       <summary>Nunjucks</summary>
       <div class="tna-ds-component-example__details-content">
         <div class="tna-ds-component-example__code">
-          <pre class="language-javascript"><code class="language-javascript">{{ nunjucks }}</code></pre>
+{# This indentation is required so markdown does not interfere #}
+<pre class="language-javascript"><code class="language-javascript">{{ nunjucks }}</code></pre>
         <div>
       <div>
     </details>

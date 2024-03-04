@@ -5,14 +5,9 @@ layout: layout-example.njk
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 
-{# tnaButton({
+{{ tnaButton({
   text: "Book a reading room",
   href: "#/book-a-reading-room",
   icon: "arrow-right",
   rightAlignIcon: true
-}) #}
-
-<a href="#/book-a-reading-room" class="tna-button tna-button--icon-right">
-  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-  Book a reading room
-</a>
+}) }}

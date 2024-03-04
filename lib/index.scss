@@ -68,9 +68,10 @@ $fa-font-path: assets.$fa-font-path;
 
     display: flex;
 
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: inherit;
+    line-height: 1;
     text-align: left;
+    font-family: inherit;
 
     background: none;
 

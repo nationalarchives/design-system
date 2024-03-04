@@ -118,9 +118,7 @@ const nunjucksOptions = {
 
       return beautify.html(html, {
         indent_size: 2,
-        inline: options.inline.filter((tag) => !["label"].includes(tag)),
         max_preserve_newlines: 0,
-        wrap_attributes: "preserve",
       });
     },
     getNunjucksCode: (path) => {
