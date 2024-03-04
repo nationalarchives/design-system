@@ -44,7 +44,7 @@ Metalsmith(__dirname)
       for (const asset of assets) {
         const input = join(options.cwd, asset);
         const output = join(options.dest, asset);
-        console.log(`${input} -> ${output}`);
+        // console.log(`${input} -> ${output}`);
         files[output] = {
           contents: readFileSync(input),
         };
@@ -165,6 +165,26 @@ Metalsmith(__dirname)
       },
     }),
   )
+  .use(async (files, metalsmith, done) => {
+    async function copyAssets(pattern, options) {
+      const assets = await glob(pattern, options);
+      for (const asset of assets) {
+        const input = join(options.cwd, asset);
+        const output = join(options.dest, asset);
+        // console.log(`${input} -> ${output}`);
+        files[output] = {
+          contents: readFileSync(input),
+        };
+      }
+    }
+    await Promise.all([
+      copyAssets("*", {
+        cwd: "static",
+        dest: ".",
+      }),
+    ]);
+    done();
+  })
   .build((err) => {
     if (err) throw err;
     console.log(
