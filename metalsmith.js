@@ -10,6 +10,7 @@ import renamer from "metalsmith-renamer";
 import collections from "@metalsmith/collections";
 import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
+import sitemap from "metalsmith-sitemap";
 import packageInfo from "./package.json" assert { type: "json" };
 import { readFileSync } from "fs";
 import { join } from "path";
@@ -163,6 +164,12 @@ Metalsmith(__dirname)
         collection: "lib/collection.js",
         sidebar: "lib/sidebar.js",
       },
+    }),
+  )
+  .use(
+    sitemap({
+      hostname: "https://nationalarchives.github.io/design-system",
+      omitIndex: true,
     }),
   )
   .build((err) => {

@@ -48,6 +48,7 @@
     "marked": "^9.1.5",
     "metalsmith": "^2.6.0",
     "metalsmith-renamer": "^0.5.217",
+    "metalsmith-sitemap": "^1.2.2",
     "prismjs": "^1.29.0"
   },
   "devDependencies": {
