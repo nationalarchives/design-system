@@ -37,3 +37,11 @@ By default, the breadcrumbs will collapse on smaller devices to only show the fi
 You can configure the breadcrumbs to never collapse by setting the `noCollapse` option to `true` or by adding the class `tna-breadcrumbs--no-collapse` to the main breadcrumbs element.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "no-collapse", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+
+## Using structured data
+
+Enable structured data by setting the `structuredData` option to `true`. This will output additional markup that allows search engines to parse more information about your page.
+
+{{ example({ group: "components", item: "breadcrumbs", example: "structured-data", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+
+Google provides ways to [test your structured data](https://developers.google.com/search/docs/appearance/structured-data).
