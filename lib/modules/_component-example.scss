@@ -108,7 +108,7 @@
     @include colour.colour-border("keyline", 1px, solid, top);
 
     summary {
-      padding: 0.25rem 2.5rem 0.25rem 0.75rem;
+      padding: 0.5rem 1rem 0.5rem 2.75rem;
 
       position: relative;
       z-index: 1;
@@ -128,16 +128,16 @@
         height: 0;
 
         position: absolute;
-        right: 0.5rem;
-        top: calc(50% - #{math.div(math.sqrt(3), 4)}rem);
+        left: 1rem;
+        top: calc(50% - 0.5rem);
 
         @include colour.colour-border(
           "font-base",
           #{math.div(math.sqrt(3), 2)}rem
         );
-        border-right: 0.5rem transparent solid;
-        border-bottom-width: 0;
-        border-left: 0.5rem transparent solid;
+        border-top: 0.5rem transparent solid;
+        border-right-width: 0;
+        border-bottom: 0.5rem transparent solid;
 
         content: "";
       }
@@ -146,8 +146,13 @@
     &[open] {
       summary {
         &::before {
-          border-top-width: 0;
-          border-bottom-width: #{math.div(math.sqrt(3), 2)}rem;
+          top: calc(50% - #{math.div(math.sqrt(3), 4)}rem);
+
+          @include colour.colour-border("font-base");
+          border-top-width: #{math.div(math.sqrt(3), 2)}rem;
+          border-right: 0.5rem transparent solid;
+          border-bottom-width: 0;
+          border-left: 0.5rem transparent solid;
         }
       }
     }
