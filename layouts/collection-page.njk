@@ -31,7 +31,8 @@
       </hgroup>
       {% endif %}
       {% if not topLevel and headings %}
-      <ol class="tna-ol tna-ol--plain- tna-!--hide-on-large tna-!--hide-on-medium">
+      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium">Contents</h2>
+      <ol class="tna-ol tna-!--hide-on-large tna-!--hide-on-medium">
         {%- for heading in headings %}
         <li>
           <a href="#{{ heading.href }}" class="tna-link--no-visited-state">
