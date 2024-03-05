@@ -11,7 +11,7 @@ Use a list-type layout if users need to navigate through pages of similar items.
 
 {{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, ‘Search results (page 1 of 4)’.
 

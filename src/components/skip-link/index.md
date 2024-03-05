@@ -11,4 +11,4 @@ The skip link component can be used at the start of a page to allow the user to 
 
 {{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}

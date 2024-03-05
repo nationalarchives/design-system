@@ -11,4 +11,4 @@ The picture component can display an image with additional information.
 
 {{ example({ group: "components", item: "picture", example: "default", html: true, nunjucks: true, size: "xxxl" }) }}
 
-{{ status(false, 2, 2, 2, false) }}
+{{ status(false, 2, 2, 2, 2, false) }}

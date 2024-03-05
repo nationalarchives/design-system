@@ -11,7 +11,7 @@ Use the text input component to allow the users to enter a short string text inf
 
 {{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 ## Preselected
 

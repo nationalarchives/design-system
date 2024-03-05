@@ -11,5 +11,5 @@ The footer component provides an area to use for copyright information and addit
 
 {{ example({ group: "components", item: "footer", example: "default", html: true, nunjucks: true, size: "xl" }) }}
 
-{{ status(true, 0, 1, 1, false) }}
+{{ status(true, 0, 1, 1, 2, false) }}
 

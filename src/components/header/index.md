@@ -11,4 +11,4 @@ The header component shows users they are on a National Archives service and pro
 
 {{ example({ group: "components", item: "header", example: "default", html: true, nunjucks: true }) }}
 
-{{ status(true, 1, 1, 1, false) }}
+{{ status(true, 1, 1, 1, 2, false) }}

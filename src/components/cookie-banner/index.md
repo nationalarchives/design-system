@@ -14,4 +14,4 @@ The cookie banner is available as part of [TNA Frontend](https://www.npmjs.com/p
 
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, noPadding: true }) }}
 
-{{ status(false, 2, 2, 2, false) }}
+{{ status(false, 2, 2, 2, 2, false) }}

@@ -11,7 +11,7 @@ Radios allow users to select a single options for a form field.
 
 {{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, size: "s" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 ## Small
 

@@ -13,7 +13,7 @@ Where possible, avoid overusing the select component. Alice Bartlett gave a talk
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 ## Preselected
 

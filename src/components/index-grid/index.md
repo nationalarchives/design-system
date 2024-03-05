@@ -13,4 +13,4 @@ The index grid includes a `tna-container` element so doesn't need to be used wit
 
 {{ example({ group: "components", item: "index-grid", example: "default", html: true, nunjucks: true, size: "xxxl" }) }}
 
-{{ status(false, 0, 2, 2, false) }}
+{{ status(false, 0, 2, 2, 2, false) }}

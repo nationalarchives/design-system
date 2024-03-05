@@ -11,5 +11,5 @@ Use the error summary component to summarise form errors on the page and provide
 
 {{ example({ group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, size: "s" }) }}
 
-{{ status(false, 2, 2, 2, false) }}
+{{ status(false, 2, 2, 2, 2, false) }}
 

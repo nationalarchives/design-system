@@ -11,7 +11,7 @@ Checkboxes allow users to post multiple options for the same field.
 
 {{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, size: "s" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 ## Small
 

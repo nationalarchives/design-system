@@ -13,7 +13,7 @@ For searching by date, use the [date search](/design-system/components/date-sear
 
 {{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 ## Preselected
 

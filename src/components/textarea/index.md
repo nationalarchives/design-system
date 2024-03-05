@@ -11,7 +11,7 @@ Use the textarea component to allow the users to enter a longer string of text i
 
 {{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "m" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
 
 ## Preselected
 

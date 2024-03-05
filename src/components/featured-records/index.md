@@ -11,4 +11,4 @@ The featured records component can be used to show a list of related or interest
 
 {{ example({ group: "components", item: "featured-records", example: "default", html: true, nunjucks: true, size: "l" }) }}
 
-{{ status(false, 0, 1, 2, false) }}
+{{ status(false, 0, 1, 2, 2, false) }}
