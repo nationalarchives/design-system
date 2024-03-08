@@ -1,5 +1,11 @@
 {% extends "./_design-system-base.njk" %}
 
+{% block cookies %}
+  {% if path != 'cookies' %}
+  {{ super() }}
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   {% set headings = contents | headingsList %}
   {% include "partials/breadcrumbs.njk" %}
