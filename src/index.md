@@ -4,12 +4,12 @@ title: Home
 description: Designing services for The National Archives
 ---
 
-## Principles we follow
+## What’s new
 
-The National Archives Design System helps teams that work on services for The National Archives follow the [Government Design Principles](https://www.gov.uk/guidance/government-design-principles) and [GOV.UK Service Manual](https://www.gov.uk/service-manual).
+**1 March 2024**: We've released TNA Frontend v0.1.42
 
-This website also follows the [style guide](https://www.gov.uk/guidance/style-guide) and [content design guidance](https://www.gov.uk/guidance/content-design) used by GOV.UK.
+This release introduces a new [error summary component](/design-system/components/error-summary/) as well as renaming the filters component to [quick filters](/design-system/components/quick-filters/).
 
-## Other resources
+Also included is a first draft of a new [analytics library](https://github.com/nationalarchives/tna-frontend/wiki/Analytics) which enables easy tracking of activity when using components from TNA Frontend.
 
-The National Archives Design System is focused on how to design services for The National Archives. For technical information on how to develop services, refer to [The National Archives Engineering Handbook](https://nationalarchives.github.io/engineering-handbook/).
+Read the [full release notes](https://github.com/nationalarchives/tna-frontend/releases/tag/v0.1.42) to see what’s changed.

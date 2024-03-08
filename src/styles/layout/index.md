@@ -144,7 +144,7 @@ On a 2 column grid (tiny devices), the widths available are:
 
 Widths such as `1-4` or `1-3` are "absolute" value widths. The width of the column will be exactly as specified.
 
-If you don't know the width you need, or want a column to expand to fill a gap, use `flex-x` to specify how much 'weight' the size of that column gets.
+If you don’t know the width you need, or want a column to expand to fill a gap, use `flex-x` to specify how much 'weight' the size of that column gets.
 
 You can also mix them to create full-fluid layouts For example, you can 'pad' empty space around fixed-width columns with no common denominator like so:
 

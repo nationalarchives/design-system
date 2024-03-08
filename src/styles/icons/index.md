@@ -8,7 +8,7 @@ group: styles
 
 Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 
-Don't rely on icons alone to convey meaning.
+Don’t rely on icons alone to convey meaning.
  
 Icons should appear alongside text at the same font size. Icons on `tna-button` elements are itentionally slightly smaller.
 
@@ -26,7 +26,7 @@ With call to actions that benefit from an arrow or chevron icon that points to t
 
 ## Brand icons
 
-TNA Frontend doesn't include [Font Awesome brand icons](https://fontawesome.com/search?o=r&m=free&f=brands) by default. If you include them in you application then you can use the `brandIcon` property of buttons to add a brand icon.
+TNA Frontend doesn’t include [Font Awesome brand icons](https://fontawesome.com/search?o=r&m=free&f=brands) by default. If you include them in you application then you can use the `brandIcon` property of buttons to add a brand icon.
 
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 

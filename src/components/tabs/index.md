@@ -27,7 +27,7 @@ The tabs component can contain multiple tabs of information.
 
 ## Known issues and gaps
 
-The tabs component currently has a few shortcomings that mean it shouldn't be relied upon.
+The tabs component currently has a few shortcomings that mean it shouldn’t be relied upon.
 
 - In CSS-only mode (no JavaScript), the current tab is not indicated
 - If the tab titles are too long, the layout becomes sub-optimal

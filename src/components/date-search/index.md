@@ -9,7 +9,7 @@ group: components
 
 Use the date search component to allow the user to enter a date to search with.
 
-When you need the user to enter a date for data purposes or don't want to require a day or month, use the [date input](/design-system/components/date-input/) component.
+When you need the user to enter a date for data purposes or don’t want to require a day or month, use the [date input](/design-system/components/date-input/) component.
 
 {{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 
