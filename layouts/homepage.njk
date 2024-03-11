@@ -6,17 +6,31 @@
 
 {% block main %}
   <main class="tna-main-wrapper {{ mainClasses }}" id="main-content" role="main">
-    {{ tnaHero({
-      heading: "Design your service using National Archives styles and components",
-      body: "<p>Use this design system to make services consistent with The National Archives. Learn from the research and experience of other service teams and avoid repeating work that has already been done.</p><div class=\"tna-button-group\">" + tnaButton({ text: "Get started", href: "/design-system/get-started/", classes: "tna-button--large" }) + "</div>",
-      imageSrc: "https://www.nationalarchives.gov.uk/wp-content/uploads/sites/24/2023/07/tna-building-compress.jpg",
-      imageAlt: "The front of The National Archives office in Kew",
-      imageWidth: 640,
-      imageHeight: 360
-    }) }}
+    <header class="tna-background-accent tna-!--padding-top-l tna-!--padding-bottom-xl">
+      <div class="tna-container tna-container--vertically-align">
+        <div class="tna-column tna-column--width-1-3 tna-column--order-3 tna-column--order-1-small tna-column--order-1-tiny tna-!--padding-top-m">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="var(--icon-light)" d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+        </div>
+        <div class="tna-column tna-column--width-7-12 tna-column--margin-right-1-12 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny tna-column--order-2 tna-!--padding-top-m">
+          <h1 class="tna-heading-xl">
+            Design your service using National Archives styles and components
+          </h1>
+          <p class="tna-large-paragraph">Use this design system to make services that are consistent with The National Archives. Learn from the research and experience of other service teams and avoid repeating work that has already been done.</p>
+          <div class="tna-button-group">
+            {{ tnaButton({
+              text: "Get started",
+              href: "/design-system/get-started/",
+              icon: "arrow-right",
+              rightAlignIcon: true,
+              classes: "tna-button--large"
+            }) }}
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="tna-section tna-background-tint">
       <div class="tna-container">
-        <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
+        <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
           {{ contents | safe }}
         </div>
       </div>

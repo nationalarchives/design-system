@@ -20,7 +20,7 @@
 {% elseif group === "performance" %}
   {%- set themeAccent = "orange" -%}
 {% else %}
-  {%- set themeAccent = "yellow" -%}
+  {%- set themeAccent = "blue" -%}
 {% endif %}
 
 {% block pageTitle %}
@@ -62,9 +62,8 @@
 
 {% block header %}
   {{ tnaPhaseBanner({
-    phase: "Private beta",
-    message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it.",
-    classes: "tna-phase-banner--accent"
+    phase: "Beta",
+    message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it."
   }) }}
 
   {% set topLevelNavigation = [] %}

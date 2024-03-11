@@ -23,10 +23,6 @@ $fa-font-path: assets.$fa-font-path;
 @import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";
 
 .tna-template--yellow-accent {
-  .tna-hero--tint .tna-hero__figure::before {
-    background-color: rgb(0, 76, 126) !important;
-  }
-
   .tna-ol li::marker {
     @include colour.colour-font("font-base");
   }
@@ -41,7 +37,7 @@ $fa-font-path: assets.$fa-font-path;
 
 .tna-button {
   &--large {
-    @include typography.relative-font-size(22);
+    @include typography.relative-font-size(24);
   }
 
   // @at-root #{selector.unify("button", &)} {
@@ -55,6 +51,18 @@ $fa-font-path: assets.$fa-font-path;
   //     }
   //   }
   // }
+}
+
+.tna-container {
+  &--vertically-align {
+    align-items: center;
+  }
+}
+
+.tna-column--margin-right-1-12 {
+  @include media.on-smaller-than-large() {
+    margin-right: 0;
+  }
 }
 
 .app-example-page {
