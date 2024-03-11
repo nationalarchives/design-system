@@ -20,7 +20,7 @@
         {% if section.description %}
           <p>{{ section.description }}</p>
         {% endif %}
-        <ul class="tna-ul">
+        <menu class="tna-ul">
           {%- for page in collections[section.group] %}
           <li>
             <a href="/design-system/{{ page.path }}" class="tna-link--no-visited-state">{{ page.title }}</a>
@@ -29,7 +29,7 @@
             -->
           </li>
           {%- endfor %}
-        </ul>
+        </menu>
         {%- endfor %}
       </div>
     </div>
