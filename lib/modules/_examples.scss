@@ -8,20 +8,6 @@ p:has(+ p.tna-\!--no-margin-top) {
   }
 }
 
-.tna-ds-colour-swatch {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 0.75rem;
-
-  display: inline-block;
-
-  vertical-align: bottom;
-
-  // @include colour.colour-border("keyline-dark", 1px, solid);
-  border: 1px rgb(0 0 0/0.2) solid;
-  border-radius: 100%;
-}
-
 .tna-card--demo {
   max-width: 25rem;
 }
