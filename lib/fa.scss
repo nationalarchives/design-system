@@ -1,0 +1,7 @@
+@use "@nationalarchives/frontend/nationalarchives/variables/assets" with (
+  $tna-font-path: "/design-system/static/assets/fonts"
+);
+@use "@nationalarchives/frontend/nationalarchives/font-awesome";
+
+$fa-font-path: assets.$fa-font-path;
+@import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";

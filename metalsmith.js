@@ -150,6 +150,8 @@ Metalsmith(__dirname)
     sass({
       entries: {
         "lib/index.scss": "css/index.css",
+        "lib/all.scss": "css/all.css",
+        "lib/fa.scss": "css/fa.css",
       },
     }),
   )

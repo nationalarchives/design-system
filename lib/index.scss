@@ -1,13 +1,51 @@
 @use "sass:selector";
 
-@use "@nationalarchives/frontend/nationalarchives/variables/assets" with (
-  $tna-font-path: "/design-system/static/assets/fonts"
-);
+// @use "@nationalarchives/frontend/nationalarchives/variables/assets" with (
+//   $tna-font-path: "/design-system/static/assets/fonts"
+// );
 @use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
   $largest-container-width: 80rem
 );
-@use "@nationalarchives/frontend/nationalarchives/all";
-@use "@nationalarchives/frontend/nationalarchives/font-awesome";
+// @use "@nationalarchives/frontend/nationalarchives/all";
+@use "@nationalarchives/frontend/nationalarchives/variables";
+@use "@nationalarchives/frontend/nationalarchives/tools";
+@use "@nationalarchives/frontend/nationalarchives/utilities";
+
+// @use "@nationalarchives/frontend/nationalarchives/components";
+@use "@nationalarchives/frontend/nationalarchives/components/breadcrumbs";
+@use "@nationalarchives/frontend/nationalarchives/components/button";
+@use "@nationalarchives/frontend/nationalarchives/components/card";
+// @use "@nationalarchives/frontend/nationalarchives/components/checkboxes";
+// @use "@nationalarchives/frontend/nationalarchives/components/compound-filters";
+@use "@nationalarchives/frontend/nationalarchives/components/cookie-banner";
+// @use "@nationalarchives/frontend/nationalarchives/components/date-input";
+// @use "@nationalarchives/frontend/nationalarchives/components/date-search";
+// @use "@nationalarchives/frontend/nationalarchives/components/error-summary";
+// @use "@nationalarchives/frontend/nationalarchives/components/featured-records";
+@use "@nationalarchives/frontend/nationalarchives/components/footer";
+// @use "@nationalarchives/frontend/nationalarchives/components/gallery";
+// @use "@nationalarchives/frontend/nationalarchives/components/global-header";
+@use "@nationalarchives/frontend/nationalarchives/components/grid" as
+  gridComponent;
+@use "@nationalarchives/frontend/nationalarchives/components/header";
+// @use "@nationalarchives/frontend/nationalarchives/components/hero";
+// @use "@nationalarchives/frontend/nationalarchives/components/index-grid";
+// @use "@nationalarchives/frontend/nationalarchives/components/message";
+// @use "@nationalarchives/frontend/nationalarchives/components/pagination";
+@use "@nationalarchives/frontend/nationalarchives/components/phase-banner";
+// @use "@nationalarchives/frontend/nationalarchives/components/picture";
+// @use "@nationalarchives/frontend/nationalarchives/components/quick-filters";
+// @use "@nationalarchives/frontend/nationalarchives/components/radios";
+// @use "@nationalarchives/frontend/nationalarchives/components/sensitive-image";
+// @use "@nationalarchives/frontend/nationalarchives/components/search-field";
+// @use "@nationalarchives/frontend/nationalarchives/components/search-filters";
+// @use "@nationalarchives/frontend/nationalarchives/components/select";
+@use "@nationalarchives/frontend/nationalarchives/components/skip-link";
+// @use "@nationalarchives/frontend/nationalarchives/components/tabs";
+// @use "@nationalarchives/frontend/nationalarchives/components/text-input";
+// @use "@nationalarchives/frontend/nationalarchives/components/textarea";
+
+// @use "@nationalarchives/frontend/nationalarchives/font-awesome";
 
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
@@ -15,12 +53,12 @@
 
 @use "modules/code";
 @use "modules/component-example";
-@use "modules/examples";
+// @use "modules/examples";
 @use "modules/sidebar";
 @use "modules/typography" as DSTypography;
 
-$fa-font-path: assets.$fa-font-path;
-@import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";
+// $fa-font-path: assets.$fa-font-path;
+// @import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";
 
 .tna-template--yellow-accent {
   .tna-ol li::marker {
