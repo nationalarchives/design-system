@@ -4,7 +4,7 @@ title: Button
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The button component can be used as a call to action link or as a `<button>` element for use within forms.

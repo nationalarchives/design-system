@@ -4,7 +4,7 @@ title: Radios
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Radios allow users to select a single options for a form field.

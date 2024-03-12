@@ -4,7 +4,7 @@ title: Links
 group: styles
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 
 Links are blue and underlined by default.
 

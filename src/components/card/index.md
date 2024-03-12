@@ -4,7 +4,7 @@ title: Card
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Use the card component for providing previews to articles and pages.

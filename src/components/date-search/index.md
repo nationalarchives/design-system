@@ -4,7 +4,7 @@ title: Date search
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Use the date search component to allow the user to enter a date to search with.

@@ -1,12 +1,6 @@
 {% extends "./_design-system-base.njk" %}
 
 {% block header %}
-  {{ tnaPhaseBanner({
-    phase: "Private beta",
-    message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it.",
-    classes: "tna-phase-banner--accent"
-  }) }}
-
   {{ tnaHeader({
     logo: {
       strapline: "Design System",
@@ -15,8 +9,10 @@
   }) }}
 {% endblock %}
 
+{% block cookies %}
+{% endblock %}
+
 {% block content %}
-  {% include "partials/breadcrumbs.njk" %}
   <div class="tna-section">
     <div class="tna-container">
       <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">

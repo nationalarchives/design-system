@@ -4,7 +4,7 @@ title: Compound filters
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The compound filters can show which multiple filters have been selected. This is useful for search patterns.

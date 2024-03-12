@@ -5,7 +5,7 @@ description: Also known as navigation path or cookie crumb
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.

@@ -4,7 +4,7 @@ title: Date input
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Use the date input component to allow the user to enter a date when populating data, such as submitting a record.

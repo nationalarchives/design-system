@@ -4,7 +4,7 @@ title: Icons
 group: styles
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 
 Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 

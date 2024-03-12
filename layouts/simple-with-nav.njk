@@ -6,9 +6,12 @@
   {% endif %}
 {% endblock %}
 
+{% block beforeContent %}
+  {% include "partials/breadcrumbs.njk" %}
+{% endblock %}
+
 {% block content %}
   {% set headings = contents | headingsList %}
-  {% include "partials/breadcrumbs.njk" %}
   <div class="tna-container">
     <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny tna-section tna-!--no-padding-bottom">
       <h1 class="tna-heading-xl">{{ title }}</h1>

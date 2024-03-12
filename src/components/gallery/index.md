@@ -4,7 +4,7 @@ title: Gallery
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Use the gallery component to show a list of images.

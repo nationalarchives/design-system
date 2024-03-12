@@ -5,7 +5,7 @@ description: Also known as navigation path or cookie crumb
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The cookie banner component allows a user to either accept or decline the use of cookies within a service.

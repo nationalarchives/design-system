@@ -4,7 +4,7 @@ title: Message
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The message component provides the user with important information about the page or article.

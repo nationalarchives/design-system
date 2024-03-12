@@ -4,7 +4,7 @@ title: Error pages
 group: content
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 
 ## Page not found pages
 

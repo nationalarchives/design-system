@@ -4,7 +4,7 @@ title: Featured records
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The featured records component can be used to show a list of related or interesting records.

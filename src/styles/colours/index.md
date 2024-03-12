@@ -4,7 +4,7 @@ title: Colours
 group: styles
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "nationalarchives/components/message/macro.njk" import tnaMessage %}
 
 ## Brand colours

@@ -4,7 +4,7 @@ title: Picture
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The picture component can display an image with additional information.

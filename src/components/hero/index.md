@@ -4,7 +4,7 @@ title: Hero
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Use the hero component to start an article.

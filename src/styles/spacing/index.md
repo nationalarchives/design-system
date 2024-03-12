@@ -4,7 +4,7 @@ title: Spacing
 group: styles
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 
 ## Global spacing
 

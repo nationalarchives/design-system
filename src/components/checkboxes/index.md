@@ -4,7 +4,7 @@ title: Checkboxes
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Checkboxes allow users to post multiple options for the same field.

@@ -4,7 +4,7 @@ title: Quick filters
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The quick filters component provides users with a list of links which act as a quick filter to content.

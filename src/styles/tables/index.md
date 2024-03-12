@@ -4,7 +4,7 @@ title: Tables
 group: styles
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 
 Use a tables to display tabular data. Do not use tables to lay out or organise content.
 

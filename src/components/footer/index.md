@@ -4,7 +4,7 @@ title: Footer
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 The footer component provides an area to use for copyright information and additional links to things like social media.

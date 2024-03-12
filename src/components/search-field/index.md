@@ -4,7 +4,7 @@ title: Search field
 group: components
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
 Use the search field component as an entry point into searches.

@@ -5,7 +5,7 @@ group: get-started
 order: 1
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 
 ## GOV.UK Prototype kit
 

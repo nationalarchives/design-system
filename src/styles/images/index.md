@@ -4,7 +4,7 @@ title: Images
 group: styles
 ---
 
-{% from "_example.njk" import example %}
+{% from "partials/example.njk" import example %}
 {% from "nationalarchives/components/picture/macro.njk" import tnaPicture %}
 {% from "nationalarchives/components/card/macro.njk" import tnaCard %}
 
