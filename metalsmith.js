@@ -24,7 +24,6 @@ Metalsmith(__dirname)
   .clean(true)
   .env({
     DEBUG: process.env.DEBUG,
-    // NODE_ENV: process.env.NODE_ENV,
   })
   .metadata({
     sitename: "The National Archives Design System",
@@ -45,7 +44,6 @@ Metalsmith(__dirname)
       for (const asset of assets) {
         const input = join(options.cwd, asset);
         const output = join(options.dest, asset);
-        // console.log(`${input} -> ${output}`);
         files[output] = {
           contents: readFileSync(input),
         };
@@ -157,10 +155,9 @@ Metalsmith(__dirname)
   )
   .use(
     jsBundle({
-      bundle: true,
-      minify: false,
+      minify: true,
       sourcemap: true,
-      drop: [],
+      drop: ["debugger"],
       entries: {
         index: "lib/index.js",
         collection: "lib/collection.js",
