@@ -55,7 +55,7 @@
       <div class="tna-ds-component-example__data-table-wrapper">
         <div class="tna-table-wrapper">
           <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-            <caption class="tna-table__caption tna-heading-m {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
+            <caption class="tna-table__caption {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
             <thead class="tna-table__head">
               <tr class="tna-table__row">
                 <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
