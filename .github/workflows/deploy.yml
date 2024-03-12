@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
       - name: Lint
@@ -40,11 +40,11 @@ jobs:
         run: |
           echo "---\npermalink: /404-page-not-found/\n---" > design-system/404.md
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: design-system
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
