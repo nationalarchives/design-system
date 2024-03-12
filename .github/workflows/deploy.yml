@@ -38,7 +38,8 @@ jobs:
         run: npm run build
       - name: Configure 404
         run: |
-          echo "---\npermalink: /404-page-not-found/index.html\n---" > ./design-system/404.md
+          mv ./design-system/404/index.html ./design-system/404.html
+          rmdir ./design-system/404
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
