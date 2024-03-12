@@ -1,17 +1,13 @@
-@use "sass:selector";
-
-// @use "@nationalarchives/frontend/nationalarchives/variables/assets" with (
-//   $tna-font-path: "/design-system/static/assets/fonts"
-// );
 @use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
   $largest-container-width: 80rem
 );
+
 // @use "@nationalarchives/frontend/nationalarchives/all";
 @use "@nationalarchives/frontend/nationalarchives/variables";
 @use "@nationalarchives/frontend/nationalarchives/tools";
 @use "@nationalarchives/frontend/nationalarchives/utilities";
-
 // @use "@nationalarchives/frontend/nationalarchives/components";
+
 @use "@nationalarchives/frontend/nationalarchives/components/breadcrumbs";
 @use "@nationalarchives/frontend/nationalarchives/components/button";
 @use "@nationalarchives/frontend/nationalarchives/components/card";
@@ -45,20 +41,14 @@
 // @use "@nationalarchives/frontend/nationalarchives/components/text-input";
 // @use "@nationalarchives/frontend/nationalarchives/components/textarea";
 
-// @use "@nationalarchives/frontend/nationalarchives/font-awesome";
-
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
 @use "modules/code";
 @use "modules/component-example";
-// @use "modules/examples";
 @use "modules/sidebar";
 @use "modules/typography" as DSTypography;
-
-// $fa-font-path: assets.$fa-font-path;
-// @import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";
 
 .tna-template--yellow-accent {
   .tna-ol li::marker {
@@ -77,18 +67,6 @@
   &--large {
     @include typography.relative-font-size(24);
   }
-
-  // @at-root #{selector.unify("button", &)} {
-  //   &[disabled="true"] {
-  //     cursor: not-allowed;
-
-  //     &:hover {
-  //       @include colour.colour-font("button-text");
-
-  //       @include colour.colour-background("button-background");
-  //     }
-  //   }
-  // }
 }
 
 .tna-container {
@@ -112,7 +90,6 @@
 
   vertical-align: bottom;
 
-  // @include colour.colour-border("keyline-dark", 1px, solid);
   border: 1px rgb(0 0 0/0.2) solid;
   border-radius: 100%;
 }
