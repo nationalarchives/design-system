@@ -2,9 +2,8 @@ name: Bug Report
 description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
 assignees:
-  - octocat
+  - ahosgood
 body:
   - type: markdown
     attributes:
@@ -24,7 +23,6 @@ body:
       label: What happened?
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
-      value: "A bug occurred"
     validations:
       required: true
   - type: dropdown
@@ -33,10 +31,11 @@ body:
       label: What browsers are you seeing the problem on?
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
+        - Google Chrome
+        - Mozilla Firefox
+        - Apple Safari
         - Microsoft Edge
+        - Samsung Internet
   - type: textarea
     id: logs
     attributes:
