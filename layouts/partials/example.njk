@@ -3,22 +3,22 @@
   {% set examplePath = exampleRoot + "index.njk" %}
   {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
   
-  <section class="tna-ds-component-example">
+  <section class="tna-ds-example">
     {% if not params.noOpenInNewTab %}
-    <small class="tna-ds-component-example__open-new-tab">
-      <a href="{{ exampleURL }}" target="_blank" class="tna-ds-component-example__link tna-link--no-visited-state">Open this example in new tab</a>
+    <small class="tna-ds-example__open-new-tab">
+      <a href="{{ exampleURL }}" target="_blank" class="tna-ds-example__link tna-link--no-visited-state">Open this example in new tab</a>
     </small>
     {% endif %}
 
-    <div class="tna-ds-component-example__frame-wrapper{% if params.noPadding %}tna-ds-component-example__frame-wrapper--no-padding{% endif %}">
-      <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-component-example__frame tna-ds-component-example__frame--resizable{% if params.size %} tna-ds-component-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+    <div class="tna-ds-example__frame-wrapper{% if params.noPadding %}tna-ds-example__frame-wrapper--no-padding{% endif %}">
+      <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-example__frame tna-ds-example__frame--resizable{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
     </div>
 
     {% if params.html %}
-    <details class="tna-ds-component-example__details" name="{{ exampleRoot }}"{% if params.openHTML %} open{% endif %}>
+    <details class="tna-ds-example__details" name="{{ exampleRoot }}"{% if params.openHTML %} open{% endif %}>
       <summary>HTML</summary>
-      <div class="tna-ds-component-example__details-content">
-        <div class="tna-ds-component-example__code">
+      <div class="tna-ds-example__details-content">
+        <div class="tna-ds-example__code">
 {# This indentation is required so markdown does not interfere #}
 <pre class="language-html"><code class="language-html">{{ getHTMLCode(examplePath) | forceescape }}</code></pre>
         <div>
@@ -28,19 +28,19 @@
 
     {% if params.nunjucks %}
     {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
-    <details class="tna-ds-component-example__details" name="{{ exampleRoot }}">
+    <details class="tna-ds-example__details" name="{{ exampleRoot }}">
       <summary>Nunjucks</summary>
-      <div class="tna-ds-component-example__details-content">
-        <div class="tna-ds-component-example__code">
+      <div class="tna-ds-example__details-content">
+        <div class="tna-ds-example__code">
 {# This indentation is required so markdown does not interfere #}
 <pre class="language-javascript"><code class="language-javascript">{{ nunjucks }}</code></pre>
         <div>
       <div>
     </details>
     {% if params.nunjucksOptions !== false %}
-    <details class="tna-ds-component-example__details" name="{{ exampleRoot }}">
+    <details class="tna-ds-example__details" name="{{ exampleRoot }}">
       <summary>Nunjucks options</summary>
-      <div class="tna-ds-component-example__details-content">
+      <div class="tna-ds-example__details-content">
         {{ exampleOptions(params) }}
       </div>
     </details>
@@ -52,7 +52,7 @@
 {% macro exampleOptions(params) %}
   {%- if (params.group == 'components') %}
     {% for table in getMacroOptions(params.item) %}
-      <div class="tna-ds-component-example__data-table-wrapper">
+      <div class="tna-ds-example__data-table-wrapper">
         <div class="tna-table-wrapper">
           <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
             <caption class="tna-table__caption {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>

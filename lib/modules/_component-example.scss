@@ -5,7 +5,7 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
-.tna-ds-component-example {
+.tna-ds-example {
   @include spacing.space-above;
 
   @include colour.colour-border("keyline", 1px);
@@ -158,30 +158,25 @@
     }
   }
 
-  &__details-content {
-    @include colour.colour-background("background-tint");
-  }
-
   &__data {
-    @include colour.colour-border("keyline", 1px, solid, top);
-
-    .tna-tabs {
-      &__list {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        margin-bottom: 0;
-
-        gap: 1.5rem;
-      }
-
-      &__list-item-link {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-    }
-
     &-table-wrapper {
       padding: 1rem;
+    }
+  }
+
+  &__details-content {
+    @include colour.colour-background("background-tint");
+
+    .tna-table {
+      &__caption {
+        padding-top: 0;
+
+        @include typography.relative-font-size(18);
+        @include typography.main-font-weight-bold;
+        line-height: 1.6;
+        text-align: left;
+        caption-side: top;
+      }
     }
   }
 
@@ -198,8 +193,6 @@
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
       margin: 0;
-
-      // background-color: $code-background;
 
       .language-css .token.string,
       .style .token.string,
@@ -220,9 +213,5 @@
       right: 0.5rem;
       z-index: 1;
     }
-  }
-
-  & > &__code {
-    @include colour.colour-border("keyline", 1px, solid, top);
   }
 }
