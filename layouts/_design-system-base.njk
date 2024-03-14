@@ -1,7 +1,5 @@
-{% extends "nationalarchives/templates/layouts/_generic.njk" %}
+{%- extends "nationalarchives/templates/layouts/_generic.njk" -%}
 
-{# {%- from "nationalarchives/components/breadcrumbs/macro.njk" import tnaBreadcrumbs -%}
-{%- from "nationalarchives/components/button/macro.njk" import tnaButton -%} #}
 {%- from "nationalarchives/components/footer/macro.njk" import tnaFooter -%}
 {%- from "nationalarchives/components/header/macro.njk" import tnaHeader -%}
 {%- from "nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner -%}
@@ -23,9 +21,8 @@
   {%- set themeAccent = "blue" -%}
 {% endif %}
 
-{% block pageTitle %}
-  {{ title }} - Design System - The National Archives
-{% endblock %}
+{%- set siteTitle = "Design System - The National Archives" -%}
+{%- set pageTitle = title -%}
 
 {% block head %}
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://asciinema.org data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">

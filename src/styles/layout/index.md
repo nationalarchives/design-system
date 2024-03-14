@@ -20,7 +20,7 @@ See the [generic page template](https://github.com/nationalarchives/tna-frontend
 
 | Block           | Purpose                                                                          |
 | --------------- | -------------------------------------------------------------------------------- |
-| `pageTitle`     | The contents sets the value of the `<title>` element                             |
+| `pageTitle`     | Explictly writes to the `<title>` element                                        |
 | `headIcons`     | Contains favicon and `apple-touch-icon` icons                                    |
 | `head`          | Empty block for the addition of other contents in the `<head>`                   |
 | `stylesheets`   | Block for including stylesheets                                                  |
@@ -58,18 +58,18 @@ The blocks are nested in the following way:
     - `footer`
     - `bodyEnd`
 
-| Variable             | Purpose                                                                                            | Default                |
-| -------------------- | -------------------------------------------------------------------------------------------------- | ---------------------- |
-| `htmlLang`           | Sets the `lang` attribute of the `<html>` element                                                  | `en-GB`                |
-| `htmlClasses`        | Classes to add to the `<html>` element                                                             | [none]                 |
-| `theme`              | Sets the [theme colour](/design-system/styles/colours/#theme-colours) of the site                  | `system`               |
-| `themeAccent`        | Sets the [accent colour](/design-system/styles/colours/#accent-colours) of the site                | `black`                |
-| `themeColor`         | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#000000`              |
-| `assetPath`          | The path for the icons and images included from TNA Frontend                                       | `/assets`              |
-| `tnaFrontendJsPath`  | The path to prefix the `all.js` from TNA Frontend (if used within the `bodyEnd` block)             | `/static/tna-frontend` |
-| `tnaFrontendCssPath` | The path to prefix the `all.css` from TNA Frontend (if used within the `stylesheets` block)        | `/static/tna-frontend` |
-| `bodyClasses`        | Classes to add to the `<body>` element                                                             | [none]                 |
-| `mainClasses`        | Classes to add to the `<main>` element                                                             | [none]                 |
+| Variable      | Purpose                                                                                            | Default                 |
+| ------------- | -------------------------------------------------------------------------------------------------- | ----------------------- |
+| `htmlLang`    | Sets the `lang` attribute of the `<html>` element                                                  | `en-GB`                 |
+| `htmlClasses` | Classes to add to the `<html>` element                                                             | [none]                  |
+| `pageTitle`   | Sets the title of the page in the `<title>` element, before the `siteTitle`                        | [none]                  |
+| `siteTitle`   | Sets the title of the page in the `<title>` element, after the `pageTitle`                         | `The National Archives` |
+| `theme`       | Sets the [theme colour](/design-system/styles/colours/#theme-colours) of the site                  | `system`                |
+| `themeAccent` | Sets the [accent colour](/design-system/styles/colours/#accent-colours) of the site                | `black`                 |
+| `themeColor`  | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#000000`               |
+| `assetPath`   | The path for the icons and images included from TNA Frontend                                       | `/assets`               |
+| `bodyClasses` | Classes to add to the `<body>` element                                                             | [none]                  |
+| `mainClasses` | Classes to add to the `<main>` element                                                             | [none]                  |
 
 ## Grid
 
