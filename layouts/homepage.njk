@@ -4,6 +4,8 @@
 {%- from "nationalarchives/components/card/macro.njk" import tnaCard -%}
 {%- from "nationalarchives/components/hero/macro.njk" import tnaHero -%}
 
+{% block pageTitle %}{{ siteTitle }}{% endblock %}
+
 {% block main %}
   <main class="tna-main {{ mainClasses }}" id="main-content">
     <header class="tna-background-accent tna-!--padding-top-l tna-!--padding-bottom-xl">

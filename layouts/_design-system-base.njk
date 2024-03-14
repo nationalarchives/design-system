@@ -29,8 +29,9 @@
   {% if description %}
   <meta name="description" content="{{ description }}">
   {% endif %}
-  <link rel="canonical" href="https://nationalarchives.github.io/design-system/{{ path }}/">
+  <link rel="canonical" href="https://nationalarchives.github.io/design-system/{{ path }}{% if path %}/{% endif %}">
   <meta name="google-site-verification" content="0vB4hp9dlNd2ozuQUaaBgEJXjgEcs2BD_6B7LqKLjR4">
+  <link rel="manifest" href="/design-system/static/manifest.json">
   <style>
   .tna-ds--show-on-js {
     display: none !important;
