@@ -42,4 +42,4 @@ Links within [heading elements](/design-system/styles/typography/#headings) have
 
 Follow the advice from GOV.UK on [opening links in a new tab](https://design-system.service.gov.uk/styles/links/#opening-links-in-a-new-tab).
 
-Avoid opening links in a new tab unless not doing so would detrement the user’s experience.
+Avoid opening links in a new tab unless not doing so would detriment the user’s experience.
