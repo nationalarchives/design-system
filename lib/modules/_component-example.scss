@@ -105,7 +105,9 @@
   }
 
   &__details {
-    @include colour.colour-border("keyline", 1px, solid, top);
+    &:first-of-type {
+      @include colour.colour-border("keyline", 1px, solid, top);
+    }
 
     summary {
       padding: 0.5rem 1rem 0.5rem 2.75rem;
@@ -165,7 +167,7 @@
   }
 
   &__details-content {
-    @include colour.colour-background("background-tint");
+    // @include colour.colour-background("background-tint");
 
     .tna-table {
       &__caption {
