@@ -135,3 +135,21 @@
     }
   }
 }
+
+kbd {
+  padding: 0em 0.25em;
+
+  @include typography.detail-font;
+  @include colour.tint;
+  line-height: 1;
+  vertical-align: baseline;
+
+  border: 1px rgba(0 0 0/0.5) solid;
+  border-radius: 0.25em;
+
+  box-shadow: 0 0.125em 0 rgba(0 0 0/0.5);
+
+  .tna-background-tint & {
+    // @include colour.contrast;
+  }
+}
