@@ -8,7 +8,7 @@ group: styles
 
 Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 
-Don’t rely on icons alone to convey meaning.
+Don’t rely on icons alone to convey meaning. Ensure they are hidden from assistive technologies with `aria-hidden="true"`.
  
 Icons should appear alongside text at the same font size. Icons on `tna-button` elements are itentionally slightly smaller.
 

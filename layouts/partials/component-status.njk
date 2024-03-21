@@ -2,7 +2,7 @@
 <h2 id="status" class="tna-heading-l tna-heading--no-link-arrow">
   Status
   <a href="#status" aria-hidden="true" title="Jump to Status" tabindex="-1">
-    <i class="fa-solid fa-link"></i>
+    <i class="fa-solid fa-link" aria-hidden="true"></i>
   </a>
 </h2>
 <div class="tna-border-keyline tna-!--margin-top-m">
@@ -11,9 +11,9 @@
     <dd>
       <strong>
         {%- if productionReady %}
-        <i class="fa-solid fa-fw fa-check"></i> Ready for production
+        <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Ready for production
         {%- else %}
-        <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In development
+        <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
         {%- endif %}
       </strong>
     </dd>
@@ -21,54 +21,54 @@
     <dt>Tested without JavaScript</dt>
     <dd>
       {%- if progressiveEnhancementJS == 1 %}
-      <i class="fa-solid fa-fw fa-check"></i> Yes
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
       {%- elseif progressiveEnhancementJS == 2 %}
-      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In progress
       {%- elseif progressiveEnhancementJS == 3 %}
-      <i class="fa-solid fa-fw fa-xmark"></i> No
+      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
       {%- else %}
-      <i class="fa-solid fa-fw fa-question"></i> Unknown
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
     {%- endif %}
     <dt>Tested without CSS</dt>
     <dd>
       {%- if progressiveEnhancementCSS == 1 %}
-      <i class="fa-solid fa-fw fa-check"></i> Yes
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
       {%- elseif progressiveEnhancementCSS == 2 %}
-      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In progress
       {%- elseif progressiveEnhancementCSS == 3 %}
-      <i class="fa-solid fa-fw fa-xmark"></i> No
+      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
       {%- else %}
-      <i class="fa-solid fa-fw fa-question"></i> Unknown
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
     <dt>WCAG 2.2 AA compliant</dt>
     <dd>
       {%- if accessibile == 1 %}
-      <i class="fa-solid fa-fw fa-check"></i> Yes
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
       {%- elseif accessibile == 2 %}
-      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In progress
       {%- else %}
-      <i class="fa-solid fa-fw fa-question"></i> Unknown
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
     {%- if analytics !== 0 %}
     <dt>Analytics integrated</dt>
     <dd>
       {%- if analytics == 1 %}
-      <i class="fa-solid fa-fw fa-check"></i> Yes
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
       {%- elseif analytics == 2 %}
-      <i class="fa-solid fa-fw fa-screwdriver-wrench"></i> In progress
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In progress
       {%- endif %}
     </dd>
     {%- endif %}
     <dt>Documentataion complete</dt>
     <dd>
       {%- if documented %}
-      <i class="fa-solid fa-fw fa-check"></i> Yes
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
       {%- else %}
-      <i class="fa-solid fa-fw fa-xmark"></i> No
+      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
       {%- endif %}
     </dd>
   </dl>
