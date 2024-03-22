@@ -42,6 +42,6 @@ You can configure the breadcrumbs to never collapse by setting the `noCollapse` 
 
 Enable structured data by setting the `structuredData` option to `true`. This will output additional markup that allows search engines to parse more information about your page.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "structured-data", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
-
 Google provides ways to [test your structured data](https://developers.google.com/search/docs/appearance/structured-data).
+
+{{ example({ group: "components", item: "breadcrumbs", example: "structured-data", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
