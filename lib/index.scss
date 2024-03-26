@@ -43,6 +43,7 @@
 
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
 @use "modules/code";
@@ -84,7 +85,7 @@
 .tna-ds-colour-swatch {
   width: 2rem;
   height: 2rem;
-  margin-right: 0.75rem;
+  margin-right: spacing.space(0.75);
 
   display: inline-block;
 
@@ -96,7 +97,7 @@
 
 .app-example-page {
   min-height: auto;
-  padding: 2rem;
+  padding: spacing.space(2);
 }
 
 .tna-header {
@@ -137,7 +138,7 @@
 }
 
 kbd {
-  padding: 0em 0.25em;
+  padding: 0em spacing.space(0.25);
 
   @include typography.detail-font;
   @include colour.tint;

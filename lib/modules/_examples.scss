@@ -1,5 +1,6 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 
 p:has(+ p.tna-\!--no-margin-top) {
   &,
@@ -21,14 +22,14 @@ p:has(+ p.tna-\!--no-margin-top) {
 }
 
 .tna-grid--demo {
-  padding-top: 2rem;
+  padding-top: spacing.space(2);
 
   @include media.on-tiny() {
     padding-top: 1rem;
   }
 
   .tna-column {
-    margin-bottom: 2rem;
+    margin-bottom: spacing.space(2);
 
     position: relative;
 
@@ -43,8 +44,8 @@ p:has(+ p.tna-\!--no-margin-top) {
     }
 
     p {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
+      padding-top: spacing.space(0.25);
+      padding-bottom: spacing.space(0.25);
     }
   }
 }

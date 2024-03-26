@@ -15,7 +15,7 @@ Always use the provided TNA colour palette.
 
 | Colour        | Hex                                                                             |
 | ------------- | ------------------------------------------------------------------------------- |
-| Black         | <span class="tna-ds-colour-swatch" style="background:#000000"></span> `#000000` |
+| Black         | <span class="tna-ds-colour-swatch" style="background:#010101"></span> `#010101` |
 | Grey          | <span class="tna-ds-colour-swatch" style="background:#8c9694"></span> `#8c9694` |
 | Light grey    | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6` |
 | White         | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
@@ -66,9 +66,9 @@ Always use the provided TNA colour palette.
 
 | Colour                 | Light theme                                                                     | Dark theme                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Page background        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4` | <span class="tna-ds-colour-swatch" style="background:#222222"></span> `#222222` |
-| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#ededed"></span> `#ededed` | <span class="tna-ds-colour-swatch" style="background:#333333"></span> `#333333` |
-| Contrasting background | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e` | <span class="tna-ds-colour-swatch" style="background:#111111"></span> `#111111` |
+| Page background        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4` | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223` |
+| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#ededed"></span> `#ededed` | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334` |
+| Contrasting background | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e` | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112` |
 | Base font              | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338` | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
 | Links                  | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8` | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` |
 | Visited links          | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92` | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff` |
