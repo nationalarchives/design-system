@@ -11,7 +11,7 @@ The tabs component can contain multiple tabs of information.
 
 {{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}) }}
 
-{{ status(false, 2, 2, 3, false) }}
+{{ status(false, 2, 2, 2, false) }}
 
 ## Without JavaScript
 
