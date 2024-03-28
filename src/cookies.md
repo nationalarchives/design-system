@@ -4,7 +4,7 @@ title: Cookies
 ---
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
-{% from "nationalarchives/components/message/macro.njk" import tnaMessage %}
+{% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 
 Cookies are files saved on your phone, tablet or computer when you visit a website.
 
@@ -14,8 +14,8 @@ This site has three categories of cookies:
 - [settings](#cookies-that-remember-your-settings)
 - [usage](#cookies-that-measure-website-use)
 
-{{ tnaMessage({
-  message: "JavaScript is not available on your browser. This could be a network issue. Without JavaScript available your cookie preferences cannot be changed.",
+{{ tnaWarning({
+  body: "JavaScript is not available on your browser. This could be a network issue. Without JavaScript available your cookie preferences cannot be changed.",
   classes: "tna-ds--hide-on-js"
 }) }}
 

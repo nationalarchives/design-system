@@ -9,13 +9,13 @@ group: components
 
 Use the textarea component to allow the users to enter a longer string of text information such as feedback.
 
-{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "s" }) }}
 
 {{ status(false, 0, 1, 2, 2, false) }}
 
 ## Preselected
 
-{{ example({ group: "components", item: "textarea", example: "preselected", html: true, nunjucks: true, size: "m", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "textarea", example: "preselected", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
 
 ## Hint
 
@@ -27,4 +27,4 @@ Use the textarea component to allow the users to enter a longer string of text i
 
 ## Inline
 
-{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "m", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}

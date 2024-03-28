@@ -40,7 +40,7 @@
     "@metalsmith/markdown": "^1.10.0",
     "@metalsmith/permalinks": "^2.5.1",
     "@metalsmith/sass": "^1.6.0",
-    "@nationalarchives/frontend": "0.1.49",
+    "@nationalarchives/frontend": "0.1.50",
     "glob": "^10.3.4",
     "gray-matter": "^4.0.3",
     "js-beautify": "^1.14.8",
@@ -52,7 +52,7 @@
     "prismjs": "^1.29.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.2",
     "concurrently": "^8.2.0",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.0"

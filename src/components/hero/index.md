@@ -9,7 +9,7 @@ group: components
 
 Use the hero component to start an article.
 
-{{ example({ group: "components", item: "hero", example: "default", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ group: "components", item: "hero", example: "default", html: true, nunjucks: true, size: "xl" }) }}
 
 {{ status(true, 0, 1, 1, 2, false) }}
 

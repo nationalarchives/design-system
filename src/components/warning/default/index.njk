@@ -1,0 +1,12 @@
+---
+title: Warning
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
+
+{{ tnaWarning({
+  headingLevel: 2,
+  body: "Please note this page references hunger strikes and force feeding, which some people may find upsetting."
+}) }}
