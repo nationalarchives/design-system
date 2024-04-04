@@ -78,7 +78,7 @@ Ou full list of web colours can be found in the [colour variables for TNA Fronte
 
 ### System theme
 
-The system theme follows the operating system preference for `prefers-color-scheme` ([MDN Web Docs - prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)) which can either be `light` or `dark`.
+The system theme can be used with `tna-template--system-theme` and follows the operating system preference for `prefers-color-scheme` ([MDN Web Docs - prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)) which can either be `light` or `dark`.
 
 Using the system theme will either display the [light theme](#light-theme) or [dark theme](#dark-theme), depending on the preference set in the user’s operating system.
 
@@ -125,7 +125,7 @@ The colour tools from TNA Frontend come with a mixin for high-contrast which ena
 
 ## Accent colours
 
-Accent colours can be added on a per-template basis. Add one of the following classes to the `.tna-template` element:
+Accent colours can be added on a per-page basis. Add one of the following classes to the `.tna-template` element:
 
 - `tna-template--black-accent`
 - `tna-template--pink-accent`
@@ -181,13 +181,6 @@ The colours of all elements in an element can be controlled with background clas
 - `tna-background-contrast` &mdash; a contrasting background and text colour
 - `tna-background-accent` &mdash; a background colour based on the current template accent colour
 - `tna-background-accent-light` &mdash; a lighter background colour based on the current template accent colour
-
-For component design, you can also use the SCSS mixins from the `tools/colour` module to acheve the same results:
-
-- `@include colour.tint-background`
-- `@include colour.invert`
-- `@include colour.accent`
-- `@include colour.light-accent-background`
 
 The appropriate colours for all child elements such as text and links will also be set. You do not have to change their colours independently.
 

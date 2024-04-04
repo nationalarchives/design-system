@@ -1,0 +1,57 @@
+---
+title: Form elements for user accounts
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+{% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
+
+<form novalidate>
+  <h1 class="tna-heading-xl">Create an account</h1>
+  {{ tnaTextInput({
+    label: "Enter your first name",
+    headingLevel: 2,
+    headingSize: "m",
+    id: "firstname",
+    name: "firstname",
+    autocomplete: "given-name"
+  }) }}
+  {{ tnaTextInput({
+    label: "Enter your last name",
+    headingLevel: 2,
+    headingSize: "m",
+    id: "surname",
+    name: "surname",
+    autocomplete: "family-name"
+  }) }}
+  {{ tnaTextInput({
+    label: "Enter your email address",
+    headingLevel: 2,
+    headingSize: "m",
+    id: "email",
+    name: "email",
+    autocomplete: "email"
+  }) }}
+  {{ tnaTextInput({
+    label: "Enter your country",
+    headingLevel: 2,
+    headingSize: "m",
+    id: "country",
+    name: "country",
+    autocomplete: "country"
+  }) }}
+  <div class="tna-button-group">
+    {{ tnaButton({
+      text: "Create record",
+      buttonElement: true,
+      buttonType: "submit"
+    }) }}
+    {{ tnaButton({
+      text: "Clear",
+      buttonElement: true,
+      buttonType: "reset",
+      plain: true
+    }) }}
+  </div>
+</form>

@@ -15,8 +15,8 @@
 
 {% block main %}
   {% set headings = contents | headingsList %}
-  {% set groupTitle = group|kebabToSpace|capitalize %}
-  {% set topLevel = groupTitle == title|capitalize %}
+  {% set groupTitle = group | kebabToSpace | capitalize %}
+  {% set topLevel = groupTitle == title | capitalize %}
   {% include "partials/breadcrumbs.njk" %}
   <div class="tna-container">
     <main class="tna-main tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content">
@@ -49,11 +49,11 @@
       <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium tna-!--margin-bottom-s">{{ groupTitle }}</h2>
       {% endif %}
       <ol class="tna-ds-sidebar">
-      {% if not topLevel %}
-        <!--<li class="tna-ds-sidebar__item">
+      {# {% if not topLevel %}
+        <li class="tna-ds-sidebar__item">
           <a href="/design-system/{{ group }}" class="tna-ds-sidebar__link tna-link--no-visited-state">{{ groupTitle }} overview</a>
-        </li>-->
-      {% endif %}
+        </li>
+      {% endif %} #}
       {% for item in collections[group] %}
         {% if item.path == path %}
         <li class="tna-ds-sidebar__item tna-ds-sidebar__item--current">

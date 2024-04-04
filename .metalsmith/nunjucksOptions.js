@@ -187,7 +187,7 @@ const nunjucksOptions = {
       return data.replace(/([a-z]+)-([a-z])/, "$1 $2").toLowerCase();
     },
     headingsList: function (content) {
-      const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>\s*([\w\s\.]+)\s*</gm;
+      const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>\s*([\w\d\s\.\-]+)\s*</gm;
       let headingsRaw = [];
       let tmp;
       while ((tmp = regex.exec(content)) !== null) {
