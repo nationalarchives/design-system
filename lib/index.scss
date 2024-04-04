@@ -117,16 +117,13 @@
 
     cursor: pointer;
 
-    &--dark {
-      .tna-template--dark-theme & {
+    &--light,
+    .tna-template--dark-theme &--dark {
         display: none;
-      }
     }
 
-    &--light {
-      .tna-template--light-theme & {
-        display: none;
-      }
+    .tna-template--dark-theme &--light {
+      display: flex;
     }
   }
 

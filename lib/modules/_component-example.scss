@@ -31,6 +31,10 @@
       padding: spacing.space(1);
     }
 
+    @include colour.on-high-contrast {
+      background-color: #fff;
+    }
+
     &--no-padding {
       padding: 0;
     }

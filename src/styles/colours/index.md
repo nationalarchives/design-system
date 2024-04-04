@@ -95,13 +95,13 @@ Using the system theme will either display the [light theme](#light-theme) or [d
 
 ### Light theme
 
-A light theme can be used with `tna-template--light-theme`.
+The light theme is the default that comes with using `tna-template`.
 
 {{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ### Dark theme
 
-A dark theme can be used with `tna-template--dark-theme`.
+A dark theme can be used by adding the `tna-template--dark-theme` class.
 
 {{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
