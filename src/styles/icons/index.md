@@ -12,6 +12,8 @@ Don’t rely on icons alone to convey meaning. Ensure they are hidden from assis
  
 Icons should appear alongside text at the same font size. Icons on `tna-button` elements are itentionally slightly smaller.
 
+Icons are not included in TNA Frontend by default. The icons are defined in a separate CSS file called `font-awesome.css` which you will also have to include in your application.
+
 ## Call to action icons
 
 The main call to action button on a page can use an icon to add visual impact. Place the icon on the left of the button.
@@ -26,7 +28,7 @@ With call to actions that benefit from an arrow or chevron icon that points to t
 
 ## Brand icons
 
-TNA Frontend doesn’t include [Font Awesome brand icons](https://fontawesome.com/search?o=r&m=free&f=brands) by default. If you include them in you application then you can use the `brandIcon` property of buttons to add a brand icon.
+TNA Frontend doesn’t include [Font Awesome brand icons](https://fontawesome.com/search?o=r&m=free&f=brands) by default.
 
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 
