@@ -107,9 +107,7 @@ A dark theme can be used with `tna-template--dark-theme`.
 
 ## High contrast themes
 
-The high contrast themes are applied on top of the existing light and dark themes with an extra `tna-template--high-contrast-theme` class on the `tna-template` element.
-
-The [system theme](#system-theme) follows the preference for `prefers-contrast` which can be `no-preference`, `more`, `less` or `custom`. See [MDN Web Docs - prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast).
+The high contrast themes are applied on top of the existing light and dark themes. All themes follow the preference for `prefers-contrast` which can be `no-preference`, `more`, `less` or `custom`. See [MDN Web Docs - prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast).
 
 TNA Frontend currently only supports the `prefers-contrast` values of `no-preference` and `more`.
 
@@ -125,14 +123,6 @@ The colour tools from TNA Frontend come with a mixin for high-contrast which ena
 }
 ```
 
-### Light high contrast theme
-
-{{ example({ group: "styles", item: "colours", example: "theme-light-high-contrast", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
-
-### Dark high contrast theme
-
-{{ example({ group: "styles", item: "colours", example: "theme-dark-high-contrast", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
-
 ## Accent colours
 
 Accent colours can be added on a per-template basis. Add one of the following classes to the `.tna-template` element:
@@ -145,6 +135,19 @@ Accent colours can be added on a per-template basis. Add one of the following cl
 - `tna-template--blue-accent`
 
 Elements that can follow the accent colour such as `tna-phase-banner--accent`, `tna-button--accent` and `tna-card--accent` as well as generic classes such as `tna-background-accent` will inherit the accent theme colours.
+
+Accent colours can also be added on a per-element basis. Use one of the following classes to add the appropriate accent colour:
+
+- `tna-accent-black`
+- `tna-accent-pink`
+- `tna-accent-orange`
+- `tna-accent-yellow`
+- `tna-accent-green`
+- `tna-accent-blue`
+
+### Default (no accent colour)
+
+{{ example({ group: "styles", item: "colours", example: "no-accent", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Black
 
