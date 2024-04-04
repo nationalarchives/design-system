@@ -36,8 +36,14 @@ Use the `autocomplete` property to help people fill in forms with their own data
 
 ## Searching
 
-Forms that are used for searching should be designed not produce errors.
+Avoid allowing forms that are used for searching to produce errors.
+
+Searching for dates should use the [date search component](../../components/date-search/). Using this component should mean that there is less chance of producing an error.
+
+Use the [select component](../../components/select/) to offer simple options for sorting.
+
+{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, nunjucksOptions: false, size: "xs" }) }}
 
 ## Backgrounds
 
-Don't use forms within sections that use accent or light accent [block colours](../colours/#block-colours). Use only normal, tinted or contrasting backgrounds.
+Don't use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only regular, tinted or contrasting backgrounds.
