@@ -15,4 +15,4 @@ There are guides to getting started:
 
 ## Using styles, components and patterns
 
-When something is published in the National Archives Design System as a [style](/design-system/styles), [component](/design-system/components) or [pattern](/design-system/patterns) we include details of how and when it’s been tested in user research. This should help you decide whether it’s something you can use or adapt for your service.
+When something is published in the National Archives Design System as a [style](/design-system/styles/), [component](/design-system/components/) or [pattern](/design-system/patterns/) we include details of how and when it’s been tested in user research. This should help you decide whether it’s something you can use or adapt for your service.
