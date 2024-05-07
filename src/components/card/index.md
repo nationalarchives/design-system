@@ -21,7 +21,7 @@ Use larger horizontal cards to draw attention to a specific article.
 
 ## List of cards
 
-Use a [`<menu>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu) styled as a plain list (`<menu class="tna-ul tna-ul--plain">`) to create a list of cards.
+Use a `<ul>` element to create a list of cards.
 
 {{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: false, size: "xl", noPadding: true, nunjucksOptions: false }) }}
 
@@ -29,4 +29,4 @@ Use a [`<menu>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 Cards don't require an image. It could be benificial to use them for a list of pages.
 
-{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: false, size: "xl", noPadding: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: false, size: "xxl", noPadding: true, nunjucksOptions: false }) }}

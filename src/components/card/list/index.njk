@@ -7,8 +7,8 @@ private: true
 {% from "nationalarchives/components/card/macro.njk" import tnaCard %}
 
 <div class="tna-section tna-!--no-padding-bottom">
-  <menu class="tna-ul tna-ul--plain tna-container">
-    {% for i in range(0, 4) -%}
+  <ul class="tna-ul tna-ul--plain tna-container">
+    {% for i in range(0, 3) -%}
     <li class="tna-column tna-column--width-1-3 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
       {{ tnaCard({
         title: "Card " + (i + 1),
@@ -24,5 +24,5 @@ private: true
       }) }}
     </li>
     {% endfor -%}
-  </menu>
+  </ul>
 </div>
