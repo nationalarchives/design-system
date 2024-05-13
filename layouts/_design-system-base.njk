@@ -17,7 +17,7 @@
   {%- set themeAccent = "blue" -%}
 {% elseif group === "performance" %}
   {%- set themeAccent = "orange" -%}
-{% else %}
+{% elseif not themeAccent %}
   {%- set themeAccent = "blue" -%}
 {% endif %}
 
