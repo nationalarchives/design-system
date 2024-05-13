@@ -31,6 +31,14 @@ table {
 
       background-color: #111;
     }
+
+    .tna-template--system-theme & {
+      @media (prefers-color-scheme: dark) {
+        color: #d49;
+
+        background-color: #111;
+      }
+    }
   }
 
   .fa-solid {

@@ -43,7 +43,7 @@ Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to cr
 ```html
 {% raw %}{% extends "nationalarchives/templates/layouts/_prototype-kit.njk" %}
 
-{% set theme = "light" %}
+{% set theme = "dark" %}
 {% set themeAccent = "yellow" %}
 
 {% block pageTitle %}My Service - The National Archives{% endblock %}

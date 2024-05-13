@@ -1,5 +1,7 @@
 {% extends "./_design-system-base.njk" %}
 
+{%- set themeAccent = "pink" -%}
+
 {% block cookies %}
   {% if path != 'cookies' %}
   {{ super() }}

@@ -36,9 +36,9 @@ These cookies do things like remember your preferences and the choices you make,
 
 Settings cookies used on this site are:
 
-| Name                      | Purpose                                              | Expires |
-| ------------------------- | ---------------------------------------------------- | ------- |
-| `dark_theme`              | Saves your preference to a light or dark themed site | 1 year  |
+| Name                      | Purpose                                               | Expires |
+| ------------------------- | ----------------------------------------------------- | ------- |
+| `theme`                   | Saves your preference for a light or dark themed site | 1 year  |
 
 <p aria-live="assertive" class="tna-ds--show-on-js" data-showcookiepreference="settings" data-showcookiepreferenceonaccepted="Cookies that remember your settings have been accepted." data-showcookiepreferenceonrejected="Cookies that remember your settings have been rejected."></p>
 

@@ -124,7 +124,7 @@ pre[class*="language-"] {
   font-style: italic;
 }
 
-.tna-template--dark-theme {
+@mixin dark-theme-code {
   /**
  * a11y-dark theme for JavaScript, CSS, and HTML
  * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
@@ -285,5 +285,15 @@ pre[class*="language-"] {
     .token.url {
       font-weight: normal;
     }
+  }
+}
+
+.tna-template--dark-theme {
+  @include dark-theme-code;
+}
+
+.tna-template--system-theme {
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme-code;
   }
 }

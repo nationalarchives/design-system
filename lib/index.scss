@@ -28,7 +28,7 @@
 // @use "@nationalarchives/frontend/nationalarchives/components/index-grid";
 // @use "@nationalarchives/frontend/nationalarchives/components/pagination";
 @use "@nationalarchives/frontend/nationalarchives/components/phase-banner";
-// @use "@nationalarchives/frontend/nationalarchives/components/picture";
+@use "@nationalarchives/frontend/nationalarchives/components/picture";
 // @use "@nationalarchives/frontend/nationalarchives/components/quick-filters";
 // @use "@nationalarchives/frontend/nationalarchives/components/radios";
 // @use "@nationalarchives/frontend/nationalarchives/components/sensitive-image";
@@ -61,6 +61,10 @@
   > .tna-header + .tna-container,
   > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
     flex: 1;
+  }
+
+  .tna-ul ul {
+    margin-top: 0;
   }
 }
 
@@ -101,37 +105,6 @@
 }
 
 .tna-header {
-  button.tna-header__top-navigation-item-link {
-    padding: 0;
-
-    display: flex;
-
-    font-size: inherit;
-    line-height: 1;
-    text-align: left;
-    font-family: inherit;
-
-    background: none;
-
-    border: none;
-
-    cursor: pointer;
-
-    &--light,
-    .tna-template--dark-theme &--dark {
-      display: none;
-    }
-
-    .tna-template--dark-theme &--light {
-      display: flex;
-    }
-  }
-
-  @include media.on-mobile() {
-    &__top-navigation-items {
-      display: block;
-    }
-  }
 }
 
 kbd {
