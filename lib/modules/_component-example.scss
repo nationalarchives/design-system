@@ -126,6 +126,10 @@
 
       cursor: pointer;
 
+      &::-webkit-details-marker {
+        display: none;
+      }
+
       &:hover {
         @include typography.interacted-text-decoration;
       }
