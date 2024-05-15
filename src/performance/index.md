@@ -6,4 +6,4 @@ group: performance
 order: 5
 ---
 
-[TODO]
+Monitoring the performance of your service and its content is essential to keeping it efficient and relevant.
