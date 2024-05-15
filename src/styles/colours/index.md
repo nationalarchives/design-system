@@ -145,35 +145,33 @@ Accent colours can also be added on a per-element basis. Use one of the followin
 - `tna-accent-green`
 - `tna-accent-blue`
 
-<!--
 ### Default (no accent colour)
 
-{{ example({ group: "styles", item: "colours", example: "no-accent", html: false, nunjucks: false, size: "xl" }) }}
--->
+{{ example({ group: "styles", item: "colours", example: "no-accent", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
-### Black (default)
+### Black
 
-{{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
 ### Pink
 
-{{ example({ group: "styles", item: "colours", example: "accent-pink", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-pink", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
 ### Orange
 
-{{ example({ group: "styles", item: "colours", example: "accent-orange", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-orange", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
 ### Yellow
 
-{{ example({ group: "styles", item: "colours", example: "accent-yellow", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-yellow", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
 ### Green
 
-{{ example({ group: "styles", item: "colours", example: "accent-green", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-green", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
 ### Blue
 
-{{ example({ group: "styles", item: "colours", example: "accent-blue", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "colours", example: "accent-blue", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
 
 ## Block colours
 
@@ -206,4 +204,4 @@ The appropriate colours for all child elements such as text and links will also 
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
-All [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--combinations&viewMode=story) been tested for contrast.
+All [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) been tested for contrast.
