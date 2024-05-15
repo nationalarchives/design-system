@@ -145,11 +145,13 @@ Accent colours can also be added on a per-element basis. Use one of the followin
 - `tna-accent-green`
 - `tna-accent-blue`
 
+<!--
 ### Default (no accent colour)
 
 {{ example({ group: "styles", item: "colours", example: "no-accent", html: false, nunjucks: false, size: "xl" }) }}
+-->
 
-### Black
+### Black (default)
 
 {{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, size: "xl" }) }}
 
