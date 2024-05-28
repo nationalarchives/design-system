@@ -17,16 +17,16 @@ Where possible, avoid overusing the select component. Alice Bartlett gave a talk
 
 ## Preselected
 
-{{ example({ group: "components", item: "select", example: "preselected", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "select", example: "preselected", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "select", example: "hint", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "select", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, size: "s" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}

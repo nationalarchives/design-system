@@ -1,0 +1,12 @@
+---
+title: Details
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/details/macro.njk" import tnaDetails %}
+
+{{ tnaDetails({
+  title: "Details",
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim vehicula magna, et hendrerit quam iaculis a. Mauris in ultricies enim. Donec bibendum est leo, sed dapibus mauris facilisis vitae.</p>"
+}) }}

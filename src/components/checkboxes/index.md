@@ -15,20 +15,20 @@ Checkboxes allow users to post multiple options for the same field.
 
 ## Small
 
-{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, size: "l", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, size: "l" }) }}
 
 ## Preselected
 
-{{ example({ group: "components", item: "checkboxes", example: "preselected", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: true, size: "xs" }) }}

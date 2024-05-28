@@ -108,89 +108,6 @@
     }
   }
 
-  &__details {
-    &:first-of-type {
-      @include colour.colour-border("keyline", 1px, solid, top);
-    }
-
-    summary {
-      padding: spacing.space(0.5) spacing.space(1) spacing.space(0.5)
-        spacing.space(2.75);
-
-      position: relative;
-      z-index: 1;
-
-      @include typography.relative-font-size(16);
-      @include typography.main-font-weight-bold;
-      list-style: none;
-
-      cursor: pointer;
-
-      &::-webkit-details-marker {
-        display: none;
-      }
-
-      &:hover {
-        @include typography.interacted-text-decoration;
-      }
-
-      &::before {
-        width: 0;
-        height: 0;
-
-        position: absolute;
-        left: 1rem;
-        top: calc(50% - 0.5rem);
-
-        @include colour.colour-border(
-          "font-base",
-          #{math.div(math.sqrt(3), 2)}rem
-        );
-        border-top: 0.5rem transparent solid;
-        border-right-width: 0;
-        border-bottom: 0.5rem transparent solid;
-
-        content: "";
-      }
-    }
-
-    &[open] {
-      summary {
-        &::before {
-          top: calc(50% - #{math.div(math.sqrt(3), 4)}rem);
-
-          @include colour.colour-border("font-base");
-          border-top-width: #{math.div(math.sqrt(3), 2)}rem;
-          border-right: 0.5rem transparent solid;
-          border-bottom-width: 0;
-          border-left: 0.5rem transparent solid;
-        }
-      }
-    }
-  }
-
-  &__data {
-    &-table-wrapper {
-      padding: spacing.space(1);
-    }
-  }
-
-  &__details-content {
-    // @include colour.colour-background("background-tint");
-
-    .tna-table {
-      &__caption {
-        padding-top: 0;
-
-        @include typography.relative-font-size(18);
-        @include typography.main-font-weight-bold;
-        line-height: inherit;
-        text-align: left;
-        caption-side: top;
-      }
-    }
-  }
-
   &__code {
     position: relative;
 
@@ -204,6 +121,8 @@
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
       margin: 0;
+
+      border-radius: 0.1px;
 
       .language-css .token.string,
       .style .token.string,
@@ -223,6 +142,44 @@
       top: spacing.space(0.5);
       right: spacing.space(0.5);
       z-index: 1;
+    }
+  }
+
+  .tna-accordion {
+    margin-top: 0;
+
+    &__content {
+      padding: 0;
+    }
+
+    &__details {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .tna-details {
+      margin-left: spacing.space(0.5);
+
+      &__summary {
+        @include typography.relative-font-size(16);
+      }
+
+      &__content {
+        margin-bottom: spacing.space(1);
+      }
+
+      .tna-table-wrapper {
+        width: calc(100% - 26.5px);
+
+        left: 26.5px;
+
+        .tna-table {
+          width: calc(100% - 32px);
+          margin-right: spacing.space(1);
+          margin-left: spacing.space(1);
+        }
+      }
     }
   }
 }

@@ -19,19 +19,19 @@ Use the card component for providing previews to articles and pages.
 
 Use larger horizontal cards to draw attention to a specific article.
 
-{{ example({ group: "components", item: "card", example: "horizontal", html: true, nunjucks: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "card", example: "horizontal", html: true, nunjucks: true }) }}
 
 ## List of cards
 
 Use a `<ul>` element to create a list of cards.
 
-{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: false, size: "xl", noPadding: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: false, size: "xl", noPadding: true }) }}
 
 ### Plain list
 
 Cards don't require an image. It could be benificial to use them for a list of pages.
 
-{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: false, size: "xxl", noPadding: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: false, size: "xxl", noPadding: true }) }}
 
 ## Images
 

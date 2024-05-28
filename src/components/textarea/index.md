@@ -15,16 +15,16 @@ Use the textarea component to allow the users to enter a longer string of text i
 
 ## Preselected
 
-{{ example({ group: "components", item: "textarea", example: "preselected", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "textarea", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "textarea", example: "hint", html: true, nunjucks: true, size: "m", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "textarea", example: "hint", html: true, nunjucks: true, size: "m" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "textarea", example: "error", html: true, nunjucks: true, size: "m", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "textarea", example: "error", html: true, nunjucks: true, size: "m" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "s" }) }}

@@ -8,6 +8,7 @@
 @use "@nationalarchives/frontend/nationalarchives/utilities";
 // @use "@nationalarchives/frontend/nationalarchives/components";
 
+@use "@nationalarchives/frontend/nationalarchives/components/accordion";
 @use "@nationalarchives/frontend/nationalarchives/components/breadcrumbs";
 @use "@nationalarchives/frontend/nationalarchives/components/button";
 @use "@nationalarchives/frontend/nationalarchives/components/card";
@@ -16,6 +17,7 @@
 @use "@nationalarchives/frontend/nationalarchives/components/cookie-banner";
 // @use "@nationalarchives/frontend/nationalarchives/components/date-input";
 // @use "@nationalarchives/frontend/nationalarchives/components/date-search";
+@use "@nationalarchives/frontend/nationalarchives/components/details";
 // @use "@nationalarchives/frontend/nationalarchives/components/error-summary";
 // @use "@nationalarchives/frontend/nationalarchives/components/featured-records";
 @use "@nationalarchives/frontend/nationalarchives/components/footer";

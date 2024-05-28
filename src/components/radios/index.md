@@ -15,20 +15,20 @@ Radios allow users to select a single options for a form field.
 
 ## Small
 
-{{ example({ group: "components", item: "radios", example: "small", html: true, nunjucks: true, size: "l", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "radios", example: "small", html: true, nunjucks: true, size: "l" }) }}
 
 ## Preselected
 
-{{ example({ group: "components", item: "radios", example: "preselected", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "radios", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true, nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "radios", example: "inline", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "radios", example: "inline", html: true, nunjucks: true, size: "xs" }) }}

@@ -1,7 +1,11 @@
+{%- from "nationalarchives/components/accordion/macro.njk" import tnaAccordion -%}
+{%- from "nationalarchives/components/details/macro.njk" import tnaDetails -%}
+
 {% macro example(params) %}
   {% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
   {% set examplePath = exampleRoot + "index.njk" %}
   {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
+  {% set exampleId = params.group + "__" + params.item + "-" + params.example %}
   
   <section class="tna-ds-example">
     {% if not params.noOpenInNewTab %}
@@ -14,83 +18,80 @@
       <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-example__frame tna-ds-example__frame--resizable{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
     </div>
 
+    {% set accordionItems = [] %}
     {% if params.html %}
-    <details class="tna-ds-example__details" name="{{ exampleRoot }}"{% if params.openHTML %} open{% endif %}>
-      <summary>HTML</summary>
-      <div class="tna-ds-example__details-content">
-        <div class="tna-ds-example__code">
-{# This indentation is required so markdown does not interfere #}
-<pre class="language-html"><code class="language-html">{{ getHTMLCode(examplePath) | forceescape }}</code></pre>
-        <div>
-      <div>
-    </details>
+    {% set accordionItems = (accordionItems.push({
+          title: "HTML",
+          body: '<div class="tna-ds-example__code">
+<!-- This indentation is required so markdown does not interfere -->
+<pre class="language-html"><code class="language-html">' + (getHTMLCode(examplePath) | forceescape) + '</code></pre>
+        <div>'
+        }), accordionItems) %}
     {% endif %}
-
     {% if params.nunjucks %}
-    {% set nunjucks = getNunjucksCode(examplePath) | forceescape %}
-    <details class="tna-ds-example__details" name="{{ exampleRoot }}">
-      <summary>Nunjucks</summary>
-      <div class="tna-ds-example__details-content">
-        <div class="tna-ds-example__code">
-{# This indentation is required so markdown does not interfere #}
-<pre class="language-javascript"><code class="language-javascript">{{ nunjucks }}</code></pre>
-        <div>
-      <div>
-    </details>
-    {% if params.nunjucksOptions !== false %}
-    <details class="tna-ds-example__details" name="{{ exampleRoot }}">
-      <summary>Nunjucks options</summary>
-      <div class="tna-ds-example__details-content">
-        {{ exampleOptions(params) }}
-      </div>
-    </details>
+    {% set accordionItems = (accordionItems.push({
+          title: "Nunjucks",
+          body: (
+                  tnaDetails({
+                    title: "Nunjucks options",
+                    body: exampleOptions(params, exampleId)
+                  }) if params.nunjucksOptions !== false else ''
+                ) + '<div class="tna-ds-example__code">
+<!-- This indentation is required so markdown does not interfere -->
+<pre class="language-javascript"><code class="language-javascript">' + (getNunjucksCode(examplePath) | forceescape) + '</code></pre>
+        <div>'
+        }), accordionItems) %}
     {% endif %}
+    
+    {% if accordionItems | length %}
+    {{ tnaAccordion({
+      items: accordionItems,
+      group: exampleRoot
+    }) }}
     {% endif %}
   </section>
 {% endmacro %}
 
-{% macro exampleOptions(params) %}
+{% macro exampleOptions(params, exampleId) %}
   {%- if (params.group == 'components') %}
     {% for table in getMacroOptions(params.item) %}
-      <div class="tna-ds-example__data-table-wrapper">
-        <div class="tna-table-wrapper">
-          <table class="tna-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-            <caption class="tna-table__caption {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
-            <thead class="tna-table__head">
+      <div class="tna-table-wrapper">
+        <table class="tna-table app-options__table" id="options-{{ exampleId }}-{{ table.id }}">
+          <caption class="tna-table__caption {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
+          <thead class="tna-table__head">
+            <tr class="tna-table__row">
+              <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
+              <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
+              <th class="tna-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="tna-table__body">
+            {% for option in table.options -%}
               <tr class="tna-table__row">
-                <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>
-                <th class="tna-table__header app-options__limit-table-cell" scope="col">Type</th>
-                <th class="tna-table__header" scope="col">Description</th>
+                <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
+                <td class="tna-table__cell" width="25%">{{option.type}}</td>
+                <td class="tna-table__cell" width="50%">
+                  {% if (option.required === true) %}
+                    <p>
+                      <strong>Required.</strong>
+                    </p>
+                  {% endif %}
+                  {{ option.description | safe }}
+                  {% if (option.isComponent) -%}
+                    {% if (option.name === "hint" or option.name === "label") %}
+                      <p>See <a href="#options-{{ exampleId }}-{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
+                    {% else %}
+                      <p>See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
+                    {% endif %}
+                  {% endif %}
+                  {% if (option.params) %}
+                    <p>See <a href="#options-{{ exampleId }}-{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
+                  {% endif -%}
+                </td>
               </tr>
-            </thead>
-            <tbody class="tna-table__body">
-              {% for option in table.options -%}
-                <tr class="tna-table__row">
-                  <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
-                  <td class="tna-table__cell" width="25%">{{option.type}}</td>
-                  <td class="tna-table__cell" width="50%">
-                    {% if (option.required === true) %}
-                      <p>
-                        <strong>Required.</strong>
-                      </p>
-                    {% endif %}
-                    {{ option.description | safe }}
-                    {% if (option.isComponent) -%}
-                      {% if (option.name === "hint" or option.name === "label") %}
-                        <p>See <a href="#options-{{ exampleId }}--{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
-                      {% else %}
-                        <p>See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
-                      {% endif %}
-                    {% endif %}
-                    {% if (option.params) %}
-                      <p>See <a href="#options-{{ exampleId }}--{{ option.name }}" class="tna-link--no-visited-state">{{ option.name }}</a>.</p>
-                    {% endif -%}
-                  </td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
     {% endfor %}
   {% endif -%}

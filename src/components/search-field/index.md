@@ -15,8 +15,8 @@ Use the search field component as an entry point into searches.
 
 ## Preselected
 
-{{ example({ group: "components", item: "search-field", example: "preselected", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "search-field", example: "preselected", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "search-field", example: "hint", html: true, nunjucks: true, size: "s", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "search-field", example: "hint", html: true, nunjucks: true, size: "s" }) }}

@@ -15,16 +15,16 @@ Use the text input component to allow the users to enter a short string text inf
 
 ## Preselected
 
-{{ example({ group: "components", item: "text-input", example: "preselected", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "text-input", example: "preselected", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "text-input", example: "hint", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "text-input", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "text-input", example: "error", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "text-input", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "text-input", example: "inline", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "text-input", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}

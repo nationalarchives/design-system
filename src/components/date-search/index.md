@@ -17,16 +17,16 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 ## Preselected
 
-{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "date-search", example: "hint", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "date-search", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "date-search", example: "error", html: true, nunjucks: true, size: "xs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "date-search", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
