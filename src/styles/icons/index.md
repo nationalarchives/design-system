@@ -1,12 +1,11 @@
 ---
 layout: collection-page.njk
 title: Icons
+description: Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 group: styles
 ---
 
 {% from "partials/example.njk" import example %}
-
-Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 
 Don’t rely on icons alone to convey meaning. Ensure they are hidden from assistive technologies with `aria-hidden="true"`.
  
@@ -36,13 +35,13 @@ Use brand icons to add visual information to external site links. Keep the brand
 
 ## Displaying information with icons
 
-Use a [description list](/design-system/styles/lists/#description-lists) to show a list of fields and values. If space allows, the titles can be enhanced with icons.
+Use a [description list](../../styles/lists/#description-lists) to show a list of fields and values. If space allows, the titles can be enhanced with icons.
 
 {{ example({ group: "styles", item: "lists", example: "description-list-icons-plain", html: true, nunjucks: false, size: "s" }) }}
 
 ### Chip lists with icons
 
-For smaller lists of metadata, icons can be used inside a [chip list](/design-system/styles/lists/#chip-lists).
+For smaller lists of metadata, icons can be used inside a [chip list](../../styles/lists/#chip-lists).
 
 Ensure the text in the chips would still make sense even if the icons were removed.
 

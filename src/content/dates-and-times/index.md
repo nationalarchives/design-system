@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Dates and times
+description: Write dates and times in a consistent format.
 group: content
 ---
 

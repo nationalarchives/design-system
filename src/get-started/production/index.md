@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Production
+description: Work with established technologies to create stable, consistent services.
 group: get-started
 order: 2
 ---

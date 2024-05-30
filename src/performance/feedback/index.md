@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Asking for feedback
+description: Allow users to easily provide helpful feedback.
 group: performance
 ---
 

@@ -1,13 +1,12 @@
 ---
 layout: collection-page.njk
 title: Radios
+description: Radios allow users to select a single options for a form field.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
-
-Radios allow users to select a single options for a form field.
 
 {{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, size: "s" }) }}
 

@@ -23,7 +23,6 @@
     {% set accordionItems = (accordionItems.push({
           title: "HTML",
           body: '<div class="tna-ds-example__code">
-<!-- This indentation is required so markdown does not interfere -->
 <pre class="language-html"><code class="language-html">' + (getHTMLCode(examplePath) | forceescape) + '</code></pre>
         <div>'
         }), accordionItems) %}
@@ -37,7 +36,6 @@
                     body: exampleOptions(params, exampleId)
                   }) if params.nunjucksOptions !== false else ''
                 ) + '<div class="tna-ds-example__code">
-<!-- This indentation is required so markdown does not interfere -->
 <pre class="language-javascript"><code class="language-javascript">' + (getNunjucksCode(examplePath) | forceescape) + '</code></pre>
         <div>'
         }), accordionItems) %}

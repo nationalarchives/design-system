@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Media
+description: Provide services for a variety of screen sizes as well as print media.
 group: styles
 ---
 
@@ -69,4 +70,9 @@ Use the mixin to change the layout of the page or remove unnecessary elements wh
 
 TNA Frontend has support for additional styles in high contrast mode.
 
-See [colours - high contrast themes](/design-system/styles/colours/#high-contrast-themes) on how to impliment these.
+See [colours - high contrast themes](../colours/#high-contrast-themes) on how to impliment these.
+
+## Media query units
+
+- https://zellwk.com/blog/media-query-units/
+- https://betterprogramming.pub/px-em-or-rem-examining-media-query-units-in-2021-e00cf37b91a9

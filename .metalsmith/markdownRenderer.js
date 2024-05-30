@@ -60,9 +60,7 @@ markdownRenderer.paragraph = function (text) {
 };
 
 markdownRenderer.link = function (href, title, text) {
-  return `<a href="${href}" class="tna-link--no-visited-state"${
-    title ? ` title="${title}"` : ""
-  }>${text}</a>`;
+  return `<a href="${href}"${title ? ` title="${title}"` : ""}>${text}</a>`;
 };
 
 markdownRenderer.table = function (head, body) {

@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Checkboxes
+description: Checkboxes allow users to post multiple options for the same field.
 group: components
 ---
 

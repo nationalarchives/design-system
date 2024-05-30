@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Colours
+description: Use colours to add interest to your pages and content.
 group: styles
 ---
 

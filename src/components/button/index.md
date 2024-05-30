@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Button
+description: The button component can be used as a call to action link or as a button element for use within forms.
 group: components
 ---
 
@@ -15,7 +16,7 @@ The button component can be used as a call to action link or as a `<button>` ele
 
 ## Icons
 
-Buttons can contain icons. Read more about [using icons in TNA services](/design-system/styles/icons/).
+Buttons can contain icons. Read more about [using icons in TNA services](../../styles/icons/).
 
 ## Button groups
 

@@ -1,14 +1,12 @@
 ---
 layout: collection-page.njk
 title: Cookie banner
-description: Also known as navigation path or cookie crumb
+description: The cookie banner component allows a user to either accept or decline the use of cookies within a service.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
-
-The cookie banner component allows a user to either accept or decline the use of cookies within a service.
 
 The cookie banner is available as part of [TNA Frontend](https://www.npmjs.com/package/@nationalarchives/frontend) as well as a [standalone cookie banner package](https://www.npmjs.com/package/@nationalarchives/frontend-cookie-banner).
 

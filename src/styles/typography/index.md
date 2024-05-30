@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Typography
+description: Utilise a full range of typography to more clearly communicate your content.
 group: styles
 ---
 
@@ -44,7 +45,7 @@ All paragraphs within `.tna-template` are styled with the correct font and colou
 
 Line lengths should not exceed about 110&ndash;120 characters. This increases the readability of the text.
 
-Use the [TNA Frontend grid system](/design-system/styles/layout/#grid) to help limit line lengths. Body copy should be contained in:
+Use the [TNA Frontend grid system](../../styles/layout/#grid) to help limit line lengths. Body copy should be contained in:
 
 - two-thirds width on large devices (`tna-column--width-2-3`)
 - five-sixths width on medium devices (`tna-column--width-5-6-medium`)
@@ -80,7 +81,7 @@ Use bold sparingly. Overuse will make it difficult for users to know which parts
 
 ## Chips
 
-Chips are small "tags" of information. They are used in the [supertitles of heading groups](#headings-with-supertitles) as well as in the top left of some [card components](/design-system/components/card/).
+Chips are small "tags" of information. They are used in the [supertitles of heading groups](#headings-with-supertitles) as well as labels in the top left of some [card components](../../components/card/).
 
 The chip should be short, at most about 2–3 words or 12–15 characters.
 
@@ -92,4 +93,4 @@ You can use a plain style chip to avoid too much contrast in visually complex pa
 
 {{ example({ group: "styles", item: "typography", example: "chip-plain", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 
-Chips can be presented in a list format with a [chip list](/design-system/styles/lists/#chip-lists).
+Chips can be presented in a list format with a [chip list](../lists/#chip-lists).

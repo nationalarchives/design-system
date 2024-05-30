@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Lists
+description: Create lists of content to more easily allow users to find what they need.
 group: styles
 ---
 
@@ -32,8 +33,8 @@ group: styles
 
 ## Chip lists
 
-You can use a chip list to display a list of [chips](/design-system/styles/typography/#chips).
+You can use a chip list to display a list of [chips](../typography/#chips).
 
-The chips in a chip list can be links and can also contain [chip icons](/design-system/styles/icons/#chip-lists-with-icons).
+The chips in a chip list can be links and can also contain [chip icons](../icons/#chip-lists-with-icons).
 
 {{ example({ group: "styles", item: "lists", example: "chip-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}

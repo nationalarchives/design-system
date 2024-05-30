@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Prototyping
+description: Create and iterate on rich and responsive prototypes to test your assumptions.
 group: get-started
 order: 1
 ---
@@ -34,7 +35,7 @@ Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to cr
 
 1. Create a new SCSS file in `app/assets/sass` called `custom.scss` (or whatever you prefer)
 1. Create a new layout in `app/views/layout` called `base.html` (or whatever you prefer) which extends the National Archives prototype kit layout
-1. Set a default `theme` (see [theme colours](/design-system/styles/colours/#theme-colours)) and `themeAccent` (see [accent colours](/design-system/styles/colours/#accent-colours))
+1. Set a default `theme` (see [theme colours](../../styles/colours/#theme-colours)) and `themeAccent` (see [accent colours](../../styles/colours/#accent-colours))
 1. Link in your custom CSS file
 1. Ensure new pages extend your new layout with `{% raw %}{% extends "layouts/base.html" %}{% endraw %}`
 
@@ -58,6 +59,6 @@ Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to cr
 
 The National Archives components can be included in your prototype using the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 
-Examples are given in the [components section](/design-system/components/). Each component example shows all the Nunjucks options available to that component.
+Examples are given in the [components section](../../components/). Each component example shows all the Nunjucks options available to that component.
 
 {{ example({ group: "components", item: "button", example: "default", html: false, nunjucks: true, size: "xxs", noOpenInNewTab: true }) }}

@@ -1,13 +1,14 @@
 ---
 layout: collection-page.njk
 title: Pagination
+description: Use a list-type layout if users need to navigate through pages of similar items.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-Use a list-type layout if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.
+Pagination can be used for example, as a list of search results or a list of cases in a case working system.
 
 {{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }) }}
 

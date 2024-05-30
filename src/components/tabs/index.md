@@ -1,13 +1,12 @@
 ---
 layout: collection-page.njk
 title: Tabs
+description: The tabs component can contain multiple tabs of information.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
-
-The tabs component can contain multiple tabs of information.
 
 {{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}) }}
 

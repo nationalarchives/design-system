@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Card
+description: Use the card component for providing previews to articles and pages.
 group: components
 ---
 

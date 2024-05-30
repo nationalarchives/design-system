@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Forms
+description: Allow users to enter information, search for content or perform tasks.
 group: styles
 ---
 

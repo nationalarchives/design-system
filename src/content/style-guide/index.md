@@ -1,6 +1,7 @@
 ---
 layout: collection-page.njk
 title: Style guide
+description: Write content in the style of The National Archives.
 group: content
 ---
 

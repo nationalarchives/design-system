@@ -1,5 +1,5 @@
 ---
-layout: collection-page.njk
+layout: collection-page-index.njk
 title: Performance
 description: Understand the habits of your users to help you make better decisions about how to run your service.
 group: performance

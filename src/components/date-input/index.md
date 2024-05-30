@@ -1,15 +1,14 @@
 ---
 layout: collection-page.njk
 title: Date input
+description: Use the date input component to allow the user to enter a date when populating data, such as submitting a record.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-Use the date input component to allow the user to enter a date when populating data, such as submitting a record.
-
-For searching by date, use the [date search](/design-system/components/date-search/) component.
+For searching by date, use the [date search](../date-search/) component.
 
 {{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 

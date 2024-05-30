@@ -1,12 +1,11 @@
 ---
 layout: collection-page.njk
 title: Images
+description: Use images to provide additional visual context.
 group: styles
 ---
 
 {% from "partials/example.njk" import example %}
-
-Use images to provide additional visual context.
 
 ## Formats
 

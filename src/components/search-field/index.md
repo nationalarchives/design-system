@@ -1,13 +1,12 @@
 ---
 layout: collection-page.njk
 title: Search field
+description: Use the search field component as an entry point into searches.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
-
-Use the search field component as an entry point into searches.
 
 {{ example({ group: "components", item: "search-field", example: "default", html: true, nunjucks: true, size: "xs" }) }}
 
