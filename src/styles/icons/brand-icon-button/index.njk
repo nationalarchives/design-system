@@ -6,13 +6,8 @@ private: true
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 
-tnaButton({
+{{ tnaButton({
   text: "Watch on YouTube",
   href: "#/youtube",
   brandIcon: "youtube"
-})
-
-<a href="#/youtube" class="tna-button">
-  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-  Watch on YouTube
-</a>
+}) }}
