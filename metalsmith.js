@@ -110,6 +110,11 @@ Metalsmith(__dirname)
         sortBy: "order",
         refer: false,
       },
+      front_page: {
+        pattern: "(styles|components|content|performance)/index.html",
+        sortBy: "order",
+        refer: false,
+      },
       "get-started": {
         pattern: "get-started/*/index.html",
         filterBy: (file) => file.path !== "get-started/index.html",
