@@ -34,8 +34,6 @@ See the [generic page template](https://github.com/nationalarchives/tna-frontend
 | `footer`        | Block for the site’s footer component (e.g. `tnaFooter`)                         |
 | `bodyEnd`       | Contains code that needs to be included at the end of the page (e.g. JavaScript) |
 
-### Block nesting
-
 The blocks are nested in the following way:
 
 - `<html>`

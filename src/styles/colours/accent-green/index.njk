@@ -4,23 +4,17 @@ layout: examples/plain.njk
 private: true
 ---
 
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+{% from "nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner %}
+
 <section class="tna-accent-green">
   <div class="tna-container tna-!--padding-vertical-m">
     <div class="tna-column tna-column--full">
-        <div class="tna-phase-banner tna-phase-banner--accent">
-          <div class="tna-container">
-            <div class="tna-column tna-column--full-tiny">
-              <span class="tna-phase-banner__phase">
-                Beta
-              </span>
-            </div>
-            <div class="tna-column tna-column--flex-1 tna-column--full-tiny">
-              <p class="tna-phase-banner__message">
-                This is a new service - <a href="#">give us your feedback</a> to help improve it.
-              </p>
-            </div>
-          </div>
-        </div>
+      {{ tnaPhaseBanner({
+        phase: "Beta",
+        message: "This is a new service - <a href=\"#\">give us your feedback</a> to help improve it.",
+        accent: true
+      }) }}
     </div>
     <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny tna-!--padding-top-m">
       <hgroup class="tna-hgroup-xl">
@@ -39,8 +33,15 @@ private: true
         <footer class="tna-blockquote__citation">Douglas Adams, <cite>Mostly Harmless</cite></footer>
       </blockquote>
       <div class="tna-button-group">
-        <a href="#" class="tna-button">Primary button</a>
-        <a href="#" class="tna-button tna-button--accent">Accent button</a>
+        {{ tnaButton({
+          text: "Primary button",
+          href: "#"
+        }) }}
+        {{ tnaButton({
+          text: "Accent button",
+          href: "#",
+          accent: true
+        }) }}
       </div>
     </div>
     <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-!--padding-top-m">
@@ -51,8 +52,15 @@ private: true
           <li>Cod</li>
         </ul>
         <div class="tna-button-group tna-button-group--small">
-          <a href="#" class="tna-button">Primary button</a>
-          <a href="#" class="tna-button tna-button--accent">Accent button</a>
+          {{ tnaButton({
+            text: "Primary button",
+            href: "#"
+          }) }}
+          {{ tnaButton({
+            text: "Accent button",
+            href: "#",
+            accent: true
+          }) }}
         </div>
       </aside>
       <aside class="tna-aside tna-aside--tight tna-background-accent-light">
@@ -64,8 +72,15 @@ private: true
           </li>
         </ul>
         <div class="tna-button-group tna-button-group--small">
-          <a href="#" class="tna-button">Primary button</a>
-          <a href="#" class="tna-button tna-button--accent">Accent button</a>
+          {{ tnaButton({
+            text: "Primary button",
+            href: "#"
+          }) }}
+          {{ tnaButton({
+            text: "Accent button",
+            href: "#",
+            accent: true
+          }) }}
         </div>
       </aside>
     </div>

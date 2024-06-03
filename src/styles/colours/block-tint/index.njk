@@ -4,16 +4,27 @@ layout: examples/plain.njk
 private: true
 ---
 
-<div class="tna-accent-blue">
-  <aside class="tna-aside tna-background-tint">
-    <hgroup class="tna-hgroup-xl">
-      <p class="tna-hgroup__supertitle">Supertitle</p>
-      <h1 class="tna-hgroup__title">Title</h1>
-    </hgroup>
-    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Fusce consequat semper sagittis. Quisque magna nisl, vulputate a nunc id, efficitur luctus metus.</p>
-    <div class="tna-button-group">
-      <a href="#" class="tna-button">Primary button</a>
-      <a href="#" class="tna-button tna-button--accent">Accent button</a>
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+<section class="tna-accent-blue tna-background-tint">
+  <div class="tna-container tna-!--padding-vertical-m">
+    <div class="tna-column tna-column--full">
+      <hgroup class="tna-hgroup-xl">
+        <p class="tna-hgroup__supertitle">Supertitle</p>
+        <h1 class="tna-hgroup__title">Title</h1>
+      </hgroup>
+      <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Fusce consequat semper sagittis. Quisque magna nisl, vulputate a nunc id, efficitur luctus metus.</p>
+      <div class="tna-button-group">
+        {{ tnaButton({
+          text: "Primary button",
+          href: "#"
+        }) }}
+        {{ tnaButton({
+          text: "Accent button",
+          href: "#",
+          accent: true
+        }) }}
+      </div>
     </div>
-  </aside>
-</div>
+  </div>
+</section>

@@ -53,20 +53,10 @@
 @use "modules/sidebar";
 @use "modules/typography" as DSTypography;
 
-.tna-template--yellow-accent {
-  .tna-ol li::marker {
-    @include colour.colour-font("font-base");
-  }
-}
-
 .tna-template__body {
   > .tna-header + .tna-container,
   > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
     flex: 1;
-  }
-
-  .tna-ul ul {
-    margin-top: 0;
   }
 }
 
@@ -79,12 +69,6 @@
 .tna-container {
   &--vertically-align {
     align-items: center;
-  }
-}
-
-.tna-column--margin-right-1-12 {
-  @include media.on-smaller-than-large() {
-    margin-right: 0;
   }
 }
 
@@ -106,9 +90,6 @@
   padding: spacing.space(2);
 }
 
-.tna-header {
-}
-
 kbd {
   padding: 0em spacing.space(0.25);
 
@@ -121,8 +102,4 @@ kbd {
   border-radius: 0.25em;
 
   box-shadow: 0 0.125em 0 rgba(0 0 0/0.5);
-
-  .tna-background-tint & {
-    // @include colour.contrast;
-  }
 }
