@@ -205,7 +205,7 @@ The appropriate colours for all child elements such as text and links will also 
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
-We check as many [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided.
+We check as many [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the error summary component doesn't have enough contrast with its surroundings when used within an accented block.
 
 Ensure you check for proper colour contrast in your service for both text and non-text elements:
 
