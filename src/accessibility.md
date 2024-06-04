@@ -127,7 +127,7 @@ When we publish new content, we’ll continue to make sure that it meets accessi
 
 ### Preparation of this accessibility statement
 
-This statement was prepared on 9th November 2023. It was last reviewed on 9th November 2023.
+This statement was prepared on <time datetime="2023-11-09">9 November 2023</time>. It was last reviewed on <time datetime="2023-11-09">9 November 2023</time>.
 
 ## Using the Design System and Frontend in your service
 
