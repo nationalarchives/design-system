@@ -109,11 +109,11 @@ From the TNA Frontend codebase:
 
 ### Testing our products for accessibility
 
-The [National Archives Design System website](https://nationalarchives.github.io/design-system/) was last tested internally for accessibility issues on 9th November 2023.
+The [National Archives Design System website](https://nationalarchives.github.io/design-system/) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
-The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
+The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
-The [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on 9th November 2023.
+The [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
 ### How the National Archives Design System team makes their websites accessible
 
