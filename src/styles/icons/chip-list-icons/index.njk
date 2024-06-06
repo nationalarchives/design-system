@@ -4,24 +4,33 @@ layout: examples/plain.njk
 private: true
 ---
 
-<h1 class="tna-heading-xl">My birthday party</h1>
-<ul class="tna-chip-list">
-    <li class="tna-chip-list__item">
-        <span class="tna-chip">
-            <i class="fa-solid fa-fw fa-people-group" aria-hidden="true"></i>
-            In-person
-        </span>
-    </li>
-    <li class="tna-chip-list__item">
-        <span class="tna-chip">
-            <i class="fa-solid fa-fw fa-money-bill-wave" aria-hidden="true"></i>
-            Free
-        </span>
-    </li>
-    <li class="tna-chip-list__item">
-        <span class="tna-chip">
-            <i class="fa-solid fa-fw fa-wheelchair" aria-hidden="true"></i>
-            Wheelchair accessible
-        </span>
-    </li>
-</ul>
+<dl class="tna-dl-chips">
+    <dt>Published</dt>
+    <dd>
+      <span class="tna-dl-chips__item">
+        <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+        Saturday 28 June 2014
+      </span>
+    </dd>
+    <dt>Author</dt>
+    <dd>
+      <a class="tna-dl-chips__item">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        James Cronan
+      </a>
+    </dd>
+    <dt>Category</dt>
+    <dd>
+      <a class="tna-dl-chips__item">
+        <i class="fa-solid fa-tag" aria-hidden="true"></i>
+        Records and research
+      </a>
+    </dd>
+    <dt>Comments</dt>
+    <dd>
+      <a href="#" class="tna-dl-chips__item">
+        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+        3 comments
+      </a>
+    </dd>
+</dl>

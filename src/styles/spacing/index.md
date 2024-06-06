@@ -14,9 +14,9 @@ A top margin has been applied to some elements within [TNA Frontend](https://git
 The common mixin `space-above` is used to apply a consistent `2rem` margin to the top of elements such as:
 
 - headings and text (`<h1>`&mdash;`<h6>` and `<p>`)
-- lists (`<ul>`, `<ol>` and `<dl>`)
+- lists (`.tna-ul`, `.tna-ol` and `.tna-dl`)
 - components (`.tna-message`, `.tna-card`, `tna-tabs`, `tna-picture`)
-- component groups (`.tna-button-group`, `.tna-chip-list`)
+- component groups (`.tna-button-group`)
 
 This margin is removed when the element is the first child.
 

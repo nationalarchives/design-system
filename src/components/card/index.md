@@ -22,18 +22,6 @@ Use larger horizontal cards to draw attention to a specific article.
 
 {{ example({ group: "components", item: "card", example: "horizontal", html: true, nunjucks: true }) }}
 
-## List of cards
-
-Use a `<ul>` element to create a list of cards.
-
-{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: false, size: "xl", noPadding: true }) }}
-
-### Plain list
-
-Cards don't require an image. It could be benificial to use them for a list of pages.
-
-{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: false, size: "xxl", noPadding: true }) }}
-
 ## Images
 
 Use 3:2 aspect ratio images as the default for thumbnails on card components.
