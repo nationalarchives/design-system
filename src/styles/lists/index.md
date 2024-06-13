@@ -35,6 +35,16 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 
 {{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: false, size: "xl", noPadding: true }) }}
 
+## Dashed lists
+
+### Dashed unordered lists
+
+{{ example({ group: "styles", item: "lists", example: "unordered-list-dashed", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
+
+### Dashed ordered lists
+
+{{ example({ group: "styles", item: "lists", example: "ordered-list-dashed", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
+
 ## Plain lists
 
 ### Plain unordered lists
