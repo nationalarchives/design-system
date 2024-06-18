@@ -81,7 +81,7 @@ Use bold sparingly. Overuse will make it difficult for users to know which parts
 
 ## Chips
 
-Chips are small "tags" of information. They are used in the [supertitles of heading groups](#headings-with-supertitles) as well as labels in the top left of some [card components](../../components/card/).
+Chips are small "tags" of information. They are used in the [supertitles of heading groups](#headings-with-supertitles) as well as labels in the top left of some [card components](../../components/card/) and [index grid items](../../components/index-grid/).
 
 The chip should be short, at most about 2–3 words or 12–15 characters.
 
