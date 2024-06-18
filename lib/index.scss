@@ -73,7 +73,7 @@
   }
 }
 
-.tna-sidebar__item-children {
+.tna-sidebar--pages .tna-sidebar__item-children {
   @include media.on-mobile {
     display: none;
   }
