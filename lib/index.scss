@@ -37,6 +37,7 @@
 // @use "@nationalarchives/frontend/nationalarchives/components/search-field";
 // @use "@nationalarchives/frontend/nationalarchives/components/search-filters";
 // @use "@nationalarchives/frontend/nationalarchives/components/select";
+@use "@nationalarchives/frontend/nationalarchives/components/sidebar";
 @use "@nationalarchives/frontend/nationalarchives/components/skip-link";
 // @use "@nationalarchives/frontend/nationalarchives/components/tabs";
 // @use "@nationalarchives/frontend/nationalarchives/components/text-input";
@@ -50,7 +51,7 @@
 
 @use "modules/code";
 @use "modules/component-example";
-@use "modules/sidebar";
+// @use "modules/sidebar" as sidebarOld;
 @use "modules/typography" as DSTypography;
 
 .tna-template__body {
@@ -62,13 +63,19 @@
 
 .tna-button {
   &--large {
-    @include typography.relative-font-size(24);
+    @include typography.font-size(24);
   }
 }
 
 .tna-container {
   &--vertically-align {
     align-items: center;
+  }
+}
+
+.tna-sidebar__item-children {
+  @include media.on-mobile {
+    display: none;
   }
 }
 

@@ -1,0 +1,56 @@
+---
+title: Sidebar - sections
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar %}
+
+{{ tnaSidebar({
+  headingLevel: 2,
+  heading: "On this page",
+  items: [
+    {
+      text: "A band of guerrillas",
+      href: "#",
+      current: true
+    },
+    {
+      text: "War begins",
+      href: "#"
+    },
+    {
+      text: "Forming the ERC",
+      href: "#"
+    },
+    {
+      text: "The fall of Hong Kong",
+      href: "#"
+    },
+    {
+      text: "The ERC's guerrilla activities",
+      href: "#"
+    },
+    {
+      text: "Chan Chak’s escape",
+      href: "#"
+    },
+    {
+      text: "Francis Lee and Lieutenant Colonel Ride",
+      href: "#"
+    },
+    {
+      text: "Raymond Wong's recommendation",
+      href: "#"
+    },
+    {
+      text: "Co-operation between the ERC and BAAG",
+      href: "#"
+    },
+    {
+      text: "The ERC's legacy",
+      href: "#"
+    }
+  ],
+  type: "sections"
+}) }}

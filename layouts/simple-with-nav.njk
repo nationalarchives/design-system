@@ -1,5 +1,7 @@
 {% extends "./_design-system-base.njk" %}
 
+{% from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar %}
+
 {%- set themeAccent = "pink" -%}
 
 {% block cookies %}
@@ -20,43 +22,35 @@
     </div>
   </div>
   <div class="tna-container">
-    <nav class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="Table of contents">
-      <!--<h2 class="tna-heading-m">Table of contents</h2>-->
-      {% if headings %}
-      {# TODO: Make a marco for this recursion #}
-      <ol class="tna-ds-sidebar tna-ds-sidebar--sticky">
-        {%- for heading in headings %}
-        <li class="tna-ds-sidebar__section">
-          <a href="#{{ heading.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">
-            {{ heading.title }}
-          </a>
-          {%- if heading.children %}
-          <ol class="tna-ds-sidebar__sections">
-            {%- for child in heading.children %}
-            <li class="tna-ds-sidebar__section">
-              <a href="#{{ child.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">
-                {{ child.title }}
-              </a>
-              {# {%- if child.children %}
-              <ol class="tna-ds-sidebar__sections">
-                {%- for childChild in child.children %}
-                <li class="tna-ds-sidebar__section">
-                  <a href="#{{ childChild.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state">
-                    {{ childChild.title }}
-                  </a>
-                </li>
-              {%- endfor %}
-              </ol>
-              {%- endif %} #}
-            </li>
-          {%- endfor %}
-          </ol>
-          {%- endif %}
-        </li>
-        {%- endfor %}
-      </ol>
-      {% endif %}
-    </nav>
+    {% if headings %}
+    <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="Table of contents">
+      {% set items = [] %}
+      {% for heading in headings %}
+        {% set children = None %}
+        {% if heading.children %}
+          {% set children = [] %}
+          {% for child in heading.children %}
+            {% set children = children.concat({
+              text: child.title,
+              href: "#" + child.href
+            }) %}
+          {% endfor %}
+        {% endif %}
+        {% set items = items.concat({
+          text: heading.title,
+          href: "#" + heading.href,
+          children: children
+        }) %}
+      {% endfor %}
+      {{ tnaSidebar({
+        headingLevel: 2,
+        heading: "Contents",
+        items: items,
+        type: "contents",
+        sticky: false
+      }) }}
+    </div>
+    {% endif %}
     <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny tna-section">
       {{ contents | safe }}
     </div>

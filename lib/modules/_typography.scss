@@ -14,7 +14,7 @@
 
 code {
   @include typography.detail-font;
-  @include typography.relative-font-size(16);
+  @include typography.font-size(16);
 }
 
 p,
@@ -76,7 +76,7 @@ table {
     display: inline-block;
     visibility: hidden;
 
-    @include typography.relative-font-size(16);
+    @include typography.font-size(16);
     vertical-align: middle;
     line-height: 1.5rem;
     text-align: center;

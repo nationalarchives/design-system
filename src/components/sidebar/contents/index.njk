@@ -1,0 +1,61 @@
+---
+title: Sidebar - contents
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar %}
+
+{{ tnaSidebar({
+  headingLevel: 2,
+  heading: "Contents",
+  items: [
+    {
+      text: "Accessibility statement",
+      href: "#"
+    },
+    {
+      text: "Feedback and contact information",
+      href: "#"
+    },
+    {
+      text: "Enforcement procedure",
+      href: "#"
+    },
+    {
+      text: "Compliance status",
+      href: "#"
+    },
+    {
+      text: "Non-accessible content",
+      href: "#",
+      children: [
+        {
+          text: "Non-compliance with the accessibility regulations",
+          href: "#"
+        },
+        {
+          text: "Disproportionate burden",
+          href: "#"
+        },
+        {
+          text: "Content that’s not within the scope of the accessibility regulations",
+          href: "#"
+        }
+      ]
+    },
+    {
+      text: "Other identified and tracked accessibility concerns",
+      href: "#"
+    },
+    {
+      text: "Testing our products for accessibility",
+      href: "#"
+    },
+    {
+      text: "How the National Archives Design System team makes their websites accessible",
+      href: "#"
+    }
+  ],
+  type: "contents"
+}) }}

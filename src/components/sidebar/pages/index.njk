@@ -1,0 +1,63 @@
+---
+title: Sidebar - pages
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar %}
+
+{{ tnaSidebar({
+  headingLevel: 2,
+  heading: "Components",
+  items: [
+  
+    {
+      text: "Accordion",
+      href: "#"
+    },
+    {
+      text: "Breadcrumbs",
+      href: "#"
+    },
+    {
+      text: "Button",
+      href: "#",
+      current: true,
+      children: [
+        {
+          text: "Status",
+          href: "#"
+        },
+        {
+          text: "Icons",
+          href: "#"
+        },
+        {
+          text: "Button groups",
+          href: "#"
+        }
+      ]
+    },
+    {
+      text: "Card",
+      href: "#"
+    },
+    {
+      text: "Checkboxes",
+      href: "#"
+    },
+    {
+      text: "Compound filters",
+      href: "#"
+    },
+    {
+      text: "Cookie banner",
+      href: "#"
+    },
+    {
+      text: "Date input",
+      href: "#"
+    }
+  ],
+  type: "pages"
+}) }}
