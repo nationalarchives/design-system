@@ -25,9 +25,9 @@ The description lists can be plain or contain [icons](../icons/#displaying-infor
 
 You can use a chip list to display a list of [chips](../typography/#chips).
 
-The chips in a chip list can be links and can also contain [chip icons](../icons/#chip-lists-with-icons).
+The chips in a chip list can be links and can also contain [chip icons](../icons/#chip-lists-with-icons). If necessary, the chips can be a plain style with no background.
 
-{{ example({ group: "styles", item: "lists", example: "chip-list", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
+{{ example({ group: "styles", item: "lists", example: "chip-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
 ## Card lists
 
