@@ -25,13 +25,13 @@ With call to actions that benefit from an arrow or chevron icon that points to t
 
 {{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
 
-## Brand icons
+<!-- ## Brand icons
 
 TNA Frontend doesn’t include [Font Awesome brand icons](https://fontawesome.com/search?o=r&m=free&f=brands) by default.
 
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 
-{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }} -->
 
 ## Displaying information with icons
 
