@@ -9,9 +9,11 @@ group: styles
 
 ## Global spacing
 
+One spacing unit is defined as `16px` by default. All margins and paddings are based off this base unit.
+
 A top margin has been applied to some elements within [TNA Frontend](https://github.com/nationalarchives/tna-frontend) in order to space them evenly on a page.
 
-The common mixin `space-above` is used to apply a consistent `2rem` margin to the top of elements such as:
+The common mixin `space-above` is used to apply a consistent `2` units (`32px`) margin to the top of elements such as:
 
 - headings and text (`<h1>`&mdash;`<h6>` and `<p>`)
 - lists (`.tna-ul`, `.tna-ol` and `.tna-dl`)
@@ -25,9 +27,9 @@ This margin is removed when the element is the first child.
 Adding margins to the top of elements means we can chose how much of a margin to add based on the element itself. As an example, a `<ul>` element might need less space above it than a `<table>` element:
 
 ```css
-p     { margin-top: 1rem; } /* the p is separated from anything above by 1rem */
-ul    { margin-top: 2rem; } /* the ul is separated from anything above by 2rem */
-table { margin-top: 3rem; } /* the table is separated from anything above by 3rem */
+p     { margin-top: 16px; } /* the p is separated from anything above by 16px */
+ul    { margin-top: 32px; } /* the ul is separated from anything above by 32px */
+table { margin-top: 48px; } /* the table is separated from anything above by 48px */
 ```
 
 <!-- The alternative would be to use more complex and less supported selectors to add margin to the bottom of the elements, overwriting the same property every time:
@@ -97,12 +99,14 @@ The `property` and `direction` options are the same as [removing space](#removin
 
 `size` options:
 
-- `xs`
-- `s`
-- `m`
-- `l`
-- `xl`
-- `xxl`
+| Size  | Size on large and medium devices | Size on small and tiny devices |
+| ----- | -------------------------------- | ------------------------------ |
+| `xs`  | `0.5` units (`8px`)              | `0.5` units (`8px`)            |
+| `s`   | `1` units (`16px`)               | `0.75` units (`12px`)          |
+| `m`   | `2` units (`32px`)               | `1.5` units (`24px`)           |
+| `l`   | `3` units (`48px`)               | `2` units (`32px`)             |
+| `xl`  | `5` units (`80px`)               | `3` units (`48px`)             |
+| `xxl` | `8` units (`128px`)              | `5` units (`80px`)             |
 
 The format for the extra spacing override classes is:
 
