@@ -18,24 +18,17 @@
 {% block main %}
   {% set headings = contents | headingsList %}
   {% set groupTitle = group | kebabToSpace | capitalize %}
-  {% set topLevel = groupTitle == title | capitalize %}
   {% include "partials/breadcrumbs.njk" %}
   <div class="tna-container">
     <main class="tna-main tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section" id="main-content">
-      {% if topLevel %}
-      <h1 class="tna-heading-xl">
-        {{ title }}
-      </h1>
-      {% else %}
       <hgroup class="tna-hgroup-xl">
         <p class="tna-hgroup__supertitle">{{ groupTitle }}</p>
         <h1 class="tna-hgroup__title">{{ title }}</h1>
       </hgroup>
-      {% endif %}
       {% if description %}
       <p class="tna-large-paragraph">{{ description }}</p>
       {% endif %}
-      {% if not topLevel and headings %}
+      {% if headings %}
       <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium">Contents</h2>
       <ol class="tna-ol tna-!--hide-on-large tna-!--hide-on-medium">
         {%- for heading in headings %}
@@ -75,49 +68,13 @@
         items: items,
         type: "pages"
       }) }}
-      {#
-      {% if not topLevel %}
-      <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium tna-!--margin-bottom-s">{{ groupTitle }}</h2>
-      {% endif %}
-      <ol class="tna-ds-sidebar">
-      {% if not topLevel %}
-        <!-- <li class="tna-ds-sidebar__item">
-          <a href="/design-system/{{ group }}" class="tna-ds-sidebar__link tna-link--no-visited-state-">{{ groupTitle }} overview</a>
-        </li> -->
-      {% endif %}
-      {% for item in collections[group] %}
-        {% if item.path == path %}
-        <li class="tna-ds-sidebar__item tna-ds-sidebar__item--current">
-          <a href="/design-system/{{ item.path }}" class="tna-ds-sidebar__link tna-link--no-visited-state-">{{ item.title }}</a>
-          {% if headings %}
-          <ol class="tna-ds-sidebar__sections tna-!--hide-on-small tna-!--hide-on-tiny">
-            {%- for heading in headings %}
-            <li class="tna-ds-sidebar__section">
-              <a href="#{{ heading.href }}" class="tna-ds-sidebar__section-link tna-link--no-visited-state-">
-                {{ heading.title }}
-              </a>
-            </li>
-            {%- endfor %}
-          </ol>
-          {% endif %}
-        </li>
-        {% else %}
-        <li class="tna-ds-sidebar__item">
-          <a href="/design-system/{{ item.path }}" class="tna-ds-sidebar__link tna-link--no-visited-state-">{{ item.title }}</a>
-        </li>
-        {% endif %}
-      {% endfor %}
-      </ol>
-      #}
     </div>
-    {% if not topLevel %}
     <div class="tna-column tna-column--full">
       <hr>
       <p>
         <a href="#top" class="tna-button tna-button--small tna-button--plain"><i class="fa-solid fa-arrow-up"></i>Back to top</a>
       </p>
     </div>
-    {% endif %}
   </div>
 {% endblock %}
 

@@ -18,7 +18,6 @@
 {% block main %}
   {% set headings = contents | headingsList %}
   {% set groupTitle = group | kebabToSpace | capitalize %}
-  {% set topLevel = groupTitle == title | capitalize %}
   <div class="tna-background-accent">
     {% include "partials/breadcrumbs.njk" %}
   </div>
@@ -29,7 +28,7 @@
           <h1 class="tna-heading-xl">
             {{ title }}
           </h1>
-          <p class="tna-large-paragraph">{{ description }}</p>
+          <p class="tna-scene-setter">{{ description }}</p>
         </div>
       </div>
     </div>

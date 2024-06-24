@@ -59,7 +59,7 @@ Using the standard widths that the grid system provides, these classes produce l
 
 You can use a larger paragraph as an introduction to the page or section. 
 
-{{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "s", openHTML: true }) }}
+{{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
 ### Small
 
@@ -79,7 +79,7 @@ Use bold sparingly. Overuse will make it difficult for users to know which parts
 
 Use the scene setter as a stylistic alternative to the [large body text](#large).
 
-{{ example({ group: "styles", item: "typography", example: "scene-setter", html: true, nunjucks: false, size: "s", openHTML: true }) }}
+{{ example({ group: "styles", item: "typography", example: "scene-setter", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
 ## Blockquotes
 
