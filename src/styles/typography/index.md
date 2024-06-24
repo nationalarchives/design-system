@@ -75,6 +75,12 @@ Use bold sparingly. Overuse will make it difficult for users to know which parts
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs-strong", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 
+### Scene setter
+
+Use the scene setter as a stylistic alternative to the [large body text](#large).
+
+{{ example({ group: "styles", item: "typography", example: "scene-setter", html: true, nunjucks: false, size: "s", openHTML: true }) }}
+
 ## Blockquotes
 
 {{ example({ group: "styles", item: "typography", example: "blockquote", html: true, nunjucks: false, size: "s", openHTML: true }) }}
