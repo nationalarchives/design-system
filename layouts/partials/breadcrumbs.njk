@@ -8,13 +8,15 @@
   }] %}
   {# {% if pathParts.length > 1 %} #}
     {% for part in pathParts %}
+      {% if loop.index < pathParts | length - 1 %}
       {% set pathPart = pathParts.slice(0, loop.index) %}
       {% if loop.index < pathParts.length %}
       {% set pathText = pathPart.slice(-1).toString() %}
       {% set breadcrumbs = breadcrumbs.concat({
         text: pathText | replace("-", " ") | capitalize,
-        href: '/design-system/' + pathPart.join('/')
+        href: '/design-system/' + pathPart.join('/') + '/'
       }) %}
+      {% endif %}
       {% endif %}
     {% endfor %}
     <div class="tna-ds-breadcrumbs-wrapper">
