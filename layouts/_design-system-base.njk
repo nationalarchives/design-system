@@ -29,7 +29,7 @@
   {% if description %}
   <meta name="description" content="{{ description }}">
   {% endif %}
-  <link rel="canonical" href="https://nationalarchives.github.io/design-system/{{ path }}{% if path %}/{% endif %}">
+  <link rel="canonical" href="https://nationalarchives.github.io/design-system/{{ path.replace('index.html', '') }}{% if path %}{% endif %}">
   <meta name="google-site-verification" content="0vB4hp9dlNd2ozuQUaaBgEJXjgEcs2BD_6B7LqKLjR4">
   <link rel="manifest" href="/design-system/static/manifest.json">
   <style>.tna-ds--show-on-js{display: none !important;}</style>
@@ -65,7 +65,7 @@
   {% for top in collections.top %}
     {% set topLevelNavigation = topLevelNavigation.concat({
       text: top.title,
-      href: "/design-system/" + top.path,
+      href: "/design-system/" + top.path.replace("index.html", ""),
       selected: top.path.replace("index.html", "") in path.replace("index.html", "")
     }) %}
   {% endfor %}

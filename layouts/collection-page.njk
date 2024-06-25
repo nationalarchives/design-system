@@ -57,7 +57,7 @@
         {% endif %}
         {% set items = items.concat({
           text: item.title,
-          href: "/design-system/" + item.path,
+          href: "/design-system/" + item.path.replace("index.html", ""),
           children: children,
           current: current
         }) %}

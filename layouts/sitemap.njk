@@ -17,7 +17,7 @@
         -->
         {%- for section in collections.top %}
         <h2 class="tna-heading-l">
-          <a href="/design-system/{{ section.path }}" class="tna-link--no-visited-state">{{ section.title }}</a>
+          <a href="/design-system/{{ section.path.replace('index.html', '') }}" class="tna-link--no-visited-state">{{ section.title }}</a>
         </h2>
         {% if section.description %}
           <p>{{ section.description }}</p>
@@ -25,7 +25,7 @@
         <ul class="tna-ul">
           {%- for page in collections[section.group] %}
           <li>
-            <a href="/design-system/{{ page.path }}" class="tna-link--no-visited-state">{{ page.title }}</a>
+            <a href="/design-system/{{ page.path.replace('index.html', '') }}" class="tna-link--no-visited-state">{{ page.title }}</a>
             <!--
             {% if page.description %} &mdash; {{ page.description }}{% endif %}
             -->

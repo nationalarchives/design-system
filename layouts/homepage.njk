@@ -53,7 +53,7 @@
             actions: [
               {
                 text: "Browse " + (item.title | lower),
-                href: "/design-system/" + item.path,
+                href: "/design-system/" + item.path.replace("index.html", ""),
                 classes: "tna-link--no-visited-state"
               }
             ]
