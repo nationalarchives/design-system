@@ -6,7 +6,7 @@ description: Designing services for The National Archives
 
 ## What’s new
 
-**11 July 2024**: We've released TNA Frontend v0.1.56
+**11 July 2024**: We've released TNA Frontend v0.1.65
 
 This release brings an updated [gallery component](./components/gallery/) as well as a new [files list component](./components/files/).
 
@@ -14,4 +14,4 @@ The [accordion component](./components/accordion/) has been refactored for bette
 
 There are also a number of key improvements to print styles.
 
-Read the [full release notes](https://github.com/nationalarchives/tna-frontend/releases/tag/v0.1.56) to see what’s changed.
+Read the [full release notes](https://github.com/nationalarchives/tna-frontend/releases/tag/v0.1.65) to see what’s changed.
