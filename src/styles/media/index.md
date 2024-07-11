@@ -52,19 +52,11 @@ The available mixins are:
 
 ## Print
 
-The media tools from TNA Frontend also come with a print styles mixin.
+TNA Frontend includes a separate `print.css` stylesheet.
 
-Use the mixin to change the layout of the page or remove unnecessary elements when printing.
+The stylesheet will hide some page elements when printing such as the header and footer components.
 
-```css
-@use "@nationalarchives/frontend/nationalarchives/tools/media";
-
-.my-breadcrumbs {
-  @include media.on-print {
-    display: none;
-  }
-}
-```
+Other elements can be hidden with the class `tna-!--hide-on-print`.
 
 ## High contrast
 
