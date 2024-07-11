@@ -24,7 +24,7 @@ p:has(+ p.tna-\!--no-margin-top) {
 .tna-grid--demo {
   padding-top: spacing.space(2);
 
-  @include media.on-tiny() {
+  @include media.on-tiny {
     padding-top: 1rem;
   }
 
@@ -33,13 +33,15 @@ p:has(+ p.tna-\!--no-margin-top) {
 
     position: relative;
 
-    text-align: center;
     line-height: 3rem;
 
-    @include colour.contrast;
+    text-align: center;
+
     background-clip: content-box;
 
-    @include media.on-tiny() {
+    @include colour.contrast;
+
+    @include media.on-tiny {
       margin-bottom: 1rem;
     }
 

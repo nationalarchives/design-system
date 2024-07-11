@@ -24,7 +24,7 @@
           title: "HTML",
           body: '<div class="tna-ds-example__code">
 <pre class="language-html"><code class="language-html">' + (getHTMLCode(examplePath) | forceescape) + '</code></pre>
-        <div>'
+        </div>'
         }), accordionItems) %}
     {% endif %}
     {% if params.nunjucks %}
@@ -37,14 +37,16 @@
                   }) if params.nunjucksOptions !== false else ''
                 ) + '<div class="tna-ds-example__code">
 <pre class="language-javascript"><code class="language-javascript">' + (getNunjucksCode(examplePath) | forceescape) + '</code></pre>
-        <div>'
+        </div>'
         }), accordionItems) %}
     {% endif %}
     
     {% if accordionItems | length %}
     {{ tnaAccordion({
+      itemHeadingLevel: 3,
       items: accordionItems,
-      group: exampleRoot
+      group: exampleRoot,
+      id: exampleId
     }) }}
     {% endif %}
   </section>

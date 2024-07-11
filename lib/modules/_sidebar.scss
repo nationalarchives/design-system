@@ -12,9 +12,10 @@
   &--sticky {
     max-height: calc(100vh - 2rem);
 
+    overflow: auto;
+
     position: sticky;
     top: spacing.space(1);
-    overflow: auto;
   }
 
   &__item {
@@ -28,6 +29,8 @@
       padding-left: spacing.space(1.25);
 
       &::before {
+        content: "";
+
         width: 0.375rem;
 
         display: block;
@@ -38,21 +41,18 @@
         left: 0;
 
         @include colour.accent;
-
-        content: "";
       }
     }
+  }
+
+  &__link {
   }
 
   &__item--current > &__link {
     @include typography.main-font-weight-bold;
   }
 
-  &__item--current > &__sections {
-    padding-left: 0;
-  }
-
-  &__link {
+  &__section {
   }
 
   &__sections {
@@ -65,16 +65,17 @@
       align-items: baseline;
 
       &::before {
+        content: "—";
+
         margin-right: spacing.space(0.25);
 
         display: inline-block;
-
-        content: "—";
       }
     }
   }
 
-  &__section {
+  &__item--current > &__sections {
+    padding-left: 0;
   }
 
   & > &__section + &__section {

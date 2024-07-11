@@ -8,6 +8,6 @@ group: components
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-{{ example({ group: "components", item: "gallery", example: "default", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: "gallery", example: "default", html: true, nunjucks: true, size: "xl" }) }}
 
-{{ status(false, 3, 3, 3, false) }}
+{{ status(false, 1, 1, 2, 2, false) }}

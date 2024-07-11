@@ -27,7 +27,7 @@
 
     background-color: #f4f4f4;
 
-    @include media.on-mobile() {
+    @include media.on-mobile {
       padding: spacing.space(1);
     }
 
@@ -124,13 +124,15 @@
 
       border-radius: 0.1px;
 
-      .language-css .token.string,
-      .style .token.string,
+      /* stylelint-disable */
       .token.entity,
       .token.operator,
-      .token.url {
+      .token.url,
+      .language-css .token.string,
+      .style .token.string {
         background-color: transparent;
       }
+      /* stylelint-enable */
 
       &.padded {
         padding-top: spacing.space(3.5);

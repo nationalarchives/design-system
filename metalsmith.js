@@ -32,7 +32,10 @@ Metalsmith(__dirname)
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
-    metalsmithVersion: packageInfo.dependencies.metalsmith.replace(/^[\^]/, ""),
+    metalsmithVersion: packageInfo.devDependencies.metalsmith.replace(
+      /^[\^]/,
+      "",
+    ),
     tnaFrontendVersion: packageInfo.dependencies[
       "@nationalarchives/frontend"
     ].replace(/^[\^]/, ""),
@@ -158,6 +161,7 @@ Metalsmith(__dirname)
       entries: {
         "lib/index.scss": "css/index.css",
         "lib/all.scss": "css/all.css",
+        "lib/print.scss": "css/print.css",
         "lib/fa.scss": "css/fa.css",
       },
     }),

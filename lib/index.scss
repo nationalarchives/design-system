@@ -20,6 +20,7 @@
 @use "@nationalarchives/frontend/nationalarchives/components/details";
 // @use "@nationalarchives/frontend/nationalarchives/components/error-summary";
 // @use "@nationalarchives/frontend/nationalarchives/components/featured-records";
+// @use "@nationalarchives/frontend/nationalarchives/components/files";
 @use "@nationalarchives/frontend/nationalarchives/components/footer";
 // @use "@nationalarchives/frontend/nationalarchives/components/gallery";
 // @use "@nationalarchives/frontend/nationalarchives/components/global-header";
@@ -54,13 +55,6 @@
 // @use "modules/sidebar" as sidebarOld;
 @use "modules/typography" as DSTypography;
 
-.tna-template__body {
-  > .tna-header + .tna-container,
-  > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
-    flex: 1;
-  }
-}
-
 .tna-button {
   &--large {
     @include typography.font-size(24);
@@ -70,6 +64,13 @@
 .tna-container {
   &--vertically-align {
     align-items: center;
+  }
+}
+
+.tna-template__body {
+  > .tna-header + .tna-container,
+  > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
+    flex: 1;
   }
 }
 
@@ -88,7 +89,7 @@
 
   vertical-align: bottom;
 
-  border: 1px rgb(0 0 0/0.2) solid;
+  border: 1px rgb(0 0 0 / 20%) solid;
   border-radius: 100%;
 }
 
@@ -98,15 +99,15 @@
 }
 
 kbd {
-  padding: 0em spacing.space(0.25);
+  padding: 0 spacing.space(0.25);
 
   @include typography.detail-font;
   @include colour.tint;
   line-height: 1;
   vertical-align: baseline;
 
-  border: 1px rgba(0 0 0/0.5) solid;
+  border: 1px rgba(0 0 0 / 50%) solid;
   border-radius: 0.25em;
 
-  box-shadow: 0 0.125em 0 rgba(0 0 0/0.5);
+  box-shadow: 0 0.125em 0 rgba(0 0 0 / 50%);
 }

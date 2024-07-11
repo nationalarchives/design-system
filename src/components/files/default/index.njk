@@ -1,0 +1,36 @@
+---
+title: Files
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/files/macro.njk" import tnaFiles %}
+
+{{ tnaFiles({
+  items: [
+    {
+      text: "Preservation policy part 1",
+      href: "#",
+      fileType: "PDF",
+      fileSize: "1.7MB",
+      fileExtent: "120 pages",
+      description:
+        "The principles according to which The National Archives will preserve and care for our archival collections."
+    },
+    {
+      text: "Preservation policy part 2",
+      href: "#",
+      fileType: "PDF",
+      fileSize: "0.9MB",
+      description:
+        "The principles according to which The National Archives will preserve and care for our archival collections."
+    },
+    {
+      text: "Preservation policy part 3",
+      href: "#",
+      fileType: "PDF",
+      fileSize: "3MB",
+      fileExtent: "200 pages"
+    }
+  ]
+}) }}
