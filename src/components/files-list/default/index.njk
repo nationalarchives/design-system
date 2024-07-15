@@ -1,12 +1,12 @@
 ---
-title: Files
+title: Files list
 layout: examples/plain.njk
 private: true
 ---
 
-{% from "nationalarchives/components/files/macro.njk" import tnaFiles %}
+{% from "nationalarchives/components/files-list/macro.njk" import tnaFilesList %}
 
-{{ tnaFiles({
+{{ tnaFilesList({
   items: [
     {
       text: "Preservation policy part 1",

@@ -18,7 +18,7 @@ The sidebar component comes in three styles:
 
 ## Contents
 
-The contents style sidebar is used to show a list of all the top two levels of headings in the page, usually the `<h2>` and `<h3>` elements.
+The contents style sidebar is used to show a list of all the top two or three levels of headings in the page, usually the `<h2>`, `<h3>` and `<h4>` elements.
 
 Use this style to help users navigate a large amount of content.
 

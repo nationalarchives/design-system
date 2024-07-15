@@ -1,12 +1,12 @@
 ---
-title: Featured records
+title: Records list
 layout: examples/plain.njk
 private: true
 ---
 
-{% from "nationalarchives/components/featured-records/macro.njk" import tnaFeaturedRecords %}
+{% from "nationalarchives/components/records-list/macro.njk" import tnaRecordsList %}
 
-{{ tnaFeaturedRecords({
+{{ tnaRecordsList({
   items: [
     {
       imageSrc: "https://picsum.photos/id/237/400/600",

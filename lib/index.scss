@@ -24,8 +24,6 @@
 @use "@nationalarchives/frontend/nationalarchives/components/footer";
 // @use "@nationalarchives/frontend/nationalarchives/components/gallery";
 // @use "@nationalarchives/frontend/nationalarchives/components/global-header";
-@use "@nationalarchives/frontend/nationalarchives/components/grid" as
-  gridComponent;
 @use "@nationalarchives/frontend/nationalarchives/components/header";
 // @use "@nationalarchives/frontend/nationalarchives/components/hero";
 // @use "@nationalarchives/frontend/nationalarchives/components/index-grid";
@@ -49,6 +47,9 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
+
+@use "@nationalarchives/frontend/nationalarchives/utilities/grid" as
+  gridUtilities;
 
 @use "modules/code";
 @use "modules/component-example";
