@@ -11,6 +11,10 @@ group: styles
 
 {{ example({ group: "styles", item: "lists", example: "unordered-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
+### Spaced unordered lists
+
+{{ example({ group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "m", openHTML: true }) }}
+
 ## Ordered lists
 
 {{ example({ group: "styles", item: "lists", example: "ordered-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}

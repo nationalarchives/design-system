@@ -62,6 +62,10 @@
   }
 }
 
+.tna-card--heading-link-arrow .tna-card__heading-link::after {
+  display: inline-block !important;
+}
+
 .tna-container {
   &--vertically-align {
     align-items: center;
