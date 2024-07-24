@@ -109,12 +109,14 @@ Metalsmith(__dirname)
       },
       top: {
         pattern:
-          "(get-started|styles|components|content|performance)/index.html",
+          // "(get-started|styles|components|content|performance)/index.html",
+          "(get-started|styles|components|content)/index.html",
         sortBy: "order",
         refer: false,
       },
       front_page: {
-        pattern: "(styles|components|content|performance)/index.html",
+        // pattern: "(styles|components|content|performance)/index.html",
+        pattern: "(styles|components|content)/index.html",
         sortBy: "order",
         refer: false,
       },
