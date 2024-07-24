@@ -44,7 +44,6 @@
 // @use "@nationalarchives/frontend/nationalarchives/components/warning";
 
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
-@use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
@@ -53,37 +52,8 @@
 
 @use "modules/code";
 @use "modules/component-example";
-// @use "modules/sidebar" as sidebarOld;
+@use "modules/frontend-overrides";
 @use "modules/typography" as DSTypography;
-
-.tna-button {
-  &--large {
-    @include typography.font-size(24);
-  }
-}
-
-.tna-card--heading-link-arrow .tna-card__heading-link::after {
-  display: inline-block !important;
-}
-
-.tna-container {
-  &--vertically-align {
-    align-items: center;
-  }
-}
-
-.tna-template__body {
-  > .tna-header + .tna-container,
-  > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
-    flex: 1;
-  }
-}
-
-.tna-sidebar--pages .tna-sidebar__item-children {
-  @include media.on-mobile {
-    display: none;
-  }
-}
 
 .tna-ds-colour-swatch {
   width: 2rem;
