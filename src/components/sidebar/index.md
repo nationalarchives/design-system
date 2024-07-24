@@ -34,18 +34,8 @@ The sections style sidebar provides links to sections of the page and each item 
 
 ## Pages
 
-The pages style sidebar is used to link to other relevant pages. It can show similar pages in a section of a site.
+The pages style sidebar is used to link to other pages such as similar pages in a section of a site.
 
-The current page can be highlighted.
-
-This page uses a pages style sidebar to list all the components in the Design System.
+The current page can be highlighted and also display the top-level headings within it.
 
 {{ example({ group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "l" }) }}
-
-
-
-
-
-
-
-
