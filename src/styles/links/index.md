@@ -35,7 +35,7 @@ Disable the visited style be adding a `tna-link--no-visited-state` class to your
 
 ## Links in headings
 
-Links within [heading elements](../typography/#headings) have an `&rsaquo;` pseudo element added after them. The exception for this is headings within cards.
+Links within [heading elements](../typography/#headings) have an arrow added after them.
 
 {{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 
