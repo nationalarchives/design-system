@@ -85,7 +85,7 @@
   "id": "/design-system/?source=pwa",
   "start_url": "/design-system/?source=pwa",
   "scope": "/design-system/",
-  "display": "minimal-ui",
+  "display": "browser",
   "background_color": "#000",
   "dir": "ltr",
   "lang": "en"
