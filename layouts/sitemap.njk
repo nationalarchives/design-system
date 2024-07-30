@@ -14,11 +14,6 @@
           {{ title }}
         </h1>
         {{ contents | safe }}
-        <!--
-        <h2 class="tna-heading-l">
-          <a href="/design-system" class="tna-link--no-visited-state">{{ collections.home[0].title }}</a>
-        </h2>
-        -->
         {%- for section in collections.top %}
         <h2 class="tna-heading-l">
           <a href="/design-system/{{ section.path.replace('index.html', '') }}" class="tna-link--no-visited-state">{{ section.title }}</a>
@@ -26,13 +21,11 @@
         {% if section.description %}
           <p>{{ section.description }}</p>
         {% endif %}
-        <ul class="tna-ul">
+        <ul class="tna-ul tna-ul--spaced">
           {%- for page in collections[section.group] %}
           <li>
             <a href="/design-system/{{ page.path.replace('index.html', '') }}" class="tna-link--no-visited-state">{{ page.title }}</a>
-            <!--
-            {% if page.description %} &mdash; {{ page.description }}{% endif %}
-            -->
+            {% if page.description %} <small>&mdash; {{ page.description }}</small>{% endif %}
           </li>
           {%- endfor %}
         </ul>
