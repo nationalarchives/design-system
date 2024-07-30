@@ -1,0 +1,43 @@
+---
+title: Plain page header
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/breadcrumbs/macro.njk" import tnaBreadcrumbs %}
+
+<div class="tna-accent-blue">
+  <div class="tna-container">
+    <div class="tna-column tna-column--full">
+      {{ tnaBreadcrumbs({
+        items: [
+          {
+            text: "Home",
+            href: "#/home"
+          },
+          {
+            text: "Parent",
+            href: "#/parent"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+  <main class="tna-main" id="main-content">
+    <div class="tna-container tna-section tna-!--no-padding-bottom">
+      <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
+        <hgroup class="tna-hgroup-xl">
+          <p class="tna-hgroup__supertitle">Parent</p>
+          <h1 class="tna-hgroup__title">Section</h1>
+        </hgroup>
+        <p class="tna-large-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="tna-section tna-container">
+      <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla et convallis lectus.</p>
+        <p>Etiam mi sem, pretium ac fringilla at, tempus sed metus.</p>
+      </div>
+    </div>
+  </main>
+</div>
