@@ -7,17 +7,18 @@
 {{ super() }}
 {% endblock %}
 
+{% set groupTitle = group | kebabToSpace | capitalize %}
+
 {% block skipLink %}
 {{ super() }}
 {{ tnaSkipLink({
   href: group + '-list',
-  text: 'Skip to list of ' + group
+  text: 'Skip to list of ' + (groupTitle | lower)
 }) }}
 {% endblock %}
 
 {% block main %}
   {% set headings = contents | headingsList %}
-  {% set groupTitle = group | kebabToSpace | capitalize %}
   {% include "partials/breadcrumbs.njk" %}
   <div class="tna-container">
     <main class="tna-main tna-column tna-column--width-3-4 tna-column--width-2-3-medium tna-column--full-small tna-column--full-tiny {{ mainClasses }} tna-section tna-ds-!--full-width-on-print" id="main-content">
