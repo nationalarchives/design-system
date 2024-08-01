@@ -7,14 +7,6 @@
 {{ super() }}
 {% endblock %}
 
-{% block skipLink %}
-{{ super() }}
-{{ tnaSkipLink({
-  href: group + '-list',
-  text: 'Skip to list of ' + group
-}) }}
-{% endblock %}
-
 {% block main %}
   {% set headings = contents | headingsList %}
   {% set groupTitle = group | kebabToSpace | capitalize %}
