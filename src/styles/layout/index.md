@@ -13,10 +13,18 @@ group: styles
 
 ## Column widths
 
-- Large devices have a 12 column grid
-- Medium devices have a 6 column grid
-- Small devices have a 4 column grid
-- Tiny devices have a 2 column grid
+[Different sized devices](../media/#device-sizes) have a different number of columns in their grid:
+
+<dl class="tna-dl tna-dl--plain">
+  <dt>Large devices</dt>
+  <dd>12 column grid</dd>
+  <dt>Medium devices</dt>
+  <dd>6 column grid</dd>
+  <dt>Small devices</dt>
+  <dd>4 column grid</dd>
+  <dt>Tiny devices</dt>
+  <dd>2 column grid</dd>
+</dl>
 
 Based on the number of columns set for each size, (i.e. `$column-count`), there are size classes for all column widths up to that number. These numbers will **only be available in their simplest form**. This means that there is no `tna-column--width-8-12` class; only a `tna-column--width-2-3`.
 

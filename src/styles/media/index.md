@@ -5,23 +5,25 @@ description: Provide services for a variety of screen sizes as well as print med
 group: styles
 ---
 
+## Device sizes
+
 Responsive breakpoints are referred to in relative size terms rather than specific devices such as "desktop", "tablet" and "mobile".
 
 [TNA Frontend](https://github.com/nationalarchives/tna-frontend) has definitions for four different device sizes:
 
-- large
-- medium
-- small
-- tiny
+- large (desktop-like devices)
+- medium (medium and small tablets)
+- small (landscape mobile phones)
+- tiny (portrait mobile phones)
 
-Device sizes can vary but the [default breakpoints](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_media.scss) are:
+The [default device breakpoints](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_media.scss) for these sizes are:
 
-- 1025px and above for large devices
-- 769px&ndash;1024px for medium devices
-- 481px&ndash;768px for small devices
-- 480px and below for tiny devices
+- `1025px` and above for large devices
+- `769px`&ndash;`1024px` for medium devices
+- `481px`&ndash;`768px` for small devices
+- `480px` and below for tiny devices
 
-## Media queries
+### Media queries
 
 Use the provided media tools from TNA Frontend to help you with media queries.
 
