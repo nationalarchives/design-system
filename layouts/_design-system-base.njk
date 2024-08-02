@@ -6,7 +6,7 @@
 
 {%- set assetPath = "/design-system/static/assets/" -%}
 
-{%- set theme = "light" -%}
+{%- set theme = "system" -%}
 {% if group === "get-started" %}
   {%- set themeAccent = "yellow" -%}
 {% elseif group === "styles" %}
@@ -90,6 +90,7 @@
   {% set buildDate = stats.atime | prettyDate %}
   {{ tnaFooter({
     themeSelector: true,
+    currentTheme: theme,
     navigation: [
       {
         title: "Meta",
