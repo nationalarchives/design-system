@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
-title: Layout
-description: Use the TNA grid system to help lay out and organise content on your pages.
+title: Grid
+description: Use the TNA grid system to help position and organise content on your pages.
 group: styles
 ---
 
@@ -9,7 +9,7 @@ group: styles
 
 [TNA Frontend](https://github.com/nationalarchives/tna-frontend) comes with a grid system.
 
-{{ example({ group: "styles", item: "layout", example: "grid", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "columns", html: true, nunjucks: false, size: "l", noPadding: true }) }}
 
 ## Column widths
 
@@ -82,7 +82,7 @@ On a 2 column grid (tiny devices), the widths available are:
 
 ## Responsive example
 
-{{ example({ group: "styles", item: "layout", example: "grid-responsive", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "responsive-columns", html: true, nunjucks: false, size: "l", noPadding: true }) }}
 
 ## Flexible columns
 
@@ -103,5 +103,12 @@ You can also mix them to create full-fluid layouts For example, you can 'pad' em
 |                        |                                | remainder of 100% - ¼ - ⅓, this column |
 |                        |                                | will flex to whatever space is left    |
 |                        |                                |                                        |
-
 ```
+
+## Container horizontal alignment
+
+{{ example({ group: "styles", item: "grid", example: "container-alignment", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+
+## Column vertical alignment
+
+{{ example({ group: "styles", item: "grid", example: "column-alignment", html: true, nunjucks: false, size: "l", noPadding: true }) }}

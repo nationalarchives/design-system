@@ -1,0 +1,41 @@
+{% extends "./examples/plain.njk" %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+    .tna-template__body,
+    main {
+      height: 100%;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .tna-container {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .tna-column {
+      margin-top: 16px;
+      margin-bottom: 16px;
+
+      position: relative;
+
+      color: #fff;
+      line-height: 3rem;
+      text-align: center;
+
+      background: #1e1e1e;
+      background-clip: content-box;
+    }
+
+    .tna-column p {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+  </style>
+{% endblock %}

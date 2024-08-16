@@ -20,34 +20,3 @@ p:has(+ p.tna-\!--no-margin-top) {
 .tna-cookie-banner--demo {
   display: block !important;
 }
-
-.tna-grid--demo {
-  padding-top: spacing.space(2);
-
-  @include media.on-tiny {
-    padding-top: 1rem;
-  }
-
-  .tna-column {
-    margin-bottom: spacing.space(2);
-
-    position: relative;
-
-    line-height: 3rem;
-
-    text-align: center;
-
-    background-clip: content-box;
-
-    @include colour.contrast;
-
-    @include media.on-tiny {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      padding-top: spacing.space(0.25);
-      padding-bottom: spacing.space(0.25);
-    }
-  }
-}
