@@ -135,15 +135,65 @@
       /* stylelint-enable */
 
       &.padded {
-        padding-top: spacing.space(3.5);
+        padding-top: spacing.space(3.75);
+
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: spacing.space(3);
+          right: 0;
+          left: 0;
+
+          @include colour.colour-border("keyline", 1px, dashed, bottom);
+        }
       }
     }
 
-    &-copy {
+    &-copy,
+    &-wrap {
       position: absolute;
       top: spacing.space(0.5);
+      z-index: 2;
+    }
+
+    &-copy {
       right: spacing.space(0.5);
-      z-index: 1;
+    }
+
+    &-wrap {
+      padding: spacing.space(0.5) spacing.space(0.75);
+
+      display: flex;
+      align-items: center;
+      gap: spacing.space(0.5);
+
+      left: spacing.space(0.5);
+
+      @include typography.font-size(16);
+      line-height: 1;
+
+      cursor: pointer;
+
+      &:hover {
+        @include typography.interacted-text-decoration;
+      }
+
+      input {
+        width: 1rem;
+        height: 1rem;
+
+        border-radius: 0.1px;
+      }
+    }
+  }
+
+  &__code--wrap {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      white-space: pre-wrap;
     }
   }
 
