@@ -201,6 +201,8 @@ The appropriate colours for all child elements such as text and links will also 
 
 {{ example({ group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
+> On dark themes, a light accent block will change to an accent block.
+
 ## Colour contrast
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
