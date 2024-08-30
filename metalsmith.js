@@ -165,6 +165,7 @@ Metalsmith(__dirname)
         "lib/all.scss": "css/all.css",
         "lib/print.scss": "css/print.css",
         "lib/fa.scss": "css/fa.css",
+        "lib/ie.scss": "css/ie.css",
       },
     }),
   )
