@@ -33,7 +33,7 @@
     "ext": "js css scss njk json html md"
   },
   "dependencies": {
-    "@nationalarchives/frontend": "0.2.12",
+    "@nationalarchives/frontend": "0.2.13",
     "prismjs": "^1.29.0"
   },
   "devDependencies": {
@@ -45,7 +45,7 @@
     "@metalsmith/permalinks": "^3.0.1",
     "@metalsmith/sass": "^1.6.0",
     "browser-sync": "^3.0.2",
-    "concurrently": "^8.2.0",
+    "concurrently": "^9.0.1",
     "eslint": "^8.57.0",
     "glob": "^10.3.4",
     "gray-matter": "^4.0.3",
