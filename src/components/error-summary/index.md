@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Error summary
-description: Use the error summary component to summarise form errors on the page and provide links to help users complete them.
+description: Summarise form errors on the page and provide links to help users complete them.
 group: components
 ---
 

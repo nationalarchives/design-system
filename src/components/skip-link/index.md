@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Skip link
-description: The skip link component can be used at the start of a page to allow the user to jump straight to the most important content on a page.
+description: Use the skip link at the start of a page to allow the user to jump straight to the most important content.
 group: components
 ---
 
