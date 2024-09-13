@@ -25,3 +25,9 @@
     display: none;
   }
 }
+
+.tna-card {
+  &--full-click {
+    height: 100%;
+  }
+}
