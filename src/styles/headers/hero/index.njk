@@ -7,45 +7,48 @@ private: true
 {% from "nationalarchives/components/breadcrumbs/macro.njk" import tnaBreadcrumbs %}
 {% from "nationalarchives/components/hero/macro.njk" import tnaHero %}
 
-<div class="tna-container">
-  <div class="tna-column tna-column--full tna-!--padding-vertical-s">
-    {{ tnaBreadcrumbs({
-      items: [
-        {
-          text: "Home",
-          href: "#/home"
-        },
-        {
-          text: "Parent",
-          href: "#/parent"
-        }
-      ]
-    }) }}
-  </div>
-</div>
-<main class="tna-main" id="main-content">
-  {{ tnaHero({
-    supertitle: "Parent",
-    title: "Section",
-    body: '<p class="tna-large-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
-    imageSrc: "https://picsum.photos/id/56/1200/480",
-    imageAlt: "A mountain range",
-    imageWidth: 1200,
-    imageHeight: 480,
-    imageSources: {
-      src: "https://picsum.photos/id/56/1200/480",
-      width: 600,
-      height: 400,
-      type: "image/jpeg",
-      media: "(max-width: 48em)"
-    },
-    narrow: true,
-    layout: "shift"
-  }) }}
-  <div class="tna-section tna-container">
-    <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla et convallis lectus.</p>
-      <p>Etiam mi sem, pretium ac fringilla at, tempus sed metus.</p>
+<div class="tna-accent-blue">
+  <div class="tna-container">
+    <div class="tna-column tna-column--full tna-!--padding-vertical-s">
+      {{ tnaBreadcrumbs({
+        items: [
+          {
+            text: "Home",
+            href: "#/home"
+          },
+          {
+            text: "Parent",
+            href: "#/parent"
+          }
+        ]
+      }) }}
     </div>
   </div>
-</main>
+  <main class="tna-main" id="main-content">
+    {{ tnaHero({
+      supertitle: "Parent",
+      title: "Section",
+      body: '<p class="tna-large-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
+      imageSrc: "https://picsum.photos/id/56/1200/480",
+      imageAlt: "A mountain range",
+      imageWidth: 1200,
+      imageHeight: 480,
+      imageSources: {
+        src: "https://picsum.photos/id/56/1200/480",
+        width: 600,
+        height: 400,
+        type: "image/jpeg",
+        media: "(max-width: 48em)"
+      },
+      narrow: true,
+      style: "accent",
+      layout: "shift"
+    }) }}
+    <div class="tna-section tna-container">
+      <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla et convallis lectus.</p>
+        <p>Etiam mi sem, pretium ac fringilla at, tempus sed metus.</p>
+      </div>
+    </div>
+  </main>
+</div>
