@@ -23,7 +23,7 @@
 {%- set pageTitle = title -%}
 
 {% block head %}
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://fastly.picsum.photos https://asciinema.org data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net https://tna.dblclk.dev 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://fastly.picsum.photos https://asciinema.org https://tna.dblclk.dev data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
   {% if description %}
   <meta name="description" content="{{ description }}">
   {% endif %}
@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&family=Roboto+Mono:wght@400..500&display=swap">
   <link rel="stylesheet" href="/design-system/css/ie.css" media="all and (-ms-high-contrast: none), (-ms-high-contrast: active)">
   <link rel="stylesheet" href="/design-system/css/print.css" media="print">
+  {# <link rel="stylesheet" href="https://tna.dblclk.dev/logo-adornments.css" media="screen" crossorigin="anonymous"> #}
 {% endblock %}
 
 {% block cookies %}
