@@ -8,6 +8,6 @@ group: components
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-{{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 {{ status(false, 0, 1, 2, 2, false) }}

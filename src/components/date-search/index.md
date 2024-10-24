@@ -10,7 +10,7 @@ group: components
 
 When you need the user to enter a date for data purposes or don’t want to require a day or month, use the [date input](../date-input/) component.
 
-{{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 {{ status(false, 0, 1, 2, 2, false) }}
 
