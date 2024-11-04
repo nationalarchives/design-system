@@ -11,7 +11,7 @@ import collections from "@metalsmith/collections";
 import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import sitemap from "metalsmith-sitemap";
-import packageInfo from "./package.json" assert { type: "json" };
+import packageInfo from "./package.json" with { type: "json" };
 import { readFileSync } from "fs";
 import { join } from "path";
 import { glob } from "glob";
