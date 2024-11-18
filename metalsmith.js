@@ -11,6 +11,7 @@ import collections from "@metalsmith/collections";
 import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import sitemap from "metalsmith-sitemap";
+import jsTransformerNunjucks from "jstransformer-nunjucks";
 import packageInfo from "./package.json" with { type: "json" };
 import { readFileSync } from "fs";
 import { join } from "path";
@@ -84,6 +85,7 @@ Metalsmith(__dirname)
   )
   .use(
     inplace({
+      transform: jsTransformerNunjucks, // resolved
       pattern: "**/*.njk",
       engineOptions: nunjucksOptions,
     }),

@@ -11,7 +11,7 @@ const slugify = (text) =>
   );
 
 markdownRenderer.heading = function (text, level) {
-  let headingSize = "";
+  let headingSize = "s";
   switch (level) {
     case 1:
       headingSize = "xl";
@@ -21,11 +21,6 @@ markdownRenderer.heading = function (text, level) {
       break;
     case 3:
       headingSize = "m";
-      break;
-    case 4:
-    case 5:
-    case 6:
-      headingSize = "s";
       break;
   }
   const slug = slugify(text);
