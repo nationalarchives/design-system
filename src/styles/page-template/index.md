@@ -57,7 +57,7 @@ The blocks are nested in the following way:
 
 | Variable      | Purpose                                                                                            | Default                 |
 | ------------- | -------------------------------------------------------------------------------------------------- | ----------------------- |
-| `htmlLang`    | Sets the `lang` attribute of the `<html>` element                                                  | `en-GB`                 |
+| `htmlLang`    | Sets the `lang` attribute of the `<html>` element                                                  | `en`                    |
 | `htmlClasses` | Classes to add to the `<html>` element                                                             | [none]                  |
 | `pageTitle`   | Sets the title of the page in the `<title>` element, before the `siteTitle`                        | [none]                  |
 | `siteTitle`   | Sets the title of the page in the `<title>` element, after the `pageTitle`                         | `The National Archives` |
