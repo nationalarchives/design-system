@@ -63,7 +63,7 @@ The blocks are nested in the following way:
 | `siteTitle`   | Sets the title of the page in the `<title>` element, after the `pageTitle`                         | `The National Archives` |
 | `theme`       | Sets the [theme colour](../../styles/colours/#theme-colours) of the site                           | `system`                |
 | `themeAccent` | Sets the [accent colour](../../styles/colours/#accent-colours) of the site                         | [none]                  |
-| `themeColor`  | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#000000`               |
+| `themeColor`  | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#010101`               |
 | `assetPath`   | The path for the icons and images included from TNA Frontend                                       | `/assets`               |
 | `bodyClasses` | Classes to add to the `<body>` element                                                             | [none]                  |
 | `mainClasses` | Classes to add to the `<main>` element                                                             | [none]                  |
