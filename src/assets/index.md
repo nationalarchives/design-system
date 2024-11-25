@@ -32,5 +32,6 @@ title: Assets
       fileSize: "51 KB",
       fileExtent: "1024 x 1024px"
     }
-  ]
+  ],
+  fullAreaClick: true
 }) }}
