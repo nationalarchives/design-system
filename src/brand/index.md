@@ -1,11 +1,11 @@
 ---
 layout: simple-with-nav.njk
-title: Assets
+title: Our brand
 ---
 
 {%- from "nationalarchives/components/files-list/macro.njk" import tnaFilesList -%}
 
-## Logos
+## Assets
 
 {{ tnaFilesList({
   itemHeadingLevel: 3,
