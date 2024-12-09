@@ -67,7 +67,7 @@ Always use the provided TNA colour palette.
 | Colour                 | Light theme                                                                     | Dark theme                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | Page background        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4` | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223` |
-| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#ededed"></span> `#ededed` | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334` |
+| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6` | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334` |
 | Contrasting background | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e` | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112` |
 | Base font              | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338` | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
 | Links                  | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8` | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` |
