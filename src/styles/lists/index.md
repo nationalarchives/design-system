@@ -68,3 +68,24 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 Cards don't require an image. It could be benificial to use them for a list of pages.
 
 {{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: false, size: "xxl", noPadding: true }) }}
+
+## Lists of files
+
+When listing files, ensure that the link to each file includes:
+
+- the name of the file (or the filename if it is human-readable)
+- the type of file in a human-readable format rather than a MIME type (e.g. PDF)
+- the size of the file (if known)
+- the extent of the file (optional, if known) - this is the number of pages/slides/tables
+
+Including this data will help people who use screen readers and keyboard navigation.
+
+The file size should not be more than two decimal places and use the appropriate SI units such as bytes, kB, and MB.
+
+{{ example({ group: "styles", item: "lists", example: "links-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
+
+If necessary, you can split out the data into separate elements to make the list more readable in a similar fashion to the [files list component](../../components/files-list/).
+
+All the information needs to be available to both sighted and non-signed users.
+
+{{ example({ group: "styles", item: "lists", example: "links-list-split", html: true, nunjucks: false, size: "xl", openHTML: true }) }}
