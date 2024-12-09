@@ -16,41 +16,10 @@ Always use the provided TNA colour palette.
 | Colour        | Hex                                                                             |
 | ------------- | ------------------------------------------------------------------------------- |
 | Black         | <span class="tna-ds-colour-swatch" style="background:#010101"></span> `#010101` |
+| Dark grey     | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a` |
 | Grey          | <span class="tna-ds-colour-swatch" style="background:#8c9694"></span> `#8c9694` |
 | Light grey    | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6` |
 | White         | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
-
-<!--
-### Primary
-
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Yellow        | <span class="tna-ds-colour-swatch" style="background:#ffcc00"></span> `#ffcc00` |
-| Pink          | <span class="tna-ds-colour-swatch" style="background:#fe1d57"></span> `#fe1d57` |
-| Orange        | <span class="tna-ds-colour-swatch" style="background:#fd3f03"></span> `#fd3f03` |
-| Green         | <span class="tna-ds-colour-swatch" style="background:#86bc25"></span> `#86bc25` |
-| Blue          | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` |
-
-### Darks
-
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Brown         | <span class="tna-ds-colour-swatch" style="background:#654e37"></span> `#654e37` |
-| Maroon        | <span class="tna-ds-colour-swatch" style="background:#9c193a"></span> `#9c193a` |
-| Chestnut      | <span class="tna-ds-colour-swatch" style="background:#8f3415"></span> `#8f3415` |
-| Forest        | <span class="tna-ds-colour-swatch" style="background:#00623b"></span> `#00623b` |
-| Navy          | <span class="tna-ds-colour-swatch" style="background:#004c7e"></span> `#004c7e` |
-
-### Lights
-
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Cream         | <span class="tna-ds-colour-swatch" style="background:#f9f7e2"></span> `#f9f7e2` |
-| Pastel pink   | <span class="tna-ds-colour-swatch" style="background:#fad3d4"></span> `#fad3d4` |
-| Pastel orange | <span class="tna-ds-colour-swatch" style="background:#f9e1bc"></span> `#f9e1bc` |
-| Pastel green  | <span class="tna-ds-colour-swatch" style="background:#dde5d5"></span> `#dde5d5` |
-| Pastel blue   | <span class="tna-ds-colour-swatch" style="background:#d4e5ef"></span> `#d4e5ef` |
--->
 
 ### Primary colour palette
 
