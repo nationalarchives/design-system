@@ -61,6 +61,10 @@ You can use a larger paragraph as an introduction to the page or section.
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
+There is also a slightly bolder version of the large paragraph.
+
+{{ example({ group: "styles", item: "typography", example: "paragraphs-large-bold", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
+
 ### Small
 
 You can use the `<small>` element sparingly to make your paragraph font size smaller.

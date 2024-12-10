@@ -85,3 +85,29 @@ This site currently collects no usage data.
     }
   }) }}
 </div>
+
+## Cookies that are used for marketing purposes
+
+These cookies may be set by third party websites and track things that can be used for marketing and advertising purposes.
+
+This site currently collects no data for marketing purposes.
+
+<p aria-live="assertive" class="tna-ds--show-on-js" data-showcookiepreference="marketing" data-showcookiepreferenceonaccepted="Cookies that can be used for marketing purposes have been accepted." data-showcookiepreferenceonrejected="Cookies that can be used for marketing purposes have been rejected."></p>
+
+<div class="tna-button-group tna-ds--show-on-js">
+  {{ tnaButton({
+    text: "Allow marketing cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "marketing",
+      "data-setcookiepreferencevalue": "true"
+    }
+  }) }} {{ tnaButton({
+    text: "Decline marketing cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "marketing",
+      "data-setcookiepreferencevalue": "false"
+    }
+  }) }}
+</div>
