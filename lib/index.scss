@@ -80,6 +80,11 @@
   }
 }
 
+a[href^="https://asciinema.org"]
+{
+  display: inline-block;
+}
+
 .app-example-page {
   min-height: auto;
   padding: spacing.space(2);
