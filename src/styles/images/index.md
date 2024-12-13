@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Images
 description: Use images to provide additional visual context.
 group: styles
+subGroup: content
 ---
 
 {% from "partials/example.njk" import example %}

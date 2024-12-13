@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Typography
 description: Utilise a full range of typography to more clearly communicate your content.
 group: styles
+subGroup: typography
 ---
 
 {% from "partials/example.njk" import example %}

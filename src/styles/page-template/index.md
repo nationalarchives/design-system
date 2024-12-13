@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Page template
 description: Use the TNA Frontend base template to create consistent page layouts.
 group: styles
+subGroup: layout
 ---
 
 {% from "partials/example.njk" import example %}

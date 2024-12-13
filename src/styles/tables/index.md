@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Tables
 description: Use a tables to display tabular data.
 group: styles
+subGroup: content
 ---
 
 {% from "partials/example.njk" import example %}

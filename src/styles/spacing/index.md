@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Spacing
 description: Space content out in a consistent and flexible manner that works for all screen sizes.
 group: styles
+subGroup: layout
 ---
 
 {% from "partials/example.njk" import example %}

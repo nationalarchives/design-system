@@ -11,78 +11,82 @@ private: true
 {% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
 {% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
 
-<form novalidate>
-  <h1 class="tna-heading-xl">Create a record</h1>
-  {{ tnaTextInput({
-    label: "Enter the name of the record",
-    headingLevel: 2,
-    headingSize: "m",
-    id: "record_name",
-    name: "name"
-  }) }}
-  {{ tnaCheckboxes({
-    label: "Select the record categories",
-    headingLevel: 2,
-    headingSize: "m",
-    id: "record_categories",
-    name: "categories",
-    items: [
-      {
-        text: "Architectural",
-        value: "architectural"
-      },
-      {
-        text: "Banking",
-        value: "banking"
-      },
-      {
-        text: "Charities",
-        value: "charities"
-      }
-    ]
-  }) }}
-  {{ tnaDateInput({
-    label: "Enter the start date of the record",
-    headingLevel: 2,
-    headingSize: "m",
-    id: "record_date",
-    name: "date"
-  }) }}
-  {{ tnaRadios({
-    label: "Select the type of record",
-    headingLevel: 2,
-    headingSize: "m",
-    id: "record_type",
-    name: "type",
-    items: [
-      {
-        text: "Physical",
-        value: "physical"
-      },
-      {
-        text: "Digital",
-        value: "digital"
-      }
-    ]
-  }) }}
-  {{ tnaTextarea({
-    label: "Enter the record description",
-    headingLevel: 2,
-    headingSize: "m",
-    id: "record_feedback",
-    name: "feedback"
-  }) }}
-  <div class="tna-button-group">
-    {{ tnaButton({
-      text: "Create record",
-      buttonElement: true,
-      buttonType: "submit"
-    }) }}
-    {{ tnaButton({
-      text: "Clear",
-      buttonElement: true,
-      buttonType: "reset",
-      plain: true
-    }) }}
+<div class="tna-container">
+  <div class="tna-column tna-column--full tna-!--padding-vertical-m">
+    <form novalidate>
+      <h1 class="tna-heading-xl">Create a record</h1>
+      {{ tnaTextInput({
+        label: "Enter the name of the record",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "record_name",
+        name: "name"
+      }) }}
+      {{ tnaCheckboxes({
+        label: "Select the record categories",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "record_categories",
+        name: "categories",
+        items: [
+          {
+            text: "Architectural",
+            value: "architectural"
+          },
+          {
+            text: "Banking",
+            value: "banking"
+          },
+          {
+            text: "Charities",
+            value: "charities"
+          }
+        ]
+      }) }}
+      {{ tnaDateInput({
+        label: "Enter the start date of the record",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "record_date",
+        name: "date"
+      }) }}
+      {{ tnaRadios({
+        label: "Select the type of record",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "record_type",
+        name: "type",
+        items: [
+          {
+            text: "Physical",
+            value: "physical"
+          },
+          {
+            text: "Digital",
+            value: "digital"
+          }
+        ]
+      }) }}
+      {{ tnaTextarea({
+        label: "Enter the record description",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "record_feedback",
+        name: "feedback"
+      }) }}
+      <div class="tna-button-group">
+        {{ tnaButton({
+          text: "Create record",
+          buttonElement: true,
+          buttonType: "submit"
+        }) }}
+        {{ tnaButton({
+          text: "Clear",
+          buttonElement: true,
+          buttonType: "reset",
+          plain: true
+        }) }}
+      </div>
+    </form>
   </div>
-</form>
+</div>

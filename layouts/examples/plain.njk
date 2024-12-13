@@ -17,10 +17,7 @@
   </style>
 {% endblock %}
 
-{%- set theme = "light" -%}
-{#% if not themeAccent %}
-{%- set themeAccent = "black" -%}
-{% endif %#}
+{%- set theme = theme or "light" -%}
 
 {% block cookies %}{% endblock %}
 {% block header %}{% endblock %}

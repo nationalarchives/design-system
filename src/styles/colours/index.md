@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Colours
 description: Use colours to add interest to your pages and content.
 group: styles
+subGroup: brand
 ---
 
 {% from "partials/example.njk" import example %}
@@ -48,6 +49,18 @@ Ou full list of web colours can be found in the [colour variables for TNA Fronte
 
 ## Theme colours
 
+### Light theme
+
+The light theme is the default that comes with using `tna-template`.
+
+{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
+
+### Dark theme
+
+A dark theme can be used by adding the `tna-template--dark-theme` class.
+
+{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
+
 ### System theme
 
 The system theme can be used with `tna-template--system-theme` and follows the operating system preference for `prefers-color-scheme` ([MDN Web Docs - prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)) which can either be `light` or `dark`.
@@ -64,18 +77,6 @@ Using the system theme will either display the [light theme](#light-theme) or [d
   </body>
 </html>
 ```
-
-### Light theme
-
-The light theme is the default that comes with using `tna-template`.
-
-{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
-
-### Dark theme
-
-A dark theme can be used by adding the `tna-template--dark-theme` class.
-
-{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ## High contrast themes
 
@@ -172,13 +173,13 @@ The appropriate colours for all child elements such as text and links will also 
 
 {{ example({ group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
-> On dark themes, a light accent block will change to an accent block.
+> On dark themes, a light accent block will change to an [accent block](#accent).
 
 ## Colour contrast
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
-We check as many [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the error summary component doesn't have enough contrast with its surroundings when used within an accented block.
+In TNA Frontend, we check as many [light colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) and [dark colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--dark&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the [error summary component](../../components/error-summary/) doesn't have enough contrast with its surroundings when used within an [accented block](#accent).
 
 Ensure you check for proper colour contrast in your service for both text and non-text elements:
 
