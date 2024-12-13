@@ -56,6 +56,8 @@ The blocks are nested in the following way:
     - `footer`
     - `bodyEnd`
 
+## Variables
+
 | Variable      | Purpose                                                                                            | Default                 |
 | ------------- | -------------------------------------------------------------------------------------------------- | ----------------------- |
 | `htmlLang`    | Sets the `lang` attribute of the `<html>` element                                                  | `en`                    |
