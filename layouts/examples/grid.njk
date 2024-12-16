@@ -110,17 +110,29 @@
       .tna-container::before {
         content: "Container (medium device size)";
       }
+
+      .tna-container::before {
+        content: "Nested container (medium device size)";
+      }
     }
 
     @media (max-width: 48em) {
       .tna-container::before {
         content: "Container (small device size)";
       }
+
+      .tna-container::before {
+        content: "Nested container (small device size)";
+      }
     }
 
     @media (max-width: 30em) {
       .tna-container::before {
         content: "Container (tiny device size)";
+      }
+
+      .tna-container::before {
+        content: "Nested container (tiny device size)";
       }
 
       .tna-container--nested::before {
