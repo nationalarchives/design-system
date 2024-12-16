@@ -107,32 +107,20 @@
     }
 
     @media (max-width: 64em) {
-      .tna-container::before {
+      .tna-container:not(.tna-container--nested)::before {
         content: "Container (medium device size)";
-      }
-
-      .tna-container--nested::before {
-        content: "Nested container (medium device size)";
       }
     }
 
     @media (max-width: 48em) {
-      .tna-container::before {
+      .tna-container:not(.tna-container--nested)::before {
         content: "Container (small device size)";
-      }
-
-      .tna-container--nested::before {
-        content: "Nested container (small device size)";
       }
     }
 
     @media (max-width: 30em) {
-      .tna-container::before {
+      .tna-container:not(.tna-container--nested)::before {
         content: "Container (tiny device size)";
-      }
-
-      .tna-container--nested::before {
-        content: "Nested container (tiny device size)";
       }
 
       .tna-container--nested::before {
