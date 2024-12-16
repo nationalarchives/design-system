@@ -8,7 +8,7 @@ subGroup: layout
 
 {% from "partials/example.njk" import example %}
 
-[TNA Frontend](https://github.com/nationalarchives/tna-frontend) comes with a grid system.
+[TNA Frontend](https://github.com/nationalarchives/tna-frontend) comes with a responsive grid system based on the user's [device size](../media/#device-sizes).
 
 {{ example({ group: "styles", item: "grid", example: "columns", html: true, nunjucks: false, size: "l", noPadding: true }) }}
 

@@ -67,7 +67,7 @@
       top: 0;
       left: 0;
 
-      content: "Container";
+      content: "Container (large device size)";
     }
 
     .tna-container--nested::before {
@@ -104,6 +104,33 @@
 
     .tna-column::after {
       inset: 0.5px;
+    }
+
+    @media (max-width: 64em) {
+      .tna-container::before {
+        content: "Container (medium device size)";
+      }
+    }
+
+    @media (max-width: 48em) {
+      .tna-container::before {
+        content: "Container (small device size)";
+      }
+    }
+
+    @media (max-width: 30em) {
+      .tna-container::before {
+        content: "Container (tiny device size)";
+      }
+
+      .tna-container--nested::before {
+        left: 8.5px;
+      }
+
+      .tna-container--nested::after {
+        right: 8.5px;
+        left: 8.5px;
+      }
     }
   </style>
 {% endblock %}
