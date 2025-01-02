@@ -107,19 +107,19 @@
     }
 
     @media (max-width: 64em) {
-      .tna-container::before {
+      .tna-container:not(.tna-container--nested)::before {
         content: "Container (medium device size)";
       }
     }
 
     @media (max-width: 48em) {
-      .tna-container::before {
+      .tna-container:not(.tna-container--nested)::before {
         content: "Container (small device size)";
       }
     }
 
     @media (max-width: 30em) {
-      .tna-container::before {
+      .tna-container:not(.tna-container--nested)::before {
         content: "Container (tiny device size)";
       }
 
