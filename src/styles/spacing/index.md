@@ -33,13 +33,7 @@ ul    { margin-top: 32px; } /* the ul is separated from anything above by 32px *
 table { margin-top: 48px; } /* the table is separated from anything above by 48px */
 ```
 
-<!-- The alternative would be to use more complex and less supported selectors to add margin to the bottom of the elements, overwriting the same property every time:
-
-```css
-p              { margin-bottom: 1rem; } /* style applied to the p element */
-p:has(+ ul)    { margin-bottom: 2rem; } /* style applied to the p element */
-p:has(+ table) { margin-bottom: 3rem; } /* style applied to the p element */
-``` -->
+An element shouldn't apply a bottom margin unless its next sibling element is known.
 
 ### Headings
 

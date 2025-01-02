@@ -23,3 +23,11 @@ Try to keep each image on the page under 100kB. This will help the page to load 
 Compress JPEGs and WebPs where possible. The suggested starting compression should be 60% for JPEGs and 80% for WebPs. This will need to be changed based on your images and presentation.
 
 The exception to this would be where you have to show an image in great detail, such as showing a large map or displaying an image in an image viewer with the ability to zoom.
+
+## Alternative text
+
+Always include an `alt` attribute on images, even if is blank (i.e. `alt=""`).
+
+Avoid using purely decorative images. Icons should be added using an [icon font](../icons/) or SVGs and spacing should be applied with CSS.
+
+Follow [GOV.UK advice on using alternative text](https://design-system.service.gov.uk/styles/images/#alt-text).
