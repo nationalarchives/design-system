@@ -55,6 +55,10 @@
 @use "modules/frontend-overrides";
 @use "modules/typography" as DSTypography;
 
+:root {
+  color-scheme: only light;
+}
+
 .tna-ds-colour-swatch {
   width: 2rem;
   height: 2rem;
