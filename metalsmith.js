@@ -12,7 +12,7 @@ import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import sitemap from "metalsmith-sitemap";
 import jsTransformerNunjucks from "jstransformer-nunjucks";
-import packageInfo from "./package.json" with { type: "json" };
+import packageInfo from "./package-lock.json" with { type: "json" };
 import { readFileSync } from "fs";
 import { join } from "path";
 import { glob } from "glob";
@@ -33,13 +33,9 @@ Metalsmith(__dirname)
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
-    metalsmithVersion: packageInfo.devDependencies.metalsmith.replace(
-      /^[\^]/,
-      "",
-    ),
-    tnaFrontendVersion: packageInfo.dependencies[
-      "@nationalarchives/frontend"
-    ].replace(/^[\^]/, ""),
+    metalsmithVersion: packageInfo.packages["node_modules/metalsmith"].version,
+    tnaFrontendVersion:
+      packageInfo.packages["node_modules/@nationalarchives/frontend"].version,
     nodeVersion: process.version,
   })
   .use(async (files, metalsmith, done) => {
