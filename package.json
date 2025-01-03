@@ -51,7 +51,7 @@
     "gray-matter": "^4.0.3",
     "js-beautify": "^1.14.8",
     "jstransformer-nunjucks": "^1.2.0",
-    "marked": "^9.1.5",
+    "marked": "^12.0.0",
     "metalsmith": "^2.6.0",
     "metalsmith-renamer": "^0.5.217",
     "metalsmith-sitemap": "^1.2.2",
