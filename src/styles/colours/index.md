@@ -47,17 +47,23 @@ Always use the provided TNA colour palette.
 
 Ou full list of web colours can be found in the [colour variables for TNA Frontend](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_colour.scss).
 
-## Theme colours
+## Themes
+
+TNA Frontend has support for three themes:
+
+- [light theme](#light-theme)
+- [dark theme](#dark-theme)
+- [system theme](#system-theme) (which uses either the light or dark theme)
 
 ### Light theme
 
-The light theme is the default that comes with using `tna-template`.
+The light theme is the default that comes with using the [`tna-template` class](../page-template/#css-classes) if the dark or system themes are not specified.
 
 {{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ### Dark theme
 
-A dark theme can be used by adding the `tna-template--dark-theme` class.
+A dark theme can be used by adding the `tna-template--dark-theme` class to the `<html>` element.
 
 {{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
@@ -78,7 +84,7 @@ Using the system theme will either display the [light theme](#light-theme) or [d
 </html>
 ```
 
-## High contrast themes
+### High contrast themes
 
 The high contrast themes are applied on top of the existing light and dark themes. All themes follow the preference for `prefers-contrast` which can be `no-preference`, `more`, `less` or `custom`. See [MDN Web Docs - prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast).
 
@@ -185,3 +191,9 @@ Ensure you check for proper colour contrast in your service for both text and no
 
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
 - [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast)
+
+### Interactive elements
+
+Don't rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
+
+For example, adding an outline to a focused button or link is good but might not create enough contrast with the background to be able to be seen clearly. Consider changing the size of any text decorations (such as underlines) or changing the border and background colours to create a larger change in contrast between them.

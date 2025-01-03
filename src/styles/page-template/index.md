@@ -70,3 +70,10 @@ The blocks are nested in the following way:
 | `assetPath`   | The path for the icons and images included from TNA Frontend                                       | `/assets`               |
 | `bodyClasses` | Classes to add to the `<body>` element                                                             | [none]                  |
 | `mainClasses` | Classes to add to the `<main>` element                                                             | [none]                  |
+
+## CSS classes
+
+There are two template classes that need to be present in order to correctly apply a page layout:
+
+- `tna-template` - applied to the `<html>` element
+- `tna-template__body` - applied to the `<body>` element
