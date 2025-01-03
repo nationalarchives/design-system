@@ -8,11 +8,12 @@ title: Cookies
 
 Cookies are files saved on your phone, tablet or computer when you visit a website.
 
-This site has three categories of cookies:
+This site has four categories of cookies:
 
 - [essential](#strictly-necessary-cookies)
 - [settings](#cookies-that-remember-your-settings)
 - [usage](#cookies-that-measure-website-use)
+- [marketing](#cookies-that-are-used-for-marketing-purposes)
 
 {{ tnaWarning({
   body: "JavaScript is not available on your browser. This could be a network issue. Without JavaScript available your cookie preferences cannot be changed.",

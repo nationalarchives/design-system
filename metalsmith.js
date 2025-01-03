@@ -33,7 +33,6 @@ Metalsmith(__dirname)
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
-    metalsmithVersion: packageInfo.packages["node_modules/metalsmith"].version,
     tnaFrontendVersion:
       packageInfo.packages["node_modules/@nationalarchives/frontend"].version,
     nodeVersion: process.version,

@@ -22,7 +22,7 @@
 {%- set siteTitle = "The National Archives Design System" -%}
 {%- set pageTitle = title -%}
 {%- set htmlAttributes = {
-  "data-tnacookiespath": "/design-system/"
+  "data-tnacookies-path": "/design-system/"
 } -%}
 
 {% block head %}
@@ -104,15 +104,15 @@
         title: "Meta",
         items: [
           {
-            text: "Published on " + buildDate,
+            text: "Site updated " + buildDate,
             href: "https://github.com/nationalarchives/design-system/actions/workflows/deploy.yml"
           },
           {
-            text: "Built with TNA Frontend " + tnaFrontendVersion,
+            text: "Built using TNA Frontend " + tnaFrontendVersion,
             href: "https://github.com/nationalarchives/tna-frontend/releases/tag/v" + tnaFrontendVersion
           },
           {
-            text: "Made with Metalsmith " + metalsmithVersion,
+            text: "Built with Metalsmith",
             href: "https://metalsmith.io/"
           }
         ]
