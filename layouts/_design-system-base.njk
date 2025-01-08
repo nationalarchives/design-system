@@ -21,9 +21,12 @@
 
 {%- set siteTitle = "The National Archives Design System" -%}
 {%- set pageTitle = title -%}
+{%- set htmlAttributes = {
+  "data-tna-cookies-path": "/design-system/"
+} -%}
 
 {% block head %}
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://fastly.picsum.photos https://asciinema.org data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net https://tna.dblclk.dev 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://fakeimg.pl https://picsum.photos https://fastly.picsum.photos https://asciinema.org https://tna.dblclk.dev data: https://nationalarchives.github.io/design-system/; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
   {% if description %}
   <meta name="description" content="{{ description }}">
   {% endif %}
@@ -34,10 +37,15 @@
 {% endblock %}
 
 {% block stylesheets %}
-  <link rel="stylesheet" href="/design-system/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/design-system/css/index.css" media="screen,print">
+  <link rel="stylesheet" href="/design-system/css/fa.css" media="screen,print">
+  <link rel="stylesheet" href="https://use.typekit.net/kaq6qqh.css" media="screen,print">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&family=Roboto+Mono:wght@400..500&display=swap">
+  <link rel="stylesheet" href="/design-system/css/ie.css" media="all and (-ms-high-contrast: none), (-ms-high-contrast: active)">
   <link rel="stylesheet" href="/design-system/css/print.css" media="print">
-  <link rel="stylesheet" href="/design-system/css/fa.css">
-  <link rel="stylesheet" href="https://use.typekit.net/kaq6qqh.css">
+  <link rel="stylesheet" href="https://tna.dblclk.dev/enrichment/css/logo-adornments.css?date={{ stats.atime | iso8601 }}" media="screen" crossorigin="anonymous">
 {% endblock %}
 
 {% block cookies %}
@@ -96,16 +104,25 @@
         title: "Meta",
         items: [
           {
-            text: "Published on " + buildDate,
+            text: "Site updated " + buildDate,
             href: "https://github.com/nationalarchives/design-system/actions/workflows/deploy.yml"
           },
           {
-            text: "Built with TNA Frontend " + tnaFrontendVersion,
+            text: "Built using TNA Frontend " + tnaFrontendVersion,
             href: "https://github.com/nationalarchives/tna-frontend/releases/tag/v" + tnaFrontendVersion
           },
           {
-            text: "Made with Metalsmith " + metalsmithVersion,
+            text: "Built with Metalsmith",
             href: "https://metalsmith.io/"
+          }
+        ]
+      },
+      {
+        title: "Resources",
+        items: [
+          {
+            text: "Our brand",
+            href: "/design-system/brand/"
           }
         ]
       }
@@ -122,10 +139,6 @@
       {
         text: "Site map",
         href: "/design-system/sitemap/"
-      },
-      {
-        text: "Privacy policy",
-        href: "/design-system/privacy/"
       }
     ],
     classes: "tna-!--margin-top-l"

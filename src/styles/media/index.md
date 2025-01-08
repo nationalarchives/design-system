@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Media
 description: Provide services for a variety of screen sizes as well as print media.
 group: styles
+subGroup: layout
 ---
 
 ## Device sizes

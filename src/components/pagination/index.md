@@ -10,7 +10,7 @@ group: components
 
 Pagination can be used for example, as a list of search results or a list of cases in a case working system.
 
-{{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 {{ status(false, 0, 1, 2, 2, false) }}
 

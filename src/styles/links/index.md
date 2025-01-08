@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Links
 description: Link to pages within your service or to external resources.
 group: styles
+subGroup: typography
 ---
 
 {% from "partials/example.njk" import example %}
@@ -15,11 +16,13 @@ If your link is at the end of a sentence or paragraph, make sure that the linked
 
 ## Colours
 
-Link colours on different background types and in different themes have been included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend). Sometimes black or white links are used. See some examples of how [colours](../colours/) should be used in National Archive services.
+Link colours on different background types and in different themes have been included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend).
 
 Black or white links can be used for components that appear on every page such as [breadcrumbs](../../components/breadcrumbs/) and the [footer](../../components/footer/) because users will be familiar with links in these locations.
 
 White links can be used in dark areas where the default colour would not provide sufficient contrast.
+
+See some examples of how [colours](../colours/) should be used in National Archive services.
 
 ### Visited links
 
@@ -35,7 +38,7 @@ Disable the visited style be adding a `tna-link--no-visited-state` class to your
 
 ## Links in headings
 
-Links within [heading elements](../typography/#headings) have an arrow added after them.
+Links within [heading elements](../typography/#headings) have an arrow added after them. This arrow is added automatically when using TNA Frontend.
 
 {{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 

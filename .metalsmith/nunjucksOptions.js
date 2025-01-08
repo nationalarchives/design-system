@@ -177,6 +177,9 @@ const nunjucksOptions = {
         day: "numeric",
       });
     },
+    iso8601: function (date) {
+      return new Date(date).toISOString();
+    },
     jsonDump: function (data) {
       return JSON.stringify(data, null, 2);
     },

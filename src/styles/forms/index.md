@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Forms
 description: Allow users to enter information, search for content or perform tasks.
 group: styles
+subGroup: content
 ---
 
 {% from "partials/example.njk" import example %}
@@ -17,9 +18,9 @@ Allow users to enter data using:
 - [textareas](../../components/textarea)
 - [text inputs](../../components/text-input)
 
-Do not use the [date search](../../components/date-search/) or [select](../../components/select/) components in forms designed for users to submit data.
+Do not use the [date search](../../components/date-search/) or [select](../../components/select/) components in forms designed for users to submit data for storage.
 
-{{ example({ group: "styles", item: "forms", example: "user-submitted", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
+{{ example({ group: "styles", item: "forms", example: "user-submitted", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
 
 ### Displaying errors
 
@@ -27,13 +28,13 @@ Follow GOV.UK advice on [recovering from validation errors](https://design-syste
 
 Use the [error summary component](../../components/error-summary/) to summarise the issues and provide links directly to the problem fields.
 
-{{ example({ group: "styles", item: "forms", example: "user-submitted-with-errors", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
+{{ example({ group: "styles", item: "forms", example: "user-submitted-with-errors", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
 
 ## User accounts
 
 Use the `autocomplete` property to help people fill in forms with their own data. See the [list of input purposes on w3.org](https://www.w3.org/TR/WCAG21/#input-purposes).
 
-{{ example({ group: "styles", item: "forms", example: "user-accounts", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
+{{ example({ group: "styles", item: "forms", example: "user-accounts", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
 
 ## Searching
 
@@ -43,8 +44,8 @@ Searching for dates should use the [date search component](../../components/date
 
 Use the [select component](../../components/select/) to offer simple options for sorting.
 
-{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, nunjucksOptions: false, size: "xs" }) }}
+{{ example({ group: "styles", item: "forms", example: "searching", html: true, nunjucks: true, size: "xl", nunjucksOptions: false, noPadding: true }) }}
 
-## Backgrounds
+## Background colours
 
 Don't use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only regular, tinted or contrasting backgrounds.

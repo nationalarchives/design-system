@@ -8,7 +8,7 @@ group: components
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}) }}
+{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}, 2) }}
 
 {{ status(false, 2, 2, 2, false) }}
 
@@ -28,6 +28,5 @@ group: components
 
 The tabs component currently has a few shortcomings that mean it shouldn’t be relied upon.
 
-- In CSS-only mode (no JavaScript), the current tab is not indicated
 - If the tab titles are too long, the layout becomes sub-optimal
 - There is no alternative layout for smaller devices

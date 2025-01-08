@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Typography
 description: Utilise a full range of typography to more clearly communicate your content.
 group: styles
+subGroup: typography
 ---
 
 {% from "partials/example.njk" import example %}
@@ -60,6 +61,10 @@ Using the standard widths that the grid system provides, these classes produce l
 You can use a larger paragraph as an introduction to the page or section. 
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
+
+There is also a slightly bolder version of the large paragraph.
+
+{{ example({ group: "styles", item: "typography", example: "paragraphs-large-bold", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
 ### Small
 

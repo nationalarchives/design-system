@@ -14,28 +14,123 @@
       justify-content: space-evenly;
     }
 
+    .tna-container,
+    .tna-column {
+      position: relative;
+    }
+
     .tna-container {
-      padding-top: 16px;
+      padding-top: 32px;
       padding-bottom: 16px;
+
+      background: #fad3d4;
+    }
+
+    .tna-container--nested {
+      margin-top: 16px;
+
+      background: none;
     }
 
     .tna-column {
-      margin-top: 16px;
-      margin-bottom: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
 
-      position: relative;
+      z-index: 2;
 
-      color: #fff;
-      line-height: 3rem;
-      text-align: center;
-
-      background: #1e1e1e;
       background-clip: content-box;
     }
 
     .tna-column p {
-      margin-top: 4px;
-      margin-bottom: 4px;
+      padding: 8px 0;
+
+      color: #fff;
+      line-height: 1.65;
+      background: #004c7e;
+    }
+
+    .tna-container::before,
+    .tna-column::before {
+      padding: 4px;
+
+      position: absolute;
+      z-index: 3;
+
+      color: #fff;
+      font-size: 13px;
+      line-height: 1;
+
+      background-color: #fe1d57;
+    }
+
+    .tna-container::before {
+      top: 0;
+      left: 0;
+
+      content: "Container (large device size)";
+    }
+
+    .tna-container--nested::before {
+      left: 16.5px;
+
+      content: "Nested container";
+    }
+
+    .tna-column::before {
+      top: 0.5px;
+      left: 0.5px;
+
+      content: "Column";
+    }
+
+    .tna-container::after,
+    .tna-column::after {
+      position: absolute;
+      z-index: 1;
+
+      border: 1px #fe1d57 dashed;
+
+      content: "";
+    }
+
+    .tna-container::after {
+      inset: 0;
+    }
+
+    .tna-container--nested::after {
+      right: 16.5px;
+      left: 16.5px;
+    }
+
+    .tna-column::after {
+      inset: 0.5px;
+    }
+
+    @media (max-width: 64em) {
+      .tna-container:not(.tna-container--nested)::before {
+        content: "Container (medium device size)";
+      }
+    }
+
+    @media (max-width: 48em) {
+      .tna-container:not(.tna-container--nested)::before {
+        content: "Container (small device size)";
+      }
+    }
+
+    @media (max-width: 30em) {
+      .tna-container:not(.tna-container--nested)::before {
+        content: "Container (tiny device size)";
+      }
+
+      .tna-container--nested::before {
+        left: 8.5px;
+      }
+
+      .tna-container--nested::after {
+        right: 8.5px;
+        left: 8.5px;
+      }
     }
   </style>
 {% endblock %}

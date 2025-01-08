@@ -1,0 +1,21 @@
+---
+title: Grid
+layout: examples/grid.njk
+private: true
+---
+
+{% from "nationalarchives/utilities/grid/macro.njk" import tnaGrid %}
+
+{{ tnaGrid({
+  columns: [
+    {
+      html: "<p>Lorem ipsum</p>"
+    },
+    {
+      html: "<p>dolor sit amet,</p>"
+    },
+    {
+      html: "<p>consectetur adipiscing elit.</p>"
+    }
+  ]
+}) }}

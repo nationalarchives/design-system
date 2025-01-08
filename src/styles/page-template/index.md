@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Page template
 description: Use the TNA Frontend base template to create consistent page layouts.
 group: styles
+subGroup: layout
 ---
 
 {% from "partials/example.njk" import example %}
@@ -55,15 +56,24 @@ The blocks are nested in the following way:
     - `footer`
     - `bodyEnd`
 
+## Variables
+
 | Variable      | Purpose                                                                                            | Default                 |
 | ------------- | -------------------------------------------------------------------------------------------------- | ----------------------- |
-| `htmlLang`    | Sets the `lang` attribute of the `<html>` element                                                  | `en-GB`                 |
+| `htmlLang`    | Sets the `lang` attribute of the `<html>` element                                                  | `en`                    |
 | `htmlClasses` | Classes to add to the `<html>` element                                                             | [none]                  |
 | `pageTitle`   | Sets the title of the page in the `<title>` element, before the `siteTitle`                        | [none]                  |
 | `siteTitle`   | Sets the title of the page in the `<title>` element, after the `pageTitle`                         | `The National Archives` |
 | `theme`       | Sets the [theme colour](../../styles/colours/#theme-colours) of the site                           | `system`                |
 | `themeAccent` | Sets the [accent colour](../../styles/colours/#accent-colours) of the site                         | [none]                  |
-| `themeColor`  | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#000000`               |
+| `themeColor`  | The [theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color) | `#010101`               |
 | `assetPath`   | The path for the icons and images included from TNA Frontend                                       | `/assets`               |
 | `bodyClasses` | Classes to add to the `<body>` element                                                             | [none]                  |
 | `mainClasses` | Classes to add to the `<main>` element                                                             | [none]                  |
+
+## CSS classes
+
+There are two template classes that need to be present in order to correctly apply a page layout:
+
+- `tna-template` - applied to the `<html>` element
+- `tna-template__body` - applied to the `<body>` element

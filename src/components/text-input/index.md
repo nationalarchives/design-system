@@ -1,14 +1,14 @@
 ---
 layout: collection-page.njk
 title: Text input
-description: Use the text input component to allow the users to enter a short string text information such as their email address, a record title or a postcode.
+description: The text input component allows users to enter short string of text such as their email address, a record title or a postcode.
 group: components
 ---
 
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 {{ status(false, 0, 1, 2, 2, false) }}
 

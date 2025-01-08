@@ -1,4 +1,5 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
 .tna-button {
@@ -20,8 +21,18 @@
   }
 }
 
-.tna-sidebar--pages .tna-sidebar__item-children {
-  @include media.on-mobile {
-    display: none;
+.tna-sidebar {
+  @include spacing.space-above;
+
+  &--pages &__item-children {
+    @include media.on-mobile {
+      display: none;
+    }
+  }
+}
+
+.tna-card {
+  &--full-click {
+    height: 100%;
   }
 }

@@ -44,31 +44,49 @@
       {{ contents | safe }}
     </main>
     <div id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section tna-!--hide-on-print" role="navigation" aria-label="{{ groupTitle }} navigation">
-      {% set items = [] %}
+      {% set subGroups = [] %}
       {% for item in collections[group] %}
-        {% set children = [] %}
-        {% set current = item.path == path %}
-        {% if current and headings %}
-          {% for heading in headings %}
-            {% set children = children.concat({
-              text: heading.title,
-              href: "#" + heading.href
-            }) %}
-          {% endfor %}
+        {% if item.subGroup and item.subGroup not in subGroups %}
+        {% set subGroups = subGroups.concat(item.subGroup) %}
         {% endif %}
-        {% set items = items.concat({
-          text: item.title,
-          href: "/design-system/" + item.path.replace("index.html", ""),
-          children: children,
-          current: current
-        }) %}
       {% endfor %}
-      {{ tnaSidebar({
-        title: groupTitle,
-        headingLevel: 2,
-        items: items,
-        type: "pages"
-      }) }}
+      {% set subGroups = subGroups | sort %}
+      {% set subGroups = subGroups.concat("") %}
+      {% if subGroups | length > 1 %}
+      <h2 class="tna-heading-m">{{ groupTitle }}</h2>
+      {% endif %}
+      {% for subGroup in subGroups %}
+        {% set items = [] %}
+        {% for item in collections[group] %}
+          {% if item.subGroup == subGroup or (subGroup == "" and not item.subGroup) %}
+            {% set children = [] %}
+            {% set current = item.path == path %}
+            {% if current and headings %}
+              {% for heading in headings %}
+                {% set children = children.concat({
+                  text: heading.title,
+                  href: "#" + heading.href
+                }) %}
+              {% endfor %}
+            {% endif %}
+            {% set items = items.concat({
+              text: item.title,
+              href: "/design-system/" + item.path.replace("index.html", ""),
+              children: children,
+              current: current
+            }) %}
+          {% endif %}
+        {% endfor %}
+        {% if items | length %}
+          {{ tnaSidebar({
+            title: (subGroup | capitalize or "Other " + groupTitle | lower) if subGroups | length > 1 else groupTitle,
+            headingLevel: 3 if subGroups | length > 1 else 2,
+            headingSize: "s" if subGroups | length > 1 else "m",
+            items: items,
+            type: "pages"
+          }) }}
+        {% endif %}
+      {% endfor %}
     </div>
     <div class="tna-column tna-column--full tna-!--hide-on-print">
       <hr>

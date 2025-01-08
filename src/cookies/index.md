@@ -8,11 +8,12 @@ title: Cookies
 
 Cookies are files saved on your phone, tablet or computer when you visit a website.
 
-This site has three categories of cookies:
+This site has four categories of cookies:
 
 - [essential](#strictly-necessary-cookies)
 - [settings](#cookies-that-remember-your-settings)
 - [usage](#cookies-that-measure-website-use)
+- [marketing](#cookies-that-are-used-for-marketing-purposes)
 
 {{ tnaWarning({
   body: "JavaScript is not available on your browser. This could be a network issue. Without JavaScript available your cookie preferences cannot be changed.",
@@ -81,6 +82,32 @@ This site currently collects no usage data.
     buttonElement: true,
     attributes: {
       "data-setcookiepreference": "usage",
+      "data-setcookiepreferencevalue": "false"
+    }
+  }) }}
+</div>
+
+## Cookies that are used for marketing purposes
+
+These cookies may be set by third party websites and track things that can be used for marketing and advertising purposes.
+
+This site currently collects no data for marketing purposes.
+
+<p aria-live="assertive" class="tna-ds--show-on-js" data-showcookiepreference="marketing" data-showcookiepreferenceonaccepted="Cookies that can be used for marketing purposes have been accepted." data-showcookiepreferenceonrejected="Cookies that can be used for marketing purposes have been rejected."></p>
+
+<div class="tna-button-group tna-ds--show-on-js">
+  {{ tnaButton({
+    text: "Allow marketing cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "marketing",
+      "data-setcookiepreferencevalue": "true"
+    }
+  }) }} {{ tnaButton({
+    text: "Decline marketing cookies",
+    buttonElement: true,
+    attributes: {
+      "data-setcookiepreference": "marketing",
       "data-setcookiepreferencevalue": "false"
     }
   }) }}

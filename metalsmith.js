@@ -11,7 +11,8 @@ import collections from "@metalsmith/collections";
 import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
 import sitemap from "metalsmith-sitemap";
-import packageInfo from "./package.json" assert { type: "json" };
+import jsTransformerNunjucks from "jstransformer-nunjucks";
+import packageInfo from "./package-lock.json" with { type: "json" };
 import { readFileSync } from "fs";
 import { join } from "path";
 import { glob } from "glob";
@@ -32,13 +33,8 @@ Metalsmith(__dirname)
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
-    metalsmithVersion: packageInfo.devDependencies.metalsmith.replace(
-      /^[\^]/,
-      "",
-    ),
-    tnaFrontendVersion: packageInfo.dependencies[
-      "@nationalarchives/frontend"
-    ].replace(/^[\^]/, ""),
+    tnaFrontendVersion:
+      packageInfo.packages["node_modules/@nationalarchives/frontend"].version,
     nodeVersion: process.version,
   })
   .use(async (files, metalsmith, done) => {
@@ -84,6 +80,7 @@ Metalsmith(__dirname)
   )
   .use(
     inplace({
+      transform: jsTransformerNunjucks, // resolved
       pattern: "**/*.njk",
       engineOptions: nunjucksOptions,
     }),
@@ -165,6 +162,7 @@ Metalsmith(__dirname)
         "lib/all.scss": "css/all.css",
         "lib/print.scss": "css/print.css",
         "lib/fa.scss": "css/fa.css",
+        "lib/ie.scss": "css/ie.css",
       },
     }),
   )

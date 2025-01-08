@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Icons
 description: Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 group: styles
+subGroup: brand
 ---
 
 {% from "partials/example.njk" import example %}

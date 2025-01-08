@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Colours
 description: Use colours to add interest to your pages and content.
 group: styles
+subGroup: brand
 ---
 
 {% from "partials/example.njk" import example %}
@@ -16,66 +17,55 @@ Always use the provided TNA colour palette.
 | Colour        | Hex                                                                             |
 | ------------- | ------------------------------------------------------------------------------- |
 | Black         | <span class="tna-ds-colour-swatch" style="background:#010101"></span> `#010101` |
+| Dark grey     | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a` |
 | Grey          | <span class="tna-ds-colour-swatch" style="background:#8c9694"></span> `#8c9694` |
 | Light grey    | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6` |
 | White         | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
-
-<!--
-### Primary
-
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Yellow        | <span class="tna-ds-colour-swatch" style="background:#ffcc00"></span> `#ffcc00` |
-| Pink          | <span class="tna-ds-colour-swatch" style="background:#fe1d57"></span> `#fe1d57` |
-| Orange        | <span class="tna-ds-colour-swatch" style="background:#fd3f03"></span> `#fd3f03` |
-| Green         | <span class="tna-ds-colour-swatch" style="background:#86bc25"></span> `#86bc25` |
-| Blue          | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` |
-
-### Darks
-
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Brown         | <span class="tna-ds-colour-swatch" style="background:#654e37"></span> `#654e37` |
-| Maroon        | <span class="tna-ds-colour-swatch" style="background:#9c193a"></span> `#9c193a` |
-| Chestnut      | <span class="tna-ds-colour-swatch" style="background:#8f3415"></span> `#8f3415` |
-| Forest        | <span class="tna-ds-colour-swatch" style="background:#00623b"></span> `#00623b` |
-| Navy          | <span class="tna-ds-colour-swatch" style="background:#004c7e"></span> `#004c7e` |
-
-### Lights
-
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Cream         | <span class="tna-ds-colour-swatch" style="background:#f9f7e2"></span> `#f9f7e2` |
-| Pastel pink   | <span class="tna-ds-colour-swatch" style="background:#fad3d4"></span> `#fad3d4` |
-| Pastel orange | <span class="tna-ds-colour-swatch" style="background:#f9e1bc"></span> `#f9e1bc` |
-| Pastel green  | <span class="tna-ds-colour-swatch" style="background:#dde5d5"></span> `#dde5d5` |
-| Pastel blue   | <span class="tna-ds-colour-swatch" style="background:#d4e5ef"></span> `#d4e5ef` |
--->
 
 ### Primary colour palette
 
 | Colour | Main                                                                            | Darks                                                                                      | Lights                                                                                          |
 | ------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| Yellow | <span class="tna-ds-colour-swatch" style="background:#ffcc00"></span> `#ffcc00` | <span class="tna-ds-colour-swatch" style="background:#654e37"></span> `#654e37` (Brown)    | <span class="tna-ds-colour-swatch" style="background:#f9f7e2"></span> `#f9f7e2` (Cream)         |
 | Pink   | <span class="tna-ds-colour-swatch" style="background:#fe1d57"></span> `#fe1d57` | <span class="tna-ds-colour-swatch" style="background:#9c193a"></span> `#9c193a` (Maroon)   | <span class="tna-ds-colour-swatch" style="background:#fad3d4"></span> `#fad3d4` (Pastel pink)   |
 | Orange | <span class="tna-ds-colour-swatch" style="background:#fd3f03"></span> `#fd3f03` | <span class="tna-ds-colour-swatch" style="background:#8f3415"></span> `#8f3415` (Chestnut) | <span class="tna-ds-colour-swatch" style="background:#f9e1bc"></span> `#f9e1bc` (Pastel orange) |
+| Yellow | <span class="tna-ds-colour-swatch" style="background:#ffcc00"></span> `#ffcc00` | <span class="tna-ds-colour-swatch" style="background:#654e37"></span> `#654e37` (Brown)    | <span class="tna-ds-colour-swatch" style="background:#f9f7e2"></span> `#f9f7e2` (Cream)         |
 | Green  | <span class="tna-ds-colour-swatch" style="background:#86bc25"></span> `#86bc25` | <span class="tna-ds-colour-swatch" style="background:#00623b"></span> `#00623b` (Forest)   | <span class="tna-ds-colour-swatch" style="background:#dde5d5"></span> `#dde5d5` (Pastel green)  |
 | Blue   | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` | <span class="tna-ds-colour-swatch" style="background:#004c7e"></span> `#004c7e` (Navy)     | <span class="tna-ds-colour-swatch" style="background:#d4e5ef"></span> `#d4e5ef` (Pastel blue)   |
 
 ### Extra web colour palette
 
-| Colour                 | Light theme                                                                     | Dark theme                                                                      |
-| ---------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Page background        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4` | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223` |
-| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#ededed"></span> `#ededed` | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334` |
-| Contrasting background | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e` | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112` |
-| Base font              | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338` | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
-| Links                  | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8` | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` |
-| Visited links          | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92` | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff` |
+| Colour                 | Light theme                                                                         | Dark theme                                                                          |
+| ---------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Page background        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4`     | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223`     |
+| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6`     | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334`     |
+| Contrasting background | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e`     | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112`     |
+| Base font              | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338`     | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff`     |
+| Keylines               | <span class="tna-ds-colour-swatch" style="background:#26262a40"></span> `#26262a40` | <span class="tna-ds-colour-swatch" style="background:#ffffff40"></span> `#ffffff40` |
+| Dark keylines          | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a`     | <span class="tna-ds-colour-swatch" style="background:#ffffffbf"></span> `#ffffffbf` |
+| Links                  | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8`     | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff`     |
+| Visited links          | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92`     | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff`     |
 
 Ou full list of web colours can be found in the [colour variables for TNA Frontend](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_colour.scss).
 
-## Theme colours
+## Themes
+
+TNA Frontend has support for three themes:
+
+- [light theme](#light-theme)
+- [dark theme](#dark-theme)
+- [system theme](#system-theme) (which uses either the light or dark theme)
+
+### Light theme
+
+The light theme is the default that comes with using the [`tna-template` class](../page-template/#css-classes) if the dark or system themes are not specified.
+
+{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
+
+### Dark theme
+
+A dark theme can be used by adding the `tna-template--dark-theme` class to the `<html>` element.
+
+{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
 
 ### System theme
 
@@ -94,19 +84,7 @@ Using the system theme will either display the [light theme](#light-theme) or [d
 </html>
 ```
 
-### Light theme
-
-The light theme is the default that comes with using `tna-template`.
-
-{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
-
-### Dark theme
-
-A dark theme can be used by adding the `tna-template--dark-theme` class.
-
-{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "29_75rem", noPadding: true }) }}
-
-## High contrast themes
+### High contrast themes
 
 The high contrast themes are applied on top of the existing light and dark themes. All themes follow the preference for `prefers-contrast` which can be `no-preference`, `more`, `less` or `custom`. See [MDN Web Docs - prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast).
 
@@ -201,13 +179,21 @@ The appropriate colours for all child elements such as text and links will also 
 
 {{ example({ group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
 
+> On dark themes, a light accent block will change to an [accent block](#accent).
+
 ## Colour contrast
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
-We check as many [colour combinations in TNA Frontend](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the error summary component doesn't have enough contrast with its surroundings when used within an accented block.
+In TNA Frontend, we check as many [light colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) and [dark colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--dark&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the [error summary component](../../components/error-summary/) doesn't have enough contrast with its surroundings when used within an [accented block](#accent).
 
 Ensure you check for proper colour contrast in your service for both text and non-text elements:
 
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
 - [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast)
+
+### Interactive elements
+
+Don't rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
+
+For example, adding an outline to a focused button or link is good but might not create enough contrast with the background to be able to be seen clearly. Consider changing the size of any text decorations (such as underlines) or changing the border and background colours to create a larger change in contrast between them.

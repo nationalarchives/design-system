@@ -1,0 +1,59 @@
+---
+title: Form elements for searching
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+{% from "nationalarchives/components/date-search/macro.njk" import tnaDateSearch %}
+{% from "nationalarchives/components/select/macro.njk" import tnaSelect %}
+{% from "nationalarchives/components/search-field/macro.njk" import tnaSearchField %}
+
+<div class="tna-container">
+  <div class="tna-column tna-column--full tna-!--padding-vertical-m">
+    <form novalidate>
+      {{ tnaSearchField({
+        label: "Search for a record",
+        headingLevel: 1,
+        headingSize: "l",
+        id: "search",
+        name: "q"
+      }) }}
+      {{ tnaDateSearch({
+        label: "Earliest record date",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "date",
+        name: "date"
+      }) }}
+      {{ tnaSelect({
+        label: "Sort by",
+        headingLevel: 2,
+        headingSize: "m",
+        id: "sort",
+        name: "sort",
+        items: [
+          {
+            text: "Relevance",
+            value: "relevance"
+          },
+          {
+            text: "Date",
+            value: "date"
+          },
+          {
+            text: "Title",
+            value: "title"
+          }
+        ]
+      }) }}
+      <div class="tna-button-group">
+        {{ tnaButton({
+          text: "Update results",
+          buttonElement: true,
+          buttonType: "submit"
+        }) }}
+      </div>
+    </form>
+  </div>
+</div>

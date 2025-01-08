@@ -32,21 +32,46 @@
     </div>
     {%- endif %}
     <nav id="{{ group }}-list" class="tna-section tna-!--no-padding-bottom" aria-label="{{ groupTitle }} pages">
-      <ul class="tna-container">
+      {% set subGroups = [] %}
       {% for item in collections[group] %}
-        <li class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
-          {{ tnaCard({
-            title: item.title,
-            headingLevel: 2,
-            headingSize: "s",
-            href: "/design-system/" + item.path.replace("index.html", ""),
-            text: item.description,
-            fullAreaClick: true,
-            classes: "tna-card--heading-link-arrow"
-          }) }}
-        </li>
-      {%- endfor %}
-      </div>
+        {% if item.subGroup and item.subGroup not in subGroups %}
+          {% set subGroups = subGroups.concat(item.subGroup) %}
+        {% endif %}
+      {% endfor %}
+      {% set subGroups = subGroups | sort %}
+      {% set subGroups = subGroups.concat("") %}
+      {% for subGroup in subGroups %}
+        {% set subGroupItems = [] %}
+        {% for item in collections[group] %}
+          {% if item.subGroup == subGroup or (subGroup == "" and not item.subGroup) %}
+            {% set subGroupItems = subGroupItems.concat(item) %}
+          {% endif %}
+        {% endfor %}
+        {% if subGroupItems | length %}
+          {% if subGroups | length > 1 %}
+          <div class="tna-container">
+            <div class="tna-column tna-column--full">
+              <h2 class="tna-heading-m tna-!--margin-bottom-s">{{ subGroup | capitalize or "Other " + groupTitle | lower }}</h2>
+            </div>
+          </div>
+          {% endif %}
+          <ul class="tna-container">
+          {% for item in subGroupItems %}
+            <li class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
+              {{ tnaCard({
+                title: item.title,
+                headingLevel: 3 if subGroups | length > 1 else 2,
+                headingSize: "s",
+                href: "/design-system/" + item.path.replace("index.html", ""),
+                text: item.description,
+                fullAreaClick: true,
+                classes: "tna-card--heading-link-arrow"
+              }) }}
+            </li>
+          {%- endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
     </nav>
   </main>
 {% endblock %}

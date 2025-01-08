@@ -10,4 +10,4 @@ When making services in production, refer to the [National Archives Engineering 
 
 ## Include TNA Frontend in your project
 
-See [Using TNA Frontend](https://github.com/nationalarchives/tna-frontend/wiki/Using-TNA-Frontend) in the TNA Frontend wiki for instructions on how to use National Archive styles and components in your applciation.
+See the [TNA Frontend Documentation](https://nationalarchives.github.io/tna-frontend-docs/) for instructions on how to use and customise National Archive styles and components in your applciation.

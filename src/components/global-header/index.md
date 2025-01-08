@@ -8,7 +8,7 @@ group: components
 {% from "partials/example.njk" import example %}
 {% from "partials/component-status.njk" import status %}
 
-{{ example({ group: "components", item: "global-header", example: "default", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ group: "components", item: "global-header", example: "default", html: true, nunjucks: true, size: "m" }, 2) }}
 
 {{ status(true, 1, 1, 1, 1, false) }}
 

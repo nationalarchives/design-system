@@ -1,7 +1,7 @@
 {%- from "nationalarchives/components/accordion/macro.njk" import tnaAccordion -%}
 {%- from "nationalarchives/components/details/macro.njk" import tnaDetails -%}
 
-{% macro example(params) %}
+{% macro example(params, nextHeadingLevel) %}
   {% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
   {% set examplePath = exampleRoot + "index.njk" %}
   {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
@@ -43,7 +43,7 @@
     
     {% if accordionItems | length %}
     {{ tnaAccordion({
-      itemHeadingLevel: 3,
+      itemHeadingLevel: nextHeadingLevel or 3,
       items: accordionItems,
       group: exampleRoot,
       id: exampleId
