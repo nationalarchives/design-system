@@ -1,0 +1,16 @@
+---
+title: Text input - password
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
+
+{{ tnaTextInput({
+  label: "Enter your password",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "password",
+  name: "password",
+  password: true
+}) }}

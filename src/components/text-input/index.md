@@ -27,3 +27,9 @@ group: components
 ## Inline
 
 {{ example({ group: "components", item: "text-input", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
+
+## Password
+
+The password text input is enhanced with JavaScript to allow the hiding and showing of the password.
+
+{{ example({ group: "components", item: "text-input", example: "password", html: true, nunjucks: true, size: "xs" }) }}
