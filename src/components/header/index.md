@@ -10,4 +10,4 @@ group: components
 
 {{ example({ group: "components", item: "header", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
-{{ status(true, 1, 1, 1, 2, false) }}
+{{ status(true, 1, 1, 2, 2, false) }}
