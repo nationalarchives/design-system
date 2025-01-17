@@ -12,7 +12,7 @@ The button component can be used as a call to action link or as a `<button>` ele
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-{{ status(true, 0, 1, 2, 0, false) }}
+{{ status(true, 0, 1, 1, 0, false) }}
 
 ## Icons
 

@@ -14,7 +14,7 @@ Use the card component for providing previews to articles and pages.
 
 {{ example({ group: "components", item: "card", example: "default", html: true, nunjucks: true, size: "xl" }, 2) }}
 
-{{ status(true, 0, 1, 2, 0, false) }}
+{{ status(true, 0, 1, 1, 0, false) }}
 
 ## Horizontal
 

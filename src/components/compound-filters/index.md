@@ -12,4 +12,4 @@ Each selected value requires a link to be able to remove the value.
 
 {{ example({ group: "components", item: "compound-filters", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
-{{ status(true, 0, 1, 2, 2, false) }}
+{{ status(true, 0, 1, 2, 0, false) }}

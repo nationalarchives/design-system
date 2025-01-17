@@ -12,7 +12,7 @@ The index grid includes a `tna-container` element so doesn’t need to be used w
 
 {{ example({ group: "components", item: "index-grid", example: "default", html: true, nunjucks: true, size: "xxxl" }, 2) }}
 
-{{ status(true, 0, 1, 2, 2, false) }}
+{{ status(true, 0, 1, 2, 0, false) }}
 
 ## Images
 

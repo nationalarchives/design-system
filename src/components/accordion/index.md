@@ -10,4 +10,4 @@ description: The accordion component lets users show and hide sections of relate
 
 {{ example({ group: "components", item: "accordion", example: "default", html: true, nunjucks: true, size: "m" }, 2) }}
 
-{{ status(true, 1, 1, 2, 1, false) }}
+{{ status(true, 1, 1, 1, 1, false) }}

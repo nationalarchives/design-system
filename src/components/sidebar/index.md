@@ -14,7 +14,7 @@ The sidebar component comes in three styles:
 - [Sections](#sections)
 - [Pages](#pages)
 
-{{ status(true, 0, 1, 2, 1, false) }}
+{{ status(true, 0, 1, 1, 1, false) }}
 
 ## Contents
 

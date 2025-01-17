@@ -12,7 +12,7 @@ Pagination can be used for example, as a list of search results or a list of cas
 
 {{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-{{ status(true, 0, 1, 2, 2, false) }}
+{{ status(true, 0, 1, 2, 0, false) }}
 
 Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, ‘Search results (page 1 of 4)’.
 
