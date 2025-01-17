@@ -12,7 +12,7 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 {{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
-{{ status(false, 0, 1, 2, 2, false) }}
+{{ status(true, 0, 1, 2, 2, false) }}
 
 ## Preselected
 

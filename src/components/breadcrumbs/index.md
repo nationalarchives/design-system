@@ -12,7 +12,7 @@ The breadcrumbs component is also known as navigation path or cookie crumb.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-{{ status(true, 1, 1, 1, 2, true) }}
+{{ status(true, 1, 1, 1, 1, true) }}
 
 ## When to use this component
 

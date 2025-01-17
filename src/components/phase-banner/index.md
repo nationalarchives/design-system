@@ -14,4 +14,4 @@ It can also display a link to allow the user to provide feedback.
 
 {{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-{{ status(false, 0, 2, 2, 2, false) }}
+{{ status(true, 0, 1, 2, 0, false) }}
