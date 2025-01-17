@@ -1,0 +1,32 @@
+---
+title: Secondary navigation
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/secondary-navigation/macro.njk" import tnaSecondaryNavigation %}
+
+{{ tnaSecondaryNavigation({
+  title: "Sections",
+  headingLevel: 2,
+  items: [
+    {
+      name: "Alpha",
+      href: "#"
+    },
+    {
+      name: "Beta",
+      href: "#",
+      current: true
+    },
+    {
+      name: "Gamma",
+      href: "#"
+    },
+    {
+      name: "Delta",
+      href: "#"
+    }
+  ],
+  noUnindentation: true
+}) }}
