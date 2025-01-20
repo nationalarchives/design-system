@@ -3,16 +3,21 @@ layout: collection-page.njk
 title: Button
 description: The button component can be used as a call to action link or as a button element for use within forms.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 0
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 The button component can be used as a call to action link or as a `<button>` element for use within forms.
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-{{ status(true, 0, 1, 1, 0, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Icons
 

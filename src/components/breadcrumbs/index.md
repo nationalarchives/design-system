@@ -3,16 +3,21 @@ layout: collection-page.njk
 title: Breadcrumbs
 description: Breadcrumbs help users to understand where they are within a websites structure and move between levels.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 1
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 1
+statusDocumentationComplete: true
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 The breadcrumbs component is also known as navigation path or cookie crumb.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-{{ status(true, 1, 1, 1, 1, true) }}
+{% include "partials/component-status.njk" %}
 
 ## When to use this component
 

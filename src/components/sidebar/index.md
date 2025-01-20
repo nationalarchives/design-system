@@ -3,10 +3,15 @@ layout: collection-page.njk
 title: Sidebar
 description: The sidebar can be used in a page to provide additional navigation.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 1
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 The sidebar component comes in three styles:
 
@@ -14,7 +19,7 @@ The sidebar component comes in three styles:
 - [Sections](#sections)
 - [Pages](#pages)
 
-{{ status(true, 0, 1, 1, 1, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Contents
 

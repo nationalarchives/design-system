@@ -3,14 +3,19 @@ layout: collection-page.njk
 title: Textarea
 description: Use the textarea component to allow the users to enter a longer string of text information such as feedback.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 2
+statusAnalytics: 1
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 {{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
-{{ status(true, 0, 1, 2, 1, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Preselected
 

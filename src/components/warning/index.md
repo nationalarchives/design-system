@@ -3,11 +3,16 @@ layout: collection-page.njk
 title: Warning
 description: The warning component provides the user with important information about the page or article.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 0
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 {{ example({ group: "components", item: "warning", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
-{{ status(true, 0, 1, 1, 0, false) }}
+{% include "partials/component-status.njk" %}

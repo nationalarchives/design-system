@@ -3,16 +3,21 @@ layout: collection-page.njk
 title: Select
 description: The select component allows users to select a single value from a list of options.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 2
+statusAnalytics: 1
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 Where possible, avoid overusing the select component. Alice Bartlett gave a talk at EpicFEL called ["Burn your select tags"](https://www.youtube.com/watch?v=CUkMCQR4TpY) which explains when the `<select>` tag is not the most appropriate tag to use.
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
-{{ status(true, 0, 1, 2, 1, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Preselected
 

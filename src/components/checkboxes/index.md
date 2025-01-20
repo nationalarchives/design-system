@@ -3,16 +3,21 @@ layout: collection-page.njk
 title: Checkboxes
 description: Checkboxes allow users to post multiple options for the same field.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 2
+statusAnalytics: 1
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 Checkboxes allow users to post multiple options for the same field.
 
 {{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
-{{ status(true, 0, 1, 2, 1, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Small
 

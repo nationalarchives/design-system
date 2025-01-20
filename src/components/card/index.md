@@ -3,10 +3,15 @@ layout: collection-page.njk
 title: Card
 description: Use the card component for providing previews to articles and pages.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 0
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 {% from "nationalarchives/components/picture/macro.njk" import tnaPicture %}
 
@@ -14,7 +19,7 @@ Use the card component for providing previews to articles and pages.
 
 {{ example({ group: "components", item: "card", example: "default", html: true, nunjucks: true, size: "xl" }, 2) }}
 
-{{ status(true, 0, 1, 1, 0, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Horizontal
 

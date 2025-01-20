@@ -3,14 +3,19 @@ layout: collection-page.njk
 title: Picture
 description: The picture component can display an image with additional information.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 1
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 2
+statusAnalytics: 1
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 {{ example({ group: "components", item: "picture", example: "default", html: true, nunjucks: true, size: "xxxl" }, 2) }}
 
-{{ status(true, 1, 1, 2, 1, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Image sizes
 

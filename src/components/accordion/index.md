@@ -3,11 +3,16 @@ layout: collection-page.njk
 title: Accordion
 group: components
 description: The accordion component lets users show and hide sections of related content on a page.
+statusProduction: true
+statusTestedWithoutJavaScript: 1
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 1
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 {{ example({ group: "components", item: "accordion", example: "default", html: true, nunjucks: true, size: "m" }, 2) }}
 
-{{ status(true, 1, 1, 1, 1, false) }}
+{% include "partials/component-status.njk" %}

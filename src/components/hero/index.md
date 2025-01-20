@@ -3,14 +3,19 @@ layout: collection-page.njk
 title: Hero
 description: Use the hero component to start an article.
 group: components
+statusProduction: true
+statusTestedWithoutJavaScript: 0
+statusTestedWithoutCSS: 1
+statusPassedDacAudit: 1
+statusAnalytics: 2
+statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
-{% from "partials/component-status.njk" import status %}
 
 {{ example({ group: "components", item: "hero", example: "default", html: true, nunjucks: true, size: "xl", noPadding: true }, 2) }}
 
-{{ status(true, 0, 1, 1, 2, false) }}
+{% include "partials/component-status.njk" %}
 
 ## Images
 
