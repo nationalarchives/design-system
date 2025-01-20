@@ -61,4 +61,4 @@ The National Archives components can be included in your prototype using the tem
 
 Examples are given in the [components section](../../components/). Each component example shows all the Nunjucks options available to that component.
 
-{{ example({ group: "components", item: "button", example: "default", html: false, nunjucks: true, size: "xxs", noOpenInNewTab: true }) }}
+{{ example({ group: "components", item: "button", example: "default", html: false, nunjucks: true, nunjucksOptions: false, size: "xxs", noOpenInNewTab: true }) }}

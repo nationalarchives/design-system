@@ -38,7 +38,7 @@ The chips in a chip list can be links and can also contain [chip icons](../icons
 
 Use a `<ul>` element to create a list of [card components](../../components/card/).
 
-{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: true, size: "xl", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: true, nunjucksOptions: false, size: "xl", noPadding: true }) }}
 
 ## Dashed lists
 
@@ -68,7 +68,7 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 
 Cards don't require an image. It could be benificial to use them for a list of pages.
 
-{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, size: "xxl", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, nunjucksOptions: false, size: "xxl", noPadding: true }) }}
 
 ## Lists of files
 
