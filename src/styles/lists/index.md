@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Lists
 description: Create lists of content to more easily allow users to find what they need.
 group: styles
-subGroup: typography
+subGroup: content
+# subGroupOrder: 2
 ---
 
 {% from "partials/example.njk" import example %}

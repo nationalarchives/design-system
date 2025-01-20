@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: Colours
 description: Use colours to add interest to your pages and content.
 group: styles
-subGroup: brand
+subGroup: visual
 ---
 
 {% from "partials/example.njk" import example %}

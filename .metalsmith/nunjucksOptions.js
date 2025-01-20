@@ -168,6 +168,12 @@ const nunjucksOptions = {
 
       return optionGroups;
     },
+    sortArrayOfObjectsByKey: (array, key) =>
+      array.sort((a, b) => {
+        const x = a[key] || 99;
+        const y = b[key] || 99;
+        return x < y ? -1 : x > y ? 1 : 0;
+      }),
   },
   filters: {
     prettyDate: function (date) {

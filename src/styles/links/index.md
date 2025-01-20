@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: Links
 description: Link to pages within your service or to external resources.
 group: styles
-subGroup: typography
+subGroup: content
 ---
 
 {% from "partials/example.njk" import example %}
