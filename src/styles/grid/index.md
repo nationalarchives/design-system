@@ -8,7 +8,7 @@ subGroup: layout
 
 {% from "partials/example.njk" import example %}
 
-[TNA Frontend](https://github.com/nationalarchives/tna-frontend) comes with a responsive grid system based on the user's [device size](../media/#device-sizes).
+[TNA Frontend](https://github.com/nationalarchives/tna-frontend) comes with a responsive grid system based on the user's [device size](../devices/#device-sizes).
 
 {{ example({ group: "styles", item: "grid", example: "columns", html: true, nunjucks: false, size: "l", noPadding: true }) }}
 
@@ -37,7 +37,7 @@ By default, a column is as narrow as the content that it contains and is aligned
 
 ## Column widths
 
-[Different sized devices](../media/#device-sizes) have a different number of columns in their grid:
+[Different sized devices](../devices/#device-sizes) have a different number of columns in their grid:
 
 <dl class="tna-dl tna-dl--plain">
   <dt>Large devices</dt>
