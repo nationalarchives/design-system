@@ -17,3 +17,10 @@ statusDocumentationComplete: false
 
 {% include "partials/component-status.njk" %}
 
+## How it works
+
+Add links to all the form issues in the order in which they appear on the page.
+
+When linking to checkboxes, radios and date input fields, add the ID of the first field in the list such as the first checkbox, the first radio item or the day field of the date input.
+
+Take a look at the [example form with errors](../../styles/forms/#displaying-errors).
