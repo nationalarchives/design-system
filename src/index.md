@@ -1,7 +1,7 @@
 ---
 layout: homepage.njk
 title: Home
-description: Designing services for The National Archives
+description: Design your service using National Archives styles and components
 ---
 
 ## What’s new
