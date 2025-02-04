@@ -1,6 +1,7 @@
 ---
 layout: simple-with-nav.njk
 title: Our brand
+description: National Archives assets
 ---
 
 {%- from "nationalarchives/components/files-list/macro.njk" import tnaFilesList -%}

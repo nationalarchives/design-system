@@ -1,6 +1,7 @@
 ---
 layout: simple-with-nav.njk
 title: Accessibility
+description: The National Archives is committed to making its website at design-system.nationalarchives.gov.uk accessible, in accordance with the Public Sector Bodies Accessibility Regulations.
 ---
 
 The Digital Services team at The National Archives (TNA) maintains the following products:
