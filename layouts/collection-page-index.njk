@@ -62,7 +62,7 @@
                 title: item.title,
                 headingLevel: 3 if subGroups | length > 1 else 2,
                 headingSize: "s",
-                href: "/design-system/" + item.path.replace("index.html", ""),
+                href: "/" + item.path.replace("index.html", ""),
                 text: item.description,
                 fullAreaClick: true,
                 classes: "tna-card--heading-link-arrow"
@@ -78,6 +78,6 @@
 
 {% block bodyEnd %}
   {{ super() }}
-  <script src="/design-system/collection.js"></script>
-  <script src="/design-system/sidebar.js"></script>
+  <script src="/collection.js"></script>
+  <script src="/sidebar.js"></script>
 {% endblock %}

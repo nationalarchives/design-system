@@ -71,7 +71,7 @@
             {% endif %}
             {% set items = items.concat({
               text: item.title,
-              href: "/design-system/" + item.path.replace("index.html", ""),
+              href: "/" + item.path.replace("index.html", ""),
               children: children,
               current: current,
               subGroupOrder: item.subGroupOrder
@@ -100,6 +100,6 @@
 
 {% block bodyEnd %}
   {{ super() }}
-  <script src="/design-system/collection.js"></script>
-  <script src="/design-system/sidebar.js"></script>
+  <script src="/collection.js"></script>
+  <script src="/sidebar.js"></script>
 {% endblock %}

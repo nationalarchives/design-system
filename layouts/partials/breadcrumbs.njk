@@ -4,7 +4,7 @@
   {% set pathParts = path.split('/') %}
   {% set breadcrumbs = [{
     text: 'Home',
-    href: '/design-system/'
+    href: '/'
   }] %}
   {# {% if pathParts.length > 1 %} #}
     {% for part in pathParts %}
@@ -14,7 +14,7 @@
       {% set pathText = pathPart.slice(-1).toString() %}
       {% set breadcrumbs = breadcrumbs.concat({
         text: pathText | replace("-", " ") | capitalize,
-        href: '/design-system/' + pathPart.join('/') + '/'
+        href: '/' + pathPart.join('/') + '/'
       }) %}
       {% endif %}
       {% endif %}

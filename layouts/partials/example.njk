@@ -4,7 +4,7 @@
 {% macro example(params, nextHeadingLevel) %}
   {% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
   {% set examplePath = exampleRoot + "index.njk" %}
-  {% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
+  {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
   {% set exampleId = params.group + "__" + params.item + "-" + params.example %}
   
   <section class="tna-ds-example">

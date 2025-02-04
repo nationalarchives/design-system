@@ -5,7 +5,7 @@ title: Accessibility
 
 The Digital Services team at The National Archives (TNA) maintains the following products:
 
-- [National Archives Design System website](https://nationalarchives.github.io/design-system)
+- [National Archives Design System website](https://design-system.nationalarchives.gov.uk)
 - [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
 - [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
 
@@ -46,7 +46,7 @@ The Equality and Human Rights Commission (EHRC) is responsible for enforcing the
 
 ### Compliance status
 
-The Design System website at [nationalarchives.github.io/design-system](https://nationalarchives.github.io/design-system) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
+The Design System website at [nationalarchives.github.io/design-system](https://design-system.nationalarchives.gov.uk) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
 
 The TNA Frontend Storybook website at [nationalarchives.github.io/tna-frontend](https://nationalarchives.github.io/tna-frontend) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
 
@@ -56,7 +56,7 @@ The TNA Frontend codebase at [github.com/nationalarchives/tna-frontend](https://
 
 In this section, we only list non-accessible content that has been reported, verified and tracked in the following repositories:
 
-- [National Archives Design System website](https://nationalarchives.github.io/design-system)
+- [National Archives Design System website](https://design-system.nationalarchives.gov.uk)
 - [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
 - [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
 
@@ -109,7 +109,7 @@ From the TNA Frontend codebase:
 
 ### Testing our products for accessibility
 
-The [National Archives Design System website](https://nationalarchives.github.io/design-system/) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
+The [National Archives Design System website](https://design-system.nationalarchives.gov.uk/) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
 The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
@@ -133,7 +133,7 @@ This statement was prepared on <time datetime="2023-11-09">9 November 2023</time
 
 While the National Archives Digital Services team takes steps to ensure the Design System is as accessible as possible by default, you still need to carry out contextual research.
 
-Simply using code from the TNA Frontend codebase is not enough to accessibly implement the National Archives Design System. There is important written guidance in the [National Archives Design System website](https://nationalarchives.github.io/design-system/) on how to implement styles, components and patterns in an accessible way.
+Simply using code from the TNA Frontend codebase is not enough to accessibly implement the National Archives Design System. There is important written guidance in the [National Archives Design System website](https://design-system.nationalarchives.gov.uk/) on how to implement styles, components and patterns in an accessible way.
 
 Using the Design System guidance and Frontend codebase does not mean your service automatically meets level AA of WCAG 2.2. You will still need to make sure your service as a whole meets accessibility requirements.
 

@@ -4,73 +4,73 @@
   "theme_color": "#000",
   "icons": [
     {
-      "src": "/design-system/static/assets/images/icon-48x48.png",
+      "src": "/static/assets/images/icon-48x48.png",
       "type": "image/png",
       "sizes": "48x48",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-72x72.png",
+      "src": "/static/assets/images/icon-72x72.png",
       "type": "image/png",
       "sizes": "72x72",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-96x96.png",
+      "src": "/static/assets/images/icon-96x96.png",
       "type": "image/png",
       "sizes": "96x96",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-120x120.png",
+      "src": "/static/assets/images/icon-120x120.png",
       "type": "image/png",
       "sizes": "120x120",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-144x144.png",
+      "src": "/static/assets/images/icon-144x144.png",
       "type": "image/png",
       "sizes": "144x144",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-152x152.png",
+      "src": "/static/assets/images/icon-152x152.png",
       "type": "image/png",
       "sizes": "152x152",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-167x167.png",
+      "src": "/static/assets/images/icon-167x167.png",
       "type": "image/png",
       "sizes": "167x167",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-180x180.png",
+      "src": "/static/assets/images/icon-180x180.png",
       "type": "image/png",
       "sizes": "180x180",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-192x192.png",
+      "src": "/static/assets/images/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-256x256.png",
+      "src": "/static/assets/images/icon-256x256.png",
       "type": "image/png",
       "sizes": "256x256",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-512x512.png",
+      "src": "/static/assets/images/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "/design-system/static/assets/images/icon-1024x1024.png",
+      "src": "/static/assets/images/icon-1024x1024.png",
       "type": "image/png",
       "sizes": "1024x1024",
       "purpose": "any"
@@ -82,9 +82,9 @@
       "purpose": "maskable"
     }
   ],
-  "id": "/design-system/?source=pwa",
-  "start_url": "/design-system/?source=pwa",
-  "scope": "/design-system/",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "scope": "/",
   "display": "browser",
   "background_color": "#000",
   "dir": "ltr",
