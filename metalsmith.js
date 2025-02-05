@@ -63,7 +63,7 @@ Metalsmith(__dirname)
       }),
       copyAssets("*", {
         cwd: "lib/static/",
-        dest: "static",
+        dest: "",
       }),
     ]);
     done();
@@ -147,6 +147,7 @@ Metalsmith(__dirname)
   )
   .use(
     permalinks({
+      match: ["**/*.html", "!google9f936c84a60090b4.html"],
       relative: false,
     }),
   )
