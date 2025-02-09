@@ -82,11 +82,10 @@
       "purpose": "maskable"
     }
   ],
-  "id": "/?source=pwa",
-  "start_url": "/?source=pwa",
-  "scope": "/",
+  "start_url": "https://design-system.nationalarchives.gov.uk/?source=pwa",
+  "scope": "https://design-system.nationalarchives.gov.uk/",
   "display": "browser",
-  "background_color": "#000",
+  "background_color": "#010101",
   "dir": "ltr",
   "lang": "en"
 }
