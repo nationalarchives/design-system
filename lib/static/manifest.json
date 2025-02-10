@@ -79,7 +79,7 @@
   ],
   "start_url": "/?source=pwa",
   "scope": "/",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#010101",
   "dir": "ltr",
   "lang": "en",
