@@ -84,17 +84,17 @@
   "dir": "ltr",
   "lang": "en",
   "shortcuts": [
-      {
-          "name": "Styles",
-          "url": "/styles/"
-      },
-      {
-          "name": "Components",
-          "url": "/components/"
-      },
-      {
-          "name": "Content",
-          "url": "/content/"
-      }
+    {
+      "name": "Styles",
+      "url": "/styles/"
+    },
+    {
+      "name": "Components",
+      "url": "/components/"
+    },
+    {
+      "name": "Content",
+      "url": "/content/"
+    }
   ]
 }
