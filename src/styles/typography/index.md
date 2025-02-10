@@ -47,7 +47,7 @@ All paragraphs within `.tna-template` are styled with the correct font and colou
 
 Line lengths should not exceed about 110&ndash;120 characters. This increases the readability of the text.
 
-Use the [TNA Frontend grid system](../../styles/layout/#grid) to help limit line lengths. Body copy should be contained in:
+Use the [TNA Frontend grid system](../../styles/grid/) to help limit line lengths. Body copy should be contained in:
 
 - two-thirds width on large devices (`tna-column--width-2-3`)
 - five-sixths width on medium devices (`tna-column--width-5-6-medium`)
