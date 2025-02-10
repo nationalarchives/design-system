@@ -2,7 +2,6 @@
 
 {%- from "nationalarchives/components/footer/macro.njk" import tnaFooter -%}
 {%- from "nationalarchives/components/header/macro.njk" import tnaHeader -%}
-{%- from "nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner -%}
 
 {%- set assetPath = "/static/assets/" -%}
 
@@ -62,11 +61,6 @@
 {% endblock %}
 
 {% block header %}
-  {{ tnaPhaseBanner({
-    phase: "Beta",
-    message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it."
-  }) }}
-
   {% set topLevelNavigation = [] %}
   {% for top in collections.top %}
     {% set topLevelNavigation = topLevelNavigation.concat({
@@ -89,7 +83,10 @@
         icon: "brands fa-github"
       }
     ],
-    colour: "black"
+    phaseBanner: {
+      phase: "Beta",
+      message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it."
+    }
   }) }}
 {% endblock %}
 

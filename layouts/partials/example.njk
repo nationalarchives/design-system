@@ -68,8 +68,8 @@
           <tbody class="tna-table__body">
             {% for option in table.options -%}
               <tr class="tna-table__row">
-                <th class="tna-table__header" scope="row" width="25%">{{option.name}}</th>
-                <td class="tna-table__cell" width="25%">{{option.type}}</td>
+                <th class="tna-table__header" scope="row" width="25%">{{ option.name }}</th>
+                <td class="tna-table__cell" width="25%">{{ option.type }}</td>
                 <td class="tna-table__cell" width="50%">
                   {% if option.required === true %}
                     <p>

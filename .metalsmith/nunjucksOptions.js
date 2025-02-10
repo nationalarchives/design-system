@@ -82,6 +82,11 @@ const renderDescriptionsAsMarkdown = (option) => {
   if (option.params) {
     option.params = option.params.map(renderDescriptionsAsMarkdown);
   }
+  if (option.paramsFrom) {
+    option.params = getMacroOptionsJson(option.paramsFrom).map(
+      renderDescriptionsAsMarkdown,
+    );
+  }
   return option;
 };
 
