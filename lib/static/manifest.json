@@ -77,7 +77,7 @@
       "purpose": "any"
     }
   ],
-  "start_url": "?source=pwa",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "browser",
   "background_color": "#010101",
