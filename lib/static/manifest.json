@@ -1,7 +1,8 @@
 {
   "short_name": "Design System",
   "name": "The National Archives Design System",
-  "theme_color": "#000",
+  "description": "Use this design system to make services that are consistent with The National Archives. Learn from the research and experience of other service teams and avoid repeating work that has already been done.",
+  "theme_color": "#010101",
   "icons": [
     {
       "src": "/static/assets/images/icon-48x48.png",
@@ -76,10 +77,24 @@
       "purpose": "any"
     }
   ],
-  "start_url": "https://design-system.nationalarchives.gov.uk/?source=pwa",
-  "scope": "https://design-system.nationalarchives.gov.uk/",
+  "start_url": "?source=pwa",
+  "scope": "/",
   "display": "browser",
   "background_color": "#010101",
   "dir": "ltr",
-  "lang": "en"
+  "lang": "en",
+  "shortcuts": [
+      {
+          "name": "Styles",
+          "url": "/styles/"
+      },
+      {
+          "name": "Components",
+          "url": "/components/"
+      },
+      {
+          "name": "Content",
+          "url": "/content/"
+      }
+  ]
 }
