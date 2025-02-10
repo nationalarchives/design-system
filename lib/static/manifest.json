@@ -74,12 +74,6 @@
       "type": "image/png",
       "sizes": "1024x1024",
       "purpose": "any"
-    },
-    {
-      "src": "/static/images/icon-maskable-1024x1024.png",
-      "type": "image/png",
-      "sizes": "1024x1024",
-      "purpose": "maskable"
     }
   ],
   "start_url": "https://design-system.nationalarchives.gov.uk/?source=pwa",
