@@ -23,7 +23,7 @@
     {% set accordionItems = (accordionItems.push({
           title: "HTML",
           body: '<div class="tna-ds-example__code">
-<pre class="language-html"><code class="language-html">' + (getHTMLCode(examplePath) | forceescape) + '</code></pre>
+<pre class="language-html" tabindex="-1"><code class="language-html">' + (getHTMLCode(examplePath) | forceescape) + '</code></pre>
         </div>'
         }), accordionItems) %}
     {% endif %}
@@ -36,7 +36,7 @@
                     body: exampleOptions(params, exampleId)
                   }) if params.nunjucksOptions !== false else ''
                 ) + '<div class="tna-ds-example__code">
-<pre class="language-javascript"><code class="language-javascript">' + (getNunjucksCode(examplePath) | forceescape) + '</code></pre>
+<pre class="language-javascript" tabindex="-1"><code class="language-javascript">' + (getNunjucksCode(examplePath) | forceescape) + '</code></pre>
         </div>'
         }), accordionItems) %}
     {% endif %}

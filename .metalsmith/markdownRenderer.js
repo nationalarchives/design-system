@@ -126,10 +126,10 @@ markdownRenderer.code = function (code, infostring, escaped) {
   }
 
   if (lang === "plain") {
-    return `<pre class="tna-ds-pre">${code}</pre>\n`;
+    return `<pre class="tna-ds-pre" tabindex="-1">${code}</pre>\n`;
   }
 
-  return `<pre class="tna-ds-pre"><code class="language-${escape(lang)}">${
+  return `<pre class="tna-ds-pre" tabindex="-1"><code class="language-${escape(lang)}">${
     escaped ? code : escape(code, true)
   }</code></pre>\n`;
 };
