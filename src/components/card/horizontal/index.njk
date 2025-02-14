@@ -1,5 +1,5 @@
 ---
-title: Card
+title: Horizontal cards
 layout: examples/plain.njk
 private: true
 ---
@@ -10,13 +10,48 @@ private: true
   supertitle: "Card supertitle",
   title: "Card title",
   headingLevel: 3,
-  headingSize: "l",
+  headingSize: "m",
   href: "#",
-  imageSrc: "https://fakeimg.pl/600x400/00623b/fff?text=Image&font=museo&font_size=48",
+  imageSrc: "https://picsum.photos/600/400?1",
   imageAlt: "An example image containing the text 'Image'",
   imageWidth: 600,
   imageHeight: 400,
   body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit, a molestie turpis.</p>",
   horizontal: true,
-  style: "contrast"
+  style: "tint",
+  classes: "tna-card--demo-horizontal"
+}) }}
+
+{{ tnaCard({
+  supertitle: "Card supertitle",
+  title: "Card title",
+  headingLevel: 3,
+  headingSize: "m",
+  href: "#",
+  imageSrc: "https://picsum.photos/600/400?2",
+  imageAlt: "An example image containing the text 'Image'",
+  imageWidth: 600,
+  imageHeight: 400,
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit, a molestie turpis.</p>",
+  horizontal: true,
+  horizontalSmallImage: true,
+  style: "tint",
+  classes: "tna-card--demo-horizontal tna-!--margin-top-s"
+}) }}
+
+{{ tnaCard({
+  supertitle: "Card supertitle",
+  title: "Card title",
+  headingLevel: 3,
+  headingSize: "m",
+  href: "#",
+  imageSrc: "https://picsum.photos/600/400?3",
+  imageAlt: "An example image containing the text 'Image'",
+  imageWidth: 600,
+  imageHeight: 400,
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit, a molestie turpis.</p>",
+  horizontal: true,
+  horizontalFlipped: true,
+  style: "tint",
+  classes: "tna-card--demo-horizontal tna-!--margin-top-s"
 }) }}

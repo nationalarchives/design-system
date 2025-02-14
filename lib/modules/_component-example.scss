@@ -38,6 +38,11 @@
     &--no-padding {
       padding: 0;
     }
+
+    &--no-horizontal-padding {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   &__frame {
@@ -90,7 +95,7 @@
     }
 
     &--xxxxl {
-      height: 48rem;
+      height: 50rem;
     }
 
     // @for $height from 5 through 25 {

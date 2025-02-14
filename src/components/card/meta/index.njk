@@ -1,0 +1,33 @@
+---
+title: Card with meta information
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/card/macro.njk" import tnaCard %}
+
+{{ tnaCard({
+  supertitle: "Event",
+  title: "Christmas at Kew",
+  headingLevel: 3,
+  headingSize: "m",
+  href: "#",
+  meta: [
+    {
+      title: "Cost",
+      text: "From £10",
+      icon: "ticket"
+    },
+    {
+      title: "Date",
+      text: "21 December 2025",
+      icon: "calendar"
+    }
+  ],
+  imageSrc: "https://picsum.photos/id/828/600/400",
+  imageAlt: "An example image containing the text 'Image'",
+  imageWidth: 600,
+  imageHeight: 400,
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit.</p>",
+  classes: "tna-card--demo"
+}) }}

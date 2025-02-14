@@ -13,13 +13,15 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
+{% include "partials/component-status.njk" %}
+
+## Styles
+
 The sidebar component comes in three styles:
 
 - [Contents](#contents)
 - [Sections](#sections)
 - [Pages](#pages)
-
-{% include "partials/component-status.njk" %}
 
 ## Contents
 

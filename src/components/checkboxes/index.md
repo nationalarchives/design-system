@@ -13,8 +13,6 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-Checkboxes allow users to post multiple options for the same field.
-
 {{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
 {% include "partials/component-status.njk" %}

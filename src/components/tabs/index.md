@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Tabs
-description: The tabs component can contain multiple tabs of information.
+description: The tabs component can contain multiple sections of information.
 group: components
 statusProduction: false
 statusTestedWithoutJavaScript: 1
