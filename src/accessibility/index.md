@@ -35,7 +35,7 @@ AbilityNet has [advice on making your device easier to use](https://mcmw.ability
 
 ### Feedback and contact information
 
-The National Archives Design System team is always looking to improve the accessibility of this website. If you find any problems that are not listed on this page or think this website is not meeting accessibility requirements, email us at [webmaster@nationalarchives.National Archives](mailto:webmaster@nationalarchives.gov.uk).
+The National Archives Design System team is always looking to improve the accessibility of this website. If you find any problems that are not listed on this page or think this website is not meeting accessibility requirements, email us at [webmaster@nationalarchives.gov.uk](mailto:webmaster@nationalarchives.gov.uk).
 
 The National Archives Design System team will review your request and get back to you in 2 working days.
 
