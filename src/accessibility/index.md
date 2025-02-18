@@ -14,7 +14,7 @@ This page explains how the team works to ensure these products are accessible.
 
 We mirror the [GOV.UK accessibility strategy](https://design-system.service.gov.uk/community/accessibility-strategy/) to improve the accessibility of the National Archives Design System.
 
-We also use the same [accessibility acceptance criteria](https://github.com/nationalarchives/tna-frontend/wiki/Accessibility-acceptance-criteria) as GOV.UK to test our components.
+We also use the same [accessibility acceptance criteria](https://nationalarchives.github.io/tna-frontend-docs/contributing/accessibility/) as GOV.UK to test our components.
 
 ## Accessibility statement
 
