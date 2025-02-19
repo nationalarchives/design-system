@@ -27,7 +27,7 @@ Cards can be one of three additional styles; `contrast`, `tint` and `accent`. Us
 
 By default, if there is a link defined then the card title and image are clickable. If you have a large number of cards, it may be easier to allow users to click anywhere on the card with `fullAreaClick`.
 
-{{ example({ group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "l", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "xl", noPadding: true }) }}
 
 ## Horizontal
 
@@ -64,3 +64,11 @@ Add additional bits of small information to the card with meta.
 Keep the meta information short and enhance with icons if necessary.
 
 {{ example({ group: "components", item: "card", example: "meta", html: true, nunjucks: true, size: "xl" }, 2) }}
+
+## Actions
+
+Cards can have a list of "actions" which are displayed as links at the bottom of the card.
+
+Cards with actions should not also have an `href` property.
+
+{{ example({ group: "components", item: "card", example: "actions", html: true, nunjucks: true, size: "m" }, 2) }}

@@ -1,0 +1,34 @@
+---
+title: Card with actions
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/card/macro.njk" import tnaCard %}
+
+{{ tnaCard({
+  supertitle: "Talk",
+  title: "The history of agriculture",
+  headingLevel: 3,
+  headingSize: "l",
+  imageSrc: "https://picsum.photos/id/729/600/400",
+  imageAlt: "An example image containing the text 'Image'",
+  imageWidth: 600,
+  imageHeight: 400,
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tincidunt velit.</p>",
+  actions: [
+    {
+      text: "Book now",
+      href: "#",
+      classes: "tna-button tna-button--secondary"
+    },
+    {
+      text: "More information",
+      href: "#",
+      classes: "tna-button tna-button--secondary"
+    }
+  ],
+  horizontal: true,
+  style: "contrast",
+  classes: "tna-card--demo-horizontal"
+}) }}
