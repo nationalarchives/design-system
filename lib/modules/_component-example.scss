@@ -1,5 +1,6 @@
 @use "sass:math";
 
+@use "@nationalarchives/frontend/nationalarchives/tools/borders";
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
@@ -9,6 +10,7 @@
   @include spacing.space-above;
 
   @include colour.colour-border("keyline", 1px);
+  @include borders.rounded-border;
 
   &__open-new-tab {
     display: block;

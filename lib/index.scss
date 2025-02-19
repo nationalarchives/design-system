@@ -43,6 +43,7 @@
 // @use "@nationalarchives/frontend/nationalarchives/components/textarea";
 // @use "@nationalarchives/frontend/nationalarchives/components/warning";
 
+@use "@nationalarchives/frontend/nationalarchives/tools/borders";
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
@@ -78,6 +79,13 @@
       content: "";
     }
   }
+}
+
+.tna-ds-status {
+  overflow: hidden;
+  
+  @include colour.colour-border("keyline", 1px);
+  @include borders.rounded-border;
 }
 
 a[href^="https://asciinema.org"]

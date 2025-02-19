@@ -1,3 +1,4 @@
+@use "@nationalarchives/frontend/nationalarchives/tools/borders";
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
@@ -10,6 +11,7 @@
   overflow: auto;
 
   @include colour.colour-border("keyline", 1px);
+  @include borders.rounded-border;
 }
 
 code {
