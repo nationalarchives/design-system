@@ -83,7 +83,7 @@
 
 .tna-ds-status {
   overflow: hidden;
-  
+
   @include colour.colour-border("keyline", 1px);
   @include borders.rounded-border;
 }
