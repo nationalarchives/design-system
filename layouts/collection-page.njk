@@ -2,11 +2,6 @@
 
 {% from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar %}
 
-{% block cookies %}
-<a id="top"></a>
-{{ super() }}
-{% endblock %}
-
 {% set groupTitle = group | kebabToSpace | capitalize %}
 
 {% block skipLink %}

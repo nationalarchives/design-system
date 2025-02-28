@@ -2,11 +2,6 @@
 
 {%- from "nationalarchives/components/card/macro.njk" import tnaCard -%}
 
-{% block cookies %}
-<a id="top"></a>
-{{ super() }}
-{% endblock %}
-
 {% block main %}
   {% set headings = contents | headingsList %}
   {% set groupTitle = group | kebabToSpace | capitalize %}
