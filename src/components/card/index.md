@@ -19,15 +19,15 @@ statusDocumentationComplete: false
 
 ## Coloured cards
 
-Cards can be one of three additional styles; `contrast`, `tint` and `accent`. Use different styles to direct user's attention and provide visual distinction.
+Cards can be one of four additional styles; `plain`, `contrast`, `tint` and `accent`. Use different styles to direct user's attention and provide visual distinction.
 
-{{ example({ group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "xl", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "l", noPadding: true }) }}
 
 ## Fully clickable
 
 By default, if there is a link defined then the card title and image are clickable. If you have a large number of cards, it may be easier to allow users to click anywhere on the card with `fullAreaClick`.
 
-{{ example({ group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "xl", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "xxxxl", noPadding: true }) }}
 
 ## Horizontal
 
