@@ -13,7 +13,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "hero", example: "default", html: true, nunjucks: true, size: "xl", noPadding: true }, 2) }}
+{{ example({ group: "components", item: "hero", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
 
 {% include "partials/component-status.njk" %}
 
