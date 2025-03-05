@@ -28,7 +28,7 @@ Metalsmith(__dirname)
   })
   .metadata({
     sitename: "The National Archives Design System",
-    siteurl: "https://nationalarchives.github.io/design-system",
+    siteurl: "https://design-system.nationalarchives.gov.uk/",
     description:
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
@@ -181,7 +181,7 @@ Metalsmith(__dirname)
   )
   .use(
     sitemap({
-      hostname: "https://nationalarchives.github.io/design-system",
+      hostname: "https://design-system.nationalarchives.gov.uk/",
       omitIndex: true,
     }),
   )

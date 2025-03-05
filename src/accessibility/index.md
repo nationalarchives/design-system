@@ -18,7 +18,7 @@ We also use the same [accessibility acceptance criteria](https://nationalarchive
 
 ## Accessibility statement
 
-This statement applies to content published on the **nationalarchives.github.io/design-system** site.
+This statement applies to content published on the **design-system.nationalarchives.gov.uk** site.
 
 This website is run by The National Archives Digital Services team. We want as many people as possible to be able to use this website. For example, that means you should be able to:
 
@@ -47,7 +47,7 @@ The Equality and Human Rights Commission (EHRC) is responsible for enforcing the
 
 ### Compliance status
 
-The Design System website at [nationalarchives.github.io/design-system](https://design-system.nationalarchives.gov.uk) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
+The Design System website at [design-system.nationalarchives.gov.uk](https://design-system.nationalarchives.gov.uk/) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
 
 The TNA Frontend Storybook website at [nationalarchives.github.io/tna-frontend](https://nationalarchives.github.io/tna-frontend) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
 
