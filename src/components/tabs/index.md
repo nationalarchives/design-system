@@ -17,7 +17,7 @@ statusDocumentationComplete: false
 
 {% include "partials/component-status.njk" %}
 
-## Without JavaScript
+<!-- ## Without JavaScript
 
 {{ example({ group: "components", item: "tabs", example: "default-no-js", html: false, nunjucks: false, size: "s"}) }}
 
@@ -27,7 +27,7 @@ statusDocumentationComplete: false
 
 ## Without CSS or JavaScript
 
-{{ example({ group: "components", item: "tabs", example: "default-no-css-no-js", html: false, nunjucks: false, size: "s"}) }}
+{{ example({ group: "components", item: "tabs", example: "default-no-css-no-js", html: false, nunjucks: false, size: "s"}) }} -->
 
 ## Known issues and gaps
 

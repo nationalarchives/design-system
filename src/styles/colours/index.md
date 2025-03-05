@@ -163,6 +163,8 @@ The colours of all elements in an element can be controlled with background clas
 
 The appropriate colours for all child elements such as text and links will also be set. You do not have to change their colours independently.
 
+> Avoid nesting block colours inside other block colours.
+
 ### Tint
 
 {{ example({ group: "styles", item: "colours", example: "block-tint", html: false, nunjucks: false, size: "18_75rem", noPadding: true }) }}
