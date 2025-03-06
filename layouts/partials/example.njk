@@ -15,7 +15,7 @@
     {% endif %}
 
     <div class="tna-ds-example__frame-wrapper{% if params.noPadding %} tna-ds-example__frame-wrapper--no-padding{% elif params.noHorizontalPadding %} tna-ds-example__frame-wrapper--no-horizontal-padding{% endif %}">
-      <iframe title="{{ exampleTitle + " example" }}" class="tna-ds-example__frame tna-ds-example__frame--resizable{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+      <iframe class="tna-ds-example__frame tna-ds-example__frame--resizable{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
     </div>
 
     {% set accordionItems = [] %}

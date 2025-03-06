@@ -12,12 +12,12 @@ Always ensure your page header is within the `<main>` element and the breadcrumb
 
 ## Plain
 
-{{ example({ group: "styles", item: "headers", example: "plain", html: true, nunjucks: true, size: "xl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "headers", example: "plain", html: true, nunjucks: true, size: "xl", nunjucksOptions: false }) }}
 
 ## Accent
 
-{{ example({ group: "styles", item: "headers", example: "accent", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "headers", example: "accent", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
 
 ## Hero image
 
-{{ example({ group: "styles", item: "headers", example: "hero", html: true, nunjucks: true, size: "xxxl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "headers", example: "hero", html: true, nunjucks: true, size: "xxxl", nunjucksOptions: false }) }}

@@ -14,6 +14,25 @@
     .tna-template__body {
       min-height: 0;
     }
+    {% if addBodyPadding %}
+    main {
+      padding: 24px;
+    }
+    @media (max-width: 48em) {
+      main {
+        padding: 16px;
+      }
+    }
+    {% elif addVerticalBodyPadding %}
+    main {
+      padding: 24px 0;
+    }
+    @media (max-width: 48em) {
+      main {
+        padding: 16px 0;
+      }
+    }
+    {% endif %}
   </style>
 {% endblock %}
 

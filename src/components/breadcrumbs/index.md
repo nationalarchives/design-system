@@ -15,7 +15,7 @@ statusDocumentationComplete: true
 
 The breadcrumbs component is also known as navigation path or cookie crumb.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
 {% include "partials/component-status.njk" %}
 
@@ -41,7 +41,7 @@ By default, the breadcrumbs will collapse on smaller devices to only show the fi
 
 You can configure the breadcrumbs to never collapse by setting the `noCollapse` option to `true` or by adding the class `tna-breadcrumbs--no-collapse` to the main breadcrumbs element.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "no-collapse", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "breadcrumbs", example: "no-collapse", html: true, nunjucks: true, size: "xxxs" }) }}
 
 ## Using structured data
 
@@ -49,4 +49,4 @@ Enable structured data by setting the `structuredData` option to `true`. This wi
 
 Google provides ways to [test your structured data](https://developers.google.com/search/docs/appearance/structured-data).
 
-{{ example({ group: "components", item: "breadcrumbs", example: "structured-data", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "breadcrumbs", example: "structured-data", html: true, nunjucks: true, size: "xxxs" }) }}

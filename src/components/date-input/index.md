@@ -31,6 +31,6 @@ For searching by date, use the [date search](../date-search/) component.
 
 {{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: true, size: "s" }) }}
 
-## Inline
+<!-- ## Inline
 
-{{ example({ group: "components", item: "date-input", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "date-input", example: "inline", html: true, nunjucks: true, size: "xs" }) }} -->

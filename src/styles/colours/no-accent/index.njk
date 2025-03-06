@@ -1,6 +1,7 @@
 ---
 title: No accent colour
 layout: examples/plain.njk
+addVerticalBodyPadding: true
 private: true
 themeAccent: none
 ---
@@ -8,82 +9,73 @@ themeAccent: none
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 {% from "nationalarchives/components/phase-banner/macro.njk" import tnaPhaseBanner %}
 
-<section>
-  <div class="tna-container tna-!--padding-vertical-m">
-    <div class="tna-column tna-column--full">
-      {{ tnaPhaseBanner({
-        phase: "Beta",
-        message: "This is a new service - <a href=\"#\">give us your feedback</a> to help improve it.",
-        accent: true
-      }) }}
-    </div>
-    <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny tna-!--padding-top-m">
-      <hgroup class="tna-hgroup-xl">
-        <p class="tna-hgroup__supertitle">Supertitle</p>
-        <h1 class="tna-hgroup__title">Title</h1>
-      </hgroup>
-      <ol class="tna-ol">
-        <li>First</li>
-        <li>Second</li>
-        <li>Third</li>
-      </ol>
-      <blockquote class="tna-blockquote" cite="https://www.azquotes.com/quote/1728">
-        <div class="tna-blockquote__quote">
-          <p>A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.</p>
-        </div>
-        <footer class="tna-blockquote__citation">Douglas Adams, <cite>Mostly Harmless</cite></footer>
-      </blockquote>
-      <div class="tna-button-group">
-          {{ tnaButton({
-            text: "Primary button",
-            href: "#"
-          }) }}
-          {{ tnaButton({
-            text: "Accent button",
-            href: "#",
-            accent: true
-          }) }}
+<div class="tna-container">
+  <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
+    <hgroup class="tna-hgroup-xl">
+      <p class="tna-hgroup__supertitle">Supertitle</p>
+      <h1 class="tna-hgroup__title">Title</h1>
+    </hgroup>
+    <ol class="tna-ol">
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ol>
+    <blockquote class="tna-blockquote" cite="https://www.azquotes.com/quote/1728">
+      <div class="tna-blockquote__quote">
+        <p>A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.</p>
       </div>
-    </div>
-    <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-!--padding-top-m">
-      <aside class="tna-aside tna-aside--tight tna-background-accent">
-        <p>Common <a href="https://en.wikipedia.org/wiki/No_Such_Thing_as_a_Fish#Title" target="_blank">fish</a> include:</p>
-        <ul class="tna-ul">
-          <li>Salmon</li>
-          <li>Cod</li>
-        </ul>
-        <div class="tna-button-group tna-button-group--small">
-          {{ tnaButton({
-            text: "Primary button",
-            href: "#"
-          }) }}
-          {{ tnaButton({
-            text: "Accent button",
-            href: "#",
-            accent: true
-          }) }}
-        </div>
-      </aside>
-      <aside class="tna-aside tna-aside--tight tna-background-accent-light">
-        <p>Strange animals include:</p>
-        <ul class="tna-ul">
-          <li>Axolotl</li>
-          <li>
-            <a href="https://en.wikipedia.org/wiki/Leptodactylus_fallax" target="_blank">Mountain chicken</a>
-          </li>
-        </ul>
-        <div class="tna-button-group tna-button-group--small">
-          {{ tnaButton({
-            text: "Primary button",
-            href: "#"
-          }) }}
-          {{ tnaButton({
-            text: "Accent button",
-            href: "#",
-            accent: true
-          }) }}
-        </div>
-      </aside>
+      <footer class="tna-blockquote__citation">Douglas Adams, <cite>Mostly Harmless</cite></footer>
+    </blockquote>
+    <div class="tna-button-group">
+        {{ tnaButton({
+          text: "Primary button",
+          href: "#"
+        }) }}
+        {{ tnaButton({
+          text: "Accent button",
+          href: "#",
+          accent: true
+        }) }}
     </div>
   </div>
-</section>
+  <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-!--padding-top-m">
+    <aside class="tna-aside tna-aside--tight tna-background-accent">
+      <p>Common <a href="https://en.wikipedia.org/wiki/No_Such_Thing_as_a_Fish#Title" target="_blank">fish</a> include:</p>
+      <ul class="tna-ul">
+        <li>Salmon</li>
+        <li>Cod</li>
+      </ul>
+      <div class="tna-button-group tna-button-group--small">
+        {{ tnaButton({
+          text: "Primary button",
+          href: "#"
+        }) }}
+        {{ tnaButton({
+          text: "Accent button",
+          href: "#",
+          accent: true
+        }) }}
+      </div>
+    </aside>
+    <aside class="tna-aside tna-aside--tight tna-background-accent-light">
+      <p>Strange animals include:</p>
+      <ul class="tna-ul">
+        <li>Axolotl</li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Leptodactylus_fallax" target="_blank">Mountain chicken</a>
+        </li>
+      </ul>
+      <div class="tna-button-group tna-button-group--small">
+        {{ tnaButton({
+          text: "Primary button",
+          href: "#"
+        }) }}
+        {{ tnaButton({
+          text: "Accent button",
+          href: "#",
+          accent: true
+        }) }}
+      </div>
+    </aside>
+  </div>
+</div>

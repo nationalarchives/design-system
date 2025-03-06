@@ -17,7 +17,7 @@ Phases must adhere to the [list of phases in an agile project](https://www.gov.u
 
 It should also give a link that allows users to provide feedback.
 
-{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
 {% include "partials/component-status.njk" %}
 

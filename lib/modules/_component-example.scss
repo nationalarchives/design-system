@@ -25,25 +25,10 @@
   }
 
   &__frame-wrapper {
-    padding: spacing.space(1.5);
-
     background-color: #f4f4f4;
-
-    @include media.on-mobile {
-      padding: spacing.space(1);
-    }
 
     @include colour.on-high-contrast {
       background-color: #fff;
-    }
-
-    &--no-padding {
-      padding: 0;
-    }
-
-    &--no-horizontal-padding {
-      padding-right: 0;
-      padding-left: 0;
     }
   }
 
@@ -64,16 +49,24 @@
       max-width: 768px;
     }
 
-    &--xxs {
+    &--xxxxs {
       height: 4rem;
     }
 
+    &--xxxs {
+      height: 6rem;
+    }
+
+    &--xxs {
+      height: 9rem;
+    }
+
     &--xs {
-      height: 7rem;
+      height: 12rem;
     }
 
     &--s {
-      height: 11rem;
+      height: 15rem;
     }
 
     &--m {
@@ -85,33 +78,23 @@
     }
 
     &--xl {
-      height: 30rem;
+      height: 32rem;
     }
 
     &--xxl {
-      height: 36rem;
+      height: 38rem;
     }
 
     &--xxxl {
-      height: 42rem;
+      height: 44rem;
     }
 
     &--xxxxl {
-      height: 50rem;
+      height: 52rem;
     }
 
-    // @for $height from 5 through 25 {
-    //   &--#{$height}rem {
-    //     height: #{$height}rem;
-    //   }
-    // }
-
-    &--18_75rem {
-      height: 18.75rem;
-    }
-
-    &--29_75rem {
-      height: 29.75rem;
+    &--block {
+      height: 18.875rem;
     }
   }
 

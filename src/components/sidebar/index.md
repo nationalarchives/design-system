@@ -31,13 +31,13 @@ Use this style to help users navigate a large amount of content.
 
 An example of a page with a content sidebar is the [accessibility statement](../../accessibility/) of this Design System.
 
-{{ example({ group: "components", item: "sidebar", example: "contents", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ group: "components", item: "sidebar", example: "contents", html: true, nunjucks: true, size: "xl" }) }}
 
 ## Sections
 
 The sections style sidebar provides links to sections of the page and each item can be highlighted to show the current section.
 
-{{ example({ group: "components", item: "sidebar", example: "sections", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ group: "components", item: "sidebar", example: "sections", html: true, nunjucks: true, size: "xl" }) }}
 
 ## Pages
 
@@ -45,4 +45,4 @@ The pages style sidebar is used to link to other pages such as similar pages in 
 
 The current page can be highlighted and also display the top-level headings within it.
 
-{{ example({ group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "xl" }) }}

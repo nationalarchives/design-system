@@ -27,12 +27,12 @@ statusDocumentationComplete: false
 
 ## Hint
 
-{{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true, size: "m" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true, size: "m" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "radios", example: "inline", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "radios", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}

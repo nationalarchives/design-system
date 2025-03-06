@@ -31,4 +31,4 @@ statusDocumentationComplete: false
 
 ## Inline
 
-{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "xs" }) }}

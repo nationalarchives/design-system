@@ -7,7 +7,7 @@ group: content
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "content", item: "error-pages", example: "layout", html: false, nunjucks: false, size: "xxxl", noPadding: true }) }}
+{{ example({ group: "content", item: "error-pages", example: "layout", html: false, nunjucks: false, size: "xxxl" }) }}
 
 Provide the user with information about the error:
 

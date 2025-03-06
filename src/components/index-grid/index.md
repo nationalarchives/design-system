@@ -15,7 +15,7 @@ statusDocumentationComplete: false
 
 The index grid includes a `tna-container` element so doesn’t need to be used within a column system.
 
-{{ example({ group: "components", item: "index-grid", example: "default", html: true, nunjucks: true, size: "l", noHorizontalPadding: true }, 2) }}
+{{ example({ group: "components", item: "index-grid", example: "default", html: true, nunjucks: true, size: "xl", noHorizontalPadding: true }, 2) }}
 
 {% include "partials/component-status.njk" %}
 

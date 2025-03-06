@@ -15,7 +15,7 @@ subGroup: content
 
 ### Spaced unordered lists
 
-{{ example({ group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "m", openHTML: true }) }}
+{{ example({ group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "l", openHTML: true }) }}
 
 ## Ordered lists
 
@@ -39,7 +39,7 @@ The chips in a chip list can be links and can also contain [chip icons](../icons
 
 Use a `<ul>` element to create a list of [card components](../../components/card/).
 
-{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: true, nunjucksOptions: false, size: "xl", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: true, nunjucksOptions: false, size: "xl" }) }}
 
 ## Dashed lists
 
@@ -69,7 +69,7 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 
 Cards don't require an image. It could be benificial to use them for a list of pages.
 
-{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, nunjucksOptions: false, size: "xxl", noPadding: true }) }}
+{{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, nunjucksOptions: false, size: "xl" }) }}
 
 ## Lists of files
 

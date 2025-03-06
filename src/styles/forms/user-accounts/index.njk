@@ -1,6 +1,7 @@
 ---
 title: Form elements for user accounts
 layout: examples/plain.njk
+addVerticalBodyPadding: true
 private: true
 ---
 
@@ -8,7 +9,7 @@ private: true
 {% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
 
 <div class="tna-container">
-  <div class="tna-column tna-column--full tna-!--padding-vertical-m">
+  <div class="tna-column tna-column--full">
     <form novalidate>
       <h1 class="tna-heading-xl">Create an account</h1>
       {{ tnaTextInput({

@@ -1,6 +1,7 @@
 ---
 title: Form elements for searching
 layout: examples/plain.njk
+addVerticalBodyPadding: true
 private: true
 ---
 
@@ -10,7 +11,7 @@ private: true
 {% from "nationalarchives/components/search-field/macro.njk" import tnaSearchField %}
 
 <div class="tna-container">
-  <div class="tna-column tna-column--full tna-!--padding-vertical-m">
+  <div class="tna-column tna-column--full">
     <form novalidate>
       {{ tnaSearchField({
         label: "Search for a record",

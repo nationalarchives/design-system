@@ -20,7 +20,7 @@ Allow users to enter data using:
 
 Do not use the [date search](../../components/date-search/) or [select](../../components/select/) components in forms designed for users to submit data for storage.
 
-{{ example({ group: "styles", item: "forms", example: "user-submitted", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "forms", example: "user-submitted", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
 
 ### Displaying errors
 
@@ -28,13 +28,13 @@ Follow GOV.UK advice on [recovering from validation errors](https://design-syste
 
 Use the [error summary component](../../components/error-summary/) to summarise the issues and provide links directly to the problem fields.
 
-{{ example({ group: "styles", item: "forms", example: "user-submitted-with-errors", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "forms", example: "user-submitted-with-errors", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
 
 ## User accounts
 
 Use the `autocomplete` property to help people fill in forms with their own data. See the [list of input purposes on w3.org](https://www.w3.org/TR/WCAG21/#input-purposes).
 
-{{ example({ group: "styles", item: "forms", example: "user-accounts", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "forms", example: "user-accounts", html: true, nunjucks: true, size: "xxl", nunjucksOptions: false }) }}
 
 ## Searching
 
@@ -44,7 +44,7 @@ Searching for dates should use the [date search component](../../components/date
 
 Use the [select component](../../components/select/) to offer simple options for sorting.
 
-{{ example({ group: "styles", item: "forms", example: "searching", html: true, nunjucks: true, size: "xl", nunjucksOptions: false, noPadding: true }) }}
+{{ example({ group: "styles", item: "forms", example: "searching", html: true, nunjucks: true, size: "xl", nunjucksOptions: false }) }}
 
 ## Background colours
 

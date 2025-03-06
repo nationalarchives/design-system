@@ -14,7 +14,7 @@ You can use this template in your prototypes or copy the structure into your pro
 
 See the [generic page template](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/templates/layouts/_generic.njk) in TNA Frontend.
 
-<!-- {{ example({ group: "styles", item: "layout", example: "template", html: false, nunjucks: false, size: "xxl", noPadding: true }) }} -->
+<!-- {{ example({ group: "styles", item: "layout", example: "template", html: false, nunjucks: false, size: "xxl" }) }} -->
 
 ## Blocks
 

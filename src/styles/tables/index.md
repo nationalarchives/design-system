@@ -10,4 +10,4 @@ subGroup: content
 
 Do not use tables to lay out or organise content.
 
-{{ example({ group: "styles", item: "tables", example: "plain-table", html: true, nunjucks: false, size: "m", openHTML: true }) }}
+{{ example({ group: "styles", item: "tables", example: "plain-table", html: true, nunjucks: false, size: "l", openHTML: true }) }}

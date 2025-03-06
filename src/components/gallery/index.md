@@ -13,6 +13,6 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "gallery", example: "default", html: true, nunjucks: true, size: "xxxl" }, 2) }}
+{{ example({ group: "components", item: "gallery", example: "default", html: true, nunjucks: true, size: "xxxxl" }, 2) }}
 
 {% include "partials/component-status.njk" %}

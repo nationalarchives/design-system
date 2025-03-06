@@ -15,13 +15,13 @@ statusDocumentationComplete: false
 
 When you need the user to enter a date for data purposes or don’t want to require a day or month, use the [date input](../date-input/) component.
 
-{{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
+{{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 {% include "partials/component-status.njk" %}
 
 ## Preselected
 
-{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: true, size: "xxs" }) }}
 
 ## Hint
 
@@ -33,4 +33,4 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 ## Inline
 
-{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }}

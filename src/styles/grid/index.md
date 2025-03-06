@@ -10,7 +10,7 @@ subGroup: layout
 
 [TNA Frontend](https://github.com/nationalarchives/tna-frontend) comes with a responsive grid system based on the user's [device size](../devices/#device-sizes).
 
-{{ example({ group: "styles", item: "grid", example: "columns", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "columns", html: true, nunjucks: false, size: "l" }) }}
 
 ## Grid elements
 
@@ -33,7 +33,7 @@ A column exists as a direct child of a container and can be created by using the
 
 By default, a column is as narrow as the content that it contains and is aligned to the left of a container.
 
-{{ example({ group: "styles", item: "grid", example: "columns-no-width", html: true, nunjucks: false, size: "s", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "columns-no-width", html: true, nunjucks: false, size: "s" }) }}
 
 ## Column widths
 
@@ -52,7 +52,7 @@ By default, a column is as narrow as the content that it contains and is aligned
 
 Based on the number of columns for each size, there are size classes for all fractions of column widths up to that number.
 
-{{ example({ group: "styles", item: "grid", example: "responsive-columns", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "responsive-columns", html: true, nunjucks: false, size: "l" }) }}
 
 > Columns are only available in their simplest fractional forms. This means that there is no `tna-column--width-8-12` class; only a `tna-column--width-2-3`.
 
@@ -114,20 +114,20 @@ Widths such as `1-4` or `1-3` are "absolute" value widths. The width of the colu
 
 If you don’t know the width you need, or want a column to expand to fill a gap, use `tna-column--flex-x` (suffixed with `-medium`, `-small` or `-tiny` if required for different device sizes) to specify how much 'weight' the size of that column gets.
 
-{{ example({ group: "styles", item: "grid", example: "flexible-columns", html: true, nunjucks: false, size: "s", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "flexible-columns", html: true, nunjucks: false, size: "s" }) }}
 
 ## Changing alignment
 
 ### Horizontal alignment
 
-{{ example({ group: "styles", item: "grid", example: "container-alignment", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "container-alignment", html: true, nunjucks: false, size: "l" }) }}
 
 ### Vertical alignment
 
-{{ example({ group: "styles", item: "grid", example: "column-alignment", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "column-alignment", html: true, nunjucks: false, size: "l" }) }}
 
 ## Nested containers
 
 Sometimes it is necessary to nest containers within columns. In this instance, the inner container needs the additional class of `tna-container--nested`.
 
-{{ example({ group: "styles", item: "grid", example: "nested-containers", html: true, nunjucks: false, size: "l", noPadding: true }) }}
+{{ example({ group: "styles", item: "grid", example: "nested-containers", html: true, nunjucks: false, size: "l" }) }}

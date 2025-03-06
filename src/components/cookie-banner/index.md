@@ -13,6 +13,6 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, noPadding: true }, 2) }}
+{{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
 
 {% include "partials/component-status.njk" %}
