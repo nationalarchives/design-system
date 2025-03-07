@@ -2,7 +2,7 @@
 layout: collection-page.njk
 title: Accordion
 group: components
-description: The accordion component lets users show and hide sections of related content on a page.
+description: The accordion component lets users show and hide small sections of related content on a page.
 statusProduction: true
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
