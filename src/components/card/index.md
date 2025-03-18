@@ -19,7 +19,7 @@ statusDocumentationComplete: false
 
 ## Coloured cards
 
-Cards can be one of four additional styles; `plain`, `contrast`, `tint` and `accent`. Use different styles to direct user's attention and provide visual distinction.
+Cards can be one of four additional styles; `plain`, `contrast`, `tint` and `accent`. Use different styles to direct user’s attention and provide visual distinction.
 
 {{ example({ group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "l" }) }}
 
@@ -35,7 +35,7 @@ Use larger horizontal cards to draw attention to a specific article.
 
 You can use smaller images to make the cards smaller with `horizontalSmallImage`.
 
-If some cards in the list have images and others don't, consider aligning the images to the right with `horizontalFlipped`. This will keep all the text in the cards aligned.
+If some cards in the list have images and others don’t, consider aligning the images to the right with `horizontalFlipped`. This will keep all the text in the cards aligned.
 
 Horizontal cards generally benefit from using one of the [different card colours](#coloured-cards) to create boundaries.
 

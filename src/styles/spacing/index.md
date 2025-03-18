@@ -33,7 +33,7 @@ ul    { margin-top: 32px; } /* the ul is separated from anything above by 32px *
 table { margin-top: 48px; } /* the table is separated from anything above by 48px */
 ```
 
-An element shouldn't apply a bottom margin unless its next sibling element is known.
+An element shouldn’t apply a bottom margin unless its next sibling element is known.
 
 ### Headings
 

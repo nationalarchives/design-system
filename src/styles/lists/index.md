@@ -67,7 +67,7 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 
 ### Plain card lists
 
-Cards don't require an image. It could be benificial to use them for a list of pages.
+Cards don’t require an image. It could be benificial to use them for a list of pages.
 
 {{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, nunjucksOptions: false, size: "xl" }) }}
 

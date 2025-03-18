@@ -187,7 +187,7 @@ The appropriate colours for all child elements such as text and links will also 
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
-In TNA Frontend, we check as many [light colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) and [dark colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--dark&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the [error summary component](../../components/error-summary/) doesn't have enough contrast with its surroundings when used within an [accented block](#accent).
+In TNA Frontend, we check as many [light colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--light&viewMode=story) and [dark colour combinations](https://nationalarchives.github.io/tna-frontend/iframe.html?args=&id=utilities-colours-combinations--dark&viewMode=story) as we can for good contrast but there are still some combinations that should be avoided. For example the [error summary component](../../components/error-summary/) doesn’t have enough contrast with its surroundings when used within an [accented block](#accent).
 
 Ensure you check for proper colour contrast in your service for both text and non-text elements:
 
@@ -196,6 +196,6 @@ Ensure you check for proper colour contrast in your service for both text and no
 
 ### Interactive elements
 
-Don't rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
+Don’t rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
 
 For example, adding an outline to a focused button or link is good but might not create enough contrast with the background to be able to be seen clearly. Consider changing the size of any text decorations (such as underlines) or changing the border and background colours to create a larger change in contrast between them.

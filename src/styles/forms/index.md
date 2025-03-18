@@ -48,4 +48,4 @@ Use the [select component](../../components/select/) to offer simple options for
 
 ## Background colours
 
-Don't use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only regular, tinted or contrasting backgrounds.
+Don’t use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only regular, tinted or contrasting backgrounds.

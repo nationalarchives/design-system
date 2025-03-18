@@ -44,7 +44,7 @@ Use a page not found if someone is trying to view a page that does not exist. Th
 
 {{ example({ group: "content", item: "error-pages", example: "restricted-access", html: true, nunjucks: false, size: "m" }) }}
 
-Use a restricted access if someone is trying to view a page  or resource that they shouldn't be allowed to. This can happen if:
+Use a restricted access if someone is trying to view a page  or resource that they shouldn’t be allowed to. This can happen if:
 
 - the user is not known (unauthenticated)
 - the user is known but not allowed to view (unauthorised)
@@ -56,5 +56,5 @@ Use a restricted access if someone is trying to view a page  or resource that th
 Use a service issue if someone is trying to view a page that the service is currently unable to render. This can happen if:
 
 - the server is unavailable
-- the server experienced an error that wasn't handled properly
-- an unknown issue occured that isn't covered by other error messages
+- the server experienced an error that wasn’t handled properly
+- an unknown issue occured that isn’t covered by other error messages
