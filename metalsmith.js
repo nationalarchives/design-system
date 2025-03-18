@@ -183,6 +183,7 @@ Metalsmith(__dirname)
     sitemap({
       hostname: "https://design-system.nationalarchives.gov.uk/",
       omitIndex: true,
+      pattern: ["**/*.html", "!google9f936c84a60090b4.html"],
     }),
   )
   .build((err) => {

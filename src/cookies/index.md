@@ -2,6 +2,7 @@
 layout: simple-with-nav.njk
 title: Cookies
 description: Cookie usage for design-system.nationalarchives.gov.uk
+priority: 0.3
 ---
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}

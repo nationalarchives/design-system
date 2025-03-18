@@ -2,6 +2,7 @@
 layout: homepage.njk
 title: Home
 description: Design your service using National Archives styles and components
+priority: 1
 ---
 
 ## What’s new

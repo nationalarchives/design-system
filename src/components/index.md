@@ -4,6 +4,7 @@ title: Components
 description: Save time with reusable, accessible components for forms, navigation, panels, tables and more.
 group: components
 order: 3
+priority: 0.8
 ---
 
 Components are reusable parts of the user interface that have been made to support a variety of applications.

@@ -2,6 +2,7 @@
 layout: simple-with-nav.njk
 title: Our brand
 description: National Archives assets
+priority: 0.8
 ---
 
 {%- from "nationalarchives/components/files-list/macro.njk" import tnaFilesList -%}

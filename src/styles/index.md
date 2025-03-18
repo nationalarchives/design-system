@@ -4,6 +4,7 @@ title: Styles
 description: Make your service look part of The National Archives with guides for applying layout, typography, colour and images.
 group: styles
 order: 2
+priority: 0.8
 ---
 
 Make services look and feel like The National Archives.
