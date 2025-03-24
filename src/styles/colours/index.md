@@ -154,12 +154,12 @@ Accent colours can also be added on a per-element basis. Use one of the followin
 
 ## Block colours
 
-The colours of all elements in an element can be controlled with background classes:
+The colours of all elements in an element can be controlled with block classes:
 
-- `tna-background-tint` &mdash; a light, neutral background colour to highlight an area of the page
-- `tna-background-contrast` &mdash; a contrasting background and text colour
-- `tna-background-accent` &mdash; a background colour based on the current template accent colour
-- `tna-background-accent-light` &mdash; a lighter background colour based on the current template accent colour
+- `tna-block-tint` &mdash; a light, neutral background colour to highlight an area of the page
+- `tna-block-contrast` &mdash; a contrasting background and text colour
+- `tna-block-accent` &mdash; a background colour based on the current template accent colour
+- `tna-block-accent-light` &mdash; a lighter background colour based on the current template accent colour
 
 The appropriate colours for all child elements such as text and links will also be set. You do not have to change their colours independently.
 
