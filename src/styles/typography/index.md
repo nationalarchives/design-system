@@ -37,7 +37,7 @@ If the caption should be considered part of the page heading, you can also nest 
 
 ### Body
 
-The default paragraph font size is 18px on large and medium devices and 17px on small and tiny devices.
+The default paragraph font size is 19px on large devices, 18px on medium devices and 17px on small and tiny devices.
 
 All paragraphs within `.tna-template` are styled with the correct font and colour without the need for additional classes.
 
