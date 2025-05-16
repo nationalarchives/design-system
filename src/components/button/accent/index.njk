@@ -1,0 +1,15 @@
+---
+title: Button - accent
+layout: examples/plain.njk
+addBodyPadding: true
+themeAccent: green
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+{{ tnaButton({
+  text: "Accent button",
+  href: "#",
+  accent: true
+}) }}

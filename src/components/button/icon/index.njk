@@ -1,0 +1,28 @@
+---
+title: Button - icon
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+<div class="tna-button-group">
+  {{ tnaButton({
+    text: "Button with icon",
+    href: "#",
+    icon: "arrow-left"
+  }) }}
+  {{ tnaButton({
+    text: "Button with icon on right",
+    href: "#",
+    icon: "arrow-right",
+    rightAlignIcon: true
+  }) }}
+  {{ tnaButton({
+    text: "Plain button with icon",
+    href: "#",
+    icon: "xmark",
+    plain: true
+  }) }}
+</div>

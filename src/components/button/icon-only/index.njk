@@ -1,0 +1,25 @@
+---
+title: Button - icon only
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+<div class="tna-button-group">
+  {{ tnaButton({
+    text: "Icon-only button",
+    href: "#",
+    title: "Add to favourites",
+    icon: "heart",
+    iconOnly: true
+  }) }}
+  {{ tnaButton({
+    text: "Icon-only button on mobile",
+    href: "#",
+    title: "Add to favourites",
+    icon: "heart",
+    iconOnlyOnMobile: true
+  }) }}
+</div>

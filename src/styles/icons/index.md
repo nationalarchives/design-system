@@ -16,7 +16,7 @@ Icons are not included in TNA Frontend by default. The icons are defined in a se
 
 ## Call to action icons
 
-The main call to action button on a page can use an icon to add visual impact. Place the icon on the left of the button.
+In the main call to action on a page, you have the option to [include an icon in the button](../../components/button/#icons) to add visual impact. Place the icon on the left of the button.
 
 Avoid using icons in all call to action buttons.
 

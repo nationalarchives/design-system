@@ -1,0 +1,14 @@
+---
+title: Button - small
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+{{ tnaButton({
+  text: "Button",
+  href: "#",
+  small: true
+}) }}

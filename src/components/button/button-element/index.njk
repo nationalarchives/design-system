@@ -1,0 +1,25 @@
+---
+title: Button - button element
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+<div class="tna-button-group">
+  {{ tnaButton({
+    text: "Button",
+    buttonElement: true
+  }) }}
+  {{ tnaButton({
+    text: "Reset button",
+    buttonElement: true,
+    buttonType: "reset"
+  }) }}
+  {{ tnaButton({
+    text: "Submit button",
+    buttonElement: true,
+    buttonType: "submit"
+  }) }}
+</div>

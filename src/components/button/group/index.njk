@@ -8,22 +8,47 @@ private: true
 
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 
-<h1 class="tna-heading-xl">Item 42</h1>
 <div class="tna-button-group">
   {{ tnaButton({
-    text: "Edit",
-    title: "Edit item 42",
-    href: "#/edit"
+    text: "Assign",
+    href: "#"
   }) }}
   {{ tnaButton({
-    text: "Share",
-    title: "Share a link to item 42",
-    href: "#/share"
+    text: "Reset",
+    href: "#"
   }) }}
   {{ tnaButton({
-    text: "Delete",
-    title: "Delete item 42",
+    text: "Continue",
+    href: "#",
     accent: true,
-    href: "#/delete"
+    icon: "chevron-right",
+    rightAlignIcon: true
+  }) }}
+  {{ tnaButton({
+    text: "Ignore",
+    href: "#",
+    plain: true
+  }) }}
+</div>
+<div class="tna-button-group tna-button-group--small">
+  {{ tnaButton({
+    text: "Assign",
+    href: "#"
+  }) }}
+  {{ tnaButton({
+    text: "Reset",
+    href: "#"
+  }) }}
+  {{ tnaButton({
+    text: "Continue",
+    href: "#",
+    accent: true,
+    icon: "chevron-right",
+    rightAlignIcon: true
+  }) }}
+  {{ tnaButton({
+    text: "Ignore",
+    href: "#",
+    plain: true
   }) }}
 </div>
