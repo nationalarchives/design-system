@@ -11,13 +11,37 @@ subGroup: content
 
 ## Unordered lists
 
+Use lists to make blocks of text easier to read, and to break information into manageable chunks.
+
+Introduce bulleted lists with a lead-in line ending in a colon. Start each item with a lowercase letter, and do not use a full stop at the end.
+
 {{ example({ group: "styles", item: "lists", example: "unordered-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
-### Spaced unordered lists
+### Large unordered lists
 
-{{ example({ group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "l", openHTML: true }) }}
+If a list is hard to read because the items run across multiple lines you can add extra spacing.
+
+Consider adding a bold title to each list item to make skimming the content easier.
+
+{{ example({ group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "xl", openHTML: true }) }}
+
+### Dashed lists
+
+Only use dashed lists for navigational items like in sidebars or tables of content.
+
+{{ example({ group: "styles", item: "lists", example: "unordered-list-dashed", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
+
+### Plain lists
+
+In rare instances, you may want to remove the item markers from a list. Exercise caution when doing this as users will no longer be able to easily tell that the content is a list.
+
+{{ example({ group: "styles", item: "lists", example: "unordered-list-plain", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
 ## Ordered lists
+
+Use numbered lists instead of bulleted lists when the order of the items is relevant.
+
+You do not need to use a lead-in line for numbered lists. Items in a numbered list should end in a full stop because each should be a complete sentence.
 
 {{ example({ group: "styles", item: "lists", example: "ordered-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
@@ -26,6 +50,12 @@ subGroup: content
 The description lists can be plain or contain [icons](../icons/#displaying-information-with-icons).
 
 {{ example({ group: "styles", item: "lists", example: "description-list", html: true, nunjucks: false, size: "m", openHTML: true }) }}
+
+### Plain description lists
+
+To reduce visual clutter, description lists can have the zebra-striped background removed.
+
+{{ example({ group: "styles", item: "lists", example: "description-list-plain", html: true, nunjucks: false, size: "s", openHTML: true }) }}
 
 ### Chip lists
 
@@ -40,30 +70,6 @@ The chips in a chip list can be links and can also contain [chip icons](../icons
 Use a `<ul>` element to create a list of [card components](../../components/card/).
 
 {{ example({ group: "components", item: "card", example: "list", html: true, nunjucks: true, nunjucksOptions: false, size: "xl" }) }}
-
-## Dashed lists
-
-### Dashed unordered lists
-
-{{ example({ group: "styles", item: "lists", example: "unordered-list-dashed", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
-
-### Dashed ordered lists
-
-{{ example({ group: "styles", item: "lists", example: "ordered-list-dashed", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
-
-## Plain lists
-
-### Plain unordered lists
-
-{{ example({ group: "styles", item: "lists", example: "unordered-list-plain", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
-
-### Plain ordered lists
-
-{{ example({ group: "styles", item: "lists", example: "ordered-list-plain", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
-
-### Plain description lists
-
-{{ example({ group: "styles", item: "lists", example: "description-list-plain", html: true, nunjucks: false, size: "s", openHTML: true }) }}
 
 ### Plain card lists
 
