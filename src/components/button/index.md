@@ -63,12 +63,6 @@ Avoid using plain icon-only buttons as they might not have a distinct enough hov
 
 {{ example({ group: "components", item: "button", example: "icon-only", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
-### Disabled buttons
-
-Because disabled buttons can confuse some users, they have been intentionally omitted from this design system. Avoid them if possible. 
-
-Only use disabled buttons if research with users shows their use makes the user interface easier to understand. 
-
 #### SVG icons
 
 To avoid relying on the Font Awesome CSS and font files, you can embed SVGs directly into the button using `iconSvg`.
@@ -78,6 +72,12 @@ Remember to escape quotes (`"` or `'`) in the SVG correctly.
 Add `aria-hidden="true"` and `focusable="false"` to avoid the icon being read by screen readers. Include a `wdith` parameter if possible to avoid the icon being too large when viewed without CSS.
 
 {{ example({ group: "components", item: "button", example: "icon-svg", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+
+### Disabled buttons
+
+Because disabled buttons can confuse some users, they have been intentionally omitted from this design system. Avoid them if possible.
+
+Only use disabled buttons if research with users shows their use makes the user interface easier to understand.
 
 ## Button elements
 
