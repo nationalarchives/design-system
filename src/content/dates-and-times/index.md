@@ -48,28 +48,25 @@ Do not 0-prefix the hour:
 
 ## Ranges
 
-Always use the en dash (`–` or `&ndash;`) rather than a hyphen (`-`) for date ranges.
+Always use "to" rather than dashes or hyphens for date ranges.
 
 Avoid unnecessary duplication of days, months or years to allow users to scan more easily.
 
 <dl class="tna-dl">
-  <dt>Same day</dt>
-  <dd>16 October 2023, 19:00–20:00</dd>
-  <dt>Same month</dt>
-  <dd>16–24 October 2023</dd>
-  <dt>Same year</dt>
-  <dd>October–November 2023</dd>
-  <dt>Range of years</dt>
-  <dd>2023–2024</dd>
-</dl>
-
-Use "to" when the range stretches over multiple date fields (dates/months/years):
-
-<dl class="tna-dl">
-  <dt>Range of months</dt>
+  <dt>Times in the same day</dt>
+  <dd>16 October 2023, 19:00 to 20:00</dd>
+  <dt>Dates in the same month</dt>
+  <dd>16 to 24 October 2023</dd>
+  <dt>Dates over multiple months</dt>
   <dd>16 October to 24 November 2023</dd>
-  <dt>Range of months over multiple years</dt>
+  <dt>Dates over multiple years</dt>
+  <dd>16 October 2023 to 24 November 2024</dd>
+  <dt>Months in the same year</dt>
+  <dd>October to November 2023</dd>
+  <dt>Months over multiple years</dt>
   <dd>October 2023 to November 2024</dd>
+  <dt>Range of years</dt>
+  <dd>2023 to 2024</dd>
 </dl>
 
 Use "From &hellip;" for open-ended events and "Now to &hellip;" when describing events that are currently ongoing:
