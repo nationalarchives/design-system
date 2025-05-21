@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Compound filters
 description: The compound filters can show which multiple filters have been selected. This is useful for search patterns.
 group: components
-statusProduction: true
+cardImage: /compound-filters.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

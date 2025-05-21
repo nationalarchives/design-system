@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: Search field
 description: Use the search field component as an entry point into searches.
 group: components
-statusProduction: true
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

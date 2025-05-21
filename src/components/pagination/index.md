@@ -3,10 +3,10 @@ layout: collection-page.njk
 title: Pagination
 description: Use a list-type layout if users need to navigate through pages of similar items.
 group: components
-statusProduction: true
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 0
 statusDocumentationComplete: false
 ---

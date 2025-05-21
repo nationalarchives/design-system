@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214);"></rect>
+  <rect y="30" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214);" x="46"></rect>
+  <rect y="80" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="46"></rect>
+  <rect y="130" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214);" x="46"></rect>
+  <g transform="matrix(1, 0, 0, 1, 5.319436, -0.375381)">
+    <rect y="76.119" width="15" height="4" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214); stroke-width: 0px; transform-box: fill-box; transform-origin: 50% 50%;" x="43.371" transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 1.926131, 26.256376)"></rect>
+    <rect y="76.119" width="26" height="4" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214); stroke-width: 0px; transform-origin: 88.176px 78.119px;" x="75.176" transform="matrix(0.707107, -0.707106, 0.707106, 0.707107, -23.501086, 22.145455)"></rect>
+  </g>
+  <rect width="147" height="24" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="107" y="88"></rect>
+  <rect y="38" width="74" height="24" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="107"></rect>
+  <rect y="138" width="103" height="24" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="107"></rect>
+</svg>

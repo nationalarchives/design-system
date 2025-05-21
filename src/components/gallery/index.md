@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: Gallery
 description: Use the gallery component to show a list of images.
 group: components
-statusProduction: false
+phase: production
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

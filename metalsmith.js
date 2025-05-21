@@ -158,6 +158,7 @@ Metalsmith(__dirname)
   )
   .use(
     sass({
+      quietDeps: true,
       entries: {
         "lib/index.scss": "css/index.css",
         "lib/all.scss": "css/all.css",

@@ -200,6 +200,10 @@ const nunjucksOptions = {
     kebabToSpace: function (data) {
       return data.replace(/([a-z]+)-([a-z])/, "$1 $2").toLowerCase();
     },
+    setAttribute: function (dictionary, key, value) {
+      dictionary[key] = value;
+      return dictionary;
+    },
     headingsList: function (content) {
       const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>\s*([\w\d\s\.\-]+)\s*</gm;
       let headingsRaw = [];

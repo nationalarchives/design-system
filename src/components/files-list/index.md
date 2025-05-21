@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Files list
 description: Display a list of files available to download.
 group: components
-statusProduction: true
+cardImage: /files-list.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

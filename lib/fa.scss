@@ -4,4 +4,4 @@
 @use "@nationalarchives/frontend/nationalarchives/font-awesome";
 
 $fa-font-path: assets.$fa-font-path;
-@import "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";
+@use "@nationalarchives/frontend/nationalarchives/lib/font-awesome/brands";

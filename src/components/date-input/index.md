@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Date input
 description: Use the date input component to allow the user to enter a date when populating data, such as submitting a record.
 group: components
-statusProduction: true
+cardImage: /date-input.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

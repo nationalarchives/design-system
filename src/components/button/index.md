@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Button
 description: Use the button component for call to action links or to submit data within forms.
 group: components
-statusProduction: true
+cardImage: /button.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Radios
 description: Radios allow users to select a single options for a form field.
 group: components
-statusProduction: true
+cardImage: /radios.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

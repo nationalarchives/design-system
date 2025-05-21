@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: Quick filters
 description: The quick filters component provides users with a list of links which act as a quick filter to content.
 group: components
-statusProduction: true
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

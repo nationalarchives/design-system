@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: Warning
 description: The warning component provides the user with important information about the page or article.
 group: components
-statusProduction: true
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

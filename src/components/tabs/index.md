@@ -3,9 +3,9 @@ layout: collection-page.njk
 title: Tabs
 description: The tabs component can contain multiple sections of information.
 group: components
-statusProduction: false
-statusTestedWithoutJavaScript: 1
-statusTestedWithoutCSS: 1
+phase: development
+statusTestedWithoutJavaScript: 2
+statusTestedWithoutCSS: 2
 statusPassedDacAudit: 2
 statusAnalytics: 2
 statusDocumentationComplete: false

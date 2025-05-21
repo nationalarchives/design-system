@@ -3,10 +3,11 @@ layout: collection-page.njk
 title: Cookie banner
 description: The cookie banner component allows a user to either accept or decline the use of cookies within a service.
 group: components
-statusProduction: true
+cardImage: /cookie-banner.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 0
 statusDocumentationComplete: false
 ---

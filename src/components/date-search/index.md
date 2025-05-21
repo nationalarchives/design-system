@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Date search
 description: Use the date search component to allow the user to enter a date to search with.
 group: components
-statusProduction: true
+cardImage: /date-search.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
