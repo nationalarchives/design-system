@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Accordion
 group: components
 description: The accordion component lets users show and hide small sections of related content on a page.
-statusProduction: true
+cardImage: /accordion.svg
+phase: production
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

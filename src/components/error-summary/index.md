@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Error summary
 description: Summarise form errors on the page and provide links to help users complete them.
 group: components
-statusProduction: true
+cardImage: /error-summary.svg
+phase: beta
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

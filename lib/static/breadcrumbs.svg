@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" xmlns:bx="https://boxy-svg.com">
+  <rect width="300" height="200" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214);"></rect>
+  <rect x="134.5" y="85" width="45" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); stroke: rgb(38, 38, 42); stroke-linecap: round; stroke-linejoin: round;"></rect>
+  <rect x="32.5" y="85" width="75" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); stroke: rgb(38, 38, 42); stroke-linecap: round; stroke-linejoin: round;"></rect>
+  <rect x="207.5" y="85" width="60" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); stroke: rgb(38, 38, 42); stroke-linecap: round; stroke-linejoin: round;"></rect>
+  <path d="M -183.81 -88.742 L -176.31 -76.742 L -191.31 -76.742 L -183.81 -88.742 Z" bx:shape="triangle -191.31 -88.742 15 12 0.5 0 1@6d431a25" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(38, 38, 42); transform-origin: -183.81px -82.742px;" transform="matrix(0.000001, 1, -1, 0.000001, 306.309989, 182.742028)"></path>
+  <path d="M -183.81 -88.742 L -176.31 -76.742 L -191.31 -76.742 L -183.81 -88.742 Z" bx:shape="triangle -191.31 -88.742 15 12 0.5 0 1@6d431a25" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(38, 38, 42); transform-origin: -183.81px -82.742px;" transform="matrix(0.000001, 1, -1, 0.000001, 378.309989, 182.742028)"></path>
+</svg>

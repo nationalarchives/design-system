@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214);"></rect>
+  <rect y="29" width="250" height="105" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="25"></rect>
+  <rect y="31" width="180" height="101" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; fill: rgb(217, 217, 214); stroke: rgb(217, 217, 214);" x="60"></rect>
+  <rect y="140" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="34"></rect>
+  <rect y="140" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="82"></rect>
+  <rect y="140" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="130"></rect>
+  <rect y="140" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="178"></rect>
+  <rect y="140" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="226"></rect>
+  <rect y="188" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="34"></rect>
+  <rect y="188" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="82"></rect>
+  <rect y="188" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="130"></rect>
+  <rect y="188" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="178"></rect>
+  <rect y="188" width="40" height="40" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="226"></rect>
+  <rect y="10" width="70" height="12" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="25"></rect>
+</svg>

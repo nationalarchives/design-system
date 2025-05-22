@@ -3,12 +3,13 @@ layout: collection-page.njk
 title: Card
 description: Use the card component for providing previews to articles and pages.
 group: components
-statusProduction: true
+cardImage: /card.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 0
-statusDocumentationComplete: false
+statusDocumentationComplete: true
 ---
 
 {% from "partials/example.njk" import example %}

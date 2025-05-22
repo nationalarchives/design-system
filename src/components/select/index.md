@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Select
 description: The select component allows users to select a single value from a list of options.
 group: components
-statusProduction: true
+cardImage: /select.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

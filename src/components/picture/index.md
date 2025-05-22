@@ -3,10 +3,11 @@ layout: collection-page.njk
 title: Picture
 description: The picture component can display an image with additional information.
 group: components
-statusProduction: true
+cardImage: /picture.svg
+phase: production
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 1
 statusDocumentationComplete: false
 ---

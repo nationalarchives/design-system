@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Text input
 description: The text input component allows users to enter short string of text such as their email address, a record title or a postcode.
 group: components
-statusProduction: true
+cardImage: /text-input.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

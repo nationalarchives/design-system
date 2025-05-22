@@ -3,10 +3,11 @@ layout: collection-page.njk
 title: Details
 description: Make a page easier to scan by letting users reveal more detailed information only if they need it.
 group: components
-statusProduction: true
+cardImage: /details.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 1
 statusDocumentationComplete: false
 ---

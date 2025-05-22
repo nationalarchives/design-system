@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Footer
 description: The footer component provides an area to use for copyright information and additional links to things like social media.
 group: components
-statusProduction: true
+cardImage: /footer.svg
+phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

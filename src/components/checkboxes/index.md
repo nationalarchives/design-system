@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Checkboxes
 description: Checkboxes allow users to post multiple options for the same field.
 group: components
-statusProduction: true
+cardImage: /checkboxes.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Textarea
 description: Use the textarea component to allow the users to enter a longer string of text information such as feedback.
 group: components
-statusProduction: true
+cardImage: /textarea.svg
+phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

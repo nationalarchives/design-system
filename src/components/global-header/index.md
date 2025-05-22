@@ -3,7 +3,8 @@ layout: collection-page.njk
 title: Global header
 description: The global header component shows users they are on a main National Archives service and provides navigation links.
 group: components
-statusProduction: true
+cardImage: /global-header.svg
+phase: production
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

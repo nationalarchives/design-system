@@ -1,19 +1,23 @@
-{% if statusProduction or statusTestedWithoutJavaScript or statusTestedWithoutCSS or statusPassedDacAudit or statusAnalytics or statusDocumentationComplete %}
+{% if phase !== "production" or statusTestedWithoutJavaScript > 1 or statusTestedWithoutCSS > 1 or statusPassedDacAudit > 1 or statusAnalytics > 1 or not statusDocumentationComplete %}
   <h2 id="status" class="tna-heading-l tna-heading--no-link-arrow">
-    Status
-    <a href="#status" aria-hidden="true" title="Jump to Status" tabindex="-1">
+    Component status
+    <a href="#status" aria-hidden="true" title="Jump to component status" tabindex="-1">
       <i class="fa-solid fa-link" aria-hidden="true"></i>
     </a>
   </h2>
   <div class="tna-ds-status tna-!--margin-top-m">
     <dl class="tna-dl">
-      <dt>Status</dt>
+      <dt>Phase</dt>
       <dd>
         <strong>
-          {%- if statusProduction %}
+          {%- if phase == "production" %}
           <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Ready for production
-          {%- else %}
+          {%- elif phase == "beta" %}
+          <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> Beta
+          {%- elif phase == "development" %}
           <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
+          {%- else %}
+          <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> {{ phase | capitalize }}
           {%- endif %}
         </strong>
       </dd>
@@ -63,14 +67,12 @@
         {%- endif %}
       </dd>
       {%- endif %}
+      {%- if not statusDocumentationComplete %}
       <dt>Documentation complete</dt>
       <dd>
-        {%- if statusDocumentationComplete %}
-        <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
-        {%- else %}
         <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
-        {%- endif %}
       </dd>
+      {%- endif %}
     </dl>
   </div>
 {% endif %}
