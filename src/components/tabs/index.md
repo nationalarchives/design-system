@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Tabs
 description: The tabs component can contain multiple sections of information.
 group: components
+cardImage: /tabs.svg
 phase: development
 statusTestedWithoutJavaScript: 2
 statusTestedWithoutCSS: 2

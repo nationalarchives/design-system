@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Gallery
 description: Use the gallery component to show a list of images.
 group: components
+cardImage: /gallery.svg
 phase: production
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1

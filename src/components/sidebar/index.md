@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Sidebar
 description: The sidebar can be used in a page to provide additional navigation.
 group: components
+cardImage: /sidebar.svg
 phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1

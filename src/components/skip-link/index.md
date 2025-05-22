@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Skip link
 description: Use the skip link at the start of a page to allow the user to jump straight to the most important content.
 group: components
+cardImage: /skip-link.svg
 phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1

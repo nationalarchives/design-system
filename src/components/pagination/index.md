@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Pagination
 description: Use a list-type layout if users need to navigate through pages of similar items.
 group: components
+cardImage: /pagination.svg
 phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1

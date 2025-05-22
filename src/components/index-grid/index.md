@@ -4,6 +4,7 @@ title: Index grid
 description: Use the index grid component to display a grid of links such as displaying a list of all child pages in a hierarchy.
 group: components
 phase: production
+cardImage: /index-grid.svg
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

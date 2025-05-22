@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Phase banner
 description: The phase banner can display the development phase that the service is currently in.
 group: components
+cardImage: /phase-banner.svg
 phase: production
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1

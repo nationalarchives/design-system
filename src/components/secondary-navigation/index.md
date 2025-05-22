@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Secondary navigation
 description: Add secondary navigation to allow users to navigate between different areas of your service.
 group: components
+cardImage: /secondary-navigation.svg
 phase: beta
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
