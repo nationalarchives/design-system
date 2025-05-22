@@ -34,5 +34,7 @@
 .tna-card {
   &--full-click {
     height: 100%;
+
+    box-sizing: border-box;
   }
 }
