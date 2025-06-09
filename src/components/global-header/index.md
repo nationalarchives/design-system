@@ -35,7 +35,7 @@ The six main navigation links should be:
   </dd>
   <dt>Explore the collection</dt>
   <dd>
-    <a href="https://beta.nationalarchives.gov.uk/explore-the-collection/">https://beta.nationalarchives.gov.uk/explore-the-collection/</a>
+    <a href="https://www.nationalarchives.gov.uk/explore-the-collection/">https://www.nationalarchives.gov.uk/explore-the-collection/</a>
   </dd>
   <dt>Help using the archive</dt>
   <dd>
