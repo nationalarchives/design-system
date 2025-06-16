@@ -71,12 +71,16 @@
               {%- endif -%}
               {%- set meta = [] -%}
               {%- if item.phase and item.phase !== "production" -%}
-                {%- set meta = meta.concat([
-                  {
-                    title: "Phase",
-                    text: item.phase | capitalize
-                  }
-                ]) -%}
+                {%- if item.cardImage -%}
+                  {%- set cardContent = cardContent | setAttribute("label", item.phase | capitalize) -%}
+                {%- else -%}
+                  {%- set meta = meta.concat([
+                    {
+                      title: "Phase",
+                      text: item.phase | capitalize
+                    }
+                  ]) -%}
+                {%- endif -%}
               {%- endif -%}
               {%- if meta | length -%}
                 {%- set cardContent = cardContent | setAttribute("meta", meta) -%}
