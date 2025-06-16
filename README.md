@@ -1,10 +1,12 @@
 <img src="https://raw.githubusercontent.com/nationalarchives/tna-frontend/main/src/nationalarchives/assets/images/tna-square-logo.svg" alt="The National Archives logo" title="The National Archives" width="100" />
 
-# Design System
+# The National Archives Design System
 
 [![Licence](https://img.shields.io/github/license/nationalarchives/design-system?style=flat-square)](https://github.com/nationalarchives/design-system/blob/main/LICENCE)
 
 The National Archives Design System provides advice on how to design National Archives platforms and services.
+
+This repository contains the source code for https://design-system.nationalarchives.gov.uk/
 
 ## Quickstart
 
