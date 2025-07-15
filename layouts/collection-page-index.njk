@@ -70,9 +70,9 @@
                 {%- set cardContent = cardContent | setAttribute("style", "plain") -%}
               {%- endif -%}
               {%- set meta = [] -%}
-              {%- if item.phase and item.phase !== "production" -%}
+              {%- if item.phase and item.phase !== "official" -%}
                 {%- if item.cardImage -%}
-                  {%- set cardContent = cardContent | setAttribute("label", item.phase | capitalize) -%}
+                  {%- set cardContent = cardContent | setAttribute("label", item.phase | unslugify | capitalize) -%}
                 {%- else -%}
                   {%- set meta = meta.concat([
                     {

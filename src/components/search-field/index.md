@@ -4,7 +4,7 @@ title: Search field
 description: Use the search field component as an entry point into searches.
 group: components
 cardImage: /search-field.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

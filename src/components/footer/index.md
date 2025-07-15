@@ -4,7 +4,7 @@ title: Footer
 description: The footer component provides an area to use for copyright information and additional links to things like social media.
 group: components
 cardImage: /footer.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

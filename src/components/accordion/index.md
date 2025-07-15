@@ -4,7 +4,7 @@ title: Accordion
 group: components
 description: The accordion component lets users show and hide small sections of related content on a page.
 cardImage: /accordion.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

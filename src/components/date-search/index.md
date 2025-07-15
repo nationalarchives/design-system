@@ -4,7 +4,7 @@ title: Date search
 description: Use the date search component to allow the user to enter a date to search with.
 group: components
 cardImage: /date-search.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

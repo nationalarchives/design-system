@@ -4,7 +4,7 @@ title: Cookie banner
 description: The cookie banner component allows a user to either accept or decline the use of cookies within a service.
 group: components
 cardImage: /cookie-banner.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

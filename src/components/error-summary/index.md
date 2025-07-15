@@ -4,7 +4,7 @@ title: Error summary
 description: Summarise form errors on the page and provide links to help users complete them.
 group: components
 cardImage: /error-summary.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

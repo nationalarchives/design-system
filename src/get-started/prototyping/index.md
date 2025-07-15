@@ -16,7 +16,7 @@ Create a copy of the [National Archives base Figma document](https://www.figma.c
 
 ## HTML
 
-Use the [GOV.UK Prototype kit](https://prototype-kit.service.gov.uk/docs/) to create rich, interactive and responsive prototypes.
+Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to create rich, interactive and responsive prototypes.
 
 [TNA Frontend](https://github.com/nationalarchives/tna-frontend) includes support for the GOV.UK Prototype Kit. You can use the supplied components and styles with the prototype kit to make prototypes that look like National Archives services.
 

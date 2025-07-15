@@ -4,7 +4,7 @@ title: Compound filters
 description: The compound filters can show which multiple filters have been selected. This is useful for search patterns.
 group: components
 cardImage: /compound-filters.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

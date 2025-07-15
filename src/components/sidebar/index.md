@@ -4,7 +4,7 @@ title: Sidebar
 description: The sidebar can be used in a page to provide additional navigation.
 group: components
 cardImage: /sidebar.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

@@ -4,7 +4,7 @@ title: Picture
 description: The picture component can display an image with additional information.
 group: components
 cardImage: /picture.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

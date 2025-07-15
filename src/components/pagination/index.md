@@ -4,7 +4,7 @@ title: Pagination
 description: Use a list-type layout if users need to navigate through pages of similar items.
 group: components
 cardImage: /pagination.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

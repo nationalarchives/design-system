@@ -4,7 +4,7 @@ title: Global header
 description: The global header component shows users they are on a main National Archives service and provides navigation links.
 group: components
 cardImage: /global-header.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

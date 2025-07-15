@@ -4,7 +4,7 @@ title: Hero
 description: Use the hero component to start an article.
 group: components
 cardImage: /hero.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

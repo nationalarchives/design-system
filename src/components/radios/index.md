@@ -4,7 +4,7 @@ title: Radios
 description: Radios allow users to select a single options for a form field.
 group: components
 cardImage: /radios.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

@@ -4,7 +4,7 @@ title: Secondary navigation
 description: Add secondary navigation to allow users to navigate between different areas of your service.
 group: components
 cardImage: /secondary-navigation.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

@@ -1,5 +1,5 @@
 ---
-layout: simple-with-nav.njk
+layout: simple.njk
 title: Our brand
 description: National Archives assets
 priority: 0.8
@@ -7,10 +7,12 @@ priority: 0.8
 
 {%- from "nationalarchives/components/files-list/macro.njk" import tnaFilesList -%}
 
-## Assets
+# {{ title }}
+
+<div class="tna-scene-setter">{{ description }}</div>
 
 {{ tnaFilesList({
-  itemHeadingLevel: 3,
+  itemHeadingLevel: 2,
   items: [
     {
       id: "logo-svg",

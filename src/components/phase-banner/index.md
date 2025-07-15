@@ -4,7 +4,7 @@ title: Phase banner
 description: The phase banner can display the development phase that the service is currently in.
 group: components
 cardImage: /phase-banner.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

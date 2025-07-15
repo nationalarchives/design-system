@@ -4,7 +4,7 @@ title: Date input
 description: Use the date input component to allow the user to enter a date when populating data, such as submitting a record.
 group: components
 cardImage: /date-input.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

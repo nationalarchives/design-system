@@ -4,7 +4,7 @@ title: Details
 description: Make a page easier to scan by letting users reveal more detailed information only if they need it.
 group: components
 cardImage: /details.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

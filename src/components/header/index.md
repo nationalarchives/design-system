@@ -4,7 +4,7 @@ title: Header
 description: The header component shows users they are on a National Archives service and provides navigation links.
 group: components
 cardImage: /header.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

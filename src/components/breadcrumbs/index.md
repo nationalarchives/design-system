@@ -4,7 +4,7 @@ title: Breadcrumbs
 description: Breadcrumbs help users to understand where they are within a websites structure and move between levels.
 group: components
 cardImage: /breadcrumbs.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

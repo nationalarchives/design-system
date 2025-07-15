@@ -4,7 +4,7 @@ title: Card
 description: Use the card component for providing previews to articles and pages.
 group: components
 cardImage: /card.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

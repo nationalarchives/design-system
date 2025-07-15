@@ -1,78 +1,74 @@
-{% if phase !== "production" or statusTestedWithoutJavaScript > 1 or statusTestedWithoutCSS > 1 or statusPassedDacAudit > 1 or statusAnalytics > 1 or not statusDocumentationComplete %}
-  <h2 id="status" class="tna-heading-l tna-heading--no-link-arrow">
-    Component status
-    <a href="#status" aria-hidden="true" title="Jump to component status" tabindex="-1">
-      <i class="fa-solid fa-link" aria-hidden="true"></i>
-    </a>
-  </h2>
-  <div class="tna-ds-status tna-!--margin-top-m">
-    <dl class="tna-dl">
-      <dt>Phase</dt>
-      <dd>
-        <strong>
-          {%- if phase == "production" %}
-          <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Ready for production
-          {%- elif phase == "beta" %}
-          <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> Beta
-          {%- elif phase == "development" %}
-          <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
-          {%- else %}
-          <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> {{ phase | capitalize }}
-          {%- endif %}
-        </strong>
-      </dd>
-      {%- if statusTestedWithoutJavaScript !== 0 %}
-      <dt>Tested without JavaScript</dt>
-      <dd>
-        {%- if statusTestedWithoutJavaScript == 1 %}
-        <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
-        {%- elseif statusTestedWithoutJavaScript == 2 %}
-        <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
-        {%- elseif statusTestedWithoutJavaScript == 3 %}
-        <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
-        {%- else %}
-        <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
-        {%- endif %}
-      </dd>
+<h2 id="status" class="tna-heading-l tna-heading--no-link-arrow">
+  Component status
+  <a href="#status" aria-hidden="true" title="Jump to component status" tabindex="-1">
+    <i class="fa-solid fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="tna-ds-status tna-!--margin-top-m">
+  <dl class="tna-dl">
+    <dt>Phase</dt>
+    <dd>
+      {%- if phase == "official" %}
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> <a href="/component-statuses/#official"><strong>Official</strong> (ready to use in production)</a>
+      {%- elif phase == "to-be-reviewed" %}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> <a href="/component-statuses/#to-be-reviewed"><strong>To be reviewed</strong></a>
+      {%- elif phase == "experimental" %}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> <a href="/component-statuses/#experimental"><strong>Experimental</strong></a>
+      {%- else %}
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> <strong>{{ phase | unslugify | capitalize }}</strong>
       {%- endif %}
-      <dt>Tested without CSS</dt>
-      <dd>
-        {%- if statusTestedWithoutCSS == 1 %}
-        <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
-        {%- elseif statusTestedWithoutCSS == 2 %}
-        <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
-        {%- elseif statusTestedWithoutCSS == 3 %}
-        <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
-        {%- else %}
-        <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
-        {%- endif %}
-      </dd>
-      <dt>Passed DAC audit</dt>
-      <dd>
-        {%- if statusPassedDacAudit == 1 %}
-        <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
-        {%- elseif statusPassedDacAudit == 2 %}
-        <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> Not yet audied
-        {%- else %}
-        <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
-        {%- endif %}
-      </dd>
-      {%- if statusAnalytics !== 0 %}
-      <dt>Analytics integrated</dt>
-      <dd>
-        {%- if statusAnalytics == 1 %}
-        <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
-        {%- elseif statusAnalytics == 2 %}
-        <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
-        {%- endif %}
-      </dd>
+    </dd>
+    {%- if statusTestedWithoutJavaScript !== 0 %}
+    <dt>Tested without JavaScript</dt>
+    <dd>
+      {%- if statusTestedWithoutJavaScript == 1 %}
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
+      {%- elseif statusTestedWithoutJavaScript == 2 %}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
+      {%- elseif statusTestedWithoutJavaScript == 3 %}
+      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
+      {%- else %}
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
-      {%- if not statusDocumentationComplete %}
-      <dt>Documentation complete</dt>
-      <dd>
-        <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
-      </dd>
+    </dd>
+    {%- endif %}
+    <dt>Tested without CSS</dt>
+    <dd>
+      {%- if statusTestedWithoutCSS == 1 %}
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
+      {%- elseif statusTestedWithoutCSS == 2 %}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
+      {%- elseif statusTestedWithoutCSS == 3 %}
+      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
+      {%- else %}
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
-    </dl>
-  </div>
-{% endif %}
+    </dd>
+    <dt>Passed DAC audit</dt>
+    <dd>
+      {%- if statusPassedDacAudit == 1 %}
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
+      {%- elseif statusPassedDacAudit == 2 %}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> Not yet audied
+      {%- else %}
+      <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
+      {%- endif %}
+    </dd>
+    {%- if statusAnalytics !== 0 %}
+    <dt>Analytics integrated</dt>
+    <dd>
+      {%- if statusAnalytics == 1 %}
+      <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
+      {%- elseif statusAnalytics == 2 %}
+      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> In development
+      {%- endif %}
+    </dd>
+    {%- endif %}
+    {%- if not statusDocumentationComplete %}
+    <dt>Documentation complete</dt>
+    <dd>
+      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
+    </dd>
+    {%- endif %}
+  </dl>
+</div>

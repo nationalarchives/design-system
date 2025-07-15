@@ -4,7 +4,7 @@ title: Warning
 description: The warning component provides the user with important information about the page or article.
 group: components
 cardImage: /warning.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

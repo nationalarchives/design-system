@@ -4,7 +4,7 @@ title: Select
 description: The select component allows users to select a single value from a list of options.
 group: components
 cardImage: /select.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

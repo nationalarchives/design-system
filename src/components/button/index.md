@@ -4,7 +4,7 @@ title: Button
 description: Use the button component for call to action links or to submit data within forms.
 group: components
 cardImage: /button.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

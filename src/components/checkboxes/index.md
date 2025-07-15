@@ -4,7 +4,7 @@ title: Checkboxes
 description: Checkboxes allow users to post multiple options for the same field.
 group: components
 cardImage: /checkboxes.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

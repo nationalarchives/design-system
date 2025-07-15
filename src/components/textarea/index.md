@@ -4,7 +4,7 @@ title: Textarea
 description: Use the textarea component to allow the users to enter a longer string of text information such as feedback.
 group: components
 cardImage: /textarea.svg
-phase: beta
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2

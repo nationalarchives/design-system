@@ -4,7 +4,7 @@ title: Files list
 description: Display a list of files available to download.
 group: components
 cardImage: /files-list.svg
-phase: production
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1

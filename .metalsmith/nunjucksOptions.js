@@ -188,6 +188,13 @@ const nunjucksOptions = {
         day: "numeric",
       });
     },
+    unslugify: function (text, capitalizeFirst = true) {
+      const words = text.split("-");
+      if (capitalizeFirst) {
+        words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+      }
+      return words.join(" ");
+    },
     iso8601: function (date) {
       return new Date(date).toISOString();
     },
