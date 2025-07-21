@@ -1,0 +1,20 @@
+---
+title: File input with an error
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/file-input/macro.njk" import tnaFileInput %}
+
+{{ tnaFileInput({
+  label: "Upload proof of identity",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "proof-of-identity",
+  name: "proof_of_identity",
+  hint: "This should be a scanned copy of your passport or driving licence in a PDF, JPG or PNG format.",
+  error: {
+    text: "Upload a file in a supported format"
+  }
+}) }}

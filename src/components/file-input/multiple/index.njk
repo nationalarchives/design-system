@@ -1,0 +1,18 @@
+---
+title: File input - multiple
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/file-input/macro.njk" import tnaFileInput %}
+
+{{ tnaFileInput({
+  label: "Upload proof of identity",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "proof-of-identity",
+  name: "proof_of_identity",
+  multiple: true
+}) }}
+
