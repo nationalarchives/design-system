@@ -30,7 +30,7 @@ Feel free to use these components in prototypes and live services with the inten
 - tested as part of a beta or live service that has had a successful accessibility audit
 - validated against HTML5 standards
 - integrated into the analytics library where applicable
-- fully documented in this design system with examples and variations
+<!-- - fully documented in this design system with examples and variations -->
 - validated using fixtures to allow replication in other templating languages
 - tested for integration with the [GOV.UK Prototype Kit](/get-started/prototyping/#html)
 - added to the [TNA Frontend Storybook](https://nationalarchives.github.io/tna-frontend/) for reviewing and testing

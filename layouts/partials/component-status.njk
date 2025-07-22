@@ -18,7 +18,7 @@
       <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> <strong>{{ phase | unslugify | capitalize }}</strong>
       {%- endif %}
     </dd>
-    {%- if statusTestedWithoutJavaScript !== 0 %}
+    {%- if statusTestedWithoutJavaScript !== 0 and phase != "official" %}
     <dt>Tested without JavaScript</dt>
     <dd>
       {%- if statusTestedWithoutJavaScript == 1 %}
@@ -32,6 +32,7 @@
       {%- endif %}
     </dd>
     {%- endif %}
+    {%- if phase != "official" %}
     <dt>Tested without CSS</dt>
     <dd>
       {%- if statusTestedWithoutCSS == 1 %}
@@ -44,6 +45,8 @@
       <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
+    {%- endif %}
+    {%- if phase != "official" %}
     <dt>Passed DAC audit</dt>
     <dd>
       {%- if statusPassedDacAudit == 1 %}
@@ -54,6 +57,7 @@
       <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
+    {%- endif %}
     {%- if statusAnalytics !== 0 %}
     <dt>Analytics integrated</dt>
     <dd>
@@ -64,7 +68,7 @@
       {%- endif %}
     </dd>
     {%- endif %}
-    {%- if not statusDocumentationComplete %}
+    {%- if not statusDocumentationComplete and phase != "official" %}
     <dt>Documentation complete</dt>
     <dd>
       <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
