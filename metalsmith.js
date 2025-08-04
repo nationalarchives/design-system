@@ -29,7 +29,7 @@ Metalsmith(__dirname)
   .metadata({
     sitename: "The National Archives Design System",
     siteurl: "https://design-system.nationalarchives.gov.uk/",
-    description:
+    default_description:
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
