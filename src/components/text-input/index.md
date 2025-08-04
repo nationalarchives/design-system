@@ -30,9 +30,9 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "text-input", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
-## Inline
+<!-- ## Inline
 
-{{ example({ group: "components", item: "text-input", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }}
+{{ example({ group: "components", item: "text-input", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->
 
 ## Password
 

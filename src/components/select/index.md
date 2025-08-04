@@ -32,6 +32,6 @@ Where possible, avoid overusing the select component. Alice Bartlett gave a talk
 
 {{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
-## Inline
+<!-- ## Inline
 
-{{ example({ group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }}
+{{ example({ group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->

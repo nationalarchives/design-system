@@ -32,6 +32,6 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 {{ example({ group: "components", item: "date-search", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
-## Inline
+<!-- ## Inline
 
-{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }}
+{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->

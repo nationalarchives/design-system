@@ -30,6 +30,6 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "textarea", example: "error", html: true, nunjucks: true, size: "m" }) }}
 
-## Inline
+<!-- ## Inline
 
-{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "xs" }) }} -->
