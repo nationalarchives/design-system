@@ -34,13 +34,13 @@
   <style>.tna-ds--show-on-js{display: none !important;}</style>
   <meta name="twitter:image" content="https://repository-images.githubusercontent.com/664684011/4ab8a867-4594-4d07-8ab9-72e3037ed9e4">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="nationalarchives/design-system: Design your service using National Archives styles, components and patterns">
+  <meta name="twitter:title" content="{{ title + ' - ' if title else '' }}The National Archives Design System">
   <meta name="twitter:description" content="{{ description or default_description }}">
   <meta property="og:image" content="https://repository-images.githubusercontent.com/664684011/4ab8a867-4594-4d07-8ab9-72e3037ed9e4">
   <meta property="og:image:alt" content="The National Archives Design System logo">
   <meta property="og:site_name" content="The National Archives">
   <meta property="og:type" content="object">
-  <meta property="og:title" content="The National Archives Design System">
+  <meta property="og:title" content="{{ title + ' - ' if title else '' }}The National Archives Design System">
   <meta property="og:url" content="https://design-system.nationalarchives.gov.uk/">
   <meta property="og:description" content="{{ description or default_description }}">
 {% endblock %}

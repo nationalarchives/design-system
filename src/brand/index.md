@@ -1,7 +1,7 @@
 ---
 layout: simple.njk
 title: Our brand
-description: National Archives assets
+description: Assets for The National Archives.
 priority: 0.8
 ---
 
