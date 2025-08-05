@@ -9,7 +9,7 @@ priority: 0.8
 
 # {{ title }}
 
-<div class="tna-scene-setter">{{ description }}</div>
+<p class="tna-scene-setter">{{ description }}</p>
 
 {{ tnaFilesList({
   itemHeadingLevel: 2,
