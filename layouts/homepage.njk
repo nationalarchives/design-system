@@ -8,7 +8,7 @@
 
 {% block main %}
   <main class="tna-main {{ mainClasses }}" id="main-content">
-    <header class="tna-background-accent tna-!--padding-top-l tna-!--padding-bottom-xl">
+    <header class="tna-background-accent-light tna-!--padding-top-l tna-!--padding-bottom-xl">
       <div class="tna-container tna-container--vertically-align">
         <div class="tna-column tna-column--width-1-3 tna-column--order-3 tna-column--order-1-small tna-column--order-1-tiny tna-!--padding-top-m">
           <svg xmlns="http://www.w3.org/2000/svg" width="384" height="313.305" fill="var(--icon-light)" viewBox="13.657 49.004 384 313.305">
@@ -43,7 +43,7 @@
       </div>
     </div>
     {% endif %} #}
-    <div class="tna-section tna-background-tint tna-!--no-padding-bottom">
+    <div class="tna-!--padding-top-l">
       <ul class="tna-container">
       {% for item in collections.front_page %}
         <li class="tna-column tna-column--width-1-3 tna-column--width-1-2-medium tna-column--width-1-2-small tna-column--full-tiny tna-!--margin-bottom-l">
@@ -64,7 +64,7 @@
       {%- endfor %}
       </ul>
     </div>
-    {# <hr> #}
+    <hr>
     <div class="tna-section">
       <div class="tna-container">
         <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">

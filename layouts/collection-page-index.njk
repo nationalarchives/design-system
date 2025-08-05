@@ -5,11 +5,11 @@
 {% block main %}
   {% set headings = contents | headingsList %}
   {% set groupTitle = group | kebabToSpace | capitalize %}
-  <div class="tna-background-accent">
+  <div class="tna-background-accent-light">
     {% include "partials/breadcrumbs.njk" %}
   </div>
   <main class="tna-main {{ mainClasses }}" id="main-content">
-    <div class="tna-background-accent">
+    <div class="tna-background-accent-light">
       <div class="tna-container tna-section tna-!--padding-bottom-xl">
         <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
           <h1 class="tna-heading-xl">
