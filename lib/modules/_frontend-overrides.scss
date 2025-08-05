@@ -8,25 +8,31 @@
   }
 }
 
-.tna-container {
-  &--vertically-align {
-    align-items: center;
-  }
-}
-
 .tna-template__body {
   > .tna-header + .tna-container,
   > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
     flex: 1;
+
+    align-content: flex-start;
   }
 }
 
 .tna-sidebar {
-  @include spacing.space-above;
-
   &--pages &__item-children {
     @include media.on-mobile {
       display: none;
+    }
+  }
+}
+
+.tna-blockquote {
+  &--noquotes {
+    padding: spacing.space(0.5) spacing.space(0.5) spacing.space(0.5)
+      spacing.space(1.25);
+
+    :first-child::before,
+    :last-child::after {
+      content: "";
     }
   }
 }

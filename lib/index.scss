@@ -1,7 +1,3 @@
-@use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
-  $largest-container-width: 80rem
-);
-
 // @use "@nationalarchives/frontend/nationalarchives/all";
 @use "@nationalarchives/frontend/nationalarchives/variables";
 @use "@nationalarchives/frontend/nationalarchives/tools";
@@ -20,7 +16,7 @@
 @use "@nationalarchives/frontend/nationalarchives/components/details";
 // @use "@nationalarchives/frontend/nationalarchives/components/error-summary";
 // @use "@nationalarchives/frontend/nationalarchives/components/featured-records";
-@use "@nationalarchives/frontend/nationalarchives/components/file-input";
+// @use "@nationalarchives/frontend/nationalarchives/components/file-input";
 @use "@nationalarchives/frontend/nationalarchives/components/files-list";
 @use "@nationalarchives/frontend/nationalarchives/components/footer";
 // @use "@nationalarchives/frontend/nationalarchives/components/gallery";
@@ -49,9 +45,6 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
-@use "@nationalarchives/frontend/nationalarchives/utilities/grid" as
-  gridUtilities;
-
 @use "modules/code";
 @use "modules/component-example";
 @use "modules/frontend-overrides";
@@ -70,19 +63,7 @@
   border-radius: 100%;
 }
 
-.tna-blockquote {
-  &--noquotes {
-    padding: spacing.space(0.5) spacing.space(0.5) spacing.space(0.5)
-      spacing.space(1.25);
-
-    :first-child::before,
-    :last-child::after {
-      content: "";
-    }
-  }
-}
-
-.tna-ds-status {
+.tna-ds-component-status {
   overflow: hidden;
 
   @include colour.colour-border("keyline", 1px);
@@ -92,23 +73,4 @@
 a[href^="https://asciinema.org"]
 {
   display: inline-block;
-}
-
-.app-example-page {
-  min-height: auto;
-  padding: spacing.space(2);
-}
-
-kbd {
-  padding: 0 spacing.space(0.25);
-
-  @include typography.detail-font;
-  @include colour.tint;
-  line-height: 1;
-  vertical-align: baseline;
-
-  border: 1px rgb(0 0 0 / 50%) solid;
-  border-radius: 0.25em;
-
-  box-shadow: 0 0.125em 0 rgb(0 0 0 / 50%);
 }
