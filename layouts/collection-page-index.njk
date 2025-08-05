@@ -60,7 +60,8 @@
                 href: "/" + item.path.replace("index.html", ""),
                 text: item.description,
                 accentMeta: true,
-                fullAreaClick: true
+                fullAreaClick: true,
+                classes: "tna-card--full-height"
               } -%}
               {%- if item.cardImage -%}
                 {%- set cardContent = cardContent | setAttribute("imageSrc", item.cardImage) -%}
