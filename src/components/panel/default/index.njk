@@ -1,0 +1,14 @@
+---
+title: Panel
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/panel/macro.njk" import tnaPanel %}
+
+{{ tnaPanel({
+  title: "Application received",
+  body: "<p>Your application has been received and is being processed.</p><p>Your reference number is <strong>123456</strong>.</p>",
+  headingLevel: 1
+}) }}

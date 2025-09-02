@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" xmlns:bx="https://boxy-svg.com">
   <rect width="300" height="200" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214);"></rect>
-  <rect x="235" y="85" width="55" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
+  <rect x="235" y="85" width="55" height="30" style="stroke-width: 1.5.5px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
   <path d="M -183.81 -88.742 L -176.31 -76.742 L -191.31 -76.742 L -183.81 -88.742 Z" bx:shape="triangle -191.31 -88.742 15 12 0.5 0 1@6d431a25" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214); transform-origin: -183.81px -82.742px;" transform="matrix(0.000001, 1, -1, 0.000001, 460.809928, 182.742021)"></path>
-  <rect x="10" y="85" width="55" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
+  <rect x="10" y="85" width="55" height="30" style="stroke-width: 1.5.5px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
   <path d="M -183.81 -88.742 L -176.31 -76.742 L -191.31 -76.742 L -183.81 -88.742 Z" bx:shape="triangle -191.31 -88.742 15 12 0.5 0 1@6d431a25" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214); transform-origin: -183.81px -82.742px;" transform="matrix(-0.000001, -1, 1, -0.000001, 206.809991, 182.741507)"></path>
-  <rect x="100" y="85" width="30" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
-  <rect x="135" y="85" width="30" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
-  <rect x="170" y="85" width="30" height="30" style="stroke-width: 2px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
+  <rect x="100" y="85" width="30" height="30" style="stroke-width: 1.5.5px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
+  <rect x="135" y="85" width="30" height="30" style="stroke-width: 1.5.5px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
+  <rect x="170" y="85" width="30" height="30" style="stroke-width: 1.5.5px; fill: rgb(38, 38, 42); paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42);"></rect>
   <ellipse style="fill: rgb(38, 38, 42); stroke: rgb(38, 38, 42);" cx="89" cy="100" rx="1" ry="1"></ellipse>
   <ellipse style="fill: rgb(38, 38, 42); stroke: rgb(38, 38, 42);" cx="82" cy="100" rx="1" ry="1"></ellipse>
   <ellipse style="fill: rgb(38, 38, 42); stroke: rgb(38, 38, 42);" cx="75" cy="100" rx="1" ry="1"></ellipse>

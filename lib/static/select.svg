@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" xmlns:bx="https://boxy-svg.com">
   <rect width="300" height="200" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214);"></rect>
-  <rect y="69" width="100" height="18" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="50"></rect>
-  <rect y="101" width="199" height="30" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214);" x="51"></rect>
-  <rect y="101" width="30" height="30" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="220"></rect>
+  <rect y="69" width="100" height="18" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 1.5.5px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="50"></rect>
+  <rect y="101" width="200" height="30" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 1.5.5px; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214);" x="50"></rect>
+  <rect y="101" width="30" height="30" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 1.5.5px; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42);" x="220"></rect>
   <path d="M -234.955 -122 L -227.455 -110 L -242.455 -110 L -234.955 -122 Z" bx:shape="triangle -242.455 -122 15 12 0.5 0 1@49e6979a" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 0px; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(-1, 0, 0, -1, 469.910004, 232)"></path>
 </svg>

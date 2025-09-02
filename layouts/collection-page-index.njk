@@ -75,12 +75,7 @@
                 {%- if item.cardImage -%}
                   {%- set cardContent = cardContent | setAttribute("label", item.phase | unslugify | capitalize) -%}
                 {%- else -%}
-                  {%- set meta = meta.concat([
-                    {
-                      title: "Phase",
-                      text: item.phase | capitalize
-                    }
-                  ]) -%}
+                  {%- set cardContent = cardContent | setAttribute("supertitle", item.phase | unslugify | capitalize) -%}
                 {%- endif -%}
               {%- endif -%}
               {%- if meta | length -%}

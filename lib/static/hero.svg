@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
   <rect width="300" height="200" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(217, 217, 214);"></rect>
-  <rect width="280" height="130" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 2px;" x="10" y="35"></rect>
-  <rect y="85" width="150" height="66" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 2px; fill: rgb(217, 217, 214); stroke: rgb(217, 217, 214);" x="30"></rect>
-  <rect width="60" height="18" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 2px;" x="40" y="102"></rect>
-  <rect width="120" height="12" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 2px;" x="40" y="132"></rect>
-  <rect width="15" height="6" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 2px;" x="40" y="92"></rect>
+  <rect width="280" height="130" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 1.5.5px;" x="10" y="35"></rect>
+  <rect y="85" width="150" height="66" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke-width: 1.5.5px; fill: rgb(217, 217, 214); stroke: rgb(217, 217, 214);" x="30"></rect>
+  <rect width="60" height="18" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 1.5.5px;" x="40" y="102"></rect>
+  <rect width="120" height="12" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 1.5.5px;" x="40" y="132"></rect>
+  <rect width="15" height="6" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 1.5.5px;" x="40" y="92"></rect>
 </svg>
