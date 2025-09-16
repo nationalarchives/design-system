@@ -18,3 +18,10 @@ statusDocumentationComplete: false
 
 {% include "partials/component-status.njk" %}
 
+## Content
+
+Use `defaultContent: true` to populate the footer with the required content for a service hosted on the main domain.
+
+If using a different subdomain, change the base domain using `defaultContentBaseURL`.
+
+{{ example({ group: "components", item: "footer", example: "default-content", html: true, nunjucks: true, size: "xxxl" }, 2) }}

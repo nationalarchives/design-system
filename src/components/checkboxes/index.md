@@ -37,3 +37,9 @@ statusDocumentationComplete: false
 ## Inline
 
 {{ example({ group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
+
+## Single
+
+When there is only a single checkbox, it isn't rendered within a `<fieldset>`.
+
+{{ example({ group: "components", item: "checkboxes", example: "single", html: true, nunjucks: true, size: "xxs" }) }}

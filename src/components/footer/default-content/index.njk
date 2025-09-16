@@ -1,12 +1,12 @@
 ---
-title: Header
+title: Footer (default content)
 layout: examples/plain.njk
 private: true
 ---
 
-{% from "nationalarchives/components/global-header/macro.njk" import tnaGlobalHeader %}
+{% from "nationalarchives/components/footer/macro.njk" import tnaFooter %}
 
-{{ tnaGlobalHeader({
+{{ tnaFooter({
   defaultContent: true,
   defaultContentBaseURL: "https://www.nationalarchives.gov.uk"
 }) }}

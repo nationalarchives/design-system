@@ -1,0 +1,22 @@
+---
+title: Checkboxes - single
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
+
+{{ tnaCheckboxes({
+  label: "Terms and conditions",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "terms",
+  name: "terms",
+  items: [
+    {
+      text: "I agree to the terms and conditions",
+      value: "agree"
+    }
+  ]
+}) }}
