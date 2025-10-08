@@ -102,22 +102,22 @@
 {% endblock %}
 
 {% block footer %}
-  {% set buildDate = stats.atime | prettyDate %}
   {{ tnaFooter({
     themeSelector: true,
     currentTheme: theme,
+    defaultContent: true,
     navigation: [
       {
         title: "Meta",
         items: [
           {
-            text: "Site updated " + buildDate,
+            text: "Site updated " ~ (stats.atime | prettyDate),
             href: "https://github.com/nationalarchives/design-system/actions/workflows/deploy.yml",
             external: true
           },
           {
-            text: "Built using TNA Frontend " + tnaFrontendVersion,
-            href: "https://github.com/nationalarchives/tna-frontend/releases/tag/v" + tnaFrontendVersion,
+            text: "Built using TNA Frontend " ~ tnaFrontendVersion,
+            href: "https://github.com/nationalarchives/tna-frontend/releases/tag/v" ~ tnaFrontendVersion,
             external: true
           },
           {
@@ -155,6 +155,7 @@
         href: "/sitemap/"
       }
     ],
+    showNewsletter: false,
     classes: "tna-!--margin-top-l"
   }) }}
 {% endblock %}

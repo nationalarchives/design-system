@@ -79,7 +79,8 @@
             headingLevel: 3 if subGroups | length > 1 else 2,
             headingSize: "s" if subGroups | length > 1 else "m",
             items: sortArrayOfObjectsByKey(items, 'subGroupOrder'),
-            type: "pages"
+            type: "pages",
+            classes: "tna-!--margin-top-s" if subGroups | length > 1 else ""
           }) }}
         {% endif %}
       {% endfor %}
