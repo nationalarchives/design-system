@@ -27,7 +27,7 @@
 } -%} #}
 
 {% block head %}
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net https://www.nationalarchives.gov.uk 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://repository-images.githubusercontent.com https://placehold.co https://picsum.photos https://fastly.picsum.photos https://asciinema.org data: https://design-system.nationalarchives.gov.uk/; script-src 'self' https://www.nationalarchives.gov.uk 'sha256-8tnX66uZPQc/x0xPMSjbDfJFOh1ys5rYCZOAvT44Ml0=' 'sha256-eh65ft/FLWhSquitmVRey50WJ/FUDjy1q+J6b/eMfQ8='; font-src 'self' https://use.typekit.net https://fonts.gstatic.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net https://www.nationalarchives.gov.uk 'unsafe-inline'; img-src 'self' https://www.nationalarchives.gov.uk https://repository-images.githubusercontent.com https://placehold.co https://picsum.photos https://fastly.picsum.photos https://asciinema.org data: https://design-system.nationalarchives.gov.uk/; script-src 'self' https://www.nationalarchives.gov.uk 'sha256-8tnX66uZPQc/x0xPMSjbDfJFOh1ys5rYCZOAvT44Ml0=' 'sha256-eh65ft/FLWhSquitmVRey50WJ/FUDjy1q+J6b/eMfQ8='; font-src 'self' https://use.typekit.net https://fonts.gstatic.com; connect-src 'self' https://www.nationalarchives.gov.uk">
   <meta name="description" content="{{ description or default_description }}">
   <link rel="canonical" href="https://design-system.nationalarchives.gov.uk/{{ path.replace('index.html', '') }}{% if path %}{% endif %}">
   <link rel="manifest" href="/manifest.json">
@@ -164,5 +164,4 @@
   <script src="/static/scripts/all.js"></script>
   <script src="/index.js"></script>
   <script type="module" src="https://www.nationalarchives.gov.uk/enrichment/js/logo-adornments.js" defer></script>
-
 {% endblock %}
