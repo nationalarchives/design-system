@@ -68,6 +68,11 @@
 
   @include colour.colour-border("keyline", 1px);
   @include borders.rounded-border;
+
+  @include colour.on-high-contrast-and-forced-colours {
+    border-top: none;
+    border-bottom: none;
+  }
 }
 
 a[href^="https://asciinema.org"]
