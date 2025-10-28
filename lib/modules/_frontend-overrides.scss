@@ -2,6 +2,10 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
+*:active {
+  z-index: 9;
+}
+
 .tna-button {
   &--large {
     @include typography.font-size(24);
