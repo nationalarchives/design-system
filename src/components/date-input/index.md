@@ -12,6 +12,7 @@ statusAnalytics: 2
 statusDocumentationComplete: false
 ---
 
+{% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 {% from "partials/example.njk" import example %}
 
 For searching by date, use the [date search](../date-search/) component.
@@ -33,5 +34,10 @@ For searching by date, use the [date search](../date-search/) component.
 {{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: true, size: "s" }) }}
 
 ## Progressive
+
+{{ tnaWarning({
+  headingLevel: 3,
+  body: "The progressive variation of the date input component is still experimental."
+}) }}
 
 {{ example({ group: "components", item: "date-input", example: "progressive", html: true, nunjucks: true, size: "s" }) }}
