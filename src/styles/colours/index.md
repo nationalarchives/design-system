@@ -194,6 +194,8 @@ Ensure you check for proper colour contrast in your service for both text and no
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
 - [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast)
 
+Check colour combinations of various different visual impairments with [WhoCanUse](https://www.whocanuse.com/).
+
 ### Interactive elements
 
 Don’t rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
