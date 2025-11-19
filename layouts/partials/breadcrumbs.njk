@@ -14,7 +14,7 @@
       {% set pathText = pathPart.slice(-1).toString() %}
       {% set breadcrumbs = breadcrumbs.concat({
         text: pathText | replace("-", " ") | capitalize,
-        href: '/' + pathPart.join('/') + '/'
+        href: '/' ~ pathPart.join('/') ~ '/'
       }) %}
       {% endif %}
       {% endif %}

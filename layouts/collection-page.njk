@@ -7,8 +7,8 @@
 {% block skipLink %}
 {{ super() }}
 {{ tnaSkipLink({
-  href: group + '-list',
-  text: 'Skip to list of ' + (groupTitle | lower)
+  href: group ~ '-list',
+  text: 'Skip to list of ' ~ (groupTitle | lower)
 }) }}
 {% endblock %}
 
@@ -60,13 +60,13 @@
               {% for heading in headings %}
                 {% set children = children.concat({
                   text: heading.title,
-                  href: "#" + heading.href
+                  href: "#" ~ heading.href
                 }) %}
               {% endfor %}
             {% endif %}
             {% set items = items.concat({
               text: item.title,
-              href: "/" + item.path.replace("index.html", ""),
+              href: "/" ~ item.path.replace("index.html", ""),
               children: children,
               current: current,
               subGroupOrder: item.subGroupOrder
@@ -75,7 +75,7 @@
         {% endfor %}
         {% if items | length %}
           {{ tnaSidebar({
-            title: (subGroup | capitalize or "Other " + groupTitle | lower) if subGroups | length > 1 else groupTitle,
+            title: (subGroup | capitalize or "Other " ~ groupTitle | lower) if subGroups | length > 1 else groupTitle,
             headingLevel: 3 if subGroups | length > 1 else 2,
             headingSize: "s" if subGroups | length > 1 else "m",
             items: sortArrayOfObjectsByKey(items, 'subGroupOrder'),

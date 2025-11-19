@@ -54,8 +54,8 @@
             text: item.description,
             actions: [
               {
-                text: "Browse " + (item.title | lower),
-                href: "/" + item.path.replace("index.html", ""),
+                text: "Browse " ~ (item.title | lower),
+                href: "/" ~ item.path.replace("index.html", ""),
                 classes: "tna-link--no-visited-state"
               }
             ]

@@ -35,13 +35,13 @@
           {% for child in heading.children %}
             {% set children = children.concat({
               text: child.title,
-              href: "#" + child.href
+              href: "#" ~ child.href
             }) %}
           {% endfor %}
         {% endif %}
         {% set items = items.concat({
           text: heading.title,
-          href: "#" + heading.href,
+          href: "#" ~ heading.href,
           children: children
         }) %}
       {% endfor %}

@@ -76,7 +76,7 @@
   {% for top in collections.top %}
     {% set topLevelNavigation = topLevelNavigation.concat({
       text: top.title,
-      href: "/" + top.path.replace("index.html", ""),
+      href: "/" ~ top.path.replace("index.html", ""),
       selected: top.path.replace("index.html", "") in path.replace("index.html", "")
     }) %}
   {% endfor %}

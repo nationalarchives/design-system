@@ -46,7 +46,7 @@
           {% if subGroups | length > 1 %}
           <div class="tna-container">
             <div class="tna-column tna-column--full">
-              <h2 class="tna-heading-m tna-!--margin-bottom-s">{{ subGroup | capitalize or "Other " + groupTitle | lower }}</h2>
+              <h2 class="tna-heading-m tna-!--margin-bottom-s">{{ subGroup | capitalize or "Other " ~ groupTitle | lower }}</h2>
             </div>
           </div>
           {% endif %}
@@ -57,7 +57,7 @@
                 title: item.title,
                 headingLevel: 3 if subGroups | length > 1 else 2,
                 headingSize: "s",
-                href: "/" + item.path.replace("index.html", ""),
+                href: "/" ~ item.path.replace("index.html", ""),
                 text: item.description,
                 accentMeta: true,
                 fullAreaClick: true,
