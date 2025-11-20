@@ -98,6 +98,12 @@ const addSlugs = (option) => {
   return option;
 };
 
+const getNunjucksCode = (path) => {
+  const fileContents = getFileContents(path);
+  const parsedFile = matter(fileContents);
+  return parsedFile.content.replace(/{%\s*extends\s*\S*\s*%}\s+/, "").trim();
+};
+
 const require = createRequire(import.meta.url);
 const nunjucksOptions = {
   path: [
@@ -126,13 +132,15 @@ const nunjucksOptions = {
         max_preserve_newlines: 0,
       });
     },
-    getNunjucksCode: (path) => {
-      const fileContents = getFileContents(path);
-      const parsedFile = matter(fileContents);
-
-      return parsedFile.content
-        .replace(/{%\s*extends\s*\S*\s*%}\s+/, "")
-        .trim();
+    getNunjucksCode,
+    getJinjaCode: (path) => {
+      const nunjucksCode = getNunjucksCode(path);
+      return nunjucksCode
+        .replace(/(\s)(\w+): /g, '$1"$2": ')
+        .replace(
+          /from "nationalarchives\/components\/([\w\-]+)\/macro.njk"/g,
+          'from "components/$1/macro.html"',
+        );
     },
     getMacroOptions: (componentName) => {
       const options = getMacroOptionsJson(componentName)

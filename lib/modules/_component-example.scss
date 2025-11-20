@@ -142,6 +142,14 @@
 
     &__content {
       padding: 0;
+
+      > .tna-warning {
+        margin: spacing.space(2);
+
+        @include media.on-mobile {
+          margin: spacing.space(1);
+        }
+      }
     }
 
     &__details {

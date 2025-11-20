@@ -1,5 +1,6 @@
 {%- from "nationalarchives/components/accordion/macro.njk" import tnaAccordion -%}
 {%- from "nationalarchives/components/details/macro.njk" import tnaDetails -%}
+{%- from "nationalarchives/components/warning/macro.njk" import tnaWarning -%}
 
 {% macro example(params, nextHeadingLevel) %}
   {% set exampleRoot = "src/" ~ params.group ~ "/" ~ params.item ~ "/" ~ params.example ~ "/" %}
@@ -37,6 +38,14 @@
                   }) if params.nunjucksOptions !== false else ''
                 ) ~ '<div class="tna-ds-example__code">
 <pre class="language-javascript" tabindex="-1"><code class="language-javascript">' ~ (getNunjucksCode(examplePath) | forceescape) ~ '</code></pre>
+        </div>'
+        }, {
+          title: "Jinja",
+          body: tnaWarning({
+            headingLevel: 1,
+            body: 'This is an experimental feature that outputs a Jinja template based on the Nunjucks exmaple. Please check the converted code for accuracy.'
+          }) ~ '<div class="tna-ds-example__code">
+<pre class="language-javascript" tabindex="-1"><code class="language-javascript">' ~ (getJinjaCode(examplePath) | forceescape) ~ '</code></pre>
         </div>'
         }), accordionItems) %}
     {% endif %}
