@@ -1,0 +1,13 @@
+---
+title: Back link
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/back-link/macro.njk" import tnaBackLink %}
+
+{{ tnaBackLink({
+  text: "Back to previous page",
+  href: "#"
+}) }}
