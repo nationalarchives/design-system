@@ -1,0 +1,14 @@
+---
+title: Details
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/details/macro.njk" import tnaDetails %}
+
+{% call tnaDetails({
+  title: "Details"
+}) %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim vehicula magna, et hendrerit quam iaculis a. Mauris in ultricies enim. Donec bibendum est leo, sed dapibus mauris facilisis vitae.</p>
+{% endcall %}

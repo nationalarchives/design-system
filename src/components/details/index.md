@@ -17,3 +17,11 @@ statusDocumentationComplete: false
 {{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 {% include "partials/component-status.njk" %}
+
+## Caller function
+
+The details macro can also be used with a [Nunjucks call block](https://mozilla.github.io/nunjucks/templating.html#call) or [Jinja2 call block](https://jinja.palletsprojects.com/en/stable/templates/#call).
+
+Using a `call` block avoids having to escape complex HTML for the contents of the details component and replaces the need for the `body` and `text` options.
+
+{{ example({ group: "components", item: "details", example: "caller", html: true, nunjucks: true, size: "xs" }, 2) }}
