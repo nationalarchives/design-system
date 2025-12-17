@@ -140,6 +140,14 @@
   .tna-accordion {
     margin-top: 0;
 
+    &__heading {
+      padding: spacing.space(1);
+    }
+
+    &__body {
+      padding-top: 0;
+    }
+
     &__content {
       padding: 0;
 

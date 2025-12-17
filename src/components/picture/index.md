@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "picture", example: "default", html: true, nunjucks: true, size: "xxxl" }, 2) }}
+{{ example({ group: "components", item: "picture", example: "default", html: true, nunjucks: true, size: "xxxl", noAutoSizeOnLoad: true }, 2) }}
 
 {% include "partials/component-status.njk" %}
 

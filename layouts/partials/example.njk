@@ -16,7 +16,7 @@
     {% endif %}
 
     <div class="tna-ds-example__frame-wrapper{% if params.noPadding %} tna-ds-example__frame-wrapper--no-padding{% elif params.noHorizontalPadding %} tna-ds-example__frame-wrapper--no-horizontal-padding{% endif %}">
-      <iframe class="tna-ds-example__frame tna-ds-example__frame--resizable{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+      <iframe class="tna-ds-example__frame{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}{% if params.extraExpandableHeight %} tna-ds-example__frame--extra-expandable-height{% elif params.noAutoSizeOnLoad %} tna-ds-example__frame--fixed-height-on-load{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
     </div>
 
     {% set accordionItems = [] %}

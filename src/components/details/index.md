@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
+{{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, size: "xs", extraExpandableHeight: true }, 2) }}
 
 {% include "partials/component-status.njk" %}
 
@@ -24,4 +24,4 @@ The details macro can also be used with a [Nunjucks call block](https://mozilla.
 
 Using a `call` block avoids having to escape complex HTML for the contents of the details component and replaces the need for the `body` and `text` options.
 
-{{ example({ group: "components", item: "details", example: "caller", html: true, nunjucks: true, size: "xs" }, 2) }}
+{{ example({ group: "components", item: "details", example: "caller", html: true, nunjucks: true, size: "xs", extraExpandableHeight: true }, 2) }}
