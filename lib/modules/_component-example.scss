@@ -178,15 +178,7 @@
       }
 
       .tna-table-wrapper {
-        width: calc(100% - 26.5px);
-
-        left: 26.5px;
-
-        .tna-table {
-          width: calc(100% - 32px);
-          margin-right: spacing.space(1);
-          margin-left: spacing.space(1);
-        }
+        margin-right: spacing.space(1);
       }
     }
   }
