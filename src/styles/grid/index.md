@@ -74,6 +74,7 @@ On a 12 column grid (large devices), the widths available are:
 | `10/12`        | `tna-column--width-5-6`   |
 | `11/12`        | `tna-column--width-11-12` |
 | `12/12`        | `tna-column--full`        |
+| {caption: Column widths available in TNA Frontend} |
 
 ### Medium devices
 
@@ -87,6 +88,7 @@ On a 6 column grid (medium devices), the widths available are:
 | `4/6`          | `tna-column--width-2-3-medium` |
 | `5/6`          | `tna-column--width-5-6-medium` |
 | `6/6`          | `tna-column--full-medium`      |
+| {caption: Column widths available for medium devices} |
 
 ### Small devices
 
@@ -98,6 +100,7 @@ On a 4 column grid (small devices), the widths available are:
 | `2/4`          | `tna-column--width-1-2-small` |
 | `3/4`          | `tna-column--width-3-4-small` |
 | `4/4`          | `tna-column--full-small`      |
+| {caption: Column widths available for small devices} |
 
 ### Tiny devices
 
@@ -107,6 +110,7 @@ On a 2 column grid (tiny devices), the widths available are:
 | -------------- | ---------------------------- |
 | `1/2`          | `tna-column--width-1-2-tiny` |
 | `2/2`          | `tna-column--full-tiny`      |
+| {caption: Column widths available for tiny devices} |
 
 ## Flexible columns
 

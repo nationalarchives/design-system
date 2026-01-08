@@ -18,6 +18,7 @@ Responsive breakpoints are referred to in relative size terms rather than specif
 | `medium`    | landscape handheld devices | `769px` to `1024px` |
 | `small`     | portrait tablets           | `481px` to `768px`  |
 | `tiny`      | portrait mobile phones     | `480px` and below   |
+| {caption: The device sizes used in TNA Frontend} |
 
 ### Media queries
 
@@ -47,6 +48,7 @@ The available mixins for the device sizes are:
 | `on-smaller-than-large` | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes | <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No |
 | `on-larger-than-tiny`   | <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No  | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes |
 | `on-larger-than-mobile` | <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No  | <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No  | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes | <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes |
+| {caption: The device sizes affected by each media query} |
 
 ## Print
 

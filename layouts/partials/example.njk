@@ -64,9 +64,9 @@
 {% macro exampleOptions(params, exampleId) %}
   {%- if params.group == 'components' %}
     {% for table in getMacroOptions(params.item) %}
-      <div class="tna-table-wrapper">
+      <div class="tna-table-wrapper" tabindex="0" role="region" aria-labelledby="options-{{ exampleId }}-{{ table.id }}-caption">
         <table class="tna-table app-options__table" id="options-{{ exampleId }}-{{ table.id }}">
-          <caption class="tna-table__caption {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
+          <caption id="options-{{ exampleId }}-{{ table.id }}-caption" class="tna-table__caption {% if table.id == 'primary' %} tna-visually-hidden{% endif %}">{{ table.name }}</caption>
           <thead class="tna-table__head">
             <tr class="tna-table__row">
               <th class="tna-table__header app-options__limit-table-cell" scope="col">Name</th>

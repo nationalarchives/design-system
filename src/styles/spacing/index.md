@@ -102,6 +102,7 @@ The `property` and `direction` options are the same as [removing space](#removin
 | `l`   | `3` units (`48px`)               | `2` units (`32px`)             |
 | `xl`  | `5` units (`80px`)               | `3` units (`48px`)             |
 | `xxl` | `8` units (`128px`)              | `5` units (`80px`)             |
+| {caption: Default size of spacing in TNA Frontend} |
 
 The format for the extra spacing override classes is:
 

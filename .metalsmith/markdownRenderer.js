@@ -1,4 +1,5 @@
 import { marked } from "marked";
+import uuid4 from "../node_modules/@nationalarchives/frontend/nationalarchives/lib/uuid.mjs";
 
 const markdownRenderer = new marked.Renderer();
 
@@ -68,25 +69,40 @@ markdownRenderer.blockquote = function (body) {
 };
 
 markdownRenderer.table = function (head, body) {
-  const formatRows = (row) =>
-    row
-      .replace(
-        /<tr>\s*<td>(.*)<\/td>/g,
-        '<th class="tna-table__header">$1</th>',
-      )
-      .replace(/<tr>/g, '<tr class="tna-table__row">')
-      .replace(/<th>/g, '<th class="tna-table__header">')
-      .replace(/<td>/g, '<td class="tna-table__cell">');
-  return `<div class="tna-table-wrapper">
+  const uuid = uuid4();
+
+  let caption = "";
+  const captionMatch = /<caption class="tna-table__caption">.*<\/caption>/;
+  if (captionMatch.test(body)) {
+    caption = captionMatch.exec(body)[0];
+    caption = caption.replace("<caption", `<caption id="table-${uuid}"`);
+    body = body.replace(captionMatch, "");
+  }
+
+  return `<div class="tna-table-wrapper" tabindex="0" role="region"${caption ? ` aria-labelledby="table-${uuid}"` : ""}>
     <table class="tna-table">
+      ${caption}
       <thead class="tna-table__head">
-        ${formatRows(head)}
+        ${head}
       </thead>
       <tbody class="tna-table__body">
-        ${formatRows(body)}
+        ${body}
       </tbody>
     </table>
   </div>`;
+};
+
+markdownRenderer.tablerow = function (row) {
+  const captionMatch = /\{caption:(.*)\}/;
+  if (captionMatch.test(row)) {
+    return `<caption class="tna-table__caption">${captionMatch.exec(row)[1]}</caption>`;
+  }
+  return `<tr class="tna-table__row">
+    ${row
+      .replace(/\s*<td>(.*)<\/td>/, '<th class="tna-table__header">$1</th>') // First cell to th
+      .replace(/<th>/g, '<th class="tna-table__header">')
+      .replace(/<td>/g, '<td class="tna-table__cell">')}
+    </tr>`;
 };
 
 const escapeTest = /[&<>"']/;
