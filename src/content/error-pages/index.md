@@ -47,7 +47,7 @@ The server should also return a `404` response for this page.
 
 {{ example({ group: "content", item: "error-pages", example: "restricted-access", html: true, nunjucks: false, size: "m" }) }}
 
-Use a restricted access error if someone is trying to view a page  or resource that they shouldn’t be allowed to. This can happen if:
+Use a restricted access error if someone is trying to view a page or resource that they shouldn’t be allowed to. This can happen if:
 
 - the user is not known (unauthenticated)
 - the user is known but not allowed to view (unauthorised)

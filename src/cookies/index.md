@@ -29,10 +29,10 @@ These essential cookies do things like remember your progress or allow you to lo
 
 Strictly necessary cookies used on this site are:
 
-| Name                      | Purpose                                                     | Expires |
-| ------------------------- | ----------------------------------------------------------- | ------- |
-| `cookies_preferences_set` | Lets us know that you’ve saved your cookie consent settings | 1 year  |
-| `cookies_policy`          | Saves your cookie consent settings                          | 1 year  |
+| Name                                  | Purpose                                                     | Expires |
+| ------------------------------------- | ----------------------------------------------------------- | ------- |
+| `cookies_preferences_set`             | Lets us know that you’ve saved your cookie consent settings | 1 year  |
+| `cookies_policy`                      | Saves your cookie consent settings                          | 1 year  |
 | {caption: Strictly necessary cookies} |
 
 ## Cookies that remember your settings
@@ -41,9 +41,9 @@ These cookies do things like remember your preferences and the choices you make,
 
 Settings cookies used on this site are:
 
-| Name                      | Purpose                                               | Expires |
-| ------------------------- | ----------------------------------------------------- | ------- |
-| `theme`                   | Saves your preference for a light or dark themed site | 1 year  |
+| Name                        | Purpose                                               | Expires |
+| --------------------------- | ----------------------------------------------------- | ------- |
+| `theme`                     | Saves your preference for a light or dark themed site | 1 year  |
 | {caption: Settings cookies} |
 
 <p aria-live="assertive" class="tna-ds--show-on-js" data-showcookiepreference="settings" data-showcookiepreferenceonaccepted="Cookies that remember your settings have been accepted." data-showcookiepreferenceonrejected="Cookies that remember your settings have been rejected."></p>

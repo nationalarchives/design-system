@@ -94,14 +94,14 @@ The `property` and `direction` options are the same as [removing space](#removin
 
 `size` options:
 
-| Size  | Size on large and medium devices | Size on small and tiny devices |
-| ----- | -------------------------------- | ------------------------------ |
-| `xs`  | `0.5` units (`8px`)              | `0.5` units (`8px`)            |
-| `s`   | `1` units (`16px`)               | `0.75` units (`12px`)          |
-| `m`   | `2` units (`32px`)               | `1.5` units (`24px`)           |
-| `l`   | `3` units (`48px`)               | `2` units (`32px`)             |
-| `xl`  | `5` units (`80px`)               | `3` units (`48px`)             |
-| `xxl` | `8` units (`128px`)              | `5` units (`80px`)             |
+| Size                                               | Size on large and medium devices | Size on small and tiny devices |
+| -------------------------------------------------- | -------------------------------- | ------------------------------ |
+| `xs`                                               | `0.5` units (`8px`)              | `0.5` units (`8px`)            |
+| `s`                                                | `1` units (`16px`)               | `0.75` units (`12px`)          |
+| `m`                                                | `2` units (`32px`)               | `1.5` units (`24px`)           |
+| `l`                                                | `3` units (`48px`)               | `2` units (`32px`)             |
+| `xl`                                               | `5` units (`80px`)               | `3` units (`48px`)             |
+| `xxl`                                              | `8` units (`128px`)              | `5` units (`80px`)             |
 | {caption: Default size of spacing in TNA Frontend} |
 
 The format for the extra spacing override classes is:

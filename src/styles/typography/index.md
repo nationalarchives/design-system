@@ -59,7 +59,7 @@ Using the standard widths that the grid system provides, these classes produce l
 
 ### Large
 
-You can use a larger paragraph as an introduction to the page or section. 
+You can use a larger paragraph as an introduction to the page or section.
 
 {{ example({ group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
 

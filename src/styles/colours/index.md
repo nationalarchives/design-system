@@ -14,38 +14,38 @@ Always use the provided TNA colour palette.
 
 ### The greys
 
-| Colour        | Hex                                                                             |
-| ------------- | ------------------------------------------------------------------------------- |
-| Black         | <span class="tna-ds-colour-swatch" style="background:#010101"></span> `#010101` |
-| Dark grey     | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a` |
-| Grey          | <span class="tna-ds-colour-swatch" style="background:#8c9694"></span> `#8c9694` |
-| Light grey    | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6` |
-| White         | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
+| Colour                                                                        | Hex                                                                             |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Black                                                                         | <span class="tna-ds-colour-swatch" style="background:#010101"></span> `#010101` |
+| Dark grey                                                                     | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a` |
+| Grey                                                                          | <span class="tna-ds-colour-swatch" style="background:#8c9694"></span> `#8c9694` |
+| Light grey                                                                    | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6` |
+| White                                                                         | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff` |
 | {caption: The various shades of grey in the National Archives colour palette} |
 
 ### Primary colour palette
 
-| Colour | Main                                                                            | Darks                                                                                      | Lights                                                                                          |
-| ------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| Pink   | <span class="tna-ds-colour-swatch" style="background:#fe1d57"></span> `#fe1d57` | <span class="tna-ds-colour-swatch" style="background:#9c193a"></span> `#9c193a` (Maroon)   | <span class="tna-ds-colour-swatch" style="background:#fad3d4"></span> `#fad3d4` (Pastel pink)   |
-| Orange | <span class="tna-ds-colour-swatch" style="background:#fd3f03"></span> `#fd3f03` | <span class="tna-ds-colour-swatch" style="background:#8f3415"></span> `#8f3415` (Chestnut) | <span class="tna-ds-colour-swatch" style="background:#f9e1bc"></span> `#f9e1bc` (Pastel orange) |
-| Yellow | <span class="tna-ds-colour-swatch" style="background:#ffcc00"></span> `#ffcc00` | <span class="tna-ds-colour-swatch" style="background:#654e37"></span> `#654e37` (Brown)    | <span class="tna-ds-colour-swatch" style="background:#f9f7e2"></span> `#f9f7e2` (Cream)         |
-| Green  | <span class="tna-ds-colour-swatch" style="background:#86bc25"></span> `#86bc25` | <span class="tna-ds-colour-swatch" style="background:#00623b"></span> `#00623b` (Forest)   | <span class="tna-ds-colour-swatch" style="background:#dde5d5"></span> `#dde5d5` (Pastel green)  |
-| Blue   | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` | <span class="tna-ds-colour-swatch" style="background:#004c7e"></span> `#004c7e` (Navy)     | <span class="tna-ds-colour-swatch" style="background:#d4e5ef"></span> `#d4e5ef` (Pastel blue)   |
+| Colour                                                                 | Main                                                                            | Darks                                                                                      | Lights                                                                                          |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| Pink                                                                   | <span class="tna-ds-colour-swatch" style="background:#fe1d57"></span> `#fe1d57` | <span class="tna-ds-colour-swatch" style="background:#9c193a"></span> `#9c193a` (Maroon)   | <span class="tna-ds-colour-swatch" style="background:#fad3d4"></span> `#fad3d4` (Pastel pink)   |
+| Orange                                                                 | <span class="tna-ds-colour-swatch" style="background:#fd3f03"></span> `#fd3f03` | <span class="tna-ds-colour-swatch" style="background:#8f3415"></span> `#8f3415` (Chestnut) | <span class="tna-ds-colour-swatch" style="background:#f9e1bc"></span> `#f9e1bc` (Pastel orange) |
+| Yellow                                                                 | <span class="tna-ds-colour-swatch" style="background:#ffcc00"></span> `#ffcc00` | <span class="tna-ds-colour-swatch" style="background:#654e37"></span> `#654e37` (Brown)    | <span class="tna-ds-colour-swatch" style="background:#f9f7e2"></span> `#f9f7e2` (Cream)         |
+| Green                                                                  | <span class="tna-ds-colour-swatch" style="background:#86bc25"></span> `#86bc25` | <span class="tna-ds-colour-swatch" style="background:#00623b"></span> `#00623b` (Forest)   | <span class="tna-ds-colour-swatch" style="background:#dde5d5"></span> `#dde5d5` (Pastel green)  |
+| Blue                                                                   | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff` | <span class="tna-ds-colour-swatch" style="background:#004c7e"></span> `#004c7e` (Navy)     | <span class="tna-ds-colour-swatch" style="background:#d4e5ef"></span> `#d4e5ef` (Pastel blue)   |
 | {caption: The primary colours in the National Archives colour palette} |
 
 ### Extra web colour palette
 
-| Colour                 | Light theme                                                                         | Dark theme                                                                          |
-| ---------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Page background        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4`     | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223`     |
-| Tinted background      | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6`     | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334`     |
-| Contrasting background | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e`     | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112`     |
-| Base font              | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338`     | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff`     |
-| Keylines               | <span class="tna-ds-colour-swatch" style="background:#26262a40"></span> `#26262a40` | <span class="tna-ds-colour-swatch" style="background:#ffffff40"></span> `#ffffff40` |
-| Dark keylines          | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a`     | <span class="tna-ds-colour-swatch" style="background:#ffffffbf"></span> `#ffffffbf` |
-| Links                  | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8`     | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff`     |
-| Visited links          | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92`     | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff`     |
+| Colour                                                                       | Light theme                                                                         | Dark theme                                                                          |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Page background                                                              | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4`     | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223`     |
+| Tinted background                                                            | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6`     | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334`     |
+| Contrasting background                                                       | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e`     | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112`     |
+| Base font                                                                    | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338`     | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff`     |
+| Keylines                                                                     | <span class="tna-ds-colour-swatch" style="background:#26262a40"></span> `#26262a40` | <span class="tna-ds-colour-swatch" style="background:#ffffff40"></span> `#ffffff40` |
+| Dark keylines                                                                | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a`     | <span class="tna-ds-colour-swatch" style="background:#ffffffbf"></span> `#ffffffbf` |
+| Links                                                                        | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8`     | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff`     |
+| Visited links                                                                | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92`     | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff`     |
 | {caption: Extra colours for web use in the National Archives colour palette} |
 
 Ou full list of web colours can be found in the [colour variables for TNA Frontend](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_colour.scss).

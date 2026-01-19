@@ -42,9 +42,9 @@ Some recommendations when writing alternative text for images are:
 - mention the image format (e.g. painting) only if it’s notable in context
 - mention colours only if they are important
 - describe a map, chart or diagram in three ways:
-    - what type it is (e.g. line graph, contour map, cross-section)
-    - the type of data in it (e.g. marriage rates, level of GDP)
-    - the main trend/most notable feature it shows
+  - what type it is (e.g. line graph, contour map, cross-section)
+  - the type of data in it (e.g. marriage rates, level of GDP)
+  - the main trend/most notable feature it shows
 - don’t make assumptions about people’s genders or relationships
 - mention people’s life stage, clothing or hair colour if they are meaningful in context
 - use full punctuation as you would elsewhere, e.g. always end with a full stop

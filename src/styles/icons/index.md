@@ -9,7 +9,7 @@ subGroup: visual
 {% from "partials/example.njk" import example %}
 
 Don’t rely on icons alone to convey meaning. Ensure they are hidden from assistive technologies with `aria-hidden="true"`.
- 
+
 Icons should appear alongside text at the same font size. Icons on `tna-button` elements are itentionally slightly smaller.
 
 Icons are not included in TNA Frontend by default. The icons are defined in a separate CSS file called `font-awesome.css` which you will also have to include in your application.

@@ -60,56 +60,56 @@ Based on the number of columns for each size, there are size classes for all fra
 
 On a 12 column grid (large devices), the widths available are:
 
-| Width required | Class                     |
-| -------------- | ------------------------- |
-| `1/12`         | `tna-column--width-1-12`  |
-| `2/12`         | `tna-column--width-1-6`   |
-| `3/12`         | `tna-column--width-1-4`   |
-| `4/12`         | `tna-column--width-1-3`   |
-| `5/12`         | `tna-column--width-5-12`  |
-| `6/12`         | `tna-column--width-1-2`   |
-| `7/12`         | `tna-column--width-7-12`  |
-| `8/12`         | `tna-column--width-2-3`   |
-| `9/12`         | `tna-column--width-3-4`   |
-| `10/12`        | `tna-column--width-5-6`   |
-| `11/12`        | `tna-column--width-11-12` |
-| `12/12`        | `tna-column--full`        |
+| Width required                                     | Class                     |
+| -------------------------------------------------- | ------------------------- |
+| `1/12`                                             | `tna-column--width-1-12`  |
+| `2/12`                                             | `tna-column--width-1-6`   |
+| `3/12`                                             | `tna-column--width-1-4`   |
+| `4/12`                                             | `tna-column--width-1-3`   |
+| `5/12`                                             | `tna-column--width-5-12`  |
+| `6/12`                                             | `tna-column--width-1-2`   |
+| `7/12`                                             | `tna-column--width-7-12`  |
+| `8/12`                                             | `tna-column--width-2-3`   |
+| `9/12`                                             | `tna-column--width-3-4`   |
+| `10/12`                                            | `tna-column--width-5-6`   |
+| `11/12`                                            | `tna-column--width-11-12` |
+| `12/12`                                            | `tna-column--full`        |
 | {caption: Column widths available in TNA Frontend} |
 
 ### Medium devices
 
 On a 6 column grid (medium devices), the widths available are:
 
-| Width required | Class                          |
-| -------------- | ------------------------------ |
-| `1/6`          | `tna-column--width-1-6-medium` |
-| `2/6`          | `tna-column--width-1-3-medium` |
-| `3/6`          | `tna-column--width-1-2-medium` |
-| `4/6`          | `tna-column--width-2-3-medium` |
-| `5/6`          | `tna-column--width-5-6-medium` |
-| `6/6`          | `tna-column--full-medium`      |
+| Width required                                        | Class                          |
+| ----------------------------------------------------- | ------------------------------ |
+| `1/6`                                                 | `tna-column--width-1-6-medium` |
+| `2/6`                                                 | `tna-column--width-1-3-medium` |
+| `3/6`                                                 | `tna-column--width-1-2-medium` |
+| `4/6`                                                 | `tna-column--width-2-3-medium` |
+| `5/6`                                                 | `tna-column--width-5-6-medium` |
+| `6/6`                                                 | `tna-column--full-medium`      |
 | {caption: Column widths available for medium devices} |
 
 ### Small devices
 
 On a 4 column grid (small devices), the widths available are:
 
-| Width required | Class                         |
-| -------------- | ----------------------------- |
-| `1/4`          | `tna-column--width-1-4-small` |
-| `2/4`          | `tna-column--width-1-2-small` |
-| `3/4`          | `tna-column--width-3-4-small` |
-| `4/4`          | `tna-column--full-small`      |
+| Width required                                       | Class                         |
+| ---------------------------------------------------- | ----------------------------- |
+| `1/4`                                                | `tna-column--width-1-4-small` |
+| `2/4`                                                | `tna-column--width-1-2-small` |
+| `3/4`                                                | `tna-column--width-3-4-small` |
+| `4/4`                                                | `tna-column--full-small`      |
 | {caption: Column widths available for small devices} |
 
 ### Tiny devices
 
 On a 2 column grid (tiny devices), the widths available are:
 
-| Width required | Class                        |
-| -------------- | ---------------------------- |
-| `1/2`          | `tna-column--width-1-2-tiny` |
-| `2/2`          | `tna-column--full-tiny`      |
+| Width required                                      | Class                        |
+| --------------------------------------------------- | ---------------------------- |
+| `1/2`                                               | `tna-column--width-1-2-tiny` |
+| `2/2`                                               | `tna-column--full-tiny`      |
 | {caption: Column widths available for tiny devices} |
 
 ## Flexible columns
