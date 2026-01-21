@@ -18,6 +18,8 @@ The button component can be used as a call to action link on the page instead of
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Variations

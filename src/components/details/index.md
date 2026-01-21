@@ -16,6 +16,8 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, size: "xs", extraExpandableHeight: true }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Caller function

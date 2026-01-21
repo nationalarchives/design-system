@@ -18,6 +18,8 @@ The breadcrumbs component is also known as navigation path or cookie crumb.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## When to use this component

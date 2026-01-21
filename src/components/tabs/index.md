@@ -16,6 +16,8 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 <!-- ## Without JavaScript

@@ -16,6 +16,8 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "accordion", example: "default", html: true, nunjucks: true, size: "m", extraExpandableHeight: true }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Allow open and close all

@@ -20,6 +20,8 @@ It should also give a link that allows users to provide feedback.
 
 {{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## When to use this component

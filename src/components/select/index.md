@@ -18,6 +18,8 @@ Where possible, avoid overusing the select component. Alice Bartlett gave a talk
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Preselected

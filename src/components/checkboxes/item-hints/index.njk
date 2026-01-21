@@ -1,0 +1,32 @@
+---
+title: Checkboxes with item hints
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
+
+{{ tnaCheckboxes({
+  label: "Categories",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "categories",
+  name: "categories",
+  items: [
+    {
+      text: "Alpha",
+      value: "alpha",
+      hint: "This is additional information about Alpha."
+    },
+    {
+      text: "Beta",
+      value: "beta"
+    },
+    {
+      text: "Gamma",
+      value: "gamma",
+      hint: "This is additional information about Gamma."
+    }
+  ]
+}) }}

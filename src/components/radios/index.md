@@ -16,6 +16,8 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Small
@@ -26,9 +28,15 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "radios", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
 
-## Hint
+## Hints
 
 {{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true, size: "m" }) }}
+
+### Item hints
+
+Do not add item hints to [small radios](#small) or [inline radios](#inline).
+
+{{ example({ group: "components", item: "radios", example: "item-hints", html: true, nunjucks: true, size: "m" }) }}
 
 ## Error
 

@@ -14,6 +14,8 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Styles

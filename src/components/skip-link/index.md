@@ -16,4 +16,6 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}

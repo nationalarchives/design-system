@@ -16,6 +16,8 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Preselected

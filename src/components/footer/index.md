@@ -16,6 +16,8 @@ statusDocumentationComplete: false
 
 {{ example({ group: "components", item: "footer", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Content

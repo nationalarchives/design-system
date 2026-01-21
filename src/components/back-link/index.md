@@ -16,6 +16,8 @@ statusDocumentationComplete: true
 
 {{ example({ group: "components", item: "back-link", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## When to use this component

@@ -1,0 +1,33 @@
+---
+title: Radios with item hints
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/radios/macro.njk" import tnaRadios %}
+
+{{ tnaRadios({
+  label: "Type",
+  headingLevel: 4,
+  headingSize: "m",
+  id: "type",
+  name: "type",
+  items: [
+    {
+      text: "Audio",
+      value: "audio",
+      hint: "This is additional information about Audio."
+    },
+    {
+      text: "Image",
+      value: "image",
+      hint: "This is additional information about Image."
+    },
+    {
+      text: "Video",
+      value: "video",
+      hint: "This is additional information about Video."
+    }
+  ]
+}) }}

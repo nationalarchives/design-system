@@ -31,7 +31,7 @@ markdownRenderer.heading = function (text, level) {
 </h${level}>`
     : `
   <h${level} id="${slug}" class="tna-heading-${headingSize} tna-heading--no-link-arrow">
-    ${text} <a href="#${slug}" aria-hidden="true" title="Jump to ${text.replace(
+    ${text} <a href="#${slug}" aria-hidden="true" title="Jump to heading: ${text.replace(
       '"',
       "'",
     )}" tabindex="-1"><i class="fa-solid fa-link"></i></a>

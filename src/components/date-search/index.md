@@ -18,6 +18,8 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 {{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Preselected

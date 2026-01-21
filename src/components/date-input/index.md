@@ -19,6 +19,8 @@ For searching by date, use the [date search](../date-search/) component.
 
 {{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Preselected

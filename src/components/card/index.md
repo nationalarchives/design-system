@@ -16,6 +16,8 @@ statusDocumentationComplete: true
 
 {{ example({ group: "components", item: "card", example: "default", html: true, nunjucks: true, size: "xl" }, 2) }}
 
+## Component status
+
 {% include "partials/component-status.njk" %}
 
 ## Coloured cards
