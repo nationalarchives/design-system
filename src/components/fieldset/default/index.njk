@@ -8,52 +8,51 @@ private: true
 {% from "nationalarchives/components/fieldset/macro.njk" import tnaFieldset %}
 {% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
 
-{{ tnaFieldset({
+{% call tnaFieldset({
   legend: "Enter your address",
   headingLevel: 1,
   headingSize: "xl",
   id: "address",
-  hint: "This is your primary address for correspondence.",
-  body: "Please note this page references hunger strikes and force feeding, which some people may find upsetting.",
-  html:
-    tnaTextInput({
-      label: "Address line 1",
-      headingSize: "xs",
-      id: "address1",
-      name: "address1",
-      size: "l",
-      autocomplete: "address-line1"
-    }) ~
-    tnaTextInput({
-      label: "Address line 2 (optional)",
-      headingSize: "xs",
-      id: "address2",
-      name: "address2",
-      size: "l",
-      autocomplete: "address-line2"
-    }) ~
-    tnaTextInput({
-      label: "Town or city",
-      headingSize: "xs",
-      id: "city",
-      name: "city",
-      size: "m",
-      autocomplete: "address-level2"
-    }) ~
-    tnaTextInput({
-      label: "County (optional)",
-      headingSize: "xs",
-      id: "county",
-      name: "county",
-      size: "m",
-      autocomplete: "address-level1"
-    }) ~
-    tnaTextInput({
-      label: "Postcode",
-      headingSize: "xs",
-      id: "postcode",
-      name: "postcode",
-      size: "s",
-      autocomplete: "postal-code"
-    })
-}) }}
+  hint: "This is your primary address for correspondence."
+}) %}
+  {{ tnaTextInput({
+    label: "Address line 1",
+    headingSize: "xs",
+    id: "address1",
+    name: "address1",
+    size: "l",
+    autocomplete: "address-line1"
+  }) }}
+  {{ tnaTextInput({
+    label: "Address line 2 (optional)",
+    headingSize: "xs",
+    id: "address2",
+    name: "address2",
+    size: "l",
+    autocomplete: "address-line2"
+  }) }}
+  {{ tnaTextInput({
+    label: "Town or city",
+    headingSize: "xs",
+    id: "city",
+    name: "city",
+    size: "m",
+    autocomplete: "address-level2"
+  }) }}
+  {{ tnaTextInput({
+    label: "County (optional)",
+    headingSize: "xs",
+    id: "county",
+    name: "county",
+    size: "m",
+    autocomplete: "address-level1"
+  }) }}
+  {{ tnaTextInput({
+    label: "Postcode",
+    headingSize: "xs",
+    id: "postcode",
+    name: "postcode",
+    size: "s",
+    autocomplete: "postal-code"
+  }) }}
+{% endcall %}
