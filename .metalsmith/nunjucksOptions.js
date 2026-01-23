@@ -137,6 +137,8 @@ const nunjucksOptions = {
       const nunjucksCode = getNunjucksCode(path);
       return nunjucksCode
         .replace(/(\s)(\w+): /g, '$1"$2": ')
+        .replace(": true", ": True")
+        .replace(": false", ": False")
         .replace(
           /from "nationalarchives\/components\/([\w\-]+)\/macro.njk"/g,
           'from "components/$1/macro.html"',
