@@ -4,10 +4,10 @@ title: Fieldset
 description: The fieldset can group together related form fields.
 group: components
 cardImage: /fieldset.svg
-phase: to-be-reviewed
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 0
 statusDocumentationComplete: false
 ---

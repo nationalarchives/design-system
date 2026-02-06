@@ -4,10 +4,10 @@ title: Text input
 description: The text input component allows users to enter short string of text such as their email address, a record title or a postcode.
 group: components
 cardImage: /text-input.svg
-phase: to-be-reviewed
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 1
 statusDocumentationComplete: false
 ---

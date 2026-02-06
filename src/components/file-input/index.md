@@ -4,10 +4,10 @@ title: File input
 description: The file input component allows users select and upload files.
 group: components
 cardImage: /file-input.svg
-phase: to-be-reviewed
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 1
 statusDocumentationComplete: false
 ---

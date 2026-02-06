@@ -4,10 +4,10 @@ title: Panel
 description: Use the panel component to show the sucessful end status of a form or user journey.
 group: components
 cardImage: /panel.svg
-phase: to-be-reviewed
+phase: official
 statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 0
 statusDocumentationComplete: false
 ---

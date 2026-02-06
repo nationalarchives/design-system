@@ -4,10 +4,10 @@ title: Back link
 description: Use a back link to allow users to return to a previous page or step of a process.
 group: components
 cardImage: /back-link.svg
-phase: to-be-reviewed
-statusTestedWithoutJavaScript: 1
+phase: official
+statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 1
 statusDocumentationComplete: true
 ---

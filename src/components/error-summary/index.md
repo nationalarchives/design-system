@@ -4,10 +4,10 @@ title: Error summary
 description: Summarise form errors on the page and provide links to help users complete them.
 group: components
 cardImage: /error-summary.svg
-phase: to-be-reviewed
+phase: official
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 2
 statusDocumentationComplete: false
 ---
