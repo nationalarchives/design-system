@@ -6,6 +6,7 @@
 {%- from "nationalarchives/components/skip-link/macro.njk" import tnaSkipLink -%}
 
 {%- set assetPath = "/static/assets/" -%}
+{%- set cookiesUrl = "https://www.nationalarchives.gov.uk/cookies/" -%}
 
 {%- set theme = "system" -%}
 {% if group === "get-started" %}
@@ -60,7 +61,7 @@
 {% block cookies %}
   {{ tnaCookieBanner({
     serviceName: "The National Archives Design System",
-    cookiesUrl: "https://www.nationalarchives.gov.uk/cookies/"
+    cookiesUrl: cookiesUrl
   }) }}
 {% endblock %}
 
@@ -105,6 +106,7 @@
   {{ tnaFooter({
     themeSelector: true,
     currentTheme: theme,
+    cookiesUrl: cookiesUrl,
     defaultContent: true,
     navigation: [
       {
@@ -148,7 +150,7 @@
       },
       {
         text: "Cookies",
-        href: "https://www.nationalarchives.gov.uk/cookies/"
+        href: cookiesUrl
       },
       {
         text: "Site map",

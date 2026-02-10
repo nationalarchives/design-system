@@ -11,7 +11,7 @@ group: content
 
 Provide the user with information about the error:
 
-<dl class="tna-dl">
+<dl class="tna-dl tna-dl--zebra">
     <dt>Error type</dt>
     <dd>A very short description of the error in present tense such as "Page not found"</dd>
     <dt>Error details (optional)</dt>

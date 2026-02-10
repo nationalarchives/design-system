@@ -39,7 +39,7 @@ By default, a column is as narrow as the content that it contains and is aligned
 
 [Different sized devices](../devices/#device-sizes) have a different number of columns in their grid:
 
-<dl class="tna-dl tna-dl--plain">
+<dl class="tna-dl">
   <dt>Large devices</dt>
   <dd>12 column grid</dd>
   <dt>Medium devices</dt>

@@ -11,7 +11,7 @@ Dates should be written in a human-readable format. Date numbers do not need "st
 
 Good examples of dates are:
 
-<dl class="tna-dl">
+<dl class="tna-dl tna-dl--zebra">
   <dt>Time</dt>
   <dd>16 October 2023, 19:00</dd>
   <dt>Day</dt>
@@ -24,7 +24,7 @@ Good examples of dates are:
 
 You can include a day of the week if space allows:
 
-<dl class="tna-dl">
+<dl class="tna-dl tna-dl--zebra">
   <dt>Time</dt>
   <dd>Monday 16 October 2023, 19:00</dd>
   <dt>Day</dt>
@@ -52,7 +52,7 @@ Always use "to" rather than dashes or hyphens for date ranges.
 
 Avoid unnecessary duplication of days, months or years to allow users to scan more easily.
 
-<dl class="tna-dl">
+<dl class="tna-dl tna-dl--zebra">
   <dt>Times in the same day</dt>
   <dd>16 October 2023, 19:00 to 20:00</dd>
   <dt>Dates in the same month</dt>

@@ -62,6 +62,8 @@ Do not show the previous page link on the first page — and do not show the nex
 
 {{ example({ group: "components", item: "pagination", example: "last", html: false, nunjucks: false, size: "xxs" }) }}
 
-<!-- ## Previous and next pages
+## Previous and next pages
 
-{{ example({ group: "components", item: "pagination", example: "previous-next", html: false, nunjucks: false, size: "xxs" }) }} -->
+Show only a previous and next with no numbers if your pagination isn't part of a numbered sequence.
+
+{{ example({ group: "components", item: "pagination", example: "previous-next", html: true, nunjucks: true, size: "xs" }) }}
