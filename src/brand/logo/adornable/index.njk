@@ -1,7 +1,8 @@
 ---
 title: Logo (adornable)
-layout: examples/logo.njk
+layout: examples/plain.njk
 private: true
+themeAccent: blue
 ---
 
 {%- from "nationalarchives/components/button/macro.njk" import tnaButton -%}
@@ -16,41 +17,56 @@ private: true
       name: "adornment-date"
     }) }}
     <h2 class="tna-heading-s tna-!--margin-top-s tna-!--no-padding-top">Examples</h2>
-    <ul class="tna-ul tna-ul--plain tna-ul--spaced tna-!--margin-top-xs">
-      <li>
-        {{ tnaButton({
-          text: "World Book Day",
-          small: true,
-          buttonElement: true,
-          classes: "example-date",
-          attributes: {
-            "value": "2026-03-05"
-          }
-        }) }}
-      </li>
-      <li>
-        {{ tnaButton({
-          text: "Remembrance Day",
-          small: true,
-          buttonElement: true,
-          classes: "example-date",
-          attributes: {
-            "value": "2026-11-11"
-          }
-        }) }}
-      </li>
-      <li>
-        {{ tnaButton({
-          text: "Halloween",
-          small: true,
-          buttonElement: true,
-          classes: "example-date",
-          attributes: {
-            "value": "2026-10-31"
-          }
-        }) }}
-      </li>
-    </ul>
+    <div class="tna-button-group tna-button-group--small tna-!--margin-top-s">
+      {{ tnaButton({
+        text: "World Book Day",
+        buttonElement: true,
+        classes: "example-date",
+        attributes: {
+          "value": "2026-03-05"
+        }
+      }) }}
+      {{ tnaButton({
+        text: "Earth Day",
+        buttonElement: true,
+        classes: "example-date",
+        attributes: {
+          "value": "2026-04-22"
+        }
+      }) }}
+      {{ tnaButton({
+        text: "International Nurses Day",
+        buttonElement: true,
+        classes: "example-date",
+        attributes: {
+          "value": "2026-05-12"
+        }
+      }) }}
+      {{ tnaButton({
+        text: "Pride Month",
+        buttonElement: true,
+        classes: "example-date",
+        attributes: {
+          "value": "2026-06-01"
+        }
+      }) }}
+      {{ tnaButton({
+        text: "Black History Month",
+        buttonElement: true,
+        classes: "example-date",
+        attributes: {
+          "value": "2026-10-01"
+        }
+      }) }}
+      {{ tnaButton({
+        text: "Remembrance Day",
+        buttonElement: true,
+        classes: "example-date",
+        attributes: {
+          "value": "2026-11-11"
+        }
+      }) }}
+    </div>
   </div>
   <div class="tna-column tna-!--padding-top-m">
     <div class="tna-aside">
@@ -66,7 +82,7 @@ private: true
     </div>
   </div>
   <div class="tna-column tna-!--padding-top-m">
-    <div class="tna-aside tna-background-accent">
+    <div class="tna-aside tna-background-contrast">
       <span id="logo" class="tna-logo tna-logo--adornable">
         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 160 160" width="{{ params.size or '96' }}" height="{{ params.size or '96' }}" aria-hidden="true" focusable="false">
           <path class="tna-logo__background" fill="transparent" d="M0 0h160v160H0z" />
@@ -79,3 +95,51 @@ private: true
     </div>
   </div>
 </div>
+
+<script>
+  const $logos = document.querySelectorAll(".tna-logo--adornable");
+  if ($logos.length) {
+    const logoAdornmentsStylesheetBaseURL =
+      "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css";
+    const $logoAdornmentsStylesheet = document.createElement("link");
+    $logoAdornmentsStylesheet.rel = "stylesheet";
+    $logoAdornmentsStylesheet.href = logoAdornmentsStylesheetBaseURL;
+    document.head.appendChild($logoAdornmentsStylesheet);
+
+    let $logoAdornmentsScript;
+    const addLogoAdornmentsScript = function ($logoAdornmentsScript, date) {
+      const logoAdornmentsScriptBaseURL =
+        "//www.nationalarchives.gov.uk/enrichment/js/logo-adornments.js";
+      if ($logoAdornmentsScript) {
+        $logoAdornmentsScript.remove();
+      }
+      $logoAdornmentsScript = document.createElement("script");
+      $logoAdornmentsScript.type = "module";
+      $logoAdornmentsScript.src = `${logoAdornmentsScriptBaseURL}?debug=${date}`;
+      document.body.appendChild($logoAdornmentsScript);
+      return $logoAdornmentsScript;
+    };
+
+    const $dateSelector = document.getElementById("adornment-date");
+    if ($dateSelector) {
+      $dateSelector.addEventListener("change", function (event) {
+        $logos.forEach(function ($logo) {
+          $logo.removeAttribute("title");
+        });
+        $logoAdornmentsStylesheet.href = `${logoAdornmentsStylesheetBaseURL}?debug=${$dateSelector.value}`;
+        $logoAdornmentsScript = addLogoAdornmentsScript(
+          $logoAdornmentsScript,
+          $dateSelector.value,
+        );
+      });
+    }
+
+    const $exampleDateButtons = document.querySelectorAll(".example-date");
+    $exampleDateButtons.forEach(function ($button) {
+      $button.addEventListener("click", function (event) {
+        $dateSelector.value = event.currentTarget.value;
+        $dateSelector.dispatchEvent(new Event("change"));
+      });
+    });
+  }
+</script>
