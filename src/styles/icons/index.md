@@ -20,11 +20,11 @@ In the main call to action on a page, you have the option to [include an icon in
 
 Avoid using icons in all call to action buttons.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }}
 
 With call to actions that benefit from an arrow or chevron icon that points to the right, align the icon to the right of the button text.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }}
+{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }}
 
 <!-- ## Brand icons
 
@@ -32,7 +32,7 @@ TNA Frontend doesn’t include [Font Awesome brand icons](https://fontawesome.co
 
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 
-{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", nunjucksOptions: false }) }} -->
+{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }} -->
 
 ## Displaying information with icons
 

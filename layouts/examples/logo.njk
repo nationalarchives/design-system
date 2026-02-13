@@ -1,0 +1,55 @@
+{% extends "./examples/plain.njk" %}
+
+{%- set theme = theme or "light" -%}
+{%- set themeAccent = "blue" -%}
+
+{% block bodyEnd %}
+  {{ super() }}
+  <script>
+    const $logos = document.querySelectorAll(".tna-logo--adornable");
+    if ($logos.length) {
+      const logoAdornmentsStylesheetBaseURL =
+        "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css";
+      const $logoAdornmentsStylesheet = document.createElement("link");
+      $logoAdornmentsStylesheet.rel = "stylesheet";
+      $logoAdornmentsStylesheet.href = logoAdornmentsStylesheetBaseURL;
+      document.head.appendChild($logoAdornmentsStylesheet);
+
+      let $logoAdornmentsScript;
+      const addLogoAdornmentsScript = function ($logoAdornmentsScript, date) {
+        const logoAdornmentsScriptBaseURL =
+          "//www.nationalarchives.gov.uk/enrichment/js/logo-adornments.js";
+        if ($logoAdornmentsScript) {
+          $logoAdornmentsScript.remove();
+        }
+        $logoAdornmentsScript = document.createElement("script");
+        $logoAdornmentsScript.type = "module";
+        $logoAdornmentsScript.src = `${logoAdornmentsScriptBaseURL}?debug=${date}`;
+        document.body.appendChild($logoAdornmentsScript);
+        return $logoAdornmentsScript;
+      };
+
+      const $dateSelector = document.getElementById("adornment-date");
+      if ($dateSelector) {
+        $dateSelector.addEventListener("change", function (event) {
+          $logos.forEach(function ($logo) {
+            $logo.removeAttribute("title");
+          });
+          $logoAdornmentsStylesheet.href = `${logoAdornmentsStylesheetBaseURL}?debug=${$dateSelector.value}`;
+          $logoAdornmentsScript = addLogoAdornmentsScript(
+            $logoAdornmentsScript,
+            $dateSelector.value,
+          );
+        });
+      }
+
+      const $exampleDateButtons = document.querySelectorAll(".example-date");
+      $exampleDateButtons.forEach(function ($button) {
+        $button.addEventListener("click", function (event) {
+          $dateSelector.value = event.currentTarget.value;
+          $dateSelector.dispatchEvent(new Event("change"));
+        });
+      });
+    }
+  </script>
+{% endblock %}

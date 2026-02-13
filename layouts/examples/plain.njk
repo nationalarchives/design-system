@@ -34,6 +34,36 @@
     }
     {% endif %}
   </style>
+  <style>
+    /* TEMP STYLES */
+
+    .tna-logo {
+      width: 7.5rem;
+      display: block;
+      aspect-ratio: 1;
+    }
+
+    .tna-logo svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .tna-logo__background {
+      fill: transparent;
+    }
+
+    .tna-logo__foreground {
+      fill: currentColor;
+    }
+
+    .tna-logo--solid .tna-logo__background {
+      fill: #fff;
+    }
+
+    .tna-logo--solid .tna-logo__foreground {
+      fill: #010101;
+    }
+  </style>
 {% endblock %}
 
 {%- set theme = theme or "light" -%}
