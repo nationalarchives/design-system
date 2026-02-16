@@ -49,7 +49,9 @@ The HTML logo included with TNA Frontend can be used with a transparent or solid
   ], size: "m"
 }, 2) }}
 
-The logo is designed to work with all [colour blocks](../styles/colours/#block-colours) in both [light and dark themes](../styles/colours/#themes).
+The logo is designed to work with all [colour blocks](../styles/colours/#block-colours) in both [light and dark themes](../styles/colours/#themes). By default, the logo uses the current text colour of the block as the logo's text and border.
+
+Use the solid version of the logo to increase contrast with the background or when placing on top of an image.
 
 {{ example({ group: "brand", item: "logo", example: "colours", html: false, nunjucks: false, size: "xxl" }, 2) }}
 
