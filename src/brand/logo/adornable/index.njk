@@ -8,7 +8,11 @@ themeAccent: blue
 {%- from "nationalarchives/components/button/macro.njk" import tnaButton -%}
 {%- from "nationalarchives/components/date-search/macro.njk" import tnaDateSearch -%}
 
-<div class="tna-container tna-!--padding-bottom-m">
+<div id="logo-adornment-test" class="tna-container tna-!--padding-bottom-m">
+  <div id="logo-adornment-test-message">
+    <h2 class="tna-heading-m">JavaScript required</h2>
+    <p>This interactive logo adornment test requires JavaScript to run.</p>
+  </div>
   <div class="tna-column tna-column--flex-1 tna-column--full-tiny tna-!--padding-top-m">
     {{ tnaDateSearch({
       label: "Enter a date to test",
@@ -96,11 +100,32 @@ themeAccent: blue
   </div>
 </div>
 
+<style>
+  #logo-adornment-test {
+    position: relative;
+  }
+
+  #logo-adornment-test-message {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+  }
+</style>
+
 <script>
+  const $logoAdornmentTestMessage = document.getElementById("logo-adornment-test-message");
+  $logoAdornmentTestMessage.setAttribute("hidden", "");
   const $logos = document.querySelectorAll(".tna-logo--adornable");
   if ($logos.length) {
+    /* const logoAdornmentsStylesheetBaseURL =
+      "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css"; */
     const logoAdornmentsStylesheetBaseURL =
-      "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css";
+      "http://192.168.0.29:65529/enrichment/css/logo-adornments.css";
     const $logoAdornmentsStylesheet = document.createElement("link");
     $logoAdornmentsStylesheet.rel = "stylesheet";
     $logoAdornmentsStylesheet.href = logoAdornmentsStylesheetBaseURL;
