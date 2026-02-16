@@ -57,7 +57,7 @@ Metalsmith(__dirname)
         cwd: "node_modules/@nationalarchives/frontend/nationalarchives/assets/",
         dest: "static/assets",
       }),
-      copyAssets("*.js", {
+      copyAssets("*.js?(.map)", {
         cwd: "node_modules/@nationalarchives/frontend/nationalarchives/",
         dest: "static/scripts",
       }),
