@@ -122,10 +122,8 @@ themeAccent: blue
   $logoAdornmentTestMessage.setAttribute("hidden", "");
   const $logos = document.querySelectorAll(".tna-logo--adornable");
   if ($logos.length) {
-    /* const logoAdornmentsStylesheetBaseURL =
-      "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css"; */
     const logoAdornmentsStylesheetBaseURL =
-      "http://192.168.0.29:65529/enrichment/css/logo-adornments.css";
+      "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css";
     const $logoAdornmentsStylesheet = document.createElement("link");
     $logoAdornmentsStylesheet.rel = "stylesheet";
     $logoAdornmentsStylesheet.href = logoAdornmentsStylesheetBaseURL;
