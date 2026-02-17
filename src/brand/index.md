@@ -42,7 +42,7 @@ The HTML logo included with TNA Frontend can be used with a transparent or solid
           type: "boolean",
           required: false,
           description: "<p>If <code>true</code>, allow the logo to have adornments for special occasions.</p>",
-          default: 96
+          default: false
         }
       ]
     }
