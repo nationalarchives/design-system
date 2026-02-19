@@ -142,6 +142,10 @@ const nunjucksOptions = {
         .replace(
           /from "nationalarchives\/components\/([\w\-]+)\/macro.njk"/g,
           'from "components/$1/macro.html"',
+        )
+        .replaceAll(
+          'from "nationalarchives\/templates\/partials\/logo\/macro.njk"',
+          'from "partials/logo/macro.html"',
         );
     },
     getMacroOptions: (componentName) => {
