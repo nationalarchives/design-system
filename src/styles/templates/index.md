@@ -1,12 +1,14 @@
 ---
 layout: collection-page.njk
-title: Page template
-description: Use the TNA Frontend base template to create consistent page layouts.
+title: Templates
+description: Use the provided templates to create consistent layouts.
 group: styles
 subGroup: layout
 ---
 
 {% from "partials/example.njk" import example %}
+
+## Base page template
 
 A template is included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend) that has support for the blocks specified below.
 
@@ -14,9 +16,7 @@ You can use this template in your prototypes or copy the structure into your pro
 
 See the [generic page template](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/templates/layouts/_generic.njk) in TNA Frontend.
 
-<!-- {{ example({ group: "styles", item: "layout", example: "template", html: false, nunjucks: false, size: "xxl" }) }} -->
-
-## Blocks
+### Blocks
 
 | Block                                                        | Purpose                                                                          |
 | ------------------------------------------------------------ | -------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ The blocks are nested in the following way:
     - `footer`
     - `bodyEnd`
 
-## Variables
+### Page variables
 
 | Variable                                                        | Purpose                                                                                            | Default                 |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -73,9 +73,28 @@ The blocks are nested in the following way:
 | `mainClasses`                                                   | Classes to add to the `<main>` element                                                             | [none]                  |
 | {caption: The default variables available in the base template} |
 
-## CSS classes
+### CSS classes
 
 There are two template classes that need to be present in order to correctly apply a page layout:
 
 - `tna-template` - applied to the `<html>` element
 - `tna-template__body` - applied to the `<body>` element
+
+## Emails
+
+An email template is included in TNA Frontend (Jinja template: `layouts/email.html`).
+
+Emails sent through AWS should be sent from `*@nationalarchives.gov.uk` to ensure they pass all the security requirements that have been set up ([SPF](https://en.wikipedia.org/wiki/Sender_Policy_Framework)/[DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail)/[DMARC](https://en.wikipedia.org/wiki/DMARC)).
+
+{{ example({ group: "styles", item: "templates", example: "email", html: false, nunjucks: true, size: "xxxxl", noAutoSize: true }) }}
+
+### Email variables
+
+| Variable                                                 | Purpose                                                             |
+| -------------------------------------------------------- | ------------------------------------------------------------------- |
+| `subject`                                                | **(Required)** The subject of the email, added to the `<title>` element |
+| `panel`                                                  | An optional [panel component](../../components/panel/)              |
+| `content`                                                | The main body of the email                                          |
+| `cat_buttons`                                            | An optional array of [button components](../../components/button/)  |
+| `signoff`                                                | A final piece of content at the end of the email                    |
+| {caption: The variables available in the email template} |
