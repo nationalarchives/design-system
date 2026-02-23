@@ -30,19 +30,19 @@ An accented button will inherit the [accent colour](../../styles/colours/#accent
 
 Avoid overwhelming the user by using accented buttons sparingly.
 
-{{ example({ group: "components", item: "button", example: "accent", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "accent", html: true, nunjucks: true, size: "xxxs" }, 4) }}
 
 ### Plain
 
 Use plain buttons to provide the same size and spacing as other buttons but with a more subtle visual style.
 
-{{ example({ group: "components", item: "button", example: "plain", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "plain", html: true, nunjucks: true, size: "xxxs" }, 4) }}
 
 ### Small
 
 Smaller buttons can be used when space is limited, such as in admin interfaces.
 
-{{ example({ group: "components", item: "button", example: "small", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "small", html: true, nunjucks: true, size: "xxxs" }, 4) }}
 
 ### Icons
 
@@ -52,7 +52,7 @@ Icons can be used on either the left or right of the button. The default alignme
 
 The set of icons available by default is [Font Awesome's free classic icons](https://fontawesome.com/search?o=r&ic=free&ip=classic). You can set the `icon` parameter by using the Font Awesome icon name, for example "chevron-left" or "heart".
 
-{{ example({ group: "components", item: "button", example: "icon", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "icon", html: true, nunjucks: true, size: "xxxs" }, 4) }}
 
 #### Icon-only buttons
 
@@ -64,7 +64,7 @@ You can choose to either only show an icon-only button or to show the button tex
 
 Avoid using plain icon-only buttons as they might not have a distinct enough hover or focus state.
 
-{{ example({ group: "components", item: "button", example: "icon-only", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "icon-only", html: true, nunjucks: true, size: "xxxs" }, 5) }}
 
 #### SVG icons
 
@@ -74,7 +74,7 @@ Remember to escape quotes (`"` or `'`) in the SVG correctly.
 
 Add `aria-hidden="true"` and `focusable="false"` to avoid the icon being read by screen readers. Include a `wdith` parameter if possible to avoid the icon being too large when viewed without CSS.
 
-{{ example({ group: "components", item: "button", example: "icon-svg", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "icon-svg", html: true, nunjucks: true, size: "xxxs" }, 5) }}
 
 ### Disabled buttons
 
@@ -88,7 +88,7 @@ Set `buttonElement` to `true` to change the button to an HTML `<button>` element
 
 The default [HTML button type](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#type) is `button`. This can be changed to either `submit` or `reset` with the `buttonType` attribute.
 
-{{ example({ group: "components", item: "button", example: "button-element", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ group: "components", item: "button", example: "button-element", html: true, nunjucks: true, size: "xxxs" }) }}
 
 ## Button groups
 

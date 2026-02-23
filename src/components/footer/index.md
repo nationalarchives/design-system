@@ -26,4 +26,4 @@ Use `defaultContent: true` to populate the footer with the required content for 
 
 If using a different subdomain, change the base domain using `defaultContentBaseURL`.
 
-{{ example({ group: "components", item: "footer", example: "default-content", html: true, nunjucks: true, size: "xxxl" }, 2) }}
+{{ example({ group: "components", item: "footer", example: "default-content", html: true, nunjucks: true, size: "xxxl" }) }}

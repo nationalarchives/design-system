@@ -24,4 +24,4 @@ statusDocumentationComplete: false
 
 Customise with `toggleAllButton` to add an extra option to show or hide all accordion items.
 
-{{ example({ group: "components", item: "accordion", example: "open-close-all", html: true, nunjucks: true, size: "m", extraExpandableHeight: true }, 2) }}
+{{ example({ group: "components", item: "accordion", example: "open-close-all", html: true, nunjucks: true, size: "m", extraExpandableHeight: true }) }}

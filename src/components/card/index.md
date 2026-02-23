@@ -66,7 +66,7 @@ Add additional bits of small information to the card with meta.
 
 Keep the meta information short and enhance with icons if necessary.
 
-{{ example({ group: "components", item: "card", example: "meta", html: true, nunjucks: true, size: "xxl" }, 2) }}
+{{ example({ group: "components", item: "card", example: "meta", html: true, nunjucks: true, size: "xxl" }) }}
 
 ## Actions
 
@@ -74,4 +74,4 @@ Cards can have a list of "actions" which are displayed as links at the bottom of
 
 Cards with actions should not also have an `href` property.
 
-{{ example({ group: "components", item: "card", example: "actions", html: true, nunjucks: true, size: "l" }, 2) }}
+{{ example({ group: "components", item: "card", example: "actions", html: true, nunjucks: true, size: "l" }) }}
