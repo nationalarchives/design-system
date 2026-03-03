@@ -86,9 +86,9 @@ An email template is included in TNA Frontend (Jinja template: `layouts/email.ht
 
 Emails sent through AWS should be sent from `*@nationalarchives.gov.uk` to ensure they pass all the security requirements that have been set up ([SPF](https://en.wikipedia.org/wiki/Sender_Policy_Framework)/[DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail)/[DMARC](https://en.wikipedia.org/wiki/DMARC)).
 
-{{ example({ group: "styles", item: "templates", example: "email", html: false, nunjucks: true, size: "xxxxl", noAutoSize: true }) }}
+### Template variables
 
-### Email variables
+In production, you should pass these variables into your template rendering function rather than setting them inside the template like the example above.
 
 | Variable                                                 | Purpose                                                             |
 | -------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -98,3 +98,7 @@ Emails sent through AWS should be sent from `*@nationalarchives.gov.uk` to ensur
 | `cta_buttons`                                            | An optional array of [button components](../../components/button/)  |
 | `signoff`                                                | A final piece of content at the end of the email                    |
 | {caption: The variables available in the email template} |
+
+### Email example
+
+{{ example({ group: "styles", item: "templates", example: "email", html: false, nunjucks: true, size: "xxxxl" }) }}
