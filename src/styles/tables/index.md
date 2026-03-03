@@ -26,6 +26,4 @@ To ensure good accessibility, make sure to add some attributes to the wrapper el
 
 If JavaScript is available, the caption will be suffixed with `(scroll to see more)` only when the table is too wide for the screen to help screen readers.
 
-> Firefox users won't see shadows on the edges of the table unless JavaScript is available.
-
 {{ example({ group: "styles", item: "tables", example: "table-wrapper", html: true, nunjucks: false, size: "xxxl", openHTML: true }) }}
