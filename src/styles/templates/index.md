@@ -90,13 +90,13 @@ Emails sent through AWS should be sent from `*@nationalarchives.gov.uk` to ensur
 
 In production, you should pass these variables into your template rendering function rather than setting them inside the template like the example above.
 
-| Variable                                                 | Purpose                                                             |
-| -------------------------------------------------------- | ------------------------------------------------------------------- |
+| Variable                                                 | Purpose                                                                 |
+| -------------------------------------------------------- | ----------------------------------------------------------------------- |
 | `subject`                                                | **(Required)** The subject of the email, added to the `<title>` element |
-| `panel`                                                  | An optional [panel component](../../components/panel/)              |
-| `content`                                                | The main body of the email                                          |
-| `cta_buttons`                                            | An optional array of [button components](../../components/button/)  |
-| `signoff`                                                | A final piece of content at the end of the email                    |
+| `panel`                                                  | An optional [panel component](../../components/panel/)                  |
+| `content`                                                | The main body of the email                                              |
+| `cta_buttons`                                            | An optional array of [button components](../../components/button/)      |
+| `signoff`                                                | A final piece of content at the end of the email                        |
 | {caption: The variables available in the email template} |
 
 ### Email example

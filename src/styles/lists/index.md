@@ -45,15 +45,6 @@ You do not need to use a lead-in line for numbered lists. Items in a numbered li
 
 {{ example({ group: "styles", item: "lists", example: "ordered-list", html: true, nunjucks: false, size: "xs", openHTML: true }) }}
 
-
-
-
-
-
-
-
-
-
 ## Description lists
 
 The description lists can be plain or contain [icons](../icons/#displaying-information-with-icons).
@@ -71,20 +62,6 @@ Description lists can have the zebra-striped background or lines added to help s
 Description lists will stack on smaller devices. For lists with a lot of content, add `tna-dl--stacked` to stack lists on larger devices.
 
 {{ example({ group: "styles", item: "lists", example: "description-list-stacked", html: true, nunjucks: false, size: "xl", openHTML: true }) }}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Chip lists
 
