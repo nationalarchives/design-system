@@ -19,7 +19,6 @@ private: true
       <h1 class="tna-heading-xl">Create a record</h1>
       {{ tnaErrorSummary({
         title: "There is a problem",
-        headingLevel: 2,
         items: [
           {
             text: "The record name cannot contain emojis",
@@ -46,7 +45,6 @@ private: true
       }) }}
       {{ tnaTextInput({
         label: "Enter the name of the record",
-        headingLevel: 2,
         headingSize: "m",
         id: "record_name",
         name: "record_name",
@@ -57,7 +55,6 @@ private: true
       }) }}
       {{ tnaCheckboxes({
         label: "Select the record categories",
-        headingLevel: 2,
         headingSize: "m",
         id: "record_categories",
         name: "categories",
@@ -81,7 +78,6 @@ private: true
       }) }}
       {{ tnaDateInput({
         label: "Enter the start date of the record",
-        headingLevel: 2,
         headingSize: "m",
         id: "record_date",
         name: "date",
@@ -96,7 +92,6 @@ private: true
       }) }}
       {{ tnaRadios({
         label: "Select the type of record",
-        headingLevel: 2,
         headingSize: "m",
         id: "record_type",
         name: "type",
@@ -116,7 +111,6 @@ private: true
       }) }}
       {{ tnaTextarea({
         label: "Enter the record description",
-        headingLevel: 2,
         headingSize: "m",
         id: "record_description",
         name: "description",

@@ -23,9 +23,9 @@ For searching by date, use the [date search](../date-search/) component.
 
 {% include "partials/component-status.njk" %}
 
-## Preselected
+## Prefilled
 
-{{ example({ group: "components", item: "date-input", example: "preselected", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ group: "components", item: "date-input", example: "prefilled", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 

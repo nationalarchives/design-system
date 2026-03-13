@@ -22,9 +22,9 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 {% include "partials/component-status.njk" %}
 
-## Preselected
+## Prefilled
 
-{{ example({ group: "components", item: "date-search", example: "preselected", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ group: "components", item: "date-search", example: "prefilled", html: true, nunjucks: true, size: "xxs" }) }}
 
 ## Hint
 

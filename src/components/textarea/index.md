@@ -20,9 +20,9 @@ statusDocumentationComplete: false
 
 {% include "partials/component-status.njk" %}
 
-## Preselected
+## Prefilled
 
-{{ example({ group: "components", item: "textarea", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ group: "components", item: "textarea", example: "prefilled", html: true, nunjucks: true, size: "s" }) }}
 
 ## Hint
 

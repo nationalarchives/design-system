@@ -49,3 +49,62 @@ Use the [select component](../../components/select/) to offer simple options for
 ## Background colours
 
 Don’t use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only regular, tinted or contrasting backgrounds.
+
+## Field headings
+
+Most form fields have support for a `headingLevel` property which adds a `<h1>` to `<h6>` to the form label. This allows screen reader users to jump to different fields based on the headings.
+
+For simple pages with only a few fields, use `headingLevel: 1` to add an `<h1>` to the first field and omit headings for the other fields.
+
+For pages with more complex forms or multiple forms, add a heading to the first field in each form or section.
+
+For example, when you have a search form alongside your main form:
+
+```html
+<main>
+  <h1><label for="question">Question</label></h1>
+  <input id="question">
+
+  <!-- // … -->
+</main>
+
+<aside>
+  <h2><label for="search">Search</label></h2>
+  <input id="search">
+
+  <label for="sort-by">Sort by</label>
+  <select id="sort-by">
+
+  <!-- // … -->
+</aside>
+```
+
+When you have forms that ask about multiple things:
+
+```html
+<main>
+  <h1>Your team</h1>
+
+  <!-- // … -->
+</main>
+
+<section>
+  <h2><label for="designer-name">Name of designer</label></h2>
+  <input id="designer-name">
+
+  <label for="designer-email">Email of designer</label>
+  <input id="designer-email">
+
+  <!-- // … -->
+</section>
+
+<section>
+  <h2><label for="delivery-manager-name">Name of delivery manager</label></h2>
+  <input id="delivery-manager-name">
+
+  <label for="delivery-manager-email">Email of delivery manager</label>
+  <input id="delivery-manager-email">
+
+  <!-- // … -->
+</section>
+```
