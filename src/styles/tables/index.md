@@ -12,7 +12,7 @@ Do not use tables to lay out or organise content.
 
 Ensure your tables have a `<caption>` element to describe the data in the table and make use of `<thead>`, `<tbody>` and `<tfoot>` elements.
 
-{{ example({ group: "styles", item: "tables", example: "plain-table", html: true, nunjucks: false, size: "l", openHTML: true }) }}
+{{ example({ group: "styles", item: "tables", example: "plain-table", html: true, nunjucks: false, size: "l" }) }}
 
 ## Scrollable tables
 
@@ -26,4 +26,4 @@ To ensure good accessibility, make sure to add some attributes to the wrapper el
 
 If JavaScript is available, the caption will be suffixed with `(scroll to see more)` only when the table is too wide for the screen to help screen readers.
 
-{{ example({ group: "styles", item: "tables", example: "table-wrapper", html: true, nunjucks: false, size: "xxxl", openHTML: true }) }}
+{{ example({ group: "styles", item: "tables", example: "table-wrapper", html: true, nunjucks: false, size: "xxxl" }) }}

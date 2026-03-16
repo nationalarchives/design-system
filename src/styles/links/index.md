@@ -12,7 +12,7 @@ Links are blue and underlined by default.
 
 If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.
 
-{{ example({ group: "styles", item: "links", example: "plain-link", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
+{{ example({ group: "styles", item: "links", example: "plain-link", html: true, nunjucks: false, size: "xxs" }) }}
 
 ## Colours
 
@@ -34,13 +34,13 @@ For links within services such as documentation sites, you may not wish to have 
 
 Disable the visited style be adding a `tna-link--no-visited-state` class to your links:
 
-{{ example({ group: "styles", item: "links", example: "link-no-visited", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
+{{ example({ group: "styles", item: "links", example: "link-no-visited", html: true, nunjucks: false, size: "xxs" }) }}
 
 ## Links in headings
 
 Links within [heading elements](../typography/#headings) have an arrow added after them. This arrow is added automatically when using TNA Frontend.
 
-{{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, size: "xxs", openHTML: true }) }}
+{{ example({ group: "styles", item: "links", example: "heading-link", html: true, nunjucks: false, size: "xxs" }) }}
 
 ## Opening links in new tabs
 
