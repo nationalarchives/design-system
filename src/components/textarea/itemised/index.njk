@@ -1,0 +1,30 @@
+---
+title: Itemised textarea
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
+
+{{ tnaTextarea({
+  label: "Search series (with JavaScript)",
+  headingSize: "m",
+  hint: "Enter each series on a separate line",
+  id: "series",
+  name: "series",
+  value: "   Series 1\n   \nSeries 2   \n   Series 3   ",
+  itemiseRows: true,
+  formItemAttributes: {
+    "data-enhanced-hint": "Enter a series and press enter"
+  }
+}) }}
+
+{{ tnaTextarea({
+  label: "Search series (without JavaScript)",
+  headingSize: "m",
+  hint: "Enter each series on a separate line",
+  id: "series-no-js",
+  name: "series-no-js",
+  value: "   Series 1\n   \nSeries 2   \n   Series 3   "
+}) }}
