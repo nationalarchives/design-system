@@ -36,4 +36,6 @@ statusDocumentationComplete: false
 
 The password text input is enhanced with JavaScript to allow the hiding and showing of the password.
 
-{{ example({ group: "components", item: "text-input", example: "password", html: true, nunjucks: true, size: "xxs" }) }}
+By default, the password input will try and autofill from existing passwords. Use `newPassword: true` to use a password box that allows password managers to generate a new password.
+
+{{ example({ group: "components", item: "text-input", example: "password", html: true, nunjucks: true, size: "xs" }) }}

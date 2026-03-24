@@ -8,10 +8,19 @@ private: true
 {% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
 
 {{ tnaTextInput({
-  label: "Create a password",
+  label: "Enter your password",
   headingSize: "m",
   id: "password",
   name: "password",
+  password: true
+}) }}
+
+{{ tnaTextInput({
+  label: "Create a password",
+  headingSize: "m",
+  id: "password-new",
+  name: "password-new",
+  hint: "Your password must be at least 8 characters long",
   password: true,
   newPassword: true
 }) }}
