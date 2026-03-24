@@ -61,11 +61,11 @@ markdownRenderer.link = function (href, title, text) {
 
 markdownRenderer.blockquote = function (body) {
   return `
-  <blockquote class="tna-blockquote tna-blockquote--noquotes">
-    <div class="tna-blockquote__quote">
+  <div class="tna-blockquote tna-blockquote--noquotes">
+    <blockquote class="tna-blockquote__quote">
       ${body}
-    </div>
-  </blockquote>`;
+    </blockquote>
+  </div>`;
 };
 
 markdownRenderer.table = function (head, body) {

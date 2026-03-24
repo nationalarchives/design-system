@@ -63,6 +63,14 @@ Description lists can have the zebra-striped background or lines added to help s
 
 {{ example({ group: "styles", item: "lists", example: "description-list-styled", html: true, nunjucks: false, size: "m" }) }}
 
+### Description list balancing
+
+When not [stacked](#stacked-description-lists), a description list will balance its columns based on their content, much like a table would.
+
+You can choose to split the right and left columns evenly with `tna-dl--even`, give more weight to the right column with `tna-dl--right-weighted` or to the left column with `tna-dl--left-weighted`.
+
+{{ example({ group: "styles", item: "lists", example: "description-lists-balance", html: true, nunjucks: false, size: "l" }) }}
+
 ### Stacked description lists
 
 Description lists will stack on smaller devices. For lists with a lot of content, add `tna-dl--stacked` to stack lists on larger devices.
