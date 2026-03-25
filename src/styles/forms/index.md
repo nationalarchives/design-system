@@ -32,7 +32,7 @@ Use the [error summary component](../../components/error-summary/) to summarise 
 
 ## User accounts
 
-Use the `autocomplete` property to help people fill in forms with their own data. See the [list of input purposes on w3.org](https://www.w3.org/TR/WCAG21/#input-purposes).
+Use the `autocomplete` property to help people fill in forms with their own data. See the [list of input purposes on w3.org](https://www.w3.org/TR/WCAG22/#input-purposes).
 
 {{ example({ group: "styles", item: "forms", example: "user-accounts", html: true, nunjucks: true, size: "xxl", showNunjucksOptions: false }) }}
 

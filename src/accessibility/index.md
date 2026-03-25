@@ -52,7 +52,7 @@ The Design System website at [design-system.nationalarchives.gov.uk](https://des
 
 The TNA Frontend Storybook website at [nationalarchives.github.io/tna-frontend](https://nationalarchives.github.io/tna-frontend) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
 
-The TNA Frontend codebase at [github.com/nationalarchives/tna-frontend](https://github.com/nationalarchives/tna-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The TNA Frontend codebase at [github.com/nationalarchives/tna-frontend](https://github.com/nationalarchives/tna-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
 ### Non-accessible content
 
@@ -93,7 +93,7 @@ We do not have any content within these products which we consider to be outside
 Above and beyond non-compliant content, we also track accessibility concerns which:
 
 - show strong evidence of being accessibility barriers
-- do not constitute a failure in one or more WCAG 2.1 Level AA criteria
+- do not constitute a failure in one or more WCAG 2.2 Level AA criteria
 - are not classified as non-compliance with the accessibility regulations
 - are determined as worth featuring in this accessibility statement
 

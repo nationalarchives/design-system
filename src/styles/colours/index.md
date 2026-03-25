@@ -194,8 +194,8 @@ In TNA Frontend, we check as many [light colour combinations](https://nationalar
 
 Ensure you check for proper colour contrast in your service for both text and non-text elements:
 
-- [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
-- [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast)
+- [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum)
+- [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast)
 
 Check colour combinations of various different visual impairments with [WhoCanUse](https://www.whocanuse.com/).
 
