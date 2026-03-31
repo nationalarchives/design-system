@@ -177,6 +177,7 @@ Metalsmith(__dirname)
         index: "lib/index.js",
         collection: "lib/collection.js",
         sidebar: "lib/sidebar.js",
+        "logo-downloads": "lib/logo-downloads.js",
       },
     }),
   )

@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "@nationalarchives/frontend": "0.38.0",
+    "downloadjs": "^1.4.7",
+    "html-to-image": "^1.11.13",
     "prismjs": "^1.29.0"
   },
   "devDependencies": {

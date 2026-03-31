@@ -74,14 +74,16 @@ themeAccent: blue
     </div>
   </div>
   <div class="tna-column tna-!--padding-top-m">
-    <div class="tna-aside">
-      {{ tnaLogo({adornable: true}) }}
+    <div id="nationalarchives-logo-light" class="tna-aside">
+      {{ tnaLogo({adornable: true, size: 128}) }}
     </div>
+    <button type="button" class="tna-button tna-button--small tna-button--plain tna-button--download" value="nationalarchives-logo-light" hidden>Download light logo</button>
   </div>
   <div class="tna-column tna-!--padding-top-m">
-    <div class="tna-aside tna-background-contrast">
-      {{ tnaLogo({adornable: true}) }}
+    <div id="nationalarchives-logo-dark" class="tna-aside tna-background-contrast">
+      {{ tnaLogo({adornable: true, size: 128}) }}
     </div>
+    <button type="button" class="tna-button tna-button--small tna-button--plain tna-button--download" value="nationalarchives-logo-dark" hidden>Download dark logo</button>
   </div>
 </div>
 
@@ -100,13 +102,21 @@ themeAccent: blue
     z-index: 1;
     background: rgba(255, 255, 255, 0.95);
   }
+
+  .tna-aside .tna-logo {
+    width: 128px;
+  }
 </style>
 
+<script src="/logo-downloads.js"></script>
 <script>
   const $logoAdornmentTestMessage = document.getElementById("logo-adornment-test-message");
   $logoAdornmentTestMessage.setAttribute("hidden", "");
+
   const $logos = document.querySelectorAll(".tna-logo--adornable");
-  if ($logos.length) {
+  const $dateSelector = document.getElementById("adornment-date");
+  
+  if ($logos && $dateSelector) {
     const logoAdornmentsStylesheetBaseURL =
       "//www.nationalarchives.gov.uk/enrichment/css/logo-adornments.css";
     const $logoAdornmentsStylesheet = document.createElement("link");
@@ -128,25 +138,43 @@ themeAccent: blue
       return $logoAdornmentsScript;
     };
 
-    const $dateSelector = document.getElementById("adornment-date");
-    if ($dateSelector) {
-      $dateSelector.addEventListener("change", function (event) {
-        $logos.forEach(function ($logo) {
-          $logo.removeAttribute("title");
-        });
-        $logoAdornmentsStylesheet.href = `${logoAdornmentsStylesheetBaseURL}?debug=${$dateSelector.value}&date=${Date.now()}`;
-        $logoAdornmentsScript = addLogoAdornmentsScript(
-          $logoAdornmentsScript,
-          $dateSelector.value,
-        );
+    $dateSelector.addEventListener("change", function (event) {
+      $logos.forEach(function ($logo) {
+        $logo.removeAttribute("title");
       });
-    }
+      $logoAdornmentsStylesheet.href = `${logoAdornmentsStylesheetBaseURL}?debug=${$dateSelector.value}&date=${Date.now()}`;
+      $logoAdornmentsScript = addLogoAdornmentsScript(
+        $logoAdornmentsScript,
+        $dateSelector.value,
+      );
+    });
 
     const $exampleDateButtons = document.querySelectorAll(".example-date");
     $exampleDateButtons.forEach(function ($button) {
       $button.addEventListener("click", function (event) {
         $dateSelector.value = event.currentTarget.value;
         $dateSelector.dispatchEvent(new Event("change"));
+      });
+    });
+
+    const $downloadButtons = document.querySelectorAll(".tna-button--download[value]");
+    console.log($dateSelector);
+    $downloadButtons.forEach(function ($button) {
+      $button.removeAttribute("hidden");
+      console.log($dateSelector);
+      $button.addEventListener("click", function (event) {
+        console.log($dateSelector);
+        const logoId = $button.value;
+        const $logoEl = document.getElementById(logoId);
+        htmlToImage
+          .toPng($logoEl, {
+            canvasWidth: 512,
+            canvasHeight: 512,
+            pixelRatio: 2,
+            backgroundColor: logoId === "nationalarchives-logo-dark" ? "#010101" : "#ffffff",
+            includeQueryParams: true
+          })
+          .then((dataUrl) => download(dataUrl, `${logoId}-${$dateSelector.value || new Date().toISOString().substring(0, 10)}.png`));
       });
     });
   }
