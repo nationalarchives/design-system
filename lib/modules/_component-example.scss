@@ -98,65 +98,17 @@
     }
   }
 
-  &__code {
-    position: relative;
-
-    pre {
-      margin: 0;
-      padding-top: spacing.space(3);
-
-      border-radius: 0;
-    }
-
-    :not(pre) > code[class*="language-"],
-    pre[class*="language-"] {
-      margin: 0;
-
-      border-radius: 0.1px;
-
-      /* stylelint-disable */
-      .token.entity,
-      .token.operator,
-      .token.url,
-      .language-css .token.string,
-      .style .token.string {
-        background-color: transparent;
-      }
-      /* stylelint-enable */
-
-      &.padded {
-        padding-top: spacing.space(3.5);
-      }
-    }
-
-    &-copy {
-      position: absolute;
-      top: spacing.space(0.5);
-      right: spacing.space(0.5);
-      z-index: 1;
-    }
-  }
-
   .tna-accordion {
     margin-top: 0;
 
-    &__heading {
+    &__heading,
+    &__body {
       padding: spacing.space(1);
     }
 
-    &__body {
-      padding-top: 0;
-    }
-
     &__content {
-      padding: 0;
-
-      > .tna-warning {
-        margin: spacing.space(2);
-
-        @include media.on-mobile {
-          margin: spacing.space(1);
-        }
+      .tna-details + .tna-code-block {
+        margin-top: spacing.space(1);
       }
     }
 

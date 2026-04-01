@@ -175,7 +175,6 @@ Metalsmith(__dirname)
       drop: ["debugger"],
       entries: {
         index: "lib/index.js",
-        collection: "lib/collection.js",
         sidebar: "lib/sidebar.js",
       },
     }),

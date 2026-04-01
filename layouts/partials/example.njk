@@ -23,8 +23,8 @@
     {% if params.html %}
     {% set accordionItems = (accordionItems.push({
           title: "HTML",
-          body: '<div class="tna-ds-example__code">
-<pre class="language-html" tabindex="-1"><code class="language-html">' ~ (getHTMLCode(examplePath) | forceescape) ~ '</code></pre>
+          body: '<div class="tna-code-block tna-code-block--copy">
+<pre class="tna-code-block__pre"><code class="language-html">' ~ (getHTMLCode(examplePath) | forceescape) ~ '</code></pre>
         </div>'
         }), accordionItems) %}
     {% endif %}
@@ -36,16 +36,16 @@
                     title: "Nunjucks options",
                     body: exampleOptions(params, exampleId)
                   }) if params.showNunjucksOptions !== false else ''
-                ) ~ '<div class="tna-ds-example__code">
-<pre class="language-javascript" tabindex="-1"><code class="language-javascript">' ~ (getNunjucksCode(examplePath) | forceescape) ~ '</code></pre>
+                ) ~ '<div class="tna-code-block tna-code-block--copy">
+<pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getNunjucksCode(examplePath) | forceescape) ~ '</code></pre>
         </div>'
         }, {
           title: "Jinja",
           body: tnaWarning({
             headingLevel: 1,
             body: 'This is an experimental feature that outputs a Jinja template based on the Nunjucks example. Check the converted code for accuracy.'
-          }) ~ '<div class="tna-ds-example__code">
-<pre class="language-javascript" tabindex="-1"><code class="language-javascript">' ~ (getJinjaCode(examplePath) | forceescape) ~ '</code></pre>
+          }) ~ '<div class="tna-code-block tna-code-block--copy">
+<pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getJinjaCode(examplePath) | forceescape) ~ '</code></pre>
         </div>'
         }), accordionItems) %}
     {% endif %}

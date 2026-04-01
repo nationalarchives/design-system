@@ -33,8 +33,7 @@
     "ext": "js css scss njk json html md"
   },
   "dependencies": {
-    "@nationalarchives/frontend": "0.38.0",
-    "prismjs": "^1.29.0"
+    "@nationalarchives/frontend": "0.39.0"
   },
   "devDependencies": {
     "@metalsmith/collections": "^1.3.0",

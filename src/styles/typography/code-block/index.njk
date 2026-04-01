@@ -1,0 +1,18 @@
+---
+title: Code block
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+<div class="tna-code-block tna-code-block--copy" title="fibonacci.js">
+  <pre class="tna-code-block__pre"><code class="language-javascript">const fibonacci = (n = 0) => {
+    if(n < 0) {
+      throw 'Fibonacci not defined for negative numbers';
+    }
+    if(n < 2) {
+      return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}</code></pre>
+</div>

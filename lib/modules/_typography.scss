@@ -3,46 +3,10 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
-.tna-ds-pre {
-  margin-top: spacing.space(2) !important;
-  margin-bottom: 0;
-  padding: spacing.space(1);
-
-  overflow: auto;
-
-  @include colour.colour-border("keyline", 1px);
-  @include borders.rounded-border;
-}
-
-code {
-  @include typography.detail-font;
-  @include typography.font-size(16);
-}
-
 p,
 li,
 dd,
 table {
-  code {
-    color: #905;
-
-    background-color: #f1ece9;
-
-    .tna-template--dark-theme & {
-      color: #d49;
-
-      background-color: #111;
-    }
-
-    .tna-template--system-theme & {
-      @media (prefers-color-scheme: dark) {
-        color: #d49;
-
-        background-color: #111;
-      }
-    }
-  }
-
   .fa-solid {
     margin-right: spacing.space(0.25);
   }

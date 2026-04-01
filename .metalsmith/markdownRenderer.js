@@ -141,13 +141,9 @@ markdownRenderer.code = function (code, infostring, escaped) {
     return code;
   }
 
-  if (lang === "plain") {
-    return `<pre class="tna-ds-pre" tabindex="-1">${code}</pre>\n`;
-  }
-
-  return `<pre class="tna-ds-pre" tabindex="-1"><code class="language-${escape(lang)}">${
+  return `<div class="tna-code-block"><pre class="tna-code-block__pre"><code class="language-${escape(lang)}">${
     escaped ? code : escape(code, true)
-  }</code></pre>\n`;
+  }</code></pre></div>\n`;
 };
 
 export default markdownRenderer;
