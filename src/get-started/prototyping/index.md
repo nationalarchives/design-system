@@ -41,7 +41,7 @@ Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to cr
 
 #### Example layout
 
-```html
+```js
 {% raw %}{% extends "nationalarchives/templates/layouts/_prototype-kit.njk" %}
 
 {% set theme = "dark" %}
