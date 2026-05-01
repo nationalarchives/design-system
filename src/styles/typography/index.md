@@ -125,10 +125,6 @@ Use `<code>` elements to show code-like text.
 
 ### Code blocks
 
-Code blocks can be syntax highlighted with [Prism.js](https://prismjs.com/).
-
-You will need to include additional CSS/SCSS and JavaScript files from TNA Frontend in order to use syntax highlighting.
-
 Use the HTML structure:
 
 ```html
@@ -140,5 +136,7 @@ Use the HTML structure:
 Add a `tna-code-block--copy` class to enable a "Copy code" button.
 
 Provide a `title` attribute to show a filename in a bar above the code.
+
+Code blocks can be syntax highlighted with [Prism.js](https://prismjs.com/).
 
 {{ example({ group: "styles", item: "typography", example: "code-block", html: true, nunjucks: false, size: "m" }) }}
