@@ -54,14 +54,9 @@
 
 {% block footer %}{% endblock %}
 {% block bodyEnd %}
-  <script>
-    window.Prism = window.Prism || {};
-    window.Prism.manual = true;
-  </script>
   <script src="/static/scripts/all.js"></script>
-  <script src="/static/scripts/code.js"></script>
+  <script src="/code.js"></script>
   <script>
     window.TNAFrontend.initAll();
-    window.TNAFrontendCode.init();
   </script>
 {% endblock %}

@@ -174,6 +174,7 @@ Metalsmith(__dirname)
       sourcemap: true,
       drop: ["debugger"],
       entries: {
+        code: "lib/code.js",
         index: "lib/index.js",
         sidebar: "lib/sidebar.js",
       },
