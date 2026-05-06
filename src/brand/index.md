@@ -93,6 +93,14 @@ To enable this, add the following CSS and JavaScript to your page. It will autom
       icon: "code"
     },
     {
+      id: "logo-svg-dark",
+      text: "The National Archives logo (dark)",
+      href: "/static/assets/images/tna-square-logo-dark.svg",
+      fileType: "SVG",
+      fileSize: "3 KB",
+      icon: "code"
+    },
+    {
       id: "logo-favicon",
       text: "The National Archives favicon",
       href: "/static/assets/images/favicon.ico",
@@ -105,7 +113,16 @@ To enable this, add the following CSS and JavaScript to your page. It will autom
       text: "The National Archives logo (rasterised)",
       href: "/static/assets/images/icon-1024x1024.png",
       fileType: "PNG",
-      fileSize: "51 KB",
+      fileSize: "43 KB",
+      fileExtent: "1024 x 1024px",
+      icon: "image"
+    },
+    {
+      id: "logo-png-dark",
+      text: "The National Archives logo (rasterised, dark)",
+      href: "/static/assets/images/icon-1024x1024-dark.png",
+      fileType: "PNG",
+      fileSize: "43 KB",
       fileExtent: "1024 x 1024px",
       icon: "image"
     }
