@@ -6,9 +6,11 @@ const markdownRenderer = new marked.Renderer();
 const slugify = (text) =>
   encodeURIComponent(
     text
+      .replace(/(&(#?)(\w+);)/g, "")
       .toLowerCase()
       .trim()
-      .replace(/[\s\.]/g, "-"),
+      .replace(/[\s\.\/]/g, "-")
+      .replace(/[^\w\d\-]/g, ""),
   );
 
 markdownRenderer.heading = function (text, level) {
@@ -22,6 +24,9 @@ markdownRenderer.heading = function (text, level) {
       break;
     case 3:
       headingSize = "m";
+      break;
+    case 4:
+      headingSize = "s";
       break;
   }
   const slug = slugify(text);
@@ -133,7 +138,11 @@ function escape(html, encode) {
 }
 
 markdownRenderer.code = function (code, infostring, escaped) {
-  const lang = (infostring || "").match(/^\S*/)?.[0];
+  const langAndName = (infostring || "").match(/^\S*/)?.[0];
+  const langNameRegex = /^(\w+)(:(.+))?$/;
+  const langAndNameMatch = langNameRegex.exec(langAndName);
+  const lang = langAndNameMatch?.[1];
+  const name = langAndNameMatch?.[3];
 
   code = code.replace(/\n$/, "") + "\n";
 
@@ -141,7 +150,7 @@ markdownRenderer.code = function (code, infostring, escaped) {
     return code;
   }
 
-  return `<div class="tna-code-block"><pre class="tna-code-block__pre"><code class="language-${escape(lang)}">${
+  return `<div class="tna-code-block tna-code-block--copy-"${name ? ` title="${escape(name)}"` : ""}><pre class="tna-code-block__pre"><code class="language-${escape(lang)}">${
     escaped ? code : escape(code, true)
   }</code></pre></div>\n`;
 };

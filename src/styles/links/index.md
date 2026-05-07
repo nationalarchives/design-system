@@ -16,7 +16,7 @@ If your link is at the end of a sentence or paragraph, make sure that the linked
 
 ## Colours
 
-Link colours on different background types and in different themes have been included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend).
+Link colours on different background types and in different themes have been included in [TNA Frontend](../../get-started/tna-frontend/).
 
 Black or white links can be used for components that appear on every page such as [breadcrumbs](../../components/breadcrumbs/) and the [footer](../../components/footer/) because users will be familiar with links in these locations.
 

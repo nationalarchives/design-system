@@ -1,7 +1,7 @@
 ---
 layout: collection-page-index.njk
 title: Get started
-description: Quickly and easily add National Archives styles and components to your projects.
+description: How to get started with National Archives styles and components in your projects.
 group: get-started
 order: 1
 priority: 0.8

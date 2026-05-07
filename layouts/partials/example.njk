@@ -21,12 +21,12 @@
 
     {% set accordionItems = [] %}
     {% if params.html %}
-    {% set accordionItems = (accordionItems.push({
-          title: "HTML",
-          body: '<div class="tna-code-block tna-code-block--copy">
-<pre class="tna-code-block__pre"><code class="language-html">' ~ (getHTMLCode(examplePath) | forceescape) ~ '</code></pre>
-        </div>'
-        }), accordionItems) %}
+      {% set accordionItems = (accordionItems.push({
+            title: "HTML",
+            body: '<div class="tna-code-block tna-code-block--copy">
+  <pre class="tna-code-block__pre"><code class="language-html">' ~ (getHTMLCode(examplePath) | forceescape) ~ '</code></pre>
+          </div>'
+          }), accordionItems) %}
     {% endif %}
     {% if params.nunjucks %}
     {% set accordionItems = (accordionItems.push({
@@ -39,24 +39,28 @@
                 ) ~ '<div class="tna-code-block tna-code-block--copy">
 <pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getNunjucksCode(examplePath) | forceescape) ~ '</code></pre>
         </div>'
-        }, {
-          title: "Jinja",
-          body: tnaWarning({
-            headingLevel: 1,
-            body: 'This is an experimental feature that outputs a Jinja template based on the Nunjucks example. Check the converted code for accuracy.'
-          }) ~ '<div class="tna-code-block tna-code-block--copy">
-<pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getJinjaCode(examplePath) | forceescape) ~ '</code></pre>
-        </div>'
         }), accordionItems) %}
+
+      {% if params.jinja !== false %}
+        {% set accordionItems = (accordionItems.push({
+              title: "Jinja",
+              body: tnaWarning({
+                headingLevel: nextHeadingLevel or 4,
+                body: 'This is an experimental feature that outputs a Jinja template based on the Nunjucks example. Check the converted code for accuracy.'
+              }) ~ '<div class="tna-code-block tna-code-block--copy">
+    <pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getJinjaCode(examplePath) | forceescape) ~ '</code></pre>
+            </div>'
+            }), accordionItems) %}
+      {% endif %}
     {% endif %}
     
     {% if accordionItems | length %}
-    {{ tnaAccordion({
-      itemHeadingLevel: nextHeadingLevel or 3,
-      items: accordionItems,
-      group: exampleRoot,
-      id: exampleId
-    }) }}
+      {{ tnaAccordion({
+        itemHeadingLevel: nextHeadingLevel or 3,
+        items: accordionItems,
+        group: exampleRoot,
+        id: exampleId
+      }) }}
     {% endif %}
   </section>
 {% endmacro %}

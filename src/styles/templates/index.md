@@ -10,7 +10,7 @@ subGroup: layout
 
 ## Base page template
 
-A template is included in [TNA Frontend](https://github.com/nationalarchives/tna-frontend) that has support for the blocks specified below.
+A template is included in [TNA Frontend](../../get-started/tna-frontend/) that has support for the blocks specified below.
 
 You can use this template in your prototypes or copy the structure into your production application.
 

@@ -1,24 +1,72 @@
 ---
 layout: collection-page.njk
 title: Prototyping
-description: Create and iterate on rich and responsive prototypes to test your assumptions.
+description: Create and iterate on prototypes to explore options and test your assumptions.
 group: get-started
 order: 1
 ---
 
 {% from "partials/example.njk" import example %}
 
-## Figma
+There are a few options for prototyping new services or features which range in fidelity.
 
-In the early stages, Figma can be used as a prototyping tool.
+## Sketching or whiteboard (low fidelity)
+
+Sketching is typically done with a pen and paper and is sometimes called paper prototyping. You can also use a collaborative tool such as Miro or Microsoft Whiteboard.
+
+Sketching is used to test designs early in the process.
+
+### Advantages
+
+- Quick and cheap.
+- Builds a design foundation.
+- Enables you to create, iterate and throw away ideas without getting invested.
+- You can focus on the flow and key concepts, not details.
+
+### Disadvantages
+
+- Paper prototyping is harder to share (and collaborate on) remotely.
+- Can be challenging to test with participants remotely.
+
+## Figma (high fidelity)
+
+In the early stages, Figma can be used as a prototyping tool to building user flows and making simple, clickable prototypes to show navigation.
 
 Create a copy of the [National Archives base Figma document](https://www.figma.com/file/ZkJT4CzafD7t5nU1qN8non/Desktop%2C-tablet-and-mobile?type=design&node-id=1%3A84&mode=design&t=6Yg92HAGeqPDDhNM-1) to start designing your pages.
 
-## HTML
+### Advantages
+
+- Fairly quick and easy.
+- No coding knowledge needed.
+- Enables the whole team to work together, including making and viewing comments.
+
+### Disadvantages
+
+- Interactions are quite limited.
+- Harder to present realistic data.
+- Cannot handle specific user testing, for example with assistive technology.
+- Cannot respond to data input in testing.
+- Not always easy to make responsive.
+
+## HTML (high fidelity)
 
 Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to create rich, interactive and responsive prototypes.
 
-[TNA Frontend](https://github.com/nationalarchives/tna-frontend) includes support for the GOV.UK Prototype Kit. You can use the supplied components and styles with the prototype kit to make prototypes that look like National Archives services.
+This allows user testing with real data and interactions, plus keyboard navigation and other assistive technologies.
+
+[TNA Frontend](../tna-frontend/) includes support for the GOV.UK Prototype Kit. You can use the supplied components and styles with the prototype kit to make prototypes that look like National Archives services.
+
+### Advantages
+
+- The team and stakeholders get a better sense of how a product will behave.
+- Responds to different devices and screen sizes.
+- Easier handover from design to development (and for working out if a design is feasible).
+
+### Disadvantages
+
+- Takes more time to build.
+- You need coding skills.
+- Harder to collect comments and feedback from the whole team.
 
 ### Create a new National Archives prototype
 
@@ -34,25 +82,30 @@ Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to cr
 ### Adding custom styles
 
 1. Create a new SCSS file in `app/assets/sass` called `custom.scss` (or whatever you prefer)
-1. Create a new layout in `app/views/layout` called `base.html` (or whatever you prefer) which extends the National Archives prototype kit layout
-1. Set a default `theme` (see [theme colours](../../styles/colours/#theme-colours)) and `themeAccent` (see [accent colours](../../styles/colours/#accent-colours))
-1. Link in your custom CSS file
-1. Ensure new pages extend your new layout with `{% raw %}{% extends "layouts/base.html" %}{% endraw %}`
+1. Create a new layout in `app/views/layouts` called `base.html` (or whatever you prefer) which extends the National Archives prototype kit layout
+1. Link your custom CSS file in the base layout
+1. Create new pages that extend your new base layout
 
-#### Example layout
-
-```js
-{% raw %}{% extends "nationalarchives/templates/layouts/_prototype-kit.njk" %}
-
-{% set theme = "dark" %}
-{% set themeAccent = "yellow" %}
-
-{% block pageTitle %}My Service - The National Archives{% endblock %}
+```js:app/views/layouts/base.html
+{% raw %}{% extends "nationalarchives/templates/prototype-kit/_base.njk" %}
 
 {% block stylesheets %}
   {{ super() }}
   <link href="/public/stylesheets/custom.css" rel="stylesheet" type="text/css" />
-{% endblock %}{% endraw %}
+{% endblock stylesheets %}{% endraw %}
+```
+
+```js:my-page.html
+{% raw %}{% extends "layouts/base.html" %}
+
+{% set pageTitle = 'My new page' %}
+{% set theme = 'system' %}
+{% set themeAccent = 'green' %}
+
+{% block content %}
+<p>Hello, world!</p>
+{% endblock content %}
+{% endraw %}
 ```
 
 ### Using the components in your prototype
@@ -61,4 +114,10 @@ The National Archives components can be included in your prototype using the tem
 
 Examples are given in the [components section](../../components/). Each component example shows all the Nunjucks options available to that component.
 
-{{ example({ group: "components", item: "button", example: "default", html: false, nunjucks: true, showNunjucksOptions: false, size: "xxs", noOpenInNewTab: true }) }}
+{{ example({ group: "components", item: "button", example: "default", html: false, nunjucks: true, showNunjucksOptions: false, jinja: false, size: "xxs", noOpenInNewTab: true }) }}
+
+### Custom HTML prototype
+
+Install and use [TNA Frontend](../tna-frontend/) to make a rich, HTML prototype using the framework of your choice.
+
+Read more about [how to install and use TNA Frontend](../production/).

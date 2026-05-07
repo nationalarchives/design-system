@@ -10,7 +10,7 @@ subGroup: layout
 
 Responsive breakpoints are referred to in relative size terms rather than specific devices such as "desktop", "tablet" and "mobile". This is because of the huge variation of devices available.
 
-[TNA Frontend](https://github.com/nationalarchives/tna-frontend) has definitions for four different device sizes:
+[TNA Frontend](../../get-started/tna-frontend/) has definitions for four different device sizes:
 
 | Device size                                      | Description                | Pixel width         |
 | ------------------------------------------------ | -------------------------- | ------------------- |

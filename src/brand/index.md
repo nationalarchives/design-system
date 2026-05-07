@@ -10,7 +10,7 @@ priority: 0.8
 
 ## Logo
 
-The HTML logo included with TNA Frontend can be used with a transparent or solid background.
+The HTML logo included with [TNA Frontend](../get-started/tna-frontend/) can be used with a transparent or solid background.
 
 {{ example({
   group: "brand",
