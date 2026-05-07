@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: TNA Frontend Jinja
-description: TNA Frontend Jinja provides Jinja2 templates for all the components and layouts in TNA Frontend.
+description: Jinja2 macros for all the components and layouts in TNA Frontend.
 group: get-started
 subGroup: tools
 order: 2

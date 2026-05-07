@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Required content
-description: Ensure the correct legal content is available in your service.
+description: Ensure your service includes all legally required content.
 group: content
 ---
 

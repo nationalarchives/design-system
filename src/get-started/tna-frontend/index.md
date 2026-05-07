@@ -1,13 +1,15 @@
 ---
 layout: collection-page.njk
 title: TNA Frontend
-description: TNA Frontend contains the code you need to start building user interfaces for National Archives platforms and services.
+description: The code you need to start building user interfaces for National Archives platforms and services.
 group: get-started
 subGroup: tools
 order: 1
 ---
 
 {% from "nationalarchives/components/accordion/macro.njk" import tnaAccordion %}
+
+TNA Frontend is an open source and standardised set of styles, components and layouts made for National Archives services. It is the source of truth for all global HTML, CSS and JavaScript across the National Archives.
 
 See the [TNA Frontend source code on GitHub](https://github.com/nationalarchives/tna-frontend).
 
