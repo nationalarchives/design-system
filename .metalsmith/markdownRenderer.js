@@ -150,9 +150,10 @@ markdownRenderer.code = function (code, infostring, escaped) {
     return code;
   }
 
-  return `<div class="tna-code-block tna-code-block--copy-"${name ? ` title="${escape(name)}"` : ""}><pre class="tna-code-block__pre"><code class="language-${escape(lang)}">${
-    escaped ? code : escape(code, true)
-  }</code></pre></div>\n`;
+  return `<div class="tna-code-block tna-code-block--copy-"${name ? ` title="${name}"` : ""}><pre class="tna-code-block__pre"><code class="language-${lang}">${escape(
+    code,
+    true,
+  )}</code></pre></div>\n`;
 };
 
 export default markdownRenderer;
