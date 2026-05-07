@@ -22,7 +22,7 @@ const escape = (input) => {
     "'": "&#39;",
   };
 
-  return input.replace(/[&<>"']/g, (ch) => escapeReplacements[ch]);
+  return input.replace(/[&<>"']/g, (ch) => escapeReplacements[ch] || ch);
 };
 
 markdownRenderer.heading = function (text, level) {
