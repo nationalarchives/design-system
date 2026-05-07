@@ -230,7 +230,8 @@ const nunjucksOptions = {
       return dictionary;
     },
     headingsList: function (content) {
-      const regex = /<h([1-6]) id="([\w\-]+)"[^>]+>\s*([\w\d\s\.\-]+)\s*</gm;
+      const regex =
+        /<h([1-6]) id="([\w\d\-]+)"[^>]+>\s*([\w\d\s\.\-\(\)\"'<>\[\]]+)\s*</gm;
       let headingsRaw = [];
       let tmp;
       while ((tmp = regex.exec(content)) !== null) {

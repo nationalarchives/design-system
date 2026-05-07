@@ -48,7 +48,7 @@ Do not add item hints to [small checkboxes](#small) or [inline checkboxes](#inli
 
 ## Single
 
-When there is only a single checkbox, it isn't rendered within a `<fieldset>`.
+When there is only a single checkbox, it isn’t rendered within a `<fieldset>`.
 
 The field label on a single checkbox is optional.
 

@@ -10,6 +10,7 @@ The Digital Services team at The National Archives (TNA) maintains the following
 - [National Archives Design System website](https://design-system.nationalarchives.gov.uk)
 - [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
 - [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
+- [TNA Frontend Jinja codebase](https://github.com/nationalarchives/tna-frontend-jinja)
 
 This page explains how the team works to ensure these products are accessible.
 
@@ -54,6 +55,8 @@ The TNA Frontend Storybook website at [nationalarchives.github.io/tna-frontend](
 
 The TNA Frontend codebase at [github.com/nationalarchives/tna-frontend](https://github.com/nationalarchives/tna-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
+The TNA Frontend Jinja codebase at [github.com/nationalarchives/tna-frontend](https://github.com/nationalarchives/tna-frontend-jinja) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
+
 ### Non-accessible content
 
 In this section, we only list non-accessible content that has been reported, verified and tracked in the following repositories:
@@ -61,6 +64,7 @@ In this section, we only list non-accessible content that has been reported, ver
 - [National Archives Design System website](https://design-system.nationalarchives.gov.uk)
 - [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
 - [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
+- [TNA Frontend Jinja codebase](https://github.com/nationalarchives/tna-frontend-jinja)
 
 #### Non-compliance with the accessibility regulations
 
@@ -116,6 +120,8 @@ The [National Archives Design System website](https://design-system.nationalarch
 The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
 The [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
+
+The [TNA Frontend Jinja codebase](https://github.com/nationalarchives/tna-frontend-jinja) was last tested internally for accessibility issues on <time datetime="2026-05-07">7 May 2026</time>.
 
 ### How the National Archives Design System team makes their websites accessible
 

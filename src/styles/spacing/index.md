@@ -12,7 +12,7 @@ subGroup: layout
 
 One spacing unit is defined as `16px` by default. All margins and paddings are based off this base unit.
 
-A top margin has been applied to some elements within [TNA Frontend](https://github.com/nationalarchives/tna-frontend) in order to space them evenly on a page.
+A top margin has been applied to some elements within [TNA Frontend](../../get-started/tna-frontend/) in order to space them evenly on a page.
 
 The common mixin `space-above` is used to apply a consistent `2` units (`32px`) margin to the top of elements such as:
 

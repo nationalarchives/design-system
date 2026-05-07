@@ -10,13 +10,13 @@ order: 3
 
 1. Avoid using cheesy graphics, generative AI, stock photography, icons and unnecessary animation to add visual interest.
 1. Enable more support for technologies that allow a pure browsing experience such as reader modes.
-1. Follow editorial and content guidelines and don't rely on AI to write copy.
+1. Follow editorial and content guidelines and don’t rely on AI to write copy.
 1. Don’t write titles that look like clickbait.
 1. Provide links and references to trusted sources.
 
 ## Grow trust
 
-1. Respect the user's choices, including their preference to remain anonymous.
+1. Respect the user’s choices, including their preference to remain anonymous.
 1. Track only with explicit consent and assume an incognito browsing experience is needed unless beneficial to the user to offer otherwise.
 1. Give users full control and place them in the driving seat.
 1. Provide transparency about the use of data.

@@ -34,4 +34,4 @@ Feel free to use these components in prototypes and live services with the inten
 - validated using fixtures to allow replication in other templating languages
 - tested for integration with the [GOV.UK Prototype Kit](/get-started/prototyping/#html)
 - added to the [TNA Frontend Storybook](https://nationalarchives.github.io/tna-frontend/) for reviewing and testing
-- added to the [TNA Frontend Jinja macros](https://github.com/nationalarchives/tna-frontend-jinja) package
+- added to the [TNA Frontend Jinja macros](../get-started/tna-frontend-jinja/) package

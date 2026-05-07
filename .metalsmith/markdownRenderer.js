@@ -6,10 +6,24 @@ const markdownRenderer = new marked.Renderer();
 const slugify = (text) =>
   encodeURIComponent(
     text
+      .replace(/(&(#?)(\w+);)/g, "")
       .toLowerCase()
       .trim()
-      .replace(/[\s\.]/g, "-"),
+      .replace(/[\s\.\/]/g, "-")
+      .replace(/[^\w\d\-]/g, ""),
   );
+
+const escape = (input) => {
+  const escapeReplacements = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  };
+
+  return input.replace(/[&<>"']/g, (ch) => escapeReplacements[ch] || ch);
+};
 
 markdownRenderer.heading = function (text, level) {
   let headingSize = "s";
@@ -26,9 +40,10 @@ markdownRenderer.heading = function (text, level) {
   }
   const slug = slugify(text);
   return level === 1
-    ? `<h${level} class="tna-heading-${headingSize}">
-  ${text}
-</h${level}>`
+    ? `
+  <h${level} class="tna-heading-${headingSize}">
+    ${text}
+  </h${level}>`
     : `
   <h${level} id="${slug}" class="tna-heading-${headingSize} tna-heading--no-link-arrow">
     ${text} <a href="#${slug}" aria-hidden="true" title="Jump to heading: ${text.replace(
@@ -105,35 +120,12 @@ markdownRenderer.tablerow = function (row) {
     </tr>`;
 };
 
-const escapeTest = /[&<>"']/;
-const escapeReplace = new RegExp(escapeTest.source, "g");
-const escapeTestNoEncode = /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/;
-const escapeReplaceNoEncode = new RegExp(escapeTestNoEncode.source, "g");
-const escapeReplacements = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "'": "&#39;",
-};
-const getEscapeReplacement = (ch) => escapeReplacements[ch];
-
-function escape(html, encode) {
-  if (encode) {
-    if (escapeTest.test(html)) {
-      return html.replace(escapeReplace, getEscapeReplacement);
-    }
-  } else {
-    if (escapeTestNoEncode.test(html)) {
-      return html.replace(escapeReplaceNoEncode, getEscapeReplacement);
-    }
-  }
-
-  return html;
-}
-
 markdownRenderer.code = function (code, infostring, escaped) {
-  const lang = (infostring || "").match(/^\S*/)?.[0];
+  const langAndName = (infostring || "").match(/^\S*/)?.[0];
+  const langNameRegex = /^(\w+)(:(.+))?$/;
+  const langAndNameMatch = langNameRegex.exec(langAndName);
+  const lang = langAndNameMatch?.[1];
+  const name = langAndNameMatch?.[3];
 
   code = code.replace(/\n$/, "") + "\n";
 
@@ -141,9 +133,9 @@ markdownRenderer.code = function (code, infostring, escaped) {
     return code;
   }
 
-  return `<div class="tna-code-block"><pre class="tna-code-block__pre"><code class="language-${escape(lang)}">${
-    escaped ? code : escape(code, true)
-  }</code></pre></div>\n`;
+  return `<div class="tna-code-block tna-code-block--copy-"${name ? ` title="${escape(name)}"` : ""}><pre class="tna-code-block__pre"><code class="language-${escape(lang)}">${escape(
+    code,
+  )}</code></pre></div>\n`;
 };
 
 export default markdownRenderer;
