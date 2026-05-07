@@ -50,11 +50,7 @@ Create a copy of the [National Archives base Figma document](https://www.figma.c
 
 ## HTML (high fidelity)
 
-Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to create rich, interactive and responsive prototypes.
-
-This allows user testing with real data and interactions, plus keyboard navigation and other assistive technologies.
-
-[TNA Frontend](../tna-frontend/) includes support for the GOV.UK Prototype Kit. You can use the supplied components and styles with the prototype kit to make prototypes that look like National Archives services.
+HTML prototypes allow user testing with real data and interactions, plus keyboard navigation and other assistive technologies.
 
 ### Advantages
 
@@ -68,7 +64,11 @@ This allows user testing with real data and interactions, plus keyboard navigati
 - You need coding skills.
 - Harder to collect comments and feedback from the whole team.
 
-### Create a new National Archives prototype
+### Prototyping with the GOV.UK Prototype Kit
+
+Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to create rich, interactive and responsive prototypes.
+
+[TNA Frontend](../tna-frontend/) includes support for the GOV.UK Prototype Kit. You can use the supplied components and styles with the prototype kit to make prototypes that look like National Archives services.
 
 1. Create an empty directory `mkdir my-prototype`
 1. Enter the new directory `cd my-prototype`
@@ -79,12 +79,18 @@ This allows user testing with real data and interactions, plus keyboard navigati
 
 [![Creating a new prototype](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
 
-### Adding custom styles
+#### Adding custom styles
 
-1. Create a new SCSS file in `app/assets/sass` called `custom.scss` (or whatever you prefer)
-1. Create a new layout in `app/views/layouts` called `base.html` (or whatever you prefer) which extends the National Archives prototype kit layout
-1. Link your custom CSS file in the base layout
+1. Create a new SCSS file in `app/assets/sass` called `custom.scss`
+1. Create a new layout in `app/views/layouts` called `base.html`, extending the base National Archives prototype kit layout
+1. Link your custom CSS file in the base layout in the `stylesheets` block
 1. Create new pages that extend your new base layout
+
+```scss:app/assets/sass/custom.scss
+* {
+  outline: 2px #f0a solid !important;
+}
+```
 
 ```js:app/views/layouts/base.html
 {% raw %}{% extends "nationalarchives/templates/prototype-kit/_base.njk" %}
@@ -108,7 +114,7 @@ This allows user testing with real data and interactions, plus keyboard navigati
 {% endraw %}
 ```
 
-### Using the components in your prototype
+#### Using the components in your prototype
 
 The National Archives components can be included in your prototype using the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 

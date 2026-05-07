@@ -373,7 +373,7 @@ TNA Frontend variables are defined in `src/nationalarchives/variables`.
 
 Lots of variables can be modified but some are fixed, such as our brand colours.
 
-An example fixed variable is `$relative-1rem-px` where we set the value of `1rem` to `16px` which makes it easier to define widths as a function of `1rem` as we mostly work on a 4px grid:
+An example fixed variable is `$relative-1rem-px` where we set the value of `1rem` to `16px` which makes it easier to define widths as a function of `1rem` as we mostly work on a 4px grid.
 
 | Pixels | REM         |
 | ------ | ----------- |
@@ -386,6 +386,8 @@ An example fixed variable is `$relative-1rem-px` where we set the value of `1rem
 | `64px` | `4rem`      |
 
 An example of a variable that can be modified is `$body-font-size-px` which we set to `19px` by default. This font size might not be right for all services so we have allowed it to be modified.
+
+See [customising CSS variables](#customising-css-variables) on how to change these variables.
 
 ### Tools
 
