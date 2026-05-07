@@ -47,7 +47,7 @@ You do not need to use a lead-in line for numbered lists. Items in a numbered li
 
 ## Nested lists
 
-Nested ordered and unordered lists don't need their children to redeclare the `tna-ul` or `tna-ol` classes.
+Nested ordered and unordered lists don’t need their children to redeclare the `tna-ul` or `tna-ol` classes.
 
 {{ example({ group: "styles", item: "lists", example: "nested-lists", html: true, nunjucks: false, size: "xl" }) }}
 

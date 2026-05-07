@@ -34,5 +34,5 @@ The search field component does not have the ability to show errors like other i
 
 Use these solutions for handing user input:
 
-- When nothing has been entered, return either no results or all results, depending on your service needs. This field shouldn't need to require a value.
+- When nothing has been entered, return either no results or all results, depending on your service needs. This field shouldn’t need to require a value.
 - If the user enters an invalid search term (for example a broken query with unbalanced brackets) then show a warning where the results would normally be to explain the issue.

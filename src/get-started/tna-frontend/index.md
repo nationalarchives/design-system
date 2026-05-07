@@ -202,7 +202,7 @@ initAll();
 
 TNA Frontend comes with a small cookie library. You can use it to check acceptance of the standard National Archives cookie preferences and set your own cookies.
 
-Read about the [required cookie policies for National Archives websites](../../content/required-content/#cookies). The cookie library can help you manage the user's preferences for our policies.
+Read about the [required cookie policies for National Archives websites](../../content/required-content/#cookies). The cookie library can help you manage the user’s preferences for our policies.
 
 ```js
 import { Cookies } from "@nationalarchives/frontend/nationalarchives/lib/cookies.mjs";
@@ -400,7 +400,7 @@ They can join up tools to make larger, more useful elements.
 
 ### Utilities
 
-The utilities in `src/nationalarchives/utilities` are some global styles that aren't associated with a specific component.
+The utilities in `src/nationalarchives/utilities` are some global styles that aren’t associated with a specific component.
 
 This layer is where we define some general purpose elements such as:
 
@@ -428,13 +428,13 @@ Utilities should not implement any `!important` rules.
 
 The most prominent layer of styling, the components in `src/nationalarchives/components` should use the tools already defined.
 
-Components shouldn't use variables directly. They shouldn't use static values for colour unless the colour of that component will never change, for example the message component which is always yellow.
+Components shouldn’t use variables directly. They shouldn’t use static values for colour unless the colour of that component will never change, for example the message component which is always yellow.
 
 Some components may use utilities such as headings. Where these styles have already been defined, they should not be redefined. The heading in a cookie banner should use the existing `tna-heading` and `tna-heading--m` styles that already exist rather than implimenting its own.
 
 Components should not implement any `!important` rules. There are exceptions such as the skip link that needs to be visually hidden in a way that it is still available for someone navigating a site with a keyboard.
 
-Components should not care about the context or layout within which they are used. As an example, a breadcrumb _could_ be placed within a card or a footer element although in reality we wouldn't allow this.
+Components should not care about the context or layout within which they are used. As an example, a breadcrumb _could_ be placed within a card or a footer element although in reality we wouldn’t allow this.
 
 ### Overrides
 

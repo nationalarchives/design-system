@@ -22,7 +22,7 @@ To ensure good accessibility, make sure to add some attributes to the wrapper el
 
 - `tabindex="0"` - this will ensure the table can be focused on and then scrolled using a keyboard
 - `role="region"` - because users need to be able to focus on the table, this identifies it as a significant region of the page
-- `aria-labelledby="[table caption id]"` - this should be the `id` of the table's `<caption>` element which will describe the scrollable region
+- `aria-labelledby="[table caption id]"` - this should be the `id` of the table’s `<caption>` element which will describe the scrollable region
 
 If JavaScript is available, the caption will be suffixed with `(scroll to see more)` only when the table is too wide for the screen to help screen readers.
 

@@ -64,6 +64,6 @@ Do not show the previous page link on the first page — and do not show the nex
 
 ## Previous and next pages
 
-Show only a previous and next with no numbers if your pagination isn't part of a numbered sequence.
+Show only a previous and next with no numbers if your pagination isn’t part of a numbered sequence.
 
 {{ example({ group: "components", item: "pagination", example: "previous-next", html: true, nunjucks: true, size: "xs" }) }}

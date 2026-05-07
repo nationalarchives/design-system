@@ -50,7 +50,7 @@ Buttons can contain icons. Read more about [using icons in TNA services](../../s
 
 Icons can be used on either the left or right of the button. The default alignment is to the left.
 
-The set of icons available by default is [Font Awesome's free classic icons](https://fontawesome.com/search?o=r&ic=free&ip=classic). You can set the `icon` parameter by using the Font Awesome icon name, for example "chevron-left" or "heart".
+The set of icons available by default is [Font Awesome’s free classic icons](https://fontawesome.com/search?o=r&ic=free&ip=classic). You can set the `icon` parameter by using the Font Awesome icon name, for example "chevron-left" or "heart".
 
 {{ example({ group: "components", item: "button", example: "icon", html: true, nunjucks: true, size: "xxxs" }, 4) }}
 
