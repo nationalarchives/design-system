@@ -304,6 +304,7 @@ The default cookie library settings can be set using attributes added to the `<h
 | `data-tna-cookies-insecure`     | If `true`, set insecure cookies (able to use over HTTP) | `false`                    |
 | `data-tna-cookies-policies-key` | The name of the cookie to save the user preferences to  | `cookies_policy`           |
 | `data-tna-cookies-default-age`  | The default age of a cookie in seconds                  | `31536000` (365 days)      |
+| {caption: Cookie HTML attributes} |
 
 You can also pass these into the object instantiation. These will overwrite the values set in the `<html>` element.
 
