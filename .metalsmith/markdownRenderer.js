@@ -14,8 +14,6 @@ const slugify = (text) =>
   );
 
 const escape = (input) => {
-  const escapeTest = /[&<>"']/;
-  const escapeReplace = new RegExp(escapeTest.source, "g");
   const escapeReplacements = {
     "&": "&amp;",
     "<": "&lt;",
@@ -23,13 +21,8 @@ const escape = (input) => {
     '"': "&quot;",
     "'": "&#39;",
   };
-  const getEscapeReplacement = (ch) => escapeReplacements[ch];
 
-  if (escapeTest.test(input)) {
-    return input.replace(escapeReplace, getEscapeReplacement);
-  }
-
-  return input;
+  return input.replace(/[&<>"']/g, (ch) => escapeReplacements[ch]);
 };
 
 markdownRenderer.heading = function (text, level) {
