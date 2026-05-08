@@ -79,7 +79,9 @@ With Python services, it is recommended to use the [Jinja2](https://jinja.pallet
 
 ## CSS
 
-Include `nationalarchives/all.scss` in your root SCSS file. This will allow you to customise or extend TNA Frontend.
+TNA Frontend CSS is built using [SCSS](https://sass-lang.com/).
+
+Include `nationalarchives/all.scss` in your application’s root SCSS file. This will allow you to customise or extend TNA Frontend.
 
 ```scss:my-service.scss
 @use "@nationalarchives/frontend/nationalarchives/all";
@@ -120,7 +122,7 @@ Any of the variables in the [`variables` directory](https://github.com/nationala
 
 ### Only using some components
 
-To reduce your CSS file size, you can choose which components are included.
+To reduce your CSS file size, you can choose which [components](../../components/) are included.
 
 ```scss:my-service.scss
 // Include global utilities (such as typography and the grid system)
@@ -200,7 +202,7 @@ import { initAll } from "@nationalarchives/frontend/nationalarchives/all.mjs";
 initAll();
 ```
 
-### Cookies library
+### Cookie library
 
 TNA Frontend comes with a small cookie library. You can use it to check acceptance of the standard National Archives cookie preferences and set your own cookies.
 
@@ -232,11 +234,13 @@ cookies.on("changePolicy", (data) => {
   }
 });
 
+// Accept a policy
 document.getElementById("accept-usage-cookies-button")
   .addEventListener("click", function() {
     cookies.acceptPolicy("usage");
   });
 
+// Accept all policies
 document.getElementById("accept-all-cookies-button")
   .addEventListener("click", function() {
     cookies.acceptAllPolicies();
@@ -251,6 +255,9 @@ The cookie library can also help you write other cookies to the browser.
 import { Cookies } from "@nationalarchives/frontend/nationalarchives/lib/cookies.mjs";
 
 const cookies = new Cookies();
+
+// Get all cookies
+const all = cookies.all;
 
 // Check for the existance of a cookie
 const exists = cookies.exists("my-cookie");
@@ -359,16 +366,11 @@ TNA Frontend includes a favicon. To use it, copy the [assets/images/favicon.ico]
 
 ## Structure
 
-The layers of the TNA Frontend SCSS library is built as:
+TNA Frontend SCSS is built on layers.
 
-1. [Variables](#variables)
-1. [Tools](#tools)
-1. [Libraries](#libraries)/[Utilities](#utilities)
-1. [Components](#components)
-1. [Overrides](#overrides)
 
-### Variables
 
+{% set structure_variables %}
 TNA Frontend variables are defined in `src/nationalarchives/variables`.
 
 Lots of variables can be modified but some are fixed, such as our brand colours.
@@ -388,23 +390,29 @@ An example fixed variable is `$relative-1rem-px` where we set the value of `1rem
 An example of a variable that can be modified is `$body-font-size-px` which we set to `19px` by default. This font size might not be right for all services so we have allowed it to be modified.
 
 See [customising CSS variables](#customising-css-variables) on how to change these variables.
+{% endset %}
 
-### Tools
 
+
+{% set structure_tools %}
 The tools provided are reusable `@mixin` and `@function` blocks to make writing styles easier. They are defined in `src/nationalarchives/tools`.
 
 Tools rely directly on variables and can be used throughout the frontend library.
 
 As an exmaple, `colour-font()` will apply a font colour in a way that should work for all browsers and takes into consideration the light/dark theme used.
+{% endset %}
 
-### Libraries
 
+
+{% set structure_libraries %}
 The libraries in `src/nationalarchives/lib` are a mix of third party libraries as well as some National Archives ones.
 
 They can join up tools to make larger, more useful elements.
+{% endset %}
 
-### Utilities
 
+
+{% set structure_utilities %}
 The utilities in `src/nationalarchives/utilities` are some global styles that aren’t associated with a specific component.
 
 This layer is where we define some general purpose elements such as:
@@ -428,9 +436,11 @@ There are also some classless elements that are styled at this level:
 - `<hr>` elements
 
 Utilities should not implement any `!important` rules.
+{% endset %}
 
-### Components
 
+
+{% set structure_components %}
 The most prominent layer of styling, the components in `src/nationalarchives/components` should use the tools already defined.
 
 Components shouldn’t use variables directly. They shouldn’t use static values for colour unless the colour of that component will never change, for example the message component which is always yellow.
@@ -439,14 +449,53 @@ Some components may use utilities such as headings. Where these styles have alre
 
 Components should not implement any `!important` rules. There are exceptions such as the skip link that needs to be visually hidden in a way that it is still available for someone navigating a site with a keyboard.
 
-Components should not care about the context or layout within which they are used. As an example, a breadcrumb _could_ be placed within a card or a footer element although in reality we wouldn’t allow this.
+Components should not care about the context or layout within which they are used. As an example, a breadcrumb _could_ be placed within a card or a footer element although in reality we wouldn’t do this.
+{% endset %}
 
-### Overrides
 
+
+{% set structure_overrides %}
 Overrides start with `tna-!--` and can only be used in HTML classes. They have `!important` rules.
 
 Examples of overrides are:
 
-- spacing (margin, padding etc.)
+- [spacing](../../styles/spacing/) (margin, padding etc.)
 - no focus style (`.tna-!--no-focus-style`) for items such as the target element of a skip link
 - visibly hidden content (used to add extra descriptions which appear for screenreaders only)
+{% endset %}
+
+
+
+{{ tnaAccordion({
+  itemHeadingLevel: 3,
+  items: [
+    {
+      title: "1. Variables",
+      body: structure_variables
+    },
+    {
+      title: "2. Tools",
+      body: structure_tools
+    },
+    {
+      title: "3. Libraries",
+      body: structure_libraries
+    },
+    {
+      title: "4. Utilities",
+      body: structure_utilities
+    },
+    {
+      title: "5. Components",
+      body: structure_components
+    },
+    {
+      title: "6. Overrides",
+      body: structure_overrides
+    }
+  ],
+  id: "tna-frontend-structure",
+  toggleAllButton: {
+    enabled: true
+  }
+}) }}

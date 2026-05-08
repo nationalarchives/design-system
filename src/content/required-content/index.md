@@ -68,7 +68,7 @@ If your service honors all of these preferences and uses the global domain (`.na
 
 ### TNA Frontend cookie library
 
-TNA Frontend comes with a [cookie library](../../get-started/tna-frontend/#cookies-library) that allows you to validate the user’s cookie preferences and perform actions once policies have been accepted or rejected.
+TNA Frontend comes with a [cookie library](../../get-started/tna-frontend/#cookie-library) that allows you to validate the user’s cookie preferences and perform actions once policies have been accepted or rejected.
 
 ### Service-specific cookies
 

@@ -1,6 +1,5 @@
+@use "@nationalarchives/frontend/nationalarchives/tools/a11y";
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
-@use "@nationalarchives/frontend/nationalarchives/tools/media";
-@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 
 p:has(+ p.tna-\!--no-margin-top) {
   &,
@@ -19,4 +18,16 @@ p:has(+ p.tna-\!--no-margin-top) {
 
 .tna-cookie-banner--demo {
   display: block !important;
+}
+
+.tna-focus-example {
+  @include a11y.focus-outline;
+}
+
+.click-parent {
+  &:hover {
+    box-shadow: 0 0 0 3px colour.colour-var("link");
+  }
+
+  @include a11y.faux-full-outline("a");
 }
