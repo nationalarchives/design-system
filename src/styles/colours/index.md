@@ -99,7 +99,7 @@ TNA Frontend currently only supports the `prefers-contrast` values of `no-prefer
 
 The colour tools from TNA Frontend come with a mixin for high-contrast which enables you to add styles when high contrast mode is enabled:
 
-```css
+```scss
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 
 .my-component {
@@ -190,6 +190,50 @@ The appropriate colours for all child elements such as text and links will also 
 
 > On dark themes, a light accent block will change to an [accent block](#accent).
 
+## Using colours in SCSS
+
+[TNA Frontend](../../get-started/tna-frontend/) includes tools for using the colours available in the web palette.
+
+```scss
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+
+div {
+  // Colour text using a variable
+  @include colour.colour-font("font-light");
+
+  // Colour the background using a variable
+  @include colour.colour-background("contrast-background");
+  // ...or using a brand colour
+  @include colour.colour-background-brand("pink");
+
+  // Apply a coloured border using a variable
+  @include colour.colour-border("keyline-dark", 1px);
+  // ...or apply it to only one side
+  @include colour.colour-border("keyline-dark", 1px, solid, top);
+
+  // Colour an outline using a variable
+  @include colour.colour-outline("keyline", 1px);
+
+  // Apply a fill colour using a variable
+  @include colour.colour-fill("font-dark", 1px);
+
+  // Add a thick keyline border
+  @include colour.thick-keyline();
+  // ...or use the darker keyline
+  @include colour.thick-keyline-dark();
+  // ...or the current accent colour
+  @include colour.thick-keyline-accent();
+  // ...or the error colour
+  @include colour.thick-keyline-error();
+  // ...or a brand colour
+  @include colour.thick-keyline-brand("", "pink");
+  // Apply it to just one side (works on all "thick-keyline" variants)
+  @include colour.thick-keyline(left);
+  // ...or make it even thicker (works on all "thick-keyline" variants)
+  @include colour.thick-keyline(left, true);
+}
+```
+
 ## Colour contrast
 
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
@@ -208,13 +252,3 @@ Check colour combinations of various different visual impairments with [WhoCanUs
 Don’t rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
 
 For example, adding an outline to a focused button or link is good but might not create enough contrast with the background to be able to be seen clearly. Consider changing the size of any text decorations (such as underlines) or changing the border and background colours to create a larger change in contrast between them.
-
-## Using colours in SCSS
-
-```scss
-@use "@nationalarchives/frontend/nationalarchives/tools/colour";
-
-p {
-  @include colour.colour-font("font-light");
-}
-```
