@@ -36,17 +36,21 @@ Always use the provided TNA colour palette.
 
 ### Extra web colour palette
 
-| Colour                                                                       | Light theme                                                                         | Dark theme                                                                          |
-| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Page background                                                              | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4`     | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223`     |
-| Tinted background                                                            | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6`     | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334`     |
-| Contrasting background                                                       | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e`     | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112`     |
-| Base font                                                                    | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338`     | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff`     |
-| Keylines                                                                     | <span class="tna-ds-colour-swatch" style="background:#26262a40"></span> `#26262a40` | <span class="tna-ds-colour-swatch" style="background:#ffffff40"></span> `#ffffff40` |
-| Dark keylines                                                                | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a`     | <span class="tna-ds-colour-swatch" style="background:#ffffffbf"></span> `#ffffffbf` |
-| Links                                                                        | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8`     | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff`     |
-| Visited links                                                                | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92`     | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff`     |
-| {caption: Extra colours for web use in the National Archives colour palette} |
+| Colour                                                 | Light theme                                                                         | Dark theme                                                                          |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Page background                                        | <span class="tna-ds-colour-swatch" style="background:#f4f4f4"></span> `#f4f4f4`     | <span class="tna-ds-colour-swatch" style="background:#212223"></span> `#212223`     |
+| Tinted background                                      | <span class="tna-ds-colour-swatch" style="background:#d9d9d6"></span> `#d9d9d6`     | <span class="tna-ds-colour-swatch" style="background:#323334"></span> `#323334`     |
+| Contrast background                                    | <span class="tna-ds-colour-swatch" style="background:#1e1e1e"></span> `#1e1e1e`     | <span class="tna-ds-colour-swatch" style="background:#101112"></span> `#101112`     |
+| Light font                                             | <span class="tna-ds-colour-swatch" style="background:#01010194"></span> `#01010194` | <span class="tna-ds-colour-swatch" style="background:#ffffffa6"></span> `#ffffffa6` |
+| Base font                                              | <span class="tna-ds-colour-swatch" style="background:#343338"></span> `#343338`     | <span class="tna-ds-colour-swatch" style="background:#fffffff2"></span> `#fffffff2` |
+| Dark font                                              | <span class="tna-ds-colour-swatch" style="background:#010101"></span> `#010101`     | <span class="tna-ds-colour-swatch" style="background:#ffffff"></span> `#ffffff`     |
+| Keyline                                                | <span class="tna-ds-colour-swatch" style="background:#26262a40"></span> `#26262a40` | <span class="tna-ds-colour-swatch" style="background:#ffffff40"></span> `#ffffff40` |
+| Dark keyline                                           | <span class="tna-ds-colour-swatch" style="background:#26262a"></span> `#26262a`     | <span class="tna-ds-colour-swatch" style="background:#ffffffbf"></span> `#ffffffbf` |
+| Link                                                   | <span class="tna-ds-colour-swatch" style="background:#0062a8"></span> `#0062a8`     | <span class="tna-ds-colour-swatch" style="background:#00b0ff"></span> `#00b0ff`     |
+| Visited link                                           | <span class="tna-ds-colour-swatch" style="background:#4c2c92"></span> `#4c2c92`     | <span class="tna-ds-colour-swatch" style="background:#aa88ff"></span> `#aa88ff`     |
+| Form error border                                      | <span class="tna-ds-colour-swatch" style="background:#c20000"></span> `#c20000`     | <span class="tna-ds-colour-swatch" style="background:#ff0000"></span> `#ff0000`     |
+| Form error text                                        | <span class="tna-ds-colour-swatch" style="background:#c20000"></span> `#c20000`     | <span class="tna-ds-colour-swatch" style="background:#ff6b6b"></span> `#ff6b6b`     |
+| {caption: Extra National Archives colours for web use} |
 
 Ou full list of web colours can be found in the [colour variables for TNA Frontend](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_colour.scss).
 
@@ -204,3 +208,13 @@ Check colour combinations of various different visual impairments with [WhoCanUs
 Don’t rely on using colour alone to indicate interactivity with elements and components. Interactions such as hovering and focusing should utilise a change of shape.
 
 For example, adding an outline to a focused button or link is good but might not create enough contrast with the background to be able to be seen clearly. Consider changing the size of any text decorations (such as underlines) or changing the border and background colours to create a larger change in contrast between them.
+
+## Using colours in SCSS
+
+```scss
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+
+p {
+  @include colour.colour-font("font-light");
+}
+```
