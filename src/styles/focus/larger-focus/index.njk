@@ -1,0 +1,26 @@
+---
+title: Larger element focus states
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/button/macro.njk" import tnaButton %}
+
+<div class="tna-container tna-!--padding-bottom-m">
+  <div class="tna-column tna-column--width-1-2 tna-column--full-tiny tna-!--margin-top-m">
+    <div class="tna-aside tna-aside--tight tna-background-tint">
+      <h2 class="tna-heading-s">
+        <a href="#" class="tna-link--no-visited-state">Normal link</a>
+      </h2>
+      <p>By default, the focus state of an element is only applied to the element itself. This means that the hit area of the focus state is limited to the text of a link or the content of a button.</p>
+    </div>
+  </div>
+  <div class="tna-column tna-column--width-1-2 tna-column--full-tiny tna-!--margin-top-m">
+    <div class="tna-aside tna-aside--tight tna-background-tint click-parent">
+      <h2 class="tna-heading-s">
+        <a href="#" class="tna-link--no-visited-state">Link with larger hit area</a>
+      </h2>
+      <p>The focus state of an element can be applied to a larger area around the element to increase the hit area of the element and make it easier for users to interact with the element.</p>
+    </div>
+  </div>
+</div>
