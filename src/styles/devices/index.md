@@ -24,7 +24,7 @@ Responsive breakpoints are referred to in relative size terms rather than specif
 
 Use the provided media tools from TNA Frontend to help you with media queries.
 
-```css
+```scss
 @use "@nationalarchives/frontend/nationalarchives/tools/media";
 
 .my-div {
