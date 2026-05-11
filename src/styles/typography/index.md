@@ -7,7 +7,6 @@ subGroup: content
 # subGroupOrder: 1
 ---
 
-{% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 {% from "partials/example.njk" import example %}
 
 ## Headings
@@ -110,33 +109,10 @@ Chips can be presented in a list format with a [chip list](../lists/#chip-lists)
 
 ## Code
 
-{{ tnaWarning({
-  headingLevel: 3,
-  body: "When displaying code, ensure that it is properly escaped to avoid potential security vulnerabilities."
-}) }}
-
-Both Nunjucks and Jinja have the ability to autoescape template content and both enable the option by default. See [Autoescaping in Nunjucks](https://mozilla.github.io/nunjucks/api.html#autoescaping) and [Autoescaping in Jinja](https://jinja.palletsprojects.com/en/stable/api/#autoescaping).
+For blocks of code, use the [code block component](../../components/code-block/).
 
 ### Inline code
 
 Use `<code>` elements to show code-like text.
 
 {{ example({ group: "styles", item: "typography", example: "inline-code", html: true, nunjucks: false, size: "s" }) }}
-
-### Code blocks
-
-Use the HTML structure:
-
-```html
-<div class="tna-code-block">
-  <pre class="tna-code-block__pre"><code class="language-xxxx">...</code></pre>
-</div>
-```
-
-Add a `tna-code-block--copy` class to enable a "Copy code" button.
-
-Provide a `title` attribute to show a filename in a bar above the code.
-
-Code blocks can be syntax highlighted with [Prism.js](https://prismjs.com/).
-
-{{ example({ group: "styles", item: "typography", example: "code-block", html: true, nunjucks: false, size: "m" }) }}

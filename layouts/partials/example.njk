@@ -1,4 +1,5 @@
 {%- from "nationalarchives/components/accordion/macro.njk" import tnaAccordion -%}
+{%- from "nationalarchives/components/code-block/macro.njk" import tnaCodeBlock -%}
 {%- from "nationalarchives/components/details/macro.njk" import tnaDetails -%}
 {%- from "nationalarchives/components/warning/macro.njk" import tnaWarning -%}
 
@@ -23,9 +24,11 @@
     {% if params.html %}
       {% set accordionItems = (accordionItems.push({
             title: "HTML",
-            body: '<div class="tna-code-block tna-code-block--copy">
-  <pre class="tna-code-block__pre"><code class="language-html">' ~ (getHTMLCode(examplePath) | forceescape) ~ '</code></pre>
-          </div>'
+            body: tnaCodeBlock({
+              language: "html",
+              code: getHTMLCode(examplePath) | forceescape,
+              copy: true
+            })
           }), accordionItems) %}
     {% endif %}
     {% if params.nunjucks %}
@@ -36,9 +39,11 @@
                     title: "Nunjucks options",
                     body: exampleOptions(params, exampleId)
                   }) if params.showNunjucksOptions !== false else ''
-                ) ~ '<div class="tna-code-block tna-code-block--copy">
-<pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getNunjucksCode(examplePath) | forceescape) ~ '</code></pre>
-        </div>'
+                ) ~ tnaCodeBlock({
+                  language: "javascript",
+                  code: getNunjucksCode(examplePath) | forceescape,
+                  copy: true
+                })
         }), accordionItems) %}
 
       {% if params.jinja !== false %}
@@ -47,9 +52,11 @@
               body: tnaWarning({
                 headingLevel: nextHeadingLevel or 4,
                 body: 'This is an experimental feature that outputs a Jinja template based on the Nunjucks example. Check the converted code for accuracy.'
-              }) ~ '<div class="tna-code-block tna-code-block--copy">
-    <pre class="tna-code-block__pre"><code class="language-javascript">' ~ (getJinjaCode(examplePath) | forceescape) ~ '</code></pre>
-            </div>'
+              }) ~ tnaCodeBlock({
+                language: "javascript",
+                code: getJinjaCode(examplePath) | forceescape,
+                copy: true
+              })
             }), accordionItems) %}
       {% endif %}
     {% endif %}
