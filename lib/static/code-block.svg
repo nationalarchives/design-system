@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" style="fill: rgb(217, 217, 214);"></rect>
+  <rect y="50" width="200" height="100" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214); stroke-width: 1;" x="50"></rect>
+  <rect y="50" width="200" height="12" style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(38, 38, 42); stroke-width: 1;" x="50"></rect>
+  <polyline style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214); stroke-width: 4;" points="115 86 135 106 115 126"></polyline>
+  <line style="paint-order: fill; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(38, 38, 42); fill: rgb(217, 217, 214); stroke-width: 4;" x1="145" y1="126" x2="185" y2="126"></line>
+</svg>

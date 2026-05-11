@@ -3,9 +3,9 @@ layout: collection-page.njk
 title: Code block
 description: Display blocks of code for documentation purposes.
 group: components
-cardImage: /select.svg
+cardImage: /code-block.svg
 phase: to-be-reviewed
-statusTestedWithoutJavaScript: 0
+statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 1
