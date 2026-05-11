@@ -9,6 +9,7 @@
 @use "@nationalarchives/frontend/nationalarchives/components/button";
 @use "@nationalarchives/frontend/nationalarchives/components/card";
 // @use "@nationalarchives/frontend/nationalarchives/components/checkboxes";
+@use "@nationalarchives/frontend/nationalarchives/components/code-block";
 // @use "@nationalarchives/frontend/nationalarchives/components/compound-filters";
 @use "@nationalarchives/frontend/nationalarchives/components/cookie-banner";
 // @use "@nationalarchives/frontend/nationalarchives/components/date-input";
@@ -44,8 +45,6 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
-
-@use "@nationalarchives/frontend/nationalarchives/code-block";
 
 @use "modules/component-example";
 @use "modules/frontend-overrides";

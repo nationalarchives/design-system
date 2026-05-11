@@ -26,7 +26,7 @@
   </div>
   <div class="tna-container">
     {% if headings %}
-    <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-section" role="navigation" aria-label="Table of contents">
+    <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-section">
       {% set items = [] %}
       {% for heading in headings %}
         {% set children = None %}
@@ -49,7 +49,8 @@
         title: "Contents",
         headingLevel: 2,
         items: items,
-        type: "contents"
+        type: "contents",
+        ariaLabel: "Table of contents"
       }) }}
     </div>
     {% endif %}

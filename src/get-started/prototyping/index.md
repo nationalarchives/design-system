@@ -28,7 +28,7 @@ Sketching is used to test designs early in the process.
 - Paper prototyping is harder to share (and collaborate on) remotely.
 - Can be challenging to test with participants remotely.
 
-## Figma (high fidelity)
+## Figma (medium fidelity)
 
 In the early stages, Figma can be used as a prototyping tool to building user flows and making simple, clickable prototypes to show navigation.
 

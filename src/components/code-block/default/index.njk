@@ -5,8 +5,11 @@ addBodyPadding: true
 private: true
 ---
 
-<div class="tna-code-block tna-code-block--copy" title="fibonacci.js">
-  <pre class="tna-code-block__pre"><code class="language-javascript">const fibonacci = (n = 0) => {
+{% from "nationalarchives/components/code-block/macro.njk" import tnaCodeBlock %}
+
+{{ tnaCodeBlock({
+  language: "javascript",
+  code: "const fibonacci = (n = 0) => {
     if(n < 0) {
       throw 'Fibonacci not defined for negative numbers';
     }
@@ -14,5 +17,6 @@ private: true
       return n;
     }
     return fibonacci(n - 1) + fibonacci(n - 2);
-}</code></pre>
-</div>
+}",
+  filename: "fibonacci.js"
+}) }}
