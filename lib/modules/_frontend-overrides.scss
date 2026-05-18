@@ -2,12 +2,6 @@
 @use "@nationalarchives/frontend/nationalarchives/tools/spacing";
 @use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
-.tna-button {
-  &--large {
-    @include typography.font-size(24);
-  }
-}
-
 .tna-template__body {
   > .tna-header + .tna-container,
   > .tna-header + .tna-ds-breadcrumbs-wrapper + .tna-container {
