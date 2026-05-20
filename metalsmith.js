@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, relative } from "path";
 
 import collections from "@metalsmith/collections";
 import inplace from "@metalsmith/in-place";
@@ -44,11 +44,11 @@ Metalsmith(__dirname)
     async function copyAssets(pattern, options) {
       const assets = await glob(pattern, options);
       for (const asset of assets) {
-const input = join(options.cwd, asset);
-if (relative(options.cwd, input).startsWith('..')) {
-  throw new Error(`Path traversal detected: ${asset}`);
-}
-          output = join(options.dest, asset);
+        const input = join(options.cwd, asset);
+        if (relative(options.cwd, input).startsWith("..")) {
+          throw new Error(`Path traversal detected: ${asset}`);
+        }
+        const output = join(options.dest, asset);
         files[output] = {
           contents: readFileSync(input),
         };
