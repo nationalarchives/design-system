@@ -44,7 +44,10 @@ Metalsmith(__dirname)
     async function copyAssets(pattern, options) {
       const assets = await glob(pattern, options);
       for (const asset of assets) {
-        const input = join(options.cwd, asset),
+const input = join(options.cwd, asset);
+if (relative(options.cwd, input).startsWith('..')) {
+  throw new Error(`Path traversal detected: ${asset}`);
+}
           output = join(options.dest, asset);
         files[output] = {
           contents: readFileSync(input),
