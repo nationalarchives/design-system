@@ -11,7 +11,7 @@ export default defineConfig([
       "one-var": "off",
       "prefer-named-capture-group": "off",
       "require-unicode-regexp": "off",
-      "sort-var": "off",
+      "sort-vars": "off",
     },
   },
   {
