@@ -1,21 +1,23 @@
-import markdownRenderer from "./.metalsmith/markdownRenderer.js";
-import nunjucksOptions from "./.metalsmith/nunjucksOptions.js";
-import { __dirname } from "./.metalsmith/config.js";
-import Metalsmith from "metalsmith";
+import { readFileSync } from "fs";
+import { join } from "path";
+
+import collections from "@metalsmith/collections";
 import inplace from "@metalsmith/in-place";
+import jsBundle from "@metalsmith/js-bundle";
 import layouts from "@metalsmith/layouts";
 import markdown from "@metalsmith/markdown";
 import permalinks from "@metalsmith/permalinks";
-import renamer from "metalsmith-renamer";
-import collections from "@metalsmith/collections";
-import jsBundle from "@metalsmith/js-bundle";
 import sass from "@metalsmith/sass";
-import sitemap from "metalsmith-sitemap";
-import jsTransformerNunjucks from "jstransformer-nunjucks";
-import packageInfo from "./package-lock.json" with { type: "json" };
-import { readFileSync } from "fs";
-import { join } from "path";
 import { glob } from "glob";
+import jsTransformerNunjucks from "jstransformer-nunjucks";
+import Metalsmith from "metalsmith";
+import renamer from "metalsmith-renamer";
+import sitemap from "metalsmith-sitemap";
+
+import { __dirname } from "./.metalsmith/config.js";
+import markdownRenderer from "./.metalsmith/markdownRenderer.js";
+import nunjucksOptions from "./.metalsmith/nunjucksOptions.js";
+import packageInfo from "./package-lock.json" with { type: "json" };
 
 const t1 = performance.now();
 
@@ -29,7 +31,7 @@ Metalsmith(__dirname)
   .metadata({
     sitename: "The National Archives Design System",
     siteurl: "https://design-system.nationalarchives.gov.uk/",
-    default_description:
+    defaultDescription:
       "Design your service using National Archives styles, components and patterns",
     generatorname: "Metalsmith",
     generatorurl: "https://metalsmith.io/",
@@ -38,11 +40,12 @@ Metalsmith(__dirname)
     nodeVersion: process.version,
   })
   .use(async (files, metalsmith, done) => {
+    /* eslint-disable func-style */
     async function copyAssets(pattern, options) {
       const assets = await glob(pattern, options);
       for (const asset of assets) {
-        const input = join(options.cwd, asset);
-        const output = join(options.dest, asset);
+        const input = join(options.cwd, asset),
+          output = join(options.dest, asset);
         files[output] = {
           contents: readFileSync(input),
         };
@@ -72,15 +75,13 @@ Metalsmith(__dirname)
     renamer({
       markdown: {
         pattern: "**/*.md",
-        rename: (name) => {
-          return `${name}.njk`;
-        },
+        rename: (name) => `${name}.njk`,
       },
     }),
   )
   .use(
     inplace({
-      transform: jsTransformerNunjucks, // resolved
+      transform: jsTransformerNunjucks,
       pattern: "**/*.njk",
       engineOptions: nunjucksOptions,
     }),
@@ -111,8 +112,8 @@ Metalsmith(__dirname)
         sortBy: "order",
         refer: false,
       },
-      front_page: {
-        // pattern: "(styles|components|content|performance)/index.html",
+      frontPage: {
+        // Pattern: "(styles|components|content|performance)/index.html",
         pattern: "(styles|components|content)/index.html",
         sortBy: "order",
         refer: false,
@@ -188,7 +189,10 @@ Metalsmith(__dirname)
     }),
   )
   .build((err) => {
-    if (err) throw err;
+    if (err) {
+      throw err;
+    }
+    /* eslint-disable no-console */
     console.log(
       `Build success in ${((performance.now() - t1) / 1000).toFixed(1)}s`,
     );

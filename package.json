@@ -5,8 +5,8 @@
     "serve": "browser-sync start --no-notify --server 'design-system' --files 'design-system/**'",
     "dev": "nodemon metalsmith.js",
     "build": "node metalsmith.js",
-    "lint": "prettier --check '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js' && stylelint --config 'node_modules/@nationalarchives/frontend/config/stylelint.config.js' 'lib/**/*.scss'",
-    "lint:fix": "prettier --write '{src,lib,layouts,.metalsmith}/**/*.{js,mjs,scss,json}' 'metalsmith.js' && stylelint --config 'node_modules/@nationalarchives/frontend/config/stylelint.config.js' --fix 'lib/**/*.scss'"
+    "lint": "prettier --check '{src,lib,layouts,.metalsmith,.}/**/*.{js,mjs,scss,json}' 'metalsmith.js' && stylelint --config 'stylelint.config.mjs' 'lib/**/*.scss' && eslint --config 'eslint.config.mjs' '**/*.js'",
+    "lint:fix": "prettier --write '{src,lib,layouts,.metalsmith,.}/**/*.{js,mjs,scss,json}' 'metalsmith.js' && stylelint --config 'stylelint.config.mjs' --fix 'lib/**/*.scss' && eslint --config 'eslint.config.mjs' --fix '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -44,9 +44,10 @@
     "@metalsmith/markdown": "^1.10.0",
     "@metalsmith/permalinks": "^3.0.1",
     "@metalsmith/sass": "^1.6.0",
+    "@nationalarchives/eslint-config": "^0.1.4",
+    "@nationalarchives/stylelint-config": "^0.1.1",
     "browser-sync": "^3.0.2",
     "concurrently": "^9.0.1",
-    "eslint": "^8.57.0",
     "glob": "^11.0.0",
     "gray-matter": "^4.0.3",
     "js-beautify": "^1.14.8",
@@ -56,11 +57,7 @@
     "metalsmith-renamer": "^0.5.217",
     "metalsmith-sitemap": "^1.2.2",
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.0",
-    "stylelint": "^16.6.1",
-    "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-order": "^7.0.0",
-    "stylelint-selector-bem-pattern": "^4.0.0"
+    "prettier": "^3.0.0"
   },
   "engines": {
     "npm": "9.x",
