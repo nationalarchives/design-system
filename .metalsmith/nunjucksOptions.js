@@ -11,20 +11,18 @@ import { __dirname } from "./config.js";
 
 const renderer = new marked.Renderer(),
   getFileContents = (path) => {
-    let fileContents;
+    let fileContents = "";
     try {
       fileContents = fs.readFileSync(path);
     } catch (err) {
-      if (err.code === "ENOENT") {
-        console.log(err.message);
-      } else {
-        throw err;
-      }
+      /* eslint-disable no-console */
+      console.log(`Could not read file at ${path}, error: ${err}`);
     }
     return fileContents.toString();
   },
   getMacroOptionsJson = (componentName) => {
     const optionsFilePath = join(
+      /* eslint-disable no-use-before-define */
       dirname(require.resolve("@nationalarchives/frontend")),
       `components/${componentName}/macro-options.json`,
     );
@@ -46,7 +44,7 @@ const renderer = new marked.Renderer(),
           }
           return output;
         })
-        .reduce((a, b) => a.concat(b), []),
+        .reduce((itemA, itemB) => itemA.concat(itemB), []),
       namesWithoutDuplicates = names.filter(
         (optionName, index) => names.indexOf(optionName) === index,
       );
@@ -63,7 +61,7 @@ const renderer = new marked.Renderer(),
         }
         return output;
       })
-      .reduce((a, b) => a.concat(b), []),
+      .reduce((itemA, itemB) => itemA.concat(itemB), []),
   renderDescriptionsAsMarkdown = (option) => {
     if (option.description) {
       option.description = marked(option.description, {
@@ -111,14 +109,15 @@ const renderer = new marked.Renderer(),
           html = nunjucks.renderString(content).trim();
         } catch (err) {
           if (err) {
+            /* eslint-disable no-console */
             console.log(`Could not get HTML code from ${path}`);
           }
         }
 
-        const options = beautify.html.defaultOptions();
-
         return beautify.html(html, {
+          /* eslint-disable camelcase */
           indent_size: 2,
+          /* eslint-disable camelcase */
           max_preserve_newlines: 0,
         });
       },
@@ -130,15 +129,15 @@ const renderer = new marked.Renderer(),
           .replace(": true", ": True")
           .replace(": false", ": False")
           .replace(
-            /from "nationalarchives\/components\/([\w\-]+)\/macro.njk"/g,
+            /from "nationalarchives\/components\/([\w-]+)\/macro.njk"/g,
             'from "components/$1/macro.html"',
           )
           .replace(
-            /(from|include) "nationalarchives\/templates\/layouts\/([\w\-]+).njk"/g,
+            /(from|include) "nationalarchives\/templates\/layouts\/([\w-]+).njk"/g,
             '$1 "layouts/$2.html"',
           )
           .replaceAll(
-            'from "nationalarchives\/templates\/partials\/logo\/macro.njk"',
+            'from "nationalarchives/templates/partials/logo/macro.njk"',
             'from "partials/logo/macro.html"',
           );
       },
@@ -178,10 +177,19 @@ const renderer = new marked.Renderer(),
         return optionGroups;
       },
       sortArrayOfObjectsByKey: (array, key) =>
-        array.sort((a, b) => {
-          const x = a[key] || 99,
-            y = b[key] || 99;
-          return x < y ? -1 : x > y ? 1 : 0;
+        array.sort((itemA, itemB) => {
+          /* eslint-disable no-magic-numbers */
+          const valueX = itemA[key] || 99,
+            /* eslint-disable no-magic-numbers */
+            valueY = itemB[key] || 99;
+          /* eslint-disable no-magic-numbers */
+          if (valueX < valueY) {
+            return -1;
+          }
+          if (valueX > valueY) {
+            return 1;
+          }
+          return 0;
         }),
     },
     filters: {
@@ -195,6 +203,7 @@ const renderer = new marked.Renderer(),
       unslugify(text, capitalizeFirst = true) {
         const words = text.split("-");
         if (capitalizeFirst) {
+          /* eslint-disable no-magic-numbers */
           words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
         }
         return words.join(" ");
@@ -203,13 +212,14 @@ const renderer = new marked.Renderer(),
         return new Date(date).toISOString();
       },
       jsonDump(data) {
+        /* eslint-disable no-magic-numbers */
         return JSON.stringify(data, null, 2);
       },
       camelToSpace(data) {
-        return data.replace(/([a-z]+)([A-Z])/, "$1 $2").toLowerCase();
+        return data.replace(/(?:[a-z]+)(?:[A-Z])/g, "$1 $2").toLowerCase();
       },
       kebabToSpace(data) {
-        return data.replace(/([a-z]+)-([a-z])/, "$1 $2").toLowerCase();
+        return data.replace(/(?:[a-z]+)-(?:[a-z])/g, "$1 $2").toLowerCase();
       },
       setAttribute(dictionary, key, value) {
         dictionary[key] = value;
@@ -217,12 +227,14 @@ const renderer = new marked.Renderer(),
       },
       headingsList(content) {
         const regex =
-            /<h([1-6]) id="([\w\d\-]+)"[^>]+>\s*([\w\d\s\.\-\(\)\"'<>\[\]]+)\s*</gmu,
+            /* eslint-disable no-useless-escape */
+            /<h(?<level>[1-6]) id="(?<href>[\w\d\-]+)"[^>]*>\s*(?<title>[\w\d\s.\-()"'<>\[\]]+)\s*</gm,
           headingsRaw = [];
+        /* eslint-disable no-useless-assignment */
         let tmp = null;
         while ((tmp = regex.exec(content)) !== null) {
-          /* eslint-disable no-magic-numbers */
-          headingsRaw.push({ title: tmp[3], href: tmp[2], level: tmp[1] });
+          const { level, href, title } = tmp.groups;
+          headingsRaw.push({ title, href, level });
         }
         const groupHeadings = (index, grouping) => {
             if (index < headingsRaw.length) {
@@ -231,23 +243,27 @@ const renderer = new marked.Renderer(),
                 const prevHeading = grouping.slice().pop();
                 try {
                   if (nextHeading.level > prevHeading.level) {
-                    prevHeading.children = prevHeading.children || [];
+                    prevHeading.children ||= [];
                     return groupHeadings(index, prevHeading.children);
-                  } else if (nextHeading.level == prevHeading.level) {
+                  } else if (nextHeading.level === prevHeading.level) {
                     grouping.push({ ...nextHeading });
-                    return groupHeadings(++index, grouping);
+                    /* eslint-disable no-magic-numbers */
+                    return groupHeadings(index + 1, grouping);
                   }
+                  /* eslint-disable no-throw-literal */
                   throw { index, heading: nextHeading };
                 } catch (higherHeading) {
-                  if (higherHeading.heading.level == prevHeading.level) {
+                  if (higherHeading.heading.level === prevHeading.level) {
                     grouping.push({ ...higherHeading.heading });
-                    return groupHeadings(++higherHeading.index, grouping);
+                    /* eslint-disable no-magic-numbers */
+                    return groupHeadings(higherHeading.index + 1, grouping);
                   }
                   throw higherHeading;
                 }
               } else {
                 grouping.push({ ...nextHeading });
-                groupHeadings(++index, grouping);
+                /* eslint-disable no-magic-numbers */
+                groupHeadings(index + 1, grouping);
               }
             }
             return grouping;

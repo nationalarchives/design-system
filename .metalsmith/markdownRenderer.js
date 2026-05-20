@@ -11,17 +11,17 @@ const escape = (input) => {
       "'": "&#39;",
     };
 
-    return input.replace(/[&<>"']/gu, (ch) => escapeReplacements[ch] || ch);
+    return input.replace(/[&<>"']/g, (ch) => escapeReplacements[ch] || ch);
   },
   markdownRenderer = new marked.Renderer(),
   slugify = (text) =>
     encodeURIComponent(
       text
-        .replace(/(?:&(?:#?)(?:\w+);)/gu, "")
+        .replace(/(?:&(?:#?)(?:\w+);)/g, "")
         .toLowerCase()
         .trim()
-        .replace(/[\s./]/gu, "-")
-        .replace(/[^\w\d-]/gu, ""),
+        .replace(/[\s./]/g, "-")
+        .replace(/[^\w\d-]/g, ""),
     );
 
 markdownRenderer.heading = function (text, level) {
@@ -122,8 +122,8 @@ markdownRenderer.tablerow = function (row) {
     ${row
       // First cell to th
       .replace(/\s*<td>(?:.*)<\/td>/u, '<th class="tna-table__header">$1</th>')
-      .replace(/<th>/gu, '<th class="tna-table__header">')
-      .replace(/<td>/gu, '<td class="tna-table__cell">')}
+      .replace(/<th>/g, '<th class="tna-table__header">')
+      .replace(/<td>/g, '<td class="tna-table__cell">')}
     </tr>`;
 };
 

@@ -7,7 +7,10 @@ export default defineConfig([
   {
     files: ["**/*"],
     rules: {
+      "max-statements": "off",
       "one-var": "off",
+      "prefer-named-capture-group": "off",
+      "require-unicode-regexp": "off",
       "sort-var": "off",
     },
   },
