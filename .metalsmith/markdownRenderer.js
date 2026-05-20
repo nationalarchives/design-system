@@ -116,7 +116,7 @@ markdownRenderer.table = function (head, body) {
 markdownRenderer.tablerow = function (row) {
   const captionMatch = /\{caption:(?<caption>.*)\}/u;
   if (captionMatch.test(row)) {
-    return `<caption class="tna-table__caption">${captionMatch.exec(row).groups.caption}</caption>`;
+return `<caption class="tna-table__caption">${captionMatch.exec(row).groups.caption.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;')}</caption>`;
   }
   return `<tr class="tna-table__row">
     ${row
