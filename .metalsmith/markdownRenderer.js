@@ -17,7 +17,7 @@ const escape = (input) => {
   slugify = (text) =>
     encodeURIComponent(
       text
-        .replace(/(?:&(?:#?)(?:\w+);)/g, "")
+        .replace(/(&(#?)(\w+);)/g, "")
         .toLowerCase()
         .trim()
         .replace(/[\s./]/g, "-")
@@ -121,7 +121,7 @@ markdownRenderer.tablerow = function (row) {
   return `<tr class="tna-table__row">
     ${row
       // First cell to th
-      .replace(/\s*<td>(?:.*)<\/td>/u, '<th class="tna-table__header">$1</th>')
+      .replace(/\s*<td>(.*)<\/td>/u, '<th class="tna-table__header">$1</th>')
       .replace(/<th>/g, '<th class="tna-table__header">')
       .replace(/<td>/g, '<td class="tna-table__cell">')}
     </tr>`;
@@ -130,7 +130,7 @@ markdownRenderer.tablerow = function (row) {
 markdownRenderer.code = function (code, infostring) {
   /* eslint-disable no-magic-numbers */
   const langAndName = (infostring || "").match(/^\S*/u)?.[0],
-    langAndNameMatch = /^(?<lang>\w+)(?::(?<name>.+))?$/u.exec(langAndName);
+    langAndNameMatch = /^(?<lang>\w+)(:(?<name>.+))?$/u.exec(langAndName);
   const lang = langAndNameMatch?.groups?.lang,
     name = langAndNameMatch?.groups?.name,
     newCode = `${code.replace(/\n$/u, "")}\n`;

@@ -225,10 +225,10 @@ getMacroOptionsJson = (componentName) => {
         return JSON.stringify(data, null, 2);
       },
       camelToSpace(data) {
-        return data.replace(/(?:[a-z]+)(?:[A-Z])/g, "$1 $2").toLowerCase();
+        return data.replace(/([a-z]+)([A-Z])/g, "$1 $2").toLowerCase();
       },
       kebabToSpace(data) {
-        return data.replace(/(?:[a-z]+)-(?:[a-z])/g, "$1 $2").toLowerCase();
+        return data.replace(/([a-z]+)-([a-z])/g, "$1 $2").toLowerCase();
       },
       setAttribute(dictionary, key, value) {
         dictionary[key] = value;
