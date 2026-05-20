@@ -24,16 +24,7 @@ const renderer = new marked.Renderer(),
     const optionsFilePath = join(
       /* eslint-disable no-use-before-define */
       dirname(require.resolve("@nationalarchives/frontend")),
-getMacroOptionsJson = (componentName) => {
-  if (!/^[\w-]+$/.test(componentName)) {
-    throw new Error("Invalid component name");
-  }
-  const optionsFilePath = join(
-    dirname(require.resolve("@nationalarchives/frontend")),
-    `components/${componentName}/macro-options.json`,
-  );
-  return JSON.parse(fs.readFileSync(optionsFilePath, "utf8"));
-},
+      `components/${componentName}/macro-options.json`,
     );
     return JSON.parse(fs.readFileSync(optionsFilePath, "utf8"));
   },
