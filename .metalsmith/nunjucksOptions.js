@@ -13,6 +13,9 @@ const renderer = new marked.Renderer(),
   getFileContents = (path) => {
     let fileContents = "";
     try {
+      if (!path.startsWith("src")) {
+        throw new Error("Path traversal attempt detected");
+      }
       fileContents = fs.readFileSync(path);
     } catch (err) {
       /* eslint-disable no-console */
