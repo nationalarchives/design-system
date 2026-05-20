@@ -217,7 +217,7 @@ const renderer = new marked.Renderer(),
       },
       headingsList(content) {
         const regex =
-            /<h([1-6]) id="([\w\d-]+)"[^>]+>\s*([\w\d\s.-()"'<>[]]+)\s*</gmu,
+            /<h([1-6]) id="([\w\d\-]+)"[^>]+>\s*([\w\d\s\.\-\(\)\"'<>\[\]]+)\s*</gmu,
           headingsRaw = [];
         let tmp = null;
         while ((tmp = regex.exec(content)) !== null) {

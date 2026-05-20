@@ -2,17 +2,7 @@ import { marked } from "marked";
 
 import uuid4 from "../node_modules/@nationalarchives/frontend/nationalarchives/lib/uuid.mjs";
 
-const markdownRenderer = new marked.Renderer(),
-  slugify = (text) =>
-    encodeURIComponent(
-      text
-        .replace(/(&(#?)(\w+);)/g, "")
-        .toLowerCase()
-        .trim()
-        .replace(/[\s./]/g, "-")
-        .replace(/[^\w\d-]/g, ""),
-    ),
-  escape = (input) => {
+const escape = (input) => {
     const escapeReplacements = {
       "&": "&amp;",
       "<": "&lt;",
@@ -21,8 +11,18 @@ const markdownRenderer = new marked.Renderer(),
       "'": "&#39;",
     };
 
-    return input.replace(/[&<>"']/g, (ch) => escapeReplacements[ch] || ch);
-  };
+    return input.replace(/[&<>"']/gu, (ch) => escapeReplacements[ch] || ch);
+  },
+  markdownRenderer = new marked.Renderer(),
+  slugify = (text) =>
+    encodeURIComponent(
+      text
+        .replace(/(?:&(?:#?)(?:\w+);)/gu, "")
+        .toLowerCase()
+        .trim()
+        .replace(/[\s./]/gu, "-")
+        .replace(/[^\w\d-]/gu, ""),
+    );
 
 markdownRenderer.heading = function (text, level) {
   let headingSize = "s";
@@ -40,7 +40,7 @@ markdownRenderer.heading = function (text, level) {
       headingSize = "m";
       break;
     default:
-      headingSize = "s";
+      break;
   }
   const slug = slugify(text);
   /* eslint-disable no-magic-numbers */
@@ -67,7 +67,7 @@ markdownRenderer.list = function (body, ordered) {
 };
 
 markdownRenderer.paragraph = function (text) {
-  return /^\s*&lt;/.test(text) || /^\s*\{/.test(text)
+  return /^\s*&lt;/u.test(text) || /^\s*\{/u.test(text)
     ? text
     : `
   <p>
@@ -93,10 +93,9 @@ markdownRenderer.table = function (head, body) {
 
   let caption = "",
     newBody = body;
-  const captionMatch = /<caption class="tna-table__caption">.*<\/caption>/;
+  const captionMatch = /<caption class="tna-table__caption">.*<\/caption>/u;
   if (captionMatch.test(body)) {
-    /* eslint-disable no-magic-numbers */
-    caption = captionMatch.exec(body)[0];
+    [caption] = captionMatch.exec(body);
     caption = caption.replace("<caption", `<caption id="table-${uuid}"`);
     newBody = newBody.replace(captionMatch, "");
   }
@@ -115,29 +114,26 @@ markdownRenderer.table = function (head, body) {
 };
 
 markdownRenderer.tablerow = function (row) {
-  const captionMatch = /\{caption:(.*)\}/;
+  const captionMatch = /\{caption:(?<caption>.*)\}/u;
   if (captionMatch.test(row)) {
-    /* eslint-disable no-magic-numbers */
-    return `<caption class="tna-table__caption">${captionMatch.exec(row)[1]}</caption>`;
+    return `<caption class="tna-table__caption">${captionMatch.exec(row).groups.caption}</caption>`;
   }
   return `<tr class="tna-table__row">
     ${row
-      .replace(/\s*<td>(.*)<\/td>/, '<th class="tna-table__header">$1</th>') // First cell to th
-      .replace(/<th>/g, '<th class="tna-table__header">')
-      .replace(/<td>/g, '<td class="tna-table__cell">')}
+      // First cell to th
+      .replace(/\s*<td>(?:.*)<\/td>/u, '<th class="tna-table__header">$1</th>')
+      .replace(/<th>/gu, '<th class="tna-table__header">')
+      .replace(/<td>/gu, '<td class="tna-table__cell">')}
     </tr>`;
 };
 
 markdownRenderer.code = function (code, infostring) {
   /* eslint-disable no-magic-numbers */
-  const langAndName = (infostring || "").match(/^\S*/)?.[0],
-    langNameRegex = /^(\w+)(:(.+))?$/,
-    langAndNameMatch = langNameRegex.exec(langAndName),
-    /* eslint-disable no-magic-numbers */
-    lang = langAndNameMatch?.[1],
-    /* eslint-disable no-magic-numbers */
-    name = langAndNameMatch?.[3],
-    newCode = `${code.replace(/\n$/, "")}\n`;
+  const langAndName = (infostring || "").match(/^\S*/u)?.[0],
+    langAndNameMatch = /^(?<lang>\w+)(?::(?<name>.+))?$/u.exec(langAndName);
+  const lang = langAndNameMatch?.groups?.lang,
+    name = langAndNameMatch?.groups?.name,
+    newCode = `${code.replace(/\n$/u, "")}\n`;
 
   if (!lang) {
     return newCode;

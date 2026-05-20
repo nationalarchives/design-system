@@ -5,6 +5,7 @@ import globals from "globals";
 export default defineConfig([
   ...tnaEslintConfig,
   {
+    files: ["**/*"],
     rules: {
       "one-var": "off",
       "sort-var": "off",
