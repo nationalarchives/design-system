@@ -101,4 +101,4 @@ In production, you should pass these variables into your template rendering func
 
 ### Email example
 
-{{ example({ group: "styles", item: "templates", example: "email", html: false, nunjucks: true, size: "xxxxl" }) }}
+{{ example({ group: "styles", item: "templates", example: "email", html: false, nunjucks: true, showNunjucksOptions: false, size: "xxxxl" }) }}

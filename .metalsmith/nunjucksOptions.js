@@ -1,276 +1,281 @@
 import fs from "fs";
-import { dirname, join } from "path";
 import { createRequire } from "node:module";
-import { __dirname } from "./config.js";
+import { dirname, join } from "path";
+
 import matter from "gray-matter";
 import beautify from "js-beautify";
-import nunjucks from "nunjucks";
 import { marked } from "marked";
+import nunjucks from "nunjucks";
 
-const renderer = new marked.Renderer();
+import { __dirname } from "./config.js";
 
-const getFileContents = (path) => {
-  let fileContents;
-  try {
-    fileContents = fs.readFileSync(path);
-  } catch (err) {
-    if (err.code === "ENOENT") {
-      console.log(err.message);
-    } else {
-      throw err;
+const renderer = new marked.Renderer(),
+  getFileContents = (path) => {
+    let fileContents = "";
+    try {
+      if (!path.startsWith("src")) {
+        throw new Error("Path traversal attempt detected");
+      }
+      fileContents = fs.readFileSync(path);
+    } catch (err) {
+      /* eslint-disable no-console */
+      console.log(`Could not read file at ${path}, error: ${err}`);
     }
-  }
-  return fileContents.toString();
-};
-
-const getMacroOptionsJson = (componentName) => {
-  const optionsFilePath = join(
-    dirname(require.resolve("@nationalarchives/frontend")),
-    `components/${componentName}/macro-options.json`,
-  );
-  return JSON.parse(fs.readFileSync(optionsFilePath, "utf8"));
-};
-
-const getAdditionalComponentOptions = (options) => {
-  const names = options
-    .map((option) => {
-      let output = [];
-      if (option.isComponent) {
-        if (option.name === "hint" || option.name === "label") {
-          output.push(option.name);
-        }
-      }
-      if (option.params) {
-        output = output.concat(getAdditionalComponentOptions(option.params));
-      }
-      return output;
-    })
-    .reduce((a, b) => {
-      return a.concat(b);
-    }, []);
-
-  const namesWithoutDuplicates = names.filter((optionName, index) => {
-    return names.indexOf(optionName) === index;
-  });
-
-  return namesWithoutDuplicates;
-};
-
-const getNestedOptions = (options) => {
-  return options
-    .filter((option) => option.params)
-    .map((option) => {
-      let output = [option];
-      if (option.params) {
-        output = output.concat(getNestedOptions(option.params));
-      }
-      return output;
-    })
-    .reduce((a, b) => {
-      return a.concat(b);
-    }, []);
-};
-
-const renderDescriptionsAsMarkdown = (option) => {
-  if (option.description) {
-    option.description = marked(option.description, {
-      headerIds: false,
-      mangle: false,
-      renderer,
-    });
-  }
-  if (option.params) {
-    option.params = option.params.map(renderDescriptionsAsMarkdown);
-  }
-  if (option.paramsFrom) {
-    option.params = getMacroOptionsJson(option.paramsFrom).map(
-      renderDescriptionsAsMarkdown,
-    );
-  }
-  return option;
-};
-
-const addSlugs = (option) => {
-  option.slug = option.name.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
-  if (option.params) {
-    option.params = option.params.map(addSlugs);
-  }
-  return option;
-};
-
-const getNunjucksCode = (path) => {
-  const fileContents = getFileContents(path);
-  const parsedFile = matter(fileContents);
-  return parsedFile.content.replace(/{%\s*extends\s*\S*\s*%}\s+/, "").trim();
-};
-
-const require = createRequire(import.meta.url);
-const nunjucksOptions = {
-  path: [
-    join(__dirname, "layouts"),
-    join(dirname(require.resolve("@nationalarchives/frontend")), "../"),
-  ],
-  globals: {
-    getHTMLCode: (path) => {
-      const fileContents = getFileContents(path);
-      const parsedFile = matter(fileContents);
-      const content = parsedFile.content;
-
-      let html = "";
-      try {
-        html = nunjucks.renderString(content).trim();
-      } catch (err) {
-        if (err) {
-          console.log("Could not get HTML code from " + path);
-        }
-      }
-
-      const options = beautify.html.defaultOptions();
-
-      return beautify.html(html, {
-        indent_size: 2,
-        max_preserve_newlines: 0,
-      });
-    },
-    getNunjucksCode,
-    getJinjaCode: (path) => {
-      const nunjucksCode = getNunjucksCode(path);
-      return nunjucksCode
-        .replace(/(\s)(\w+): /g, '$1"$2": ')
-        .replace(": true", ": True")
-        .replace(": false", ": False")
-        .replace(
-          /from "nationalarchives\/components\/([\w\-]+)\/macro.njk"/g,
-          'from "components/$1/macro.html"',
-        )
-        .replace(
-          /(from|include) "nationalarchives\/templates\/layouts\/([\w\-]+).njk"/g,
-          '$1 "layouts/$2.html"',
-        )
-        .replaceAll(
-          'from "nationalarchives\/templates\/partials\/logo\/macro.njk"',
-          'from "partials/logo/macro.html"',
-        );
-    },
-    getMacroOptions: (componentName) => {
-      const options = getMacroOptionsJson(componentName)
-        .map(addSlugs)
-        .map(renderDescriptionsAsMarkdown);
-
-      const nestedOptions = getNestedOptions(options);
-      const additionalComponents = getAdditionalComponentOptions(options);
-
-      const optionGroups = [
-        {
-          name: "Primary options",
-          id: "primary",
-          options,
-        },
-      ]
-        .concat(
-          nestedOptions.map((option) => {
-            return {
-              name: "Options for " + option.name,
-              id: option.name,
-              options: option.params,
-            };
-          }),
-        )
-        .concat(
-          additionalComponents.map((name) => {
-            const additionalComponentOptions = getMacroOptionsJson(name).map(
-              renderDescriptionsAsMarkdown,
-            );
-            return {
-              name: "Options for " + name,
-              id: name,
-              options: additionalComponentOptions,
-            };
-          }),
-        );
-
-      return optionGroups;
-    },
-    sortArrayOfObjectsByKey: (array, key) =>
-      array.sort((a, b) => {
-        const x = a[key] || 99;
-        const y = b[key] || 99;
-        return x < y ? -1 : x > y ? 1 : 0;
-      }),
+    return fileContents.toString();
   },
-  filters: {
-    prettyDate: function (date) {
-      return new Date(date).toLocaleDateString("en-GB", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    },
-    unslugify: function (text, capitalizeFirst = true) {
-      const words = text.split("-");
-      if (capitalizeFirst) {
-        words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
-      }
-      return words.join(" ");
-    },
-    iso8601: function (date) {
-      return new Date(date).toISOString();
-    },
-    jsonDump: function (data) {
-      return JSON.stringify(data, null, 2);
-    },
-    camelToSpace: function (data) {
-      return data.replace(/([a-z]+)([A-Z])/, "$1 $2").toLowerCase();
-    },
-    kebabToSpace: function (data) {
-      return data.replace(/([a-z]+)-([a-z])/, "$1 $2").toLowerCase();
-    },
-    setAttribute: function (dictionary, key, value) {
-      dictionary[key] = value;
-      return dictionary;
-    },
-    headingsList: function (content) {
-      const regex =
-        /<h([1-6]) id="([\w\d\-]+)"[^>]+>\s*([\w\d\s\.\-\(\)\"'<>\[\]]+)\s*</gm;
-      let headingsRaw = [];
-      let tmp;
-      while ((tmp = regex.exec(content)) !== null) {
-        headingsRaw.push({ title: tmp[3], href: tmp[2], level: tmp[1] });
-      }
-      const groupHeadings = (index, grouping) => {
-        if (index < headingsRaw.length) {
-          const nextHeading = headingsRaw[index];
-          if (grouping.length) {
-            const prevHeading = grouping.slice().pop();
-            try {
-              if (nextHeading.level > prevHeading.level) {
-                prevHeading.children = prevHeading.children || [];
-                return groupHeadings(index, prevHeading.children);
-              } else if (nextHeading.level == prevHeading.level) {
-                grouping.push({ ...nextHeading });
-                return groupHeadings(++index, grouping);
-              } else {
-                throw { index, heading: nextHeading };
-              }
-            } catch (higherHeading) {
-              if (higherHeading.heading.level == prevHeading.level) {
-                grouping.push({ ...higherHeading.heading });
-                return groupHeadings(++higherHeading.index, grouping);
-              } else {
-                throw higherHeading;
-              }
+  getMacroOptionsJson = (componentName) => {
+    const optionsFilePath = join(
+      /* eslint-disable no-use-before-define */
+      dirname(require.resolve("@nationalarchives/frontend")),
+      `components/${componentName}/macro-options.json`,
+    );
+    return JSON.parse(fs.readFileSync(optionsFilePath, "utf8"));
+  },
+  getAdditionalComponentOptions = (options) => {
+    const names = options
+        .map((option) => {
+          let output = [];
+          if (option.isComponent) {
+            if (option.name === "hint" || option.name === "label") {
+              output.push(option.name);
             }
-          } else {
-            grouping.push({ ...nextHeading });
-            groupHeadings(++index, grouping);
+          }
+          if (option.params) {
+            output = output.concat(
+              getAdditionalComponentOptions(option.params),
+            );
+          }
+          return output;
+        })
+        .reduce((itemA, itemB) => itemA.concat(itemB), []),
+      namesWithoutDuplicates = names.filter(
+        (optionName, index) => names.indexOf(optionName) === index,
+      );
+
+    return namesWithoutDuplicates;
+  },
+  getNestedOptions = (options) =>
+    options
+      .filter((option) => option.params)
+      .map((option) => {
+        let output = [option];
+        if (option.params) {
+          output = output.concat(getNestedOptions(option.params));
+        }
+        return output;
+      })
+      .reduce((itemA, itemB) => itemA.concat(itemB), []),
+  renderDescriptionsAsMarkdown = (option) => {
+    if (option.description) {
+      option.description = marked(option.description, {
+        headerIds: false,
+        mangle: false,
+        renderer,
+      });
+    }
+    if (option.params) {
+      option.params = option.params.map(renderDescriptionsAsMarkdown);
+    }
+    if (option.paramsFrom) {
+      option.params = getMacroOptionsJson(option.paramsFrom).map(
+        renderDescriptionsAsMarkdown,
+      );
+    }
+    return option;
+  },
+  addSlugs = (option) => {
+    option.slug = option.name.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
+    if (option.params) {
+      option.params = option.params.map(addSlugs);
+    }
+    return option;
+  },
+  getNunjucksCode = (path) => {
+    const fileContents = getFileContents(path),
+      parsedFile = matter(fileContents);
+    return parsedFile.content.replace(/{%\s*extends\s*\S*\s*%}\s+/, "").trim();
+  },
+  require = createRequire(import.meta.url),
+  nunjucksOptions = {
+    path: [
+      join(__dirname, "layouts"),
+      join(dirname(require.resolve("@nationalarchives/frontend")), "../"),
+    ],
+    globals: {
+      getHTMLCode: (path) => {
+        const fileContents = getFileContents(path),
+          parsedFile = matter(fileContents),
+          { content } = parsedFile;
+
+        let html = "";
+        try {
+          html = nunjucks.renderString(content).trim();
+        } catch (err) {
+          if (err) {
+            /* eslint-disable no-console */
+            console.log(`Could not get HTML code from ${path}`);
           }
         }
-        return grouping;
-      };
-      const headings = groupHeadings(0, []);
-      return headings;
+
+        return beautify.html(html, {
+          /* eslint-disable camelcase */
+          indent_size: 2,
+          /* eslint-disable camelcase */
+          max_preserve_newlines: 0,
+        });
+      },
+      getNunjucksCode,
+      getJinjaCode: (path) => {
+        const nunjucksCode = getNunjucksCode(path);
+        return nunjucksCode
+          .replace(/(\s)(\w+): /g, '$1"$2": ')
+          .replace(": true", ": True")
+          .replace(": false", ": False")
+          .replace(
+            /from "nationalarchives\/components\/([\w-]+)\/macro.njk"/g,
+            'from "components/$1/macro.html"',
+          )
+          .replace(
+            /(from|include) "nationalarchives\/templates\/layouts\/([\w-]+).njk"/g,
+            '$1 "layouts/$2.html"',
+          )
+          .replaceAll(
+            'from "nationalarchives/templates/partials/logo/macro.njk"',
+            'from "partials/logo/macro.html"',
+          );
+      },
+      getMacroOptions: (componentName) => {
+        const options = getMacroOptionsJson(componentName)
+            .map(addSlugs)
+            .map(renderDescriptionsAsMarkdown),
+          nestedOptions = getNestedOptions(options),
+          additionalComponents = getAdditionalComponentOptions(options),
+          optionGroups = [
+            {
+              name: "Primary options",
+              id: "primary",
+              options,
+            },
+          ]
+            .concat(
+              nestedOptions.map((option) => ({
+                name: `Options for ${option.name}`,
+                id: option.name,
+                options: option.params,
+              })),
+            )
+            .concat(
+              additionalComponents.map((name) => {
+                const additionalComponentOptions = getMacroOptionsJson(
+                  name,
+                ).map(renderDescriptionsAsMarkdown);
+                return {
+                  name: `Options for ${name}`,
+                  id: name,
+                  options: additionalComponentOptions,
+                };
+              }),
+            );
+
+        return optionGroups;
+      },
+      sortArrayOfObjectsByKey: (array, key) =>
+        array.sort((itemA, itemB) => {
+          /* eslint-disable no-magic-numbers */
+          const valueX = itemA[key] || 99,
+            /* eslint-disable no-magic-numbers */
+            valueY = itemB[key] || 99;
+          /* eslint-disable no-magic-numbers */
+          if (valueX < valueY) {
+            return -1;
+          }
+          if (valueX > valueY) {
+            return 1;
+          }
+          return 0;
+        }),
     },
-  },
-};
+    filters: {
+      prettyDate(date) {
+        return new Date(date).toLocaleDateString("en-GB", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      },
+      unslugify(text, capitalizeFirst = true) {
+        const words = text.split("-");
+        if (capitalizeFirst) {
+          /* eslint-disable no-magic-numbers */
+          words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+        }
+        return words.join(" ");
+      },
+      iso8601(date) {
+        return new Date(date).toISOString();
+      },
+      jsonDump(data) {
+        /* eslint-disable no-magic-numbers */
+        return JSON.stringify(data, null, 2);
+      },
+      camelToSpace(data) {
+        return data.replace(/([a-z]+)([A-Z])/g, "$1 $2").toLowerCase();
+      },
+      kebabToSpace(data) {
+        return data.replace(/([a-z]+)-([a-z])/g, "$1 $2").toLowerCase();
+      },
+      setAttribute(dictionary, key, value) {
+        dictionary[key] = value;
+        return dictionary;
+      },
+      headingsList(content) {
+        const regex =
+            /* eslint-disable no-useless-escape */
+            /<h(?<level>[1-6]) id="(?<href>[\w\d\-]+)"[^>]*>\s*(?<title>[\w\d\s.\-()"'<>\[\]]+)\s*</gm,
+          headingsRaw = [];
+        /* eslint-disable no-useless-assignment */
+        let tmp = null;
+        while ((tmp = regex.exec(content)) !== null) {
+          const { level, href, title } = tmp.groups;
+          headingsRaw.push({ title, href, level });
+        }
+        const groupHeadings = (index, grouping) => {
+            if (index < headingsRaw.length) {
+              const nextHeading = headingsRaw[index];
+              if (grouping.length) {
+                const prevHeading = grouping.slice().pop();
+                try {
+                  if (nextHeading.level > prevHeading.level) {
+                    prevHeading.children ||= [];
+                    return groupHeadings(index, prevHeading.children);
+                  } else if (nextHeading.level === prevHeading.level) {
+                    grouping.push({ ...nextHeading });
+                    /* eslint-disable no-magic-numbers */
+                    return groupHeadings(index + 1, grouping);
+                  }
+                  /* eslint-disable no-throw-literal */
+                  throw { index, heading: nextHeading };
+                } catch (higherHeading) {
+                  if (higherHeading.heading.level === prevHeading.level) {
+                    grouping.push({ ...higherHeading.heading });
+                    /* eslint-disable no-magic-numbers */
+                    return groupHeadings(higherHeading.index + 1, grouping);
+                  }
+                  throw higherHeading;
+                }
+              } else {
+                grouping.push({ ...nextHeading });
+                /* eslint-disable no-magic-numbers */
+                groupHeadings(index + 1, grouping);
+              }
+            }
+            return grouping;
+          },
+          /* eslint-disable no-magic-numbers */
+          headings = groupHeadings(0, []);
+        return headings;
+      },
+    },
+  };
 
 export default nunjucksOptions;
