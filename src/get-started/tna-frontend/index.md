@@ -34,7 +34,7 @@ While you can use the CSS and JavaScript from there, the font files which includ
 
 As a result, **if you require icons, using a CDN like jsdelivr.com is not the preferred method** for using the tna-frontend library.
 
-Include the CSS in the <head> element of your page.
+Include the CSS in the `<head>` element of your page.
 
 ```html
 <link
@@ -44,7 +44,7 @@ Include the CSS in the <head> element of your page.
   crossorigin="anonymous">
 ```
 
-Add the JavaScript to the end of your page just before your closing </body> tag.
+Add the JavaScript to the end of your page just before your closing `</body>` tag.
 
 ```html
 <script
@@ -318,7 +318,10 @@ You can also pass these into the object instantiation. These will overwrite the 
 ```js:my-service.js
 import { Cookies } from "@nationalarchives/frontend/nationalarchives/lib/cookies.mjs";
 
-const cookies = new Cookies({
+// This instance uses the values from the <html> element
+const cookies_default = new Cookies();
+
+const cookies_custom = new Cookies({
   defaultDomain: ".nationalarchives.gov.uk",
   defaultPath: "/",
   secure: true,
