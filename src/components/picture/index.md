@@ -25,3 +25,5 @@ statusDocumentationComplete: false
 Picture components need to show the entire image so they are free from aspect ratio restrictions.
 
 Ensure the longest side of the image is no more than 900px.
+
+Read more about [image file sizes and formats](../../styles/images/).
