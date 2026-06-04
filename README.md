@@ -2,6 +2,7 @@
 
 # The National Archives Design System
 
+![TNA Frontend version](https://img.shields.io/github/package-json/dependency-version/nationalarchives/design-system/%40nationalarchives%2Ffrontend?style=flat-square&label=@nationalarchives/frontend)
 [![Licence](https://img.shields.io/github/license/nationalarchives/design-system?style=flat-square)](https://github.com/nationalarchives/design-system/blob/main/LICENCE)
 
 The National Archives Design System provides advice on how to design National Archives platforms and services.

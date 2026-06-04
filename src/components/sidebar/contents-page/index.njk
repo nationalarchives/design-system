@@ -1,0 +1,77 @@
+---
+title: Sidebar - contents (whole page example)
+layout: examples/plain.njk
+addBodyPadding: false
+themeAccent: green
+private: true
+---
+
+{% from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar %}
+
+{% set sidebar_items = [
+  {
+    text: "Alpha",
+    href: "#alpha"
+  },
+  {
+    text: "Beta",
+    href: "#beta"
+  },
+  {
+    text: "Gamma",
+    href: "#gamma",
+    children: [
+      {
+        text: "Gamma 1",
+        href: "#gamma-1"
+      },
+      {
+        text: "Gamma 2",
+        href: "#gamma-2"
+      },
+      {
+        text: "Gamma 3",
+        href: "#gamma-3"
+      }
+    ]
+  },
+  {
+    text: "Delta",
+    href: "#delta"
+  },
+  {
+    text: "Epsilon",
+    href: "#epsilon"
+  },
+  {
+    text: "Zeta",
+    href: "#zeta"
+  }
+] %}
+
+<div class="tna-container tna-!--padding-top-m tna-!--padding-bottom-xl">
+  <div class="tna-column tna-column--full tna-!--padding-bottom-m">
+    <h1 class="tna-heading-xl">Contents sidebar (sticky)</h1>
+  </div>
+  <div class="tna-column tna-column--width-1-3 tna-column--full-tiny">
+    {{ tnaSidebar({
+      title: "Contents",
+      headingLevel: 2,
+      items: sidebar_items,
+      type: "contents",
+      sticky: true,
+      classes: "tna-!--padding-top-s"
+    }) }}
+  </div>
+  <div class="tna-column tna-column--width-2-3 tna-column--full-tiny tna-!--padding-bottom-xl">
+  {%- for item in sidebar_items %}
+    <h2 class="tna-heading-l{{ ' tna-!--padding-top-s' if loop.first else '' }}" id="{{ item.href.substring(1) }}">{{ item.text }}</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis vulputate nulla, nec aliquet velit. Aliquam tristique lorem tortor, et volutpat diam fringilla vel. Etiam aliquet pulvinar justo, a aliquet sem rhoncus non. Donec non felis elementum, accumsan eros ut, feugiat elit. Integer suscipit, sapien elementum vulputate pretium, risus nunc imperdiet purus, ut sagittis tellus velit vel magna. Etiam mauris massa, fringilla eu tincidunt sit amet, commodo bibendum tortor. Curabitur aliquam scelerisque ex, id fringilla metus ultricies cursus. Curabitur eget malesuada dui. Etiam vel iaculis nibh, tincidunt ullamcorper lectus. Integer sed efficitur erat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis vulputate nulla, nec aliquet velit. Aliquam tristique lorem tortor, et volutpat diam fringilla vel. Etiam aliquet pulvinar justo, a aliquet sem rhoncus non. Donec non felis elementum, accumsan eros ut, feugiat elit. Integer suscipit, sapien elementum vulputate pretium, risus nunc imperdiet purus, ut sagittis tellus velit vel magna. Etiam mauris massa, fringilla eu tincidunt sit amet, commodo bibendum tortor. Curabitur aliquam scelerisque ex, id fringilla metus ultricies cursus. Curabitur eget malesuada dui. Etiam vel iaculis nibh, tincidunt ullamcorper lectus. Integer sed efficitur erat.</p>
+    {%- for child in item.children %}
+    <h3 class="tna-heading-m" id="{{ child.href.substring(1) }}">{{ child.text }}</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis vulputate nulla, nec aliquet velit. Aliquam tristique lorem tortor, et volutpat diam fringilla vel. Etiam aliquet pulvinar justo, a aliquet sem rhoncus non. Donec non felis elementum, accumsan eros ut, feugiat elit. Integer suscipit, sapien elementum vulputate pretium, risus nunc imperdiet purus, ut sagittis tellus velit vel magna. Etiam mauris massa, fringilla eu tincidunt sit amet, commodo bibendum tortor. Curabitur aliquam scelerisque ex, id fringilla metus ultricies cursus. Curabitur eget malesuada dui. Etiam vel iaculis nibh, tincidunt ullamcorper lectus. Integer sed efficitur erat.</p>
+    {%- endfor %}
+  {%- endfor %}
+  </div>
+</div>
