@@ -7,16 +7,17 @@ private: true
 
 {% from "nationalarchives/components/code-block/macro.njk" import tnaCodeBlock %}
 
-{{ tnaCodeBlock({
+{% call tnaCodeBlock({
   language: "javascript",
-  code: "const fibonacci = (n = 0) => {
-    if(n < 0) {
-      throw 'Fibonacci not defined for negative numbers';
-    }
-    if(n < 2) {
-      return n;
-    }
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}",
   filename: "fibonacci.js"
-}) }}
+}) -%}
+const fibonacci = (n = 0) => {
+  if(n < 0) {
+    throw 'Fibonacci not defined for negative numbers';
+  }
+  if(n < 2) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+{%- endcall %}
