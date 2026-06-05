@@ -19,8 +19,6 @@ GOV.UK has published an [example accessibility statement](https://www.gov.uk/gov
 
 ## Cookies
 
-From the Information Commissioner’s Office:
-
 <div class="tna-blockquote">
   <blockquote class="tna-blockquote__quote">
     <p>You must tell people if you set cookies, and clearly explain what the cookies do and why. You must also get the user’s consent. Consent must be actively and clearly given.</p>
@@ -34,7 +32,7 @@ From the Information Commissioner’s Office:
   </p>
 </div>
 
-At The National Archives, we use four categories of cookies.
+The National Archives uses four categories of cookies.
 
 <dl class="tna-dl tna-dl--lined">
   <dt>
@@ -44,7 +42,7 @@ At The National Archives, we use four categories of cookies.
   <dt>
     <code>settings</code>
   </dt>
-  <dd>Configured options for the site which are specific to the user. For example,default results view or light/dark mode preference.</dd>
+  <dd>Configured options for the site which are specific to the user. For example, default results view or light/dark mode preference.</dd>
   <dt>
     <code>usage</code>
   </dt>

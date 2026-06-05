@@ -30,7 +30,8 @@ To expand the hit area, use the `faux-full-outline` function from the accessibil
 
 .click-parent {
   &:hover {
-    box-shadow: 0 0 0 3px colour.colour-var("link");
+    outline: 2px colour.colour-var("keyline") solid;
+    outline-offset: 2px;
   }
 
   @include a11y.faux-full-outline("a");

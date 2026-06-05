@@ -130,6 +130,7 @@ themeAccent: blue
 
     const $dateSelector = document.getElementById("adornment-date");
     if ($dateSelector) {
+      $dateSelector.value = new Date().toISOString().split("T")[0];
       $dateSelector.addEventListener("change", function (event) {
         $logos.forEach(function ($logo) {
           $logo.removeAttribute("title");
