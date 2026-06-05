@@ -35,3 +35,9 @@ Feel free to use these components in prototypes and live services with the inten
 - tested for integration with the [GOV.UK Prototype Kit](/get-started/prototyping/#html)
 - added to the [TNA Frontend Storybook](https://nationalarchives.github.io/tna-frontend/) for reviewing and testing
 - added to the [TNA Frontend Jinja macros](../get-started/tna-frontend-jinja/) package
+
+## Deprecated
+
+Sometimes, components are deprecated in favour of other solutions or their functionality gets merged in to other components.
+
+Deprecated components might remain in the codebase for a while before they are removed.

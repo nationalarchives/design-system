@@ -73,30 +73,20 @@ For more guidance, read [how to use CDNs in the National Archives Engineering Ha
 
 ## HTML
 
-TNA Frontend uses [Nunjucks](https://mozilla.github.io/nunjucks/) for its component templates. If your production service has Nunjucks available then you can use these macros.
+TNA Frontend includes [Nunjucks](https://mozilla.github.io/nunjucks/) macros for its component templates. If your production service has Nunjucks available then you can use these macros.
 
 With Python services, it is recommended to use the [Jinja2](https://jinja.palletsprojects.com/en/stable/) templating engine with [TNA Frontend Jinja](../tna-frontend-jinja/).
 
+For other services, you can copy and paste the HTML of any of the components. This approach may not be ideal as you will have to keep your HTML up-to-date as new features and fixes are released.
+
 ## CSS
 
-TNA Frontend CSS is built using [SCSS](https://sass-lang.com/).
+The styles in TNA Frontend are built using [SCSS](https://sass-lang.com/).
 
 Include `nationalarchives/all.scss` in your application’s root SCSS file. This will allow you to customise or extend TNA Frontend.
 
 ```scss:my-service.scss
 @use "@nationalarchives/frontend/nationalarchives/all";
-```
-
-### Fonts
-
-In order to use the correct fonts, you need to include some extra CSS files from Adobe TypeKit and Google Fonts.
-
-```html
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/kaq6qqh.css" media="screen,print">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&family=Roboto+Mono:wght@400..500&display=swap" media="screen,print">
 ```
 
 ### Customising CSS variables
@@ -134,7 +124,6 @@ To reduce your CSS file size, you can choose which [components](../../components
 
 // ...or include all the "presentation" components (non-form components)
 @use "@nationalarchives/frontend/nationalarchives/components/presentation";
-
 // ...or just the form components (e.g. text input, checkboxes)
 @use "@nationalarchives/frontend/nationalarchives/components/forms";
 ```
@@ -142,6 +131,10 @@ To reduce your CSS file size, you can choose which [components](../../components
 ### Print styles
 
 Import the print SCSS to use and extend the default print styles.
+
+The basic styles will remove global page elements like the header and footer when printing. It will also display the URL of any links in the page alongside the link text.
+
+Other elements can be hidden during printing with the class `tna-!--hide-on-print`.
 
 ```scss:my-service.print.scss
 @use "@nationalarchives/frontend/nationalarchives/print";
@@ -151,21 +144,16 @@ Import the print SCSS to use and extend the default print styles.
 }
 ```
 
-The basic styles will remove global page elements like the header and footer when printing. It will also display the URL of any links in the page alongside the link text.
+### Fonts
 
-There is also a `tna-\!--hide-on-print` class that you can use to hide certain elements when printing.
-
-### Static CSS (from precompiled files or a CDN)
-
-Link the `all.css` file in your project through the HTML. This includes all the styles for things like [components](../../components/), [typography](../../styles/typography/) and the [grid system](../../styles/grid/).
-
-Include `print.css` to include some basic print styles.
+In order to load and use the correct fonts, you need to include some extra CSS files from Adobe TypeKit and Google Fonts.
 
 ```html
-<!-- Include all of TNA Frontend -->
-<link rel="stylesheet" href="all.css" media="screen,print">
-<!-- Include the basic print styles -->
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/kaq6qqh.css" media="screen,print">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&family=Roboto+Mono:wght@400..500&display=swap" media="screen,print">
 ```
 
 ### Icons
@@ -182,14 +170,26 @@ If using SCSS, you can change the path to the font files and omit brand (or soli
   $font-path: "my_fonts_path"
 );
 
-// Main Font Awesome styles
+// Always include the main Font Awesome styles
 @use "@fortawesome/fontawesome-free/scss/fontawesome";
 
-// Font Awesome solid icons
+// ...and then either the Font Awesome solid icons
 @use "@fortawesome/fontawesome-free/scss/solid";
-
-// Optionally include the brand icons
+// ...and/or the brand icons
 @use "@fortawesome/fontawesome-free/scss/brands";
+```
+
+### Static CSS (from precompiled files or a CDN)
+
+Link the `all.css` file in your project through the HTML. This includes all the styles for things like [components](../../components/), [typography](../../styles/typography/) and the [grid system](../../styles/grid/).
+
+Include `print.css` to include some basic [print styles](#print-styles).
+
+```html
+<!-- Include all of TNA Frontend -->
+<link rel="stylesheet" href="all.css" media="screen,print">
+<!-- Include the basic print styles -->
+<link rel="stylesheet" href="print.css" media="print">
 ```
 
 ## JavaScript
@@ -201,6 +201,16 @@ import { initAll } from "@nationalarchives/frontend/nationalarchives/all.mjs";
 
 initAll();
 ```
+
+Alternatively, you can initialise the components yourself.
+
+```js:my-service.js
+import { Accordion } from "@nationalarchives/frontend/nationalarchives/all.mjs";
+
+new Accordion(document.getElementById("my-accordion"));
+```
+
+> Include the JavaScript that initialises your components at the end of the page, once the HTML for them has already been received by the client.
 
 ### Cookie library
 
@@ -292,7 +302,16 @@ cookies.once("deleteCookie", function(data) {
 
 #### Changing default cookie settings
 
-The default cookie library settings can be set using attributes added to the `<html>` element.
+The default cookie library settings can be set either by adding attributes added to the `<html>` element or within the JavaScript.
+
+| HTML attribute                  | JavaScript property | Purpose                                                                                                                   | Default if not set         |
+| ------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| `data-tna-cookies-domain`       | `defaultDomain`     | The domain to write the cookies to                                                                                        | `window.location.hostname` |
+| `data-tna-cookies-path`         | `defaultPath`       | The path to write the cookies to                                                                                          | `/`                        |
+| `data-tna-cookies-insecure`     | `secure`            | If the HTML attribute is set to `true` or the JavaScript value is `false`, allow insecure cookies (able to use over HTTP) | (secure)                   |
+| `data-tna-cookies-policies-key` | `policiesKey`       | The name of the cookie to save the user preferences to                                                                    | `cookies_policy`           |
+| `data-tna-cookies-default-age`  | `defaultAge`        | The default age of a cookie in seconds                                                                                    | `31536000` (365 days)      |
+| {caption: Cookie library options} |
 
 ```html
 <html
@@ -304,30 +323,20 @@ The default cookie library settings can be set using attributes added to the `<h
 >
 ```
 
-| Attribute                       | Purpose                                                 | Default if not set         |
-| ------------------------------- | ------------------------------------------------------- | -------------------------- |
-| `data-tna-cookies-domain`       | The domain to write the cookies to                      | `window.location.hostname` |
-| `data-tna-cookies-path`         | The path to write the cookies to                        | `/`                        |
-| `data-tna-cookies-insecure`     | If `true`, set insecure cookies (able to use over HTTP) | `false`                    |
-| `data-tna-cookies-policies-key` | The name of the cookie to save the user preferences to  | `cookies_policy`           |
-| `data-tna-cookies-default-age`  | The default age of a cookie in seconds                  | `31536000` (365 days)      |
-| {caption: Cookie HTML attributes} |
-
-You can also pass these into the object instantiation. These will overwrite the values set in the `<html>` element.
-
 ```js:my-service.js
 import { Cookies } from "@nationalarchives/frontend/nationalarchives/lib/cookies.mjs";
 
 // This instance uses the values from the <html> element
 const cookies_default = new Cookies();
 
+// This instance ignores the values set in the `<html>` element
 const cookies_custom = new Cookies({
   defaultDomain: ".nationalarchives.gov.uk",
   defaultPath: "/",
   secure: true,
   policiesKey: "cookies_policy",
   defaultAge: 31536000,
-  newInstance: true  // Create a new instance with these settings (else the singleton is returned)
+  newInstance: true  // Create a new instance with these settings (else the singleton is returned with the values from the HTML attributes)
 });
 ```
 
@@ -351,9 +360,9 @@ console.log("Cookie policies:", cookies.policies);
 
 ## Assets
 
-TNA Frontend includes some basic assets like logos and icons.
+TNA Frontend includes some basic assets such as various sizes and formats of our logo.
 
-For logo documentation, read our [brand](../../brand/) page.
+Read our [brand page](../../brand/) for more information about using The National Archives’ logo.
 
 ### Favicon
 

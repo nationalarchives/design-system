@@ -19,9 +19,7 @@ The only difference between the Nunjucks examples and their Jinja equivalents is
 
 ## Framework support
 
-Jinja2 is supported by both [Flask](https://flask.palletsprojects.com/en/stable/) and [Django](https://www.djangoproject.com/), two of the Python frameworks used by The National Archives.
-
-Read more about the [approved Python frameworks at The National Archives](https://nationalarchives.github.io/engineering-handbook/technology/backend/python/#frameworks).
+Jinja2 is supported by both [Flask](https://flask.palletsprojects.com/en/stable/) and [Django](https://www.djangoproject.com/), two of the [approved Python frameworks](https://nationalarchives.github.io/engineering-handbook/technology/backend/python/#frameworks) used by The National Archives.
 
 ## WTForms support
 
