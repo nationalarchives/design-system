@@ -52,7 +52,7 @@ Always use the provided TNA colour palette.
 | Form error text                                        | <span class="tna-ds-colour-swatch" style="background:#c20000"></span> `#c20000`     | <span class="tna-ds-colour-swatch" style="background:#ff6b6b"></span> `#ff6b6b`     |
 | {caption: Extra National Archives colours for web use} |
 
-Ou full list of web colours can be found in the [colour variables for TNA Frontend](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_colour.scss).
+Our full list of web colours can be found in the [colour variables for TNA Frontend](https://github.com/nationalarchives/tna-frontend/blob/main/src/nationalarchives/variables/_colour.scss).
 
 ## Themes
 

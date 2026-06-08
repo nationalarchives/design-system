@@ -72,7 +72,7 @@ To avoid relying on the Font Awesome CSS and font files, you can embed SVGs dire
 
 Remember to escape quotes (`"` or `'`) in the SVG correctly.
 
-Add `aria-hidden="true"` and `focusable="false"` to avoid the icon being read by screen readers. Include a `wdith` parameter if possible to avoid the icon being too large when viewed without CSS.
+Add `aria-hidden="true"` and `focusable="false"` to avoid the icon being read by screen readers. Include a `width` parameter if possible to avoid the icon being too large when viewed without CSS.
 
 {{ example({ group: "components", item: "button", example: "icon-svg", html: true, nunjucks: true, size: "xxxs" }, 5) }}
 

@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Tables
-description: Use a tables to display tabular data.
+description: Use a table to display tabular data.
 group: styles
 subGroup: content
 ---
@@ -16,7 +16,7 @@ Ensure your tables have a `<caption>` element to describe the data in the table 
 
 ## Scrollable tables
 
-Wrap the table in a `<div class="tna-table-wrapper">` element to achieve scrolling when a table is to wide to fit inside its container.
+Wrap the table in a `<div class="tna-table-wrapper">` element to achieve scrolling when a table is too wide to fit inside its container.
 
 To ensure good accessibility, make sure to add some attributes to the wrapper element:
 

@@ -15,7 +15,7 @@ Provide the user with information about the error:
     <dt>Error type</dt>
     <dd>A very short description of the error in present tense such as "Page not found"</dd>
     <dt>Error details (optional)</dt>
-    <dd>More details about why the error may have occured</dd>
+    <dd>More details about why the error may have occurred</dd>
     <dt>Suggested next steps</dt>
     <dd>Some possible next steps that the user can take to either access the content they want or report the issue</dd>
 </dl>
@@ -62,7 +62,7 @@ Use a service issue error if someone is trying to view a page that the service i
 
 - the server is unavailable
 - the server experienced an error that wasn’t handled properly
-- an unknown issue occured that isn’t covered by other error messages
+- an unknown issue occurred that isn’t covered by other error messages
 
 The server should also return a response code in the `5xx` range.
 

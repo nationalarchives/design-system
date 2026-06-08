@@ -20,7 +20,7 @@ See the [generic page template](https://github.com/nationalarchives/tna-frontend
 
 | Block                                                        | Purpose                                                                          |
 | ------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| `pageTitle`                                                  | Explictly writes to the `<title>` element                                        |
+| `pageTitle`                                                  | Explicitly writes to the `<title>` element                                       |
 | `headIcons`                                                  | Contains favicon and `apple-touch-icon` icons                                    |
 | `head`                                                       | Empty block for the addition of other contents in the `<head>`                   |
 | `stylesheets`                                                | Block for including stylesheets                                                  |

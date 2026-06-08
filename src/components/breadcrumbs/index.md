@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Breadcrumbs
-description: Breadcrumbs help users to understand where they are within a websites structure and move between levels.
+description: Breadcrumbs help users to understand where they are within a website’s structure and move between levels.
 group: components
 cardImage: /breadcrumbs.svg
 phase: official
