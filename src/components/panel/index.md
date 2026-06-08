@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: Panel
-description: Use the panel component to show the sucessful end status of a form or user journey.
+description: Use the panel component to show the successful end status of a form or user journey.
 group: components
 cardImage: /panel.svg
 phase: official

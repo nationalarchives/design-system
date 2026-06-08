@@ -23,7 +23,7 @@ There are two grid elements:
 
 A container can be made by adding a `tna-container` class to an element.
 
-The container will restrict the total width of the site to the calue of the `$largest-container-width` variable which has a default of `1280px`.
+The container will restrict the total width of the site to the value of the `$largest-container-width` variable which has a default of `1280px`.
 
 Columns can then be added inside a container.
 

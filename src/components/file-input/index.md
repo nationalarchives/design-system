@@ -1,7 +1,7 @@
 ---
 layout: collection-page.njk
 title: File input
-description: The file input component allows users select and upload files.
+description: The file input component allows users to select and upload files.
 group: components
 cardImage: /file-input.svg
 phase: official

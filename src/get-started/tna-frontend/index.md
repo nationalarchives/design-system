@@ -13,7 +13,7 @@ TNA Frontend is an open source and standardised set of styles, components and la
 
 See the [TNA Frontend source code on GitHub](https://github.com/nationalarchives/tna-frontend).
 
-## Instalation
+## Installation
 
 Install the frontend package from [npm](https://www.npmjs.com/package/@nationalarchives/frontend):
 
@@ -269,7 +269,7 @@ const cookies = new Cookies();
 // Get all cookies
 const all = cookies.all;
 
-// Check for the existance of a cookie
+// Check for the existence of a cookie
 const exists = cookies.exists("my-cookie");
 
 // Get the value of a cookie

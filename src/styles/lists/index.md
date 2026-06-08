@@ -93,7 +93,7 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 
 ### Plain card lists
 
-Cards don’t require an image. It could be benificial to use them for a list of pages.
+Cards don’t require an image. It could be beneficial to use them for a list of pages.
 
 {{ example({ group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, showNunjucksOptions: false, size: "xl" }) }}
 
@@ -114,6 +114,6 @@ Make the file size no more than two decimal places long and use the appropriate 
 
 If necessary, split out the data into separate elements to make the list more readable in a similar fashion to the [files list component](../../components/files-list/).
 
-All the information needs to be available to both sighted and non-signed users.
+All the information needs to be available to both sighted and non-sighted users.
 
 {{ example({ group: "styles", item: "lists", example: "links-list-split", html: true, nunjucks: false, size: "xl" }) }}

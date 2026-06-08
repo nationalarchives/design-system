@@ -70,4 +70,4 @@ TNA Frontend comes with a [cookie library](../../get-started/tna-frontend/#cooki
 
 ### Service-specific cookies
 
-Publish a page that explains the cookies that your service uses, what their purposes is and how long they live. You can see an example of this on page describing [cookies used on The National Archives website](https://www.nationalarchives.gov.uk/cookies/details/).
+Publish a page that explains the cookies that your service uses, what their purpose is and how long they live. You can see an example of this on page describing [cookies used on The National Archives website](https://www.nationalarchives.gov.uk/cookies/details/).
