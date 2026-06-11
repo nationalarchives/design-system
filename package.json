@@ -47,7 +47,7 @@
     "@nationalarchives/eslint-config": "^0.1.4",
     "@nationalarchives/stylelint-config": "^0.1.1",
     "browser-sync": "^3.0.2",
-    "concurrently": "^9.0.1",
+    "concurrently": "^10.0.0",
     "glob": "^11.0.0",
     "gray-matter": "^4.0.3",
     "js-beautify": "^1.14.8",
