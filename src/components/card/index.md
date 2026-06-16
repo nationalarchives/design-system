@@ -22,13 +22,15 @@ statusDocumentationComplete: true
 
 ## Coloured cards
 
-Cards can be one of four additional styles; `plain`, `contrast`, `tint` and `accent`. Use different styles to direct user’s attention and provide visual distinction.
+Cards can be one of five styles; `plain`, `contrast`, `tint`, `accent` and `accent-light`. Use different styles to direct user’s attention and provide visual distinction.
 
-{{ example({ group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "xxxxl" }) }}
 
 ## Fully clickable
 
 By default, if there is a link defined then the card title and image are clickable. If you have a large number of cards, it may be easier to allow users to click anywhere on the card with `fullAreaClick`.
+
+Add a class of `tna-card--full-height` to make all the cards in a grid row appear the same height for more consistency.
 
 {{ example({ group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "xxxxl" }) }}
 
