@@ -64,7 +64,7 @@ TNA Frontend has support for three themes:
 
 ### Light theme
 
-The light theme is the default that comes with using the [`tna-template` class](../page-template/#css-classes) if the dark or system themes are not specified.
+The light theme is the default that comes with using the [`tna-template` class](../templates/#css-classes) if the dark or system themes are not specified.
 
 {{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "xl" }) }}
 
