@@ -21,7 +21,7 @@ GOV.UK has published an [example accessibility statement](https://www.gov.uk/gov
 
 In order to properly complete an accessibility statement, you need to have your service audited.
 
-You can audit your service yourself as long as you declare this in the accessibility statement. A better option is to use someone like the [Digital Accessibility Centre](https://digitalaccessibilitycentre.org/) (DAC) to check your service. DAC have access to people with real accessibility needs and are capable of assessing all aspects of WCAG compliance.
+You can audit your service yourself as long as you declare this in the accessibility statement. A better option is to use someone like the [Digital Accessibility Centre](https://digitalaccessibilitycentre.org/) (DAC) to check your service. DAC have access to people with real accessibility needs and are capable of assessing against all criteria of the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG).
 
 ## Cookies
 
