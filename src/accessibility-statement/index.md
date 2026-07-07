@@ -25,11 +25,11 @@ This statement applies to content published on the **design-system.nationalarchi
 This website is run by The National Archives Digital Services team. We want as many people as possible to be able to use this website. For example, that means you should be able to:
 
 - change colours, contrast levels and fonts using browser or device settings
-- zoom in up to 400% without problems
+- zoom in up to 400% without the text spilling off the screen
+- listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA, TalkBack and VoiceOver)
 - navigate most of the website using just a keyboard
 - navigate most of the website using just a mouse and on-screen keyboard
 - navigate most of the website using speech recognition software
-- listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)
 
 We’ve also made the website text as simple as possible to understand.
 
@@ -49,38 +49,22 @@ The Equality and Human Rights Commission (EHRC) is responsible for enforcing the
 
 ### Compliance status
 
-The Design System website at [design-system.nationalarchives.gov.uk](https://design-system.nationalarchives.gov.uk/) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
+The Design System website at [design-system.nationalarchives.gov.uk](https://design-system.nationalarchives.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
 The TNA Frontend Storybook website at [nationalarchives.github.io/tna-frontend](https://nationalarchives.github.io/tna-frontend) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard. Non-accessible content is documented in the next section.
 
-The TNA Frontend codebase at [github.com/nationalarchives/tna-frontend](https://github.com/nationalarchives/tna-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
-
-The TNA Frontend Jinja codebase at [github.com/nationalarchives/tna-frontend](https://github.com/nationalarchives/tna-frontend-jinja) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
-
 ### Non-accessible content
 
-In this section, we only list non-accessible content that has been reported, verified and tracked in the following repositories:
+In this section, we only list non-accessible content that has been reported, verified and tracked in the following services:
 
 - [National Archives Design System website](https://design-system.nationalarchives.gov.uk)
 - [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
-- [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
-- [TNA Frontend Jinja codebase](https://github.com/nationalarchives/tna-frontend-jinja)
 
 #### Non-compliance with the accessibility regulations
 
 These accessibility concerns have been classified as being non-compliant, due to a failure in one or more WCAG 2.2 Level A and AA criteria.
 
-From the National Archives Design System website:
-
-There is currently no known non-compliant content in the National Archives Design System website.
-
-From the TNA Frontend Storybook website:
-
-There is currently no known non-compliant content in the TNA Frontend Storybook website.
-
-From the TNA Frontend codebase:
-
-There is currently no known non-compliant content in the TNA Frontend codebase.
+There is currently no known non-compliant content in the National Archives Design System website, the TNA Frontend Storybook website, the TNA Frontend codebase or the TNA Frontend Jinja codebase.
 
 #### Disproportionate burden
 
@@ -88,7 +72,7 @@ We do not currently make any claims of disproportionate burden for any of our se
 
 #### Content that’s not within the scope of the accessibility regulations
 
-The accessibility regulations apply to all portions of the National Archives Design System website, TNA Frontend Storybook website and TNA Frontend codebase.
+The accessibility regulations apply to all portions of the National Archives Design System website and TNA Frontend Storybook website.
 
 We do not have any content within these products which we consider to be outside the scope of the accessibility regulations.
 
@@ -101,17 +85,11 @@ Above and beyond non-compliant content, we also track accessibility concerns whi
 - are not classified as non-compliance with the accessibility regulations
 - are determined as worth featuring in this accessibility statement
 
-From the National Archives Design System website:
-
-There are currently no known accessibility concerns in the National Archives Design System website which we have determined to be worth featuring in this accessibility statement.
-
-From the TNA Frontend Storybook website:
-
-There are currently no known accessibility concerns in the TNA Frontend Storybook website which we have determined to be worth featuring in this accessibility statement.
+There are currently no known accessibility concerns in the National Archives Design System or the TNA Frontend Storybook website which we have determined to be worth featuring in this accessibility statement.
 
 From the TNA Frontend codebase:
 
-1. The details component doesn’t work well with Dragon and VoiceOver. This is a known issue with the assistive tech and the `<details>` HTML element, rather than an issue with our details component specifically. Track the progress of GOV.UK Design System team with regards to this on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
+1. The details component doesn’t work well with Dragon and older versions of VoiceOver. This is a known issue with the assistive tech and the `<details>` HTML element, rather than an issue with our details component specifically. Track the progress of GOV.UK Design System team with regards to this on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
 
 ### Testing our products for accessibility
 

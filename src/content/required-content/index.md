@@ -15,7 +15,13 @@ If your service sits under the main National Archives domain (**nationalarchives
 
 For services that don’t sit under the root domain (including subdomains), or use different domains entirely, the service must have its own accessibility statement. An example is [this design system’s accessibility statement](../../accessibility/).
 
+### Writing an accessibility statement
+
 GOV.UK has published an [example accessibility statement](https://www.gov.uk/government/publications/sample-accessibility-statement) to get you started.
+
+In order to properly complete an accessibility statement, you need to have your service audited.
+
+You can audit your service yourself as long as you declare this in the accessibility statement. A better option is to use someone like the [Digital Accessibility Centre](https://digitalaccessibilitycentre.org/) (DAC) to check your service. DAC have access to people with real accessibility needs and are capable of assessing all aspects of WCAG compliance.
 
 ## Cookies
 
@@ -38,11 +44,11 @@ The National Archives uses four categories of cookies.
   <dt>
     <code>essential</code>
   </dt>
-  <dd>These cookies are required in order to use the service. We don’t need to ask permission for them. An example would be session cookies, which are required to allow the user to log in to a service.</dd>
+  <dd>These cookies are required in order to use the service. We don’t need to ask permission for them. An example would be a session cookie which is required to allow the user to log in to a service.</dd>
   <dt>
     <code>settings</code>
   </dt>
-  <dd>Configured options for the site which are specific to the user. For example, default results view or light/dark mode preference.</dd>
+  <dd>Configured options for the site which are specific to the user. For example, default results view (grid/list) or light/dark mode preference.</dd>
   <dt>
     <code>usage</code>
   </dt>
@@ -55,14 +61,29 @@ The National Archives uses four categories of cookies.
 
 {{ tnaWarning({
   headingLevel: 3,
-  body: "Ensure each of the cookies on your service adhere to one of these four categories and only create them once the user has accepted that category. For example, don’t add Google Analytics unless <code>usage</code> cookies have been accepted."
+  body: "Ensure each of the cookies on your service adhere to one of these four categories and only create them once the user has accepted that category. For example, don’t add Google Analytics until <code>usage</code> cookies have been accepted."
 }) }}
-
-If you use the [cookie banner component](../../components/cookie-banner/), you can write cookie preferences to any domain.
 
 The main site sets cookies with the domain `.nationalarchives.gov.uk` in a cookie called `cookies_policy`. This means the user’s cookie preferences are available for all subdomains of **nationalarchives.gov.uk**.
 
-If your service honors all of these preferences and uses the global domain (`.nationalarchives.gov.uk`) then you can link to the [National Archives cookie preferences page](https://www.nationalarchives.gov.uk/cookies/) to allow users to set their preferences in one place.
+The preferences are stored as an escaped JSON string.
+
+```plain:cookies_policy
+%7B%22usage%22%3Afalse%2C%22settings%22%3Atrue%2C%22marketing%22%3Atrue%2C%22essential%22%3Atrue%7D
+```
+
+When escaped and parsed, this produces a JSON object of preferences.
+
+```json
+{
+  "essential": true,
+  "marketing": true,
+  "settings: true,
+  "usage": false
+}
+```
+
+If your service honors all of these preferences and sits under the **nationalarchives.gov.uk** domain then you can link to the [National Archives cookie preferences page](https://www.nationalarchives.gov.uk/cookies/) to allow users to set their global preferences in one place.
 
 ### TNA Frontend cookie library
 

@@ -107,33 +107,18 @@
     themeSelector: true,
     currentTheme: theme,
     cookiesUrl: cookiesUrl,
-    defaultContent: true,
+    meta: "Site updated " ~ (stats.atime | prettyDate),
     navigation: [
-      {
-        title: "Meta",
-        items: [
-          {
-            text: "Site updated " ~ (stats.atime | prettyDate),
-            href: "https://github.com/nationalarchives/design-system/actions/workflows/deploy.yml",
-            external: true
-          },
-          {
-            text: "Built using TNA Frontend " ~ tnaFrontendVersion,
-            href: "https://github.com/nationalarchives/tna-frontend/releases/tag/v" ~ tnaFrontendVersion,
-            external: true
-          },
-          {
-            text: "Built with Metalsmith",
-            href: "https://metalsmith.io/",
-            external: true
-          }
-        ]
-      },
       {
         title: "Resources",
         items: [
           {
-            text: "Our brand",
+            text: "Built using TNA Frontend v" ~ tnaFrontendVersion,
+            href: "https://github.com/nationalarchives/tna-frontend/releases/tag/v" ~ tnaFrontendVersion,
+            external: true
+          },
+          {
+            text: "The National Archives brand",
             href: "/brand/"
           },
           {
@@ -145,8 +130,8 @@
     ],
     legal: [
       {
-        text: "Accessibility",
-        href: "/accessibility/"
+        text: "Accessibility statement",
+        href: "/accessibility-statement/"
       },
       {
         text: "Cookies",
