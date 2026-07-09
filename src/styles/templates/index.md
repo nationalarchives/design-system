@@ -95,7 +95,7 @@ In production, you should pass these variables into your template rendering func
 | `subject`                                                | **(Required)** The subject of the email, added to the `<title>` element |
 | `panel`                                                  | An optional [panel component](../../components/panel/)                  |
 | `content`                                                | The main body of the email                                              |
-| `ctaButtons`                                            | An optional array of [button components](../../components/button/)      |
+| `ctaButtons`                                             | An optional array of [button components](../../components/button/)      |
 | `signoff`                                                | A final piece of content at the end of the email                        |
 | {caption: The variables available in the email template} |
 
