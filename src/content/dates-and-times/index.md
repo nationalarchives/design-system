@@ -40,11 +40,9 @@ Use the HTML `time` element where possible:
 
 ### Time
 
-Use the [24-hour notation](https://en.wikipedia.org/wiki/24-hour_clock) for writing times.
+Use the [24-hour notation](https://en.wikipedia.org/wiki/24-hour_clock) for writing times and 0-prefix the hour:
 
-Do not 0-prefix the hour:
-
-- 9:30
+- 09:30
 
 ## Ranges
 
@@ -55,6 +53,8 @@ Avoid unnecessary duplication of days, months or years to allow users to scan mo
 <dl class="tna-dl tna-dl--zebra">
   <dt>Times in the same day</dt>
   <dd>16 October 2023, 19:00 to 20:00</dd>
+  <dt>Times in the different days</dt>
+  <dd>16 October 2023, 19:00 to 24 October 2023, 20:00</dd>
   <dt>Dates in the same month</dt>
   <dd>16 to 24 October 2023</dd>
   <dt>Dates over multiple months</dt>
@@ -82,6 +82,26 @@ Use the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format for dates inte
 - `2023-10-16`
 - `2023-10`
 - `2023`
+
+Where possible, use [Coordinated Universal Time (UTC)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (also known as the Zulu time zone).
+
+<!--
+If using [TNA Frontend](../../get-started/tna-frontend/), add a `tna-template--enhance-time-elements` class to your `tna-template` element to automatically update any `<time>` elements with a valid `datetime` to a localised time (taking daylight savings time into account).
+
+```html
+<time datetime="2026-03-05T13:48:00-05:00">
+  5 March 2026, 13:48 (UTC -5)
+</time>
+```
+
+would be updated to:
+
+```html
+<time datetime="2026-03-05T13:48:00-05:00" title="5 March 2026, 13:48 (UTC -5)">
+  Thursday 5 March 2026, 09:48
+</time>
+```
+-->
 
 ## Tools
 
