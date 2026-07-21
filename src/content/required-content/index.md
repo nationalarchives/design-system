@@ -11,9 +11,14 @@ group: content
 
 Your service must have an accessibility statement. This is covered under [regulation 8](https://www.legislation.gov.uk/uksi/2018/952/regulation/8/made) in the [Public Sector Bodies Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/contents/made) which applies to all public sector websites.
 
-If your service sits under the main National Archives domain (**nationalarchives.gov.uk**) then it should use the [main accessibility statement](https://www.nationalarchives.gov.uk/help/web-accessibility/).
+If your service sits under the main National Archives domain (**nationalarchives.gov.uk**) then it should use the [main accessibility statement](https://www.nationalarchives.gov.uk/accessibility-statement/).
 
 For services that don’t sit under the root domain (including subdomains), or use different domains entirely, the service must have its own accessibility statement. An example is [this design system’s accessibility statement](../../accessibility/).
+
+{{ tnaWarning({
+  headingLevel: 3,
+  body: "Internal services and third party services are not exempt from receiving a proper accessibility audit and having to publish an accessibility statement."
+}) }}
 
 ### Writing an accessibility statement
 
@@ -92,3 +97,11 @@ TNA Frontend comes with a [cookie library](../../get-started/tna-frontend/#cooki
 ### Service-specific cookies
 
 Publish a page that explains the cookies that your service uses, what their purpose is and how long they live. You can see an example of this on page describing [cookies used on The National Archives website](https://www.nationalarchives.gov.uk/cookies/details/).
+
+## Exemptions
+
+You don't have to publish an accessibility statement or adhere to the correct cookie preferences on your service if:
+
+- the service is not publically available, and
+- you are the only user of the service, and
+- no one else will ever be given access to the service (including if you leave your position)
