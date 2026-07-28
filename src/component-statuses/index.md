@@ -7,7 +7,7 @@ priority: 0.8
 
 ## Experimental
 
-> Use experimental components with caution.
+> Use experimental components and features with caution.
 
 Components with an "experimental" status are ones that are still in a proof-of-concept phase.
 

@@ -41,7 +41,7 @@ statusDocumentationComplete: false
 
 {{ tnaWarning({
   headingLevel: 3,
-  body: "This component feature is still under development."
+  body: 'This component feature is still in the <a href="../../component-statuses/#experimental">experimental phase</a>.'
 }) }}
 
 Allow users to enter a number of values into a field with the itemised textarea. This component does not feature autocomplete.

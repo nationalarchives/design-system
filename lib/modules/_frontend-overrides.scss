@@ -30,3 +30,9 @@
     }
   }
 }
+
+.tna-section.tna-\!--padding-top-m {
+  > :first-child {
+    padding-top: spacing.space(1);
+  }
+}
