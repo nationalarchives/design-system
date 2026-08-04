@@ -33,7 +33,7 @@
     "ext": "js css scss njk json html md"
   },
   "dependencies": {
-    "@nationalarchives/frontend": "1.0.0",
+    "@nationalarchives/frontend": "1.2.0",
     "prismjs": "^1.30.0"
   },
   "devDependencies": {
@@ -50,7 +50,7 @@
     "concurrently": "^10.0.4",
     "glob": "^13.0.0",
     "gray-matter": "^4.0.3",
-    "js-beautify": "^1.14.8",
+    "js-beautify": "^2.0.3",
     "jstransformer-nunjucks": "^1.2.0",
     "marked": "^12.0.0",
     "metalsmith": "^2.6.0",
