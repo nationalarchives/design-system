@@ -228,10 +228,6 @@ window.TNAFrontend.initAll();
 
 // ...or initialise them yourself
 new window.TNAFrontend.Accordion(document.getElementById("my-accordion"));
-
-// You can also use the cookie library
-var cookies = new window.TNAFrontend.Cookies();
-console.log("Cookie policies:", cookies.policies);
 ```
 
 ## Assets
