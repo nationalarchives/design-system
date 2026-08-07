@@ -96,7 +96,7 @@
     ],
     phaseBanner: {
       phase: "Beta",
-      message: "This is a new service – <a href='https://github.com/nationalarchives/design-system/issues/new'>give us your feedback</a> to help improve it."
+      message: "This is a new service – <a href=\"https://forms.cloud.microsoft/e/JazZeSLk85\" rel=\"noreferrer nofollow noopener\">give us your feedback</a> to help improve it."
     }
   }) }}
 {% endblock %}
@@ -106,7 +106,7 @@
     themeSelector: true,
     currentTheme: theme,
     cookiesUrl: cookiesUrl,
-    meta: "Site updated " ~ (stats.atime | prettyDate),
+    meta: "This site was last updated " ~ (stats.atime | prettyDate),
     navigation: [
       {
         title: "Resources",
@@ -131,6 +131,14 @@
       {
         text: "Accessibility statement",
         href: "/accessibility-statement/"
+      },
+      {
+        text: "Terms and conditions",
+        href: "https://www.nationalarchives.gov.uk/terms-and-conditions/"
+      },
+      {
+        text: "Privacy notice",
+        href: "https://www.nationalarchives.gov.uk/terms-and-conditions/privacy-notice/"
       },
       {
         text: "Cookies",

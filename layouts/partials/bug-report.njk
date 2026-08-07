@@ -1,0 +1,22 @@
+{%- from "nationalarchives/components/button/macro.njk" import tnaButton -%}
+
+<section class="tna-container tna-!--margin-top-xl tna-!--margin-bottom-l">
+  <div class="tna-column tna-column--width-2-3 tna-column--full-small tna-column--full-tiny">
+    <div class="tna-aside tna-background-tint">
+      <h2 class="tna-heading-m">Something not right?</h2>
+      <p>We are working to improve this service and appreciate your input.</p>
+      <div class="tna-button-group">
+        {{ tnaButton({
+          text: "Report a problem",
+          href: "https://github.com/nationalarchives/design-system/issues/new?template=bug.yml",
+          icon: "bug"
+        }) }}
+        {{ tnaButton({
+          text: "Provide feedback",
+          href: "https://forms.cloud.microsoft/e/JazZeSLk85",
+          plain: true
+        }) }}
+      </div>
+    </div>
+  </div>
+</section>
