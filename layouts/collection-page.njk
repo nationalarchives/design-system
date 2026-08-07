@@ -38,7 +38,7 @@
       {% endif %}
       {{ contents | safe }}
     </main>
-    <div id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section tna-!--hide-on-print">
+    <section id="{{ group }}-list" class="tna-column tna-column--width-1-4 tna-column--width-1-3-medium tna-column--full-small tna-column--full-tiny tna-section tna-!--hide-on-print" role="complementary">
       {% set subGroups = [] %}
       {% for item in collections[group] %}
         {% if not item.subGroup and "" not in subGroups %}
@@ -89,14 +89,17 @@
           }) }}
         {% endif %}
       {% endfor %}
-    </div>
+    </section>
+  </div>
+  {%- include "partials/bug-report.njk" -%}
+  <nav class="tna-container" aria-label="Back to top">
     <section class="tna-column tna-column--full tna-!--hide-on-print">
       <hr>
       <p>
         <a href="#top" class="tna-button tna-button--small tna-button--plain"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Back to top</a>
       </p>
     </section>
-  </div>
+  </nav>
 {% endblock %}
 
 {% block bodyEnd %}

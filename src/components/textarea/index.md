@@ -15,7 +15,7 @@ statusDocumentationComplete: false
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
+{{ example({ title: "Textarea example", group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
 ## Component status
 
@@ -23,19 +23,15 @@ statusDocumentationComplete: false
 
 ## Prefilled
 
-{{ example({ group: "components", item: "textarea", example: "prefilled", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ title: "Textarea prefilled example", group: "components", item: "textarea", example: "prefilled", html: true, nunjucks: true, size: "s" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "textarea", example: "hint", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ title: "Textarea with hint example", group: "components", item: "textarea", example: "hint", html: true, nunjucks: true, size: "m" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "textarea", example: "error", html: true, nunjucks: true, size: "m" }) }}
-
-<!-- ## Inline
-
-{{ example({ group: "components", item: "textarea", example: "inline", html: true, nunjucks: true, size: "xs" }) }} -->
+{{ example({ title: "Textarea error example", group: "components", item: "textarea", example: "error", html: true, nunjucks: true, size: "m" }) }}
 
 ## Itemised
 
@@ -48,4 +44,4 @@ Allow users to enter a number of values into a field with the itemised textarea.
 
 Without JavaScript, this renders a normal `<textarea>` where values can be separated by line breaks.
 
-{{ example({ group: "components", item: "textarea", example: "itemised", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ title: "Textarea itemised example", group: "components", item: "textarea", example: "itemised", html: true, nunjucks: true, size: "l" }) }}

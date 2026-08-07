@@ -14,13 +14,13 @@ The National Archives use [WCAG technique C40](https://www.w3.org/WAI/WCAG22/Tec
 
 This focus indicator uses yellow and black borders which also meets [Success Criteria 2.4.13: Focus appearance (level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance).
 
-{{ example({ group: "styles", item: "focus", example: "buttons", size: "xl" }) }}
+{{ example({ title: "Focus example", group: "styles", item: "focus", example: "buttons", size: "xl" }) }}
 
 ## Larger hit areas
 
 We can increase the hit area and focus indicator to parent elements to make elements easier to click on. This technique is used for the [fully clickable cards](../../components/card/#fully-clickable).
 
-{{ example({ group: "styles", item: "focus", example: "larger-focus", html: true, size: "s" }) }}
+{{ example({ title: "Larger hit areas example", group: "styles", item: "focus", example: "larger-focus", html: true, size: "s" }) }}
 
 To expand the hit area, use the `faux-full-outline` function from the accessibility tools. Consider adding a hover state to the parent element to reinforce the interactable area.
 

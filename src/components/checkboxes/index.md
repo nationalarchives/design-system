@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
+{{ example({ title: "Checkbox example", group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
 ## Component status
 
@@ -22,29 +22,29 @@ statusDocumentationComplete: false
 
 ## Small
 
-{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ title: "Checkbox small example", group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, size: "l" }) }}
 
 ## Preselected
 
-{{ example({ group: "components", item: "checkboxes", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ title: "Checkbox preselected example", group: "components", item: "checkboxes", example: "preselected", html: true, nunjucks: true, size: "s" }) }}
 
 ## Hints
 
-{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ title: "Checkbox with hints example", group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, size: "m" }) }}
 
 ### Item hints
 
 Do not add item hints to [small checkboxes](#small) or [inline checkboxes](#inline).
 
-{{ example({ group: "components", item: "checkboxes", example: "item-hints", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ title: "Checkbox with item hints example", group: "components", item: "checkboxes", example: "item-hints", html: true, nunjucks: true, size: "m" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ title: "Checkbox error example", group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, size: "m" }) }}
 
 ## Inline
 
-{{ example({ group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ title: "Checkbox inline example", group: "components", item: "checkboxes", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
 
 ## Single
 
@@ -52,6 +52,6 @@ When there is only a single checkbox, it isn’t rendered within a `<fieldset>`.
 
 The field label on a single checkbox is optional.
 
-{{ example({ group: "components", item: "checkboxes", example: "single", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ title: "Checkbox single example", group: "components", item: "checkboxes", example: "single", html: true, nunjucks: true, size: "xxs" }) }}
 
-{{ example({ group: "components", item: "checkboxes", example: "single-no-label", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ title: "Checkbox single with no label example", group: "components", item: "checkboxes", example: "single-no-label", html: true, nunjucks: true, size: "xxs" }) }}

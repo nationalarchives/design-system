@@ -14,7 +14,7 @@ statusDocumentationComplete: true
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "back-link", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
+{{ example({ title: "Back link example", group: "components", item: "back-link", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
 ## Component status
 

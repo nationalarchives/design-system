@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "quick-filters", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
+{{ example({ title: "Quick filters example", group: "components", item: "quick-filters", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 ## Component status
 

@@ -14,23 +14,11 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}, 2) }}
+{{ example({ title: "Tabs example", group: "components", item: "tabs", example: "default", html: true, nunjucks: true, size: "s"}, 2) }}
 
 ## Component status
 
 {% include "partials/component-status.njk" %}
-
-<!-- ## Without JavaScript
-
-{{ example({ group: "components", item: "tabs", example: "default-no-js", html: false, nunjucks: false, size: "s"}) }}
-
-## Without CSS
-
-{{ example({ group: "components", item: "tabs", example: "default-no-css", html: false, nunjucks: false, size: "s"}) }}
-
-## Without CSS or JavaScript
-
-{{ example({ group: "components", item: "tabs", example: "default-no-css-no-js", html: false, nunjucks: false, size: "s"}) }} -->
 
 ## Known issues and gaps
 

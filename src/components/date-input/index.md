@@ -17,7 +17,7 @@ statusDocumentationComplete: false
 
 For searching by date, use the [date search](../date-search/) component.
 
-{{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
+{{ example({ title: "Date input example", group: "components", item: "date-input", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 ## Component status
 
@@ -25,15 +25,15 @@ For searching by date, use the [date search](../date-search/) component.
 
 ## Prefilled
 
-{{ example({ group: "components", item: "date-input", example: "prefilled", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Date input prefilled example", group: "components", item: "date-input", example: "prefilled", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "date-input", example: "hint", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ title: "Date input with hint example", group: "components", item: "date-input", example: "hint", html: true, nunjucks: true, size: "s" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ title: "Date input error example", group: "components", item: "date-input", example: "error", html: true, nunjucks: true, size: "s" }) }}
 
 ## Progressive
 
@@ -42,4 +42,4 @@ For searching by date, use the [date search](../date-search/) component.
   body: "The progressive variation of the date input component is still experimental."
 }) }}
 
-{{ example({ group: "components", item: "date-input", example: "progressive", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ title: "Date input progressive example", group: "components", item: "date-input", example: "progressive", html: true, nunjucks: true, size: "s" }) }}

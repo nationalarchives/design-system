@@ -16,7 +16,7 @@ statusDocumentationComplete: false
 
 Where possible, avoid overusing the select component. Alice Bartlett gave a talk at EpicFEL called ["Burn your select tags"](https://www.youtube.com/watch?v=CUkMCQR4TpY) which explains when the `<select>` tag is not the most appropriate tag to use.
 
-{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ title: "Select example", group: "components", item: "select", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 ## Component status
 
@@ -24,16 +24,16 @@ Where possible, avoid overusing the select component. Alice Bartlett gave a talk
 
 ## Preselected
 
-{{ example({ group: "components", item: "select", example: "preselected", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ title: "Select preselected example", group: "components", item: "select", example: "preselected", html: true, nunjucks: true, size: "xxs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "select", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Select with hint example", group: "components", item: "select", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Select error example", group: "components", item: "select", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
 <!-- ## Inline
 
-{{ example({ group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->
+{{ example({ title: "Select inline example", group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->

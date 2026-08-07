@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "global-header", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
+{{ example({ title: "Global header example", group: "components", item: "global-header", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
 
 ## Component status
 

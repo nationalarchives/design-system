@@ -20,11 +20,11 @@ In the main call to action on a page, you have the option to [include an icon in
 
 Avoid using icons in all call to action buttons.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }}
+{{ example({ title: "Call to action icons example", group: "styles", item: "icons", example: "icon-button", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }}
 
 With call to actions that benefit from an arrow or chevron icon that points to the right, align the icon to the right of the button text.
 
-{{ example({ group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }}
+{{ example({ title: "Right aligned icon example", group: "styles", item: "icons", example: "icon-button-right-icon", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }}
 
 <!-- ## Brand icons
 
@@ -32,16 +32,16 @@ TNA Frontend doesn’t include [Font Awesome brand icons](https://fontawesome.co
 
 Use brand icons to add visual information to external site links. Keep the brand icon on the left of the button.
 
-{{ example({ group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }} -->
+{{ example({ title: "Brand icons example", group: "styles", item: "icons", example: "brand-icon-button", html: true, nunjucks: true, size: "xxs", showNunjucksOptions: false }) }} -->
 
 ## Displaying information with icons
 
 Use a [description list](../../styles/lists/#description-lists) to show a list of fields and values. If space allows, the titles can be enhanced with icons.
 
-{{ example({ group: "styles", item: "lists", example: "description-list-icons", html: true, nunjucks: false, size: "s" }) }}
+{{ example({ title: "Description list with icons example", group: "styles", item: "lists", example: "description-list-icons", html: true, nunjucks: false, size: "s" }) }}
 
 ### Chip lists with icons
 
 For smaller lists of metadata, icons can be used inside a [chip list](../../styles/lists/#chip-lists).
 
-{{ example({ group: "styles", item: "icons", example: "chip-list-icons", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Chip list with icons example", group: "styles", item: "icons", example: "chip-list-icons", html: true, nunjucks: false, size: "xxs" }) }}

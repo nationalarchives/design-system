@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "footer", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
+{{ example({ title: "Footer example", group: "components", item: "footer", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
 
 ## Component status
 
@@ -26,4 +26,4 @@ Use `defaultContent: true` to populate the footer with the required content for 
 
 If using a different subdomain, change the base domain using `defaultContentBaseURL`.
 
-{{ example({ group: "components", item: "footer", example: "default-content", html: true, nunjucks: true, size: "xxxl" }) }}
+{{ example({ title: "Footer with default content example", group: "components", item: "footer", example: "default-content", html: true, nunjucks: true, size: "xxxl" }) }}
