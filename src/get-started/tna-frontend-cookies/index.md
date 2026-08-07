@@ -70,12 +70,12 @@ const cookies = new Cookies();
 // Get all policies
 console.log("Cookie policies:", cookies.policies);
 
-// Check if a policy has been accepted
+// Check if a preference has been enabled
 console.log(`Marketing cookies have${
     cookies.preference("marketing") ? " " : " not "
   }been accepted.`);
 
-// Accept a policy
+// Enable a preference
 document.getElementById("accept-usage-cookies-button")
   .addEventListener("click", () => {
     cookies.enablePreference("usage");
@@ -153,7 +153,7 @@ cookies.once("deleteCookie", (data) => {
   console.log("A cookie was deleted", data);
 });
 
-// Wait for a policy to change
+// Wait for a preference to change
 cookies.on("changePreference", (data) => {
   if (Object.prototype.hasOwnProperty.call(data, "settings")) {
     if(data.settings !== true) {
@@ -162,7 +162,7 @@ cookies.on("changePreference", (data) => {
       console.log("Settings cookies rejected.");
     }
   } else {
-    console.log("A policy other than settings has changed.");
+    console.log("A preference other than settings has changed.");
   }
 });
 ```

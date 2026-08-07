@@ -69,11 +69,11 @@ The National Archives uses four categories of cookies.
   body: "Ensure each of the cookies on your service adhere to one of these four categories and only create them once the user has accepted that category. For example, don’t add Google Analytics until <code>usage</code> cookies have been accepted."
 }) }}
 
-The main site sets cookies with the domain `.nationalarchives.gov.uk` in a cookie called `cookies_policy`. This means the user’s cookie preferences are available for all subdomains of **nationalarchives.gov.uk**.
+The main site sets cookies with the domain `.nationalarchives.gov.uk` in a cookie called `cookie_preferences`. This means the user’s cookie preferences are available for all subdomains of **nationalarchives.gov.uk**.
 
 The preferences are stored as an escaped JSON string.
 
-```plain:cookies_policy
+```plain:cookie_preferences
 %7B%22usage%22%3Afalse%2C%22settings%22%3Atrue%2C%22marketing%22%3Atrue%2C%22essential%22%3Atrue%7D
 ```
 

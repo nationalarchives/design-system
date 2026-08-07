@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "file-input", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ title: "File input example", group: "components", item: "file-input", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 ## Component status
 
@@ -22,15 +22,15 @@ statusDocumentationComplete: false
 
 ## Hint
 
-{{ example({ group: "components", item: "file-input", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "File input with hint example", group: "components", item: "file-input", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "file-input", example: "error", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "File input error example", group: "components", item: "file-input", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Multiple
 
-{{ example({ group: "components", item: "file-input", example: "multiple", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ title: "File input multiple example", group: "components", item: "file-input", example: "multiple", html: true, nunjucks: true, size: "xxs" }) }}
 
 ## Improved file input component
 
@@ -42,4 +42,4 @@ If JavaScript is available to the user, you can enhance the file input by adding
 
 If JavaScript fails to load, the component reverts to the standard form input.
 
-{{ example({ group: "components", item: "file-input", example: "droppable", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "File input improved example", group: "components", item: "file-input", example: "droppable", html: true, nunjucks: true, size: "xs" }) }}

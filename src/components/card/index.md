@@ -14,7 +14,7 @@ statusDocumentationComplete: true
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "card", example: "default", html: true, nunjucks: true, size: "xl" }, 2) }}
+{{ example({ title: "Card example", group: "components", item: "card", example: "default", html: true, nunjucks: true, size: "xl" }, 2) }}
 
 ## Component status
 
@@ -24,7 +24,7 @@ statusDocumentationComplete: true
 
 Cards can be one of five styles; `plain`, `contrast`, `tint`, `accent` and `accent-light`. Use different styles to direct user’s attention and provide visual distinction.
 
-{{ example({ group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "xxxxl" }) }}
+{{ example({ title: "Card colours example", group: "components", item: "card", example: "colours", html: true, nunjucks: true, size: "xxxxl" }) }}
 
 ## Fully clickable
 
@@ -32,7 +32,7 @@ By default, if there is a link defined then the card title and image are clickab
 
 Add a class of `tna-card--full-height` to make all the cards in a grid row appear the same height for more consistency.
 
-{{ example({ group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "xxxxl" }) }}
+{{ example({ title: "Card fully clickable example", group: "components", item: "card", example: "full-click", html: true, nunjucks: true, size: "xxxxl" }) }}
 
 ## Horizontal
 
@@ -44,7 +44,7 @@ If some cards in the list have images and others don’t, consider aligning the 
 
 Horizontal cards generally benefit from using one of the [different card colours](#coloured-cards) to create boundaries.
 
-{{ example({ group: "components", item: "card", example: "horizontal", html: true, nunjucks: true, size: "xxxxl" }) }}
+{{ example({ title: "Card horizontal example", group: "components", item: "card", example: "horizontal", html: true, nunjucks: true, size: "xxxxl" }) }}
 
 ## Images
 
@@ -60,7 +60,7 @@ When cards are far enough down the page, you can wait to load the image until th
 
 Card images are optional and pages with a lot of cards could benefit from using cards without images.
 
-{{ example({ group: "components", item: "card", example: "no-images", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ title: "Card with no images example", group: "components", item: "card", example: "no-images", html: true, nunjucks: true, size: "l" }) }}
 
 ## Meta information
 
@@ -68,7 +68,7 @@ Add additional bits of small information to the card with meta.
 
 Keep the meta information short and enhance with icons if necessary.
 
-{{ example({ group: "components", item: "card", example: "meta", html: true, nunjucks: true, size: "xxl" }) }}
+{{ example({ title: "Card with metadata example", group: "components", item: "card", example: "meta", html: true, nunjucks: true, size: "xxl" }) }}
 
 ## Actions
 
@@ -76,4 +76,4 @@ Cards can have a list of "actions" which are displayed as links at the bottom of
 
 Cards with actions should not also have an `href` property.
 
-{{ example({ group: "components", item: "card", example: "actions", html: true, nunjucks: true, size: "l" }) }}
+{{ example({ title: "Card with actions example", group: "components", item: "card", example: "actions", html: true, nunjucks: true, size: "l" }) }}

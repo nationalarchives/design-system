@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "search-field", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
+{{ example({ title: "Search field example", group: "components", item: "search-field", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
 ## Component status
 
@@ -22,11 +22,11 @@ statusDocumentationComplete: false
 
 ## Prefilled
 
-{{ example({ group: "components", item: "search-field", example: "prefilled", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Search field prefilled example", group: "components", item: "search-field", example: "prefilled", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "search-field", example: "hint", html: true, nunjucks: true, size: "s" }) }}
+{{ example({ title: "Search field with hint example", group: "components", item: "search-field", example: "hint", html: true, nunjucks: true, size: "s" }) }}
 
 ## Handling errors
 

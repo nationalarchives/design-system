@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "warning", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ title: "Warning example", group: "components", item: "warning", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 ## Component status
 

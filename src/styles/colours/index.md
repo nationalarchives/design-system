@@ -66,13 +66,13 @@ TNA Frontend has support for three themes:
 
 The light theme is the default that comes with using the [`tna-template` class](../templates/#css-classes) if the dark or system themes are not specified.
 
-{{ example({ group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ title: "Light theme example", group: "styles", item: "colours", example: "theme-light", html: false, nunjucks: false, size: "xl" }) }}
 
 ### Dark theme
 
 A dark theme can be used by adding the `tna-template--dark-theme` class to the `<html>` element.
 
-{{ example({ group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "xl" }) }}
+{{ example({ title: "Dark theme example", group: "styles", item: "colours", example: "theme-dark", html: false, nunjucks: false, size: "xl" }) }}
 
 ### System theme
 
@@ -133,31 +133,31 @@ Accent colours can also be added on a per-element basis. Use one of the followin
 
 ### Default (no accent colour)
 
-{{ example({ group: "styles", item: "colours", example: "no-accent", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "No accent colour example", group: "styles", item: "colours", example: "no-accent", html: false, nunjucks: false, size: "xxl" }) }}
 
 ### Black
 
-{{ example({ group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "Black accent colour example", group: "styles", item: "colours", example: "accent-black", html: false, nunjucks: false, size: "xxl" }) }}
 
 ### Pink
 
-{{ example({ group: "styles", item: "colours", example: "accent-pink", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "Pink accent colour example", group: "styles", item: "colours", example: "accent-pink", html: false, nunjucks: false, size: "xxl" }) }}
 
 ### Orange
 
-{{ example({ group: "styles", item: "colours", example: "accent-orange", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "Orange accent colour example", group: "styles", item: "colours", example: "accent-orange", html: false, nunjucks: false, size: "xxl" }) }}
 
 ### Yellow
 
-{{ example({ group: "styles", item: "colours", example: "accent-yellow", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "Yellow accent colour example", group: "styles", item: "colours", example: "accent-yellow", html: false, nunjucks: false, size: "xxl" }) }}
 
 ### Green
 
-{{ example({ group: "styles", item: "colours", example: "accent-green", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "Green accent colour example", group: "styles", item: "colours", example: "accent-green", html: false, nunjucks: false, size: "xxl" }) }}
 
 ### Blue
 
-{{ example({ group: "styles", item: "colours", example: "accent-blue", html: false, nunjucks: false, size: "xxl" }) }}
+{{ example({ title: "Blue accent colour example", group: "styles", item: "colours", example: "accent-blue", html: false, nunjucks: false, size: "xxl" }) }}
 
 ## Block colours
 
@@ -174,19 +174,19 @@ The appropriate colours for all child elements such as text and links will also 
 
 ### Tint
 
-{{ example({ group: "styles", item: "colours", example: "block-tint", html: false, nunjucks: false, size: "block" }) }}
+{{ example({ title: "Tint example", group: "styles", item: "colours", example: "block-tint", html: false, nunjucks: false, size: "block" }) }}
 
 ### Contrast
 
-{{ example({ group: "styles", item: "colours", example: "block-contrast", html: false, nunjucks: false, size: "block" }) }}
+{{ example({ title: "Contrast example", group: "styles", item: "colours", example: "block-contrast", html: false, nunjucks: false, size: "block" }) }}
 
 ### Accent
 
-{{ example({ group: "styles", item: "colours", example: "block-accent", html: false, nunjucks: false, size: "block" }) }}
+{{ example({ title: "Accent example", group: "styles", item: "colours", example: "block-accent", html: false, nunjucks: false, size: "block" }) }}
 
 ### Light accent
 
-{{ example({ group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, size: "block" }) }}
+{{ example({ title: "Light accent example", group: "styles", item: "colours", example: "block-accent-light", html: false, nunjucks: false, size: "block" }) }}
 
 > On dark themes, a light accent block will change to an [accent block](#accent).
 

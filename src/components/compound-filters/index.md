@@ -16,7 +16,7 @@ statusDocumentationComplete: false
 
 Each selected value requires a link to be able to remove the value.
 
-{{ example({ group: "components", item: "compound-filters", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ title: "Compound filters example", group: "components", item: "compound-filters", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 ## Component status
 

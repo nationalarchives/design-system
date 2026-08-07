@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "files-list", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
+{{ example({ title: "Files list example", group: "components", item: "files-list", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
 
 ## Component status
 

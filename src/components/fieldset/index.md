@@ -14,7 +14,7 @@ statusDocumentationComplete: false
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "components", item: "fieldset", example: "default", html: true, nunjucks: true, size: "xxl" }, 2) }}
+{{ example({ title: "Fieldset example", group: "components", item: "fieldset", example: "default", html: true, nunjucks: true, size: "xxl" }, 2) }}
 
 ## Component status
 

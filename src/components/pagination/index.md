@@ -16,7 +16,7 @@ statusDocumentationComplete: false
 
 Pagination can be used for example, as a list of search results or a list of cases in a case working system.
 
-{{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ title: "Pagination example", group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 ## Component status
 
@@ -58,12 +58,12 @@ Use ellipses (&hellip;) to replace any skipped pages. For example:
 
 Do not show the previous page link on the first page — and do not show the next page link on the last page.
 
-{{ example({ group: "components", item: "pagination", example: "first", html: false, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Pagination first pages example", group: "components", item: "pagination", example: "first", html: false, nunjucks: false, size: "xxs" }) }}
 
-{{ example({ group: "components", item: "pagination", example: "last", html: false, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Pagination last pages example", group: "components", item: "pagination", example: "last", html: false, nunjucks: false, size: "xxs" }) }}
 
 ## Previous and next pages
 
 Show only a previous and next with no numbers if your pagination isn’t part of a numbered sequence.
 
-{{ example({ group: "components", item: "pagination", example: "previous-next", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Pagination previous and next example", group: "components", item: "pagination", example: "previous-next", html: true, nunjucks: true, size: "xs" }) }}

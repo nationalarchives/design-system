@@ -32,7 +32,7 @@ Use this style to help users navigate pages with a large amount of content.
 
 Display this sidebar on the left hand side of the page and make sure that on smaller devices, the sidebar appears above the page to act as a table of contents.
 
-{{ example({ group: "components", item: "sidebar", example: "contents", html: true, nunjucks: true, size: "xl" }) }}
+{{ example({ title: "Sidebar contents example", group: "components", item: "sidebar", example: "contents", html: true, nunjucks: true, size: "xl" }) }}
 
 ## Sections
 
@@ -40,7 +40,7 @@ The sections style sidebar provides links to sections of the page and each item 
 
 Display this sidebar on the left hand side of the page and make sure that on smaller devices, the sidebar appears above the page to act as a simplified table of contents.
 
-{{ example({ group: "components", item: "sidebar", example: "sections", html: true, nunjucks: true, size: "xl" }) }}
+{{ example({ title: "Sidebar sections example", group: "components", item: "sidebar", example: "sections", html: true, nunjucks: true, size: "xl" }) }}
 
 ## Pages
 
@@ -52,12 +52,12 @@ Display this sidebar on the right hand side of the page so that on smaller devic
 
 When using the pages sidebar style, consider adding another style sidebar that is only visible at the top of the page on smaller displays to allow users to jump to content on the page.
 
-{{ example({ group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "xl" }) }}
+{{ example({ title: "Sidebar pages example", group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "xl" }) }}
 
 ## Whole page examples
 
-{{ example({ group: "components", item: "sidebar", example: "contents-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
+{{ example({ title: "Sidebar content in page example", group: "components", item: "sidebar", example: "contents-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
 
-{{ example({ group: "components", item: "sidebar", example: "sections-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
+{{ example({ title: "Sidebar sections in page example", group: "components", item: "sidebar", example: "sections-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
 
-{{ example({ group: "components", item: "sidebar", example: "pages-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
+{{ example({ title: "Sidebar pages in page example", group: "components", item: "sidebar", example: "pages-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}

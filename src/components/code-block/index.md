@@ -22,7 +22,7 @@ statusDocumentationComplete: false
 
 Both Nunjucks and Jinja have the ability to autoescape template content and both enable the option by default. See [Autoescaping in Nunjucks](https://mozilla.github.io/nunjucks/api.html#autoescaping) and [Autoescaping in Jinja](https://jinja.palletsprojects.com/en/stable/api/#autoescaping).
 
-{{ example({ group: "components", item: "code-block", example: "default", html: true, nunjucks: true, size: "m" }) }}
+{{ example({ title: "Code block example", group: "components", item: "code-block", example: "default", html: true, nunjucks: true, size: "m" }) }}
 
 ## Component status
 

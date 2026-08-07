@@ -16,7 +16,7 @@ statusDocumentationComplete: false
 
 When you need the user to enter a date for data purposes or don’t want to require a day or month, use the [date input](../date-input/) component.
 
-{{ example({ group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
+{{ example({ title: "Date search example", group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
 ## Component status
 
@@ -24,16 +24,16 @@ When you need the user to enter a date for data purposes or don’t want to requ
 
 ## Prefilled
 
-{{ example({ group: "components", item: "date-search", example: "prefilled", html: true, nunjucks: true, size: "xxs" }) }}
+{{ example({ title: "Date search prefilled example", group: "components", item: "date-search", example: "prefilled", html: true, nunjucks: true, size: "xxs" }) }}
 
 ## Hint
 
-{{ example({ group: "components", item: "date-search", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Date search hint example", group: "components", item: "date-search", example: "hint", html: true, nunjucks: true, size: "xs" }) }}
 
 ## Error
 
-{{ example({ group: "components", item: "date-search", example: "error", html: true, nunjucks: true, size: "xs" }) }}
+{{ example({ title: "Date search error example", group: "components", item: "date-search", example: "error", html: true, nunjucks: true, size: "xs" }) }}
 
 <!-- ## Inline
 
-{{ example({ group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->
+{{ example({ title: "Date search inline example", group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->

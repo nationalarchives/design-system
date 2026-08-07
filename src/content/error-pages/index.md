@@ -7,7 +7,7 @@ group: content
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ group: "content", item: "error-pages", example: "layout", html: false, nunjucks: false, size: "xxxxl" }) }}
+{{ example({ title: "Error page example", group: "content", item: "error-pages", example: "layout", html: false, nunjucks: false, size: "xxxxl" }) }}
 
 Provide the user with information about the error:
 
@@ -33,7 +33,7 @@ A complete list of responses that are available for error pages can be found on 
 
 ## Page not found
 
-{{ example({ group: "content", item: "error-pages", example: "page-not-found", html: true, nunjucks: false, size: "m" }) }}
+{{ example({ title: "Page not found example", group: "content", item: "error-pages", example: "page-not-found", html: true, nunjucks: false, size: "m" }) }}
 
 Use a page not found error if someone is trying to view a page that does not exist. This happens if someone:
 
@@ -45,7 +45,7 @@ The server should also return a `404` response for this page.
 
 ## Restricted access
 
-{{ example({ group: "content", item: "error-pages", example: "restricted-access", html: true, nunjucks: false, size: "m" }) }}
+{{ example({ title: "Restricted access example", group: "content", item: "error-pages", example: "restricted-access", html: true, nunjucks: false, size: "m" }) }}
 
 Use a restricted access error if someone is trying to view a page or resource that they shouldn’t be allowed to. This can happen if:
 
@@ -56,7 +56,7 @@ The server should also return either a `401` (Unauthorized) or `403` (Forbidden)
 
 ## Service issue
 
-{{ example({ group: "content", item: "error-pages", example: "service-issue", html: true, nunjucks: false, size: "s" }) }}
+{{ example({ title: "Service issue example", group: "content", item: "error-pages", example: "service-issue", html: true, nunjucks: false, size: "s" }) }}
 
 Use a service issue error if someone is trying to view a page that the service is currently unable to render. This can happen if:
 
@@ -68,7 +68,7 @@ The server should also return a response code in the `5xx` range.
 
 ## Rate limited
 
-{{ example({ group: "content", item: "error-pages", example: "rate-limited", html: true, nunjucks: false, size: "s" }) }}
+{{ example({ title: "Rate limited example", group: "content", item: "error-pages", example: "rate-limited", html: true, nunjucks: false, size: "s" }) }}
 
 Use a rate limited error if someone makes too many requests to a service.
 
