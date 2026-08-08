@@ -68,7 +68,7 @@ import { Cookies } from "@nationalarchives/cookies";
 const cookies = new Cookies();
 
 // Get all policies
-console.log("Cookie policies:", cookies.policies);
+console.log("Cookie preferences:", cookies.preferences);
 
 // Check if a preference has been enabled
 console.log(`Marketing cookies have${
