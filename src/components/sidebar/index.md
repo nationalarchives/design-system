@@ -42,6 +42,18 @@ Display this sidebar on the left hand side of the page and make sure that on sma
 
 {{ example({ title: "Sidebar sections example", group: "components", item: "sidebar", example: "sections", html: true, nunjucks: true, size: "xl" }) }}
 
+### Sticky sections sidebar
+
+When displayed as a sticky sidebar with `sticky: true`, the sections sidebar will highlight the section currently in view as the user scrolls down.
+
+There are two options available for this functionality: which device sizes highlight the current section and how far from the top of the page the heading should be before it highlights.
+
+By default, the highlighing is shown on large and medium [device sizes](../../styles/devices/#device-sizes) and disabled on small and tiny devices. This can be changed by adding an attribute of `"data-disable-highlight-size": "tiny"` to the component (or `data-disable-highlight-size="tiny"` in HTML) where the value is the device size at which the highlighting is disabled.
+
+The highlighted section is the one that is no more than a certain number of pixels from the top of the page. By default this is `0px` but can be set using the attribute `"data-scroll-top-threshold": "16"` (or `data-scroll-top-threshold="16"` in HTML). If set to `16`, when the element reaches at least 16px from the top of the window, it will be considered the active item.
+
+{{ example({ title: "Sidebar sections in page example", group: "components", item: "sidebar", example: "sections-page", html: true, nunjucks: true, size: "xxl", noAutoSize: true }) }}
+
 ## Pages
 
 The pages style sidebar is used to link to other pages such as similar pages in a section of a site.
@@ -53,11 +65,3 @@ Display this sidebar on the right hand side of the page so that on smaller devic
 When using the pages sidebar style, consider adding another style sidebar that is only visible at the top of the page on smaller displays to allow users to jump to content on the page.
 
 {{ example({ title: "Sidebar pages example", group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "xl" }) }}
-
-## Whole page examples
-
-{{ example({ title: "Sidebar content in page example", group: "components", item: "sidebar", example: "contents-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
-
-{{ example({ title: "Sidebar sections in page example", group: "components", item: "sidebar", example: "sections-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
-
-{{ example({ title: "Sidebar pages in page example", group: "components", item: "sidebar", example: "pages-page", html: false, nunjucks: false, size: "xxl", noAutoSize: true }) }}
