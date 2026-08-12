@@ -8,7 +8,6 @@ private: true
 {% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
 
 {{ tnaCheckboxes({
-  label: "Terms and conditions",
   headingSize: "m",
   id: "terms",
   name: "terms",
@@ -16,6 +15,19 @@ private: true
     {
       text: "I agree to the terms and conditions",
       value: "agree"
+    }
+  ]
+}) }}
+
+{{ tnaCheckboxes({
+  label: "You must have a valid readers ticket to book a viewing",
+  headingSize: "s",
+  id: "readers-ticket",
+  name: "readers-ticket",
+  items: [
+    {
+      text: "I have a valid readers ticket",
+      value: "confirm"
     }
   ]
 }) }}

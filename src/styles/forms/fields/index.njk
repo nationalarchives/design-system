@@ -1,5 +1,5 @@
 ---
-title: User-submitted form elements
+title: Form fields
 layout: examples/plain.njk
 addVerticalBodyPadding: true
 private: true
@@ -8,6 +8,7 @@ private: true
 {% from "nationalarchives/components/button/macro.njk" import tnaButton %}
 {% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
 {% from "nationalarchives/components/date-input/macro.njk" import tnaDateInput %}
+{% from "nationalarchives/components/file-input/macro.njk" import tnaFileInput %}
 {% from "nationalarchives/components/radios/macro.njk" import tnaRadios %}
 {% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
 {% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
@@ -16,6 +17,12 @@ private: true
   <div class="tna-column tna-column--full">
     <form novalidate>
       <h1 class="tna-heading-xl">Create a record</h1>
+      {{ tnaFileInput({
+        label: "Upload the record",
+        headingSize: "m",
+        id: "record_file",
+        name: "record_file"
+      }) }}
       {{ tnaTextInput({
         label: "Enter the name of the record",
         headingSize: "m",
@@ -75,12 +82,6 @@ private: true
           text: "Create record",
           buttonElement: true,
           buttonType: "submit"
-        }) }}
-        {{ tnaButton({
-          text: "Clear",
-          buttonElement: true,
-          buttonType: "reset",
-          plain: true
         }) }}
       </div>
     </form>

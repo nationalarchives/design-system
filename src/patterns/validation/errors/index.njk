@@ -9,6 +9,7 @@ private: true
 {% from "nationalarchives/components/checkboxes/macro.njk" import tnaCheckboxes %}
 {% from "nationalarchives/components/date-input/macro.njk" import tnaDateInput %}
 {% from "nationalarchives/components/error-summary/macro.njk" import tnaErrorSummary %}
+{% from "nationalarchives/components/file-input/macro.njk" import tnaFileInput %}
 {% from "nationalarchives/components/radios/macro.njk" import tnaRadios %}
 {% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
 {% from "nationalarchives/components/text-input/macro.njk" import tnaTextInput %}
@@ -20,6 +21,10 @@ private: true
       {{ tnaErrorSummary({
         title: "There is a problem",
         items: [
+          {
+            text: "Upload a file",
+            href: "#record_file"
+          },
           {
             text: "The record name cannot contain emojis",
             href: "#record_name"
@@ -42,6 +47,15 @@ private: true
           }
         ],
         disableAutoFocus: true
+      }) }}
+      {{ tnaFileInput({
+        label: "Upload the record",
+        headingSize: "m",
+        id: "record_file",
+        name: "record_file",
+        error: {
+          text: "Upload a file"
+        }
       }) }}
       {{ tnaTextInput({
         label: "Enter the name of the record",

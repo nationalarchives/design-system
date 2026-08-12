@@ -28,11 +28,11 @@ statusDocumentationComplete: false
 
 {{ example({ title: "Search field with hint example", group: "components", item: "search-field", example: "hint", html: true, nunjucks: true, size: "s" }) }}
 
-## Handling errors
+## Errors
 
 The search field component does not have the ability to show errors like other input fields.
 
-Use these solutions for handling user input:
+For handling user input:
 
-- When nothing has been entered, return either no results or all results, depending on your service needs. This field shouldn’t need to require a value.
+- When nothing has been entered, return either no results or all results, depending on your service needs. This field shouldn’t require a value.
 - If the user enters an invalid search term (for example a broken query with unbalanced brackets) then show a warning where the results would normally be to explain the issue.

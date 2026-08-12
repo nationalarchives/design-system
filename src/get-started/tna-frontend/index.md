@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: TNA Frontend
 description: The code you need to start building user interfaces for National Archives platforms and services.
 group: get-started
-subGroup: tools
+subGroup: tools and libraries
 order: 1
 ---
 

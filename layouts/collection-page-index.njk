@@ -20,13 +20,13 @@
       </div>
     </div>
     {%- if contents %}
-    <div class="tna-section tna-container">
+    <div class="tna-container tna-!--margin-vertical-l">
       <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
         {{ contents | safe }}
       </div>
     </div>
     {%- endif %}
-    <nav id="{{ group }}-list" class="tna-section tna-!--no-padding-bottom" aria-label="{{ groupTitle }} pages">
+    <nav id="{{ group }}-list" class="tna-!--margin-top-xl" aria-label="{{ groupTitle }} pages">
       {% set subGroups = [""] %}
       {% for item in collections[group] %}
         {% if item.subGroup and item.subGroup not in subGroups %}

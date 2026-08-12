@@ -3,7 +3,7 @@ layout: collection-page.njk
 title: TNA Frontend Jinja
 description: Jinja2 macros for all the components and layouts in TNA Frontend.
 group: get-started
-subGroup: tools
+subGroup: tools and libraries
 order: 2
 ---
 

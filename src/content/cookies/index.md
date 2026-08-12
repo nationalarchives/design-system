@@ -1,34 +1,12 @@
 ---
 layout: collection-page.njk
-title: Required content
-description: Ensure your service includes all legally required content.
+title: Cookies
+description: Ensure users know what cookies are being set and allow them to choose which cookies they would like to use.
 group: content
+subGroup: legal requirements
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
-
-## Accessibility statement
-
-Your service must have an accessibility statement. This is covered under [regulation 8](https://www.legislation.gov.uk/uksi/2018/952/regulation/8/made) in the [Public Sector Bodies Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/contents/made) which applies to all public sector websites.
-
-If your service sits under the main National Archives domain (**nationalarchives.gov.uk**) then it should use the [main accessibility statement](https://www.nationalarchives.gov.uk/accessibility-statement/).
-
-For services that don’t sit under the root domain (including subdomains), or use different domains entirely, the service must have its own accessibility statement. An example is [this design system’s accessibility statement](../../accessibility/).
-
-{{ tnaWarning({
-  headingLevel: 3,
-  body: "Internal services and third party services are not exempt from receiving a proper accessibility audit and having to publish an accessibility statement."
-}) }}
-
-### Writing an accessibility statement
-
-GOV.UK has published an [example accessibility statement](https://www.gov.uk/government/publications/sample-accessibility-statement) to get you started.
-
-In order to properly complete an accessibility statement, you need to have your service audited.
-
-You can audit your service yourself as long as you declare this in the accessibility statement. A better option is to use someone like the [Digital Accessibility Centre](https://digitalaccessibilitycentre.org/) (DAC) to check your service. DAC have access to people with real accessibility needs and are capable of assessing against all criteria of the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG).
-
-## Cookies
 
 <div class="tna-blockquote">
   <blockquote class="tna-blockquote__quote">
@@ -42,6 +20,8 @@ You can audit your service yourself as long as you declare this in the accessibi
     </cite>
   </p>
 </div>
+
+## User preferences
 
 The National Archives uses four categories of cookies.
 
@@ -65,7 +45,7 @@ The National Archives uses four categories of cookies.
 </dl>
 
 {{ tnaWarning({
-  headingLevel: 3,
+  headingLevel: 2,
   body: "Ensure each of the cookies on your service adhere to one of these four categories and only create them once the user has accepted that category. For example, don’t add Google Analytics until <code>usage</code> cookies have been accepted."
 }) }}
 
@@ -74,7 +54,7 @@ The main site sets cookies with the domain `.nationalarchives.gov.uk` in a cooki
 The preferences are stored as an escaped JSON string.
 
 ```plain:cookie_preferences
-%7B%22usage%22%3Afalse%2C%22settings%22%3Atrue%2C%22marketing%22%3Atrue%2C%22essential%22%3Atrue%7D
+%7B%22usage%22%3Afalse%2C%22settings%22%3Afalse%2C%22marketing%22%3Afalse%2C%22essential%22%3Atrue%7D
 ```
 
 When escaped and parsed, this produces a JSON object of preferences.
@@ -82,26 +62,20 @@ When escaped and parsed, this produces a JSON object of preferences.
 ```json
 {
   "essential": true,
-  "marketing": true,
-  "settings: true,
+  "marketing": false,
+  "settings: false,
   "usage": false
 }
 ```
 
 If your service honors all of these preferences and sits under the **nationalarchives.gov.uk** domain then you can link to the [National Archives cookie preferences page](https://www.nationalarchives.gov.uk/cookies/) to allow users to set their global preferences in one place.
 
-### TNA Frontend cookie library
+## Explain cookies on your service
 
-TNA Frontend comes with a [cookie library](../../get-started/tna-frontend/#cookie-library) that allows you to validate the user’s cookie preferences and perform actions once policies have been accepted or rejected.
+Publish a page that explains the cookies that your service uses, what their purpose is and how long they live.
 
-### Service-specific cookies
+You can see an example of this on page describing [cookies used on The National Archives website](https://www.nationalarchives.gov.uk/cookies/details/).
 
-Publish a page that explains the cookies that your service uses, what their purpose is and how long they live. You can see an example of this on page describing [cookies used on The National Archives website](https://www.nationalarchives.gov.uk/cookies/details/).
+## TNA Frontend cookie library
 
-## Exemptions
-
-You don't have to publish an accessibility statement or adhere to the correct cookie preferences on your service if:
-
-- the service is not publically available, and
-- you are the only user of the service, and
-- no one else will ever be given access to the service (including if you leave your position)
+Use the [cookie library](../../get-started/tna-frontend-cookies/) to allows you to validate the user’s cookie preferences and perform actions once preferences have been accepted or rejected.
