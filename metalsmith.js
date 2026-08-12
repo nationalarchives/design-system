@@ -105,15 +105,12 @@ Metalsmith(__dirname)
         refer: false,
       },
       top: {
-        pattern:
-          // "(get-started|styles|components|content|performance)/index.html",
-          "(get-started|styles|components|content)/index.html",
+        pattern: "(get-started|styles|components|patterns|content)/index.html",
         sortBy: "order",
         refer: false,
       },
       frontPage: {
-        // Pattern: "(styles|components|content|performance)/index.html",
-        pattern: "(styles|components|content)/index.html",
+        pattern: "(styles|components|patterns)/index.html",
         sortBy: "order",
         refer: false,
       },
@@ -133,14 +130,14 @@ Metalsmith(__dirname)
         filterBy: (file) => file.path !== "components/index.html",
         refer: false,
       },
+      patterns: {
+        pattern: "patterns/*/index.html",
+        filterBy: (file) => file.path !== "patterns/index.html",
+        refer: false,
+      },
       content: {
         pattern: "content/*/index.html",
         filterBy: (file) => file.path !== "content/index.html",
-        refer: false,
-      },
-      performance: {
-        pattern: "performance/*/index.html",
-        filterBy: (file) => file.path !== "performance/index.html",
         refer: false,
       },
     }),

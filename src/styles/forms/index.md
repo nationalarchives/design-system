@@ -8,103 +8,105 @@ subGroup: content
 
 {% from "partials/example.njk" import example %}
 
-## User-submitted data
+## Fields
 
-Allow users to enter data using:
+There are some common form fields that allow users to enter information.
 
-- [checkboxes](../../components/checkboxes/)
-- [date inputs](../../components/date-input)
-- [radios](../../components/radios)
-- [textareas](../../components/textarea)
-- [text inputs](../../components/text-input)
+<dl class="tna-dl tna-dl--zebra">
+  <dt>
+    <a href="../../components/checkboxes/">checkboxes</a>
+  </dt>
+  <dd>Select multiple options from a defined list</dd>
+  <dt>
+    <a href="../../components/date-input/">date input</a>
+  </dt>
+  <dd>Enter a date using year, month and day fields</dd>
+  <dt>
+    <a href="../../components/file-input/">file input</a>
+  </dt>
+  <dd>Upload a file or multiple files</dd>
+  <dt>
+    <a href="../../components/radios/">radios</a>
+  </dt>
+  <dd>Select a single option from a defined list</dd>
+  <dt>
+    <a href="../../components/textarea/">textarea</a>
+  </dt>
+  <dd>Enter multiple lines of text</dd>
+  <dt>
+    <a href="../../components/text-input/">text input</a>
+  </dt>
+  <dd>Enter a single line of text</dd>
+</dl>
 
-Do not use the [date search](../../components/date-search/) or [select](../../components/select/) components in forms designed for users to submit data for storage.
+If there are issues with information provided by a user, help them [recover from validation errors](../../patterns/validation/).
 
-{{ example({ title: "Form example", group: "styles", item: "forms", example: "user-submitted", html: true, nunjucks: true, size: "xxl", showNunjucksOptions: false }) }}
+{{ example({ title: "Form fields example", group: "styles", item: "forms", example: "fields", html: true, nunjucks: true, size: "xxl", showNunjucksOptions: false }) }}
 
-### Displaying errors
+## Headings
 
-Follow GOV.UK advice on [recovering from validation errors](https://design-system.service.gov.uk/patterns/validation/).
+Most form fields have support for a `headingLevel` property which adds a `<h1>` to `<h6>` to the form label which allows screen reader users to jump to different fields based on the headings.
 
-Use the [error summary component](../../components/error-summary/) to summarise the issues and provide links directly to the problem fields.
+If there is a single field on the page, use an `<h1>` in its label.
 
-{{ example({ title: "Errors example", group: "styles", item: "forms", example: "user-submitted-with-errors", html: true, nunjucks: true, size: "xxl", showNunjucksOptions: false }) }}
+```html
+<form>
+  <h1>
+    <label for="email">Enter your email</label>
+  </h1>
+  <input id="email">
+</form>
+```
 
-## User accounts
+If there are multiple fields, use an `<h1>` outside the form fields.
+
+```html
+<form>
+  <h1>Create a new user</h1>
+  <label for="new-username">Enter a username</label>
+  <input id="new-username">
+  <label for="new-email">Enter an email</label>
+  <input id="new-email">
+</form>
+```
+
+If there are multiple forms on the page, consider adding heading levels for secondary forms. If there is a single field, use a heading for the field label and if there are multiple fields, use a separate heading.
+
+```html
+<form>
+  <h1>Create a new user</h1>
+  <label for="new-username">Enter a username</label>
+  <input id="new-username">
+  <label for="new-email">Enter an email</label>
+  <input id="new-email">
+</form>
+
+<form>
+  <h2>
+    <label for="search-username">Search for a user by username</label>
+  </h2>
+  <input id="search-username">
+</form>
+
+<form>
+  <h2>Submit feedback</h2>
+  <label for="feedback-email">Enter your email</label>
+  <input id="feedback-email">
+  <label for="feedback-feedback">Enter your feedback</label>
+  <textarea id="feedback-feedback"></textarea>
+</form>
+```
+
+## Autocomplete
 
 Use the `autocomplete` property to help people fill in forms with their own data. See the [list of input purposes on w3.org](https://www.w3.org/TR/WCAG22/#input-purposes).
 
-{{ example({ title: "User accounts example", group: "styles", item: "forms", example: "user-accounts", html: true, nunjucks: true, size: "xxl", showNunjucksOptions: false }) }}
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
-## Searching
+You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
-Avoid allowing forms that are used for searching to produce errors.
-
-Searching for dates should use the [date search component](../../components/date-search/). Using this component should mean that there is less chance of producing an error.
-
-Use the [select component](../../components/select/) to offer simple options for sorting.
-
-{{ example({ title: "Searching example", group: "styles", item: "forms", example: "searching", html: true, nunjucks: true, size: "xl", showNunjucksOptions: false }) }}
+{{ example({ title: "User accounts example", group: "styles", item: "forms", example: "autocomplete", html: true, nunjucks: true, size: "xxl", showNunjucksOptions: false }) }}
 
 ## Background colours
 
-Don’t use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only regular, tinted or contrasting backgrounds.
-
-## Field headings
-
-Most form fields have support for a `headingLevel` property which adds a `<h1>` to `<h6>` to the form label. This allows screen reader users to jump to different fields based on the headings.
-
-For simple pages with only a few fields, use `headingLevel: 1` to add an `<h1>` to the first field and omit headings for the other fields.
-
-For pages with more complex forms or multiple forms, add a heading to the first field in each form or section.
-
-For example, when you have a search form alongside your main form:
-
-```html
-<main>
-  <h1><label for="question">Question</label></h1>
-  <input id="question">
-
-  <!-- // … -->
-</main>
-
-<aside>
-  <h2><label for="search">Search</label></h2>
-  <input id="search">
-
-  <label for="sort-by">Sort by</label>
-  <select id="sort-by">
-
-  <!-- // … -->
-</aside>
-```
-
-When you have forms that ask about multiple things:
-
-```html
-<main>
-  <h1>Your team</h1>
-
-  <!-- // … -->
-</main>
-
-<section>
-  <h2><label for="designer-name">Name of designer</label></h2>
-  <input id="designer-name">
-
-  <label for="designer-email">Email of designer</label>
-  <input id="designer-email">
-
-  <!-- // … -->
-</section>
-
-<section>
-  <h2><label for="delivery-manager-name">Name of delivery manager</label></h2>
-  <input id="delivery-manager-name">
-
-  <label for="delivery-manager-email">Email of delivery manager</label>
-  <input id="delivery-manager-email">
-
-  <!-- // … -->
-</section>
-```
+Don’t use forms within sections that use either accent or light accent [block colours](../colours/#block-colours). Use only plain, tinted or contrasting backgrounds.

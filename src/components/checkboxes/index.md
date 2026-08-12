@@ -53,5 +53,3 @@ When there is only a single checkbox, it isn’t rendered within a `<fieldset>`.
 The field label on a single checkbox is optional.
 
 {{ example({ title: "Checkbox single example", group: "components", item: "checkboxes", example: "single", html: true, nunjucks: true, size: "xxs" }) }}
-
-{{ example({ title: "Checkbox single with no label example", group: "components", item: "checkboxes", example: "single-no-label", html: true, nunjucks: true, size: "xxs" }) }}

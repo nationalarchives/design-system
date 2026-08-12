@@ -13,18 +13,11 @@ private: true
     <form novalidate>
       <h1 class="tna-heading-xl">Create an account</h1>
       {{ tnaTextInput({
-        label: "Enter your first name",
+        label: "Enter your name",
         headingSize: "m",
         id: "firstname",
         name: "firstname",
-        autocomplete: "given-name"
-      }) }}
-      {{ tnaTextInput({
-        label: "Enter your last name",
-        headingSize: "m",
-        id: "surname",
-        name: "surname",
-        autocomplete: "family-name"
+        autocomplete: "name"
       }) }}
       {{ tnaTextInput({
         label: "Enter your email address",
@@ -45,12 +38,6 @@ private: true
           text: "Create record",
           buttonElement: true,
           buttonType: "submit"
-        }) }}
-        {{ tnaButton({
-          text: "Clear",
-          buttonElement: true,
-          buttonType: "reset",
-          plain: true
         }) }}
       </div>
     </form>
