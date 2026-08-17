@@ -5,16 +5,38 @@ description: Write dates and times in a consistent format.
 group: content
 ---
 
-## Formats
+Dates should be written in a human-readable format.
 
-Dates should be written in a human-readable format. Date numbers do not need "st", "th" or "rd" suffixes.
+## Days
+
+Date numbers do not need "st", "th" or "rd" suffixes.
+
+Do not add a leading 0 to the date; use "9 June" rather than "09 June".
+
+If using the day of the week, either use the full name ("Monday", "Tuesday", "Wednesday") or if there is not enough space, the first three letters ("Mon", "Tue", "Wed").
+
+## Months
+
+Use either the full month name ("January", "February", "March") or if there is not enough space, the first three letters ("Jan", "Feb", "Mar").
+
+## Years
+
+Use four-digit years rather than two-digit years ("2024" rather than "24").
+
+## Time
+
+Use the [24-hour notation](https://en.wikipedia.org/wiki/24-hour_clock) for writing times and 0-prefix the hour:
+
+- 09:30
+
+## Examples
 
 Good examples of dates are:
 
 <dl class="tna-dl tna-dl--zebra">
-  <dt>Time</dt>
+  <dt>Date with time</dt>
   <dd>16 October 2023, 19:00</dd>
-  <dt>Day</dt>
+  <dt>Date</dt>
   <dd>16 October 2023</dd>
   <dt>Month</dt>
   <dd>October 2023</dd>
@@ -22,38 +44,25 @@ Good examples of dates are:
   <dd>2023</dd>
 </dl>
 
-You can include a day of the week if space allows:
+For full dates, you can include a day of the week:
 
 <dl class="tna-dl tna-dl--zebra">
-  <dt>Time</dt>
+  <dt>Date with day and time</dt>
   <dd>Monday 16 October 2023, 19:00</dd>
-  <dt>Day</dt>
+  <dt>Date with day</dt>
   <dd>Monday 16 October 2023</dd>
 </dl>
-
-Use the HTML `time` element where possible:
-
-```html
-<time datetime="2023-10-16">16 October 2023</time>
-<time datetime="2023-10-16T19:00:00Z">16 October 2023, 19:00</time>
-```
-
-### Time
-
-Use the [24-hour notation](https://en.wikipedia.org/wiki/24-hour_clock) for writing times and 0-prefix the hour:
-
-- 09:30
 
 ## Ranges
 
 Always use "to" rather than dashes or hyphens for date ranges.
 
-Avoid unnecessary duplication of days, months or years to allow users to scan more easily.
+Avoid unnecessary duplication of days, months or years to allow users to scan more easily. The exception is times over multiple dates where it could be confusing to try and simplify.
 
 <dl class="tna-dl tna-dl--zebra">
   <dt>Times in the same day</dt>
   <dd>16 October 2023, 19:00 to 20:00</dd>
-  <dt>Times in the different days</dt>
+  <dt>Times different days</dt>
   <dd>16 October 2023, 19:00 to 24 October 2023, 20:00</dd>
   <dt>Dates in the same month</dt>
   <dd>16 to 24 October 2023</dd>
@@ -68,6 +77,10 @@ Avoid unnecessary duplication of days, months or years to allow users to scan mo
   <dt>Range of years</dt>
   <dd>2023 to 2024</dd>
 </dl>
+
+If there is limited space, you can use an en-dash for a range of years, for example 2023–2024.
+
+### Ranges with no beginning or end
 
 Use "From &hellip;" for open-ended events and "Now to &hellip;" when describing events that are currently ongoing:
 
@@ -102,6 +115,13 @@ would be updated to:
 </time>
 ```
 -->
+
+Use the [HTML `time` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time) where possible in HTML:
+
+```html
+<time datetime="2023-10-16">16 October 2023</time>
+<time datetime="2023-10-16T19:00:00Z">16 October 2023, 19:00</time>
+```
 
 ## Tools
 
