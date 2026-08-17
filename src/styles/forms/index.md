@@ -63,10 +63,10 @@ If there are multiple fields, use an `<h1>` outside the form fields.
 ```html
 <form>
   <h1>Create a new user</h1>
-  <label for="new-username">Enter a username</label>
-  <input id="new-username">
-  <label for="new-email">Enter an email</label>
-  <input id="new-email">
+  <label for="username">Enter a username</label>
+  <input id="username">
+  <label for="email">Enter an email</label>
+  <input id="email">
 </form>
 ```
 
@@ -75,10 +75,10 @@ If there are multiple forms on the page, consider adding heading levels for seco
 ```html
 <form>
   <h1>Create a new user</h1>
-  <label for="new-username">Enter a username</label>
-  <input id="new-username">
-  <label for="new-email">Enter an email</label>
-  <input id="new-email">
+  <label for="username">Enter a username</label>
+  <input id="username">
+  <label for="email">Enter an email</label>
+  <input id="email">
 </form>
 
 <form>
