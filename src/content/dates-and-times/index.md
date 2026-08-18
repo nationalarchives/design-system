@@ -76,6 +76,8 @@ Avoid unnecessary duplication of days, months or years to allow users to scan mo
   <dd>October 2023 to November 2024</dd>
   <dt>Range of years</dt>
   <dd>2023 to 2024</dd>
+  <dt>Range of tax years and academic years</dt>
+  <dd>2023–24</dd>
 </dl>
 
 If there is limited space, you can use an en-dash for a range of years, for example 2023–2024.
