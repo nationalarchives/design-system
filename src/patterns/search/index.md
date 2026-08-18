@@ -27,7 +27,7 @@ Use an unordered list (`<ul>`) element to display results.
 
 Paginate search results using the [pagination component](../../components/pagination/) at the bottom of the page.
 
-Select a result page size of between 10-100, depending on your service needs and result size.
+Select a result page size of between 10 and 100, depending on your service needs and result size.
 
 ### Number of results
 
