@@ -8,7 +8,7 @@ order: 3
 
 ## Showcase professionalism
 
-1. Avoid using cheesy graphics, generative AI, stock photography, icons and unnecessary animation to add visual interest.
+1. Avoid using generative AI, stock graphics or photography, icons and unnecessary animation.
 1. Enable more support for technologies that allow a pure browsing experience such as reader modes.
 1. Follow editorial and content guidelines and don’t rely on AI to write copy.
 1. Don’t write titles that look like clickbait.
