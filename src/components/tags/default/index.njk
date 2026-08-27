@@ -6,14 +6,13 @@ themeAccent: green
 private: true
 ---
 
-{% from "nationalarchives/components/quick-filters/macro.njk" import tnaQuickFilters %}
+{% from "nationalarchives/components/tags/macro.njk" import tnaTags %}
 
-{{ tnaQuickFilters({
+{{ tnaTags({
   items: [
     {
       label: "All",
-      href: "#?filter=all",
-      selected: true
+      href: "#?filter=all"
     },
     {
       label: "Medieval (974—1485)",

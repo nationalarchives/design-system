@@ -17,7 +17,7 @@ Searching for dates should use the [date search component](../../components/date
 
 Use the [select component](../../components/select/) to offer simple options for sorting.
 
-Use any of the other [form fields](../../styles/forms/#fields) to helpp with filtering results.
+Use any of the other [form fields](../../styles/forms/#fields) to help with filtering results.
 
 {{ example({ title: "Searching example", group: "patterns", item: "search", example: "searching", html: true, nunjucks: true, size: "xl", showNunjucksOptions: false }) }}
 

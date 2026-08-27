@@ -4,7 +4,7 @@ title: Tabs
 description: The tabs component can contain multiple sections of information.
 group: components
 cardImage: /tabs.svg
-phase: experimental
+phase: to-be-reviewed
 statusTestedWithoutJavaScript: 2
 statusTestedWithoutCSS: 2
 statusPassedDacAudit: 2
