@@ -1,5 +1,9 @@
 {% extends "nationalarchives/templates/layouts/_generic.njk" %}
 
+{% if theme %}
+  {% set htmlClasses = "tna-template--fixed-theme" %}
+{% endif %}
+
 {% block head %}
   <meta name="robots" content="noindex,nofollow">
 {% endblock %}
