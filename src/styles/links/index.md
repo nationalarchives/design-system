@@ -24,7 +24,7 @@ White links can be used in dark areas where the default colour would not provide
 
 See some examples of how [colours](../colours/) should be used in National Archive services.
 
-### Visited links
+## Visited links
 
 Visited links should be purple. This helps users understand what content they have already viewed.
 

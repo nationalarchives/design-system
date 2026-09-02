@@ -1,6 +1,6 @@
-{%- from "nationalarchives/components/accordion/macro.njk" import tnaAccordion -%}
 {%- from "nationalarchives/components/code-block/macro.njk" import tnaCodeBlock -%}
 {%- from "nationalarchives/components/details/macro.njk" import tnaDetails -%}
+{%- from "nationalarchives/components/tabs/macro.njk" import tnaTabs -%}
 {%- from "nationalarchives/components/warning/macro.njk" import tnaWarning -%}
 
 {% macro example(params, nextHeadingLevel) %}
@@ -20,19 +20,21 @@
       <iframe class="tna-ds-example__frame{% if params.size %} tna-ds-example__frame--{{ params.size }}{% endif %}{% if params.extraExpandableHeight %} tna-ds-example__frame--extra-expandable-height{% elif params.noAutoSize %} tna-ds-example__frame--fixed-height{% elif params.noAutoSizeOnLoad %} tna-ds-example__frame--fixed-height-on-load{% endif %}" src="{{ exampleURL }}" loading="lazy" title="{{ params.title or 'Example' }}"></iframe>
     </div>
 
-    {% set accordionItems = [] %}
+    {% set tabItems = [] %}
     {% if params.html %}
-      {% set accordionItems = (accordionItems.push({
+      {% set tabItems = (tabItems.push({
+            id: exampleId ~ "-html",
             title: "HTML",
             body: tnaCodeBlock({
               language: "html",
               code: getHTMLCode(examplePath) | forceescape,
               copy: true
             })
-          }), accordionItems) %}
+          }), tabItems) %}
     {% endif %}
     {% if params.nunjucks %}
-    {% set accordionItems = (accordionItems.push({
+    {% set tabItems = (tabItems.push({
+          id: exampleId ~ "-nunjucks",
           title: "Nunjucks",
           body: (
                   tnaDetails({
@@ -44,29 +46,30 @@
                   code: getNunjucksCode(examplePath) | forceescape,
                   copy: true
                 })
-        }), accordionItems) %}
+        }), tabItems) %}
 
       {% if params.jinja !== false %}
-        {% set accordionItems = (accordionItems.push({
+        {% set tabItems = (tabItems.push({
+              id: exampleId ~ "-jinja",
               title: "Jinja",
               body: tnaWarning({
-                headingLevel: nextHeadingLevel or 4,
+                headingLevel: (nextHeadingLevel + 1) or 4,
                 body: 'This is an experimental feature showing a <a href="/get-started/tna-frontend-jinja/">Jinja2 macro</a> based on the Nunjucks example. Check the converted code for accuracy.'
               }) ~ tnaCodeBlock({
                 language: "javascript",
                 code: getJinjaCode(examplePath) | forceescape,
                 copy: true
               })
-            }), accordionItems) %}
+            }), tabItems) %}
       {% endif %}
     {% endif %}
     
-    {% if accordionItems | length %}
-      {{ tnaAccordion({
+    {% if tabItems | length %}
+      {{ tnaTabs({
         itemHeadingLevel: nextHeadingLevel or 3,
-        items: accordionItems,
-        group: exampleRoot,
-        id: exampleId
+        items: tabItems,
+        activeTabOnLoad: -1,
+        allowClose: true
       }) }}
     {% endif %}
   </section>

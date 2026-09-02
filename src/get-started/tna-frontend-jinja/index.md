@@ -15,7 +15,7 @@ For service built with Python and using Jinja2 templating, you can use the macro
 
 The only difference between the Nunjucks examples and their Jinja equivalents is having to quote key names, e.g. `"text"` instead of just `text`.
 
-{{ example({ title: "Button example", group: "components", item: "button", example: "default", html: false, nunjucks: true, showNunjucksOptions: false, size: "xxs", noOpenInNewTab: true }) }}
+{{ example({ title: "Button example", group: "components", item: "button", example: "default", html: false, nunjucks: true, showNunjucksOptions: false, size: "xxs", noOpenInNewTab: true }, 2) }}
 
 ## Framework support
 

@@ -98,23 +98,51 @@
     }
   }
 
-  .tna-accordion {
+  .tna-tabs {
     margin-top: 0;
 
-    &__heading,
-    &__body {
-      padding: spacing.space(1);
+    @include colour.colour-border("keyline", 1px, solid, top);
+
+    &__button {
+      border-top: none;
+      border-radius: 0.1px !important;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &-inner {
+        padding: spacing.space(0.5) spacing.space(1);
+
+        @include colour.colour-font("link");
+
+        background-color: transparent;
+      }
+
+      &[aria-selected="true"] {
+        .tna-tabs__button-inner {
+          @include colour.colour-font("font-base");
+        }
+      }
     }
 
-    &__content {
-      .tna-details + .tna-code-block {
+    &__item {
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+
+      & > * {
         margin-top: spacing.space(1);
       }
     }
 
-    &__details {
-      &:last-child {
-        border-bottom: none;
+    &--interactive {
+      .tna-tabs__heading {
+        display: none;
+
+        & + * {
+          margin-top: 0;
+        }
       }
     }
 
