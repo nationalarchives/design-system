@@ -23,19 +23,19 @@ If a list is hard to read because the items run across multiple lines you can ad
 
 Consider adding a bold title to each list item to make skimming the content easier.
 
-{{ example({ title: "Large unordered list example", group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "xl" }) }}
+{{ example({ title: "Large unordered list example", group: "styles", item: "lists", example: "unordered-list-spaced", html: true, nunjucks: false, size: "xl" }, 4) }}
 
 ### Dashed lists
 
 Only use dashed lists for navigational items like in sidebars or tables of content.
 
-{{ example({ title: "Dashed list example", group: "styles", item: "lists", example: "unordered-list-dashed", html: true, nunjucks: false, size: "xs" }) }}
+{{ example({ title: "Dashed list example", group: "styles", item: "lists", example: "unordered-list-dashed", html: true, nunjucks: false, size: "xs" }, 4) }}
 
 ### Plain lists
 
 In rare instances, you may want to remove the item markers from a list. Exercise caution when doing this as users will no longer be able to easily tell that the content is a list.
 
-{{ example({ title: "Plain list example", group: "styles", item: "lists", example: "unordered-list-plain", html: true, nunjucks: false, size: "xs" }) }}
+{{ example({ title: "Plain list example", group: "styles", item: "lists", example: "unordered-list-plain", html: true, nunjucks: false, size: "xs" }, 4) }}
 
 ## Ordered lists
 
@@ -61,7 +61,7 @@ The description lists can be plain or contain [icons](../icons/#displaying-infor
 
 Description lists can have the zebra-striped background or lines added to help separate content.
 
-{{ example({ title: "Styled description list examples", group: "styles", item: "lists", example: "description-list-styled", html: true, nunjucks: false, size: "m" }) }}
+{{ example({ title: "Styled description list examples", group: "styles", item: "lists", example: "description-list-styled", html: true, nunjucks: false, size: "m" }, 4) }}
 
 ### Description list balancing
 
@@ -69,13 +69,13 @@ When not [stacked](#stacked-description-lists), a description list will balance 
 
 You can choose to split the right and left columns evenly with `tna-dl--even`, give more weight to the right column with `tna-dl--right-weighted` or to the left column with `tna-dl--left-weighted`.
 
-{{ example({ title: "Description list balancing example", group: "styles", item: "lists", example: "description-lists-balance", html: true, nunjucks: false, size: "l" }) }}
+{{ example({ title: "Description list balancing example", group: "styles", item: "lists", example: "description-lists-balance", html: true, nunjucks: false, size: "l" }, 4) }}
 
 ### Stacked description lists
 
 Description lists will stack on smaller devices. For lists with a lot of content, add `tna-dl--stacked` to stack lists on larger devices.
 
-{{ example({ title: "Stacked description list example", group: "styles", item: "lists", example: "description-list-stacked", html: true, nunjucks: false, size: "xl" }) }}
+{{ example({ title: "Stacked description list example", group: "styles", item: "lists", example: "description-list-stacked", html: true, nunjucks: false, size: "xl" }, 4) }}
 
 ### Chip lists
 
@@ -83,7 +83,7 @@ You can use a chip list to display a list of [chips](../typography/#chips).
 
 The chips in a chip list can be links and can also contain [chip icons](../icons/#chip-lists-with-icons). If necessary, the chips can be a plain style with no background.
 
-{{ example({ title: "Chip list example", group: "styles", item: "lists", example: "chip-list", html: true, nunjucks: false, size: "xs" }) }}
+{{ example({ title: "Chip list example", group: "styles", item: "lists", example: "chip-list", html: true, nunjucks: false, size: "xs" }, 4) }}
 
 ## Card lists
 
@@ -95,7 +95,7 @@ Use a `<ul>` element to create a list of [card components](../../components/card
 
 Cards don’t require an image. It could be beneficial to use them for a list of pages.
 
-{{ example({ title: "Plain card list example", group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, showNunjucksOptions: false, size: "xl" }) }}
+{{ example({ title: "Plain card list example", group: "components", item: "card", example: "list-plain", html: true, nunjucks: true, showNunjucksOptions: false, size: "xl" }, 4) }}
 
 ## Lists of files
 

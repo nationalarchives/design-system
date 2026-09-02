@@ -27,11 +27,11 @@ Sometimes you may need to make it clear that a page is part of a larger section 
 
 The supertitle style uses [chips](#chips).
 
-{{ example({ title: "Headings with supertitles example", group: "styles", item: "typography", example: "headings-with-separate-supertitles", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Headings with supertitles example", group: "styles", item: "typography", example: "headings-with-separate-supertitles", html: true, nunjucks: false, size: "xxs" }, 4) }}
 
 If the caption should be considered part of the page heading, you can also nest the supertitle within the heading.
 
-{{ example({ title: "Headings with supertitles joined example", group: "styles", item: "typography", example: "headings-with-supertitles", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Headings with supertitles joined example", group: "styles", item: "typography", example: "headings-with-supertitles", html: true, nunjucks: false, size: "xxs" }, 4) }}
 
 ## Paragraphs
 
@@ -53,23 +53,23 @@ Use the [TNA Frontend grid system](../../styles/grid/) to help limit line length
 
 Using the standard widths that the grid system provides, these classes produce line lengths of no more than about 100&ndash;120 characters across all devices.
 
-{{ example({ title: "Line widths example", group: "styles", item: "typography", example: "paragraph-line-lengths", html: true, nunjucks: false, size: "l" }) }}
+{{ example({ title: "Line widths example", group: "styles", item: "typography", example: "paragraph-line-lengths", html: true, nunjucks: false, size: "l" }, 5) }}
 
 ### Large
 
 You can use a larger paragraph as an introduction to the page or section.
 
-{{ example({ title: "Large paragraph example", group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Large paragraph example", group: "styles", item: "typography", example: "paragraphs-large", html: true, nunjucks: false, size: "xxs" }, 4) }}
 
 There is also a slightly bolder version of the large paragraph.
 
-{{ example({ title: "Bold large paragraph example", group: "styles", item: "typography", example: "paragraphs-large-bold", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Bold large paragraph example", group: "styles", item: "typography", example: "paragraphs-large-bold", html: true, nunjucks: false, size: "xxs" }, 4) }}
 
 ### Small
 
 You can use the `<small>` element sparingly to make your paragraph font size smaller.
 
-{{ example({ title: "Small text example", group: "styles", item: "typography", example: "paragraphs-small", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Small text example", group: "styles", item: "typography", example: "paragraphs-small", html: true, nunjucks: false, size: "xxs" }, 4) }}
 
 ### Bold
 
@@ -77,13 +77,13 @@ You can use the `<strong>` element to increase the weight of your paragraph font
 
 Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.
 
-{{ example({ title: "Bold text example", group: "styles", item: "typography", example: "paragraphs-strong", html: true, nunjucks: false, size: "xxs" }) }}
+{{ example({ title: "Bold text example", group: "styles", item: "typography", example: "paragraphs-strong", html: true, nunjucks: false, size: "xxs" }, 4) }}
 
 ### Scene setter
 
 Use the scene setter as a stylistic alternative to the [large body text](#large).
 
-{{ example({ title: "Scene setter example", group: "styles", item: "typography", example: "scene-setter", html: true, nunjucks: false, size: "xs" }) }}
+{{ example({ title: "Scene setter example", group: "styles", item: "typography", example: "scene-setter", html: true, nunjucks: false, size: "xs" }, 4) }}
 
 ## Blockquotes
 
@@ -113,4 +113,4 @@ For blocks of code, use the [code block component](../../components/code-block/)
 
 Use `<code>` elements to show code-like text.
 
-{{ example({ title: "Inline code example", group: "styles", item: "typography", example: "inline-code", html: true, nunjucks: false, size: "s" }) }}
+{{ example({ title: "Inline code example", group: "styles", item: "typography", example: "inline-code", html: true, nunjucks: false, size: "s" }, 4) }}
