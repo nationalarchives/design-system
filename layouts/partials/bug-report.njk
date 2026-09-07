@@ -13,7 +13,12 @@
         }) }}
         {{ tnaButton({
           text: "Provide feedback",
-          href: "https://forms.cloud.microsoft/e/JazZeSLk85",
+          href: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=wRKV-Z_9dUSYlpoLPNxQ7NLyFvKrfzFFqNzFPC-JFRVUN0QxWjBTV1JSVUxBQzJIUFJNMVFaNTU1OS4u&r8de0dc7f4e514cdb870593b3694c5e18=https%3A%2F%2Fdesign-system.nationalarchives.gov.uk%2F" ~ (path.replace("index.html", "") | urlencode),
+          plain: true
+        }) }}
+        {{ tnaButton({
+          text: "Suggest an edit",
+          href: "https://github.com/nationalarchives/design-system/edit/main/src/" ~ (path.replace(".html", ".md")),
           plain: true
         }) }}
       </div>
