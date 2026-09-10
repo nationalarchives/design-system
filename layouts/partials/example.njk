@@ -29,7 +29,10 @@
               language: "html",
               code: getHTMLCode(examplePath) | forceescape,
               copy: true
-            })
+            }),
+            attributes: {
+              'aria-label': 'Toggle HTML code for ' ~ params.title
+            }
           }), tabItems) %}
     {% endif %}
     {% if params.nunjucks %}
@@ -45,7 +48,10 @@
                   language: "javascript",
                   code: getNunjucksCode(examplePath) | forceescape,
                   copy: true
-                })
+                }),
+          attributes: {
+            'aria-label': 'Toggle Nunjucks code for ' ~ params.title
+          }
         }), tabItems) %}
 
       {% if params.jinja !== false %}
@@ -59,7 +65,10 @@
                 language: "javascript",
                 code: getJinjaCode(examplePath) | forceescape,
                 copy: true
-              })
+              }),
+              attributes: {
+                'aria-label': 'Toggle Jinja code for ' ~ params.title
+              }
             }), tabItems) %}
       {% endif %}
     {% endif %}
