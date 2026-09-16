@@ -114,3 +114,11 @@ For blocks of code, use the [code block component](../../components/code-block/)
 Use `<code>` elements to show code-like text.
 
 {{ example({ title: "Inline code example", group: "styles", item: "typography", example: "inline-code", html: true, nunjucks: false, size: "s" }, 4) }}
+
+### Keyboard
+
+Use `<kbd>` elements to show keyboard keys.
+
+This can be helpful when you are writing instructions for user interfaces.
+
+{{ example({ title: "Keyboard example", group: "styles", item: "typography", example: "keyboard", html: true, nunjucks: false, size: "xs" }, 4) }}
