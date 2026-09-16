@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import beautify from "js-beautify";
 import { marked } from "marked";
 import nunjucks from "nunjucks";
+import slugify from "slugify";
 
 import { __dirname } from "./config.js";
 
@@ -203,6 +204,7 @@ const renderer = new marked.Renderer(),
           day: "numeric",
         });
       },
+      slugify: (text) => slugify(text, { lower: true }),
       unslugify(text, capitalizeFirst = true) {
         const words = text.split("-");
         if (capitalizeFirst) {
