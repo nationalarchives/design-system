@@ -25,20 +25,20 @@
       {% set tabItems = (tabItems.push({
             id: exampleId ~ "-html",
             title: "HTML",
+            ariaLabel: "Toggle HTML code for " ~ params.title,
             body: tnaCodeBlock({
               language: "html",
+              filename: (params.title | slugify) ~ ".html",
               code: getHTMLCode(examplePath) | forceescape,
               copy: true
-            }),
-            attributes: {
-              'aria-label': 'Toggle HTML code for ' ~ params.title
-            }
+            })
           }), tabItems) %}
     {% endif %}
     {% if params.nunjucks %}
     {% set tabItems = (tabItems.push({
           id: exampleId ~ "-nunjucks",
           title: "Nunjucks",
+          ariaLabel: "Toggle Nunjucks code for " ~ params.title,
           body: (
                   tnaDetails({
                     title: "Nunjucks options",
@@ -46,29 +46,26 @@
                   }) if params.showNunjucksOptions !== false else ''
                 ) ~ tnaCodeBlock({
                   language: "javascript",
+                  filename: (params.title | slugify) ~ ".njk",
                   code: getNunjucksCode(examplePath) | forceescape,
                   copy: true
-                }),
-          attributes: {
-            'aria-label': 'Toggle Nunjucks code for ' ~ params.title
-          }
+                })
         }), tabItems) %}
 
       {% if params.jinja !== false %}
         {% set tabItems = (tabItems.push({
               id: exampleId ~ "-jinja",
               title: "Jinja",
+              ariaLabel: "Toggle Jinja code for " ~ params.title,
               body: tnaWarning({
                 headingLevel: (nextHeadingLevel + 1) or 4,
                 body: 'This is an experimental feature showing a <a href="/get-started/tna-frontend-jinja/">Jinja2 macro</a> based on the Nunjucks example. Check the converted code for accuracy.'
               }) ~ tnaCodeBlock({
                 language: "javascript",
+                filename: (params.title | slugify) ~ "-jinja.html",
                 code: getJinjaCode(examplePath) | forceescape,
                 copy: true
-              }),
-              attributes: {
-                'aria-label': 'Toggle Jinja code for ' ~ params.title
-              }
+              })
             }), tabItems) %}
       {% endif %}
     {% endif %}

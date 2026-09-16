@@ -107,10 +107,6 @@
       border-top: none;
       border-radius: 0.1px !important;
 
-      &:first-child {
-        border-left: none;
-      }
-
       &-inner {
         padding: spacing.space(0.5) spacing.space(1);
 
@@ -124,6 +120,10 @@
           @include colour.colour-font("font-base");
         }
       }
+    }
+
+    &__button-wrapper:first-child .tna-tabs__button {
+      border-left: none;
     }
 
     &__item {
