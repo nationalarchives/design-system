@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 0
-statusDocumentationComplete: true
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Card example", group: "components", item: "card", example: "default", html: true, nunjucks: true, size: "xl" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Coloured cards
 
@@ -77,3 +72,8 @@ Cards can have a list of "actions" which are displayed as links at the bottom of
 Cards with actions should not also have an `href` property.
 
 {{ example({ title: "Card with actions example", group: "components", item: "card", example: "actions", html: true, nunjucks: true, size: "l" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

@@ -9,13 +9,13 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 0
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Warning example", group: "components", item: "warning", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
+{% if phase != "official" %}
 ## Component status
-
 {% include "partials/component-status.njk" %}
+{% endif %}

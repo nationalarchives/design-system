@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Footer example", group: "components", item: "footer", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Content
 
@@ -27,3 +22,8 @@ Use `defaultContent: true` to populate the footer with the required content for 
 If using a different subdomain, change the base domain using `defaultContentBaseURL`.
 
 {{ example({ title: "Footer with default content example", group: "components", item: "footer", example: "default-content", html: true, nunjucks: true, size: "xxxl" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

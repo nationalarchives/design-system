@@ -62,7 +62,7 @@ Avoid unnecessary duplication of days, months or years to allow users to scan mo
 <dl class="tna-dl tna-dl--zebra">
   <dt>Times in the same day</dt>
   <dd>16 October 2023, 19:00 to 20:00</dd>
-  <dt>Times different days</dt>
+  <dt>Times in different days</dt>
   <dd>16 October 2023, 19:00 to 24 October 2023, 20:00</dd>
   <dt>Dates in the same month</dt>
   <dd>16 to 24 October 2023</dd>

@@ -9,18 +9,25 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 2
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
-When you need the user to enter a date for data purposes or don’t want to require a day or month, use the [date input](../date-input/) component.
-
 {{ example({ title: "Date search example", group: "components", item: "date-search", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-## Component status
+## How it works
 
-{% include "partials/component-status.njk" %}
+The date search component allows a user to enter a date in a single field using the browser’s native date picker.
+
+## When to use this component
+
+Use the date search component when you are working with a service that has less capacity for errors or has pages that shouldn’t show errors such as a [search page](../../patterns/search/).
+
+Use this component when you need to capture full dates and not partial dates.
+
+## When not to use this component
+
+When you need the user to enter a date for data purposes or don’t want to require a day or month, use the [date input](../date-input/) component instead.
 
 ## Prefilled
 
@@ -37,3 +44,8 @@ When you need the user to enter a date for data purposes or don’t want to requ
 <!-- ## Inline
 
 {{ example({ title: "Date search inline example", group: "components", item: "date-search", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

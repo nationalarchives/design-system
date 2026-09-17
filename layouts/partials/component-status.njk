@@ -1,18 +1,22 @@
-<div class="tna-ds-component-status tna-!--margin-top-m">
+<div class="tna-component-status-full tna-!--margin-top-m">
   <dl class="tna-dl tna-dl--zebra">
+    {#
     <dt>Status</dt>
     <dd>
       {%- if phase == "official" %}
       <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> <a href="/component-statuses/#official"><strong>Official</strong> (ready to use in production)</a>
       {%- elif phase == "to-be-reviewed" %}
-      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> <a href="/component-statuses/#to-be-reviewed"><strong>To be reviewed</strong></a>
+      <i class="fa-solid fa-fw fa-eye" aria-hidden="true"></i> <a href="/component-statuses/#to-be-reviewed"><strong>To be reviewed</strong></a>
       {%- elif phase == "experimental" %}
       <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> <a href="/component-statuses/#experimental"><strong>Experimental</strong></a>
+      {%- elif phase == "deprecated" %}
+      <i class="fa-solid fa-fw fa-skull" aria-hidden="true"></i> <a href="/component-statuses/#deprecated"><strong>Deprecated</strong></a>
       {%- else %}
       <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> <strong>{{ phase | unslugify | capitalize }}</strong>
       {%- endif %}
     </dd>
-    {%- if statusTestedWithoutJavaScript !== 0 and phase != "official" %}
+    #}
+    {%- if statusTestedWithoutJavaScript !== 0 %}
     <dt>Tested without JavaScript</dt>
     <dd>
       {%- if statusTestedWithoutJavaScript == 1 %}
@@ -26,7 +30,6 @@
       {%- endif %}
     </dd>
     {%- endif %}
-    {%- if phase != "official" %}
     <dt>Tested without CSS</dt>
     <dd>
       {%- if statusTestedWithoutCSS == 1 %}
@@ -39,19 +42,16 @@
       <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
-    {%- endif %}
-    {%- if phase != "official" %}
     <dt>Passed DAC audit</dt>
     <dd>
       {%- if statusPassedDacAudit == 1 %}
       <i class="fa-solid fa-fw fa-check" aria-hidden="true"></i> Yes
       {%- elseif statusPassedDacAudit == 2 %}
-      <i class="fa-solid fa-fw fa-screwdriver-wrench" aria-hidden="true"></i> Not yet audied
+      <i class="fa-solid fa-fw fa-eye" aria-hidden="true"></i> Not yet audied
       {%- else %}
       <i class="fa-solid fa-fw fa-question" aria-hidden="true"></i> Unknown
       {%- endif %}
     </dd>
-    {%- endif %}
     {#
     {%- if statusAnalytics !== 0 %}
     <dt>Analytics integrated</dt>
@@ -64,11 +64,5 @@
     </dd>
     {%- endif %}
     #}
-    {%- if not statusDocumentationComplete and phase != "official" %}
-    <dt>Documentation complete</dt>
-    <dd>
-      <i class="fa-solid fa-fw fa-xmark" aria-hidden="true"></i> No
-    </dd>
-    {%- endif %}
   </dl>
 </div>

@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Details example", group: "components", item: "details", example: "default", html: true, nunjucks: true, size: "xs", extraExpandableHeight: true }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Caller function
 
@@ -27,3 +22,8 @@ The details macro can also be used with a [Nunjucks call block](https://mozilla.
 Using a `call` block avoids having to escape complex HTML for the contents of the details component and replaces the need for the `body` and `text` options.
 
 {{ example({ title: "Details caller example", group: "components", item: "details", example: "caller", html: true, nunjucks: true, size: "xs", extraExpandableHeight: true }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

@@ -24,6 +24,29 @@
       {% if description %}
       <p class="tna-scene-setter">{{ description }}</p>
       {% endif %}
+      {% if group == "components" and phase %}
+      <dl class="tna-component-status-small tna-component-status-small--{{ phase }}">
+        <dt>Status</dt>
+        <dd>
+          {%- if phase == "official" %}
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <a href="/component-statuses/#official">Official</a>
+          {%- elif phase == "to-be-reviewed" %}
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            <a href="/component-statuses/#to-be-reviewed">To be reviewed</a>
+          {%- elif phase == "experimental" %}
+            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+            <a href="/component-statuses/#experimental">Experimental</a>
+          {%- elif phase == "deprecated" %}
+            <i class="fa-solid fa-skull" aria-hidden="true"></i>
+            <a href="/component-statuses/#deprecated">Deprecated</a>
+          {%- else %}
+            <i class="fa-solid fa-question" aria-hidden="true"></i>
+            {{ phase | unslugify | capitalize }}
+          {%- endif %}
+        </dd>
+      </dl>
+      {% endif %}
       {% if headings %}
       <h2 class="tna-heading-l tna-!--hide-on-large tna-!--hide-on-medium">Contents</h2>
       <ul class="tna-ul tna-ul--dashed tna-!--hide-on-large tna-!--hide-on-medium">

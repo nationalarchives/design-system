@@ -19,19 +19,16 @@ private: true
       <h1 class="tna-heading-xl">Create a record</h1>
       {{ tnaFileInput({
         label: "Upload the record",
-        headingSize: "m",
         id: "record_file",
         name: "record_file"
       }) }}
       {{ tnaTextInput({
         label: "Enter the name of the record",
-        headingSize: "m",
         id: "record_name",
         name: "record_name"
       }) }}
       {{ tnaCheckboxes({
         label: "Select the record categories",
-        headingSize: "m",
         id: "record_categories",
         name: "categories",
         items: [
@@ -51,13 +48,11 @@ private: true
       }) }}
       {{ tnaDateInput({
         label: "Enter the start date of the record",
-        headingSize: "m",
         id: "record_date",
         name: "date"
       }) }}
       {{ tnaRadios({
         label: "Select the type of record",
-        headingSize: "m",
         id: "record_type",
         name: "type",
         items: [
@@ -73,7 +68,6 @@ private: true
       }) }}
       {{ tnaTextarea({
         label: "Enter the record description",
-        headingSize: "m",
         id: "record_feedback",
         name: "feedback"
       }) }}

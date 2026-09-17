@@ -9,15 +9,19 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 0
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
-Each selected value requires a link to be able to remove the value.
-
 {{ example({ title: "Compound filters example", group: "components", item: "compound-filters", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-## Component status
+## How it works
 
+The compound filters component shows a list of active filters on a search results page.
+
+Each filter has a cross which allows the user to remove the filter.
+
+{% if phase != "official" %}
+## Component status
 {% include "partials/component-status.njk" %}
+{% endif %}

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/css/ie.css" media="all and (-ms-high-contrast: none), (-ms-high-contrast: active)">
 {% endblock %}
 
-{%- set theme = "light" -%}
+{%- set theme = theme or "system" -%}
 
 {% block pageTitle %}{{ title }} - {{ super() }}{% endblock %}
 

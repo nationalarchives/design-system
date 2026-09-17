@@ -9,7 +9,6 @@ statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: true
 ---
 
 {% from "partials/example.njk" import example %}
@@ -17,10 +16,6 @@ statusDocumentationComplete: true
 The breadcrumbs component is also known as navigation path or cookie crumb.
 
 {{ example({ title: "Breadcrumbs example", group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## When to use this component
 
@@ -45,3 +40,8 @@ By default, the breadcrumbs will collapse on smaller devices to only show the fi
 You can configure the breadcrumbs to never collapse by setting the `noCollapse` option to `true` or by adding the class `tna-breadcrumbs--no-collapse` to the main breadcrumbs element.
 
 {{ example({ title: "Breadcrumbs second example", group: "components", item: "breadcrumbs", example: "no-collapse", html: true, nunjucks: true, size: "xxxs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

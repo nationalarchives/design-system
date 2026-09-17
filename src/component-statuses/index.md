@@ -25,16 +25,14 @@ Feel free to use these components in prototypes and live services with the inten
 
 "Official" components are fully tested and ready to use in production. They have been:
 
-- tested in a variety of browsers
-- built to work without JavaScript, CSS or JavaScript and CSS
-- tested as part of a beta or live service that has had a successful accessibility audit
+- tested in all supported browsers
+- built to work without JavaScript, CSS or both JavaScript and CSS
+- tested as part of a beta or live service that has had a successful external accessibility audit
 - validated against HTML5 standards
-  <!-- - integrated into the analytics library where applicable -->
-  <!-- - fully documented in this design system with examples and variations -->
-- validated using fixtures to allow replication in other templating languages
-- tested for integration with the [GOV.UK Prototype Kit](/get-started/prototyping/#html)
-- added to the [TNA Frontend Storybook](https://nationalarchives.github.io/tna-frontend/) for reviewing and testing
 - added to the [TNA Frontend Jinja macros](../get-started/tna-frontend-jinja/) package
+- validated using fixtures to allow replication in other templating languages
+- tested for integration with the [GOV.UK Prototype Kit](/get-started/prototyping/#prototyping-with-the-gov-uk-prototype-kit)
+- added to the [TNA Frontend Storybook](https://nationalarchives.github.io/tna-frontend/) for reviewing and testing
 
 ## Deprecated
 

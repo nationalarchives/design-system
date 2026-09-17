@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Checkbox example", group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Small
 
@@ -34,7 +29,7 @@ statusDocumentationComplete: false
 
 ### Item hints
 
-Do not add item hints to [small checkboxes](#small) or [inline checkboxes](#inline).
+Do not add item hints to [inline checkboxes](#inline).
 
 {{ example({ title: "Checkbox with item hints example", group: "components", item: "checkboxes", example: "item-hints", html: true, nunjucks: true, size: "m" }) }}
 
@@ -53,3 +48,8 @@ When there is only a single checkbox, it isn’t rendered within a `<fieldset>`.
 The field label on a single checkbox is optional.
 
 {{ example({ title: "Checkbox single example", group: "components", item: "checkboxes", example: "single", html: true, nunjucks: true, size: "xxs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}
