@@ -9,7 +9,6 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
@@ -19,10 +18,6 @@ The sidebar component comes in three styles:
 - [Contents](#contents)
 - [Sections](#sections)
 - [Pages](#pages)
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Contents
 
@@ -65,3 +60,8 @@ Display this sidebar on the right hand side of the page so that on smaller devic
 When using the pages sidebar style, consider adding another style sidebar that is only visible at the top of the page on smaller displays to allow users to jump to content on the page.
 
 {{ example({ title: "Sidebar pages example", group: "components", item: "sidebar", example: "pages", html: true, nunjucks: true, size: "xl" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

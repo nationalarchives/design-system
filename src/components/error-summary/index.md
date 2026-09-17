@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 2
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Error summary example", group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## How it works
 
@@ -26,4 +21,9 @@ Add links to all the form issues in the order in which they appear on the page.
 
 When linking to checkboxes, radios and date input fields, add the ID of the first field in the list such as the first checkbox, the first radio item or the day field of the date input.
 
-Take a look at the [example form with errors](../../styles/forms/#displaying-errors).
+Find out how to help users [recover from validation errors](../../patterns/validation/).
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

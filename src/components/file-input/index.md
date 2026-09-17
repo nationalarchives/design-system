@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "File input example", group: "components", item: "file-input", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Hint
 
@@ -43,3 +38,8 @@ If JavaScript is available to the user, you can enhance the file input by adding
 If JavaScript fails to load, the component reverts to the standard form input.
 
 {{ example({ title: "File input improved example", group: "components", item: "file-input", example: "droppable", html: true, nunjucks: true, size: "xs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

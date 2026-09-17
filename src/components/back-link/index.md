@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: true
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Back link example", group: "components", item: "back-link", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## When to use this component
 
@@ -39,3 +34,8 @@ Where possible, ensure the back link works even when JavaScript is not available
 Using the default link text (‘Back’) is ideal for services with a simple journey.
 
 For more complex user journeys, consider using different link text, like ‘Go back to [page]’. For example, in an admin system with many different areas. In this case, if you used ‘Back’, it might not be clear to users what they are going back to.
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

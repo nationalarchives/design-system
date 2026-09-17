@@ -9,19 +9,24 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 2
-statusDocumentationComplete: false
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 {% from "partials/example.njk" import example %}
 
-For searching by date, use the [date search](../date-search/) component.
-
 {{ example({ title: "Date input example", group: "components", item: "date-input", example: "default", html: true, nunjucks: true, size: "xs" }, 2) }}
 
-## Component status
+## How it works
 
-{% include "partials/component-status.njk" %}
+The date input component allows a user to enter a date in three separate parts; day, month and year.
+
+## When to use this component
+
+Use the date input component when you can validate the date entered and are able to show errors.
+
+You can also use this component to allow users to enter partial dates like a year or a month and a year.
+
+If you are working with a service that has less capacity for errors or has pages that shouldn't show errors such as a [search page](../../patterns/search/), use the [date search](../date-search/) component.
 
 ## Prefilled
 
@@ -37,9 +42,17 @@ For searching by date, use the [date search](../date-search/) component.
 
 ## Progressive
 
+{% set warning_body %}
+The progressive variation of the date input component is still an [experimental feature](../../component-statuses/#experimental).
+{% endset %}
 {{ tnaWarning({
   headingLevel: 3,
-  body: "The progressive variation of the date input component is still experimental."
+  body: warning_body
 }) }}
 
 {{ example({ title: "Date input progressive example", group: "components", item: "date-input", example: "progressive", html: true, nunjucks: true, size: "s" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

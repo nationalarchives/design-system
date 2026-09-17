@@ -3,7 +3,7 @@
   "scripts": {
     "start": "concurrently --names \"BUILD,SERVE\" \"npm run dev\" \"npm run serve\"",
     "serve": "browser-sync start --no-notify --server 'design-system' --files 'design-system/**'",
-    "dev": "nodemon metalsmith.js",
+    "dev": "COOKIES_DOMAIN=localhost nodemon metalsmith.js",
     "build": "node metalsmith.js",
     "lint": "stylelint --config 'stylelint.config.mjs' 'lib/**/*.scss' && eslint --config 'eslint.config.mjs' '**/*.js' && prettier --check '**/*.{js,mjs,scss,json,yml}' 'metalsmith.js'",
     "lint:fix": "stylelint --config 'stylelint.config.mjs' --fix 'lib/**/*.scss' && eslint --config 'eslint.config.mjs' --fix '**/*.js' && prettier --write '**/*.{js,mjs,scss,json,yml}' 'metalsmith.js'"

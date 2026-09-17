@@ -48,6 +48,7 @@
 
 @use "modules/component-example";
 @use "modules/frontend-overrides";
+@use "modules/status";
 @use "modules/typography" as DSTypography;
 
 .tna-ds-colour-swatch {
@@ -61,18 +62,6 @@
 
   border: 1px rgb(0 0 0 / 20%) solid;
   border-radius: 100%;
-}
-
-.tna-ds-component-status {
-  overflow: hidden;
-
-  @include colour.colour-border("keyline", 1px);
-  @include borders.rounded-border;
-
-  @include colour.on-high-contrast-and-forced-colours {
-    border-top: none;
-    border-bottom: none;
-  }
 }
 
 a[href^="https://asciinema.org"] {

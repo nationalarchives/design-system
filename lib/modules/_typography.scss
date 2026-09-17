@@ -7,7 +7,7 @@ p,
 li,
 dd,
 table {
-  .fa-solid {
+  .fa-solid:first-child {
     margin-right: spacing.space(0.25);
   }
 
@@ -19,7 +19,7 @@ table {
     color: colour.brand-colour("yellow");
   }
 
-  .fa-screwdriver-wrench {
+  .fa-eye {
     color: colour.brand-colour("blue");
   }
 
@@ -27,6 +27,7 @@ table {
     color: colour.brand-colour("pink");
   }
 
+  .fa-screwdriver-wrench,
   .fa-question {
     color: colour.brand-colour("orange");
   }

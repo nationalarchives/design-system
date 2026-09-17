@@ -29,6 +29,8 @@ Paginate search results using the [pagination component](../../components/pagina
 
 Select a result page size of between 10 and 100, depending on your service needs and result size.
 
+Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, ‘Search results (page 1 of 4)’.
+
 ### Number of results
 
 Tell the user how many results were found, which results they are looking at and the main term used for the search (if there is one).

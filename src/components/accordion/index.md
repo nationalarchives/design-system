@@ -9,19 +9,19 @@ statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Accordion example", group: "components", item: "accordion", example: "default", html: true, nunjucks: true, size: "m", extraExpandableHeight: true }, 2) }}
 
-## Component status
-
-{% include "partials/component-status.njk" %}
-
-## Allow open and close all
+## Open and close all
 
 Customise with `toggleAllButton` to add an extra option to show or hide all accordion items.
 
 {{ example({ title: "Accordion second example", group: "components", item: "accordion", example: "open-close-all", html: true, nunjucks: true, size: "m", extraExpandableHeight: true }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

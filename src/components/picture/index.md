@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Picture example", group: "components", item: "picture", example: "default", html: true, nunjucks: true, size: "xxxl", noAutoSizeOnLoad: true }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Image sizes
 
@@ -27,3 +22,8 @@ Picture components need to show the entire image so they are free from aspect ra
 Ensure the longest side of the image is no more than 900px.
 
 Read more about [image file sizes and formats](../../styles/images/).
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

@@ -9,18 +9,15 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 0
-statusDocumentationComplete: true
 ---
 
 {% from "partials/example.njk" import example %}
 
-The button component can be used as a call to action link on the page instead of a plain text link or as a `<button>` element for use within forms.
-
 {{ example({ title: "Button example", group: "components", item: "button", example: "default", html: true, nunjucks: true, size: "xxxs" }, 2) }}
 
-## Component status
+## How it works
 
-{% include "partials/component-status.njk" %}
+The button component can be used as a call to action link on the page instead of a plain text link or as a `<button>` element for use within forms.
 
 ## Variations
 
@@ -97,3 +94,8 @@ Use a button group (`tna-button-group`) to display buttons alongside one another
 Add `tna-button-group--small` to make all buttons in the group smaller for dense interfaces.
 
 {{ example({ title: "Button group example", group: "components", item: "button", example: "group", html: true, nunjucks: true, size: "xs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

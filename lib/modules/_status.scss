@@ -1,0 +1,86 @@
+@use "@nationalarchives/frontend/nationalarchives/variables/a11y" as a11yVars;
+@use "@nationalarchives/frontend/nationalarchives/tools/a11y";
+@use "@nationalarchives/frontend/nationalarchives/tools/borders";
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
+@use "@nationalarchives/frontend/nationalarchives/tools/typography";
+
+.tna-component-status-small {
+  @include spacing.space-above;
+
+  display: inline-flex;
+  align-items: stretch;
+
+  line-height: 1;
+
+  @include colour.tint;
+
+  @include colour.colour-border("keyline", 1px);
+  @include borders.rounded-border;
+
+  dt {
+    padding: spacing.space(0.5) spacing.space(0.625);
+
+    display: flex;
+    align-items: center;
+
+    @include typography.detail-font-small;
+
+    @include colour.colour-border("keyline", 1px, dotted, right);
+  }
+
+  dd {
+    padding: spacing.space(0.5) spacing.space(1) spacing.space(0.5)
+      spacing.space(0.75);
+
+    @include typography.main-font-weight-bold;
+
+    .fa-solid {
+      margin-left: 0;
+    }
+  }
+
+  &--official {
+    @include colour.green-accent;
+    @include colour.accent-light;
+  }
+
+  &--to-be-reviewed {
+    @include colour.blue-accent;
+    @include colour.accent-light;
+  }
+
+  &--experimental {
+    @include colour.orange-accent;
+    @include colour.accent-light;
+  }
+
+  &#{&}--deprecated {
+    @include colour.contrast;
+  }
+
+  &:hover {
+    outline: a11yVars.$focus-outline-active-total-width
+      colour.colour-var("keyline") solid;
+  }
+
+  @include a11y.faux-full-outline("a");
+
+  a::before {
+    inset: -1px;
+
+    @include borders.rounded-border;
+  }
+}
+
+.tna-component-status-full {
+  overflow: hidden;
+
+  @include colour.colour-border("keyline", 1px);
+  @include borders.rounded-border;
+
+  @include colour.on-high-contrast-and-forced-colours {
+    border-top: none;
+    border-bottom: none;
+  }
+}

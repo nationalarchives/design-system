@@ -9,20 +9,19 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 0
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
-Pagination can be used for example, as a list of search results or a list of cases in a case working system.
-
 {{ example({ title: "Pagination example", group: "components", item: "pagination", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
 
-## Component status
+## When to use this component
 
-{% include "partials/component-status.njk" %}
+Pagination can be used to navigate through a list of search results or a list of cases in a case working system.
 
-Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, ‘Search results (page 1 of 4)’.
+## When not to use this component
+
+Do not use the pagination component to show progress through a service.
 
 ## Number of page links
 
@@ -67,3 +66,8 @@ Do not show the previous page link on the first page — and do not show the nex
 Show only a previous and next with no numbers if your pagination isn’t part of a numbered sequence.
 
 {{ example({ title: "Pagination previous and next example", group: "components", item: "pagination", example: "previous-next", html: true, nunjucks: true, size: "xs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

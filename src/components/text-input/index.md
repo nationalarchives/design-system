@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Text input example", group: "components", item: "text-input", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Prefilled
 
@@ -39,3 +34,8 @@ The password text input is enhanced with JavaScript to allow the hiding and show
 By default, the password input will try and autofill from existing passwords. Use `newPassword: true` to use a password box that allows password managers to generate a new password.
 
 {{ example({ title: "Text input password example", group: "components", item: "text-input", example: "password", html: true, nunjucks: true, size: "xs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

@@ -9,17 +9,12 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Textarea example", group: "components", item: "textarea", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Prefilled
 
@@ -45,3 +40,8 @@ Allow users to enter a number of values into a field with the itemised textarea.
 Without JavaScript, this renders a normal `<textarea>` where values can be separated by line breaks.
 
 {{ example({ title: "Textarea itemised example", group: "components", item: "textarea", example: "itemised", html: true, nunjucks: true, size: "l" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

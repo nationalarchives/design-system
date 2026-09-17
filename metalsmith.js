@@ -38,6 +38,7 @@ Metalsmith(__dirname)
     tnaFrontendVersion:
       packageInfo.packages["node_modules/@nationalarchives/frontend"].version,
     nodeVersion: process.version,
+    cookiesDomain: process.env.COOKIES_DOMAIN || ".nationalarchives.gov.uk",
   })
   .use(async (files, metalsmith, done) => {
     /* eslint-disable func-style */

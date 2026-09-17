@@ -4,16 +4,21 @@ title: Code block
 description: Display blocks of code for documentation purposes.
 group: components
 cardImage: /code-block.svg
-phase: to-be-reviewed
+phase: official
 statusTestedWithoutJavaScript: 1
 statusTestedWithoutCSS: 1
-statusPassedDacAudit: 2
+statusPassedDacAudit: 1
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
 {% from "partials/example.njk" import example %}
+
+{{ example({ title: "Code block example", group: "components", item: "code-block", example: "default", html: true, nunjucks: true, size: "m" }) }}
+
+## How it works
+
+The code block can be used to display any plain text content but is designed for showing programming code.
 
 {{ tnaWarning({
   headingLevel: 3,
@@ -22,12 +27,11 @@ statusDocumentationComplete: false
 
 Both Nunjucks and Jinja have the ability to autoescape template content and both enable the option by default. See [Autoescaping in Nunjucks](https://mozilla.github.io/nunjucks/api.html#autoescaping) and [Autoescaping in Jinja](https://jinja.palletsprojects.com/en/stable/api/#autoescaping).
 
-{{ example({ title: "Code block example", group: "components", item: "code-block", example: "default", html: true, nunjucks: true, size: "m" }) }}
+### Syntax highlighting
 
+The code in a code block can be coloured with [Prism.js](https://prismjs.com/).
+
+{% if phase != "official" %}
 ## Component status
-
 {% include "partials/component-status.njk" %}
-
-## Syntax highlighting
-
-Code blocks can be syntax highlighted with [Prism.js](https://prismjs.com/).
+{% endif %}

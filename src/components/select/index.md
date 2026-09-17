@@ -9,7 +9,6 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
@@ -17,10 +16,6 @@ statusDocumentationComplete: false
 Where possible, avoid overusing the select component. Alice Bartlett gave a talk at EpicFEL called ["Burn your select tags"](https://www.youtube.com/watch?v=CUkMCQR4TpY) which explains when the `<select>` tag is not the most appropriate tag to use.
 
 {{ example({ title: "Select example", group: "components", item: "select", example: "default", html: true, nunjucks: true, size: "xxs" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Preselected
 
@@ -37,3 +32,8 @@ Where possible, avoid overusing the select component. Alice Bartlett gave a talk
 <!-- ## Inline
 
 {{ example({ title: "Select inline example", group: "components", item: "select", example: "inline", html: true, nunjucks: true, size: "xxxs" }) }} -->
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}

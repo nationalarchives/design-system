@@ -9,16 +9,11 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 1
-statusDocumentationComplete: false
 ---
 
 {% from "partials/example.njk" import example %}
 
 {{ example({ title: "Radios example", group: "components", item: "radios", example: "default", html: true, nunjucks: true, size: "s" }, 2) }}
-
-## Component status
-
-{% include "partials/component-status.njk" %}
 
 ## Small
 
@@ -34,7 +29,7 @@ statusDocumentationComplete: false
 
 ### Item hints
 
-Do not add item hints to [small radios](#small) or [inline radios](#inline).
+Do not add item hints to [inline radios](#inline).
 
 {{ example({ title: "Radios with item hints example", group: "components", item: "radios", example: "item-hints", html: true, nunjucks: true, size: "m" }) }}
 
@@ -45,3 +40,8 @@ Do not add item hints to [small radios](#small) or [inline radios](#inline).
 ## Inline
 
 {{ example({ title: "Radios inline example", group: "components", item: "radios", example: "inline", html: true, nunjucks: true, size: "xxs" }) }}
+
+{% if phase != "official" %}
+## Component status
+{% include "partials/component-status.njk" %}
+{% endif %}
