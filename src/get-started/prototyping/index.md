@@ -79,6 +79,8 @@ Use the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/) to cr
 
 [![Creating a new prototype](https://asciinema.org/a/618385.svg)](https://asciinema.org/a/618385)
 
+> To stop the prototype running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal
+
 #### Adding custom styles
 
 1. Create a new SCSS file in `app/assets/sass` called `custom.scss`
