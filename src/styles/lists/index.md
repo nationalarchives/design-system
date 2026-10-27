@@ -5,6 +5,7 @@ description: Create lists of content to more easily allow users to find what the
 group: styles
 subGroup: content
 # subGroupOrder: 2
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

@@ -4,6 +4,7 @@ title: Devices
 description: Provide services for a variety of screen sizes as well as print media.
 group: styles
 subGroup: layout
+priority: 1
 ---
 
 ## Device sizes

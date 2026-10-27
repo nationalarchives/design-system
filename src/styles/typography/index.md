@@ -5,6 +5,7 @@ description: Utilise a full range of typography to more clearly communicate your
 group: styles
 subGroup: content
 # subGroupOrder: 1
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

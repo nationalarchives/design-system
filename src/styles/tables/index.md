@@ -4,6 +4,7 @@ title: Tables
 description: Use a table to display tabular data.
 group: styles
 subGroup: content
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

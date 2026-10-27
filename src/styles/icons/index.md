@@ -4,6 +4,7 @@ title: Icons
 description: Use icons sparingly to reinforce call to actions and support small pieces of information such as metadata.
 group: styles
 subGroup: visual
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

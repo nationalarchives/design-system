@@ -9,6 +9,7 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 1
 statusAnalytics: 2
+priority: 1
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}

@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Error pages
 description: Provide users with clear and helpful error pages when something goes wrong.
 group: patterns
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

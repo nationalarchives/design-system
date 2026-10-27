@@ -4,6 +4,7 @@ title: Headers
 description: Use one of the common standardised header patterns to start your page.
 group: styles
 subGroup: content
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

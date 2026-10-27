@@ -4,6 +4,7 @@ title: Grid
 description: Use the TNA grid system to help position and organise content on your pages.
 group: styles
 subGroup: layout
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

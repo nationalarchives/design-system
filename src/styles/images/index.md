@@ -4,6 +4,7 @@ title: Images
 description: Use images to provide additional visual context.
 group: styles
 subGroup: content
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

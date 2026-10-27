@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Search
 description: Allow users to search and filter for things in your service.
 group: patterns
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

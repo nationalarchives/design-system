@@ -4,6 +4,7 @@ title: Prototyping
 description: Create and iterate on prototypes to explore options and test your assumptions.
 group: get-started
 order: 1
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

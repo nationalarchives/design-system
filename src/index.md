@@ -7,10 +7,14 @@ priority: 1
 
 ## What’s new
 
-**15 July 2024**: We’ve released TNA Frontend v0.2.0
+**27 October 2026**: We’re working on TNA Frontend v2.
 
-This breaking release removes some old components (search filters and sensitive image), renames others ([files list](./components/files-list/) and [records list](./components/records-list/)) and provides a number of improvements to help reduce the size of the code.
+Version 2 is a breaking release. The new and updated features include:
 
-The grid component has also been moved into utilities.
+- a more modern and refactored colour system
+- improved support for translations and right-to-left languages
+- updated spacing system with support for variable spacing
+- better test coverage for components
+- a smaller package size for CSS
 
-Read the [full release notes](https://github.com/nationalarchives/tna-frontend/releases/tag/v0.2.0) to see what’s changed.
+Take a look at the [v2 branch in GitHub](https://github.com/nationalarchives/tna-frontend/compare/feature/v2) to see what’s changed.

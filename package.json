@@ -33,7 +33,7 @@
     "ext": "js css scss njk json html md"
   },
   "dependencies": {
-    "@nationalarchives/frontend": "1.5.0",
+    "@nationalarchives/frontend": "1.6.2",
     "prismjs": "^1.30.0"
   },
   "devDependencies": {
