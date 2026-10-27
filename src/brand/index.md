@@ -136,31 +136,13 @@ To enable this, add the following CSS and JavaScript to your page. It will autom
 
 The [Open Graph protocol](https://ogp.me/) allows sites to define how they appear when shared on social media and other applications.
 
-You can add an image to your page using `<meta>` elements in your HTML.
-
-```html
-<meta property="og:image" content="nationalarchives-opengraph-image.png">
-<meta property="og:image:width" content="600">
-<meta property="og:image:height" content="400">
-<meta property="og:image:type" content="image/png">
-```
-
 {{ tnaFilesList({
   itemHeadingLevel: 3,
   items: [
     {
-      id: "og-light",
+      id: "og-image",
       text: "The National Archives OpenGraph image",
       href: "/static/assets/images/nationalarchives-opengraph-image.png",
-      fileType: "PNG",
-      fileSize: "8 KB",
-      fileExtent: "1200 x 630px",
-      icon: "image"
-    },
-    {
-      id: "og-dark",
-      text: "The National Archives OpenGraph image (dark)",
-      href: "/static/assets/images/nationalarchives-opengraph-image-dark.png",
       fileType: "PNG",
       fileSize: "8 KB",
       fileExtent: "1200 x 630px",
@@ -169,3 +151,12 @@ You can add an image to your page using `<meta>` elements in your HTML.
   ],
   fullAreaClick: true
 }) }}
+
+You can add the image to your page using `<meta>` elements in your HTML.
+
+```html
+<meta property="og:image" content="nationalarchives-opengraph-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+```

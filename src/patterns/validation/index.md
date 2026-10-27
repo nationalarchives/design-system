@@ -3,6 +3,7 @@ layout: collection-page.njk
 title: Recover from validation errors
 description: Allow users to understand issues with the information they provide and help them to fix it.
 group: patterns
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

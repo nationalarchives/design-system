@@ -4,6 +4,7 @@ title: Forms
 description: Allow users to enter information, search for content or perform tasks.
 group: styles
 subGroup: content
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

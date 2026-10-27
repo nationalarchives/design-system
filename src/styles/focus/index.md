@@ -4,6 +4,7 @@ title: Focus
 description: Show users which page element has keyboard focus.
 group: styles
 subGroup: visual
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

@@ -5,6 +5,7 @@ description: A small, flexible cookies library designed to work with National Ar
 group: get-started
 subGroup: tools and libraries
 order: 3
+priority: 1
 ---
 
 TNA Frontend Cookies is an open source library for managing cookies and following the [cookie policies](../../content/cookies/) used by The National Archives.

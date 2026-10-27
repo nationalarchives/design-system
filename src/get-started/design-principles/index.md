@@ -4,6 +4,7 @@ title: Design principles
 description: Principles to follow when designing and building National Archives services.
 group: get-started
 order: 3
+priority: 1
 ---
 
 ## Showcase professionalism

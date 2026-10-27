@@ -1,0 +1,17 @@
+---
+title: Textarea with a character count
+layout: examples/plain.njk
+addBodyPadding: true
+private: true
+---
+
+{% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
+
+{{ tnaTextarea({
+  label: "Enter your feedback",
+  id: "feedback",
+  name: "feedback",
+  characterCount: {
+    max: 100
+  }
+}) }}

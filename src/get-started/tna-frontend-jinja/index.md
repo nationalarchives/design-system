@@ -5,6 +5,7 @@ description: Jinja2 macros for all the components and layouts in TNA Frontend.
 group: get-started
 subGroup: tools and libraries
 order: 2
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

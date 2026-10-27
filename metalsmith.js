@@ -111,7 +111,7 @@ Metalsmith(__dirname)
         refer: false,
       },
       frontPage: {
-        pattern: "(styles|components|patterns)/index.html",
+        pattern: "(styles|components|patterns|content)/index.html",
         sortBy: "order",
         refer: false,
       },

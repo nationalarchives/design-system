@@ -4,6 +4,7 @@ title: Templates
 description: Use the provided templates to create consistent layouts.
 group: styles
 subGroup: layout
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

@@ -8,6 +8,14 @@ private: true
 {% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
 
 {{ tnaTextarea({
+  label: "Search series (without JavaScript)",
+  hint: "Enter each series on a separate line",
+  id: "series-no-js",
+  name: "series-no-js",
+  value: "   Series 1\n   \nSeries 2   \n   Series 3   "
+}) }}
+
+{{ tnaTextarea({
   label: "Search series (with JavaScript)",
   hint: "Enter each series on a separate line",
   id: "series",
@@ -17,12 +25,4 @@ private: true
   formItemAttributes: {
     "data-enhanced-hint": "Enter a series and press enter"
   }
-}) }}
-
-{{ tnaTextarea({
-  label: "Search series (without JavaScript)",
-  hint: "Enter each series on a separate line",
-  id: "series-no-js",
-  name: "series-no-js",
-  value: "   Series 1\n   \nSeries 2   \n   Series 3   "
 }) }}

@@ -9,6 +9,7 @@ statusTestedWithoutJavaScript: 0
 statusTestedWithoutCSS: 1
 statusPassedDacAudit: 2
 statusAnalytics: 0
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

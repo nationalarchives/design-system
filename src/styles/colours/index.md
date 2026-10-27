@@ -4,6 +4,7 @@ title: Colours
 description: Use colours to add interest to your pages and content.
 group: styles
 subGroup: visual
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

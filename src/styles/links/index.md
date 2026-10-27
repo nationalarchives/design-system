@@ -4,6 +4,7 @@ title: Links
 description: Link to pages within your service or to external resources.
 group: styles
 subGroup: content
+priority: 1
 ---
 
 {% from "partials/example.njk" import example %}

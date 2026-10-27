@@ -4,6 +4,7 @@ title: Accessibility statements
 description: You must publish an accessibility statement on your service.
 group: content
 subGroup: legal requirements
+priority: 1
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}

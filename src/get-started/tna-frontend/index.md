@@ -5,6 +5,7 @@ description: The code you need to start building user interfaces for National Ar
 group: get-started
 subGroup: tools and libraries
 order: 1
+priority: 1
 ---
 
 {% from "nationalarchives/components/accordion/macro.njk" import tnaAccordion %}

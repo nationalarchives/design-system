@@ -4,6 +4,7 @@ title: Cookies
 description: Ensure users know what cookies are being set and allow them to choose which cookies they would like to use.
 group: content
 subGroup: legal requirements
+priority: 1
 ---
 
 {% from "nationalarchives/components/warning/macro.njk" import tnaWarning %}
