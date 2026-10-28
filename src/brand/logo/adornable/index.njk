@@ -10,7 +10,7 @@ themeAccent: blue
 {%- from "nationalarchives/templates/partials/logo/macro.njk" import tnaLogo -%}
 
 <div id="logo-adornment-test" class="tna-container tna-!--padding-bottom-m">
-  <div id="logo-adornment-test-message">
+  <div id="logo-adornment-test-message" class="tna-background-contrast">
     <h2 class="tna-heading-m">JavaScript required</h2>
     <p>This interactive logo adornment test requires JavaScript to run.</p>
   </div>
@@ -97,8 +97,7 @@ themeAccent: blue
     align-items: center;
     justify-content: center;
     inset: 0;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.95);
+    z-index: 2;
   }
 </style>
 
