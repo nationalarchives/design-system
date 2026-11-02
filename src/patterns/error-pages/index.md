@@ -151,5 +151,6 @@ This is a suggested list of error pages for each server response code.
 | `502` | [Bad Gateway](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/502)                   | [Service error](#service-issue)     |
 | `503` | [Service Unavailable](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/503)           | [Service down](#service-down)       |
 | `504` | [Gateway Timeout](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/504)               | [Service error](#service-issue)     |
+| {caption: Error page types} |
 
 A complete list of responses that are available for error pages can be found on [MDN: HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status). Use your own judgement when writing error pages for other response codes.
