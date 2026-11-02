@@ -271,6 +271,7 @@ An example fixed variable is `$relative-1rem-px` where we set the value of `1rem
 | `16px` | `1rem`      |
 | `32px` | `2rem`      |
 | `64px` | `4rem`      |
+| {caption: Relationship between pixels and rem units in TNA Frontend} |
 
 An example of a variable that can be modified is `$body-font-size-px` which we set to `19px` by default. This font size might not be right for all services so we have allowed it to be modified.
 

@@ -1,0 +1,70 @@
+---
+title: Textarea with a character count
+layout: examples/plain.njk
+private: true
+---
+
+{% from "nationalarchives/components/textarea/macro.njk" import tnaTextarea %}
+
+<div class="tna-container">
+  <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-!--margin-vertical-m">
+    {{ tnaTextarea({
+      label: "Enter text (length)",
+      id: "input1",
+      name: "input1",
+      value: "❤️",
+      rows: 2,
+      characterCount: {
+        max: 100,
+        debounceDuration: 100
+      }
+    }) }}
+  </div>
+  <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-!--margin-vertical-m">
+    {{ tnaTextarea({
+      label: "Enter text (characters)",
+      id: "input2",
+      name: "input2",
+      value: "❤️",
+      rows: 2,
+      characterCount: {
+        max: 100,
+        countType : "characters",
+        debounceDuration: 100
+      }
+    }) }}
+  </div>
+  <div class="tna-column tna-column--width-1-3 tna-column--full-small tna-column--full-tiny tna-!--margin-vertical-m">
+    {{ tnaTextarea({
+      label: "Enter text (words)",
+      id: "input3",
+      name: "input3",
+      value: "❤️",
+      rows: 2,
+      characterCount: {
+        max: 10,
+        countType : "words",
+        debounceDuration: 100
+      }
+    }) }}
+  </div>
+</div>
+
+<script>
+  const feedbacks = [
+    document.getElementById("input1"),
+    document.getElementById("input2"),
+    document.getElementById("input3")
+  ];
+  const update = (event) => {
+    feedbacks
+      .filter(feedback => feedback !== event.target)
+      .forEach(feedback => {
+        feedback.value = event.target.value;
+        feedback.dispatchEvent(new Event("focus"));
+      })
+  }
+  feedbacks.forEach(feedback => {
+    feedback.addEventListener("input", update);
+  });
+</script>
