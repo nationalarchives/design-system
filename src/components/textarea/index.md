@@ -64,7 +64,7 @@ There are three types of counter:
   </dt>
   <dd>
     <p>Like <code>characters</code>, the number of words is counted using locale-sensitive text segmentation. Some older browsers that lack the necessary features will fall back to simply counting words as blocks of characters with spaces in between.</p>
-    <p>Use when you want to try and limit the complexity of text input, for example keeping an enquiry simple by requiring it doesn't exceed 100 words.</p>
+    <p>Use when you want to try and limit the complexity of text input, for example keeping an enquiry simple by limiting it to 100 words.</p>
   </dd>
 </dl>
 

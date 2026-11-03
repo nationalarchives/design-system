@@ -14,7 +14,7 @@ priority: 1
 
 {% from "partials/example.njk" import example %}
 
-{{ example({ title: "Cookie baanner example", group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
+{{ example({ title: "Cookie banner example", group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, size: "l" }, 2) }}
 
 {% if phase != "official" %}
 ## Component status

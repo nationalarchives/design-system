@@ -12,7 +12,7 @@ private: true
       label: "Enter text (length)",
       id: "input1",
       name: "input1",
-      value: "❤️",
+      value: "I ❤️ design",
       rows: 2,
       characterCount: {
         max: 100,
@@ -25,7 +25,7 @@ private: true
       label: "Enter text (characters)",
       id: "input2",
       name: "input2",
-      value: "❤️",
+      value: "I ❤️ design",
       rows: 2,
       characterCount: {
         max: 100,
@@ -39,7 +39,7 @@ private: true
       label: "Enter text (words)",
       id: "input3",
       name: "input3",
-      value: "❤️",
+      value: "I ❤️ design",
       rows: 2,
       characterCount: {
         max: 10,
@@ -51,20 +51,20 @@ private: true
 </div>
 
 <script>
-  const feedbacks = [
+  const inputs = [
     document.getElementById("input1"),
     document.getElementById("input2"),
     document.getElementById("input3")
   ];
   const update = (event) => {
-    feedbacks
-      .filter(feedback => feedback !== event.target)
-      .forEach(feedback => {
-        feedback.value = event.target.value;
-        feedback.dispatchEvent(new Event("focus"));
+    inputs
+      .filter(input => input !== event.target)
+      .forEach(input => {
+        input.value = event.target.value;
+        input.dispatchEvent(new Event("focus"));
       })
   }
-  feedbacks.forEach(feedback => {
-    feedback.addEventListener("input", update);
+  inputs.forEach(input => {
+    input.addEventListener("input", update);
   });
 </script>

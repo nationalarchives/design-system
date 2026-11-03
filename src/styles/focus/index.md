@@ -11,7 +11,7 @@ priority: 1
 
 In accordance with the Web Content Accessibility Guidelines (WCAG) version 2.2 level AA, [Success Criteria 2.4.7: Focus visible (level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible), we need to show users which page element has keyboard focus.
 
-The National Archives use [WCAG technique C40](https://www.w3.org/WAI/WCAG22/Techniques/css/C40); creating a two-color focus indicator to ensure sufficient contrast with all components.
+The National Archives use [WCAG technique C40](https://www.w3.org/WAI/WCAG22/Techniques/css/C40); creating a two-colour focus indicator to ensure sufficient contrast with all components.
 
 This focus indicator uses yellow and black borders which also meets [Success Criteria 2.4.13: Focus appearance (level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance).
 
