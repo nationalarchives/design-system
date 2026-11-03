@@ -57,6 +57,7 @@ Use the solid version of the logo to increase contrast with the background or wh
 
 {{ example({ title: "Solid and transparent logos", group: "brand", item: "logo", example: "colours", html: false, nunjucks: false, size: "xxl" }) }}
 
+{#
 ### Occasion adornments
 
 On certain dates of the year, our logo can be adorned with images to celebrate certain events. When JavaScript is available, the `title` attribute will also be changed to provide a descriptive tooltip on hover.
@@ -80,8 +81,9 @@ To enable this, add the following CSS and JavaScript to your page. It will autom
   defer
 ></script>
 ```
+#}
 
-### Static assets
+### Assets
 
 {{ tnaFilesList({
   itemHeadingLevel: 4,
@@ -131,6 +133,8 @@ To enable this, add the following CSS and JavaScript to your page. It will autom
   ],
   fullAreaClick: true
 }) }}
+
+These images are all included in the [assets of TNA Frontend](https://github.com/nationalarchives/tna-frontend/tree/main/src/nationalarchives/assets/images).
 
 ## Open Graph images
 
