@@ -11,6 +11,7 @@ The Digital Services team at The National Archives (TNA) maintains the following
 - [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend)
 - [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend)
 - [TNA Frontend Jinja codebase](https://github.com/nationalarchives/tna-frontend-jinja)
+- [TNA Frontend Cookies codebase](https://github.com/nationalarchives/tna-frontend-cookies)
 
 This page explains how the team works to ensure these products are accessible.
 
@@ -64,7 +65,7 @@ In this section, we only list non-accessible content that has been reported, ver
 
 These accessibility concerns have been classified as being non-compliant, due to a failure in one or more WCAG 2.2 Level A and AA criteria.
 
-There is currently no known non-compliant content in the National Archives Design System website, the TNA Frontend Storybook website, the TNA Frontend codebase or the TNA Frontend Jinja codebase.
+There is currently no known non-compliant content in the National Archives Design System website, the TNA Frontend Storybook website or the the TNA Frontend, TNA Frontend Jinja or TNA Frontend Cookies codebases.
 
 #### Disproportionate burden
 
@@ -93,13 +94,15 @@ From the TNA Frontend codebase:
 
 ### Testing our products for accessibility
 
-The [National Archives Design System website](https://design-system.nationalarchives.gov.uk/) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
+The [National Archives Design System website](https://design-system.nationalarchives.gov.uk/) was last tested for accessibility issues by the [Digital Accessibility Center](https://digitalaccessibilitycentre.org/) (DAC) on <time datetime="2026-08-26">26 August 2026</time>.
 
 The [TNA Frontend Storybook website](https://nationalarchives.github.io/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
 The [TNA Frontend codebase](https://github.com/nationalarchives/tna-frontend) was last tested internally for accessibility issues on <time datetime="2023-11-09">9 November 2023</time>.
 
 The [TNA Frontend Jinja codebase](https://github.com/nationalarchives/tna-frontend-jinja) was last tested internally for accessibility issues on <time datetime="2026-05-07">7 May 2026</time>.
+
+The [TNA Frontend Cookies codebase](https://github.com/nationalarchives/tna-frontend-cookies) was last tested internally for accessibility issues on <time datetime="2026-10-03">3 November 2026</time>.
 
 ### How the National Archives Design System team makes their websites accessible
 
@@ -113,7 +116,7 @@ When we publish new content, we’ll continue to make sure that it meets accessi
 
 ### Preparation of this accessibility statement
 
-This statement was prepared on <time datetime="2023-11-09">9 November 2023</time>. It was last reviewed on <time datetime="2023-11-09">9 November 2023</time>.
+This statement was prepared on <time datetime="2023-11-09">9 November 2023</time>. It was last reviewed on <time datetime="2026-11-03">3 November 2026</time>.
 
 ## Using the Design System and Frontend in your service
 
